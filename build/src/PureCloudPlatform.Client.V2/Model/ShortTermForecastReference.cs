@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// A pointer to a short term forecast
+    /// ShortTermForecastReference
     /// </summary>
     [DataContract]
     public partial class ShortTermForecastReference :  IEquatable<ShortTermForecastReference>

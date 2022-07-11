@@ -158,6 +158,8 @@ docs/AssessmentQuestionGroupScore.md
 docs/AssessmentQuestionScore.md
 docs/AssessmentScoringSet.md
 docs/AssignUsers.md
+docs/AssignedLearningModule.md
+docs/AssignedLearningModuleDomainEntityListing.md
 docs/AssignedSegment.md
 docs/AssignedWrapupCode.md
 docs/Assignment.md
@@ -228,6 +230,7 @@ docs/AvailableTimeOffResponse.md
 docs/AvailableTopic.md
 docs/AvailableTopicEntityListing.md
 docs/AvailableTranslations.md
+docs/BaseMediaSettings.md
 docs/BaseProgramEntity.md
 docs/BaseTopicEntitiy.md
 docs/BatchDownloadJobResult.md
@@ -1812,6 +1815,9 @@ docs/GetGamificationScorecardsBestpoints-example.txt
 docs/GetGamificationScorecardsPointsAlltime-example.txt
 docs/GetGamificationScorecardsPointsAverage-example.txt
 docs/GetGamificationScorecardsPointsTrends-example.txt
+docs/GetGamificationScorecardsProfileMetricUserValuesTrends-example.txt
+docs/GetGamificationScorecardsProfileMetricUsersValuesTrends-example.txt
+docs/GetGamificationScorecardsProfileMetricValuesTrends-example.txt
 docs/GetGamificationScorecardsUser-example.txt
 docs/GetGamificationScorecardsUserAttendance-example.txt
 docs/GetGamificationScorecardsUserBestpoints-example.txt
@@ -1942,6 +1948,7 @@ docs/GetLearningModuleJob-example.txt
 docs/GetLearningModuleRule-example.txt
 docs/GetLearningModuleVersion-example.txt
 docs/GetLearningModules-example.txt
+docs/GetLearningModulesAssignments-example.txt
 docs/GetLicenseDefinition-example.txt
 docs/GetLicenseDefinitions-example.txt
 docs/GetLicenseToggle-example.txt
@@ -2823,6 +2830,7 @@ docs/MeteredAssignmentByAgent.md
 docs/MeteredEvaluationAssignment.md
 docs/Metric.md
 docs/MetricDefinition.md
+docs/MetricValueTrendAverage.md
 docs/Metrics.md
 docs/MinLength.md
 docs/MinedIntentsListing.md
@@ -4300,6 +4308,7 @@ docs/ServiceGoalTemplateList.md
 docs/ServiceGoalTemplateReference.md
 docs/ServiceLevel.md
 docs/Session.md
+docs/SessionEndDetails.md
 docs/SessionLastEvent.md
 docs/SessionSegmentAssignment.md
 docs/SetRecordingState.md
@@ -5265,6 +5274,8 @@ src/PureCloudPlatform.Client.V2/Model/AssessmentQuestionGroupScore.cs
 src/PureCloudPlatform.Client.V2/Model/AssessmentQuestionScore.cs
 src/PureCloudPlatform.Client.V2/Model/AssessmentScoringSet.cs
 src/PureCloudPlatform.Client.V2/Model/AssignUsers.cs
+src/PureCloudPlatform.Client.V2/Model/AssignedLearningModule.cs
+src/PureCloudPlatform.Client.V2/Model/AssignedLearningModuleDomainEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/AssignedSegment.cs
 src/PureCloudPlatform.Client.V2/Model/AssignedWrapupCode.cs
 src/PureCloudPlatform.Client.V2/Model/Assignment.cs
@@ -5331,6 +5342,7 @@ src/PureCloudPlatform.Client.V2/Model/AvailableTimeOffResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AvailableTopic.cs
 src/PureCloudPlatform.Client.V2/Model/AvailableTopicEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/AvailableTranslations.cs
+src/PureCloudPlatform.Client.V2/Model/BaseMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/BaseProgramEntity.cs
 src/PureCloudPlatform.Client.V2/Model/BaseTopicEntitiy.cs
 src/PureCloudPlatform.Client.V2/Model/BatchDownloadJobResult.cs
@@ -6797,6 +6809,7 @@ src/PureCloudPlatform.Client.V2/Model/MeteredAssignmentByAgent.cs
 src/PureCloudPlatform.Client.V2/Model/MeteredEvaluationAssignment.cs
 src/PureCloudPlatform.Client.V2/Model/Metric.cs
 src/PureCloudPlatform.Client.V2/Model/MetricDefinition.cs
+src/PureCloudPlatform.Client.V2/Model/MetricValueTrendAverage.cs
 src/PureCloudPlatform.Client.V2/Model/Metrics.cs
 src/PureCloudPlatform.Client.V2/Model/MinLength.cs
 src/PureCloudPlatform.Client.V2/Model/MinedIntentsListing.cs
@@ -7506,6 +7519,7 @@ src/PureCloudPlatform.Client.V2/Model/ServiceGoalTemplateList.cs
 src/PureCloudPlatform.Client.V2/Model/ServiceGoalTemplateReference.cs
 src/PureCloudPlatform.Client.V2/Model/ServiceLevel.cs
 src/PureCloudPlatform.Client.V2/Model/Session.cs
+src/PureCloudPlatform.Client.V2/Model/SessionEndDetails.cs
 src/PureCloudPlatform.Client.V2/Model/SessionLastEvent.cs
 src/PureCloudPlatform.Client.V2/Model/SessionSegmentAssignment.cs
 src/PureCloudPlatform.Client.V2/Model/SetRecordingState.cs

@@ -352,17 +352,21 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EndOffsetSeconds">Exception end offset in seconds relative to query start time.</param>
         /// <param name="ScheduledActivityCodeId">The ID of the scheduled activity code for this user.</param>
         /// <param name="ScheduledActivityCategory">Activity for which the user is scheduled.</param>
+        /// <param name="ScheduledSecondaryPresenceLookupIds">The lookup IDs used to retrieve the scheduled secondary statuses from map of lookup ID to corresponding secondary presence ID.</param>
+        /// <param name="ActualActivityCodeId">The ID of the actual activity code for this user.</param>
         /// <param name="ActualActivityCategory">Activity for which the user is actually engaged.</param>
         /// <param name="SystemPresence">Actual underlying system presence value.</param>
         /// <param name="RoutingStatus">Actual underlying routing status, used to determine whether a user is actually in adherence when OnQueue.</param>
         /// <param name="Impact">The impact of the current adherence state for this user.</param>
         /// <param name="SecondaryPresenceLookupId">The lookup ID used to retrieve the actual secondary status from map of lookup ID to corresponding secondary presence ID.</param>
-        public HistoricalAdherenceExceptionInfo(int? StartOffsetSeconds = null, int? EndOffsetSeconds = null, string ScheduledActivityCodeId = null, ScheduledActivityCategoryEnum? ScheduledActivityCategory = null, ActualActivityCategoryEnum? ActualActivityCategory = null, SystemPresenceEnum? SystemPresence = null, RoutingStatusEnum? RoutingStatus = null, ImpactEnum? Impact = null, string SecondaryPresenceLookupId = null)
+        public HistoricalAdherenceExceptionInfo(int? StartOffsetSeconds = null, int? EndOffsetSeconds = null, string ScheduledActivityCodeId = null, ScheduledActivityCategoryEnum? ScheduledActivityCategory = null, List<string> ScheduledSecondaryPresenceLookupIds = null, string ActualActivityCodeId = null, ActualActivityCategoryEnum? ActualActivityCategory = null, SystemPresenceEnum? SystemPresence = null, RoutingStatusEnum? RoutingStatus = null, ImpactEnum? Impact = null, string SecondaryPresenceLookupId = null)
         {
             this.StartOffsetSeconds = StartOffsetSeconds;
             this.EndOffsetSeconds = EndOffsetSeconds;
             this.ScheduledActivityCodeId = ScheduledActivityCodeId;
             this.ScheduledActivityCategory = ScheduledActivityCategory;
+            this.ScheduledSecondaryPresenceLookupIds = ScheduledSecondaryPresenceLookupIds;
+            this.ActualActivityCodeId = ActualActivityCodeId;
             this.ActualActivityCategory = ActualActivityCategory;
             this.SystemPresence = SystemPresence;
             this.RoutingStatus = RoutingStatus;
@@ -402,6 +406,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+        /// <summary>
+        /// The lookup IDs used to retrieve the scheduled secondary statuses from map of lookup ID to corresponding secondary presence ID
+        /// </summary>
+        /// <value>The lookup IDs used to retrieve the scheduled secondary statuses from map of lookup ID to corresponding secondary presence ID</value>
+        [DataMember(Name="scheduledSecondaryPresenceLookupIds", EmitDefaultValue=false)]
+        public List<string> ScheduledSecondaryPresenceLookupIds { get; set; }
+
+
+
+        /// <summary>
+        /// The ID of the actual activity code for this user
+        /// </summary>
+        /// <value>The ID of the actual activity code for this user</value>
+        [DataMember(Name="actualActivityCodeId", EmitDefaultValue=false)]
+        public string ActualActivityCodeId { get; set; }
+
+
+
 
 
 
@@ -431,6 +453,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EndOffsetSeconds: ").Append(EndOffsetSeconds).Append("\n");
             sb.Append("  ScheduledActivityCodeId: ").Append(ScheduledActivityCodeId).Append("\n");
             sb.Append("  ScheduledActivityCategory: ").Append(ScheduledActivityCategory).Append("\n");
+            sb.Append("  ScheduledSecondaryPresenceLookupIds: ").Append(ScheduledSecondaryPresenceLookupIds).Append("\n");
+            sb.Append("  ActualActivityCodeId: ").Append(ActualActivityCodeId).Append("\n");
             sb.Append("  ActualActivityCategory: ").Append(ActualActivityCategory).Append("\n");
             sb.Append("  SystemPresence: ").Append(SystemPresence).Append("\n");
             sb.Append("  RoutingStatus: ").Append(RoutingStatus).Append("\n");
@@ -497,6 +521,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ScheduledActivityCategory.Equals(other.ScheduledActivityCategory)
                 ) &&
                 (
+                    this.ScheduledSecondaryPresenceLookupIds == other.ScheduledSecondaryPresenceLookupIds ||
+                    this.ScheduledSecondaryPresenceLookupIds != null &&
+                    this.ScheduledSecondaryPresenceLookupIds.SequenceEqual(other.ScheduledSecondaryPresenceLookupIds)
+                ) &&
+                (
+                    this.ActualActivityCodeId == other.ActualActivityCodeId ||
+                    this.ActualActivityCodeId != null &&
+                    this.ActualActivityCodeId.Equals(other.ActualActivityCodeId)
+                ) &&
+                (
                     this.ActualActivityCategory == other.ActualActivityCategory ||
                     this.ActualActivityCategory != null &&
                     this.ActualActivityCategory.Equals(other.ActualActivityCategory)
@@ -545,6 +579,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ScheduledActivityCategory != null)
                     hash = hash * 59 + this.ScheduledActivityCategory.GetHashCode();
+
+                if (this.ScheduledSecondaryPresenceLookupIds != null)
+                    hash = hash * 59 + this.ScheduledSecondaryPresenceLookupIds.GetHashCode();
+
+                if (this.ActualActivityCodeId != null)
+                    hash = hash * 59 + this.ActualActivityCodeId.GetHashCode();
 
                 if (this.ActualActivityCategory != null)
                     hash = hash * 59 + this.ActualActivityCategory.GetHashCode();

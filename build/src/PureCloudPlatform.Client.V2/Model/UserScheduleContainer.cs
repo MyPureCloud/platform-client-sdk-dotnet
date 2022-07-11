@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Container object to hold a map of user schedules
+    /// UserScheduleContainer
     /// </summary>
     [DataContract]
     public partial class UserScheduleContainer :  IEquatable<UserScheduleContainer>

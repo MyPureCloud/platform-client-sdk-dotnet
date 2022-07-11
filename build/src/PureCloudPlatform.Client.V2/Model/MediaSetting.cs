@@ -21,15 +21,28 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MediaSetting" /> class.
         /// </summary>
+        /// <param name="EnableAutoAnswer">Indicates if auto-answer is enabled for the given media type or subtype (default is false).  Subtype settings take precedence over media type settings..</param>
         /// <param name="AlertingTimeoutSeconds">AlertingTimeoutSeconds.</param>
         /// <param name="ServiceLevel">ServiceLevel.</param>
-        public MediaSetting(int? AlertingTimeoutSeconds = null, ServiceLevel ServiceLevel = null)
+        /// <param name="SubTypeSettings">Map of media subtype to media subtype specific settings..</param>
+        public MediaSetting(bool? EnableAutoAnswer = null, int? AlertingTimeoutSeconds = null, ServiceLevel ServiceLevel = null, Dictionary<string, BaseMediaSettings> SubTypeSettings = null)
         {
+            this.EnableAutoAnswer = EnableAutoAnswer;
             this.AlertingTimeoutSeconds = AlertingTimeoutSeconds;
             this.ServiceLevel = ServiceLevel;
+            this.SubTypeSettings = SubTypeSettings;
             
         }
         
+
+
+        /// <summary>
+        /// Indicates if auto-answer is enabled for the given media type or subtype (default is false).  Subtype settings take precedence over media type settings.
+        /// </summary>
+        /// <value>Indicates if auto-answer is enabled for the given media type or subtype (default is false).  Subtype settings take precedence over media type settings.</value>
+        [DataMember(Name="enableAutoAnswer", EmitDefaultValue=false)]
+        public bool? EnableAutoAnswer { get; set; }
+
 
 
         /// <summary>
@@ -47,6 +60,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public ServiceLevel ServiceLevel { get; set; }
 
 
+
+        /// <summary>
+        /// Map of media subtype to media subtype specific settings.
+        /// </summary>
+        /// <value>Map of media subtype to media subtype specific settings.</value>
+        [DataMember(Name="subTypeSettings", EmitDefaultValue=false)]
+        public Dictionary<string, BaseMediaSettings> SubTypeSettings { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -56,8 +78,10 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class MediaSetting {\n");
 
+            sb.Append("  EnableAutoAnswer: ").Append(EnableAutoAnswer).Append("\n");
             sb.Append("  AlertingTimeoutSeconds: ").Append(AlertingTimeoutSeconds).Append("\n");
             sb.Append("  ServiceLevel: ").Append(ServiceLevel).Append("\n");
+            sb.Append("  SubTypeSettings: ").Append(SubTypeSettings).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -99,6 +123,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.EnableAutoAnswer == other.EnableAutoAnswer ||
+                    this.EnableAutoAnswer != null &&
+                    this.EnableAutoAnswer.Equals(other.EnableAutoAnswer)
+                ) &&
+                (
                     this.AlertingTimeoutSeconds == other.AlertingTimeoutSeconds ||
                     this.AlertingTimeoutSeconds != null &&
                     this.AlertingTimeoutSeconds.Equals(other.AlertingTimeoutSeconds)
@@ -107,6 +136,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ServiceLevel == other.ServiceLevel ||
                     this.ServiceLevel != null &&
                     this.ServiceLevel.Equals(other.ServiceLevel)
+                ) &&
+                (
+                    this.SubTypeSettings == other.SubTypeSettings ||
+                    this.SubTypeSettings != null &&
+                    this.SubTypeSettings.SequenceEqual(other.SubTypeSettings)
                 );
         }
 
@@ -121,11 +155,17 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.EnableAutoAnswer != null)
+                    hash = hash * 59 + this.EnableAutoAnswer.GetHashCode();
+
                 if (this.AlertingTimeoutSeconds != null)
                     hash = hash * 59 + this.AlertingTimeoutSeconds.GetHashCode();
 
                 if (this.ServiceLevel != null)
                     hash = hash * 59 + this.ServiceLevel.GetHashCode();
+
+                if (this.SubTypeSettings != null)
+                    hash = hash * 59 + this.SubTypeSettings.GetHashCode();
 
                 return hash;
             }

@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// The list of date ranges with available time off values and the current waitlist per granularity.
+    /// AvailableTimeOffResponse
     /// </summary>
     [DataContract]
     public partial class AvailableTimeOffResponse :  IEquatable<AvailableTimeOffResponse>

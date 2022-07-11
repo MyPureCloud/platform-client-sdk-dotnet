@@ -2800,7 +2800,7 @@ namespace Example
 
 <a name="getroutingqueues"></a>
 
-## [**QueueEntityListing**](QueueEntityListing.html) GetRoutingQueues (int? pageNumber = null, int? pageSize = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null)
+## [**QueueEntityListing**](QueueEntityListing.html) GetRoutingQueues (int? pageNumber = null, int? pageSize = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null, List<string> peerId = null, bool? hasPeer = null)
 
 
 
@@ -2840,11 +2840,13 @@ namespace Example
             var name = name_example;  // string | Filter by queue name (optional) 
             var id = new List<string>(); // List<string> | Filter by queue ID(s) (optional) 
             var divisionId = new List<string>(); // List<string> | Filter by queue division ID(s) (optional) 
+            var peerId = new List<string>(); // List<string> | Filter by queue peer ID(s) (optional) 
+            var hasPeer = true;  // bool? | Filter by queues associated with peer (optional) 
 
             try
             { 
                 // Get list of queues.
-                QueueEntityListing result = apiInstance.GetRoutingQueues(pageNumber, pageSize, sortOrder, name, id, divisionId);
+                QueueEntityListing result = apiInstance.GetRoutingQueues(pageNumber, pageSize, sortOrder, name, id, divisionId, peerId, hasPeer);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2867,6 +2869,8 @@ namespace Example
 | **name** | **string**| Filter by queue name | [optional]  |
 | **id** | [**List<string>**](string.html)| Filter by queue ID(s) | [optional]  |
 | **divisionId** | [**List<string>**](string.html)| Filter by queue division ID(s) | [optional]  |
+| **peerId** | [**List<string>**](string.html)| Filter by queue peer ID(s) | [optional]  |
+| **hasPeer** | **bool?**| Filter by queues associated with peer | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

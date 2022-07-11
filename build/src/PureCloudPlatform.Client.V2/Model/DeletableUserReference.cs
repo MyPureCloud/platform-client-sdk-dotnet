@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// User reference with delete flag to remove the user from an associated entity
+    /// DeletableUserReference
     /// </summary>
     [DataContract]
     public partial class DeletableUserReference :  IEquatable<DeletableUserReference>

@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Service goal average speed of answer configuration
+    /// BuAverageSpeedOfAnswer
     /// </summary>
     [DataContract]
     public partial class BuAverageSpeedOfAnswer :  IEquatable<BuAverageSpeedOfAnswer>

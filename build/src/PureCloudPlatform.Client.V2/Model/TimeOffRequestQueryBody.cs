@@ -39,19 +39,88 @@ namespace PureCloudPlatform.Client.V2.Model
             Pending
         }
         /// <summary>
+        /// Gets or Sets Substatuses
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum SubstatusesEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Advancetimeelapsed for "AdvanceTimeElapsed"
+            /// </summary>
+            [EnumMember(Value = "AdvanceTimeElapsed")]
+            Advancetimeelapsed,
+            
+            /// <summary>
+            /// Enum Autoapproved for "AutoApproved"
+            /// </summary>
+            [EnumMember(Value = "AutoApproved")]
+            Autoapproved,
+            
+            /// <summary>
+            /// Enum Insufficientbalance for "InsufficientBalance"
+            /// </summary>
+            [EnumMember(Value = "InsufficientBalance")]
+            Insufficientbalance,
+            
+            /// <summary>
+            /// Enum Invaliddailyduration for "InvalidDailyDuration"
+            /// </summary>
+            [EnumMember(Value = "InvalidDailyDuration")]
+            Invaliddailyduration,
+            
+            /// <summary>
+            /// Enum Outsideshift for "OutsideShift"
+            /// </summary>
+            [EnumMember(Value = "OutsideShift")]
+            Outsideshift,
+            
+            /// <summary>
+            /// Enum Removedfromwaitlist for "RemovedFromWaitlist"
+            /// </summary>
+            [EnumMember(Value = "RemovedFromWaitlist")]
+            Removedfromwaitlist,
+            
+            /// <summary>
+            /// Enum Waitlisted for "Waitlisted"
+            /// </summary>
+            [EnumMember(Value = "Waitlisted")]
+            Waitlisted
+        }
+        /// <summary>
         /// Initializes a new instance of the <see cref="TimeOffRequestQueryBody" /> class.
         /// </summary>
+        /// <param name="Ids">The set of ids to filter time off requests.</param>
         /// <param name="UserIds">The set of user ids to filter time off requests.</param>
         /// <param name="Statuses">The set of statuses to filter time off requests.</param>
+        /// <param name="Substatuses">The set of substatuses to filter time off requests.</param>
         /// <param name="DateRange">The inclusive range of dates to filter time off requests.</param>
-        public TimeOffRequestQueryBody(List<string> UserIds = null, List<StatusesEnum> Statuses = null, DateRange DateRange = null)
+        public TimeOffRequestQueryBody(List<string> Ids = null, List<string> UserIds = null, List<StatusesEnum> Statuses = null, List<SubstatusesEnum> Substatuses = null, DateRange DateRange = null)
         {
+            this.Ids = Ids;
             this.UserIds = UserIds;
             this.Statuses = Statuses;
+            this.Substatuses = Substatuses;
             this.DateRange = DateRange;
             
         }
         
+
+
+        /// <summary>
+        /// The set of ids to filter time off requests
+        /// </summary>
+        /// <value>The set of ids to filter time off requests</value>
+        [DataMember(Name="ids", EmitDefaultValue=false)]
+        public List<string> Ids { get; set; }
+
 
 
         /// <summary>
@@ -73,6 +142,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The set of substatuses to filter time off requests
+        /// </summary>
+        /// <value>The set of substatuses to filter time off requests</value>
+        [DataMember(Name="substatuses", EmitDefaultValue=false)]
+        public List<SubstatusesEnum> Substatuses { get; set; }
+
+
+
+        /// <summary>
         /// The inclusive range of dates to filter time off requests
         /// </summary>
         /// <value>The inclusive range of dates to filter time off requests</value>
@@ -89,8 +167,10 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class TimeOffRequestQueryBody {\n");
 
+            sb.Append("  Ids: ").Append(Ids).Append("\n");
             sb.Append("  UserIds: ").Append(UserIds).Append("\n");
             sb.Append("  Statuses: ").Append(Statuses).Append("\n");
+            sb.Append("  Substatuses: ").Append(Substatuses).Append("\n");
             sb.Append("  DateRange: ").Append(DateRange).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -133,6 +213,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.Ids == other.Ids ||
+                    this.Ids != null &&
+                    this.Ids.SequenceEqual(other.Ids)
+                ) &&
+                (
                     this.UserIds == other.UserIds ||
                     this.UserIds != null &&
                     this.UserIds.SequenceEqual(other.UserIds)
@@ -141,6 +226,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Statuses == other.Statuses ||
                     this.Statuses != null &&
                     this.Statuses.SequenceEqual(other.Statuses)
+                ) &&
+                (
+                    this.Substatuses == other.Substatuses ||
+                    this.Substatuses != null &&
+                    this.Substatuses.SequenceEqual(other.Substatuses)
                 ) &&
                 (
                     this.DateRange == other.DateRange ||
@@ -160,11 +250,17 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Ids != null)
+                    hash = hash * 59 + this.Ids.GetHashCode();
+
                 if (this.UserIds != null)
                     hash = hash * 59 + this.UserIds.GetHashCode();
 
                 if (this.Statuses != null)
                     hash = hash * 59 + this.Statuses.GetHashCode();
+
+                if (this.Substatuses != null)
+                    hash = hash * 59 + this.Substatuses.GetHashCode();
 
                 if (this.DateRange != null)
                     hash = hash * 59 + this.DateRange.GetHashCode();

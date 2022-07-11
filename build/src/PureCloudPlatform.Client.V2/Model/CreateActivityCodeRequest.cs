@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Activity Code
+    /// CreateActivityCodeRequest
     /// </summary>
     [DataContract]
     public partial class CreateActivityCodeRequest :  IEquatable<CreateActivityCodeRequest>
@@ -108,7 +108,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CountsAsPaidTime">Whether an agent is paid while performing this activity.</param>
         /// <param name="CountsAsWorkTime">Indicates whether or not the activity should be counted as work time.</param>
         /// <param name="AgentTimeOffSelectable">Whether an agent can select this activity code when creating or editing a time off request.</param>
-        public CreateActivityCodeRequest(string Name = null, CategoryEnum? Category = null, int? LengthInMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsWorkTime = null, bool? AgentTimeOffSelectable = null)
+        /// <param name="CountsTowardShrinkage">Whether or not this activity code counts toward shrinkage calculations.</param>
+        /// <param name="PlannedShrinkage">Whether this activity code is considered planned or unplanned shrinkage.</param>
+        /// <param name="Interruptible">Whether this activity code is considered interruptible.</param>
+        /// <param name="SecondaryPresences">The secondary presences of this activity code.</param>
+        public CreateActivityCodeRequest(string Name = null, CategoryEnum? Category = null, int? LengthInMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsWorkTime = null, bool? AgentTimeOffSelectable = null, bool? CountsTowardShrinkage = null, bool? PlannedShrinkage = null, bool? Interruptible = null, List<SecondaryPresence> SecondaryPresences = null)
         {
             this.Name = Name;
             this.Category = Category;
@@ -116,6 +120,10 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CountsAsPaidTime = CountsAsPaidTime;
             this.CountsAsWorkTime = CountsAsWorkTime;
             this.AgentTimeOffSelectable = AgentTimeOffSelectable;
+            this.CountsTowardShrinkage = CountsTowardShrinkage;
+            this.PlannedShrinkage = PlannedShrinkage;
+            this.Interruptible = Interruptible;
+            this.SecondaryPresences = SecondaryPresences;
             
         }
         
@@ -167,6 +175,42 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? AgentTimeOffSelectable { get; set; }
 
 
+
+        /// <summary>
+        /// Whether or not this activity code counts toward shrinkage calculations
+        /// </summary>
+        /// <value>Whether or not this activity code counts toward shrinkage calculations</value>
+        [DataMember(Name="countsTowardShrinkage", EmitDefaultValue=false)]
+        public bool? CountsTowardShrinkage { get; set; }
+
+
+
+        /// <summary>
+        /// Whether this activity code is considered planned or unplanned shrinkage
+        /// </summary>
+        /// <value>Whether this activity code is considered planned or unplanned shrinkage</value>
+        [DataMember(Name="plannedShrinkage", EmitDefaultValue=false)]
+        public bool? PlannedShrinkage { get; set; }
+
+
+
+        /// <summary>
+        /// Whether this activity code is considered interruptible
+        /// </summary>
+        /// <value>Whether this activity code is considered interruptible</value>
+        [DataMember(Name="interruptible", EmitDefaultValue=false)]
+        public bool? Interruptible { get; set; }
+
+
+
+        /// <summary>
+        /// The secondary presences of this activity code
+        /// </summary>
+        /// <value>The secondary presences of this activity code</value>
+        [DataMember(Name="secondaryPresences", EmitDefaultValue=false)]
+        public List<SecondaryPresence> SecondaryPresences { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -182,6 +226,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CountsAsPaidTime: ").Append(CountsAsPaidTime).Append("\n");
             sb.Append("  CountsAsWorkTime: ").Append(CountsAsWorkTime).Append("\n");
             sb.Append("  AgentTimeOffSelectable: ").Append(AgentTimeOffSelectable).Append("\n");
+            sb.Append("  CountsTowardShrinkage: ").Append(CountsTowardShrinkage).Append("\n");
+            sb.Append("  PlannedShrinkage: ").Append(PlannedShrinkage).Append("\n");
+            sb.Append("  Interruptible: ").Append(Interruptible).Append("\n");
+            sb.Append("  SecondaryPresences: ").Append(SecondaryPresences).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -251,6 +299,26 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AgentTimeOffSelectable == other.AgentTimeOffSelectable ||
                     this.AgentTimeOffSelectable != null &&
                     this.AgentTimeOffSelectable.Equals(other.AgentTimeOffSelectable)
+                ) &&
+                (
+                    this.CountsTowardShrinkage == other.CountsTowardShrinkage ||
+                    this.CountsTowardShrinkage != null &&
+                    this.CountsTowardShrinkage.Equals(other.CountsTowardShrinkage)
+                ) &&
+                (
+                    this.PlannedShrinkage == other.PlannedShrinkage ||
+                    this.PlannedShrinkage != null &&
+                    this.PlannedShrinkage.Equals(other.PlannedShrinkage)
+                ) &&
+                (
+                    this.Interruptible == other.Interruptible ||
+                    this.Interruptible != null &&
+                    this.Interruptible.Equals(other.Interruptible)
+                ) &&
+                (
+                    this.SecondaryPresences == other.SecondaryPresences ||
+                    this.SecondaryPresences != null &&
+                    this.SecondaryPresences.SequenceEqual(other.SecondaryPresences)
                 );
         }
 
@@ -282,6 +350,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AgentTimeOffSelectable != null)
                     hash = hash * 59 + this.AgentTimeOffSelectable.GetHashCode();
+
+                if (this.CountsTowardShrinkage != null)
+                    hash = hash * 59 + this.CountsTowardShrinkage.GetHashCode();
+
+                if (this.PlannedShrinkage != null)
+                    hash = hash * 59 + this.PlannedShrinkage.GetHashCode();
+
+                if (this.Interruptible != null)
+                    hash = hash * 59 + this.Interruptible.GetHashCode();
+
+                if (this.SecondaryPresences != null)
+                    hash = hash * 59 + this.SecondaryPresences.GetHashCode();
 
                 return hash;
             }

@@ -84,8 +84,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DefaultScripts">The default script Ids for the communication types..</param>
         /// <param name="OutboundMessagingAddresses">The messaging addresses for the queue..</param>
         /// <param name="OutboundEmailAddress">OutboundEmailAddress.</param>
+        /// <param name="PeerId">The ID of the external Queue.</param>
         /// <param name="Joined">Joined.</param>
-        public UserQueue(string Name = null, Division Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, Dictionary<string, MediaSetting> MediaSettings = null, List<RoutingRule> RoutingRules = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, DomainEntityRef QueueFlow = null, DomainEntityRef EmailInQueueFlow = null, DomainEntityRef MessageInQueueFlow = null, DomainEntityRef WhisperPrompt = null, DomainEntityRef OnHoldPrompt = null, bool? EnableTranscription = null, bool? EnableManualAssignment = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null, bool? Joined = null)
+        public UserQueue(string Name = null, Division Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, Dictionary<string, MediaSetting> MediaSettings = null, List<RoutingRule> RoutingRules = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, DomainEntityRef QueueFlow = null, DomainEntityRef EmailInQueueFlow = null, DomainEntityRef MessageInQueueFlow = null, DomainEntityRef WhisperPrompt = null, DomainEntityRef OnHoldPrompt = null, bool? EnableTranscription = null, bool? EnableManualAssignment = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null, string PeerId = null, bool? Joined = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -111,6 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DefaultScripts = DefaultScripts;
             this.OutboundMessagingAddresses = OutboundMessagingAddresses;
             this.OutboundEmailAddress = OutboundEmailAddress;
+            this.PeerId = PeerId;
             this.Joined = Joined;
             
         }
@@ -361,6 +363,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The ID of the external Queue
+        /// </summary>
+        /// <value>The ID of the external Queue</value>
+        [DataMember(Name="peerId", EmitDefaultValue=false)]
+        public string PeerId { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets Joined
         /// </summary>
         [DataMember(Name="joined", EmitDefaultValue=false)]
@@ -413,6 +424,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DefaultScripts: ").Append(DefaultScripts).Append("\n");
             sb.Append("  OutboundMessagingAddresses: ").Append(OutboundMessagingAddresses).Append("\n");
             sb.Append("  OutboundEmailAddress: ").Append(OutboundEmailAddress).Append("\n");
+            sb.Append("  PeerId: ").Append(PeerId).Append("\n");
             sb.Append("  Joined: ").Append(Joined).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -596,6 +608,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.OutboundEmailAddress.Equals(other.OutboundEmailAddress)
                 ) &&
                 (
+                    this.PeerId == other.PeerId ||
+                    this.PeerId != null &&
+                    this.PeerId.Equals(other.PeerId)
+                ) &&
+                (
                     this.Joined == other.Joined ||
                     this.Joined != null &&
                     this.Joined.Equals(other.Joined)
@@ -701,6 +718,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.OutboundEmailAddress != null)
                     hash = hash * 59 + this.OutboundEmailAddress.GetHashCode();
+
+                if (this.PeerId != null)
+                    hash = hash * 59 + this.PeerId.GetHashCode();
 
                 if (this.Joined != null)
                     hash = hash * 59 + this.Joined.GetHashCode();

@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Service goal service level configuration
+    /// BuServiceLevel
     /// </summary>
     [DataContract]
     public partial class BuServiceLevel :  IEquatable<BuServiceLevel>

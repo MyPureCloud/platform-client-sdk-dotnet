@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Headcount interval information for schedule
+    /// HeadcountForecast
     /// </summary>
     [DataContract]
     public partial class HeadcountForecast :  IEquatable<HeadcountForecast>

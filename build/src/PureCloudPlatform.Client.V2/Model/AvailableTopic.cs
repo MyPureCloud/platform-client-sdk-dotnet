@@ -75,7 +75,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Eventbridge for "EventBridge"
             /// </summary>
             [EnumMember(Value = "EventBridge")]
-            Eventbridge
+            Eventbridge,
+            
+            /// <summary>
+            /// Enum Processautomation for "ProcessAutomation"
+            /// </summary>
+            [EnumMember(Value = "ProcessAutomation")]
+            Processautomation
         }
         /// <summary>
         /// Visibility of this topic (Public or Preview)

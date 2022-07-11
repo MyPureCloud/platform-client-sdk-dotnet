@@ -91,6 +91,24 @@ namespace PureCloudPlatform.Client.V2.Model
             Transferratevalue,
             
             /// <summary>
+            /// Enum Salesconversionratevalue for "SalesConversionRateValue"
+            /// </summary>
+            [EnumMember(Value = "SalesConversionRateValue")]
+            Salesconversionratevalue,
+            
+            /// <summary>
+            /// Enum Retentionratevalue for "RetentionRateValue"
+            /// </summary>
+            [EnumMember(Value = "RetentionRateValue")]
+            Retentionratevalue,
+            
+            /// <summary>
+            /// Enum Churnratevalue for "ChurnRateValue"
+            /// </summary>
+            [EnumMember(Value = "ChurnRateValue")]
+            Churnratevalue,
+            
+            /// <summary>
             /// Enum Interactionvolume for "InteractionVolume"
             /// </summary>
             [EnumMember(Value = "InteractionVolume")]

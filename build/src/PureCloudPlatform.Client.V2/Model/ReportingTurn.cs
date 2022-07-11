@@ -146,7 +146,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Knowledge">The knowledge data captured during this reporting turn..</param>
         /// <param name="DateCreated">Timestamp indicating when the original turn was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="AskActionResult">Result of the bot flow 'ask' action..</param>
-        public ReportingTurn(string UserInput = null, List<string> BotPrompts = null, string SessionId = null, ReportingTurnAction AskAction = null, ReportingTurnIntent Intent = null, ReportingTurnKnowledge Knowledge = null, DateTime? DateCreated = null, AskActionResultEnum? AskActionResult = null)
+        /// <param name="SessionEndDetails">The details related to end of bot flow session..</param>
+        public ReportingTurn(string UserInput = null, List<string> BotPrompts = null, string SessionId = null, ReportingTurnAction AskAction = null, ReportingTurnIntent Intent = null, ReportingTurnKnowledge Knowledge = null, DateTime? DateCreated = null, AskActionResultEnum? AskActionResult = null, SessionEndDetails SessionEndDetails = null)
         {
             this.UserInput = UserInput;
             this.BotPrompts = BotPrompts;
@@ -156,6 +157,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Knowledge = Knowledge;
             this.DateCreated = DateCreated;
             this.AskActionResult = AskActionResult;
+            this.SessionEndDetails = SessionEndDetails;
             
         }
         
@@ -227,6 +229,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The details related to end of bot flow session.
+        /// </summary>
+        /// <value>The details related to end of bot flow session.</value>
+        [DataMember(Name="sessionEndDetails", EmitDefaultValue=false)]
+        public SessionEndDetails SessionEndDetails { get; set; }
+
+
+
+        /// <summary>
         /// The conversation details, across potentially multiple Bot Flow sessions.
         /// </summary>
         /// <value>The conversation details, across potentially multiple Bot Flow sessions.</value>
@@ -251,6 +262,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Knowledge: ").Append(Knowledge).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  AskActionResult: ").Append(AskActionResult).Append("\n");
+            sb.Append("  SessionEndDetails: ").Append(SessionEndDetails).Append("\n");
             sb.Append("  Conversation: ").Append(Conversation).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -333,6 +345,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AskActionResult.Equals(other.AskActionResult)
                 ) &&
                 (
+                    this.SessionEndDetails == other.SessionEndDetails ||
+                    this.SessionEndDetails != null &&
+                    this.SessionEndDetails.Equals(other.SessionEndDetails)
+                ) &&
+                (
                     this.Conversation == other.Conversation ||
                     this.Conversation != null &&
                     this.Conversation.Equals(other.Conversation)
@@ -373,6 +390,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AskActionResult != null)
                     hash = hash * 59 + this.AskActionResult.GetHashCode();
+
+                if (this.SessionEndDetails != null)
+                    hash = hash * 59 + this.SessionEndDetails.GetHashCode();
 
                 if (this.Conversation != null)
                     hash = hash * 59 + this.Conversation.GetHashCode();

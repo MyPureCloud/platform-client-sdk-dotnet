@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Work plan information
+    /// WorkPlan
     /// </summary>
     [DataContract]
     public partial class WorkPlan :  IEquatable<WorkPlan>

@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// An object to provide context to nullable fields in PATCH requests
+    /// ValueWrapperString
     /// </summary>
     [DataContract]
     public partial class ValueWrapperString :  IEquatable<ValueWrapperString>

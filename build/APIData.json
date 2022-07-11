@@ -10321,6 +10321,143 @@
     "return": "WorkdayPointsTrend",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetGamificationScorecardsPointsTrendsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new GamificationApi();\n            var startWorkday = new Date();  // String | Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n            var endWorkday = new Date();  // String | End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n            var dayOfWeek = \"dayOfWeek_example\";  // string | Optional filter to specify which day of weeks to be included in the response (optional) \n\n            try\n            { \n                // Points trends of the requesting user\n                WorkdayPointsTrend result = apiInstance.GetGamificationScorecardsPointsTrends(startWorkday, endWorkday, dayOfWeek);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Gamification.GetGamificationScorecardsPointsTrends: \" + e.Message );\n            }\n        }\n    }\n}"
   },
+  "getgamificationscorecardsprofilemetricuservaluestrends": {
+    "operationId": "getgamificationscorecardsprofilemetricuservaluestrends",
+    "functionName": "GetGamificationScorecardsProfileMetricUserValuesTrends",
+    "signature": "GetGamificationScorecardsProfileMetricUserValuesTrends(profileId, metricId, userId, startWorkday, endWorkday, referenceWorkday, timeZone)",
+    "parameters": [
+      {
+        "name": "profileId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "metricId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "userId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "startWorkday",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "endWorkday",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "referenceWorkday",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "timeZone",
+        "type": "string",
+        "required": "false"
+      }
+    ],
+    "return": "MetricValueTrendAverage",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetGamificationScorecardsProfileMetricUserValuesTrendsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new GamificationApi();\n            var profileId = \"profileId_example\";  // string | performanceProfileId\n            var metricId = \"metricId_example\";  // string | metricId\n            var userId = \"userId_example\";  // string | \n            var startWorkday = new Date();  // String | Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n            var endWorkday = new Date();  // String | End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n            var referenceWorkday = new Date();  // String | Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) \n            var timeZone = \"timeZone_example\";  // string | Timezone for the workday. Defaults to UTC (optional)  (default to \"UTC\")\n\n            try\n            { \n                // Average performance values trends by metric of a user\n                MetricValueTrendAverage result = apiInstance.GetGamificationScorecardsProfileMetricUserValuesTrends(profileId, metricId, userId, startWorkday, endWorkday, referenceWorkday, timeZone);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Gamification.GetGamificationScorecardsProfileMetricUserValuesTrends: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getgamificationscorecardsprofilemetricusersvaluestrends": {
+    "operationId": "getgamificationscorecardsprofilemetricusersvaluestrends",
+    "functionName": "GetGamificationScorecardsProfileMetricUsersValuesTrends",
+    "signature": "GetGamificationScorecardsProfileMetricUsersValuesTrends(profileId, metricId, filterType, filterId, startWorkday, endWorkday, referenceWorkday, timeZone)",
+    "parameters": [
+      {
+        "name": "profileId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "metricId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "filterType",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "filterId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "startWorkday",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "endWorkday",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "referenceWorkday",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "timeZone",
+        "type": "string",
+        "required": "false"
+      }
+    ],
+    "return": "MetricValueTrendAverage",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetGamificationScorecardsProfileMetricUsersValuesTrendsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new GamificationApi();\n            var profileId = \"profileId_example\";  // string | performanceProfileId\n            var metricId = \"metricId_example\";  // string | metricId\n            var filterType = \"filterType_example\";  // string | Filter type for the query request.\n            var filterId = \"filterId_example\";  // string | ID for the filter type. For example, division Id\n            var startWorkday = new Date();  // String | Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n            var endWorkday = new Date();  // String | End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n            var referenceWorkday = new Date();  // String | Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) \n            var timeZone = \"timeZone_example\";  // string | Timezone for the workday. Defaults to UTC (optional)  (default to \"UTC\")\n\n            try\n            { \n                // Average performance values trends by metric of a division or a performance profile\n                MetricValueTrendAverage result = apiInstance.GetGamificationScorecardsProfileMetricUsersValuesTrends(profileId, metricId, filterType, filterId, startWorkday, endWorkday, referenceWorkday, timeZone);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Gamification.GetGamificationScorecardsProfileMetricUsersValuesTrends: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getgamificationscorecardsprofilemetricvaluestrends": {
+    "operationId": "getgamificationscorecardsprofilemetricvaluestrends",
+    "functionName": "GetGamificationScorecardsProfileMetricValuesTrends",
+    "signature": "GetGamificationScorecardsProfileMetricValuesTrends(profileId, metricId, startWorkday, endWorkday, filterType, referenceWorkday, timeZone)",
+    "parameters": [
+      {
+        "name": "profileId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "metricId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "startWorkday",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "endWorkday",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "filterType",
+        "type": "string",
+        "required": "false"
+      },
+      {
+        "name": "referenceWorkday",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "timeZone",
+        "type": "string",
+        "required": "false"
+      }
+    ],
+    "return": "MetricValueTrendAverage",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetGamificationScorecardsProfileMetricValuesTrendsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new GamificationApi();\n            var profileId = \"profileId_example\";  // string | performanceProfileId\n            var metricId = \"metricId_example\";  // string | metricId\n            var startWorkday = new Date();  // String | Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n            var endWorkday = new Date();  // String | End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n            var filterType = \"filterType_example\";  // string | Filter type for the query request. If not set, returns the values trends of the requesting user (optional) \n            var referenceWorkday = new Date();  // String | Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) \n            var timeZone = \"timeZone_example\";  // string | Timezone for the workday. Defaults to UTC (optional)  (default to \"UTC\")\n\n            try\n            { \n                // Average performance values trends by metric of the requesting user\n                MetricValueTrendAverage result = apiInstance.GetGamificationScorecardsProfileMetricValuesTrends(profileId, metricId, startWorkday, endWorkday, filterType, referenceWorkday, timeZone);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Gamification.GetGamificationScorecardsProfileMetricValuesTrends: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
   "getgamificationscorecardsuser": {
     "operationId": "getgamificationscorecardsuser",
     "functionName": "GetGamificationScorecardsUser",
@@ -15490,6 +15627,50 @@
     ],
     "return": "LearningModulesDomainEntityListing",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetLearningModulesExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new LearningApi();\n            var isArchived = true;  // bool? | Archive status (optional)  (default to false)\n            var types = new List<string>(); // List<string> | Specifies the module types. (optional) \n            var pageSize = 56;  // int? | Page size (optional)  (default to 25)\n            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)\n            var sortOrder = \"sortOrder_example\";  // string | Sort order (optional)  (default to ascending)\n            var sortBy = \"sortBy_example\";  // string | Sort by (optional)  (default to name)\n            var searchTerm = \"searchTerm_example\";  // string | Search Term (searchable by name) (optional) \n            var expand = new List<string>(); // List<string> | Fields to expand in response(case insensitive) (optional) \n            var isPublished = \"isPublished_example\";  // string | Specifies if only the Unpublished (isPublished is \\\"False\\\") or Published (isPublished is \\\"True\\\") modules are returned. If isPublished is \\\"Any\\\" or omitted, both types are returned (optional)  (default to Any)\n\n            try\n            { \n                // Get all learning modules of an organization\n                LearningModulesDomainEntityListing result = apiInstance.GetLearningModules(isArchived, types, pageSize, pageNumber, sortOrder, sortBy, searchTerm, expand, isPublished);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Learning.GetLearningModules: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getlearningmodulesassignments": {
+    "operationId": "getlearningmodulesassignments",
+    "functionName": "GetLearningModulesAssignments",
+    "signature": "GetLearningModulesAssignments(userIds, pageSize, pageNumber, searchTerm, overdue, assignmentStates, expand)",
+    "parameters": [
+      {
+        "name": "userIds",
+        "type": "List<string>",
+        "required": "true"
+      },
+      {
+        "name": "pageSize",
+        "type": "int?",
+        "required": "false"
+      },
+      {
+        "name": "pageNumber",
+        "type": "int?",
+        "required": "false"
+      },
+      {
+        "name": "searchTerm",
+        "type": "string",
+        "required": "false"
+      },
+      {
+        "name": "overdue",
+        "type": "string",
+        "required": "false"
+      },
+      {
+        "name": "assignmentStates",
+        "type": "List<string>",
+        "required": "false"
+      },
+      {
+        "name": "expand",
+        "type": "List<string>",
+        "required": "false"
+      }
+    ],
+    "return": "AssignedLearningModuleDomainEntityListing",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetLearningModulesAssignmentsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new LearningApi();\n            var userIds = new List<string>(); // List<string> | The IDs of the users to include\n            var pageSize = 56;  // int? | Page size (optional)  (default to 25)\n            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)\n            var searchTerm = \"searchTerm_example\";  // string | Search Term (searches by name and description) (optional) \n            var overdue = \"overdue_example\";  // string | Specifies if only modules with overdue/not overdue (overdue is \\\"True\\\" or \\\"False\\\") assignments are returned. If overdue is \\\"Any\\\" or omitted, both are returned and can including modules that are unassigned. (optional)  (default to Any)\n            var assignmentStates = new List<string>(); // List<string> | Specifies the assignment states to return. (optional) \n            var expand = new List<string>(); // List<string> | Fields to expand in response(case insensitive) (optional) \n\n            try\n            { \n                // Get all learning modules of an organization including assignments for a specific user\n                AssignedLearningModuleDomainEntityListing result = apiInstance.GetLearningModulesAssignments(userIds, pageSize, pageNumber, searchTerm, overdue, assignmentStates, expand);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Learning.GetLearningModulesAssignments: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "patchlearningassignment": {
     "operationId": "patchlearningassignment",
@@ -23501,7 +23682,7 @@
   "getroutingqueues": {
     "operationId": "getroutingqueues",
     "functionName": "GetRoutingQueues",
-    "signature": "GetRoutingQueues(pageNumber, pageSize, sortOrder, name, id, divisionId)",
+    "signature": "GetRoutingQueues(pageNumber, pageSize, sortOrder, name, id, divisionId, peerId, hasPeer)",
     "parameters": [
       {
         "name": "pageNumber",
@@ -23532,10 +23713,20 @@
         "name": "divisionId",
         "type": "List<string>",
         "required": "false"
+      },
+      {
+        "name": "peerId",
+        "type": "List<string>",
+        "required": "false"
+      },
+      {
+        "name": "hasPeer",
+        "type": "bool?",
+        "required": "false"
       }
     ],
     "return": "QueueEntityListing",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetRoutingQueuesExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new RoutingApi();\n            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)\n            var pageSize = 56;  // int? | Page size (optional)  (default to 25)\n            var sortOrder = \"sortOrder_example\";  // string | Note: results are sorted by name. (optional)  (default to asc)\n            var name = \"name_example\";  // string | Filter by queue name (optional) \n            var id = new List<string>(); // List<string> | Filter by queue ID(s) (optional) \n            var divisionId = new List<string>(); // List<string> | Filter by queue division ID(s) (optional) \n\n            try\n            { \n                // Get list of queues.\n                QueueEntityListing result = apiInstance.GetRoutingQueues(pageNumber, pageSize, sortOrder, name, id, divisionId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Routing.GetRoutingQueues: \" + e.Message );\n            }\n        }\n    }\n}"
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetRoutingQueuesExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new RoutingApi();\n            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)\n            var pageSize = 56;  // int? | Page size (optional)  (default to 25)\n            var sortOrder = \"sortOrder_example\";  // string | Note: results are sorted by name. (optional)  (default to asc)\n            var name = \"name_example\";  // string | Filter by queue name (optional) \n            var id = new List<string>(); // List<string> | Filter by queue ID(s) (optional) \n            var divisionId = new List<string>(); // List<string> | Filter by queue division ID(s) (optional) \n            var peerId = new List<string>(); // List<string> | Filter by queue peer ID(s) (optional) \n            var hasPeer = true;  // bool? | Filter by queues associated with peer (optional) \n\n            try\n            { \n                // Get list of queues.\n                QueueEntityListing result = apiInstance.GetRoutingQueues(pageNumber, pageSize, sortOrder, name, id, divisionId, peerId, hasPeer);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Routing.GetRoutingQueues: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "getroutingqueuesdivisionviews": {
     "operationId": "getroutingqueuesdivisionviews",

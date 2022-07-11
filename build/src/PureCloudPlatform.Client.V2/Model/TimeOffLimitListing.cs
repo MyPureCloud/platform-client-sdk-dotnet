@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// The list of time off limit objects
+    /// TimeOffLimitListing
     /// </summary>
     [DataContract]
     public partial class TimeOffLimitListing :  IEquatable<TimeOffLimitListing>

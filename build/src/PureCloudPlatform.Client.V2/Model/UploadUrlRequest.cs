@@ -49,12 +49,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FileName">Name of the file to upload. It must not start with a dot and not end with a forward slash. Whitespace and the following characters are not allowed: \\{^}%`]\">[~<#|.</param>
         /// <param name="ContentMd5">Content MD5 of the file to upload.</param>
         /// <param name="SignedUrlTimeoutSeconds">The number of seconds the presigned URL is valid for (from 1 to 604800 seconds). If none provided, defaults to 600 seconds.</param>
+        /// <param name="ContentType">The content type of the file to upload. Allows all MIME types.</param>
         /// <param name="ServerSideEncryption">ServerSideEncryption.</param>
-        public UploadUrlRequest(string FileName = null, string ContentMd5 = null, int? SignedUrlTimeoutSeconds = null, ServerSideEncryptionEnum? ServerSideEncryption = null)
+        public UploadUrlRequest(string FileName = null, string ContentMd5 = null, int? SignedUrlTimeoutSeconds = null, string ContentType = null, ServerSideEncryptionEnum? ServerSideEncryption = null)
         {
             this.FileName = FileName;
             this.ContentMd5 = ContentMd5;
             this.SignedUrlTimeoutSeconds = SignedUrlTimeoutSeconds;
+            this.ContentType = ContentType;
             this.ServerSideEncryption = ServerSideEncryption;
             
         }
@@ -88,6 +90,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+        /// <summary>
+        /// The content type of the file to upload. Allows all MIME types
+        /// </summary>
+        /// <value>The content type of the file to upload. Allows all MIME types</value>
+        [DataMember(Name="contentType", EmitDefaultValue=false)]
+        public string ContentType { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -101,6 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FileName: ").Append(FileName).Append("\n");
             sb.Append("  ContentMd5: ").Append(ContentMd5).Append("\n");
             sb.Append("  SignedUrlTimeoutSeconds: ").Append(SignedUrlTimeoutSeconds).Append("\n");
+            sb.Append("  ContentType: ").Append(ContentType).Append("\n");
             sb.Append("  ServerSideEncryption: ").Append(ServerSideEncryption).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -158,6 +170,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SignedUrlTimeoutSeconds.Equals(other.SignedUrlTimeoutSeconds)
                 ) &&
                 (
+                    this.ContentType == other.ContentType ||
+                    this.ContentType != null &&
+                    this.ContentType.Equals(other.ContentType)
+                ) &&
+                (
                     this.ServerSideEncryption == other.ServerSideEncryption ||
                     this.ServerSideEncryption != null &&
                     this.ServerSideEncryption.Equals(other.ServerSideEncryption)
@@ -183,6 +200,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SignedUrlTimeoutSeconds != null)
                     hash = hash * 59 + this.SignedUrlTimeoutSeconds.GetHashCode();
+
+                if (this.ContentType != null)
+                    hash = hash * 59 + this.ContentType.GetHashCode();
 
                 if (this.ServerSideEncryption != null)
                     hash = hash * 59 + this.ServerSideEncryption.GetHashCode();

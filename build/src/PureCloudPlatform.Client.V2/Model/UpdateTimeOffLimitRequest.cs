@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Contains time off limit object property values to be updated.
+    /// UpdateTimeOffLimitRequest
     /// </summary>
     [DataContract]
     public partial class UpdateTimeOffLimitRequest :  IEquatable<UpdateTimeOffLimitRequest>

@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Response for query for week schedule for a given week in management unit
+    /// WeekScheduleResponse
     /// </summary>
     [DataContract]
     public partial class WeekScheduleResponse :  IEquatable<WeekScheduleResponse>

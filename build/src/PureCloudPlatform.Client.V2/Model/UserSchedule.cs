@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// A schedule for a single user over a given time range
+    /// UserSchedule
     /// </summary>
     [DataContract]
     public partial class UserSchedule :  IEquatable<UserSchedule>

@@ -580,7 +580,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum CampaignPerformanceDetailView for "CAMPAIGN_PERFORMANCE_DETAIL_VIEW"
             /// </summary>
             [EnumMember(Value = "CAMPAIGN_PERFORMANCE_DETAIL_VIEW")]
-            CampaignPerformanceDetailView
+            CampaignPerformanceDetailView,
+            
+            /// <summary>
+            /// Enum KnowledgePerformanceView for "KNOWLEDGE_PERFORMANCE_VIEW"
+            /// </summary>
+            [EnumMember(Value = "KNOWLEDGE_PERFORMANCE_VIEW")]
+            KnowledgePerformanceView
         }
         /// <summary>
         /// The user supplied csv delimiter string value either of type 'comma' or 'semicolon' permitted for the export request

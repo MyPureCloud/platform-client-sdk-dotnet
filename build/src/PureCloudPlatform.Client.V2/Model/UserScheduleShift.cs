@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Single shift in a user&#39;s schedule
+    /// UserScheduleShift
     /// </summary>
     [DataContract]
     public partial class UserScheduleShift :  IEquatable<UserScheduleShift>

@@ -75,7 +75,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExceptionInfo">List of adherence exceptions for this user.</param>
         /// <param name="DayMetrics">Adherence and conformance metrics for days in query range.</param>
         /// <param name="Actuals">List of actual activity with offset for this user.</param>
-        public HistoricalAdherenceQueryResult(string UserId = null, DateTime? StartDate = null, DateTime? EndDate = null, double? AdherencePercentage = null, double? ConformancePercentage = null, ImpactEnum? Impact = null, List<HistoricalAdherenceExceptionInfo> ExceptionInfo = null, List<HistoricalAdherenceDayMetrics> DayMetrics = null, List<HistoricalAdherenceActuals> Actuals = null)
+        /// <param name="ActualsEndsDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        public HistoricalAdherenceQueryResult(string UserId = null, DateTime? StartDate = null, DateTime? EndDate = null, double? AdherencePercentage = null, double? ConformancePercentage = null, ImpactEnum? Impact = null, List<HistoricalAdherenceExceptionInfo> ExceptionInfo = null, List<HistoricalAdherenceDayMetrics> DayMetrics = null, List<HistoricalAdherenceActuals> Actuals = null, DateTime? ActualsEndsDate = null)
         {
             this.UserId = UserId;
             this.StartDate = StartDate;
@@ -86,6 +87,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ExceptionInfo = ExceptionInfo;
             this.DayMetrics = DayMetrics;
             this.Actuals = Actuals;
+            this.ActualsEndsDate = ActualsEndsDate;
             
         }
         
@@ -164,6 +166,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<HistoricalAdherenceActuals> Actuals { get; set; }
 
 
+
+        /// <summary>
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="actualsEndsDate", EmitDefaultValue=false)]
+        public DateTime? ActualsEndsDate { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -182,6 +193,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ExceptionInfo: ").Append(ExceptionInfo).Append("\n");
             sb.Append("  DayMetrics: ").Append(DayMetrics).Append("\n");
             sb.Append("  Actuals: ").Append(Actuals).Append("\n");
+            sb.Append("  ActualsEndsDate: ").Append(ActualsEndsDate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -266,6 +278,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Actuals == other.Actuals ||
                     this.Actuals != null &&
                     this.Actuals.SequenceEqual(other.Actuals)
+                ) &&
+                (
+                    this.ActualsEndsDate == other.ActualsEndsDate ||
+                    this.ActualsEndsDate != null &&
+                    this.ActualsEndsDate.Equals(other.ActualsEndsDate)
                 );
         }
 
@@ -306,6 +323,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Actuals != null)
                     hash = hash * 59 + this.Actuals.GetHashCode();
+
+                if (this.ActualsEndsDate != null)
+                    hash = hash * 59 + this.ActualsEndsDate.GetHashCode();
 
                 return hash;
             }

@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Time Off Request Settings
+    /// TimeOffRequestSettings
     /// </summary>
     [DataContract]
     public partial class TimeOffRequestSettings :  IEquatable<TimeOffRequestSettings>

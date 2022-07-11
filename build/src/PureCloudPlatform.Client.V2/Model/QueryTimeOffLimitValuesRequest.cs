@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// This sets up a filter to request date ranges of time off limit, allocated and waitlisted minutes
+    /// QueryTimeOffLimitValuesRequest
     /// </summary>
     [DataContract]
     public partial class QueryTimeOffLimitValuesRequest :  IEquatable<QueryTimeOffLimitValuesRequest>
@@ -29,7 +29,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="TimeOffLimitId">The time off limit object id to retrieve values for. Required if activityCodeId is not specified.</param>
         /// <param name="ActivityCodeId">The activity code id to filter the affected limit objects by. Required if timeOffLimitId is not specified.</param>
-        /// <param name="DateRanges">The list of the date ranges to return time off limit, allocated and waitlisted minutes. (required).</param>
+        /// <param name="DateRanges">The list of the date ranges to return time off limit, allocated and waitlisted minutes. The valid number of date ranges is between 1 and 30. Maximum total number of days in all ranges in 366. (required).</param>
         public QueryTimeOffLimitValuesRequest(string TimeOffLimitId = null, string ActivityCodeId = null, List<LocalDateRange> DateRanges = null)
         {
             this.TimeOffLimitId = TimeOffLimitId;
@@ -59,9 +59,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The list of the date ranges to return time off limit, allocated and waitlisted minutes.
+        /// The list of the date ranges to return time off limit, allocated and waitlisted minutes. The valid number of date ranges is between 1 and 30. Maximum total number of days in all ranges in 366.
         /// </summary>
-        /// <value>The list of the date ranges to return time off limit, allocated and waitlisted minutes.</value>
+        /// <value>The list of the date ranges to return time off limit, allocated and waitlisted minutes. The valid number of date ranges is between 1 and 30. Maximum total number of days in all ranges in 366.</value>
         [DataMember(Name="dateRanges", EmitDefaultValue=false)]
         public List<LocalDateRange> DateRanges { get; set; }
 

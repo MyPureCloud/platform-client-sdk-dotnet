@@ -16,6 +16,10 @@ title: BusinessUnitActivityCode
 | **CountsAsPaidTime** | **bool?** | Whether an agent is paid while performing this activity | [optional] |
 | **CountsAsWorkTime** | **bool?** | Indicates whether or not the activity should be counted as contiguous work time for calculating daily constraints | [optional] |
 | **AgentTimeOffSelectable** | **bool?** | Whether an agent can select this activity code when creating or editing a time off request. Null if the activity&#39;s category is not time off. | [optional] |
+| **CountsTowardShrinkage** | **bool?** | Whether or not this activity code counts toward shrinkage calculations | [optional] |
+| **PlannedShrinkage** | **bool?** | Whether this activity code is considered planned or unplanned shrinkage | [optional] |
+| **Interruptible** | **bool?** | Whether this activity code is considered interruptible | [optional] |
+| **SecondaryPresences** | [**List&lt;SecondaryPresence&gt;**](SecondaryPresence.html) | The secondary presences of this activity code | [optional] |
 | **Metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata.html) | Version metadata of this activity code | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Container for a map of ActivityCodeId to ActivityCode
+    /// ActivityCodeContainer
     /// </summary>
     [DataContract]
     public partial class ActivityCodeContainer :  IEquatable<ActivityCodeContainer>

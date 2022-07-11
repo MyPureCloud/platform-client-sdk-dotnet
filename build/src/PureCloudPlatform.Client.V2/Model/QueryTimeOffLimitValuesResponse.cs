@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// The list of date ranges with the time off limit, allocated and waitlisted values.
+    /// QueryTimeOffLimitValuesResponse
     /// </summary>
     [DataContract]
     public partial class QueryTimeOffLimitValuesResponse :  IEquatable<QueryTimeOffLimitValuesResponse>

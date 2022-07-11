@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Response for Historical Adherence Query, intended to tell the client what to listen for on a notification topic
+    /// WfmHistoricalAdherenceResponse
     /// </summary>
     [DataContract]
     public partial class WfmHistoricalAdherenceResponse :  IEquatable<WfmHistoricalAdherenceResponse>

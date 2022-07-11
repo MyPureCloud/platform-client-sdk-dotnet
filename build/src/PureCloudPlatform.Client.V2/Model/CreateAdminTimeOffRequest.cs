@@ -67,7 +67,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FullDayManagementUnitDates">A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit's configured time zone..</param>
         /// <param name="PartialDayStartDateTimes">A set of start date-times in ISO-8601 format for partial day requests..</param>
         /// <param name="DailyDurationMinutes">The daily duration of this time off request in minutes (required).</param>
-        public CreateAdminTimeOffRequest(StatusEnum? Status = null, List<UserReference> Users = null, string ActivityCodeId = null, string Notes = null, List<string> FullDayManagementUnitDates = null, List<DateTime?> PartialDayStartDateTimes = null, int? DailyDurationMinutes = null)
+        /// <param name="Paid">Whether this is a paid time off request.</param>
+        public CreateAdminTimeOffRequest(StatusEnum? Status = null, List<UserReference> Users = null, string ActivityCodeId = null, string Notes = null, List<string> FullDayManagementUnitDates = null, List<DateTime?> PartialDayStartDateTimes = null, int? DailyDurationMinutes = null, bool? Paid = null)
         {
             this.Status = Status;
             this.Users = Users;
@@ -76,6 +77,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.FullDayManagementUnitDates = FullDayManagementUnitDates;
             this.PartialDayStartDateTimes = PartialDayStartDateTimes;
             this.DailyDurationMinutes = DailyDurationMinutes;
+            this.Paid = Paid;
             
         }
         
@@ -136,6 +138,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? DailyDurationMinutes { get; set; }
 
 
+
+        /// <summary>
+        /// Whether this is a paid time off request
+        /// </summary>
+        /// <value>Whether this is a paid time off request</value>
+        [DataMember(Name="paid", EmitDefaultValue=false)]
+        public bool? Paid { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -152,6 +163,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FullDayManagementUnitDates: ").Append(FullDayManagementUnitDates).Append("\n");
             sb.Append("  PartialDayStartDateTimes: ").Append(PartialDayStartDateTimes).Append("\n");
             sb.Append("  DailyDurationMinutes: ").Append(DailyDurationMinutes).Append("\n");
+            sb.Append("  Paid: ").Append(Paid).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -226,6 +238,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DailyDurationMinutes == other.DailyDurationMinutes ||
                     this.DailyDurationMinutes != null &&
                     this.DailyDurationMinutes.Equals(other.DailyDurationMinutes)
+                ) &&
+                (
+                    this.Paid == other.Paid ||
+                    this.Paid != null &&
+                    this.Paid.Equals(other.Paid)
                 );
         }
 
@@ -260,6 +277,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DailyDurationMinutes != null)
                     hash = hash * 59 + this.DailyDurationMinutes.GetHashCode();
+
+                if (this.Paid != null)
+                    hash = hash * 59 + this.Paid.GetHashCode();
 
                 return hash;
             }

@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Activity configured for shift in work plan
+    /// CreateWorkPlanActivity
     /// </summary>
     [DataContract]
     public partial class CreateWorkPlanActivity :  IEquatable<CreateWorkPlanActivity>

@@ -97,17 +97,28 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="HistoricalAdherenceActuals" /> class.
         /// </summary>
         /// <param name="ActualActivityCategory">Activity in which the user is actually engaged.</param>
+        /// <param name="ActualSecondaryPresenceLookupId">The lookup ID used to retrieve the actual secondary status from map of lookup ID to corresponding secondary presence ID.</param>
         /// <param name="StartOffsetSeconds">Actual start offset in seconds relative to query start time.</param>
         /// <param name="EndOffsetSeconds">Actual end offset in seconds relative to query start time.</param>
-        public HistoricalAdherenceActuals(ActualActivityCategoryEnum? ActualActivityCategory = null, int? StartOffsetSeconds = null, int? EndOffsetSeconds = null)
+        public HistoricalAdherenceActuals(ActualActivityCategoryEnum? ActualActivityCategory = null, string ActualSecondaryPresenceLookupId = null, int? StartOffsetSeconds = null, int? EndOffsetSeconds = null)
         {
             this.ActualActivityCategory = ActualActivityCategory;
+            this.ActualSecondaryPresenceLookupId = ActualSecondaryPresenceLookupId;
             this.StartOffsetSeconds = StartOffsetSeconds;
             this.EndOffsetSeconds = EndOffsetSeconds;
             
         }
         
 
+
+
+
+        /// <summary>
+        /// The lookup ID used to retrieve the actual secondary status from map of lookup ID to corresponding secondary presence ID
+        /// </summary>
+        /// <value>The lookup ID used to retrieve the actual secondary status from map of lookup ID to corresponding secondary presence ID</value>
+        [DataMember(Name="actualSecondaryPresenceLookupId", EmitDefaultValue=false)]
+        public string ActualSecondaryPresenceLookupId { get; set; }
 
 
 
@@ -138,6 +149,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class HistoricalAdherenceActuals {\n");
 
             sb.Append("  ActualActivityCategory: ").Append(ActualActivityCategory).Append("\n");
+            sb.Append("  ActualSecondaryPresenceLookupId: ").Append(ActualSecondaryPresenceLookupId).Append("\n");
             sb.Append("  StartOffsetSeconds: ").Append(StartOffsetSeconds).Append("\n");
             sb.Append("  EndOffsetSeconds: ").Append(EndOffsetSeconds).Append("\n");
             sb.Append("}\n");
@@ -186,6 +198,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ActualActivityCategory.Equals(other.ActualActivityCategory)
                 ) &&
                 (
+                    this.ActualSecondaryPresenceLookupId == other.ActualSecondaryPresenceLookupId ||
+                    this.ActualSecondaryPresenceLookupId != null &&
+                    this.ActualSecondaryPresenceLookupId.Equals(other.ActualSecondaryPresenceLookupId)
+                ) &&
+                (
                     this.StartOffsetSeconds == other.StartOffsetSeconds ||
                     this.StartOffsetSeconds != null &&
                     this.StartOffsetSeconds.Equals(other.StartOffsetSeconds)
@@ -210,6 +227,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.ActualActivityCategory != null)
                     hash = hash * 59 + this.ActualActivityCategory.GetHashCode();
+
+                if (this.ActualSecondaryPresenceLookupId != null)
+                    hash = hash * 59 + this.ActualSecondaryPresenceLookupId.GetHashCode();
 
                 if (this.StartOffsetSeconds != null)
                     hash = hash * 59 + this.StartOffsetSeconds.GetHashCode();

@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Management unit reference object for Workforce Management (ID/selfUri only)
+    /// ManagementUnitReference
     /// </summary>
     [DataContract]
     public partial class ManagementUnitReference :  IEquatable<ManagementUnitReference>

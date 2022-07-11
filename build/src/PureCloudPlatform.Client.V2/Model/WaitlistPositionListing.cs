@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// A list of the waitlist positions for each time off request day separately. If time off request is not waitlisted, then then there are no items in the list for such time off request.
+    /// WaitlistPositionListing
     /// </summary>
     [DataContract]
     public partial class WaitlistPositionListing :  IEquatable<WaitlistPositionListing>

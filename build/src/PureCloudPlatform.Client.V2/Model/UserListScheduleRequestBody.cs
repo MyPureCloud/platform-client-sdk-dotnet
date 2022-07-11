@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Request body for fetching the schedule for a group of users over a given time range
+    /// UserListScheduleRequestBody
     /// </summary>
     [DataContract]
     public partial class UserListScheduleRequestBody :  IEquatable<UserListScheduleRequestBody>

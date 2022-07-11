@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Activity code data
+    /// ActivityCode
     /// </summary>
     [DataContract]
     public partial class ActivityCode :  IEquatable<ActivityCode>

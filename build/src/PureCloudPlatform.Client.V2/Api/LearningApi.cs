@@ -317,6 +317,40 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<LearningModulesDomainEntityListing> GetLearningModulesWithHttpInfo (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null);
 
         /// <summary>
+        /// Get all learning modules of an organization including assignments for a specific user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userIds">The IDs of the users to include</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="searchTerm">Search Term (searches by name and description) (optional)</param>
+        /// <param name="overdue">Specifies if only modules with overdue/not overdue (overdue is \&quot;True\&quot; or \&quot;False\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or omitted, both are returned and can including modules that are unassigned. (optional, default to Any)</param>
+        /// <param name="assignmentStates">Specifies the assignment states to return. (optional)</param>
+        /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
+        /// <returns>AssignedLearningModuleDomainEntityListing</returns>
+        AssignedLearningModuleDomainEntityListing GetLearningModulesAssignments (List<string> userIds, int? pageSize = null, int? pageNumber = null, string searchTerm = null, string overdue = null, List<string> assignmentStates = null, List<string> expand = null);
+
+        /// <summary>
+        /// Get all learning modules of an organization including assignments for a specific user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userIds">The IDs of the users to include</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="searchTerm">Search Term (searches by name and description) (optional)</param>
+        /// <param name="overdue">Specifies if only modules with overdue/not overdue (overdue is \&quot;True\&quot; or \&quot;False\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or omitted, both are returned and can including modules that are unassigned. (optional, default to Any)</param>
+        /// <param name="assignmentStates">Specifies the assignment states to return. (optional)</param>
+        /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
+        /// <returns>ApiResponse of AssignedLearningModuleDomainEntityListing</returns>
+        ApiResponse<AssignedLearningModuleDomainEntityListing> GetLearningModulesAssignmentsWithHttpInfo (List<string> userIds, int? pageSize = null, int? pageNumber = null, string searchTerm = null, string overdue = null, List<string> assignmentStates = null, List<string> expand = null);
+
+        /// <summary>
         /// Update Learning Assignment
         /// </summary>
         /// <remarks>
@@ -939,6 +973,40 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="isPublished">Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned (optional, default to Any)</param>
         /// <returns>Task of ApiResponse (LearningModulesDomainEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<LearningModulesDomainEntityListing>> GetLearningModulesAsyncWithHttpInfo (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null);
+
+        /// <summary>
+        /// Get all learning modules of an organization including assignments for a specific user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userIds">The IDs of the users to include</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="searchTerm">Search Term (searches by name and description) (optional)</param>
+        /// <param name="overdue">Specifies if only modules with overdue/not overdue (overdue is \&quot;True\&quot; or \&quot;False\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or omitted, both are returned and can including modules that are unassigned. (optional, default to Any)</param>
+        /// <param name="assignmentStates">Specifies the assignment states to return. (optional)</param>
+        /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
+        /// <returns>Task of AssignedLearningModuleDomainEntityListing</returns>
+        System.Threading.Tasks.Task<AssignedLearningModuleDomainEntityListing> GetLearningModulesAssignmentsAsync (List<string> userIds, int? pageSize = null, int? pageNumber = null, string searchTerm = null, string overdue = null, List<string> assignmentStates = null, List<string> expand = null);
+
+        /// <summary>
+        /// Get all learning modules of an organization including assignments for a specific user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userIds">The IDs of the users to include</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="searchTerm">Search Term (searches by name and description) (optional)</param>
+        /// <param name="overdue">Specifies if only modules with overdue/not overdue (overdue is \&quot;True\&quot; or \&quot;False\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or omitted, both are returned and can including modules that are unassigned. (optional, default to Any)</param>
+        /// <param name="assignmentStates">Specifies the assignment states to return. (optional)</param>
+        /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
+        /// <returns>Task of ApiResponse (AssignedLearningModuleDomainEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AssignedLearningModuleDomainEntityListing>> GetLearningModulesAssignmentsAsyncWithHttpInfo (List<string> userIds, int? pageSize = null, int? pageNumber = null, string searchTerm = null, string overdue = null, List<string> assignmentStates = null, List<string> expand = null);
 
         /// <summary>
         /// Update Learning Assignment
@@ -3485,6 +3553,233 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<LearningModulesDomainEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (LearningModulesDomainEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningModulesDomainEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get all learning modules of an organization including assignments for a specific user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userIds">The IDs of the users to include</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="searchTerm">Search Term (searches by name and description) (optional)</param>
+        /// <param name="overdue">Specifies if only modules with overdue/not overdue (overdue is \&quot;True\&quot; or \&quot;False\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or omitted, both are returned and can including modules that are unassigned. (optional, default to Any)</param>
+        /// <param name="assignmentStates">Specifies the assignment states to return. (optional)</param>
+        /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
+        /// <returns>AssignedLearningModuleDomainEntityListing</returns>
+        public AssignedLearningModuleDomainEntityListing GetLearningModulesAssignments (List<string> userIds, int? pageSize = null, int? pageNumber = null, string searchTerm = null, string overdue = null, List<string> assignmentStates = null, List<string> expand = null)
+        {
+             ApiResponse<AssignedLearningModuleDomainEntityListing> localVarResponse = GetLearningModulesAssignmentsWithHttpInfo(userIds, pageSize, pageNumber, searchTerm, overdue, assignmentStates, expand);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get all learning modules of an organization including assignments for a specific user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userIds">The IDs of the users to include</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="searchTerm">Search Term (searches by name and description) (optional)</param>
+        /// <param name="overdue">Specifies if only modules with overdue/not overdue (overdue is \&quot;True\&quot; or \&quot;False\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or omitted, both are returned and can including modules that are unassigned. (optional, default to Any)</param>
+        /// <param name="assignmentStates">Specifies the assignment states to return. (optional)</param>
+        /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
+        /// <returns>ApiResponse of AssignedLearningModuleDomainEntityListing</returns>
+        public ApiResponse< AssignedLearningModuleDomainEntityListing > GetLearningModulesAssignmentsWithHttpInfo (List<string> userIds, int? pageSize = null, int? pageNumber = null, string searchTerm = null, string overdue = null, List<string> assignmentStates = null, List<string> expand = null)
+        { 
+            // verify the required parameter 'userIds' is set
+            if (userIds == null)
+                throw new ApiException(400, "Missing required parameter 'userIds' when calling LearningApi->GetLearningModulesAssignments");
+
+            var localVarPath = "/api/v2/learning/modules/assignments";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (userIds != null) userIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("userIds", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (searchTerm != null) localVarQueryParams.Add(new Tuple<string, string>("searchTerm", this.Configuration.ApiClient.ParameterToString(searchTerm)));
+            if (overdue != null) localVarQueryParams.Add(new Tuple<string, string>("overdue", this.Configuration.ApiClient.ParameterToString(overdue)));
+            if (assignmentStates != null) assignmentStates.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("assignmentStates", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLearningModulesAssignments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLearningModulesAssignments: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AssignedLearningModuleDomainEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (AssignedLearningModuleDomainEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssignedLearningModuleDomainEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get all learning modules of an organization including assignments for a specific user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userIds">The IDs of the users to include</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="searchTerm">Search Term (searches by name and description) (optional)</param>
+        /// <param name="overdue">Specifies if only modules with overdue/not overdue (overdue is \&quot;True\&quot; or \&quot;False\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or omitted, both are returned and can including modules that are unassigned. (optional, default to Any)</param>
+        /// <param name="assignmentStates">Specifies the assignment states to return. (optional)</param>
+        /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
+        /// <returns>Task of AssignedLearningModuleDomainEntityListing</returns>
+        public async System.Threading.Tasks.Task<AssignedLearningModuleDomainEntityListing> GetLearningModulesAssignmentsAsync (List<string> userIds, int? pageSize = null, int? pageNumber = null, string searchTerm = null, string overdue = null, List<string> assignmentStates = null, List<string> expand = null)
+        {
+             ApiResponse<AssignedLearningModuleDomainEntityListing> localVarResponse = await GetLearningModulesAssignmentsAsyncWithHttpInfo(userIds, pageSize, pageNumber, searchTerm, overdue, assignmentStates, expand);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get all learning modules of an organization including assignments for a specific user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userIds">The IDs of the users to include</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="searchTerm">Search Term (searches by name and description) (optional)</param>
+        /// <param name="overdue">Specifies if only modules with overdue/not overdue (overdue is \&quot;True\&quot; or \&quot;False\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or omitted, both are returned and can including modules that are unassigned. (optional, default to Any)</param>
+        /// <param name="assignmentStates">Specifies the assignment states to return. (optional)</param>
+        /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
+        /// <returns>Task of ApiResponse (AssignedLearningModuleDomainEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AssignedLearningModuleDomainEntityListing>> GetLearningModulesAssignmentsAsyncWithHttpInfo (List<string> userIds, int? pageSize = null, int? pageNumber = null, string searchTerm = null, string overdue = null, List<string> assignmentStates = null, List<string> expand = null)
+        { 
+            // verify the required parameter 'userIds' is set
+            if (userIds == null)
+                throw new ApiException(400, "Missing required parameter 'userIds' when calling LearningApi->GetLearningModulesAssignments");
+            
+
+            var localVarPath = "/api/v2/learning/modules/assignments";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (userIds != null) userIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("userIds", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (searchTerm != null) localVarQueryParams.Add(new Tuple<string, string>("searchTerm", this.Configuration.ApiClient.ParameterToString(searchTerm)));
+            if (overdue != null) localVarQueryParams.Add(new Tuple<string, string>("overdue", this.Configuration.ApiClient.ParameterToString(overdue)));
+            if (assignmentStates != null) assignmentStates.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("assignmentStates", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLearningModulesAssignments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLearningModulesAssignments: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AssignedLearningModuleDomainEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (AssignedLearningModuleDomainEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssignedLearningModuleDomainEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

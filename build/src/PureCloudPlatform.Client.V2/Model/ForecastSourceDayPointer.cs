@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Pointer to look up source data for a short term forecast
+    /// ForecastSourceDayPointer
     /// </summary>
     [DataContract]
     public partial class ForecastSourceDayPointer :  IEquatable<ForecastSourceDayPointer>

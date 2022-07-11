@@ -247,6 +247,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Processautomation,
             
             /// <summary>
+            /// Enum Voicemail for "Voicemail"
+            /// </summary>
+            [EnumMember(Value = "Voicemail")]
+            Voicemail,
+            
+            /// <summary>
             /// Enum Webdeployments for "WebDeployments"
             /// </summary>
             [EnumMember(Value = "WebDeployments")]

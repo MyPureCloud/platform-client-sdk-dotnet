@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Short Term Forecasting Settings
+    /// ShortTermForecastingSettings
     /// </summary>
     [DataContract]
     public partial class ShortTermForecastingSettings :  IEquatable<ShortTermForecastingSettings>

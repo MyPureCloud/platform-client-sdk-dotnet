@@ -535,6 +535,110 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<WorkdayPointsTrend> GetGamificationScorecardsPointsTrendsWithHttpInfo (String startWorkday, String endWorkday, string dayOfWeek = null);
 
         /// <summary>
+        /// Average performance values trends by metric of a user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">performanceProfileId</param>
+        /// <param name="metricId">metricId</param>
+        /// <param name="userId"></param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
+        /// <returns>MetricValueTrendAverage</returns>
+        MetricValueTrendAverage GetGamificationScorecardsProfileMetricUserValuesTrends (string profileId, string metricId, string userId, String startWorkday, String endWorkday, String referenceWorkday = null, string timeZone = null);
+
+        /// <summary>
+        /// Average performance values trends by metric of a user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">performanceProfileId</param>
+        /// <param name="metricId">metricId</param>
+        /// <param name="userId"></param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
+        /// <returns>ApiResponse of MetricValueTrendAverage</returns>
+        ApiResponse<MetricValueTrendAverage> GetGamificationScorecardsProfileMetricUserValuesTrendsWithHttpInfo (string profileId, string metricId, string userId, String startWorkday, String endWorkday, String referenceWorkday = null, string timeZone = null);
+
+        /// <summary>
+        /// Average performance values trends by metric of a division or a performance profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">performanceProfileId</param>
+        /// <param name="metricId">metricId</param>
+        /// <param name="filterType">Filter type for the query request.</param>
+        /// <param name="filterId">ID for the filter type. For example, division Id</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
+        /// <returns>MetricValueTrendAverage</returns>
+        MetricValueTrendAverage GetGamificationScorecardsProfileMetricUsersValuesTrends (string profileId, string metricId, string filterType, string filterId, String startWorkday, String endWorkday, String referenceWorkday = null, string timeZone = null);
+
+        /// <summary>
+        /// Average performance values trends by metric of a division or a performance profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">performanceProfileId</param>
+        /// <param name="metricId">metricId</param>
+        /// <param name="filterType">Filter type for the query request.</param>
+        /// <param name="filterId">ID for the filter type. For example, division Id</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
+        /// <returns>ApiResponse of MetricValueTrendAverage</returns>
+        ApiResponse<MetricValueTrendAverage> GetGamificationScorecardsProfileMetricUsersValuesTrendsWithHttpInfo (string profileId, string metricId, string filterType, string filterId, String startWorkday, String endWorkday, String referenceWorkday = null, string timeZone = null);
+
+        /// <summary>
+        /// Average performance values trends by metric of the requesting user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">performanceProfileId</param>
+        /// <param name="metricId">metricId</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="filterType">Filter type for the query request. If not set, returns the values trends of the requesting user (optional)</param>
+        /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
+        /// <returns>MetricValueTrendAverage</returns>
+        MetricValueTrendAverage GetGamificationScorecardsProfileMetricValuesTrends (string profileId, string metricId, String startWorkday, String endWorkday, string filterType = null, String referenceWorkday = null, string timeZone = null);
+
+        /// <summary>
+        /// Average performance values trends by metric of the requesting user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">performanceProfileId</param>
+        /// <param name="metricId">metricId</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="filterType">Filter type for the query request. If not set, returns the values trends of the requesting user (optional)</param>
+        /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
+        /// <returns>ApiResponse of MetricValueTrendAverage</returns>
+        ApiResponse<MetricValueTrendAverage> GetGamificationScorecardsProfileMetricValuesTrendsWithHttpInfo (string profileId, string metricId, String startWorkday, String endWorkday, string filterType = null, String referenceWorkday = null, string timeZone = null);
+
+        /// <summary>
         /// Workday performance metrics for a user
         /// </summary>
         /// <remarks>
@@ -1695,6 +1799,110 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>Task of ApiResponse (WorkdayPointsTrend)</returns>
         System.Threading.Tasks.Task<ApiResponse<WorkdayPointsTrend>> GetGamificationScorecardsPointsTrendsAsyncWithHttpInfo (String startWorkday, String endWorkday, string dayOfWeek = null);
+
+        /// <summary>
+        /// Average performance values trends by metric of a user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">performanceProfileId</param>
+        /// <param name="metricId">metricId</param>
+        /// <param name="userId"></param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
+        /// <returns>Task of MetricValueTrendAverage</returns>
+        System.Threading.Tasks.Task<MetricValueTrendAverage> GetGamificationScorecardsProfileMetricUserValuesTrendsAsync (string profileId, string metricId, string userId, String startWorkday, String endWorkday, String referenceWorkday = null, string timeZone = null);
+
+        /// <summary>
+        /// Average performance values trends by metric of a user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">performanceProfileId</param>
+        /// <param name="metricId">metricId</param>
+        /// <param name="userId"></param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
+        /// <returns>Task of ApiResponse (MetricValueTrendAverage)</returns>
+        System.Threading.Tasks.Task<ApiResponse<MetricValueTrendAverage>> GetGamificationScorecardsProfileMetricUserValuesTrendsAsyncWithHttpInfo (string profileId, string metricId, string userId, String startWorkday, String endWorkday, String referenceWorkday = null, string timeZone = null);
+
+        /// <summary>
+        /// Average performance values trends by metric of a division or a performance profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">performanceProfileId</param>
+        /// <param name="metricId">metricId</param>
+        /// <param name="filterType">Filter type for the query request.</param>
+        /// <param name="filterId">ID for the filter type. For example, division Id</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
+        /// <returns>Task of MetricValueTrendAverage</returns>
+        System.Threading.Tasks.Task<MetricValueTrendAverage> GetGamificationScorecardsProfileMetricUsersValuesTrendsAsync (string profileId, string metricId, string filterType, string filterId, String startWorkday, String endWorkday, String referenceWorkday = null, string timeZone = null);
+
+        /// <summary>
+        /// Average performance values trends by metric of a division or a performance profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">performanceProfileId</param>
+        /// <param name="metricId">metricId</param>
+        /// <param name="filterType">Filter type for the query request.</param>
+        /// <param name="filterId">ID for the filter type. For example, division Id</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
+        /// <returns>Task of ApiResponse (MetricValueTrendAverage)</returns>
+        System.Threading.Tasks.Task<ApiResponse<MetricValueTrendAverage>> GetGamificationScorecardsProfileMetricUsersValuesTrendsAsyncWithHttpInfo (string profileId, string metricId, string filterType, string filterId, String startWorkday, String endWorkday, String referenceWorkday = null, string timeZone = null);
+
+        /// <summary>
+        /// Average performance values trends by metric of the requesting user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">performanceProfileId</param>
+        /// <param name="metricId">metricId</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="filterType">Filter type for the query request. If not set, returns the values trends of the requesting user (optional)</param>
+        /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
+        /// <returns>Task of MetricValueTrendAverage</returns>
+        System.Threading.Tasks.Task<MetricValueTrendAverage> GetGamificationScorecardsProfileMetricValuesTrendsAsync (string profileId, string metricId, String startWorkday, String endWorkday, string filterType = null, String referenceWorkday = null, string timeZone = null);
+
+        /// <summary>
+        /// Average performance values trends by metric of the requesting user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">performanceProfileId</param>
+        /// <param name="metricId">metricId</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="filterType">Filter type for the query request. If not set, returns the values trends of the requesting user (optional)</param>
+        /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
+        /// <returns>Task of ApiResponse (MetricValueTrendAverage)</returns>
+        System.Threading.Tasks.Task<ApiResponse<MetricValueTrendAverage>> GetGamificationScorecardsProfileMetricValuesTrendsAsyncWithHttpInfo (string profileId, string metricId, String startWorkday, String endWorkday, string filterType = null, String referenceWorkday = null, string timeZone = null);
 
         /// <summary>
         /// Workday performance metrics for a user
@@ -6740,6 +6948,777 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<WorkdayPointsTrend>(localVarStatusCode,
                 localVarHeaders,
                 (WorkdayPointsTrend) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkdayPointsTrend)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Average performance values trends by metric of a user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">performanceProfileId</param>
+        /// <param name="metricId">metricId</param>
+        /// <param name="userId"></param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
+        /// <returns>MetricValueTrendAverage</returns>
+        public MetricValueTrendAverage GetGamificationScorecardsProfileMetricUserValuesTrends (string profileId, string metricId, string userId, String startWorkday, String endWorkday, String referenceWorkday = null, string timeZone = null)
+        {
+             ApiResponse<MetricValueTrendAverage> localVarResponse = GetGamificationScorecardsProfileMetricUserValuesTrendsWithHttpInfo(profileId, metricId, userId, startWorkday, endWorkday, referenceWorkday, timeZone);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Average performance values trends by metric of a user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">performanceProfileId</param>
+        /// <param name="metricId">metricId</param>
+        /// <param name="userId"></param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
+        /// <returns>ApiResponse of MetricValueTrendAverage</returns>
+        public ApiResponse< MetricValueTrendAverage > GetGamificationScorecardsProfileMetricUserValuesTrendsWithHttpInfo (string profileId, string metricId, string userId, String startWorkday, String endWorkday, String referenceWorkday = null, string timeZone = null)
+        { 
+            // verify the required parameter 'profileId' is set
+            if (profileId == null)
+                throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->GetGamificationScorecardsProfileMetricUserValuesTrends");
+            // verify the required parameter 'metricId' is set
+            if (metricId == null)
+                throw new ApiException(400, "Missing required parameter 'metricId' when calling GamificationApi->GetGamificationScorecardsProfileMetricUserValuesTrends");
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling GamificationApi->GetGamificationScorecardsProfileMetricUserValuesTrends");
+            // verify the required parameter 'startWorkday' is set
+            if (startWorkday == null)
+                throw new ApiException(400, "Missing required parameter 'startWorkday' when calling GamificationApi->GetGamificationScorecardsProfileMetricUserValuesTrends");
+            // verify the required parameter 'endWorkday' is set
+            if (endWorkday == null)
+                throw new ApiException(400, "Missing required parameter 'endWorkday' when calling GamificationApi->GetGamificationScorecardsProfileMetricUserValuesTrends");
+
+            var localVarPath = "/api/v2/gamification/scorecards/profiles/{profileId}/metrics/{metricId}/users/{userId}/values/trends";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (profileId != null) localVarPathParams.Add("profileId", this.Configuration.ApiClient.ParameterToString(profileId));
+            if (metricId != null) localVarPathParams.Add("metricId", this.Configuration.ApiClient.ParameterToString(metricId));
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+            if (startWorkday != null) localVarQueryParams.Add(new Tuple<string, string>("startWorkday", this.Configuration.ApiClient.ParameterToString(startWorkday)));
+            if (endWorkday != null) localVarQueryParams.Add(new Tuple<string, string>("endWorkday", this.Configuration.ApiClient.ParameterToString(endWorkday)));
+            if (referenceWorkday != null) localVarQueryParams.Add(new Tuple<string, string>("referenceWorkday", this.Configuration.ApiClient.ParameterToString(referenceWorkday)));
+            if (timeZone != null) localVarQueryParams.Add(new Tuple<string, string>("timeZone", this.Configuration.ApiClient.ParameterToString(timeZone)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationScorecardsProfileMetricUserValuesTrends: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationScorecardsProfileMetricUserValuesTrends: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<MetricValueTrendAverage>(localVarStatusCode,
+                localVarHeaders,
+                (MetricValueTrendAverage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MetricValueTrendAverage)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Average performance values trends by metric of a user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">performanceProfileId</param>
+        /// <param name="metricId">metricId</param>
+        /// <param name="userId"></param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
+        /// <returns>Task of MetricValueTrendAverage</returns>
+        public async System.Threading.Tasks.Task<MetricValueTrendAverage> GetGamificationScorecardsProfileMetricUserValuesTrendsAsync (string profileId, string metricId, string userId, String startWorkday, String endWorkday, String referenceWorkday = null, string timeZone = null)
+        {
+             ApiResponse<MetricValueTrendAverage> localVarResponse = await GetGamificationScorecardsProfileMetricUserValuesTrendsAsyncWithHttpInfo(profileId, metricId, userId, startWorkday, endWorkday, referenceWorkday, timeZone);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Average performance values trends by metric of a user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">performanceProfileId</param>
+        /// <param name="metricId">metricId</param>
+        /// <param name="userId"></param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
+        /// <returns>Task of ApiResponse (MetricValueTrendAverage)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<MetricValueTrendAverage>> GetGamificationScorecardsProfileMetricUserValuesTrendsAsyncWithHttpInfo (string profileId, string metricId, string userId, String startWorkday, String endWorkday, String referenceWorkday = null, string timeZone = null)
+        { 
+            // verify the required parameter 'profileId' is set
+            if (profileId == null)
+                throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->GetGamificationScorecardsProfileMetricUserValuesTrends");
+            
+            // verify the required parameter 'metricId' is set
+            if (metricId == null)
+                throw new ApiException(400, "Missing required parameter 'metricId' when calling GamificationApi->GetGamificationScorecardsProfileMetricUserValuesTrends");
+            
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling GamificationApi->GetGamificationScorecardsProfileMetricUserValuesTrends");
+            
+            // verify the required parameter 'startWorkday' is set
+            if (startWorkday == null)
+                throw new ApiException(400, "Missing required parameter 'startWorkday' when calling GamificationApi->GetGamificationScorecardsProfileMetricUserValuesTrends");
+            
+            // verify the required parameter 'endWorkday' is set
+            if (endWorkday == null)
+                throw new ApiException(400, "Missing required parameter 'endWorkday' when calling GamificationApi->GetGamificationScorecardsProfileMetricUserValuesTrends");
+            
+
+            var localVarPath = "/api/v2/gamification/scorecards/profiles/{profileId}/metrics/{metricId}/users/{userId}/values/trends";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (profileId != null) localVarPathParams.Add("profileId", this.Configuration.ApiClient.ParameterToString(profileId));
+            if (metricId != null) localVarPathParams.Add("metricId", this.Configuration.ApiClient.ParameterToString(metricId));
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+            if (startWorkday != null) localVarQueryParams.Add(new Tuple<string, string>("startWorkday", this.Configuration.ApiClient.ParameterToString(startWorkday)));
+            if (endWorkday != null) localVarQueryParams.Add(new Tuple<string, string>("endWorkday", this.Configuration.ApiClient.ParameterToString(endWorkday)));
+            if (referenceWorkday != null) localVarQueryParams.Add(new Tuple<string, string>("referenceWorkday", this.Configuration.ApiClient.ParameterToString(referenceWorkday)));
+            if (timeZone != null) localVarQueryParams.Add(new Tuple<string, string>("timeZone", this.Configuration.ApiClient.ParameterToString(timeZone)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationScorecardsProfileMetricUserValuesTrends: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationScorecardsProfileMetricUserValuesTrends: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<MetricValueTrendAverage>(localVarStatusCode,
+                localVarHeaders,
+                (MetricValueTrendAverage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MetricValueTrendAverage)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Average performance values trends by metric of a division or a performance profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">performanceProfileId</param>
+        /// <param name="metricId">metricId</param>
+        /// <param name="filterType">Filter type for the query request.</param>
+        /// <param name="filterId">ID for the filter type. For example, division Id</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
+        /// <returns>MetricValueTrendAverage</returns>
+        public MetricValueTrendAverage GetGamificationScorecardsProfileMetricUsersValuesTrends (string profileId, string metricId, string filterType, string filterId, String startWorkday, String endWorkday, String referenceWorkday = null, string timeZone = null)
+        {
+             ApiResponse<MetricValueTrendAverage> localVarResponse = GetGamificationScorecardsProfileMetricUsersValuesTrendsWithHttpInfo(profileId, metricId, filterType, filterId, startWorkday, endWorkday, referenceWorkday, timeZone);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Average performance values trends by metric of a division or a performance profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">performanceProfileId</param>
+        /// <param name="metricId">metricId</param>
+        /// <param name="filterType">Filter type for the query request.</param>
+        /// <param name="filterId">ID for the filter type. For example, division Id</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
+        /// <returns>ApiResponse of MetricValueTrendAverage</returns>
+        public ApiResponse< MetricValueTrendAverage > GetGamificationScorecardsProfileMetricUsersValuesTrendsWithHttpInfo (string profileId, string metricId, string filterType, string filterId, String startWorkday, String endWorkday, String referenceWorkday = null, string timeZone = null)
+        { 
+            // verify the required parameter 'profileId' is set
+            if (profileId == null)
+                throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->GetGamificationScorecardsProfileMetricUsersValuesTrends");
+            // verify the required parameter 'metricId' is set
+            if (metricId == null)
+                throw new ApiException(400, "Missing required parameter 'metricId' when calling GamificationApi->GetGamificationScorecardsProfileMetricUsersValuesTrends");
+            // verify the required parameter 'filterType' is set
+            if (filterType == null)
+                throw new ApiException(400, "Missing required parameter 'filterType' when calling GamificationApi->GetGamificationScorecardsProfileMetricUsersValuesTrends");
+            // verify the required parameter 'filterId' is set
+            if (filterId == null)
+                throw new ApiException(400, "Missing required parameter 'filterId' when calling GamificationApi->GetGamificationScorecardsProfileMetricUsersValuesTrends");
+            // verify the required parameter 'startWorkday' is set
+            if (startWorkday == null)
+                throw new ApiException(400, "Missing required parameter 'startWorkday' when calling GamificationApi->GetGamificationScorecardsProfileMetricUsersValuesTrends");
+            // verify the required parameter 'endWorkday' is set
+            if (endWorkday == null)
+                throw new ApiException(400, "Missing required parameter 'endWorkday' when calling GamificationApi->GetGamificationScorecardsProfileMetricUsersValuesTrends");
+
+            var localVarPath = "/api/v2/gamification/scorecards/profiles/{profileId}/metrics/{metricId}/users/values/trends";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (profileId != null) localVarPathParams.Add("profileId", this.Configuration.ApiClient.ParameterToString(profileId));
+            if (metricId != null) localVarPathParams.Add("metricId", this.Configuration.ApiClient.ParameterToString(metricId));
+
+            // Query params
+            if (filterType != null) localVarQueryParams.Add(new Tuple<string, string>("filterType", this.Configuration.ApiClient.ParameterToString(filterType)));
+            if (filterId != null) localVarQueryParams.Add(new Tuple<string, string>("filterId", this.Configuration.ApiClient.ParameterToString(filterId)));
+            if (startWorkday != null) localVarQueryParams.Add(new Tuple<string, string>("startWorkday", this.Configuration.ApiClient.ParameterToString(startWorkday)));
+            if (endWorkday != null) localVarQueryParams.Add(new Tuple<string, string>("endWorkday", this.Configuration.ApiClient.ParameterToString(endWorkday)));
+            if (referenceWorkday != null) localVarQueryParams.Add(new Tuple<string, string>("referenceWorkday", this.Configuration.ApiClient.ParameterToString(referenceWorkday)));
+            if (timeZone != null) localVarQueryParams.Add(new Tuple<string, string>("timeZone", this.Configuration.ApiClient.ParameterToString(timeZone)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationScorecardsProfileMetricUsersValuesTrends: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationScorecardsProfileMetricUsersValuesTrends: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<MetricValueTrendAverage>(localVarStatusCode,
+                localVarHeaders,
+                (MetricValueTrendAverage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MetricValueTrendAverage)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Average performance values trends by metric of a division or a performance profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">performanceProfileId</param>
+        /// <param name="metricId">metricId</param>
+        /// <param name="filterType">Filter type for the query request.</param>
+        /// <param name="filterId">ID for the filter type. For example, division Id</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
+        /// <returns>Task of MetricValueTrendAverage</returns>
+        public async System.Threading.Tasks.Task<MetricValueTrendAverage> GetGamificationScorecardsProfileMetricUsersValuesTrendsAsync (string profileId, string metricId, string filterType, string filterId, String startWorkday, String endWorkday, String referenceWorkday = null, string timeZone = null)
+        {
+             ApiResponse<MetricValueTrendAverage> localVarResponse = await GetGamificationScorecardsProfileMetricUsersValuesTrendsAsyncWithHttpInfo(profileId, metricId, filterType, filterId, startWorkday, endWorkday, referenceWorkday, timeZone);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Average performance values trends by metric of a division or a performance profile 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">performanceProfileId</param>
+        /// <param name="metricId">metricId</param>
+        /// <param name="filterType">Filter type for the query request.</param>
+        /// <param name="filterId">ID for the filter type. For example, division Id</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
+        /// <returns>Task of ApiResponse (MetricValueTrendAverage)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<MetricValueTrendAverage>> GetGamificationScorecardsProfileMetricUsersValuesTrendsAsyncWithHttpInfo (string profileId, string metricId, string filterType, string filterId, String startWorkday, String endWorkday, String referenceWorkday = null, string timeZone = null)
+        { 
+            // verify the required parameter 'profileId' is set
+            if (profileId == null)
+                throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->GetGamificationScorecardsProfileMetricUsersValuesTrends");
+            
+            // verify the required parameter 'metricId' is set
+            if (metricId == null)
+                throw new ApiException(400, "Missing required parameter 'metricId' when calling GamificationApi->GetGamificationScorecardsProfileMetricUsersValuesTrends");
+            
+            // verify the required parameter 'filterType' is set
+            if (filterType == null)
+                throw new ApiException(400, "Missing required parameter 'filterType' when calling GamificationApi->GetGamificationScorecardsProfileMetricUsersValuesTrends");
+            
+            // verify the required parameter 'filterId' is set
+            if (filterId == null)
+                throw new ApiException(400, "Missing required parameter 'filterId' when calling GamificationApi->GetGamificationScorecardsProfileMetricUsersValuesTrends");
+            
+            // verify the required parameter 'startWorkday' is set
+            if (startWorkday == null)
+                throw new ApiException(400, "Missing required parameter 'startWorkday' when calling GamificationApi->GetGamificationScorecardsProfileMetricUsersValuesTrends");
+            
+            // verify the required parameter 'endWorkday' is set
+            if (endWorkday == null)
+                throw new ApiException(400, "Missing required parameter 'endWorkday' when calling GamificationApi->GetGamificationScorecardsProfileMetricUsersValuesTrends");
+            
+
+            var localVarPath = "/api/v2/gamification/scorecards/profiles/{profileId}/metrics/{metricId}/users/values/trends";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (profileId != null) localVarPathParams.Add("profileId", this.Configuration.ApiClient.ParameterToString(profileId));
+            if (metricId != null) localVarPathParams.Add("metricId", this.Configuration.ApiClient.ParameterToString(metricId));
+
+            // Query params
+            if (filterType != null) localVarQueryParams.Add(new Tuple<string, string>("filterType", this.Configuration.ApiClient.ParameterToString(filterType)));
+            if (filterId != null) localVarQueryParams.Add(new Tuple<string, string>("filterId", this.Configuration.ApiClient.ParameterToString(filterId)));
+            if (startWorkday != null) localVarQueryParams.Add(new Tuple<string, string>("startWorkday", this.Configuration.ApiClient.ParameterToString(startWorkday)));
+            if (endWorkday != null) localVarQueryParams.Add(new Tuple<string, string>("endWorkday", this.Configuration.ApiClient.ParameterToString(endWorkday)));
+            if (referenceWorkday != null) localVarQueryParams.Add(new Tuple<string, string>("referenceWorkday", this.Configuration.ApiClient.ParameterToString(referenceWorkday)));
+            if (timeZone != null) localVarQueryParams.Add(new Tuple<string, string>("timeZone", this.Configuration.ApiClient.ParameterToString(timeZone)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationScorecardsProfileMetricUsersValuesTrends: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationScorecardsProfileMetricUsersValuesTrends: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<MetricValueTrendAverage>(localVarStatusCode,
+                localVarHeaders,
+                (MetricValueTrendAverage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MetricValueTrendAverage)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Average performance values trends by metric of the requesting user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">performanceProfileId</param>
+        /// <param name="metricId">metricId</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="filterType">Filter type for the query request. If not set, returns the values trends of the requesting user (optional)</param>
+        /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
+        /// <returns>MetricValueTrendAverage</returns>
+        public MetricValueTrendAverage GetGamificationScorecardsProfileMetricValuesTrends (string profileId, string metricId, String startWorkday, String endWorkday, string filterType = null, String referenceWorkday = null, string timeZone = null)
+        {
+             ApiResponse<MetricValueTrendAverage> localVarResponse = GetGamificationScorecardsProfileMetricValuesTrendsWithHttpInfo(profileId, metricId, startWorkday, endWorkday, filterType, referenceWorkday, timeZone);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Average performance values trends by metric of the requesting user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">performanceProfileId</param>
+        /// <param name="metricId">metricId</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="filterType">Filter type for the query request. If not set, returns the values trends of the requesting user (optional)</param>
+        /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
+        /// <returns>ApiResponse of MetricValueTrendAverage</returns>
+        public ApiResponse< MetricValueTrendAverage > GetGamificationScorecardsProfileMetricValuesTrendsWithHttpInfo (string profileId, string metricId, String startWorkday, String endWorkday, string filterType = null, String referenceWorkday = null, string timeZone = null)
+        { 
+            // verify the required parameter 'profileId' is set
+            if (profileId == null)
+                throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->GetGamificationScorecardsProfileMetricValuesTrends");
+            // verify the required parameter 'metricId' is set
+            if (metricId == null)
+                throw new ApiException(400, "Missing required parameter 'metricId' when calling GamificationApi->GetGamificationScorecardsProfileMetricValuesTrends");
+            // verify the required parameter 'startWorkday' is set
+            if (startWorkday == null)
+                throw new ApiException(400, "Missing required parameter 'startWorkday' when calling GamificationApi->GetGamificationScorecardsProfileMetricValuesTrends");
+            // verify the required parameter 'endWorkday' is set
+            if (endWorkday == null)
+                throw new ApiException(400, "Missing required parameter 'endWorkday' when calling GamificationApi->GetGamificationScorecardsProfileMetricValuesTrends");
+
+            var localVarPath = "/api/v2/gamification/scorecards/profiles/{profileId}/metrics/{metricId}/values/trends";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (profileId != null) localVarPathParams.Add("profileId", this.Configuration.ApiClient.ParameterToString(profileId));
+            if (metricId != null) localVarPathParams.Add("metricId", this.Configuration.ApiClient.ParameterToString(metricId));
+
+            // Query params
+            if (filterType != null) localVarQueryParams.Add(new Tuple<string, string>("filterType", this.Configuration.ApiClient.ParameterToString(filterType)));
+            if (startWorkday != null) localVarQueryParams.Add(new Tuple<string, string>("startWorkday", this.Configuration.ApiClient.ParameterToString(startWorkday)));
+            if (endWorkday != null) localVarQueryParams.Add(new Tuple<string, string>("endWorkday", this.Configuration.ApiClient.ParameterToString(endWorkday)));
+            if (referenceWorkday != null) localVarQueryParams.Add(new Tuple<string, string>("referenceWorkday", this.Configuration.ApiClient.ParameterToString(referenceWorkday)));
+            if (timeZone != null) localVarQueryParams.Add(new Tuple<string, string>("timeZone", this.Configuration.ApiClient.ParameterToString(timeZone)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationScorecardsProfileMetricValuesTrends: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationScorecardsProfileMetricValuesTrends: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<MetricValueTrendAverage>(localVarStatusCode,
+                localVarHeaders,
+                (MetricValueTrendAverage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MetricValueTrendAverage)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Average performance values trends by metric of the requesting user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">performanceProfileId</param>
+        /// <param name="metricId">metricId</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="filterType">Filter type for the query request. If not set, returns the values trends of the requesting user (optional)</param>
+        /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
+        /// <returns>Task of MetricValueTrendAverage</returns>
+        public async System.Threading.Tasks.Task<MetricValueTrendAverage> GetGamificationScorecardsProfileMetricValuesTrendsAsync (string profileId, string metricId, String startWorkday, String endWorkday, string filterType = null, String referenceWorkday = null, string timeZone = null)
+        {
+             ApiResponse<MetricValueTrendAverage> localVarResponse = await GetGamificationScorecardsProfileMetricValuesTrendsAsyncWithHttpInfo(profileId, metricId, startWorkday, endWorkday, filterType, referenceWorkday, timeZone);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Average performance values trends by metric of the requesting user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="profileId">performanceProfileId</param>
+        /// <param name="metricId">metricId</param>
+        /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="filterType">Filter type for the query request. If not set, returns the values trends of the requesting user (optional)</param>
+        /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
+        /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
+        /// <returns>Task of ApiResponse (MetricValueTrendAverage)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<MetricValueTrendAverage>> GetGamificationScorecardsProfileMetricValuesTrendsAsyncWithHttpInfo (string profileId, string metricId, String startWorkday, String endWorkday, string filterType = null, String referenceWorkday = null, string timeZone = null)
+        { 
+            // verify the required parameter 'profileId' is set
+            if (profileId == null)
+                throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->GetGamificationScorecardsProfileMetricValuesTrends");
+            
+            // verify the required parameter 'metricId' is set
+            if (metricId == null)
+                throw new ApiException(400, "Missing required parameter 'metricId' when calling GamificationApi->GetGamificationScorecardsProfileMetricValuesTrends");
+            
+            // verify the required parameter 'startWorkday' is set
+            if (startWorkday == null)
+                throw new ApiException(400, "Missing required parameter 'startWorkday' when calling GamificationApi->GetGamificationScorecardsProfileMetricValuesTrends");
+            
+            // verify the required parameter 'endWorkday' is set
+            if (endWorkday == null)
+                throw new ApiException(400, "Missing required parameter 'endWorkday' when calling GamificationApi->GetGamificationScorecardsProfileMetricValuesTrends");
+            
+
+            var localVarPath = "/api/v2/gamification/scorecards/profiles/{profileId}/metrics/{metricId}/values/trends";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (profileId != null) localVarPathParams.Add("profileId", this.Configuration.ApiClient.ParameterToString(profileId));
+            if (metricId != null) localVarPathParams.Add("metricId", this.Configuration.ApiClient.ParameterToString(metricId));
+
+            // Query params
+            if (filterType != null) localVarQueryParams.Add(new Tuple<string, string>("filterType", this.Configuration.ApiClient.ParameterToString(filterType)));
+            if (startWorkday != null) localVarQueryParams.Add(new Tuple<string, string>("startWorkday", this.Configuration.ApiClient.ParameterToString(startWorkday)));
+            if (endWorkday != null) localVarQueryParams.Add(new Tuple<string, string>("endWorkday", this.Configuration.ApiClient.ParameterToString(endWorkday)));
+            if (referenceWorkday != null) localVarQueryParams.Add(new Tuple<string, string>("referenceWorkday", this.Configuration.ApiClient.ParameterToString(referenceWorkday)));
+            if (timeZone != null) localVarQueryParams.Add(new Tuple<string, string>("timeZone", this.Configuration.ApiClient.ParameterToString(timeZone)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationScorecardsProfileMetricValuesTrends: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationScorecardsProfileMetricValuesTrends: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<MetricValueTrendAverage>(localVarStatusCode,
+                localVarHeaders,
+                (MetricValueTrendAverage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MetricValueTrendAverage)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

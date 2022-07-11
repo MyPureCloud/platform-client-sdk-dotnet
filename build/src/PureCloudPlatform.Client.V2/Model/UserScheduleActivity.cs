@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Represents a single activity in a user&#39;s shift
+    /// UserScheduleActivity
     /// </summary>
     [DataContract]
     public partial class UserScheduleActivity :  IEquatable<UserScheduleActivity>

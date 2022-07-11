@@ -57,18 +57,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Mx Record Status</value>
         [DataMember(Name="mxRecordStatus", EmitDefaultValue=false)]
         public MxRecordStatusEnum? MxRecordStatus { get; set; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="InboundDomain" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected InboundDomain() { }
         /// <summary>
         /// Initializes a new instance of the <see cref="InboundDomain" /> class.
         /// </summary>
         /// <param name="Id">Unique Id of the domain such as: example.com.</param>
         /// <param name="Name">Name.</param>
-        /// <param name="MxRecordStatus">Mx Record Status (required).</param>
+        /// <param name="MxRecordStatus">Mx Record Status.</param>
         /// <param name="SubDomain">Indicates if this a PureCloud sub-domain.  If true, then the appropriate DNS records are created for sending/receiving email..</param>
         /// <param name="MailFromSettings">The DNS settings if the inbound domain is using a custom Mail From. These settings can only be used on InboundDomains where subDomain is false..</param>
         /// <param name="CustomSMTPServer">The custom SMTP server integration to use when sending outbound emails from this domain..</param>

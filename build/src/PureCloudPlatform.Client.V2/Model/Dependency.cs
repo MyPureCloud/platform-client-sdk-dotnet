@@ -345,6 +345,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Securecallflow,
             
             /// <summary>
+            /// Enum Sttengine for "STTENGINE"
+            /// </summary>
+            [EnumMember(Value = "STTENGINE")]
+            Sttengine,
+            
+            /// <summary>
             /// Enum Surveyinviteflow for "SURVEYINVITEFLOW"
             /// </summary>
             [EnumMember(Value = "SURVEYINVITEFLOW")]

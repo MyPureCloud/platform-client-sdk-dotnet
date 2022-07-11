@@ -32,13 +32,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TimeZone">The time zone to use for returned results in olson format. If it is not set, the business unit time zone will be used to compute adherence.</param>
         /// <param name="UserIds">The userIds to report on. If null or not set, adherence will be computed for all the users in management unit or requested teamIds.</param>
         /// <param name="IncludeExceptions">Whether user exceptions should be returned as part of the results.</param>
-        public WfmHistoricalAdherenceQuery(DateTime? StartDate = null, DateTime? EndDate = null, string TimeZone = null, List<string> UserIds = null, bool? IncludeExceptions = null)
+        /// <param name="TeamIds">The teamIds to report on. If null or not set, adherence will be computed for requested users if applicable or otherwise all users in the management unit. Note: If teamIds is also specified, only adherence for users in the requested teams will be returned.</param>
+        public WfmHistoricalAdherenceQuery(DateTime? StartDate = null, DateTime? EndDate = null, string TimeZone = null, List<string> UserIds = null, bool? IncludeExceptions = null, List<string> TeamIds = null)
         {
             this.StartDate = StartDate;
             this.EndDate = EndDate;
             this.TimeZone = TimeZone;
             this.UserIds = UserIds;
             this.IncludeExceptions = IncludeExceptions;
+            this.TeamIds = TeamIds;
             
         }
         
@@ -88,6 +90,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? IncludeExceptions { get; set; }
 
 
+
+        /// <summary>
+        /// The teamIds to report on. If null or not set, adherence will be computed for requested users if applicable or otherwise all users in the management unit. Note: If teamIds is also specified, only adherence for users in the requested teams will be returned
+        /// </summary>
+        /// <value>The teamIds to report on. If null or not set, adherence will be computed for requested users if applicable or otherwise all users in the management unit. Note: If teamIds is also specified, only adherence for users in the requested teams will be returned</value>
+        [DataMember(Name="teamIds", EmitDefaultValue=false)]
+        public List<string> TeamIds { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,6 +113,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
             sb.Append("  UserIds: ").Append(UserIds).Append("\n");
             sb.Append("  IncludeExceptions: ").Append(IncludeExceptions).Append("\n");
+            sb.Append("  TeamIds: ").Append(TeamIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -166,6 +178,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.IncludeExceptions == other.IncludeExceptions ||
                     this.IncludeExceptions != null &&
                     this.IncludeExceptions.Equals(other.IncludeExceptions)
+                ) &&
+                (
+                    this.TeamIds == other.TeamIds ||
+                    this.TeamIds != null &&
+                    this.TeamIds.SequenceEqual(other.TeamIds)
                 );
         }
 
@@ -194,6 +211,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.IncludeExceptions != null)
                     hash = hash * 59 + this.IncludeExceptions.GetHashCode();
+
+                if (this.TeamIds != null)
+                    hash = hash * 59 + this.TeamIds.GetHashCode();
 
                 return hash;
             }

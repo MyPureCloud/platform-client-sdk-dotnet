@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// A list of IntradayPlanningGroup objects
+    /// WfmIntradayPlanningGroupListing
     /// </summary>
     [DataContract]
     public partial class WfmIntradayPlanningGroupListing :  IEquatable<WfmIntradayPlanningGroupListing>

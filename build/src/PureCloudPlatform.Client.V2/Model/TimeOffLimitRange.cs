@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// A single range filled with time off limit interval values
+    /// TimeOffLimitRange
     /// </summary>
     [DataContract]
     public partial class TimeOffLimitRange :  IEquatable<TimeOffLimitRange>

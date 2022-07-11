@@ -553,7 +553,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum CampaignPerformanceDetailView for "CAMPAIGN_PERFORMANCE_DETAIL_VIEW"
             /// </summary>
             [EnumMember(Value = "CAMPAIGN_PERFORMANCE_DETAIL_VIEW")]
-            CampaignPerformanceDetailView
+            CampaignPerformanceDetailView,
+            
+            /// <summary>
+            /// Enum KnowledgePerformanceView for "KNOWLEDGE_PERFORMANCE_VIEW"
+            /// </summary>
+            [EnumMember(Value = "KNOWLEDGE_PERFORMANCE_VIEW")]
+            KnowledgePerformanceView
         }
         /// <summary>
         /// The view type of the export metadata

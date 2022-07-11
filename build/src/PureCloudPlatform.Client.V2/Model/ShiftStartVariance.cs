@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Variance in minutes among start times of shifts in work plan
+    /// ShiftStartVariance
     /// </summary>
     [DataContract]
     public partial class ShiftStartVariance :  IEquatable<ShiftStartVariance>

@@ -58,11 +58,74 @@ namespace PureCloudPlatform.Client.V2.Model
             Canceled
         }
         /// <summary>
+        /// The substatus of this time off request
+        /// </summary>
+        /// <value>The substatus of this time off request</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum SubstatusEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Advancetimeelapsed for "AdvanceTimeElapsed"
+            /// </summary>
+            [EnumMember(Value = "AdvanceTimeElapsed")]
+            Advancetimeelapsed,
+            
+            /// <summary>
+            /// Enum Autoapproved for "AutoApproved"
+            /// </summary>
+            [EnumMember(Value = "AutoApproved")]
+            Autoapproved,
+            
+            /// <summary>
+            /// Enum Insufficientbalance for "InsufficientBalance"
+            /// </summary>
+            [EnumMember(Value = "InsufficientBalance")]
+            Insufficientbalance,
+            
+            /// <summary>
+            /// Enum Invaliddailyduration for "InvalidDailyDuration"
+            /// </summary>
+            [EnumMember(Value = "InvalidDailyDuration")]
+            Invaliddailyduration,
+            
+            /// <summary>
+            /// Enum Outsideshift for "OutsideShift"
+            /// </summary>
+            [EnumMember(Value = "OutsideShift")]
+            Outsideshift,
+            
+            /// <summary>
+            /// Enum Removedfromwaitlist for "RemovedFromWaitlist"
+            /// </summary>
+            [EnumMember(Value = "RemovedFromWaitlist")]
+            Removedfromwaitlist,
+            
+            /// <summary>
+            /// Enum Waitlisted for "Waitlisted"
+            /// </summary>
+            [EnumMember(Value = "Waitlisted")]
+            Waitlisted
+        }
+        /// <summary>
         /// The status of this time off request
         /// </summary>
         /// <value>The status of this time off request</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
+        /// <summary>
+        /// The substatus of this time off request
+        /// </summary>
+        /// <value>The substatus of this time off request</value>
+        [DataMember(Name="substatus", EmitDefaultValue=false)]
+        public SubstatusEnum? Substatus { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeOffRequestResponse" /> class.
         /// </summary>
@@ -70,9 +133,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IsFullDayRequest">Whether this is a full day request (false means partial day).</param>
         /// <param name="MarkedAsRead">Whether this request has been marked as read by the agent.</param>
         /// <param name="ActivityCodeId">The ID of the activity code associated with this time off request. Activity code must be of the TimeOff category.</param>
+        /// <param name="Paid">Whether this is a paid time off request.</param>
         /// <param name="Status">The status of this time off request.</param>
-        /// <param name="PartialDayStartDateTimes">A set of start date-times in ISO-8601 format for partial day requests.  Will be not empty if isFullDayRequest == false.</param>
-        /// <param name="FullDayManagementUnitDates">A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit's configured time zone.  Will be not empty if isFullDayRequest == true.</param>
+        /// <param name="Substatus">The substatus of this time off request.</param>
+        /// <param name="PartialDayStartDateTimes">A set of start date-times in ISO-8601 format for partial day requests. Will be not empty if isFullDayRequest == false.</param>
+        /// <param name="FullDayManagementUnitDates">A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit's configured time zone. Will be not empty if isFullDayRequest == true.</param>
         /// <param name="DailyDurationMinutes">The daily duration of this time off request in minutes.</param>
         /// <param name="Notes">Notes about the time off request.</param>
         /// <param name="SubmittedBy">The user who submitted this time off request.</param>
@@ -82,13 +147,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ModifiedBy">The user who last modified this TimeOffRequestResponse.</param>
         /// <param name="ModifiedDate">The timestamp when this request was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Metadata">The version metadata of the time off request.</param>
-        public TimeOffRequestResponse(UserReference User = null, bool? IsFullDayRequest = null, bool? MarkedAsRead = null, string ActivityCodeId = null, StatusEnum? Status = null, List<DateTime?> PartialDayStartDateTimes = null, List<string> FullDayManagementUnitDates = null, int? DailyDurationMinutes = null, string Notes = null, UserReference SubmittedBy = null, DateTime? SubmittedDate = null, UserReference ReviewedBy = null, DateTime? ReviewedDate = null, UserReference ModifiedBy = null, DateTime? ModifiedDate = null, WfmVersionedEntityMetadata Metadata = null)
+        public TimeOffRequestResponse(UserReference User = null, bool? IsFullDayRequest = null, bool? MarkedAsRead = null, string ActivityCodeId = null, bool? Paid = null, StatusEnum? Status = null, SubstatusEnum? Substatus = null, List<DateTime?> PartialDayStartDateTimes = null, List<string> FullDayManagementUnitDates = null, int? DailyDurationMinutes = null, string Notes = null, UserReference SubmittedBy = null, DateTime? SubmittedDate = null, UserReference ReviewedBy = null, DateTime? ReviewedDate = null, UserReference ModifiedBy = null, DateTime? ModifiedDate = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.User = User;
             this.IsFullDayRequest = IsFullDayRequest;
             this.MarkedAsRead = MarkedAsRead;
             this.ActivityCodeId = ActivityCodeId;
+            this.Paid = Paid;
             this.Status = Status;
+            this.Substatus = Substatus;
             this.PartialDayStartDateTimes = PartialDayStartDateTimes;
             this.FullDayManagementUnitDates = FullDayManagementUnitDates;
             this.DailyDurationMinutes = DailyDurationMinutes;
@@ -150,21 +217,32 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+        /// <summary>
+        /// Whether this is a paid time off request
+        /// </summary>
+        /// <value>Whether this is a paid time off request</value>
+        [DataMember(Name="paid", EmitDefaultValue=false)]
+        public bool? Paid { get; set; }
+
+
+
+
+
 
 
         /// <summary>
-        /// A set of start date-times in ISO-8601 format for partial day requests.  Will be not empty if isFullDayRequest == false
+        /// A set of start date-times in ISO-8601 format for partial day requests. Will be not empty if isFullDayRequest == false
         /// </summary>
-        /// <value>A set of start date-times in ISO-8601 format for partial day requests.  Will be not empty if isFullDayRequest == false</value>
+        /// <value>A set of start date-times in ISO-8601 format for partial day requests. Will be not empty if isFullDayRequest == false</value>
         [DataMember(Name="partialDayStartDateTimes", EmitDefaultValue=false)]
         public List<DateTime?> PartialDayStartDateTimes { get; set; }
 
 
 
         /// <summary>
-        /// A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit's configured time zone.  Will be not empty if isFullDayRequest == true
+        /// A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit's configured time zone. Will be not empty if isFullDayRequest == true
         /// </summary>
-        /// <value>A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit's configured time zone.  Will be not empty if isFullDayRequest == true</value>
+        /// <value>A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit's configured time zone. Will be not empty if isFullDayRequest == true</value>
         [DataMember(Name="fullDayManagementUnitDates", EmitDefaultValue=false)]
         public List<string> FullDayManagementUnitDates { get; set; }
 
@@ -273,7 +351,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  IsFullDayRequest: ").Append(IsFullDayRequest).Append("\n");
             sb.Append("  MarkedAsRead: ").Append(MarkedAsRead).Append("\n");
             sb.Append("  ActivityCodeId: ").Append(ActivityCodeId).Append("\n");
+            sb.Append("  Paid: ").Append(Paid).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  Substatus: ").Append(Substatus).Append("\n");
             sb.Append("  PartialDayStartDateTimes: ").Append(PartialDayStartDateTimes).Append("\n");
             sb.Append("  FullDayManagementUnitDates: ").Append(FullDayManagementUnitDates).Append("\n");
             sb.Append("  DailyDurationMinutes: ").Append(DailyDurationMinutes).Append("\n");
@@ -352,9 +432,19 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ActivityCodeId.Equals(other.ActivityCodeId)
                 ) &&
                 (
+                    this.Paid == other.Paid ||
+                    this.Paid != null &&
+                    this.Paid.Equals(other.Paid)
+                ) &&
+                (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
+                ) &&
+                (
+                    this.Substatus == other.Substatus ||
+                    this.Substatus != null &&
+                    this.Substatus.Equals(other.Substatus)
                 ) &&
                 (
                     this.PartialDayStartDateTimes == other.PartialDayStartDateTimes ||
@@ -444,8 +534,14 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.ActivityCodeId != null)
                     hash = hash * 59 + this.ActivityCodeId.GetHashCode();
 
+                if (this.Paid != null)
+                    hash = hash * 59 + this.Paid.GetHashCode();
+
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
+
+                if (this.Substatus != null)
+                    hash = hash * 59 + this.Substatus.GetHashCode();
 
                 if (this.PartialDayStartDateTimes != null)
                     hash = hash * 59 + this.PartialDayStartDateTimes.GetHashCode();

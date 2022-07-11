@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Override the value of a single interval in a forecast
+    /// WfmForecastModificationIntervalOffsetValue
     /// </summary>
     [DataContract]
     public partial class WfmForecastModificationIntervalOffsetValue :  IEquatable<WfmForecastModificationIntervalOffsetValue>

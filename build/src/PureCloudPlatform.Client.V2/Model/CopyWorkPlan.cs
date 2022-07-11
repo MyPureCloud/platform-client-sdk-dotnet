@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Information associated with a work plan thats created as a copy
+    /// CopyWorkPlan
     /// </summary>
     [DataContract]
     public partial class CopyWorkPlan :  IEquatable<CopyWorkPlan>

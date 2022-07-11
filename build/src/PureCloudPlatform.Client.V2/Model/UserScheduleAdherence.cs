@@ -469,6 +469,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+        /// <summary>
+        /// Activity code for which the user is currently scheduled
+        /// </summary>
+        /// <value>Activity code for which the user is currently scheduled</value>
+        [DataMember(Name="scheduledActivityCode", EmitDefaultValue=false)]
+        public ActivityCodeReference ScheduledActivityCode { get; private set; }
+
+
+
 
 
         /// <summary>
@@ -566,6 +575,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ManagementUnit: ").Append(ManagementUnit).Append("\n");
             sb.Append("  Team: ").Append(Team).Append("\n");
             sb.Append("  ScheduledActivityCategory: ").Append(ScheduledActivityCategory).Append("\n");
+            sb.Append("  ScheduledActivityCode: ").Append(ScheduledActivityCode).Append("\n");
             sb.Append("  SystemPresence: ").Append(SystemPresence).Append("\n");
             sb.Append("  OrganizationSecondaryPresenceId: ").Append(OrganizationSecondaryPresenceId).Append("\n");
             sb.Append("  RoutingStatus: ").Append(RoutingStatus).Append("\n");
@@ -653,6 +663,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ScheduledActivityCategory == other.ScheduledActivityCategory ||
                     this.ScheduledActivityCategory != null &&
                     this.ScheduledActivityCategory.Equals(other.ScheduledActivityCategory)
+                ) &&
+                (
+                    this.ScheduledActivityCode == other.ScheduledActivityCode ||
+                    this.ScheduledActivityCode != null &&
+                    this.ScheduledActivityCode.Equals(other.ScheduledActivityCode)
                 ) &&
                 (
                     this.SystemPresence == other.SystemPresence ||
@@ -752,6 +767,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ScheduledActivityCategory != null)
                     hash = hash * 59 + this.ScheduledActivityCategory.GetHashCode();
+
+                if (this.ScheduledActivityCode != null)
+                    hash = hash * 59 + this.ScheduledActivityCode.GetHashCode();
 
                 if (this.SystemPresence != null)
                     hash = hash * 59 + this.SystemPresence.GetHashCode();

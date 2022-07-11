@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// List of planning groups
+    /// PlanningGroupList
     /// </summary>
     [DataContract]
     public partial class PlanningGroupList :  IEquatable<PlanningGroupList>

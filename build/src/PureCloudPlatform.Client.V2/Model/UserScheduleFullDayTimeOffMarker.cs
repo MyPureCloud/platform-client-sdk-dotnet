@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Marker to indicate an approved full day time off request
+    /// UserScheduleFullDayTimeOffMarker
     /// </summary>
     [DataContract]
     public partial class UserScheduleFullDayTimeOffMarker :  IEquatable<UserScheduleFullDayTimeOffMarker>

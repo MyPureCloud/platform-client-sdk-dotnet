@@ -7,8 +7,10 @@ title: TimeOffRequestQueryBody
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+| **Ids** | **List&lt;string&gt;** | The set of ids to filter time off requests | [optional] |
 | **UserIds** | **List&lt;string&gt;** | The set of user ids to filter time off requests | [optional] |
 | **Statuses** | **List&lt;string&gt;** | The set of statuses to filter time off requests | [optional] |
+| **Substatuses** | **List&lt;string&gt;** | The set of substatuses to filter time off requests | [optional] |
 | **DateRange** | [**DateRange**](DateRange.html) | The inclusive range of dates to filter time off requests | [optional] |
 {: class="table table-striped"}
 

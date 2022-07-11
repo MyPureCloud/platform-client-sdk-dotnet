@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="AvailableTimeOffRequest" /> class.
         /// </summary>
         /// <param name="ActivityCodeId">The ID for activity code to query available time off minutes (required).</param>
-        /// <param name="DateRanges">A list of date ranges of available time off minutes..</param>
+        /// <param name="DateRanges">A list of date ranges of available time off minutes. A maximum number of date ranges is 30. The maximum total number of days in all ranges is 366. If no ranges are specified, then only the presence of the associated time off limit object will be checked. In such case, if the association exists, then the response will contain a list with of a single element filled with timeOffLimitId only..</param>
         public AvailableTimeOffRequest(string ActivityCodeId = null, List<LocalDateRange> DateRanges = null)
         {
             this.ActivityCodeId = ActivityCodeId;
@@ -48,9 +48,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A list of date ranges of available time off minutes.
+        /// A list of date ranges of available time off minutes. A maximum number of date ranges is 30. The maximum total number of days in all ranges is 366. If no ranges are specified, then only the presence of the associated time off limit object will be checked. In such case, if the association exists, then the response will contain a list with of a single element filled with timeOffLimitId only.
         /// </summary>
-        /// <value>A list of date ranges of available time off minutes.</value>
+        /// <value>A list of date ranges of available time off minutes. A maximum number of date ranges is 30. The maximum total number of days in all ranges is 366. If no ranges are specified, then only the presence of the associated time off limit object will be checked. In such case, if the association exists, then the response will contain a list with of a single element filled with timeOffLimitId only.</value>
         [DataMember(Name="dateRanges", EmitDefaultValue=false)]
         public List<LocalDateRange> DateRanges { get; set; }
 

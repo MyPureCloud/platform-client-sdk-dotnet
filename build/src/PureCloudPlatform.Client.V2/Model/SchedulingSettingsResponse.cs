@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Scheduling Settings
+    /// SchedulingSettingsResponse
     /// </summary>
     [DataContract]
     public partial class SchedulingSettingsResponse :  IEquatable<SchedulingSettingsResponse>

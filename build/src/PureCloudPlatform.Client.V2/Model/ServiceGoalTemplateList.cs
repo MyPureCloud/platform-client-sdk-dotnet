@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// List of service goal templates
+    /// ServiceGoalTemplateList
     /// </summary>
     [DataContract]
     public partial class ServiceGoalTemplateList :  IEquatable<ServiceGoalTemplateList>

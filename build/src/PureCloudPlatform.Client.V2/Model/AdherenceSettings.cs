@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Schedule Adherence Configuration
+    /// AdherenceSettings
     /// </summary>
     [DataContract]
     public partial class AdherenceSettings :  IEquatable<AdherenceSettings>

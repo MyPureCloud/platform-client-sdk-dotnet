@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Service goal abandon rate configuration
+    /// BuAbandonRate
     /// </summary>
     [DataContract]
     public partial class BuAbandonRate :  IEquatable<BuAbandonRate>

@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Contains property values of time off limit to be created
+    /// CreateTimeOffLimitRequest
     /// </summary>
     [DataContract]
     public partial class CreateTimeOffLimitRequest :  IEquatable<CreateTimeOffLimitRequest>
@@ -49,7 +49,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="CreateTimeOffLimitRequest" /> class.
         /// </summary>
         /// <param name="Granularity">Granularity choice for time off limit. If not specified, 'Daily' is assumed.</param>
-        /// <param name="DefaultLimitMinutes">The default limit value in minutes per granularity.If not specified, then 0 is assumed, which means there are no time off minutes available.</param>
+        /// <param name="DefaultLimitMinutes">The default limit value in minutes per granularity. If not specified, then 0 is assumed, which means there are no time off minutes available.</param>
         public CreateTimeOffLimitRequest(GranularityEnum? Granularity = null, int? DefaultLimitMinutes = null)
         {
             this.Granularity = Granularity;
@@ -62,9 +62,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The default limit value in minutes per granularity.If not specified, then 0 is assumed, which means there are no time off minutes available
+        /// The default limit value in minutes per granularity. If not specified, then 0 is assumed, which means there are no time off minutes available
         /// </summary>
-        /// <value>The default limit value in minutes per granularity.If not specified, then 0 is assumed, which means there are no time off minutes available</value>
+        /// <value>The default limit value in minutes per granularity. If not specified, then 0 is assumed, which means there are no time off minutes available</value>
         [DataMember(Name="defaultLimitMinutes", EmitDefaultValue=false)]
         public int? DefaultLimitMinutes { get; set; }
 

@@ -17,6 +17,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetLearningModuleRule**](LearningApi.html#getlearningmodulerule) | **GET** /api/v2/learning/modules/{moduleId}/rule | Get a learning module rule |
 | [**GetLearningModuleVersion**](LearningApi.html#getlearningmoduleversion) | **GET** /api/v2/learning/modules/{moduleId}/versions/{versionId} | Get specific version of a published module |
 | [**GetLearningModules**](LearningApi.html#getlearningmodules) | **GET** /api/v2/learning/modules | Get all learning modules of an organization |
+| [**GetLearningModulesAssignments**](LearningApi.html#getlearningmodulesassignments) | **GET** /api/v2/learning/modules/assignments | Get all learning modules of an organization including assignments for a specific user |
 | [**PatchLearningAssignment**](LearningApi.html#patchlearningassignment) | **PATCH** /api/v2/learning/assignments/{assignmentId} | Update Learning Assignment |
 | [**PostLearningAssessmentsScoring**](LearningApi.html#postlearningassessmentsscoring) | **POST** /api/v2/learning/assessments/scoring | Score learning assessment for preview |
 | [**PostLearningAssignmentReassign**](LearningApi.html#postlearningassignmentreassign) | **POST** /api/v2/learning/assignments/{assignmentId}/reassign | Reassign Learning Assignment |
@@ -765,6 +766,84 @@ namespace Example
 ### Return type
 
 [**LearningModulesDomainEntityListing**](LearningModulesDomainEntityListing.html)
+
+<a name="getlearningmodulesassignments"></a>
+
+## [**AssignedLearningModuleDomainEntityListing**](AssignedLearningModuleDomainEntityListing.html) GetLearningModulesAssignments (List<string> userIds, int? pageSize = null, int? pageNumber = null, string searchTerm = null, string overdue = null, List<string> assignmentStates = null, List<string> expand = null)
+
+
+
+Get all learning modules of an organization including assignments for a specific user
+
+
+
+Requires ALL permissions: 
+
+* learning:module:view
+* learning:assignment:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetLearningModulesAssignmentsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LearningApi();
+            var userIds = new List<string>(); // List<string> | The IDs of the users to include
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var searchTerm = searchTerm_example;  // string | Search Term (searches by name and description) (optional) 
+            var overdue = overdue_example;  // string | Specifies if only modules with overdue/not overdue (overdue is \"True\" or \"False\") assignments are returned. If overdue is \"Any\" or omitted, both are returned and can including modules that are unassigned. (optional)  (default to Any)
+            var assignmentStates = new List<string>(); // List<string> | Specifies the assignment states to return. (optional) 
+            var expand = new List<string>(); // List<string> | Fields to expand in response(case insensitive) (optional) 
+
+            try
+            { 
+                // Get all learning modules of an organization including assignments for a specific user
+                AssignedLearningModuleDomainEntityListing result = apiInstance.GetLearningModulesAssignments(userIds, pageSize, pageNumber, searchTerm, overdue, assignmentStates, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LearningApi.GetLearningModulesAssignments: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userIds** | [**List<string>**](string.html)| The IDs of the users to include |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **searchTerm** | **string**| Search Term (searches by name and description) | [optional]  |
+| **overdue** | **string**| Specifies if only modules with overdue/not overdue (overdue is \&quot;True\&quot; or \&quot;False\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or omitted, both are returned and can including modules that are unassigned. | [optional] [default to Any]<br />**Values**: True, False, Any |
+| **assignmentStates** | [**List<string>**](string.html)| Specifies the assignment states to return. | [optional] <br />**Values**: NotAssigned, Assigned, InProgress, Completed |
+| **expand** | [**List<string>**](string.html)| Fields to expand in response(case insensitive) | [optional] <br />**Values**: coverArt |
+{: class="table table-striped"}
+
+### Return type
+
+[**AssignedLearningModuleDomainEntityListing**](AssignedLearningModuleDomainEntityListing.html)
 
 <a name="patchlearningassignment"></a>
 

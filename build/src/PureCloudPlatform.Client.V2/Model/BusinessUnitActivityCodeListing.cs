@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// List of BusinessUnitActivityCode
+    /// BusinessUnitActivityCodeListing
     /// </summary>
     [DataContract]
     public partial class BusinessUnitActivityCodeListing :  IEquatable<BusinessUnitActivityCodeListing>

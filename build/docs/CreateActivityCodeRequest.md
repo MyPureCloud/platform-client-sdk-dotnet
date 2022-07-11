@@ -13,6 +13,10 @@ title: CreateActivityCodeRequest
 | **CountsAsPaidTime** | **bool?** | Whether an agent is paid while performing this activity | [optional] |
 | **CountsAsWorkTime** | **bool?** | Indicates whether or not the activity should be counted as work time | [optional] |
 | **AgentTimeOffSelectable** | **bool?** | Whether an agent can select this activity code when creating or editing a time off request | [optional] |
+| **CountsTowardShrinkage** | **bool?** | Whether or not this activity code counts toward shrinkage calculations | [optional] |
+| **PlannedShrinkage** | **bool?** | Whether this activity code is considered planned or unplanned shrinkage | [optional] |
+| **Interruptible** | **bool?** | Whether this activity code is considered interruptible | [optional] |
+| **SecondaryPresences** | [**List&lt;SecondaryPresence&gt;**](SecondaryPresence.html) | The secondary presences of this activity code | [optional] |
 {: class="table table-striped"}
 
 

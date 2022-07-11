@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Management Unit object for Workforce Management
+    /// ManagementUnit
     /// </summary>
     [DataContract]
     public partial class ManagementUnit :  IEquatable<ManagementUnit>

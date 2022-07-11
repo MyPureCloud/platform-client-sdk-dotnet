@@ -1009,8 +1009,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Filter by queue name (optional)</param>
         /// <param name="id">Filter by queue ID(s) (optional)</param>
         /// <param name="divisionId">Filter by queue division ID(s) (optional)</param>
+        /// <param name="peerId">Filter by queue peer ID(s) (optional)</param>
+        /// <param name="hasPeer">Filter by queues associated with peer (optional)</param>
         /// <returns>QueueEntityListing</returns>
-        QueueEntityListing GetRoutingQueues (int? pageNumber = null, int? pageSize = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null);
+        QueueEntityListing GetRoutingQueues (int? pageNumber = null, int? pageSize = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null, List<string> peerId = null, bool? hasPeer = null);
 
         /// <summary>
         /// Get list of queues.
@@ -1025,8 +1027,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Filter by queue name (optional)</param>
         /// <param name="id">Filter by queue ID(s) (optional)</param>
         /// <param name="divisionId">Filter by queue division ID(s) (optional)</param>
+        /// <param name="peerId">Filter by queue peer ID(s) (optional)</param>
+        /// <param name="hasPeer">Filter by queues associated with peer (optional)</param>
         /// <returns>ApiResponse of QueueEntityListing</returns>
-        ApiResponse<QueueEntityListing> GetRoutingQueuesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null);
+        ApiResponse<QueueEntityListing> GetRoutingQueuesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null, List<string> peerId = null, bool? hasPeer = null);
 
         /// <summary>
         /// Get a paged listing of simplified queue objects, filterable by name, queue ID(s), or division ID(s).
@@ -3563,8 +3567,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Filter by queue name (optional)</param>
         /// <param name="id">Filter by queue ID(s) (optional)</param>
         /// <param name="divisionId">Filter by queue division ID(s) (optional)</param>
+        /// <param name="peerId">Filter by queue peer ID(s) (optional)</param>
+        /// <param name="hasPeer">Filter by queues associated with peer (optional)</param>
         /// <returns>Task of QueueEntityListing</returns>
-        System.Threading.Tasks.Task<QueueEntityListing> GetRoutingQueuesAsync (int? pageNumber = null, int? pageSize = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null);
+        System.Threading.Tasks.Task<QueueEntityListing> GetRoutingQueuesAsync (int? pageNumber = null, int? pageSize = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null, List<string> peerId = null, bool? hasPeer = null);
 
         /// <summary>
         /// Get list of queues.
@@ -3579,8 +3585,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Filter by queue name (optional)</param>
         /// <param name="id">Filter by queue ID(s) (optional)</param>
         /// <param name="divisionId">Filter by queue division ID(s) (optional)</param>
+        /// <param name="peerId">Filter by queue peer ID(s) (optional)</param>
+        /// <param name="hasPeer">Filter by queues associated with peer (optional)</param>
         /// <returns>Task of ApiResponse (QueueEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueueEntityListing>> GetRoutingQueuesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null);
+        System.Threading.Tasks.Task<ApiResponse<QueueEntityListing>> GetRoutingQueuesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null, List<string> peerId = null, bool? hasPeer = null);
 
         /// <summary>
         /// Get a paged listing of simplified queue objects, filterable by name, queue ID(s), or division ID(s).
@@ -13121,10 +13129,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Filter by queue name (optional)</param>
         /// <param name="id">Filter by queue ID(s) (optional)</param>
         /// <param name="divisionId">Filter by queue division ID(s) (optional)</param>
+        /// <param name="peerId">Filter by queue peer ID(s) (optional)</param>
+        /// <param name="hasPeer">Filter by queues associated with peer (optional)</param>
         /// <returns>QueueEntityListing</returns>
-        public QueueEntityListing GetRoutingQueues (int? pageNumber = null, int? pageSize = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null)
+        public QueueEntityListing GetRoutingQueues (int? pageNumber = null, int? pageSize = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null, List<string> peerId = null, bool? hasPeer = null)
         {
-             ApiResponse<QueueEntityListing> localVarResponse = GetRoutingQueuesWithHttpInfo(pageNumber, pageSize, sortOrder, name, id, divisionId);
+             ApiResponse<QueueEntityListing> localVarResponse = GetRoutingQueuesWithHttpInfo(pageNumber, pageSize, sortOrder, name, id, divisionId, peerId, hasPeer);
              return localVarResponse.Data;
         }
 
@@ -13138,8 +13148,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Filter by queue name (optional)</param>
         /// <param name="id">Filter by queue ID(s) (optional)</param>
         /// <param name="divisionId">Filter by queue division ID(s) (optional)</param>
+        /// <param name="peerId">Filter by queue peer ID(s) (optional)</param>
+        /// <param name="hasPeer">Filter by queues associated with peer (optional)</param>
         /// <returns>ApiResponse of QueueEntityListing</returns>
-        public ApiResponse< QueueEntityListing > GetRoutingQueuesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null)
+        public ApiResponse< QueueEntityListing > GetRoutingQueuesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null, List<string> peerId = null, bool? hasPeer = null)
         { 
 
             var localVarPath = "/api/v2/routing/queues";
@@ -13180,6 +13192,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
             if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (peerId != null) peerId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("peerId", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (hasPeer != null) localVarQueryParams.Add(new Tuple<string, string>("hasPeer", this.Configuration.ApiClient.ParameterToString(hasPeer)));
 
             // Header params
 
@@ -13227,10 +13241,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Filter by queue name (optional)</param>
         /// <param name="id">Filter by queue ID(s) (optional)</param>
         /// <param name="divisionId">Filter by queue division ID(s) (optional)</param>
+        /// <param name="peerId">Filter by queue peer ID(s) (optional)</param>
+        /// <param name="hasPeer">Filter by queues associated with peer (optional)</param>
         /// <returns>Task of QueueEntityListing</returns>
-        public async System.Threading.Tasks.Task<QueueEntityListing> GetRoutingQueuesAsync (int? pageNumber = null, int? pageSize = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null)
+        public async System.Threading.Tasks.Task<QueueEntityListing> GetRoutingQueuesAsync (int? pageNumber = null, int? pageSize = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null, List<string> peerId = null, bool? hasPeer = null)
         {
-             ApiResponse<QueueEntityListing> localVarResponse = await GetRoutingQueuesAsyncWithHttpInfo(pageNumber, pageSize, sortOrder, name, id, divisionId);
+             ApiResponse<QueueEntityListing> localVarResponse = await GetRoutingQueuesAsyncWithHttpInfo(pageNumber, pageSize, sortOrder, name, id, divisionId, peerId, hasPeer);
              return localVarResponse.Data;
 
         }
@@ -13245,8 +13261,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Filter by queue name (optional)</param>
         /// <param name="id">Filter by queue ID(s) (optional)</param>
         /// <param name="divisionId">Filter by queue division ID(s) (optional)</param>
+        /// <param name="peerId">Filter by queue peer ID(s) (optional)</param>
+        /// <param name="hasPeer">Filter by queues associated with peer (optional)</param>
         /// <returns>Task of ApiResponse (QueueEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueueEntityListing>> GetRoutingQueuesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<QueueEntityListing>> GetRoutingQueuesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null, List<string> peerId = null, bool? hasPeer = null)
         { 
 
             var localVarPath = "/api/v2/routing/queues";
@@ -13287,6 +13305,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
             if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (peerId != null) peerId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("peerId", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (hasPeer != null) localVarQueryParams.Add(new Tuple<string, string>("hasPeer", this.Configuration.ApiClient.ParameterToString(hasPeer)));
 
             // Header params
 

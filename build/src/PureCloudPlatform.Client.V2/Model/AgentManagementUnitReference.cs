@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// A reference from agent to management unit
+    /// AgentManagementUnitReference
     /// </summary>
     [DataContract]
     public partial class AgentManagementUnitReference :  IEquatable<AgentManagementUnitReference>
