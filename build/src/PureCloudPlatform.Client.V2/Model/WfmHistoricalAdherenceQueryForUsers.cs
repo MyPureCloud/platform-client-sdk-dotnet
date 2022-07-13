@@ -29,7 +29,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="StartDate">Beginning of the date range to query in ISO-8601 format (required).</param>
         /// <param name="EndDate">End of the date range to query in ISO-8601 format. If it is not set, end date will be set to current time.</param>
-        /// <param name="TimeZone">The time zone to use for returned results in olson format. If it is not set, the business unit time zone will be used to compute adherence.</param>
+        /// <param name="TimeZone">The time zone, in olson format, to use in defining days when computing adherence. If it is not set, the business unit time zone will be used. The results will be returned as UTC timestamps regardless of the time zone input..</param>
         /// <param name="UserIds">The userIds to report on (required).</param>
         /// <param name="IncludeExceptions">Whether user exceptions should be returned as part of the results.</param>
         public WfmHistoricalAdherenceQueryForUsers(DateTime? StartDate = null, DateTime? EndDate = null, string TimeZone = null, List<string> UserIds = null, bool? IncludeExceptions = null)
@@ -63,9 +63,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The time zone to use for returned results in olson format. If it is not set, the business unit time zone will be used to compute adherence
+        /// The time zone, in olson format, to use in defining days when computing adherence. If it is not set, the business unit time zone will be used. The results will be returned as UTC timestamps regardless of the time zone input.
         /// </summary>
-        /// <value>The time zone to use for returned results in olson format. If it is not set, the business unit time zone will be used to compute adherence</value>
+        /// <value>The time zone, in olson format, to use in defining days when computing adherence. If it is not set, the business unit time zone will be used. The results will be returned as UTC timestamps regardless of the time zone input.</value>
         [DataMember(Name="timeZone", EmitDefaultValue=false)]
         public string TimeZone { get; set; }
 

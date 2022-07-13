@@ -79,6 +79,7 @@ docs/AlertingApi.json
 docs/AlertingApi.md
 docs/AllTimePoints.md
 docs/AmazonLexRequest.md
+docs/AnalyticsAgentGroup.md
 docs/AnalyticsApi.json
 docs/AnalyticsApi.md
 docs/AnalyticsConversation.md
@@ -883,6 +884,7 @@ docs/CursorRelationshipListing.md
 docs/Cursors.md
 docs/CustomEventAttribute.md
 docs/CustomEventAttributeList.md
+docs/CustomI18nLabels.md
 docs/CustomerEndDetailEventTopicCustomerEndEvent.md
 docs/CustomerInteractionCenter.md
 docs/CustomerStartDetailEventTopicCustomerStartEvent.md
@@ -1068,6 +1070,7 @@ docs/DeleteSpeechandtextanalyticsSentimentfeedback-example.txt
 docs/DeleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackId-example.txt
 docs/DeleteSpeechandtextanalyticsTopic-example.txt
 docs/DeleteStationAssociateduser-example.txt
+docs/DeleteTeam-example.txt
 docs/DeleteTelephonyProvidersEdge-example.txt
 docs/DeleteTelephonyProvidersEdgeLogicalinterface-example.txt
 docs/DeleteTelephonyProvidersEdgeSoftwareupdate-example.txt
@@ -2214,6 +2217,8 @@ docs/GetStation-example.txt
 docs/GetStations-example.txt
 docs/GetStationsSettings-example.txt
 docs/GetSystempresences-example.txt
+docs/GetTeam-example.txt
+docs/GetTeams-example.txt
 docs/GetTelephonyProvidersEdge-example.txt
 docs/GetTelephonyProvidersEdgeDiagnosticNslookup-example.txt
 docs/GetTelephonyProvidersEdgeDiagnosticPing-example.txt
@@ -2362,6 +2367,7 @@ docs/GetWebmessagingMessages-example.txt
 docs/GetWidgetsDeployment-example.txt
 docs/GetWidgetsDeployments-example.txt
 docs/GetWorkforcemanagementAdherence-example.txt
+docs/GetWorkforcemanagementAdherenceHistoricalJob-example.txt
 docs/GetWorkforcemanagementAdhocmodelingjob-example.txt
 docs/GetWorkforcemanagementAgentManagementunit-example.txt
 docs/GetWorkforcemanagementAgentsMeManagementunit-example.txt
@@ -2740,6 +2746,7 @@ docs/LocalDateRange.md
 docs/LocalEncryptionConfiguration.md
 docs/LocalEncryptionConfigurationListing.md
 docs/LocalEncryptionKeyRequest.md
+docs/LocalizedLabels.md
 docs/Location.md
 docs/LocationAddress.md
 docs/LocationAddressVerificationDetails.md
@@ -3085,6 +3092,7 @@ docs/PatchShiftTradeRequest.md
 docs/PatchSpeechandtextanalyticsSettings-example.txt
 docs/PatchStationsSettings-example.txt
 docs/PatchSurveyQuestion.md
+docs/PatchTeam-example.txt
 docs/PatchTextStyleProperties.md
 docs/PatchUser-example.txt
 docs/PatchUser.md
@@ -3493,6 +3501,9 @@ docs/PostSpeechandtextanalyticsTopics-example.txt
 docs/PostSpeechandtextanalyticsTopicsPublishjobs-example.txt
 docs/PostSpeechandtextanalyticsTranscriptsSearch-example.txt
 docs/PostSpeechandtextanalyticsTranscriptsSearch-example.txt
+docs/PostTeams-example.txt
+docs/PostTeamsSearch-example.txt
+docs/PostTeamsSearch-example.txt
 docs/PostTelephonyProvidersEdgeDiagnosticNslookup-example.txt
 docs/PostTelephonyProvidersEdgeDiagnosticPing-example.txt
 docs/PostTelephonyProvidersEdgeDiagnosticRoute-example.txt
@@ -4448,7 +4459,13 @@ docs/TagValue.md
 docs/TagValueEntityListing.md
 docs/TargetPerformanceProfile.md
 docs/Team.md
+docs/TeamEntityListing.md
 docs/TeamReference.md
+docs/TeamSearchCriteria.md
+docs/TeamSearchRequest.md
+docs/TeamsApi.json
+docs/TeamsApi.md
+docs/TeamsSearchResponse.md
 docs/TelephonyApi.json
 docs/TelephonyApi.md
 docs/TelephonyProvidersEdgeApi.json
@@ -5105,6 +5122,7 @@ src/PureCloudPlatform.Client.V2/Api/SearchApi.cs
 src/PureCloudPlatform.Client.V2/Api/SpeechTextAnalyticsApi.cs
 src/PureCloudPlatform.Client.V2/Api/StationsApi.cs
 src/PureCloudPlatform.Client.V2/Api/SuggestApi.cs
+src/PureCloudPlatform.Client.V2/Api/TeamsApi.cs
 src/PureCloudPlatform.Client.V2/Api/TelephonyApi.cs
 src/PureCloudPlatform.Client.V2/Api/TelephonyProvidersEdgeApi.cs
 src/PureCloudPlatform.Client.V2/Api/TextbotsApi.cs
@@ -5199,6 +5217,7 @@ src/PureCloudPlatform.Client.V2/Model/AggregationResult.cs
 src/PureCloudPlatform.Client.V2/Model/AggregationResultEntry.cs
 src/PureCloudPlatform.Client.V2/Model/AllTimePoints.cs
 src/PureCloudPlatform.Client.V2/Model/AmazonLexRequest.cs
+src/PureCloudPlatform.Client.V2/Model/AnalyticsAgentGroup.cs
 src/PureCloudPlatform.Client.V2/Model/AnalyticsConversation.cs
 src/PureCloudPlatform.Client.V2/Model/AnalyticsConversationAsyncQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AnalyticsConversationQueryResponse.cs
@@ -5985,6 +6004,7 @@ src/PureCloudPlatform.Client.V2/Model/CursorRelationshipListing.cs
 src/PureCloudPlatform.Client.V2/Model/Cursors.cs
 src/PureCloudPlatform.Client.V2/Model/CustomEventAttribute.cs
 src/PureCloudPlatform.Client.V2/Model/CustomEventAttributeList.cs
+src/PureCloudPlatform.Client.V2/Model/CustomI18nLabels.cs
 src/PureCloudPlatform.Client.V2/Model/CustomerEndDetailEventTopicCustomerEndEvent.cs
 src/PureCloudPlatform.Client.V2/Model/CustomerInteractionCenter.cs
 src/PureCloudPlatform.Client.V2/Model/CustomerStartDetailEventTopicCustomerStartEvent.cs
@@ -6723,6 +6743,7 @@ src/PureCloudPlatform.Client.V2/Model/LocalDateRange.cs
 src/PureCloudPlatform.Client.V2/Model/LocalEncryptionConfiguration.cs
 src/PureCloudPlatform.Client.V2/Model/LocalEncryptionConfigurationListing.cs
 src/PureCloudPlatform.Client.V2/Model/LocalEncryptionKeyRequest.cs
+src/PureCloudPlatform.Client.V2/Model/LocalizedLabels.cs
 src/PureCloudPlatform.Client.V2/Model/Location.cs
 src/PureCloudPlatform.Client.V2/Model/LocationAddress.cs
 src/PureCloudPlatform.Client.V2/Model/LocationAddressVerificationDetails.cs
@@ -7653,7 +7674,11 @@ src/PureCloudPlatform.Client.V2/Model/TagValue.cs
 src/PureCloudPlatform.Client.V2/Model/TagValueEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/TargetPerformanceProfile.cs
 src/PureCloudPlatform.Client.V2/Model/Team.cs
+src/PureCloudPlatform.Client.V2/Model/TeamEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/TeamReference.cs
+src/PureCloudPlatform.Client.V2/Model/TeamSearchCriteria.cs
+src/PureCloudPlatform.Client.V2/Model/TeamSearchRequest.cs
+src/PureCloudPlatform.Client.V2/Model/TeamsSearchResponse.cs
 src/PureCloudPlatform.Client.V2/Model/TemplateParameter.cs
 src/PureCloudPlatform.Client.V2/Model/TermAttribute.cs
 src/PureCloudPlatform.Client.V2/Model/TestExecutionOperationResult.cs

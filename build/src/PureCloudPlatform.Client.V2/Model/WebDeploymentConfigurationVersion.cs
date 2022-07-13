@@ -82,6 +82,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Description">The description of the configuration.</param>
         /// <param name="Languages">A list of languages supported on the configuration required if the messenger is enabled.</param>
         /// <param name="DefaultLanguage">The default language to use for the configuration required if the messenger is enabled.</param>
+        /// <param name="CustomI18nLabels">The localization settings for homescreen app.</param>
         /// <param name="Messenger">The settings for messenger.</param>
         /// <param name="Position">The settings for position.</param>
         /// <param name="SupportCenter">The settings for support center.</param>
@@ -89,12 +90,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="JourneyEvents">The settings for journey events.</param>
         /// <param name="AuthenticationSettings">The settings for authenticated deployments.</param>
         /// <param name="Status">The current status of the configuration version.</param>
-        public WebDeploymentConfigurationVersion(string Name = null, string Description = null, List<string> Languages = null, string DefaultLanguage = null, MessengerSettings Messenger = null, PositionSettings Position = null, SupportCenterSettings SupportCenter = null, CobrowseSettings Cobrowse = null, JourneyEventsSettings JourneyEvents = null, AuthenticationSettings AuthenticationSettings = null, StatusEnum? Status = null)
+        public WebDeploymentConfigurationVersion(string Name = null, string Description = null, List<string> Languages = null, string DefaultLanguage = null, List<CustomI18nLabels> CustomI18nLabels = null, MessengerSettings Messenger = null, PositionSettings Position = null, SupportCenterSettings SupportCenter = null, CobrowseSettings Cobrowse = null, JourneyEventsSettings JourneyEvents = null, AuthenticationSettings AuthenticationSettings = null, StatusEnum? Status = null)
         {
             this.Name = Name;
             this.Description = Description;
             this.Languages = Languages;
             this.DefaultLanguage = DefaultLanguage;
+            this.CustomI18nLabels = CustomI18nLabels;
             this.Messenger = Messenger;
             this.Position = Position;
             this.SupportCenter = SupportCenter;
@@ -158,6 +160,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The default language to use for the configuration required if the messenger is enabled</value>
         [DataMember(Name="defaultLanguage", EmitDefaultValue=false)]
         public string DefaultLanguage { get; set; }
+
+
+
+        /// <summary>
+        /// The localization settings for homescreen app
+        /// </summary>
+        /// <value>The localization settings for homescreen app</value>
+        [DataMember(Name="customI18nLabels", EmitDefaultValue=false)]
+        public List<CustomI18nLabels> CustomI18nLabels { get; set; }
 
 
 
@@ -294,6 +305,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Languages: ").Append(Languages).Append("\n");
             sb.Append("  DefaultLanguage: ").Append(DefaultLanguage).Append("\n");
+            sb.Append("  CustomI18nLabels: ").Append(CustomI18nLabels).Append("\n");
             sb.Append("  Messenger: ").Append(Messenger).Append("\n");
             sb.Append("  Position: ").Append(Position).Append("\n");
             sb.Append("  SupportCenter: ").Append(SupportCenter).Append("\n");
@@ -377,6 +389,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DefaultLanguage == other.DefaultLanguage ||
                     this.DefaultLanguage != null &&
                     this.DefaultLanguage.Equals(other.DefaultLanguage)
+                ) &&
+                (
+                    this.CustomI18nLabels == other.CustomI18nLabels ||
+                    this.CustomI18nLabels != null &&
+                    this.CustomI18nLabels.SequenceEqual(other.CustomI18nLabels)
                 ) &&
                 (
                     this.Messenger == other.Messenger ||
@@ -478,6 +495,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DefaultLanguage != null)
                     hash = hash * 59 + this.DefaultLanguage.GetHashCode();
+
+                if (this.CustomI18nLabels != null)
+                    hash = hash * 59 + this.CustomI18nLabels.GetHashCode();
 
                 if (this.Messenger != null)
                     hash = hash * 59 + this.Messenger.GetHashCode();

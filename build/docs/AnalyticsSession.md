@@ -34,7 +34,7 @@ title: AnalyticsSession
 | **Dnis** | **string** | Dialed number identification service (number dialed by the calling party) | [optional] |
 | **EdgeId** | **string** | Unique identifier of the edge device | [optional] |
 | **EligibleAgentCounts** | **List&lt;int?&gt;** | Number of eligible agents for each predictive routing attempt | [optional] |
-| **ExtendedDeliveryStatus** | **string** | Extended email delivery status | [optional] |
+| **ExtendedDeliveryStatus** | **string** | Extended delivery status | [optional] |
 | **FlowInType** | **string** | Type of flow in that occurred when entering ACD. | [optional] |
 | **FlowOutType** | **string** | Type of flow out that occurred when emitting tFlowOut. | [optional] |
 | **JourneyActionId** | **string** | Identifier of the journey action. | [optional] |
@@ -77,6 +77,7 @@ title: AnalyticsSession
 | **VideoRoomId** | **string** | A unique identifier for a PureCloud video room | [optional] |
 | **WaitingInteractionCounts** | **List&lt;int?&gt;** | Number of waiting interactions for each predictive routing attempt | [optional] |
 | **ProposedAgents** | [**List&lt;AnalyticsProposedAgent&gt;**](AnalyticsProposedAgent.html) | Proposed agents | [optional] |
+| **AgentGroups** | [**List&lt;AnalyticsAgentGroup&gt;**](AnalyticsAgentGroup.html) | Conditional group routing agent groups | [optional] |
 | **MediaEndpointStats** | [**List&lt;AnalyticsMediaEndpointStat&gt;**](AnalyticsMediaEndpointStat.html) | MediaEndpointStats associated with this session | [optional] |
 | **Flow** | [**AnalyticsFlow**](AnalyticsFlow.html) | IVR flow execution associated with this session | [optional] |
 | **Metrics** | [**List&lt;AnalyticsSessionMetric&gt;**](AnalyticsSessionMetric.html) | List of metrics for this session | [optional] |

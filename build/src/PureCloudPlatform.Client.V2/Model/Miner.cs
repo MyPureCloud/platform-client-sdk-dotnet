@@ -73,7 +73,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Eses for "es-es"
             /// </summary>
             [EnumMember(Value = "es-es")]
-            Eses
+            Eses,
+            
+            /// <summary>
+            /// Enum Frfr for "fr-fr"
+            /// </summary>
+            [EnumMember(Value = "fr-fr")]
+            Frfr
         }
         /// <summary>
         /// Status of the miner.

@@ -24,6 +24,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostSearch**](SearchApi.html#postsearch) | **POST** /api/v2/search | Search resources. |
 | [**PostSearchSuggest**](SearchApi.html#postsearchsuggest) | **POST** /api/v2/search/suggest | Suggest resources. |
 | [**PostSpeechandtextanalyticsTranscriptsSearch**](SearchApi.html#postspeechandtextanalyticstranscriptssearch) | **POST** /api/v2/speechandtextanalytics/transcripts/search | Search resources. |
+| [**PostTeamsSearch**](SearchApi.html#postteamssearch) | **POST** /api/v2/teams/search | Search resources. |
 | [**PostUsersSearch**](SearchApi.html#postuserssearch) | **POST** /api/v2/users/search | Search users |
 | [**PostVoicemailSearch**](SearchApi.html#postvoicemailsearch) | **POST** /api/v2/voicemail/search | Search voicemails |
 {: class="table table-striped"}
@@ -1124,6 +1125,71 @@ namespace Example
 ### Return type
 
 [**JsonSearchResponse**](JsonSearchResponse.html)
+
+<a name="postteamssearch"></a>
+
+## [**TeamsSearchResponse**](TeamsSearchResponse.html) PostTeamsSearch (TeamSearchRequest body)
+
+
+
+Search resources.
+
+
+
+Requires ANY permissions: 
+
+* groups:team:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostTeamsSearchExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SearchApi();
+            var body = new TeamSearchRequest(); // TeamSearchRequest | Search request options
+
+            try
+            { 
+                // Search resources.
+                TeamsSearchResponse result = apiInstance.PostTeamsSearch(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SearchApi.PostTeamsSearch: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**TeamSearchRequest**](TeamSearchRequest.html)| Search request options |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**TeamsSearchResponse**](TeamsSearchResponse.html)
 
 <a name="postuserssearch"></a>
 
