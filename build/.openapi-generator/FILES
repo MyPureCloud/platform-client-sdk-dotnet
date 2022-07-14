@@ -717,6 +717,7 @@ docs/ConversationEventTopicSocialExpression.md
 docs/ConversationEventTopicUriReference.md
 docs/ConversationEventTopicVideo.md
 docs/ConversationEventTopicVoicemail.md
+docs/ConversationEventTopicWorkflow.md
 docs/ConversationEventTopicWrapup.md
 docs/ConversationEventTyping.md
 docs/ConversationMessageContent.md
@@ -3968,6 +3969,7 @@ docs/QueueConversationEventTopicSocialExpression.md
 docs/QueueConversationEventTopicUriReference.md
 docs/QueueConversationEventTopicVideo.md
 docs/QueueConversationEventTopicVoicemail.md
+docs/QueueConversationEventTopicWorkflow.md
 docs/QueueConversationEventTopicWrapup.md
 docs/QueueConversationMessageEventTopicConversationRoutingData.md
 docs/QueueConversationMessageEventTopicDetail.md
@@ -4037,6 +4039,7 @@ docs/QueueConversationSocialExpressionEventTopicSocialExpression.md
 docs/QueueConversationSocialExpressionEventTopicUriReference.md
 docs/QueueConversationSocialExpressionEventTopicVideo.md
 docs/QueueConversationSocialExpressionEventTopicVoicemail.md
+docs/QueueConversationSocialExpressionEventTopicWorkflow.md
 docs/QueueConversationSocialExpressionEventTopicWrapup.md
 docs/QueueConversationVideoEventTopicAddress.md
 docs/QueueConversationVideoEventTopicAfterCallWork.md
@@ -4073,6 +4076,7 @@ docs/QueueConversationVideoEventTopicSocialExpression.md
 docs/QueueConversationVideoEventTopicUriReference.md
 docs/QueueConversationVideoEventTopicVideo.md
 docs/QueueConversationVideoEventTopicVoicemail.md
+docs/QueueConversationVideoEventTopicWorkflow.md
 docs/QueueConversationVideoEventTopicWrapup.md
 docs/QueueEmailAddress.md
 docs/QueueEntityListing.md
@@ -5053,6 +5057,8 @@ docs/WorkdayValuesTrend.md
 docs/WorkdayValuesTrendItem.md
 docs/WorkforceManagementApi.json
 docs/WorkforceManagementApi.md
+docs/WorkitemsUserEventsNotificationDelta.md
+docs/WorkitemsUserEventsNotificationWorkitem.md
 docs/Workspace.md
 docs/WorkspaceCreate.md
 docs/WorkspaceEntityListing.md
@@ -5839,6 +5845,7 @@ src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicSocialExpression.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicUriReference.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicVideo.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicVoicemail.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicWorkflow.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicWrapup.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEventTyping.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationMessageContent.cs
@@ -7201,6 +7208,7 @@ src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicSocialExpressio
 src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicUriReference.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicVideo.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicVoicemail.cs
+src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicWorkflow.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicWrapup.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationMessageEventTopicConversationRoutingData.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationMessageEventTopicDetail.cs
@@ -7270,6 +7278,7 @@ src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopi
 src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopicUriReference.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopicVideo.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopicVoicemail.cs
+src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopicWorkflow.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopicWrapup.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicAddress.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicAfterCallWork.cs
@@ -7306,6 +7315,7 @@ src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicSocialExpr
 src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicUriReference.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicVideo.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicVoicemail.cs
+src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicWorkflow.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicWrapup.cs
 src/PureCloudPlatform.Client.V2/Model/QueueEmailAddress.cs
 src/PureCloudPlatform.Client.V2/Model/QueueEntityListing.cs
@@ -8236,6 +8246,8 @@ src/PureCloudPlatform.Client.V2/Model/WorkdayPointsTrendItem.cs
 src/PureCloudPlatform.Client.V2/Model/WorkdayValuesMetricItem.cs
 src/PureCloudPlatform.Client.V2/Model/WorkdayValuesTrend.cs
 src/PureCloudPlatform.Client.V2/Model/WorkdayValuesTrendItem.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemsUserEventsNotificationDelta.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemsUserEventsNotificationWorkitem.cs
 src/PureCloudPlatform.Client.V2/Model/Workspace.cs
 src/PureCloudPlatform.Client.V2/Model/WorkspaceCreate.cs
 src/PureCloudPlatform.Client.V2/Model/WorkspaceEntityListing.cs

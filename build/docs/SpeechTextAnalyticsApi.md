@@ -559,7 +559,7 @@ namespace Example
 
 <a name="getspeechandtextanalyticsprograms"></a>
 
-## [**ProgramsEntityListing**](ProgramsEntityListing.html) GetSpeechandtextanalyticsPrograms (string nextPage = null, int? pageSize = null)
+## [**ProgramsEntityListing**](ProgramsEntityListing.html) GetSpeechandtextanalyticsPrograms (string nextPage = null, int? pageSize = null, string state = null)
 
 
 
@@ -595,11 +595,12 @@ namespace Example
             var apiInstance = new SpeechTextAnalyticsApi();
             var nextPage = nextPage_example;  // string | The key for listing the next page (optional) 
             var pageSize = 56;  // int? | The page size for the listing (optional)  (default to 20)
+            var state = state_example;  // string | Program state. Defaults to Latest (optional) 
 
             try
             { 
                 // Get the list of Speech & Text Analytics programs
-                ProgramsEntityListing result = apiInstance.GetSpeechandtextanalyticsPrograms(nextPage, pageSize);
+                ProgramsEntityListing result = apiInstance.GetSpeechandtextanalyticsPrograms(nextPage, pageSize, state);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -618,6 +619,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **nextPage** | **string**| The key for listing the next page | [optional]  |
 | **pageSize** | **int?**| The page size for the listing | [optional] [default to 20] |
+| **state** | **string**| Program state. Defaults to Latest | [optional] <br />**Values**: Latest, Published |
 {: class="table table-striped"}
 
 ### Return type

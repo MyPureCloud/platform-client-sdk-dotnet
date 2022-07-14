@@ -26361,7 +26361,7 @@
   "getspeechandtextanalyticsprograms": {
     "operationId": "getspeechandtextanalyticsprograms",
     "functionName": "GetSpeechandtextanalyticsPrograms",
-    "signature": "GetSpeechandtextanalyticsPrograms(nextPage, pageSize)",
+    "signature": "GetSpeechandtextanalyticsPrograms(nextPage, pageSize, state)",
     "parameters": [
       {
         "name": "nextPage",
@@ -26372,10 +26372,15 @@
         "name": "pageSize",
         "type": "int?",
         "required": "false"
+      },
+      {
+        "name": "state",
+        "type": "string",
+        "required": "false"
       }
     ],
     "return": "ProgramsEntityListing",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetSpeechandtextanalyticsProgramsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new SpeechTextAnalyticsApi();\n            var nextPage = \"nextPage_example\";  // string | The key for listing the next page (optional) \n            var pageSize = 56;  // int? | The page size for the listing (optional)  (default to 20)\n\n            try\n            { \n                // Get the list of Speech & Text Analytics programs\n                ProgramsEntityListing result = apiInstance.GetSpeechandtextanalyticsPrograms(nextPage, pageSize);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling SpeechTextAnalytics.GetSpeechandtextanalyticsPrograms: \" + e.Message );\n            }\n        }\n    }\n}"
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetSpeechandtextanalyticsProgramsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new SpeechTextAnalyticsApi();\n            var nextPage = \"nextPage_example\";  // string | The key for listing the next page (optional) \n            var pageSize = 56;  // int? | The page size for the listing (optional)  (default to 20)\n            var state = \"state_example\";  // string | Program state. Defaults to Latest (optional) \n\n            try\n            { \n                // Get the list of Speech & Text Analytics programs\n                ProgramsEntityListing result = apiInstance.GetSpeechandtextanalyticsPrograms(nextPage, pageSize, state);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling SpeechTextAnalytics.GetSpeechandtextanalyticsPrograms: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "getspeechandtextanalyticsprogramsgeneraljob": {
     "operationId": "getspeechandtextanalyticsprogramsgeneraljob",

@@ -34,16 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Messengerhometitle for "MessengerHomeTitle"
+            /// Enum Messengerhomeheadertitle for "MessengerHomeHeaderTitle"
             /// </summary>
-            [EnumMember(Value = "MessengerHomeTitle")]
-            Messengerhometitle,
+            [EnumMember(Value = "MessengerHomeHeaderTitle")]
+            Messengerhomeheadertitle,
             
             /// <summary>
-            /// Enum Messengerhomesubtitle for "MessengerHomeSubTitle"
+            /// Enum Messengerhomeheadersubtitle for "MessengerHomeHeaderSubTitle"
             /// </summary>
-            [EnumMember(Value = "MessengerHomeSubTitle")]
-            Messengerhomesubtitle
+            [EnumMember(Value = "MessengerHomeHeaderSubTitle")]
+            Messengerhomeheadersubtitle
         }
         /// <summary>
         /// Contains localized label key used in messenger homescreen

@@ -44,6 +44,7 @@ title: ConversationEventTopicParticipant
 | **Screenshares** | [**List&lt;ConversationEventTopicScreenshare&gt;**](ConversationEventTopicScreenshare.html) |  | [optional] |
 | **SocialExpressions** | [**List&lt;ConversationEventTopicSocialExpression&gt;**](ConversationEventTopicSocialExpression.html) |  | [optional] |
 | **Videos** | [**List&lt;ConversationEventTopicVideo&gt;**](ConversationEventTopicVideo.html) |  | [optional] |
+| **Workflow** | [**ConversationEventTopicWorkflow**](ConversationEventTopicWorkflow.html) |  | [optional] |
 {: class="table table-striped"}
 
 

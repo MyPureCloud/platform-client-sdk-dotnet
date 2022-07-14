@@ -115,7 +115,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Screenshares">Screenshares.</param>
         /// <param name="SocialExpressions">SocialExpressions.</param>
         /// <param name="Videos">Videos.</param>
-        public QueueConversationVideoEventTopicParticipant(string Id = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string Name = null, string QueueId = null, string GroupId = null, string TeamId = null, string Purpose = null, string ConsultParticipantId = null, string Address = null, bool? WrapupRequired = null, bool? WrapupExpected = null, string WrapupPrompt = null, int? WrapupTimeoutMs = null, QueueConversationVideoEventTopicWrapup Wrapup = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, QueueConversationVideoEventTopicConversationRoutingData ConversationRoutingData = null, int? AlertingTimeoutMs = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, string BargedParticipantId = null, ScreenRecordingStateEnum? ScreenRecordingState = null, string FlaggedReason = null, Dictionary<string, string> Attributes = null, List<QueueConversationVideoEventTopicCall> Calls = null, List<QueueConversationVideoEventTopicCallback> Callbacks = null, List<QueueConversationVideoEventTopicChat> Chats = null, List<QueueConversationVideoEventTopicCobrowse> Cobrowsesessions = null, List<QueueConversationVideoEventTopicEmail> Emails = null, List<QueueConversationVideoEventTopicMessage> Messages = null, List<QueueConversationVideoEventTopicScreenshare> Screenshares = null, List<QueueConversationVideoEventTopicSocialExpression> SocialExpressions = null, List<QueueConversationVideoEventTopicVideo> Videos = null)
+        /// <param name="Workflow">Workflow.</param>
+        public QueueConversationVideoEventTopicParticipant(string Id = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string Name = null, string QueueId = null, string GroupId = null, string TeamId = null, string Purpose = null, string ConsultParticipantId = null, string Address = null, bool? WrapupRequired = null, bool? WrapupExpected = null, string WrapupPrompt = null, int? WrapupTimeoutMs = null, QueueConversationVideoEventTopicWrapup Wrapup = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, QueueConversationVideoEventTopicConversationRoutingData ConversationRoutingData = null, int? AlertingTimeoutMs = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, string BargedParticipantId = null, ScreenRecordingStateEnum? ScreenRecordingState = null, string FlaggedReason = null, Dictionary<string, string> Attributes = null, List<QueueConversationVideoEventTopicCall> Calls = null, List<QueueConversationVideoEventTopicCallback> Callbacks = null, List<QueueConversationVideoEventTopicChat> Chats = null, List<QueueConversationVideoEventTopicCobrowse> Cobrowsesessions = null, List<QueueConversationVideoEventTopicEmail> Emails = null, List<QueueConversationVideoEventTopicMessage> Messages = null, List<QueueConversationVideoEventTopicScreenshare> Screenshares = null, List<QueueConversationVideoEventTopicSocialExpression> SocialExpressions = null, List<QueueConversationVideoEventTopicVideo> Videos = null, QueueConversationVideoEventTopicWorkflow Workflow = null)
         {
             this.Id = Id;
             this.ConnectedTime = ConnectedTime;
@@ -154,6 +155,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Screenshares = Screenshares;
             this.SocialExpressions = SocialExpressions;
             this.Videos = Videos;
+            this.Workflow = Workflow;
             
         }
         
@@ -473,6 +475,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<QueueConversationVideoEventTopicVideo> Videos { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets Workflow
+        /// </summary>
+        [DataMember(Name="workflow", EmitDefaultValue=false)]
+        public QueueConversationVideoEventTopicWorkflow Workflow { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -519,6 +529,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Screenshares: ").Append(Screenshares).Append("\n");
             sb.Append("  SocialExpressions: ").Append(SocialExpressions).Append("\n");
             sb.Append("  Videos: ").Append(Videos).Append("\n");
+            sb.Append("  Workflow: ").Append(Workflow).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -743,6 +754,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Videos == other.Videos ||
                     this.Videos != null &&
                     this.Videos.SequenceEqual(other.Videos)
+                ) &&
+                (
+                    this.Workflow == other.Workflow ||
+                    this.Workflow != null &&
+                    this.Workflow.Equals(other.Workflow)
                 );
         }
 
@@ -867,6 +883,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Videos != null)
                     hash = hash * 59 + this.Videos.GetHashCode();
+
+                if (this.Workflow != null)
+                    hash = hash * 59 + this.Workflow.GetHashCode();
 
                 return hash;
             }

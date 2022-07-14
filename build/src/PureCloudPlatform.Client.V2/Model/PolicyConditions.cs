@@ -71,6 +71,39 @@ namespace PureCloudPlatform.Client.V2.Model
             Chat
         }
         /// <summary>
+        /// This condition is to filter out conversation with and without customer participation.
+        /// </summary>
+        /// <value>This condition is to filter out conversation with and without customer participation.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum CustomerParticipationEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Yes for "YES"
+            /// </summary>
+            [EnumMember(Value = "YES")]
+            Yes,
+            
+            /// <summary>
+            /// Enum No for "NO"
+            /// </summary>
+            [EnumMember(Value = "NO")]
+            No
+        }
+        /// <summary>
+        /// This condition is to filter out conversation with and without customer participation.
+        /// </summary>
+        /// <value>This condition is to filter out conversation with and without customer participation.</value>
+        [DataMember(Name="customerParticipation", EmitDefaultValue=false)]
+        public CustomerParticipationEnum? CustomerParticipation { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="PolicyConditions" /> class.
         /// </summary>
         /// <param name="ForUsers">ForUsers.</param>
@@ -81,7 +114,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Duration">Duration.</param>
         /// <param name="WrapupCodes">WrapupCodes.</param>
         /// <param name="TimeAllowed">TimeAllowed.</param>
-        public PolicyConditions(List<User> ForUsers = null, List<DirectionsEnum> Directions = null, List<string> DateRanges = null, List<MediaTypesEnum> MediaTypes = null, List<Queue> ForQueues = null, DurationCondition Duration = null, List<WrapupCode> WrapupCodes = null, TimeAllowed TimeAllowed = null)
+        /// <param name="CustomerParticipation">This condition is to filter out conversation with and without customer participation..</param>
+        public PolicyConditions(List<User> ForUsers = null, List<DirectionsEnum> Directions = null, List<string> DateRanges = null, List<MediaTypesEnum> MediaTypes = null, List<Queue> ForQueues = null, DurationCondition Duration = null, List<WrapupCode> WrapupCodes = null, TimeAllowed TimeAllowed = null, CustomerParticipationEnum? CustomerParticipation = null)
         {
             this.ForUsers = ForUsers;
             this.Directions = Directions;
@@ -91,6 +125,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Duration = Duration;
             this.WrapupCodes = WrapupCodes;
             this.TimeAllowed = TimeAllowed;
+            this.CustomerParticipation = CustomerParticipation;
             
         }
         
@@ -159,6 +194,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public TimeAllowed TimeAllowed { get; set; }
 
 
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -176,6 +213,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Duration: ").Append(Duration).Append("\n");
             sb.Append("  WrapupCodes: ").Append(WrapupCodes).Append("\n");
             sb.Append("  TimeAllowed: ").Append(TimeAllowed).Append("\n");
+            sb.Append("  CustomerParticipation: ").Append(CustomerParticipation).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -255,6 +293,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TimeAllowed == other.TimeAllowed ||
                     this.TimeAllowed != null &&
                     this.TimeAllowed.Equals(other.TimeAllowed)
+                ) &&
+                (
+                    this.CustomerParticipation == other.CustomerParticipation ||
+                    this.CustomerParticipation != null &&
+                    this.CustomerParticipation.Equals(other.CustomerParticipation)
                 );
         }
 
@@ -292,6 +335,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.TimeAllowed != null)
                     hash = hash * 59 + this.TimeAllowed.GetHashCode();
+
+                if (this.CustomerParticipation != null)
+                    hash = hash * 59 + this.CustomerParticipation.GetHashCode();
 
                 return hash;
             }

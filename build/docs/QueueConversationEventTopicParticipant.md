@@ -44,6 +44,7 @@ title: QueueConversationEventTopicParticipant
 | **Screenshares** | [**List&lt;QueueConversationEventTopicScreenshare&gt;**](QueueConversationEventTopicScreenshare.html) |  | [optional] |
 | **SocialExpressions** | [**List&lt;QueueConversationEventTopicSocialExpression&gt;**](QueueConversationEventTopicSocialExpression.html) |  | [optional] |
 | **Videos** | [**List&lt;QueueConversationEventTopicVideo&gt;**](QueueConversationEventTopicVideo.html) |  | [optional] |
+| **Workflow** | [**QueueConversationEventTopicWorkflow**](QueueConversationEventTopicWorkflow.html) |  | [optional] |
 {: class="table table-striped"}
 
 
