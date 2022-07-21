@@ -7,6 +7,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**DeleteEmployeeperformanceExternalmetricsDefinition**](GamificationApi.html#deleteemployeeperformanceexternalmetricsdefinition) | **DELETE** /api/v2/employeeperformance/externalmetrics/definitions/{metricId} | Delete an External Metric Definition |
+| [**GetEmployeeperformanceExternalmetricsDefinition**](GamificationApi.html#getemployeeperformanceexternalmetricsdefinition) | **GET** /api/v2/employeeperformance/externalmetrics/definitions/{metricId} | Get an External Metric Definition |
+| [**GetEmployeeperformanceExternalmetricsDefinitions**](GamificationApi.html#getemployeeperformanceexternalmetricsdefinitions) | **GET** /api/v2/employeeperformance/externalmetrics/definitions | Get a list of External Metric Definitions of an organization, sorted by name in ascending order |
 | [**GetGamificationLeaderboard**](GamificationApi.html#getgamificationleaderboard) | **GET** /api/v2/gamification/leaderboard | Leaderboard of the requesting user&#39;s division or performance profile |
 | [**GetGamificationLeaderboardAll**](GamificationApi.html#getgamificationleaderboardall) | **GET** /api/v2/gamification/leaderboard/all | Leaderboard by filter type |
 | [**GetGamificationLeaderboardAllBestpoints**](GamificationApi.html#getgamificationleaderboardallbestpoints) | **GET** /api/v2/gamification/leaderboard/all/bestpoints | Best Points by division or performance profile |
@@ -46,6 +49,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetGamificationStatus**](GamificationApi.html#getgamificationstatus) | **GET** /api/v2/gamification/status | Gamification activation status |
 | [**GetGamificationTemplate**](GamificationApi.html#getgamificationtemplate) | **GET** /api/v2/gamification/templates/{templateId} | Objective template by id |
 | [**GetGamificationTemplates**](GamificationApi.html#getgamificationtemplates) | **GET** /api/v2/gamification/templates | All objective templates |
+| [**PatchEmployeeperformanceExternalmetricsDefinition**](GamificationApi.html#patchemployeeperformanceexternalmetricsdefinition) | **PATCH** /api/v2/employeeperformance/externalmetrics/definitions/{metricId} | Update External Metric Definition |
+| [**PostEmployeeperformanceExternalmetricsData**](GamificationApi.html#postemployeeperformanceexternalmetricsdata) | **POST** /api/v2/employeeperformance/externalmetrics/data | Write External Metric Data |
+| [**PostEmployeeperformanceExternalmetricsDefinitions**](GamificationApi.html#postemployeeperformanceexternalmetricsdefinitions) | **POST** /api/v2/employeeperformance/externalmetrics/definitions | Create External Metric Definition |
 | [**PostGamificationMetrics**](GamificationApi.html#postgamificationmetrics) | **POST** /api/v2/gamification/metrics | Creates a gamified metric with a given metric definition and metric objective |
 | [**PostGamificationProfileActivate**](GamificationApi.html#postgamificationprofileactivate) | **POST** /api/v2/gamification/profiles/{profileId}/activate | Activate a performance profile |
 | [**PostGamificationProfileDeactivate**](GamificationApi.html#postgamificationprofiledeactivate) | **POST** /api/v2/gamification/profiles/{profileId}/deactivate | Deactivate a performance profile |
@@ -59,6 +65,202 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutGamificationProfileMetric**](GamificationApi.html#putgamificationprofilemetric) | **PUT** /api/v2/gamification/profiles/{profileId}/metrics/{metricId} | Updates a metric in performance profile |
 | [**PutGamificationStatus**](GamificationApi.html#putgamificationstatus) | **PUT** /api/v2/gamification/status | Update gamification activation status |
 {: class="table table-striped"}
+
+<a name="deleteemployeeperformanceexternalmetricsdefinition"></a>
+
+## void DeleteEmployeeperformanceExternalmetricsDefinition (string metricId)
+
+
+
+Delete an External Metric Definition
+
+
+
+Requires ANY permissions: 
+
+* employeePerformance:externalMetricDefinition:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteEmployeeperformanceExternalmetricsDefinitionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var metricId = metricId_example;  // string | Specifies the External Metric Definition ID
+
+            try
+            { 
+                // Delete an External Metric Definition
+                apiInstance.DeleteEmployeeperformanceExternalmetricsDefinition(metricId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.DeleteEmployeeperformanceExternalmetricsDefinition: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **metricId** | **string**| Specifies the External Metric Definition ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="getemployeeperformanceexternalmetricsdefinition"></a>
+
+## [**ExternalMetricDefinition**](ExternalMetricDefinition.html) GetEmployeeperformanceExternalmetricsDefinition (string metricId)
+
+
+
+Get an External Metric Definition
+
+
+
+Requires ANY permissions: 
+
+* employeePerformance:externalMetricDefinition:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetEmployeeperformanceExternalmetricsDefinitionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var metricId = metricId_example;  // string | Specifies the External Metric Definition ID
+
+            try
+            { 
+                // Get an External Metric Definition
+                ExternalMetricDefinition result = apiInstance.GetEmployeeperformanceExternalmetricsDefinition(metricId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.GetEmployeeperformanceExternalmetricsDefinition: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **metricId** | **string**| Specifies the External Metric Definition ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ExternalMetricDefinition**](ExternalMetricDefinition.html)
+
+<a name="getemployeeperformanceexternalmetricsdefinitions"></a>
+
+## [**ExternalMetricDefinitionListing**](ExternalMetricDefinitionListing.html) GetEmployeeperformanceExternalmetricsDefinitions (int? pageSize = null, int? pageNumber = null)
+
+
+
+Get a list of External Metric Definitions of an organization, sorted by name in ascending order
+
+
+
+Requires ANY permissions: 
+
+* employeePerformance:externalMetricDefinition:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetEmployeeperformanceExternalmetricsDefinitionsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            { 
+                // Get a list of External Metric Definitions of an organization, sorted by name in ascending order
+                ExternalMetricDefinitionListing result = apiInstance.GetEmployeeperformanceExternalmetricsDefinitions(pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.GetEmployeeperformanceExternalmetricsDefinitions: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**ExternalMetricDefinitionListing**](ExternalMetricDefinitionListing.html)
 
 <a name="getgamificationleaderboard"></a>
 
@@ -2717,6 +2919,203 @@ This endpoint does require any parameters.
 ### Return type
 
 [**GetTemplatesResponse**](GetTemplatesResponse.html)
+
+<a name="patchemployeeperformanceexternalmetricsdefinition"></a>
+
+## [**ExternalMetricDefinition**](ExternalMetricDefinition.html) PatchEmployeeperformanceExternalmetricsDefinition (string metricId, ExternalMetricDefinitionUpdateRequest body)
+
+
+
+Update External Metric Definition
+
+
+
+Requires ANY permissions: 
+
+* employeePerformance:externalMetricDefinition:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchEmployeeperformanceExternalmetricsDefinitionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var metricId = metricId_example;  // string | Specifies the metric definition ID
+            var body = new ExternalMetricDefinitionUpdateRequest(); // ExternalMetricDefinitionUpdateRequest | The External Metric Definition parameters to be updated
+
+            try
+            { 
+                // Update External Metric Definition
+                ExternalMetricDefinition result = apiInstance.PatchEmployeeperformanceExternalmetricsDefinition(metricId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.PatchEmployeeperformanceExternalmetricsDefinition: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **metricId** | **string**| Specifies the metric definition ID |  |
+| **body** | [**ExternalMetricDefinitionUpdateRequest**](ExternalMetricDefinitionUpdateRequest.html)| The External Metric Definition parameters to be updated |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ExternalMetricDefinition**](ExternalMetricDefinition.html)
+
+<a name="postemployeeperformanceexternalmetricsdata"></a>
+
+## [**ExternalMetricDataWriteResponse**](ExternalMetricDataWriteResponse.html) PostEmployeeperformanceExternalmetricsData (ExternalMetricDataWriteRequest body = null)
+
+
+
+Write External Metric Data
+
+
+
+Requires ANY permissions: 
+
+* employeePerformance:externalMetricData:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostEmployeeperformanceExternalmetricsDataExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var body = new ExternalMetricDataWriteRequest(); // ExternalMetricDataWriteRequest | The External Metric Data to be added (optional) 
+
+            try
+            { 
+                // Write External Metric Data
+                ExternalMetricDataWriteResponse result = apiInstance.PostEmployeeperformanceExternalmetricsData(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.PostEmployeeperformanceExternalmetricsData: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ExternalMetricDataWriteRequest**](ExternalMetricDataWriteRequest.html)| The External Metric Data to be added | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ExternalMetricDataWriteResponse**](ExternalMetricDataWriteResponse.html)
+
+<a name="postemployeeperformanceexternalmetricsdefinitions"></a>
+
+## [**ExternalMetricDefinition**](ExternalMetricDefinition.html) PostEmployeeperformanceExternalmetricsDefinitions (ExternalMetricDefinitionCreateRequest body = null)
+
+
+
+Create External Metric Definition
+
+
+
+Requires ANY permissions: 
+
+* employeePerformance:externalMetricDefinition:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostEmployeeperformanceExternalmetricsDefinitionsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var body = new ExternalMetricDefinitionCreateRequest(); // ExternalMetricDefinitionCreateRequest | The External Metric Definition to be created (optional) 
+
+            try
+            { 
+                // Create External Metric Definition
+                ExternalMetricDefinition result = apiInstance.PostEmployeeperformanceExternalmetricsDefinitions(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.PostEmployeeperformanceExternalmetricsDefinitions: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ExternalMetricDefinitionCreateRequest**](ExternalMetricDefinitionCreateRequest.html)| The External Metric Definition to be created | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ExternalMetricDefinition**](ExternalMetricDefinition.html)
 
 <a name="postgamificationmetrics"></a>
 

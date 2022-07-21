@@ -78,6 +78,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Bullseye">The bullseye settings for the queue..</param>
         /// <param name="AcwSettings">The ACW settings for the queue..</param>
         /// <param name="SkillEvaluationMethod">The skill evaluation method to use when routing conversations..</param>
+        /// <param name="MemberGroups">The groups of agents associated with the queue, if any.  Queue membership will update to match group membership changes..</param>
         /// <param name="QueueFlow">The in-queue flow to use for call conversations waiting in queue..</param>
         /// <param name="EmailInQueueFlow">The in-queue flow to use for email conversations waiting in queue..</param>
         /// <param name="MessageInQueueFlow">The in-queue flow to use for message conversations waiting in queue..</param>
@@ -86,13 +87,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AutoAnswerOnly">Specifies whether the configured whisper should play for all ACD calls, or only for those which are auto-answered..</param>
         /// <param name="EnableTranscription">Indicates whether voice transcription is enabled for this queue..</param>
         /// <param name="EnableManualAssignment">Indicates whether manual assignment is enabled for this queue..</param>
+        /// <param name="AgentOwnedRouting">The Agent Owned Routing settings for the queue.</param>
         /// <param name="CallingPartyName">The name to use for caller identification for outbound calls from this queue..</param>
         /// <param name="CallingPartyNumber">The phone number to use for caller identification for outbound calls from this queue..</param>
         /// <param name="DefaultScripts">The default script Ids for the communication types..</param>
         /// <param name="OutboundMessagingAddresses">The messaging addresses for the queue..</param>
         /// <param name="OutboundEmailAddress">OutboundEmailAddress.</param>
-        /// <param name="PeerId">The ID of the external Queue.</param>
-        public QueueRequest(string Name = null, WritableDivision Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, Dictionary<string, MediaSetting> MediaSettings = null, List<RoutingRule> RoutingRules = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, DomainEntityRef QueueFlow = null, DomainEntityRef EmailInQueueFlow = null, DomainEntityRef MessageInQueueFlow = null, DomainEntityRef WhisperPrompt = null, DomainEntityRef OnHoldPrompt = null, bool? AutoAnswerOnly = null, bool? EnableTranscription = null, bool? EnableManualAssignment = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null, string PeerId = null)
+        /// <param name="PeerId">The ID of an associated external queue..</param>
+        public QueueRequest(string Name = null, WritableDivision Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, Dictionary<string, MediaSetting> MediaSettings = null, List<RoutingRule> RoutingRules = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, List<MemberGroup> MemberGroups = null, DomainEntityRef QueueFlow = null, DomainEntityRef EmailInQueueFlow = null, DomainEntityRef MessageInQueueFlow = null, DomainEntityRef WhisperPrompt = null, DomainEntityRef OnHoldPrompt = null, bool? AutoAnswerOnly = null, bool? EnableTranscription = null, bool? EnableManualAssignment = null, AgentOwnedRouting AgentOwnedRouting = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null, string PeerId = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -106,6 +108,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Bullseye = Bullseye;
             this.AcwSettings = AcwSettings;
             this.SkillEvaluationMethod = SkillEvaluationMethod;
+            this.MemberGroups = MemberGroups;
             this.QueueFlow = QueueFlow;
             this.EmailInQueueFlow = EmailInQueueFlow;
             this.MessageInQueueFlow = MessageInQueueFlow;
@@ -114,6 +117,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AutoAnswerOnly = AutoAnswerOnly;
             this.EnableTranscription = EnableTranscription;
             this.EnableManualAssignment = EnableManualAssignment;
+            this.AgentOwnedRouting = AgentOwnedRouting;
             this.CallingPartyName = CallingPartyName;
             this.CallingPartyNumber = CallingPartyNumber;
             this.DefaultScripts = DefaultScripts;
@@ -263,6 +267,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The groups of agents associated with the queue, if any.  Queue membership will update to match group membership changes.
+        /// </summary>
+        /// <value>The groups of agents associated with the queue, if any.  Queue membership will update to match group membership changes.</value>
+        [DataMember(Name="memberGroups", EmitDefaultValue=false)]
+        public List<MemberGroup> MemberGroups { get; set; }
+
+
+
+        /// <summary>
         /// The in-queue flow to use for call conversations waiting in queue.
         /// </summary>
         /// <value>The in-queue flow to use for call conversations waiting in queue.</value>
@@ -335,6 +348,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The Agent Owned Routing settings for the queue
+        /// </summary>
+        /// <value>The Agent Owned Routing settings for the queue</value>
+        [DataMember(Name="agentOwnedRouting", EmitDefaultValue=false)]
+        public AgentOwnedRouting AgentOwnedRouting { get; set; }
+
+
+
+        /// <summary>
         /// The name to use for caller identification for outbound calls from this queue.
         /// </summary>
         /// <value>The name to use for caller identification for outbound calls from this queue.</value>
@@ -379,9 +401,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The ID of the external Queue
+        /// The ID of an associated external queue.
         /// </summary>
-        /// <value>The ID of the external Queue</value>
+        /// <value>The ID of an associated external queue.</value>
         [DataMember(Name="peerId", EmitDefaultValue=false)]
         public string PeerId { get; set; }
 
@@ -420,6 +442,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Bullseye: ").Append(Bullseye).Append("\n");
             sb.Append("  AcwSettings: ").Append(AcwSettings).Append("\n");
             sb.Append("  SkillEvaluationMethod: ").Append(SkillEvaluationMethod).Append("\n");
+            sb.Append("  MemberGroups: ").Append(MemberGroups).Append("\n");
             sb.Append("  QueueFlow: ").Append(QueueFlow).Append("\n");
             sb.Append("  EmailInQueueFlow: ").Append(EmailInQueueFlow).Append("\n");
             sb.Append("  MessageInQueueFlow: ").Append(MessageInQueueFlow).Append("\n");
@@ -428,6 +451,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AutoAnswerOnly: ").Append(AutoAnswerOnly).Append("\n");
             sb.Append("  EnableTranscription: ").Append(EnableTranscription).Append("\n");
             sb.Append("  EnableManualAssignment: ").Append(EnableManualAssignment).Append("\n");
+            sb.Append("  AgentOwnedRouting: ").Append(AgentOwnedRouting).Append("\n");
             sb.Append("  CallingPartyName: ").Append(CallingPartyName).Append("\n");
             sb.Append("  CallingPartyNumber: ").Append(CallingPartyNumber).Append("\n");
             sb.Append("  DefaultScripts: ").Append(DefaultScripts).Append("\n");
@@ -556,6 +580,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SkillEvaluationMethod.Equals(other.SkillEvaluationMethod)
                 ) &&
                 (
+                    this.MemberGroups == other.MemberGroups ||
+                    this.MemberGroups != null &&
+                    this.MemberGroups.SequenceEqual(other.MemberGroups)
+                ) &&
+                (
                     this.QueueFlow == other.QueueFlow ||
                     this.QueueFlow != null &&
                     this.QueueFlow.Equals(other.QueueFlow)
@@ -594,6 +623,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EnableManualAssignment == other.EnableManualAssignment ||
                     this.EnableManualAssignment != null &&
                     this.EnableManualAssignment.Equals(other.EnableManualAssignment)
+                ) &&
+                (
+                    this.AgentOwnedRouting == other.AgentOwnedRouting ||
+                    this.AgentOwnedRouting != null &&
+                    this.AgentOwnedRouting.Equals(other.AgentOwnedRouting)
                 ) &&
                 (
                     this.CallingPartyName == other.CallingPartyName ||
@@ -691,6 +725,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.SkillEvaluationMethod != null)
                     hash = hash * 59 + this.SkillEvaluationMethod.GetHashCode();
 
+                if (this.MemberGroups != null)
+                    hash = hash * 59 + this.MemberGroups.GetHashCode();
+
                 if (this.QueueFlow != null)
                     hash = hash * 59 + this.QueueFlow.GetHashCode();
 
@@ -714,6 +751,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EnableManualAssignment != null)
                     hash = hash * 59 + this.EnableManualAssignment.GetHashCode();
+
+                if (this.AgentOwnedRouting != null)
+                    hash = hash * 59 + this.AgentOwnedRouting.GetHashCode();
 
                 if (this.CallingPartyName != null)
                     hash = hash * 59 + this.CallingPartyName.GetHashCode();

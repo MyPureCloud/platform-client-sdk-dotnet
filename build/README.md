@@ -34,7 +34,7 @@ If you're building from source or otherwise not using nuget, reference your vers
 * The app is running locally on the user's computer
 * The app has an embedded browser to use for OAuth
 
-If the application will be authenticating as a human, the [Implicit Grant](https://developer.genesys.cloud/authorization/platform-auth/use-implicit-grant) OAuth 2 flow may be used from an embeddable browser. The access token can be retrieved from the querystring of the redirected URL in the browser control. This process is implemented in the [Genesys Cloud API dotNET OAuth Control](https://github.com/MyPureCloud/purecloud_api_dotnet_oauth_control) project.
+If the application will be authenticating as a human, the [Implicit Grant](https://developer.genesys.cloud/authorization/platform-auth/use-implicit-grant) OAuth 2 flow may be used from an embeddable browser. The access token can be retrieved from the querystring of the redirected URL in the browser control. This process is packaged by the [GenesysCloudOAuthWebView](https://github.com/MyPureCloud/oauth-webview-dotnet) project.
 
 See the browser control implemented in a winforms project in the [OAuth With Implicit Grant Login Flow](https://developer.genesys.cloud/authorization/platform-auth/guides/oauth-implicit-guide) tutorial.
 

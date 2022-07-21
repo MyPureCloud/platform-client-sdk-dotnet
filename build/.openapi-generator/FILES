@@ -952,6 +952,7 @@ docs/DeleteConversationsMessagingIntegrationsOpenIntegrationId-example.txt
 docs/DeleteConversationsMessagingIntegrationsTwitterIntegrationId-example.txt
 docs/DeleteConversationsMessagingIntegrationsWhatsappIntegrationId-example.txt
 docs/DeleteConversationsMessagingSupportedcontentSupportedContentId-example.txt
+docs/DeleteEmployeeperformanceExternalmetricsDefinition-example.txt
 docs/DeleteExternalcontactsContact-example.txt
 docs/DeleteExternalcontactsContactNote-example.txt
 docs/DeleteExternalcontactsContactsSchema-example.txt
@@ -1419,6 +1420,14 @@ docs/ExternalContactsUnresolvedContactChangedTopicPhoneNumber.md
 docs/ExternalContactsUnresolvedContactChangedTopicTwitterId.md
 docs/ExternalContactsUnresolvedContactChangedTopicWhatsAppId.md
 docs/ExternalDataSource.md
+docs/ExternalMetricDataItem.md
+docs/ExternalMetricDataUnprocessedItem.md
+docs/ExternalMetricDataWriteRequest.md
+docs/ExternalMetricDataWriteResponse.md
+docs/ExternalMetricDefinition.md
+docs/ExternalMetricDefinitionCreateRequest.md
+docs/ExternalMetricDefinitionListing.md
+docs/ExternalMetricDefinitionUpdateRequest.md
 docs/ExternalOrganization.md
 docs/ExternalOrganizationListing.md
 docs/ExternalOrganizationTrustorLink.md
@@ -1741,6 +1750,8 @@ docs/GetDataextensionsLimits-example.txt
 docs/GetDate-example.txt
 docs/GetDocumentationGknSearch-example.txt
 docs/GetDocumentationSearch-example.txt
+docs/GetEmployeeperformanceExternalmetricsDefinition-example.txt
+docs/GetEmployeeperformanceExternalmetricsDefinitions-example.txt
 docs/GetExternalcontactsContact-example.txt
 docs/GetExternalcontactsContactNote-example.txt
 docs/GetExternalcontactsContactNotes-example.txt
@@ -3045,6 +3056,7 @@ docs/PatchConversationsMessagingIntegrationsTwitterIntegrationId-example.txt
 docs/PatchConversationsMessagingIntegrationsWhatsappIntegrationId-example.txt
 docs/PatchConversationsMessagingSupportedcontentSupportedContentId-example.txt
 docs/PatchCtaButtonStyleProperties.md
+docs/PatchEmployeeperformanceExternalmetricsDefinition-example.txt
 docs/PatchExternalSegment.md
 docs/PatchGeolocationsSettings-example.txt
 docs/PatchIntegration-example.txt
@@ -3295,6 +3307,8 @@ docs/PostConversationsMessagingIntegrationsWhatsapp-example.txt
 docs/PostConversationsMessagingSupportedcontent-example.txt
 docs/PostDocumentationGknSearch-example.txt
 docs/PostDocumentationSearch-example.txt
+docs/PostEmployeeperformanceExternalmetricsData-example.txt
+docs/PostEmployeeperformanceExternalmetricsDefinitions-example.txt
 docs/PostExternalcontactsBulkContacts-example.txt
 docs/PostExternalcontactsBulkContactsAdd-example.txt
 docs/PostExternalcontactsBulkContactsRemove-example.txt
@@ -6338,6 +6352,14 @@ src/PureCloudPlatform.Client.V2/Model/ExternalContactsUnresolvedContactChangedTo
 src/PureCloudPlatform.Client.V2/Model/ExternalContactsUnresolvedContactChangedTopicTwitterId.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalContactsUnresolvedContactChangedTopicWhatsAppId.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalDataSource.cs
+src/PureCloudPlatform.Client.V2/Model/ExternalMetricDataItem.cs
+src/PureCloudPlatform.Client.V2/Model/ExternalMetricDataUnprocessedItem.cs
+src/PureCloudPlatform.Client.V2/Model/ExternalMetricDataWriteRequest.cs
+src/PureCloudPlatform.Client.V2/Model/ExternalMetricDataWriteResponse.cs
+src/PureCloudPlatform.Client.V2/Model/ExternalMetricDefinition.cs
+src/PureCloudPlatform.Client.V2/Model/ExternalMetricDefinitionCreateRequest.cs
+src/PureCloudPlatform.Client.V2/Model/ExternalMetricDefinitionListing.cs
+src/PureCloudPlatform.Client.V2/Model/ExternalMetricDefinitionUpdateRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalOrganization.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalOrganizationListing.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalOrganizationTrustorLink.cs

@@ -23,6 +23,7 @@ title: UserQueue
 | **Bullseye** | [**Bullseye**](Bullseye.html) | The bullseye settings for the queue. | [optional] |
 | **AcwSettings** | [**AcwSettings**](AcwSettings.html) | The ACW settings for the queue. | [optional] |
 | **SkillEvaluationMethod** | **string** | The skill evaluation method to use when routing conversations. | [optional] |
+| **MemberGroups** | [**List&lt;MemberGroup&gt;**](MemberGroup.html) | The groups of agents associated with the queue, if any.  Queue membership will update to match group membership changes. | [optional] |
 | **QueueFlow** | [**DomainEntityRef**](DomainEntityRef.html) | The in-queue flow to use for call conversations waiting in queue. | [optional] |
 | **EmailInQueueFlow** | [**DomainEntityRef**](DomainEntityRef.html) | The in-queue flow to use for email conversations waiting in queue. | [optional] |
 | **MessageInQueueFlow** | [**DomainEntityRef**](DomainEntityRef.html) | The in-queue flow to use for message conversations waiting in queue. | [optional] |
@@ -30,12 +31,13 @@ title: UserQueue
 | **OnHoldPrompt** | [**DomainEntityRef**](DomainEntityRef.html) | The audio to be played when calls on this queue are on hold. If not configured, the default on-hold music will play. | [optional] |
 | **EnableTranscription** | **bool?** | Indicates whether voice transcription is enabled for this queue. | [optional] |
 | **EnableManualAssignment** | **bool?** | Indicates whether manual assignment is enabled for this queue. | [optional] |
+| **AgentOwnedRouting** | [**AgentOwnedRouting**](AgentOwnedRouting.html) | The Agent Owned Routing settings for the queue | [optional] |
 | **CallingPartyName** | **string** | The name to use for caller identification for outbound calls from this queue. | [optional] |
 | **CallingPartyNumber** | **string** | The phone number to use for caller identification for outbound calls from this queue. | [optional] |
 | **DefaultScripts** | [**Dictionary&lt;string, Script&gt;**](Script.html) | The default script Ids for the communication types. | [optional] |
 | **OutboundMessagingAddresses** | [**QueueMessagingAddresses**](QueueMessagingAddresses.html) | The messaging addresses for the queue. | [optional] |
 | **OutboundEmailAddress** | [**QueueEmailAddress**](QueueEmailAddress.html) |  | [optional] |
-| **PeerId** | **string** | The ID of the external Queue | [optional] |
+| **PeerId** | **string** | The ID of an associated external queue. | [optional] |
 | **Joined** | **bool?** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

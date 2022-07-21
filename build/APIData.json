@@ -9936,6 +9936,52 @@
     "return": "FaxDocument",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PutFaxDocumentExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new FaxApi();\n            var documentId = \"documentId_example\";  // string | Document ID\n            var body = new FaxDocument(); // FaxDocument | Document\n\n            try\n            { \n                // Update a fax document.\n                FaxDocument result = apiInstance.PutFaxDocument(documentId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Fax.PutFaxDocument: \" + e.Message );\n            }\n        }\n    }\n}"
   },
+  "deleteemployeeperformanceexternalmetricsdefinition": {
+    "operationId": "deleteemployeeperformanceexternalmetricsdefinition",
+    "functionName": "DeleteEmployeeperformanceExternalmetricsDefinition",
+    "signature": "DeleteEmployeeperformanceExternalmetricsDefinition(metricId)",
+    "parameters": [
+      {
+        "name": "metricId",
+        "type": "string",
+        "required": "true"
+      }
+    ],
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class DeleteEmployeeperformanceExternalmetricsDefinitionExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new GamificationApi();\n            var metricId = \"metricId_example\";  // string | Specifies the External Metric Definition ID\n\n            try\n            { \n                // Delete an External Metric Definition\n                apiInstance.DeleteEmployeeperformanceExternalmetricsDefinition(metricId);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Gamification.DeleteEmployeeperformanceExternalmetricsDefinition: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getemployeeperformanceexternalmetricsdefinition": {
+    "operationId": "getemployeeperformanceexternalmetricsdefinition",
+    "functionName": "GetEmployeeperformanceExternalmetricsDefinition",
+    "signature": "GetEmployeeperformanceExternalmetricsDefinition(metricId)",
+    "parameters": [
+      {
+        "name": "metricId",
+        "type": "string",
+        "required": "true"
+      }
+    ],
+    "return": "ExternalMetricDefinition",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetEmployeeperformanceExternalmetricsDefinitionExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new GamificationApi();\n            var metricId = \"metricId_example\";  // string | Specifies the External Metric Definition ID\n\n            try\n            { \n                // Get an External Metric Definition\n                ExternalMetricDefinition result = apiInstance.GetEmployeeperformanceExternalmetricsDefinition(metricId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Gamification.GetEmployeeperformanceExternalmetricsDefinition: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getemployeeperformanceexternalmetricsdefinitions": {
+    "operationId": "getemployeeperformanceexternalmetricsdefinitions",
+    "functionName": "GetEmployeeperformanceExternalmetricsDefinitions",
+    "signature": "GetEmployeeperformanceExternalmetricsDefinitions(pageSize, pageNumber)",
+    "parameters": [
+      {
+        "name": "pageSize",
+        "type": "int?",
+        "required": "false"
+      },
+      {
+        "name": "pageNumber",
+        "type": "int?",
+        "required": "false"
+      }
+    ],
+    "return": "ExternalMetricDefinitionListing",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetEmployeeperformanceExternalmetricsDefinitionsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new GamificationApi();\n            var pageSize = 56;  // int? | Page size (optional)  (default to 25)\n            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)\n\n            try\n            { \n                // Get a list of External Metric Definitions of an organization, sorted by name in ascending order\n                ExternalMetricDefinitionListing result = apiInstance.GetEmployeeperformanceExternalmetricsDefinitions(pageSize, pageNumber);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Gamification.GetEmployeeperformanceExternalmetricsDefinitions: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
   "getgamificationleaderboard": {
     "operationId": "getgamificationleaderboard",
     "functionName": "GetGamificationLeaderboard",
@@ -10764,6 +10810,53 @@
     "signature": "GetGamificationTemplates()",
     "return": "GetTemplatesResponse",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetGamificationTemplatesExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new GamificationApi();\n\n            try\n            { \n                // All objective templates\n                GetTemplatesResponse result = apiInstance.GetGamificationTemplates();\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Gamification.GetGamificationTemplates: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "patchemployeeperformanceexternalmetricsdefinition": {
+    "operationId": "patchemployeeperformanceexternalmetricsdefinition",
+    "functionName": "PatchEmployeeperformanceExternalmetricsDefinition",
+    "signature": "PatchEmployeeperformanceExternalmetricsDefinition(metricId, body)",
+    "parameters": [
+      {
+        "name": "metricId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ExternalMetricDefinitionUpdateRequest",
+        "required": "true"
+      }
+    ],
+    "return": "ExternalMetricDefinition",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PatchEmployeeperformanceExternalmetricsDefinitionExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new GamificationApi();\n            var metricId = \"metricId_example\";  // string | Specifies the metric definition ID\n            var body = new ExternalMetricDefinitionUpdateRequest(); // ExternalMetricDefinitionUpdateRequest | The External Metric Definition parameters to be updated\n\n            try\n            { \n                // Update External Metric Definition\n                ExternalMetricDefinition result = apiInstance.PatchEmployeeperformanceExternalmetricsDefinition(metricId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Gamification.PatchEmployeeperformanceExternalmetricsDefinition: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "postemployeeperformanceexternalmetricsdata": {
+    "operationId": "postemployeeperformanceexternalmetricsdata",
+    "functionName": "PostEmployeeperformanceExternalmetricsData",
+    "signature": "PostEmployeeperformanceExternalmetricsData(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "ExternalMetricDataWriteRequest",
+        "required": "false"
+      }
+    ],
+    "return": "ExternalMetricDataWriteResponse",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostEmployeeperformanceExternalmetricsDataExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new GamificationApi();\n            var body = new ExternalMetricDataWriteRequest(); // ExternalMetricDataWriteRequest | The External Metric Data to be added (optional) \n\n            try\n            { \n                // Write External Metric Data\n                ExternalMetricDataWriteResponse result = apiInstance.PostEmployeeperformanceExternalmetricsData(body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Gamification.PostEmployeeperformanceExternalmetricsData: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "postemployeeperformanceexternalmetricsdefinitions": {
+    "operationId": "postemployeeperformanceexternalmetricsdefinitions",
+    "functionName": "PostEmployeeperformanceExternalmetricsDefinitions",
+    "signature": "PostEmployeeperformanceExternalmetricsDefinitions(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "ExternalMetricDefinitionCreateRequest",
+        "required": "false"
+      }
+    ],
+    "return": "ExternalMetricDefinition",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostEmployeeperformanceExternalmetricsDefinitionsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new GamificationApi();\n            var body = new ExternalMetricDefinitionCreateRequest(); // ExternalMetricDefinitionCreateRequest | The External Metric Definition to be created (optional) \n\n            try\n            { \n                // Create External Metric Definition\n                ExternalMetricDefinition result = apiInstance.PostEmployeeperformanceExternalmetricsDefinitions(body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Gamification.PostEmployeeperformanceExternalmetricsDefinitions: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "postgamificationmetrics": {
     "operationId": "postgamificationmetrics",

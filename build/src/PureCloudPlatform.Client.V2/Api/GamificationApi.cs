@@ -17,6 +17,74 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Synchronous Operations
 
         /// <summary>
+        /// Delete an External Metric Definition
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="metricId">Specifies the External Metric Definition ID</param>
+        /// <returns></returns>
+        void DeleteEmployeeperformanceExternalmetricsDefinition (string metricId);
+
+        /// <summary>
+        /// Delete an External Metric Definition
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="metricId">Specifies the External Metric Definition ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteEmployeeperformanceExternalmetricsDefinitionWithHttpInfo (string metricId);
+
+        /// <summary>
+        /// Get an External Metric Definition
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="metricId">Specifies the External Metric Definition ID</param>
+        /// <returns>ExternalMetricDefinition</returns>
+        ExternalMetricDefinition GetEmployeeperformanceExternalmetricsDefinition (string metricId);
+
+        /// <summary>
+        /// Get an External Metric Definition
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="metricId">Specifies the External Metric Definition ID</param>
+        /// <returns>ApiResponse of ExternalMetricDefinition</returns>
+        ApiResponse<ExternalMetricDefinition> GetEmployeeperformanceExternalmetricsDefinitionWithHttpInfo (string metricId);
+
+        /// <summary>
+        /// Get a list of External Metric Definitions of an organization, sorted by name in ascending order
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ExternalMetricDefinitionListing</returns>
+        ExternalMetricDefinitionListing GetEmployeeperformanceExternalmetricsDefinitions (int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get a list of External Metric Definitions of an organization, sorted by name in ascending order
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of ExternalMetricDefinitionListing</returns>
+        ApiResponse<ExternalMetricDefinitionListing> GetEmployeeperformanceExternalmetricsDefinitionsWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
         /// Leaderboard of the requesting user's division or performance profile
         /// </summary>
         /// <remarks>
@@ -993,6 +1061,74 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<GetTemplatesResponse> GetGamificationTemplatesWithHttpInfo ();
 
         /// <summary>
+        /// Update External Metric Definition
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="metricId">Specifies the metric definition ID</param>
+        /// <param name="body">The External Metric Definition parameters to be updated</param>
+        /// <returns>ExternalMetricDefinition</returns>
+        ExternalMetricDefinition PatchEmployeeperformanceExternalmetricsDefinition (string metricId, ExternalMetricDefinitionUpdateRequest body);
+
+        /// <summary>
+        /// Update External Metric Definition
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="metricId">Specifies the metric definition ID</param>
+        /// <param name="body">The External Metric Definition parameters to be updated</param>
+        /// <returns>ApiResponse of ExternalMetricDefinition</returns>
+        ApiResponse<ExternalMetricDefinition> PatchEmployeeperformanceExternalmetricsDefinitionWithHttpInfo (string metricId, ExternalMetricDefinitionUpdateRequest body);
+
+        /// <summary>
+        /// Write External Metric Data
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The External Metric Data to be added (optional)</param>
+        /// <returns>ExternalMetricDataWriteResponse</returns>
+        ExternalMetricDataWriteResponse PostEmployeeperformanceExternalmetricsData (ExternalMetricDataWriteRequest body = null);
+
+        /// <summary>
+        /// Write External Metric Data
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The External Metric Data to be added (optional)</param>
+        /// <returns>ApiResponse of ExternalMetricDataWriteResponse</returns>
+        ApiResponse<ExternalMetricDataWriteResponse> PostEmployeeperformanceExternalmetricsDataWithHttpInfo (ExternalMetricDataWriteRequest body = null);
+
+        /// <summary>
+        /// Create External Metric Definition
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The External Metric Definition to be created (optional)</param>
+        /// <returns>ExternalMetricDefinition</returns>
+        ExternalMetricDefinition PostEmployeeperformanceExternalmetricsDefinitions (ExternalMetricDefinitionCreateRequest body = null);
+
+        /// <summary>
+        /// Create External Metric Definition
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The External Metric Definition to be created (optional)</param>
+        /// <returns>ApiResponse of ExternalMetricDefinition</returns>
+        ApiResponse<ExternalMetricDefinition> PostEmployeeperformanceExternalmetricsDefinitionsWithHttpInfo (ExternalMetricDefinitionCreateRequest body = null);
+
+        /// <summary>
         /// Creates a gamified metric with a given metric definition and metric objective
         /// </summary>
         /// <remarks>
@@ -1281,6 +1417,74 @@ namespace PureCloudPlatform.Client.V2.Api
         #endregion Synchronous Operations
 
         #region Asynchronous Operations
+
+        /// <summary>
+        /// Delete an External Metric Definition
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="metricId">Specifies the External Metric Definition ID</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteEmployeeperformanceExternalmetricsDefinitionAsync (string metricId);
+
+        /// <summary>
+        /// Delete an External Metric Definition
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="metricId">Specifies the External Metric Definition ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteEmployeeperformanceExternalmetricsDefinitionAsyncWithHttpInfo (string metricId);
+
+        /// <summary>
+        /// Get an External Metric Definition
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="metricId">Specifies the External Metric Definition ID</param>
+        /// <returns>Task of ExternalMetricDefinition</returns>
+        System.Threading.Tasks.Task<ExternalMetricDefinition> GetEmployeeperformanceExternalmetricsDefinitionAsync (string metricId);
+
+        /// <summary>
+        /// Get an External Metric Definition
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="metricId">Specifies the External Metric Definition ID</param>
+        /// <returns>Task of ApiResponse (ExternalMetricDefinition)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ExternalMetricDefinition>> GetEmployeeperformanceExternalmetricsDefinitionAsyncWithHttpInfo (string metricId);
+
+        /// <summary>
+        /// Get a list of External Metric Definitions of an organization, sorted by name in ascending order
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ExternalMetricDefinitionListing</returns>
+        System.Threading.Tasks.Task<ExternalMetricDefinitionListing> GetEmployeeperformanceExternalmetricsDefinitionsAsync (int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get a list of External Metric Definitions of an organization, sorted by name in ascending order
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (ExternalMetricDefinitionListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ExternalMetricDefinitionListing>> GetEmployeeperformanceExternalmetricsDefinitionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Leaderboard of the requesting user's division or performance profile
@@ -2259,6 +2463,74 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<GetTemplatesResponse>> GetGamificationTemplatesAsyncWithHttpInfo ();
 
         /// <summary>
+        /// Update External Metric Definition
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="metricId">Specifies the metric definition ID</param>
+        /// <param name="body">The External Metric Definition parameters to be updated</param>
+        /// <returns>Task of ExternalMetricDefinition</returns>
+        System.Threading.Tasks.Task<ExternalMetricDefinition> PatchEmployeeperformanceExternalmetricsDefinitionAsync (string metricId, ExternalMetricDefinitionUpdateRequest body);
+
+        /// <summary>
+        /// Update External Metric Definition
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="metricId">Specifies the metric definition ID</param>
+        /// <param name="body">The External Metric Definition parameters to be updated</param>
+        /// <returns>Task of ApiResponse (ExternalMetricDefinition)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ExternalMetricDefinition>> PatchEmployeeperformanceExternalmetricsDefinitionAsyncWithHttpInfo (string metricId, ExternalMetricDefinitionUpdateRequest body);
+
+        /// <summary>
+        /// Write External Metric Data
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The External Metric Data to be added (optional)</param>
+        /// <returns>Task of ExternalMetricDataWriteResponse</returns>
+        System.Threading.Tasks.Task<ExternalMetricDataWriteResponse> PostEmployeeperformanceExternalmetricsDataAsync (ExternalMetricDataWriteRequest body = null);
+
+        /// <summary>
+        /// Write External Metric Data
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The External Metric Data to be added (optional)</param>
+        /// <returns>Task of ApiResponse (ExternalMetricDataWriteResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ExternalMetricDataWriteResponse>> PostEmployeeperformanceExternalmetricsDataAsyncWithHttpInfo (ExternalMetricDataWriteRequest body = null);
+
+        /// <summary>
+        /// Create External Metric Definition
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The External Metric Definition to be created (optional)</param>
+        /// <returns>Task of ExternalMetricDefinition</returns>
+        System.Threading.Tasks.Task<ExternalMetricDefinition> PostEmployeeperformanceExternalmetricsDefinitionsAsync (ExternalMetricDefinitionCreateRequest body = null);
+
+        /// <summary>
+        /// Create External Metric Definition
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The External Metric Definition to be created (optional)</param>
+        /// <returns>Task of ApiResponse (ExternalMetricDefinition)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ExternalMetricDefinition>> PostEmployeeperformanceExternalmetricsDefinitionsAsyncWithHttpInfo (ExternalMetricDefinitionCreateRequest body = null);
+
+        /// <summary>
         /// Creates a gamified metric with a given metric definition and metric objective
         /// </summary>
         /// <remarks>
@@ -2634,6 +2906,576 @@ namespace PureCloudPlatform.Client.V2.Api
         {
             this.Configuration.AddDefaultHeader(key, value);
         }
+
+
+        /// <summary>
+        /// Delete an External Metric Definition 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="metricId">Specifies the External Metric Definition ID</param>
+        /// <returns></returns>
+        public void DeleteEmployeeperformanceExternalmetricsDefinition (string metricId)
+        {
+             DeleteEmployeeperformanceExternalmetricsDefinitionWithHttpInfo(metricId);
+        }
+
+        /// <summary>
+        /// Delete an External Metric Definition 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="metricId">Specifies the External Metric Definition ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteEmployeeperformanceExternalmetricsDefinitionWithHttpInfo (string metricId)
+        { 
+            // verify the required parameter 'metricId' is set
+            if (metricId == null)
+                throw new ApiException(400, "Missing required parameter 'metricId' when calling GamificationApi->DeleteEmployeeperformanceExternalmetricsDefinition");
+
+            var localVarPath = "/api/v2/employeeperformance/externalmetrics/definitions/{metricId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (metricId != null) localVarPathParams.Add("metricId", this.Configuration.ApiClient.ParameterToString(metricId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteEmployeeperformanceExternalmetricsDefinition: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteEmployeeperformanceExternalmetricsDefinition: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete an External Metric Definition 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="metricId">Specifies the External Metric Definition ID</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteEmployeeperformanceExternalmetricsDefinitionAsync (string metricId)
+        {
+             await DeleteEmployeeperformanceExternalmetricsDefinitionAsyncWithHttpInfo(metricId);
+
+        }
+
+        /// <summary>
+        /// Delete an External Metric Definition 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="metricId">Specifies the External Metric Definition ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteEmployeeperformanceExternalmetricsDefinitionAsyncWithHttpInfo (string metricId)
+        { 
+            // verify the required parameter 'metricId' is set
+            if (metricId == null)
+                throw new ApiException(400, "Missing required parameter 'metricId' when calling GamificationApi->DeleteEmployeeperformanceExternalmetricsDefinition");
+            
+
+            var localVarPath = "/api/v2/employeeperformance/externalmetrics/definitions/{metricId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (metricId != null) localVarPathParams.Add("metricId", this.Configuration.ApiClient.ParameterToString(metricId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteEmployeeperformanceExternalmetricsDefinition: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteEmployeeperformanceExternalmetricsDefinition: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get an External Metric Definition 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="metricId">Specifies the External Metric Definition ID</param>
+        /// <returns>ExternalMetricDefinition</returns>
+        public ExternalMetricDefinition GetEmployeeperformanceExternalmetricsDefinition (string metricId)
+        {
+             ApiResponse<ExternalMetricDefinition> localVarResponse = GetEmployeeperformanceExternalmetricsDefinitionWithHttpInfo(metricId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get an External Metric Definition 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="metricId">Specifies the External Metric Definition ID</param>
+        /// <returns>ApiResponse of ExternalMetricDefinition</returns>
+        public ApiResponse< ExternalMetricDefinition > GetEmployeeperformanceExternalmetricsDefinitionWithHttpInfo (string metricId)
+        { 
+            // verify the required parameter 'metricId' is set
+            if (metricId == null)
+                throw new ApiException(400, "Missing required parameter 'metricId' when calling GamificationApi->GetEmployeeperformanceExternalmetricsDefinition");
+
+            var localVarPath = "/api/v2/employeeperformance/externalmetrics/definitions/{metricId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (metricId != null) localVarPathParams.Add("metricId", this.Configuration.ApiClient.ParameterToString(metricId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmployeeperformanceExternalmetricsDefinition: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmployeeperformanceExternalmetricsDefinition: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExternalMetricDefinition>(localVarStatusCode,
+                localVarHeaders,
+                (ExternalMetricDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalMetricDefinition)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get an External Metric Definition 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="metricId">Specifies the External Metric Definition ID</param>
+        /// <returns>Task of ExternalMetricDefinition</returns>
+        public async System.Threading.Tasks.Task<ExternalMetricDefinition> GetEmployeeperformanceExternalmetricsDefinitionAsync (string metricId)
+        {
+             ApiResponse<ExternalMetricDefinition> localVarResponse = await GetEmployeeperformanceExternalmetricsDefinitionAsyncWithHttpInfo(metricId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get an External Metric Definition 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="metricId">Specifies the External Metric Definition ID</param>
+        /// <returns>Task of ApiResponse (ExternalMetricDefinition)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ExternalMetricDefinition>> GetEmployeeperformanceExternalmetricsDefinitionAsyncWithHttpInfo (string metricId)
+        { 
+            // verify the required parameter 'metricId' is set
+            if (metricId == null)
+                throw new ApiException(400, "Missing required parameter 'metricId' when calling GamificationApi->GetEmployeeperformanceExternalmetricsDefinition");
+            
+
+            var localVarPath = "/api/v2/employeeperformance/externalmetrics/definitions/{metricId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (metricId != null) localVarPathParams.Add("metricId", this.Configuration.ApiClient.ParameterToString(metricId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmployeeperformanceExternalmetricsDefinition: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmployeeperformanceExternalmetricsDefinition: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExternalMetricDefinition>(localVarStatusCode,
+                localVarHeaders,
+                (ExternalMetricDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalMetricDefinition)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a list of External Metric Definitions of an organization, sorted by name in ascending order 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ExternalMetricDefinitionListing</returns>
+        public ExternalMetricDefinitionListing GetEmployeeperformanceExternalmetricsDefinitions (int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<ExternalMetricDefinitionListing> localVarResponse = GetEmployeeperformanceExternalmetricsDefinitionsWithHttpInfo(pageSize, pageNumber);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a list of External Metric Definitions of an organization, sorted by name in ascending order 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of ExternalMetricDefinitionListing</returns>
+        public ApiResponse< ExternalMetricDefinitionListing > GetEmployeeperformanceExternalmetricsDefinitionsWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        { 
+
+            var localVarPath = "/api/v2/employeeperformance/externalmetrics/definitions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmployeeperformanceExternalmetricsDefinitions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmployeeperformanceExternalmetricsDefinitions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExternalMetricDefinitionListing>(localVarStatusCode,
+                localVarHeaders,
+                (ExternalMetricDefinitionListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalMetricDefinitionListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a list of External Metric Definitions of an organization, sorted by name in ascending order 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ExternalMetricDefinitionListing</returns>
+        public async System.Threading.Tasks.Task<ExternalMetricDefinitionListing> GetEmployeeperformanceExternalmetricsDefinitionsAsync (int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<ExternalMetricDefinitionListing> localVarResponse = await GetEmployeeperformanceExternalmetricsDefinitionsAsyncWithHttpInfo(pageSize, pageNumber);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a list of External Metric Definitions of an organization, sorted by name in ascending order 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (ExternalMetricDefinitionListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ExternalMetricDefinitionListing>> GetEmployeeperformanceExternalmetricsDefinitionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        { 
+
+            var localVarPath = "/api/v2/employeeperformance/externalmetrics/definitions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmployeeperformanceExternalmetricsDefinitions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetEmployeeperformanceExternalmetricsDefinitions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExternalMetricDefinitionListing>(localVarStatusCode,
+                localVarHeaders,
+                (ExternalMetricDefinitionListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalMetricDefinitionListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
 
 
         /// <summary>
@@ -10629,6 +11471,608 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<GetTemplatesResponse>(localVarStatusCode,
                 localVarHeaders,
                 (GetTemplatesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GetTemplatesResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update External Metric Definition 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="metricId">Specifies the metric definition ID</param>
+        /// <param name="body">The External Metric Definition parameters to be updated</param>
+        /// <returns>ExternalMetricDefinition</returns>
+        public ExternalMetricDefinition PatchEmployeeperformanceExternalmetricsDefinition (string metricId, ExternalMetricDefinitionUpdateRequest body)
+        {
+             ApiResponse<ExternalMetricDefinition> localVarResponse = PatchEmployeeperformanceExternalmetricsDefinitionWithHttpInfo(metricId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update External Metric Definition 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="metricId">Specifies the metric definition ID</param>
+        /// <param name="body">The External Metric Definition parameters to be updated</param>
+        /// <returns>ApiResponse of ExternalMetricDefinition</returns>
+        public ApiResponse< ExternalMetricDefinition > PatchEmployeeperformanceExternalmetricsDefinitionWithHttpInfo (string metricId, ExternalMetricDefinitionUpdateRequest body)
+        { 
+            // verify the required parameter 'metricId' is set
+            if (metricId == null)
+                throw new ApiException(400, "Missing required parameter 'metricId' when calling GamificationApi->PatchEmployeeperformanceExternalmetricsDefinition");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PatchEmployeeperformanceExternalmetricsDefinition");
+
+            var localVarPath = "/api/v2/employeeperformance/externalmetrics/definitions/{metricId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (metricId != null) localVarPathParams.Add("metricId", this.Configuration.ApiClient.ParameterToString(metricId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchEmployeeperformanceExternalmetricsDefinition: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchEmployeeperformanceExternalmetricsDefinition: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExternalMetricDefinition>(localVarStatusCode,
+                localVarHeaders,
+                (ExternalMetricDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalMetricDefinition)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update External Metric Definition 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="metricId">Specifies the metric definition ID</param>
+        /// <param name="body">The External Metric Definition parameters to be updated</param>
+        /// <returns>Task of ExternalMetricDefinition</returns>
+        public async System.Threading.Tasks.Task<ExternalMetricDefinition> PatchEmployeeperformanceExternalmetricsDefinitionAsync (string metricId, ExternalMetricDefinitionUpdateRequest body)
+        {
+             ApiResponse<ExternalMetricDefinition> localVarResponse = await PatchEmployeeperformanceExternalmetricsDefinitionAsyncWithHttpInfo(metricId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update External Metric Definition 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="metricId">Specifies the metric definition ID</param>
+        /// <param name="body">The External Metric Definition parameters to be updated</param>
+        /// <returns>Task of ApiResponse (ExternalMetricDefinition)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ExternalMetricDefinition>> PatchEmployeeperformanceExternalmetricsDefinitionAsyncWithHttpInfo (string metricId, ExternalMetricDefinitionUpdateRequest body)
+        { 
+            // verify the required parameter 'metricId' is set
+            if (metricId == null)
+                throw new ApiException(400, "Missing required parameter 'metricId' when calling GamificationApi->PatchEmployeeperformanceExternalmetricsDefinition");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PatchEmployeeperformanceExternalmetricsDefinition");
+            
+
+            var localVarPath = "/api/v2/employeeperformance/externalmetrics/definitions/{metricId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (metricId != null) localVarPathParams.Add("metricId", this.Configuration.ApiClient.ParameterToString(metricId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchEmployeeperformanceExternalmetricsDefinition: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchEmployeeperformanceExternalmetricsDefinition: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExternalMetricDefinition>(localVarStatusCode,
+                localVarHeaders,
+                (ExternalMetricDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalMetricDefinition)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Write External Metric Data 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The External Metric Data to be added (optional)</param>
+        /// <returns>ExternalMetricDataWriteResponse</returns>
+        public ExternalMetricDataWriteResponse PostEmployeeperformanceExternalmetricsData (ExternalMetricDataWriteRequest body = null)
+        {
+             ApiResponse<ExternalMetricDataWriteResponse> localVarResponse = PostEmployeeperformanceExternalmetricsDataWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Write External Metric Data 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The External Metric Data to be added (optional)</param>
+        /// <returns>ApiResponse of ExternalMetricDataWriteResponse</returns>
+        public ApiResponse< ExternalMetricDataWriteResponse > PostEmployeeperformanceExternalmetricsDataWithHttpInfo (ExternalMetricDataWriteRequest body = null)
+        { 
+
+            var localVarPath = "/api/v2/employeeperformance/externalmetrics/data";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostEmployeeperformanceExternalmetricsData: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostEmployeeperformanceExternalmetricsData: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExternalMetricDataWriteResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ExternalMetricDataWriteResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalMetricDataWriteResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Write External Metric Data 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The External Metric Data to be added (optional)</param>
+        /// <returns>Task of ExternalMetricDataWriteResponse</returns>
+        public async System.Threading.Tasks.Task<ExternalMetricDataWriteResponse> PostEmployeeperformanceExternalmetricsDataAsync (ExternalMetricDataWriteRequest body = null)
+        {
+             ApiResponse<ExternalMetricDataWriteResponse> localVarResponse = await PostEmployeeperformanceExternalmetricsDataAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Write External Metric Data 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The External Metric Data to be added (optional)</param>
+        /// <returns>Task of ApiResponse (ExternalMetricDataWriteResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ExternalMetricDataWriteResponse>> PostEmployeeperformanceExternalmetricsDataAsyncWithHttpInfo (ExternalMetricDataWriteRequest body = null)
+        { 
+
+            var localVarPath = "/api/v2/employeeperformance/externalmetrics/data";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostEmployeeperformanceExternalmetricsData: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostEmployeeperformanceExternalmetricsData: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExternalMetricDataWriteResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ExternalMetricDataWriteResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalMetricDataWriteResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Create External Metric Definition 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The External Metric Definition to be created (optional)</param>
+        /// <returns>ExternalMetricDefinition</returns>
+        public ExternalMetricDefinition PostEmployeeperformanceExternalmetricsDefinitions (ExternalMetricDefinitionCreateRequest body = null)
+        {
+             ApiResponse<ExternalMetricDefinition> localVarResponse = PostEmployeeperformanceExternalmetricsDefinitionsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create External Metric Definition 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The External Metric Definition to be created (optional)</param>
+        /// <returns>ApiResponse of ExternalMetricDefinition</returns>
+        public ApiResponse< ExternalMetricDefinition > PostEmployeeperformanceExternalmetricsDefinitionsWithHttpInfo (ExternalMetricDefinitionCreateRequest body = null)
+        { 
+
+            var localVarPath = "/api/v2/employeeperformance/externalmetrics/definitions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostEmployeeperformanceExternalmetricsDefinitions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostEmployeeperformanceExternalmetricsDefinitions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExternalMetricDefinition>(localVarStatusCode,
+                localVarHeaders,
+                (ExternalMetricDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalMetricDefinition)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create External Metric Definition 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The External Metric Definition to be created (optional)</param>
+        /// <returns>Task of ExternalMetricDefinition</returns>
+        public async System.Threading.Tasks.Task<ExternalMetricDefinition> PostEmployeeperformanceExternalmetricsDefinitionsAsync (ExternalMetricDefinitionCreateRequest body = null)
+        {
+             ApiResponse<ExternalMetricDefinition> localVarResponse = await PostEmployeeperformanceExternalmetricsDefinitionsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create External Metric Definition 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The External Metric Definition to be created (optional)</param>
+        /// <returns>Task of ApiResponse (ExternalMetricDefinition)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ExternalMetricDefinition>> PostEmployeeperformanceExternalmetricsDefinitionsAsyncWithHttpInfo (ExternalMetricDefinitionCreateRequest body = null)
+        { 
+
+            var localVarPath = "/api/v2/employeeperformance/externalmetrics/definitions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostEmployeeperformanceExternalmetricsDefinitions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostEmployeeperformanceExternalmetricsDefinitions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExternalMetricDefinition>(localVarStatusCode,
+                localVarHeaders,
+                (ExternalMetricDefinition) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalMetricDefinition)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

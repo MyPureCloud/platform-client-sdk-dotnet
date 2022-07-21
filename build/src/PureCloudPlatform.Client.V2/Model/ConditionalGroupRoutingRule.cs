@@ -93,12 +93,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConditionalGroupRoutingRule" /> class.
         /// </summary>
-        /// <param name="Queue">The queue being evaluated for this rule.  For rule 1, this is always the current queue..</param>
+        /// <param name="Queue">The queue being evaluated for this rule.  For rule 1, this is always the current queue, so should not be specified..</param>
         /// <param name="Metric">The queue metric being evaluated.</param>
         /// <param name="Operator">The operator that compares the actual value against the condition value.</param>
         /// <param name="ConditionValue">The limit value, beyond which a rule evaluates as true.</param>
         /// <param name="Groups">The group(s) to activate if the rule evaluates as true.</param>
-        /// <param name="WaitSeconds">The number of seconds to wait in this rule, if it evaluates as true, before evaluating the next rule.</param>
+        /// <param name="WaitSeconds">The number of seconds to wait in this rule, if it evaluates as true, before evaluating the next rule.  For the final rule, this is ignored, so need not be specified..</param>
         public ConditionalGroupRoutingRule(DomainEntityRef Queue = null, MetricEnum? Metric = null, OperatorEnum? Operator = null, double? ConditionValue = null, List<MemberGroup> Groups = null, int? WaitSeconds = null)
         {
             this.Queue = Queue;
@@ -113,9 +113,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The queue being evaluated for this rule.  For rule 1, this is always the current queue.
+        /// The queue being evaluated for this rule.  For rule 1, this is always the current queue, so should not be specified.
         /// </summary>
-        /// <value>The queue being evaluated for this rule.  For rule 1, this is always the current queue.</value>
+        /// <value>The queue being evaluated for this rule.  For rule 1, this is always the current queue, so should not be specified.</value>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public DomainEntityRef Queue { get; set; }
 
@@ -144,9 +144,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The number of seconds to wait in this rule, if it evaluates as true, before evaluating the next rule
+        /// The number of seconds to wait in this rule, if it evaluates as true, before evaluating the next rule.  For the final rule, this is ignored, so need not be specified.
         /// </summary>
-        /// <value>The number of seconds to wait in this rule, if it evaluates as true, before evaluating the next rule</value>
+        /// <value>The number of seconds to wait in this rule, if it evaluates as true, before evaluating the next rule.  For the final rule, this is ignored, so need not be specified.</value>
         [DataMember(Name="waitSeconds", EmitDefaultValue=false)]
         public int? WaitSeconds { get; set; }
 

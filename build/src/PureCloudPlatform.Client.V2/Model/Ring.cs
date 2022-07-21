@@ -23,10 +23,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="ExpansionCriteria">The conditions that will trigger conversations to move to the next bullseye ring..</param>
         /// <param name="Actions">The actions that will be performed just before moving conversations to the next bullseye ring..</param>
-        public Ring(List<ExpansionCriterium> ExpansionCriteria = null, Actions Actions = null)
+        /// <param name="MemberGroups">The groups of agents associated with the ring, if any.  Ring membership will update to match group membership changes..</param>
+        public Ring(List<ExpansionCriterium> ExpansionCriteria = null, Actions Actions = null, List<MemberGroup> MemberGroups = null)
         {
             this.ExpansionCriteria = ExpansionCriteria;
             this.Actions = Actions;
+            this.MemberGroups = MemberGroups;
             
         }
         
@@ -49,6 +51,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public Actions Actions { get; set; }
 
 
+
+        /// <summary>
+        /// The groups of agents associated with the ring, if any.  Ring membership will update to match group membership changes.
+        /// </summary>
+        /// <value>The groups of agents associated with the ring, if any.  Ring membership will update to match group membership changes.</value>
+        [DataMember(Name="memberGroups", EmitDefaultValue=false)]
+        public List<MemberGroup> MemberGroups { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,6 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  ExpansionCriteria: ").Append(ExpansionCriteria).Append("\n");
             sb.Append("  Actions: ").Append(Actions).Append("\n");
+            sb.Append("  MemberGroups: ").Append(MemberGroups).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,6 +121,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Actions == other.Actions ||
                     this.Actions != null &&
                     this.Actions.Equals(other.Actions)
+                ) &&
+                (
+                    this.MemberGroups == other.MemberGroups ||
+                    this.MemberGroups != null &&
+                    this.MemberGroups.SequenceEqual(other.MemberGroups)
                 );
         }
 
@@ -128,6 +145,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Actions != null)
                     hash = hash * 59 + this.Actions.GetHashCode();
+
+                if (this.MemberGroups != null)
+                    hash = hash * 59 + this.MemberGroups.GetHashCode();
 
                 return hash;
             }
