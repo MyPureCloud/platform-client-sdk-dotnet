@@ -134,6 +134,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// polledPresence
+        /// </summary>
+        /// <value>polledPresence</value>
+        [DataMember(Name="polledPresence", EmitDefaultValue=false)]
+        public bool? PolledPresence { get; private set; }
+
+
+
+        /// <summary>
+        /// userPermissions
+        /// </summary>
+        /// <value>userPermissions</value>
+        [DataMember(Name="userPermissions", EmitDefaultValue=false)]
+        public List<string> UserPermissions { get; private set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -158,6 +176,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Icon: ").Append(Icon).Append("\n");
             sb.Append("  BadgeIcons: ").Append(BadgeIcons).Append("\n");
             sb.Append("  I10n: ").Append(I10n).Append("\n");
+            sb.Append("  PolledPresence: ").Append(PolledPresence).Append("\n");
+            sb.Append("  UserPermissions: ").Append(UserPermissions).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -240,6 +260,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.I10n.SequenceEqual(other.I10n)
                 ) &&
                 (
+                    this.PolledPresence == other.PolledPresence ||
+                    this.PolledPresence != null &&
+                    this.PolledPresence.Equals(other.PolledPresence)
+                ) &&
+                (
+                    this.UserPermissions == other.UserPermissions ||
+                    this.UserPermissions != null &&
+                    this.UserPermissions.SequenceEqual(other.UserPermissions)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -280,6 +310,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.I10n != null)
                     hash = hash * 59 + this.I10n.GetHashCode();
+
+                if (this.PolledPresence != null)
+                    hash = hash * 59 + this.PolledPresence.GetHashCode();
+
+                if (this.UserPermissions != null)
+                    hash = hash * 59 + this.UserPermissions.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

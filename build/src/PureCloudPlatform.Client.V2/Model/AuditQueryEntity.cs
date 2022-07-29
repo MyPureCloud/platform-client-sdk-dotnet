@@ -364,6 +364,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Emergencygroup,
             
             /// <summary>
+            /// Enum Enterpriseagreement for "EnterpriseAgreement"
+            /// </summary>
+            [EnumMember(Value = "EnterpriseAgreement")]
+            Enterpriseagreement,
+            
+            /// <summary>
             /// Enum Evaluation for "Evaluation"
             /// </summary>
             [EnumMember(Value = "Evaluation")]

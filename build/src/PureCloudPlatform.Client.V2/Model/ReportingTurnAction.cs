@@ -243,6 +243,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Showknowledgearticleaction,
             
             /// <summary>
+            /// Enum Findsystempromptaction for "FindSystemPromptAction"
+            /// </summary>
+            [EnumMember(Value = "FindSystemPromptAction")]
+            Findsystempromptaction,
+            
+            /// <summary>
+            /// Enum Finduserpromptaction for "FindUserPromptAction"
+            /// </summary>
+            [EnumMember(Value = "FindUserPromptAction")]
+            Finduserpromptaction,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]

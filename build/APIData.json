@@ -10414,7 +10414,7 @@
   "getgamificationscorecardsprofilemetricusersvaluestrends": {
     "operationId": "getgamificationscorecardsprofilemetricusersvaluestrends",
     "functionName": "GetGamificationScorecardsProfileMetricUsersValuesTrends",
-    "signature": "GetGamificationScorecardsProfileMetricUsersValuesTrends(profileId, metricId, filterType, filterId, startWorkday, endWorkday, referenceWorkday, timeZone)",
+    "signature": "GetGamificationScorecardsProfileMetricUsersValuesTrends(profileId, metricId, filterType, startWorkday, endWorkday, filterId, referenceWorkday, timeZone)",
     "parameters": [
       {
         "name": "profileId",
@@ -10432,11 +10432,6 @@
         "required": "true"
       },
       {
-        "name": "filterId",
-        "type": "string",
-        "required": "true"
-      },
-      {
         "name": "startWorkday",
         "type": "String",
         "required": "true"
@@ -10445,6 +10440,11 @@
         "name": "endWorkday",
         "type": "String",
         "required": "true"
+      },
+      {
+        "name": "filterId",
+        "type": "string",
+        "required": "false"
       },
       {
         "name": "referenceWorkday",
@@ -10458,7 +10458,7 @@
       }
     ],
     "return": "MetricValueTrendAverage",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetGamificationScorecardsProfileMetricUsersValuesTrendsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new GamificationApi();\n            var profileId = \"profileId_example\";  // string | performanceProfileId\n            var metricId = \"metricId_example\";  // string | metricId\n            var filterType = \"filterType_example\";  // string | Filter type for the query request.\n            var filterId = \"filterId_example\";  // string | ID for the filter type. For example, division Id\n            var startWorkday = new Date();  // String | Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n            var endWorkday = new Date();  // String | End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n            var referenceWorkday = new Date();  // String | Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) \n            var timeZone = \"timeZone_example\";  // string | Timezone for the workday. Defaults to UTC (optional)  (default to \"UTC\")\n\n            try\n            { \n                // Average performance values trends by metric of a division or a performance profile\n                MetricValueTrendAverage result = apiInstance.GetGamificationScorecardsProfileMetricUsersValuesTrends(profileId, metricId, filterType, filterId, startWorkday, endWorkday, referenceWorkday, timeZone);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Gamification.GetGamificationScorecardsProfileMetricUsersValuesTrends: \" + e.Message );\n            }\n        }\n    }\n}"
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetGamificationScorecardsProfileMetricUsersValuesTrendsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new GamificationApi();\n            var profileId = \"profileId_example\";  // string | performanceProfileId\n            var metricId = \"metricId_example\";  // string | metricId\n            var filterType = \"filterType_example\";  // string | Filter type for the query request.\n            var startWorkday = new Date();  // String | Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n            var endWorkday = new Date();  // String | End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n            var filterId = \"filterId_example\";  // string | ID for the filter type. Only required when filterType is Division. (optional) \n            var referenceWorkday = new Date();  // String | Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) \n            var timeZone = \"timeZone_example\";  // string | Timezone for the workday. Defaults to UTC (optional)  (default to \"UTC\")\n\n            try\n            { \n                // Average performance values trends by metric of a division or a performance profile\n                MetricValueTrendAverage result = apiInstance.GetGamificationScorecardsProfileMetricUsersValuesTrends(profileId, metricId, filterType, startWorkday, endWorkday, filterId, referenceWorkday, timeZone);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Gamification.GetGamificationScorecardsProfileMetricUsersValuesTrends: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "getgamificationscorecardsprofilemetricvaluestrends": {
     "operationId": "getgamificationscorecardsprofilemetricvaluestrends",
@@ -15764,6 +15764,20 @@
     ],
     "return": "AssignedLearningModuleDomainEntityListing",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetLearningModulesAssignmentsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new LearningApi();\n            var userIds = new List<string>(); // List<string> | The IDs of the users to include\n            var pageSize = 56;  // int? | Page size (optional)  (default to 25)\n            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)\n            var searchTerm = \"searchTerm_example\";  // string | Search Term (searches by name and description) (optional) \n            var overdue = \"overdue_example\";  // string | Specifies if only modules with overdue/not overdue (overdue is \\\"True\\\" or \\\"False\\\") assignments are returned. If overdue is \\\"Any\\\" or omitted, both are returned and can including modules that are unassigned. (optional)  (default to Any)\n            var assignmentStates = new List<string>(); // List<string> | Specifies the assignment states to return. (optional) \n            var expand = new List<string>(); // List<string> | Fields to expand in response(case insensitive) (optional) \n\n            try\n            { \n                // Get all learning modules of an organization including assignments for a specific user\n                AssignedLearningModuleDomainEntityListing result = apiInstance.GetLearningModulesAssignments(userIds, pageSize, pageNumber, searchTerm, overdue, assignmentStates, expand);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Learning.GetLearningModulesAssignments: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getlearningmodulescoverartcoverartid": {
+    "operationId": "getlearningmodulescoverartcoverartid",
+    "functionName": "GetLearningModulesCoverartCoverArtId",
+    "signature": "GetLearningModulesCoverartCoverArtId(coverArtId)",
+    "parameters": [
+      {
+        "name": "coverArtId",
+        "type": "string",
+        "required": "true"
+      }
+    ],
+    "return": "LearningModuleCoverArtResponse",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetLearningModulesCoverartCoverArtIdExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new LearningApi();\n            var coverArtId = \"coverArtId_example\";  // string | Key identifier for the cover art\n\n            try\n            { \n                // Get a specific Learning Module cover art using ID\n                LearningModuleCoverArtResponse result = apiInstance.GetLearningModulesCoverartCoverArtId(coverArtId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Learning.GetLearningModulesCoverartCoverArtId: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "patchlearningassignment": {
     "operationId": "patchlearningassignment",
@@ -29815,6 +29829,20 @@
     ],
     "return": "UploadUrlResponse",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostLanguageunderstandingMinerUploadsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new UploadsApi();\n            var minerId = \"minerId_example\";  // string | Miner ID\n            var body = ;  // Object | query\n\n            try\n            { \n                // Creates a presigned URL for uploading a chat corpus which will be used for mining by intent miner\n                UploadUrlResponse result = apiInstance.PostLanguageunderstandingMinerUploads(minerId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Uploads.PostLanguageunderstandingMinerUploads: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "postuploadslearningcoverart": {
+    "operationId": "postuploadslearningcoverart",
+    "functionName": "PostUploadsLearningCoverart",
+    "signature": "PostUploadsLearningCoverart(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "LearningCoverArtUploadUrlRequest",
+        "required": "true"
+      }
+    ],
+    "return": "UploadUrlResponse",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostUploadsLearningCoverartExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new UploadsApi();\n            var body = new LearningCoverArtUploadUrlRequest(); // LearningCoverArtUploadUrlRequest | query\n\n            try\n            { \n                // Generates pre-signed URL to upload cover art for learning modules\n                UploadUrlResponse result = apiInstance.PostUploadsLearningCoverart(body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Uploads.PostUploadsLearningCoverart: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "postuploadspublicassetsimages": {
     "operationId": "postuploadspublicassetsimages",

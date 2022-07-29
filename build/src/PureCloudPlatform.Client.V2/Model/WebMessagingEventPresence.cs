@@ -37,7 +37,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Join for "Join"
             /// </summary>
             [EnumMember(Value = "Join")]
-            Join
+            Join,
+            
+            /// <summary>
+            /// Enum Disconnect for "Disconnect"
+            /// </summary>
+            [EnumMember(Value = "Disconnect")]
+            Disconnect
         }
         /// <summary>
         /// Describes the type of Presence event.

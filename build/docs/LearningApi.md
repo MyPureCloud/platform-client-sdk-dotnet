@@ -18,6 +18,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetLearningModuleVersion**](LearningApi.html#getlearningmoduleversion) | **GET** /api/v2/learning/modules/{moduleId}/versions/{versionId} | Get specific version of a published module |
 | [**GetLearningModules**](LearningApi.html#getlearningmodules) | **GET** /api/v2/learning/modules | Get all learning modules of an organization |
 | [**GetLearningModulesAssignments**](LearningApi.html#getlearningmodulesassignments) | **GET** /api/v2/learning/modules/assignments | Get all learning modules of an organization including assignments for a specific user |
+| [**GetLearningModulesCoverartCoverArtId**](LearningApi.html#getlearningmodulescoverartcoverartid) | **GET** /api/v2/learning/modules/coverart/{coverArtId} | Get a specific Learning Module cover art using ID |
 | [**PatchLearningAssignment**](LearningApi.html#patchlearningassignment) | **PATCH** /api/v2/learning/assignments/{assignmentId} | Update Learning Assignment |
 | [**PostLearningAssessmentsScoring**](LearningApi.html#postlearningassessmentsscoring) | **POST** /api/v2/learning/assessments/scoring | Score learning assessment for preview |
 | [**PostLearningAssignmentReassign**](LearningApi.html#postlearningassignmentreassign) | **POST** /api/v2/learning/assignments/{assignmentId}/reassign | Reassign Learning Assignment |
@@ -844,6 +845,71 @@ namespace Example
 ### Return type
 
 [**AssignedLearningModuleDomainEntityListing**](AssignedLearningModuleDomainEntityListing.html)
+
+<a name="getlearningmodulescoverartcoverartid"></a>
+
+## [**LearningModuleCoverArtResponse**](LearningModuleCoverArtResponse.html) GetLearningModulesCoverartCoverArtId (string coverArtId)
+
+
+
+Get a specific Learning Module cover art using ID
+
+
+
+Requires ANY permissions: 
+
+* learning:coverart:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetLearningModulesCoverartCoverArtIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LearningApi();
+            var coverArtId = coverArtId_example;  // string | Key identifier for the cover art
+
+            try
+            { 
+                // Get a specific Learning Module cover art using ID
+                LearningModuleCoverArtResponse result = apiInstance.GetLearningModulesCoverartCoverArtId(coverArtId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LearningApi.GetLearningModulesCoverartCoverArtId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **coverArtId** | **string**| Key identifier for the cover art |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LearningModuleCoverArtResponse**](LearningModuleCoverArtResponse.html)
 
 <a name="patchlearningassignment"></a>
 

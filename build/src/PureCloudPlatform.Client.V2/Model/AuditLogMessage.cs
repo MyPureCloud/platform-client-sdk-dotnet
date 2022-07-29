@@ -259,7 +259,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Numberpurchasing for "NumberPurchasing"
             /// </summary>
             [EnumMember(Value = "NumberPurchasing")]
-            Numberpurchasing
+            Numberpurchasing,
+            
+            /// <summary>
+            /// Enum Marketplace for "Marketplace"
+            /// </summary>
+            [EnumMember(Value = "Marketplace")]
+            Marketplace
         }
         /// <summary>
         /// Action that took place.
@@ -1094,6 +1100,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "EmergencyGroup")]
             Emergencygroup,
+            
+            /// <summary>
+            /// Enum Enterpriseagreement for "EnterpriseAgreement"
+            /// </summary>
+            [EnumMember(Value = "EnterpriseAgreement")]
+            Enterpriseagreement,
             
             /// <summary>
             /// Enum Evaluation for "Evaluation"

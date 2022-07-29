@@ -259,7 +259,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Numberpurchasing for "NumberPurchasing"
             /// </summary>
             [EnumMember(Value = "NumberPurchasing")]
-            Numberpurchasing
+            Numberpurchasing,
+            
+            /// <summary>
+            /// Enum Marketplace for "Marketplace"
+            /// </summary>
+            [EnumMember(Value = "Marketplace")]
+            Marketplace
         }
         /// <summary>
         /// Name of the service to query audits for.

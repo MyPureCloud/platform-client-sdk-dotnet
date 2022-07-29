@@ -351,6 +351,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<AssignedLearningModuleDomainEntityListing> GetLearningModulesAssignmentsWithHttpInfo (List<string> userIds, int? pageSize = null, int? pageNumber = null, string searchTerm = null, string overdue = null, List<string> assignmentStates = null, List<string> expand = null);
 
         /// <summary>
+        /// Get a specific Learning Module cover art using ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="coverArtId">Key identifier for the cover art</param>
+        /// <returns>LearningModuleCoverArtResponse</returns>
+        LearningModuleCoverArtResponse GetLearningModulesCoverartCoverArtId (string coverArtId);
+
+        /// <summary>
+        /// Get a specific Learning Module cover art using ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="coverArtId">Key identifier for the cover art</param>
+        /// <returns>ApiResponse of LearningModuleCoverArtResponse</returns>
+        ApiResponse<LearningModuleCoverArtResponse> GetLearningModulesCoverartCoverArtIdWithHttpInfo (string coverArtId);
+
+        /// <summary>
         /// Update Learning Assignment
         /// </summary>
         /// <remarks>
@@ -1007,6 +1029,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Fields to expand in response(case insensitive) (optional)</param>
         /// <returns>Task of ApiResponse (AssignedLearningModuleDomainEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<AssignedLearningModuleDomainEntityListing>> GetLearningModulesAssignmentsAsyncWithHttpInfo (List<string> userIds, int? pageSize = null, int? pageNumber = null, string searchTerm = null, string overdue = null, List<string> assignmentStates = null, List<string> expand = null);
+
+        /// <summary>
+        /// Get a specific Learning Module cover art using ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="coverArtId">Key identifier for the cover art</param>
+        /// <returns>Task of LearningModuleCoverArtResponse</returns>
+        System.Threading.Tasks.Task<LearningModuleCoverArtResponse> GetLearningModulesCoverartCoverArtIdAsync (string coverArtId);
+
+        /// <summary>
+        /// Get a specific Learning Module cover art using ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="coverArtId">Key identifier for the cover art</param>
+        /// <returns>Task of ApiResponse (LearningModuleCoverArtResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LearningModuleCoverArtResponse>> GetLearningModulesCoverartCoverArtIdAsyncWithHttpInfo (string coverArtId);
 
         /// <summary>
         /// Update Learning Assignment
@@ -3780,6 +3824,197 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<AssignedLearningModuleDomainEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (AssignedLearningModuleDomainEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssignedLearningModuleDomainEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a specific Learning Module cover art using ID 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="coverArtId">Key identifier for the cover art</param>
+        /// <returns>LearningModuleCoverArtResponse</returns>
+        public LearningModuleCoverArtResponse GetLearningModulesCoverartCoverArtId (string coverArtId)
+        {
+             ApiResponse<LearningModuleCoverArtResponse> localVarResponse = GetLearningModulesCoverartCoverArtIdWithHttpInfo(coverArtId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a specific Learning Module cover art using ID 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="coverArtId">Key identifier for the cover art</param>
+        /// <returns>ApiResponse of LearningModuleCoverArtResponse</returns>
+        public ApiResponse< LearningModuleCoverArtResponse > GetLearningModulesCoverartCoverArtIdWithHttpInfo (string coverArtId)
+        { 
+            // verify the required parameter 'coverArtId' is set
+            if (coverArtId == null)
+                throw new ApiException(400, "Missing required parameter 'coverArtId' when calling LearningApi->GetLearningModulesCoverartCoverArtId");
+
+            var localVarPath = "/api/v2/learning/modules/coverart/{coverArtId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (coverArtId != null) localVarPathParams.Add("coverArtId", this.Configuration.ApiClient.ParameterToString(coverArtId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLearningModulesCoverartCoverArtId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLearningModulesCoverartCoverArtId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LearningModuleCoverArtResponse>(localVarStatusCode,
+                localVarHeaders,
+                (LearningModuleCoverArtResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningModuleCoverArtResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a specific Learning Module cover art using ID 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="coverArtId">Key identifier for the cover art</param>
+        /// <returns>Task of LearningModuleCoverArtResponse</returns>
+        public async System.Threading.Tasks.Task<LearningModuleCoverArtResponse> GetLearningModulesCoverartCoverArtIdAsync (string coverArtId)
+        {
+             ApiResponse<LearningModuleCoverArtResponse> localVarResponse = await GetLearningModulesCoverartCoverArtIdAsyncWithHttpInfo(coverArtId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a specific Learning Module cover art using ID 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="coverArtId">Key identifier for the cover art</param>
+        /// <returns>Task of ApiResponse (LearningModuleCoverArtResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LearningModuleCoverArtResponse>> GetLearningModulesCoverartCoverArtIdAsyncWithHttpInfo (string coverArtId)
+        { 
+            // verify the required parameter 'coverArtId' is set
+            if (coverArtId == null)
+                throw new ApiException(400, "Missing required parameter 'coverArtId' when calling LearningApi->GetLearningModulesCoverartCoverArtId");
+            
+
+            var localVarPath = "/api/v2/learning/modules/coverart/{coverArtId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (coverArtId != null) localVarPathParams.Add("coverArtId", this.Configuration.ApiClient.ParameterToString(coverArtId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLearningModulesCoverartCoverArtId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLearningModulesCoverartCoverArtId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LearningModuleCoverArtResponse>(localVarStatusCode,
+                localVarHeaders,
+                (LearningModuleCoverArtResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningModuleCoverArtResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

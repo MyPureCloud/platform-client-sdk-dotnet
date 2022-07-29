@@ -1006,6 +1006,7 @@ Retrieve a single session.
 Requires ANY permissions: 
 
 * journey:session:view
+* externalContacts:session:view
 
 ### Example
 ```{"language":"csharp"}

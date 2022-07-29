@@ -646,13 +646,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">performanceProfileId</param>
         /// <param name="metricId">metricId</param>
         /// <param name="filterType">Filter type for the query request.</param>
-        /// <param name="filterId">ID for the filter type. For example, division Id</param>
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="filterId">ID for the filter type. Only required when filterType is Division. (optional)</param>
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>MetricValueTrendAverage</returns>
-        MetricValueTrendAverage GetGamificationScorecardsProfileMetricUsersValuesTrends (string profileId, string metricId, string filterType, string filterId, String startWorkday, String endWorkday, String referenceWorkday = null, string timeZone = null);
+        MetricValueTrendAverage GetGamificationScorecardsProfileMetricUsersValuesTrends (string profileId, string metricId, string filterType, String startWorkday, String endWorkday, string filterId = null, String referenceWorkday = null, string timeZone = null);
 
         /// <summary>
         /// Average performance values trends by metric of a division or a performance profile
@@ -664,13 +664,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">performanceProfileId</param>
         /// <param name="metricId">metricId</param>
         /// <param name="filterType">Filter type for the query request.</param>
-        /// <param name="filterId">ID for the filter type. For example, division Id</param>
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="filterId">ID for the filter type. Only required when filterType is Division. (optional)</param>
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>ApiResponse of MetricValueTrendAverage</returns>
-        ApiResponse<MetricValueTrendAverage> GetGamificationScorecardsProfileMetricUsersValuesTrendsWithHttpInfo (string profileId, string metricId, string filterType, string filterId, String startWorkday, String endWorkday, String referenceWorkday = null, string timeZone = null);
+        ApiResponse<MetricValueTrendAverage> GetGamificationScorecardsProfileMetricUsersValuesTrendsWithHttpInfo (string profileId, string metricId, string filterType, String startWorkday, String endWorkday, string filterId = null, String referenceWorkday = null, string timeZone = null);
 
         /// <summary>
         /// Average performance values trends by metric of the requesting user
@@ -2048,13 +2048,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">performanceProfileId</param>
         /// <param name="metricId">metricId</param>
         /// <param name="filterType">Filter type for the query request.</param>
-        /// <param name="filterId">ID for the filter type. For example, division Id</param>
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="filterId">ID for the filter type. Only required when filterType is Division. (optional)</param>
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of MetricValueTrendAverage</returns>
-        System.Threading.Tasks.Task<MetricValueTrendAverage> GetGamificationScorecardsProfileMetricUsersValuesTrendsAsync (string profileId, string metricId, string filterType, string filterId, String startWorkday, String endWorkday, String referenceWorkday = null, string timeZone = null);
+        System.Threading.Tasks.Task<MetricValueTrendAverage> GetGamificationScorecardsProfileMetricUsersValuesTrendsAsync (string profileId, string metricId, string filterType, String startWorkday, String endWorkday, string filterId = null, String referenceWorkday = null, string timeZone = null);
 
         /// <summary>
         /// Average performance values trends by metric of a division or a performance profile
@@ -2066,13 +2066,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">performanceProfileId</param>
         /// <param name="metricId">metricId</param>
         /// <param name="filterType">Filter type for the query request.</param>
-        /// <param name="filterId">ID for the filter type. For example, division Id</param>
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="filterId">ID for the filter type. Only required when filterType is Division. (optional)</param>
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of ApiResponse (MetricValueTrendAverage)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MetricValueTrendAverage>> GetGamificationScorecardsProfileMetricUsersValuesTrendsAsyncWithHttpInfo (string profileId, string metricId, string filterType, string filterId, String startWorkday, String endWorkday, String referenceWorkday = null, string timeZone = null);
+        System.Threading.Tasks.Task<ApiResponse<MetricValueTrendAverage>> GetGamificationScorecardsProfileMetricUsersValuesTrendsAsyncWithHttpInfo (string profileId, string metricId, string filterType, String startWorkday, String endWorkday, string filterId = null, String referenceWorkday = null, string timeZone = null);
 
         /// <summary>
         /// Average performance values trends by metric of the requesting user
@@ -8058,15 +8058,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">performanceProfileId</param>
         /// <param name="metricId">metricId</param>
         /// <param name="filterType">Filter type for the query request.</param>
-        /// <param name="filterId">ID for the filter type. For example, division Id</param>
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="filterId">ID for the filter type. Only required when filterType is Division. (optional)</param>
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>MetricValueTrendAverage</returns>
-        public MetricValueTrendAverage GetGamificationScorecardsProfileMetricUsersValuesTrends (string profileId, string metricId, string filterType, string filterId, String startWorkday, String endWorkday, String referenceWorkday = null, string timeZone = null)
+        public MetricValueTrendAverage GetGamificationScorecardsProfileMetricUsersValuesTrends (string profileId, string metricId, string filterType, String startWorkday, String endWorkday, string filterId = null, String referenceWorkday = null, string timeZone = null)
         {
-             ApiResponse<MetricValueTrendAverage> localVarResponse = GetGamificationScorecardsProfileMetricUsersValuesTrendsWithHttpInfo(profileId, metricId, filterType, filterId, startWorkday, endWorkday, referenceWorkday, timeZone);
+             ApiResponse<MetricValueTrendAverage> localVarResponse = GetGamificationScorecardsProfileMetricUsersValuesTrendsWithHttpInfo(profileId, metricId, filterType, startWorkday, endWorkday, filterId, referenceWorkday, timeZone);
              return localVarResponse.Data;
         }
 
@@ -8077,13 +8077,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">performanceProfileId</param>
         /// <param name="metricId">metricId</param>
         /// <param name="filterType">Filter type for the query request.</param>
-        /// <param name="filterId">ID for the filter type. For example, division Id</param>
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="filterId">ID for the filter type. Only required when filterType is Division. (optional)</param>
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>ApiResponse of MetricValueTrendAverage</returns>
-        public ApiResponse< MetricValueTrendAverage > GetGamificationScorecardsProfileMetricUsersValuesTrendsWithHttpInfo (string profileId, string metricId, string filterType, string filterId, String startWorkday, String endWorkday, String referenceWorkday = null, string timeZone = null)
+        public ApiResponse< MetricValueTrendAverage > GetGamificationScorecardsProfileMetricUsersValuesTrendsWithHttpInfo (string profileId, string metricId, string filterType, String startWorkday, String endWorkday, string filterId = null, String referenceWorkday = null, string timeZone = null)
         { 
             // verify the required parameter 'profileId' is set
             if (profileId == null)
@@ -8094,9 +8094,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // verify the required parameter 'filterType' is set
             if (filterType == null)
                 throw new ApiException(400, "Missing required parameter 'filterType' when calling GamificationApi->GetGamificationScorecardsProfileMetricUsersValuesTrends");
-            // verify the required parameter 'filterId' is set
-            if (filterId == null)
-                throw new ApiException(400, "Missing required parameter 'filterId' when calling GamificationApi->GetGamificationScorecardsProfileMetricUsersValuesTrends");
             // verify the required parameter 'startWorkday' is set
             if (startWorkday == null)
                 throw new ApiException(400, "Missing required parameter 'startWorkday' when calling GamificationApi->GetGamificationScorecardsProfileMetricUsersValuesTrends");
@@ -8188,15 +8185,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">performanceProfileId</param>
         /// <param name="metricId">metricId</param>
         /// <param name="filterType">Filter type for the query request.</param>
-        /// <param name="filterId">ID for the filter type. For example, division Id</param>
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="filterId">ID for the filter type. Only required when filterType is Division. (optional)</param>
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of MetricValueTrendAverage</returns>
-        public async System.Threading.Tasks.Task<MetricValueTrendAverage> GetGamificationScorecardsProfileMetricUsersValuesTrendsAsync (string profileId, string metricId, string filterType, string filterId, String startWorkday, String endWorkday, String referenceWorkday = null, string timeZone = null)
+        public async System.Threading.Tasks.Task<MetricValueTrendAverage> GetGamificationScorecardsProfileMetricUsersValuesTrendsAsync (string profileId, string metricId, string filterType, String startWorkday, String endWorkday, string filterId = null, String referenceWorkday = null, string timeZone = null)
         {
-             ApiResponse<MetricValueTrendAverage> localVarResponse = await GetGamificationScorecardsProfileMetricUsersValuesTrendsAsyncWithHttpInfo(profileId, metricId, filterType, filterId, startWorkday, endWorkday, referenceWorkday, timeZone);
+             ApiResponse<MetricValueTrendAverage> localVarResponse = await GetGamificationScorecardsProfileMetricUsersValuesTrendsAsyncWithHttpInfo(profileId, metricId, filterType, startWorkday, endWorkday, filterId, referenceWorkday, timeZone);
              return localVarResponse.Data;
 
         }
@@ -8208,13 +8205,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">performanceProfileId</param>
         /// <param name="metricId">metricId</param>
         /// <param name="filterType">Filter type for the query request.</param>
-        /// <param name="filterId">ID for the filter type. For example, division Id</param>
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="filterId">ID for the filter type. Only required when filterType is Division. (optional)</param>
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of ApiResponse (MetricValueTrendAverage)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MetricValueTrendAverage>> GetGamificationScorecardsProfileMetricUsersValuesTrendsAsyncWithHttpInfo (string profileId, string metricId, string filterType, string filterId, String startWorkday, String endWorkday, String referenceWorkday = null, string timeZone = null)
+        public async System.Threading.Tasks.Task<ApiResponse<MetricValueTrendAverage>> GetGamificationScorecardsProfileMetricUsersValuesTrendsAsyncWithHttpInfo (string profileId, string metricId, string filterType, String startWorkday, String endWorkday, string filterId = null, String referenceWorkday = null, string timeZone = null)
         { 
             // verify the required parameter 'profileId' is set
             if (profileId == null)
@@ -8227,10 +8224,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // verify the required parameter 'filterType' is set
             if (filterType == null)
                 throw new ApiException(400, "Missing required parameter 'filterType' when calling GamificationApi->GetGamificationScorecardsProfileMetricUsersValuesTrends");
-            
-            // verify the required parameter 'filterId' is set
-            if (filterId == null)
-                throw new ApiException(400, "Missing required parameter 'filterId' when calling GamificationApi->GetGamificationScorecardsProfileMetricUsersValuesTrends");
             
             // verify the required parameter 'startWorkday' is set
             if (startWorkday == null)

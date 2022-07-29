@@ -1964,6 +1964,7 @@ docs/GetLearningModuleRule-example.txt
 docs/GetLearningModuleVersion-example.txt
 docs/GetLearningModules-example.txt
 docs/GetLearningModulesAssignments-example.txt
+docs/GetLearningModulesCoverartCoverArtId-example.txt
 docs/GetLicenseDefinition-example.txt
 docs/GetLicenseDefinitions-example.txt
 docs/GetLicenseToggle-example.txt
@@ -2703,6 +2704,7 @@ docs/LearningAssignmentUserListing.md
 docs/LearningAssignmentUserQuery.md
 docs/LearningAssignmentsDomainEntity.md
 docs/LearningCoverArtThumbnail.md
+docs/LearningCoverArtUploadUrlRequest.md
 docs/LearningModule.md
 docs/LearningModuleCoverArtRequest.md
 docs/LearningModuleCoverArtResponse.md
@@ -3552,6 +3554,7 @@ docs/PostTextResponse.md
 docs/PostTextbotsBotflowsSessionTurns-example.txt
 docs/PostTextbotsBotflowsSessions-example.txt
 docs/PostTextbotsBotsExecute-example.txt
+docs/PostUploadsLearningCoverart-example.txt
 docs/PostUploadsPublicassetsImages-example.txt
 docs/PostUploadsRecordings-example.txt
 docs/PostUploadsWorkforcemanagementHistoricaldataCsv-example.txt
@@ -6719,6 +6722,7 @@ src/PureCloudPlatform.Client.V2/Model/LearningAssignmentUserListing.cs
 src/PureCloudPlatform.Client.V2/Model/LearningAssignmentUserQuery.cs
 src/PureCloudPlatform.Client.V2/Model/LearningAssignmentsDomainEntity.cs
 src/PureCloudPlatform.Client.V2/Model/LearningCoverArtThumbnail.cs
+src/PureCloudPlatform.Client.V2/Model/LearningCoverArtUploadUrlRequest.cs
 src/PureCloudPlatform.Client.V2/Model/LearningModule.cs
 src/PureCloudPlatform.Client.V2/Model/LearningModuleCoverArtRequest.cs
 src/PureCloudPlatform.Client.V2/Model/LearningModuleCoverArtResponse.cs

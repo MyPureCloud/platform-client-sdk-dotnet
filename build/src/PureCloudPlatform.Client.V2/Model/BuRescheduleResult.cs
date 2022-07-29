@@ -21,9 +21,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BuRescheduleResult" /> class.
         /// </summary>
-        /// <param name="GenerationResults">The generation results.  Note the result will always be delivered via the downloadUrl; however the schema is included for documentation.</param>
+        /// <param name="GenerationResults">The generation results.  Note the result will always be delivered via the generationResultsDownloadUrl; however the schema is included for documentation.</param>
         /// <param name="GenerationResultsDownloadUrl">The download URL from which to fetch the generation results for the rescheduling run.</param>
-        /// <param name="HeadcountForecast">The headcount forecast.  Note the result will always be delivered via the downloadUrl; however the schema is included for documentation.</param>
+        /// <param name="HeadcountForecast">The headcount forecast.  Note the result will always be delivered via the headcountForecastDownloadUrl; however the schema is included for documentation.</param>
         /// <param name="HeadcountForecastDownloadUrl">The download URL from which to fetch the headcount forecast for the rescheduling run.</param>
         /// <param name="AgentSchedules">List of download links for agent schedules produced by the rescheduling run.</param>
         public BuRescheduleResult(ScheduleGenerationResult GenerationResults = null, string GenerationResultsDownloadUrl = null, BuHeadcountForecast HeadcountForecast = null, string HeadcountForecastDownloadUrl = null, List<BuRescheduleAgentScheduleResult> AgentSchedules = null)
@@ -39,9 +39,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The generation results.  Note the result will always be delivered via the downloadUrl; however the schema is included for documentation
+        /// The generation results.  Note the result will always be delivered via the generationResultsDownloadUrl; however the schema is included for documentation
         /// </summary>
-        /// <value>The generation results.  Note the result will always be delivered via the downloadUrl; however the schema is included for documentation</value>
+        /// <value>The generation results.  Note the result will always be delivered via the generationResultsDownloadUrl; however the schema is included for documentation</value>
         [DataMember(Name="generationResults", EmitDefaultValue=false)]
         public ScheduleGenerationResult GenerationResults { get; set; }
 
@@ -57,9 +57,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The headcount forecast.  Note the result will always be delivered via the downloadUrl; however the schema is included for documentation
+        /// The headcount forecast.  Note the result will always be delivered via the headcountForecastDownloadUrl; however the schema is included for documentation
         /// </summary>
-        /// <value>The headcount forecast.  Note the result will always be delivered via the downloadUrl; however the schema is included for documentation</value>
+        /// <value>The headcount forecast.  Note the result will always be delivered via the headcountForecastDownloadUrl; however the schema is included for documentation</value>
         [DataMember(Name="headcountForecast", EmitDefaultValue=false)]
         public BuHeadcountForecast HeadcountForecast { get; set; }
 

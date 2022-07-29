@@ -1814,7 +1814,7 @@ namespace Example
 
 <a name="getgamificationscorecardsprofilemetricusersvaluestrends"></a>
 
-## [**MetricValueTrendAverage**](MetricValueTrendAverage.html) GetGamificationScorecardsProfileMetricUsersValuesTrends (string profileId, string metricId, string filterType, string filterId, String startWorkday, String endWorkday, String referenceWorkday = null, string timeZone = null)
+## [**MetricValueTrendAverage**](MetricValueTrendAverage.html) GetGamificationScorecardsProfileMetricUsersValuesTrends (string profileId, string metricId, string filterType, String startWorkday, String endWorkday, string filterId = null, String referenceWorkday = null, string timeZone = null)
 
 
 
@@ -1851,16 +1851,16 @@ namespace Example
             var profileId = profileId_example;  // string | performanceProfileId
             var metricId = metricId_example;  // string | metricId
             var filterType = filterType_example;  // string | Filter type for the query request.
-            var filterId = filterId_example;  // string | ID for the filter type. For example, division Id
             var startWorkday = 2013-10-20;  // String | Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var endWorkday = 2013-10-20;  // String | End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var filterId = filterId_example;  // string | ID for the filter type. Only required when filterType is Division. (optional) 
             var referenceWorkday = 2013-10-20;  // String | Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) 
             var timeZone = timeZone_example;  // string | Timezone for the workday. Defaults to UTC (optional)  (default to "UTC")
 
             try
             { 
                 // Average performance values trends by metric of a division or a performance profile
-                MetricValueTrendAverage result = apiInstance.GetGamificationScorecardsProfileMetricUsersValuesTrends(profileId, metricId, filterType, filterId, startWorkday, endWorkday, referenceWorkday, timeZone);
+                MetricValueTrendAverage result = apiInstance.GetGamificationScorecardsProfileMetricUsersValuesTrends(profileId, metricId, filterType, startWorkday, endWorkday, filterId, referenceWorkday, timeZone);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1880,9 +1880,9 @@ namespace Example
 | **profileId** | **string**| performanceProfileId |  |
 | **metricId** | **string**| metricId |  |
 | **filterType** | **string**| Filter type for the query request. | <br />**Values**: PerformanceProfile, Division |
-| **filterId** | **string**| ID for the filter type. For example, division Id |  |
 | **startWorkday** | **String**| Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **endWorkday** | **String**| End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **filterId** | **string**| ID for the filter type. Only required when filterType is Division. | [optional]  |
 | **referenceWorkday** | **String**| Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
 | **timeZone** | **string**| Timezone for the workday. Defaults to UTC | [optional] [default to "UTC"] |
 {: class="table table-striped"}

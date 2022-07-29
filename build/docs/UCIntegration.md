@@ -15,6 +15,8 @@ title: UCIntegration
 | **Icon** | [**UCIcon**](UCIcon.html) | icon | |
 | **BadgeIcons** | [**Dictionary&lt;string, UCIcon&gt;**](UCIcon.html) | badgeIcon | |
 | **I10n** | [**Dictionary&lt;string, UCI10n&gt;**](UCI10n.html) | i10n | |
+| **PolledPresence** | **bool?** | polledPresence | |
+| **UserPermissions** | **List&lt;string&gt;** | userPermissions | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 
