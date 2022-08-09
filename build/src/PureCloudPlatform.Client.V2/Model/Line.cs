@@ -70,12 +70,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="Description">The resource's description..</param>
         /// <param name="Version">The current version of the resource..</param>
-        /// <param name="DateCreated">The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="DateModified">The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="ModifiedBy">The ID of the user that last modified the resource..</param>
-        /// <param name="CreatedBy">The ID of the user that created the resource..</param>
-        /// <param name="ModifiedByApp">The application that last modified the resource..</param>
-        /// <param name="CreatedByApp">The application that created the resource..</param>
         /// <param name="Properties">Properties.</param>
         /// <param name="EdgeGroup">EdgeGroup.</param>
         /// <param name="Template">Template.</param>
@@ -85,18 +79,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SecondaryEdge">The secondary edge associated to the line. (Deprecated).</param>
         /// <param name="LoggedInUser">LoggedInUser.</param>
         /// <param name="DefaultForUser">DefaultForUser.</param>
-        public Line(string Name = null, Division Division = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, Object> Properties = null, DomainEntityRef EdgeGroup = null, DomainEntityRef Template = null, DomainEntityRef Site = null, DomainEntityRef LineBaseSettings = null, Edge PrimaryEdge = null, Edge SecondaryEdge = null, DomainEntityRef LoggedInUser = null, DomainEntityRef DefaultForUser = null)
+        public Line(string Name = null, Division Division = null, string Description = null, int? Version = null, Dictionary<string, Object> Properties = null, DomainEntityRef EdgeGroup = null, DomainEntityRef Template = null, DomainEntityRef Site = null, DomainEntityRef LineBaseSettings = null, Edge PrimaryEdge = null, Edge SecondaryEdge = null, DomainEntityRef LoggedInUser = null, DomainEntityRef DefaultForUser = null)
         {
             this.Name = Name;
             this.Division = Division;
             this.Description = Description;
             this.Version = Version;
-            this.DateCreated = DateCreated;
-            this.DateModified = DateModified;
-            this.ModifiedBy = ModifiedBy;
-            this.CreatedBy = CreatedBy;
-            this.ModifiedByApp = ModifiedByApp;
-            this.CreatedByApp = CreatedByApp;
             this.Properties = Properties;
             this.EdgeGroup = EdgeGroup;
             this.Template = Template;
@@ -161,7 +149,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
-        public DateTime? DateCreated { get; set; }
+        public DateTime? DateCreated { get; private set; }
 
 
 
@@ -170,7 +158,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
-        public DateTime? DateModified { get; set; }
+        public DateTime? DateModified { get; private set; }
 
 
 
@@ -179,7 +167,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The ID of the user that last modified the resource.</value>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
-        public string ModifiedBy { get; set; }
+        public string ModifiedBy { get; private set; }
 
 
 
@@ -188,7 +176,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The ID of the user that created the resource.</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
-        public string CreatedBy { get; set; }
+        public string CreatedBy { get; private set; }
 
 
 
@@ -199,7 +187,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The application that last modified the resource.</value>
         [DataMember(Name="modifiedByApp", EmitDefaultValue=false)]
-        public string ModifiedByApp { get; set; }
+        public string ModifiedByApp { get; private set; }
 
 
 
@@ -208,7 +196,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The application that created the resource.</value>
         [DataMember(Name="createdByApp", EmitDefaultValue=false)]
-        public string CreatedByApp { get; set; }
+        public string CreatedByApp { get; private set; }
 
 
 

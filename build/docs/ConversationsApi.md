@@ -28,6 +28,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConversationParticipantSecureivrsessions**](ConversationsApi.html#getconversationparticipantsecureivrsessions) | **GET** /api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions | Get a list of secure sessions for this participant. |
 | [**GetConversationParticipantWrapup**](ConversationsApi.html#getconversationparticipantwrapup) | **GET** /api/v2/conversations/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
 | [**GetConversationParticipantWrapupcodes**](ConversationsApi.html#getconversationparticipantwrapupcodes) | **GET** /api/v2/conversations/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
+| [**GetConversationSecureattributes**](ConversationsApi.html#getconversationsecureattributes) | **GET** /api/v2/conversations/{conversationId}/secureattributes | Get the secure attributes on a conversation. |
 | [**GetConversations**](ConversationsApi.html#getconversations) | **GET** /api/v2/conversations | Get active conversations for the logged in user |
 | [**GetConversationsCall**](ConversationsApi.html#getconversationscall) | **GET** /api/v2/conversations/calls/{conversationId} | Get call conversation |
 | [**GetConversationsCallParticipantWrapup**](ConversationsApi.html#getconversationscallparticipantwrapup) | **GET** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
@@ -57,6 +58,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConversationsEmailParticipantWrapupcodes**](ConversationsApi.html#getconversationsemailparticipantwrapupcodes) | **GET** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
 | [**GetConversationsEmailSettings**](ConversationsApi.html#getconversationsemailsettings) | **GET** /api/v2/conversations/emails/{conversationId}/settings | Get emails settings for a given conversation |
 | [**GetConversationsEmails**](ConversationsApi.html#getconversationsemails) | **GET** /api/v2/conversations/emails | Get active email conversations for the logged in user |
+| [**GetConversationsKeyconfiguration**](ConversationsApi.html#getconversationskeyconfiguration) | **GET** /api/v2/conversations/keyconfigurations/{keyconfigurationsId} | Get the encryption key configurations |
+| [**GetConversationsKeyconfigurations**](ConversationsApi.html#getconversationskeyconfigurations) | **GET** /api/v2/conversations/keyconfigurations | Get a list of key configurations data |
 | [**GetConversationsMessage**](ConversationsApi.html#getconversationsmessage) | **GET** /api/v2/conversations/messages/{conversationId} | Get message conversation |
 | [**GetConversationsMessageCommunicationMessagesMediaMediaId**](ConversationsApi.html#getconversationsmessagecommunicationmessagesmediamediaid) | **GET** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media/{mediaId} | Get media |
 | [**GetConversationsMessageDetails**](ConversationsApi.html#getconversationsmessagedetails) | **GET** /api/v2/conversations/messages/{messageId}/details | Get message |
@@ -83,6 +86,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConversationsMessagingThreadingtimeline**](ConversationsApi.html#getconversationsmessagingthreadingtimeline) | **GET** /api/v2/conversations/messaging/threadingtimeline | Get conversation threading window timeline for each messaging type |
 | [**PatchConversationParticipant**](ConversationsApi.html#patchconversationparticipant) | **PATCH** /api/v2/conversations/{conversationId}/participants/{participantId} | Update a participant. |
 | [**PatchConversationParticipantAttributes**](ConversationsApi.html#patchconversationparticipantattributes) | **PATCH** /api/v2/conversations/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
+| [**PatchConversationSecureattributes**](ConversationsApi.html#patchconversationsecureattributes) | **PATCH** /api/v2/conversations/{conversationId}/secureattributes | Update the secure attributes on a conversation. |
 | [**PatchConversationsCall**](ConversationsApi.html#patchconversationscall) | **PATCH** /api/v2/conversations/calls/{conversationId} | Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants |
 | [**PatchConversationsCallParticipant**](ConversationsApi.html#patchconversationscallparticipant) | **PATCH** /api/v2/conversations/calls/{conversationId}/participants/{participantId} | Update conversation participant |
 | [**PatchConversationsCallParticipantAttributes**](ConversationsApi.html#patchconversationscallparticipantattributes) | **PATCH** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
@@ -146,6 +150,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsEmailParticipantReplace**](ConversationsApi.html#postconversationsemailparticipantreplace) | **POST** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
 | [**PostConversationsEmails**](ConversationsApi.html#postconversationsemails) | **POST** /api/v2/conversations/emails | Create an email conversation |
 | [**PostConversationsFaxes**](ConversationsApi.html#postconversationsfaxes) | **POST** /api/v2/conversations/faxes | Create Fax Conversation |
+| [**PostConversationsKeyconfigurations**](ConversationsApi.html#postconversationskeyconfigurations) | **POST** /api/v2/conversations/keyconfigurations | Setup configurations for encryption key creation |
+| [**PostConversationsKeyconfigurationsValidate**](ConversationsApi.html#postconversationskeyconfigurationsvalidate) | **POST** /api/v2/conversations/keyconfigurations/validate | Validate encryption key configurations without saving it |
 | [**PostConversationsMessageCommunicationMessages**](ConversationsApi.html#postconversationsmessagecommunicationmessages) | **POST** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages | Send message |
 | [**PostConversationsMessageCommunicationMessagesMedia**](ConversationsApi.html#postconversationsmessagecommunicationmessagesmedia) | **POST** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media | Create media |
 | [**PostConversationsMessageMessagesBulk**](ConversationsApi.html#postconversationsmessagemessagesbulk) | **POST** /api/v2/conversations/messages/{conversationId}/messages/bulk | Get messages in batch |
@@ -160,6 +166,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsMessagingIntegrationsWhatsapp**](ConversationsApi.html#postconversationsmessagingintegrationswhatsapp) | **POST** /api/v2/conversations/messaging/integrations/whatsapp | Create a WhatsApp Integration |
 | [**PostConversationsMessagingSupportedcontent**](ConversationsApi.html#postconversationsmessagingsupportedcontent) | **POST** /api/v2/conversations/messaging/supportedcontent | Create a Supported Content profile |
 | [**PutConversationParticipantFlaggedreason**](ConversationsApi.html#putconversationparticipantflaggedreason) | **PUT** /api/v2/conversations/{conversationId}/participants/{participantId}/flaggedreason | Set flagged reason on conversation participant to indicate bad conversation quality. |
+| [**PutConversationSecureattributes**](ConversationsApi.html#putconversationsecureattributes) | **PUT** /api/v2/conversations/{conversationId}/secureattributes | Set the secure attributes on a conversation. |
 | [**PutConversationTags**](ConversationsApi.html#putconversationtags) | **PUT** /api/v2/conversations/{conversationId}/tags | Update the tags on a conversation. |
 | [**PutConversationsCallParticipantCommunicationUuidata**](ConversationsApi.html#putconversationscallparticipantcommunicationuuidata) | **PUT** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/uuidata | Set uuiData to be sent on future commands. |
 | [**PutConversationsCallRecordingstate**](ConversationsApi.html#putconversationscallrecordingstate) | **PUT** /api/v2/conversations/calls/{conversationId}/recordingstate | Update a conversation by setting its recording state |
@@ -168,6 +175,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutConversationsCobrowsesessionRecordingstate**](ConversationsApi.html#putconversationscobrowsesessionrecordingstate) | **PUT** /api/v2/conversations/cobrowsesessions/{conversationId}/recordingstate | Update a conversation by setting its recording state |
 | [**PutConversationsEmailMessagesDraft**](ConversationsApi.html#putconversationsemailmessagesdraft) | **PUT** /api/v2/conversations/emails/{conversationId}/messages/draft | Update conversation draft reply |
 | [**PutConversationsEmailRecordingstate**](ConversationsApi.html#putconversationsemailrecordingstate) | **PUT** /api/v2/conversations/emails/{conversationId}/recordingstate | Update a conversation by setting its recording state |
+| [**PutConversationsKeyconfiguration**](ConversationsApi.html#putconversationskeyconfiguration) | **PUT** /api/v2/conversations/keyconfigurations/{keyconfigurationsId} | Update the encryption key configurations |
 | [**PutConversationsMessageRecordingstate**](ConversationsApi.html#putconversationsmessagerecordingstate) | **PUT** /api/v2/conversations/messages/{conversationId}/recordingstate | Update a conversation by setting its recording state |
 | [**PutConversationsMessagingIntegrationsLineIntegrationId**](ConversationsApi.html#putconversationsmessagingintegrationslineintegrationid) | **PUT** /api/v2/conversations/messaging/integrations/line/{integrationId} | Update a LINE messenger integration |
 | [**PutConversationsMessagingSupportedcontentDefault**](ConversationsApi.html#putconversationsmessagingsupportedcontentdefault) | **PUT** /api/v2/conversations/messaging/supportedcontent/default | Set the organization&#39;s default supported content profile that may be assigned to an integration when it is created. |
@@ -1551,6 +1559,71 @@ namespace Example
 ### Return type
 
 [**List<WrapupCode>**](WrapupCode.html)
+
+<a name="getconversationsecureattributes"></a>
+
+## [**ConversationSecureAttributes**](ConversationSecureAttributes.html) GetConversationSecureattributes (string conversationId)
+
+
+
+Get the secure attributes on a conversation.
+
+
+
+Requires ANY permissions: 
+
+* conversation:participant:attributesview
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationSecureattributesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversation ID
+
+            try
+            { 
+                // Get the secure attributes on a conversation.
+                ConversationSecureAttributes result = apiInstance.GetConversationSecureattributes(conversationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationSecureattributes: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversation ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ConversationSecureAttributes**](ConversationSecureAttributes.html)
 
 <a name="getconversations"></a>
 
@@ -3430,6 +3503,131 @@ This endpoint does require any parameters.
 
 [**EmailConversationEntityListing**](EmailConversationEntityListing.html)
 
+<a name="getconversationskeyconfiguration"></a>
+
+## [**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration.html) GetConversationsKeyconfiguration (string keyconfigurationsId)
+
+
+
+Get the encryption key configurations
+
+
+
+Requires ANY permissions: 
+
+* conversation:encryptionKey:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsKeyconfigurationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var keyconfigurationsId = keyconfigurationsId_example;  // string | Key Configurations Id
+
+            try
+            { 
+                // Get the encryption key configurations
+                ConversationEncryptionConfiguration result = apiInstance.GetConversationsKeyconfiguration(keyconfigurationsId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsKeyconfiguration: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **keyconfigurationsId** | **string**| Key Configurations Id |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration.html)
+
+<a name="getconversationskeyconfigurations"></a>
+
+## [**ConversationEncryptionConfigurationListing**](ConversationEncryptionConfigurationListing.html) GetConversationsKeyconfigurations ()
+
+
+
+Get a list of key configurations data
+
+
+
+Requires ANY permissions: 
+
+* conversation:encryptionKey:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsKeyconfigurationsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+
+            try
+            { 
+                // Get a list of key configurations data
+                ConversationEncryptionConfigurationListing result = apiInstance.GetConversationsKeyconfigurations();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsKeyconfigurations: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+
+### Return type
+
+[**ConversationEncryptionConfigurationListing**](ConversationEncryptionConfigurationListing.html)
+
 <a name="getconversationsmessage"></a>
 
 ## [**MessageConversation**](MessageConversation.html) GetConversationsMessage (string conversationId)
@@ -5178,6 +5376,73 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+<a name="patchconversationsecureattributes"></a>
+
+## **string** PatchConversationSecureattributes (string conversationId, ConversationSecureAttributes body)
+
+
+
+Update the secure attributes on a conversation.
+
+
+
+Requires ANY permissions: 
+
+* conversation:participant:attributesedit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchConversationSecureattributesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversation ID
+            var body = new ConversationSecureAttributes(); // ConversationSecureAttributes | Conversation Secure Attributes
+
+            try
+            { 
+                // Update the secure attributes on a conversation.
+                string result = apiInstance.PatchConversationSecureattributes(conversationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchConversationSecureattributes: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversation ID |  |
+| **body** | [**ConversationSecureAttributes**](ConversationSecureAttributes.html)| Conversation Secure Attributes |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
 
 <a name="patchconversationscall"></a>
 
@@ -9406,6 +9671,136 @@ namespace Example
 
 [**FaxSendResponse**](FaxSendResponse.html)
 
+<a name="postconversationskeyconfigurations"></a>
+
+## [**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration.html) PostConversationsKeyconfigurations (ConversationEncryptionConfiguration body)
+
+
+
+Setup configurations for encryption key creation
+
+
+
+Requires ANY permissions: 
+
+* conversation:encryptionKey:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsKeyconfigurationsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var body = new ConversationEncryptionConfiguration(); // ConversationEncryptionConfiguration | Encryption Configuration
+
+            try
+            { 
+                // Setup configurations for encryption key creation
+                ConversationEncryptionConfiguration result = apiInstance.PostConversationsKeyconfigurations(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsKeyconfigurations: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration.html)| Encryption Configuration |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration.html)
+
+<a name="postconversationskeyconfigurationsvalidate"></a>
+
+## [**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration.html) PostConversationsKeyconfigurationsValidate (ConversationEncryptionConfiguration body)
+
+
+
+Validate encryption key configurations without saving it
+
+
+
+Requires ANY permissions: 
+
+* conversation:encryptionKey:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsKeyconfigurationsValidateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var body = new ConversationEncryptionConfiguration(); // ConversationEncryptionConfiguration | Encryption Configuration
+
+            try
+            { 
+                // Validate encryption key configurations without saving it
+                ConversationEncryptionConfiguration result = apiInstance.PostConversationsKeyconfigurationsValidate(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsKeyconfigurationsValidate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration.html)| Encryption Configuration |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration.html)
+
 <a name="postconversationsmessagecommunicationmessages"></a>
 
 ## [**MessageData**](MessageData.html) PostConversationsMessageCommunicationMessages (string conversationId, string communicationId, AdditionalMessage body)
@@ -10345,6 +10740,73 @@ namespace Example
 
 void (empty response body)
 
+<a name="putconversationsecureattributes"></a>
+
+## **string** PutConversationSecureattributes (string conversationId, ConversationSecureAttributes body)
+
+
+
+Set the secure attributes on a conversation.
+
+
+
+Requires ANY permissions: 
+
+* conversation:participant:attributesedit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutConversationSecureattributesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversation ID
+            var body = new ConversationSecureAttributes(); // ConversationSecureAttributes | Conversation Secure Attributes
+
+            try
+            { 
+                // Set the secure attributes on a conversation.
+                string result = apiInstance.PutConversationSecureattributes(conversationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PutConversationSecureattributes: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversation ID |  |
+| **body** | [**ConversationSecureAttributes**](ConversationSecureAttributes.html)| Conversation Secure Attributes |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
+
 <a name="putconversationtags"></a>
 
 ## **string** PutConversationTags (string conversationId, ConversationTagsUpdate body)
@@ -10882,6 +11344,73 @@ namespace Example
 ### Return type
 
 **string**
+
+<a name="putconversationskeyconfiguration"></a>
+
+## [**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration.html) PutConversationsKeyconfiguration (string keyconfigurationsId, ConversationEncryptionConfiguration body)
+
+
+
+Update the encryption key configurations
+
+
+
+Requires ANY permissions: 
+
+* conversation:encryptionKey:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutConversationsKeyconfigurationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var keyconfigurationsId = keyconfigurationsId_example;  // string | Key Configurations Id
+            var body = new ConversationEncryptionConfiguration(); // ConversationEncryptionConfiguration | Encryption key configuration metadata
+
+            try
+            { 
+                // Update the encryption key configurations
+                ConversationEncryptionConfiguration result = apiInstance.PutConversationsKeyconfiguration(keyconfigurationsId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PutConversationsKeyconfiguration: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **keyconfigurationsId** | **string**| Key Configurations Id |  |
+| **body** | [**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration.html)| Encryption key configuration metadata |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ConversationEncryptionConfiguration**](ConversationEncryptionConfiguration.html)
 
 <a name="putconversationsmessagerecordingstate"></a>
 

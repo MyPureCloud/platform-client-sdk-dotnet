@@ -22,13 +22,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="DialogflowAgentSummary" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="Project">The project this Dialogflow agent belongs to.</param>
-        /// <param name="Description">A description of the Dialogflow agent.</param>
-        public DialogflowAgentSummary(string Name = null, DialogflowProject Project = null, string Description = null)
+        /// <param name="Project">The project this Dialogflow agent belongs to..</param>
+        /// <param name="Description">A description of the Dialogflow agent..</param>
+        /// <param name="Integration">The Integration this Dialogflow agent was referenced from..</param>
+        public DialogflowAgentSummary(string Name = null, DialogflowProject Project = null, string Description = null, DomainEntityRef Integration = null)
         {
             this.Name = Name;
             this.Project = Project;
             this.Description = Description;
+            this.Integration = Integration;
             
         }
         
@@ -52,20 +54,29 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The project this Dialogflow agent belongs to
+        /// The project this Dialogflow agent belongs to.
         /// </summary>
-        /// <value>The project this Dialogflow agent belongs to</value>
+        /// <value>The project this Dialogflow agent belongs to.</value>
         [DataMember(Name="project", EmitDefaultValue=false)]
         public DialogflowProject Project { get; set; }
 
 
 
         /// <summary>
-        /// A description of the Dialogflow agent
+        /// A description of the Dialogflow agent.
         /// </summary>
-        /// <value>A description of the Dialogflow agent</value>
+        /// <value>A description of the Dialogflow agent.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
+
+
+
+        /// <summary>
+        /// The Integration this Dialogflow agent was referenced from.
+        /// </summary>
+        /// <value>The Integration this Dialogflow agent was referenced from.</value>
+        [DataMember(Name="integration", EmitDefaultValue=false)]
+        public DomainEntityRef Integration { get; set; }
 
 
 
@@ -90,6 +101,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Project: ").Append(Project).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  Integration: ").Append(Integration).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -152,6 +164,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Description.Equals(other.Description)
                 ) &&
                 (
+                    this.Integration == other.Integration ||
+                    this.Integration != null &&
+                    this.Integration.Equals(other.Integration)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -180,6 +197,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
+
+                if (this.Integration != null)
+                    hash = hash * 59 + this.Integration.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

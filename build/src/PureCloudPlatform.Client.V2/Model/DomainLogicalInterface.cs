@@ -158,12 +158,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="Description">The resource's description..</param>
         /// <param name="Version">The current version of the resource..</param>
-        /// <param name="DateCreated">The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="DateModified">The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="ModifiedBy">The ID of the user that last modified the resource..</param>
-        /// <param name="CreatedBy">The ID of the user that created the resource..</param>
-        /// <param name="ModifiedByApp">The application that last modified the resource..</param>
-        /// <param name="CreatedByApp">The application that created the resource..</param>
         /// <param name="EdgeUri">EdgeUri.</param>
         /// <param name="EdgeAssignedId">EdgeAssignedId.</param>
         /// <param name="FriendlyName">Friendly Name (required).</param>
@@ -191,18 +185,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TraceEnabled">TraceEnabled.</param>
         /// <param name="StartDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="EndDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public DomainLogicalInterface(string Name = null, Division Division = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, string EdgeUri = null, string EdgeAssignedId = null, string FriendlyName = null, int? VlanTagId = null, string HardwareAddress = null, string PhysicalAdapterId = null, string IfStatus = null, string PublicNatAddressIpV4 = null, string PublicNatAddressIpV6 = null, List<DomainNetworkRoute> Routes = null, List<DomainNetworkAddress> Addresses = null, DomainCapabilities Ipv4Capabilities = null, DomainCapabilities Ipv6Capabilities = null, CurrentStateEnum? CurrentState = null, string LastModifiedUserId = null, string LastModifiedCorrelationId = null, List<DomainNetworkCommandResponse> CommandResponses = null, bool? InheritPhoneTrunkBasesIPv4 = null, bool? InheritPhoneTrunkBasesIPv6 = null, bool? UseForInternalEdgeCommunication = null, bool? UseForIndirectEdgeCommunication = null, bool? UseForCloudProxyEdgeCommunication = null, List<TrunkBaseAssignment> ExternalTrunkBaseAssignments = null, List<TrunkBaseAssignment> PhoneTrunkBaseAssignments = null, bool? TraceEnabled = null, DateTime? StartDate = null, DateTime? EndDate = null)
+        public DomainLogicalInterface(string Name = null, Division Division = null, string Description = null, int? Version = null, string EdgeUri = null, string EdgeAssignedId = null, string FriendlyName = null, int? VlanTagId = null, string HardwareAddress = null, string PhysicalAdapterId = null, string IfStatus = null, string PublicNatAddressIpV4 = null, string PublicNatAddressIpV6 = null, List<DomainNetworkRoute> Routes = null, List<DomainNetworkAddress> Addresses = null, DomainCapabilities Ipv4Capabilities = null, DomainCapabilities Ipv6Capabilities = null, CurrentStateEnum? CurrentState = null, string LastModifiedUserId = null, string LastModifiedCorrelationId = null, List<DomainNetworkCommandResponse> CommandResponses = null, bool? InheritPhoneTrunkBasesIPv4 = null, bool? InheritPhoneTrunkBasesIPv6 = null, bool? UseForInternalEdgeCommunication = null, bool? UseForIndirectEdgeCommunication = null, bool? UseForCloudProxyEdgeCommunication = null, List<TrunkBaseAssignment> ExternalTrunkBaseAssignments = null, List<TrunkBaseAssignment> PhoneTrunkBaseAssignments = null, bool? TraceEnabled = null, DateTime? StartDate = null, DateTime? EndDate = null)
         {
             this.Name = Name;
             this.Division = Division;
             this.Description = Description;
             this.Version = Version;
-            this.DateCreated = DateCreated;
-            this.DateModified = DateModified;
-            this.ModifiedBy = ModifiedBy;
-            this.CreatedBy = CreatedBy;
-            this.ModifiedByApp = ModifiedByApp;
-            this.CreatedByApp = CreatedByApp;
             this.EdgeUri = EdgeUri;
             this.EdgeAssignedId = EdgeAssignedId;
             this.FriendlyName = FriendlyName;
@@ -285,7 +273,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
-        public DateTime? DateCreated { get; set; }
+        public DateTime? DateCreated { get; private set; }
 
 
 
@@ -294,7 +282,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
-        public DateTime? DateModified { get; set; }
+        public DateTime? DateModified { get; private set; }
 
 
 
@@ -303,7 +291,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The ID of the user that last modified the resource.</value>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
-        public string ModifiedBy { get; set; }
+        public string ModifiedBy { get; private set; }
 
 
 
@@ -312,7 +300,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The ID of the user that created the resource.</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
-        public string CreatedBy { get; set; }
+        public string CreatedBy { get; private set; }
 
 
 
@@ -323,7 +311,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The application that last modified the resource.</value>
         [DataMember(Name="modifiedByApp", EmitDefaultValue=false)]
-        public string ModifiedByApp { get; set; }
+        public string ModifiedByApp { get; private set; }
 
 
 
@@ -332,7 +320,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The application that created the resource.</value>
         [DataMember(Name="createdByApp", EmitDefaultValue=false)]
-        public string CreatedByApp { get; set; }
+        public string CreatedByApp { get; private set; }
 
 
 

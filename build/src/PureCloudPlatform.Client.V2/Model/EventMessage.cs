@@ -423,6 +423,24 @@ namespace PureCloudPlatform.Client.V2.Model
             ImportFailedContactZipCodeColumnValueInvalid,
             
             /// <summary>
+            /// Enum ImportFailedContactDataGreaterThanMaxLength for "IMPORT_FAILED_CONTACT_DATA_GREATER_THAN_MAX_LENGTH"
+            /// </summary>
+            [EnumMember(Value = "IMPORT_FAILED_CONTACT_DATA_GREATER_THAN_MAX_LENGTH")]
+            ImportFailedContactDataGreaterThanMaxLength,
+            
+            /// <summary>
+            /// Enum ImportFailedContactDataNotWithinMinMaxRange for "IMPORT_FAILED_CONTACT_DATA_NOT_WITHIN_MIN_MAX_RANGE"
+            /// </summary>
+            [EnumMember(Value = "IMPORT_FAILED_CONTACT_DATA_NOT_WITHIN_MIN_MAX_RANGE")]
+            ImportFailedContactDataNotWithinMinMaxRange,
+            
+            /// <summary>
+            /// Enum ImportFailedContactDataInvalidDatatype for "IMPORT_FAILED_CONTACT_DATA_INVALID_DATATYPE"
+            /// </summary>
+            [EnumMember(Value = "IMPORT_FAILED_CONTACT_DATA_INVALID_DATATYPE")]
+            ImportFailedContactDataInvalidDatatype,
+            
+            /// <summary>
             /// Enum ImportTooManyColumns for "IMPORT_TOO_MANY_COLUMNS"
             /// </summary>
             [EnumMember(Value = "IMPORT_TOO_MANY_COLUMNS")]

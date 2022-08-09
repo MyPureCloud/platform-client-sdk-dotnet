@@ -79,7 +79,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Frfr for "fr-fr"
             /// </summary>
             [EnumMember(Value = "fr-fr")]
-            Frfr
+            Frfr,
+            
+            /// <summary>
+            /// Enum Frca for "fr-ca"
+            /// </summary>
+            [EnumMember(Value = "fr-ca")]
+            Frca
         }
         /// <summary>
         /// Status of the miner.

@@ -503,6 +503,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<List<WrapupCode>> GetConversationParticipantWrapupcodesWithHttpInfo (string conversationId, string participantId);
 
         /// <summary>
+        /// Get the secure attributes on a conversation.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <returns>ConversationSecureAttributes</returns>
+        ConversationSecureAttributes GetConversationSecureattributes (string conversationId);
+
+        /// <summary>
+        /// Get the secure attributes on a conversation.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <returns>ApiResponse of ConversationSecureAttributes</returns>
+        ApiResponse<ConversationSecureAttributes> GetConversationSecureattributesWithHttpInfo (string conversationId);
+
+        /// <summary>
         /// Get active conversations for the logged in user
         /// </summary>
         /// <remarks>
@@ -1177,6 +1199,48 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<EmailConversationEntityListing> GetConversationsEmailsWithHttpInfo ();
 
         /// <summary>
+        /// Get the encryption key configurations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyconfigurationsId">Key Configurations Id</param>
+        /// <returns>ConversationEncryptionConfiguration</returns>
+        ConversationEncryptionConfiguration GetConversationsKeyconfiguration (string keyconfigurationsId);
+
+        /// <summary>
+        /// Get the encryption key configurations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyconfigurationsId">Key Configurations Id</param>
+        /// <returns>ApiResponse of ConversationEncryptionConfiguration</returns>
+        ApiResponse<ConversationEncryptionConfiguration> GetConversationsKeyconfigurationWithHttpInfo (string keyconfigurationsId);
+
+        /// <summary>
+        /// Get a list of key configurations data
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ConversationEncryptionConfigurationListing</returns>
+        ConversationEncryptionConfigurationListing GetConversationsKeyconfigurations ();
+
+        /// <summary>
+        /// Get a list of key configurations data
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of ConversationEncryptionConfigurationListing</returns>
+        ApiResponse<ConversationEncryptionConfigurationListing> GetConversationsKeyconfigurationsWithHttpInfo ();
+
+        /// <summary>
         /// Get message conversation
         /// </summary>
         /// <remarks>
@@ -1811,6 +1875,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Participant attributes</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PatchConversationParticipantAttributesWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body);
+
+        /// <summary>
+        /// Update the secure attributes on a conversation.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="body">Conversation Secure Attributes</param>
+        /// <returns>string</returns>
+        string PatchConversationSecureattributes (string conversationId, ConversationSecureAttributes body);
+
+        /// <summary>
+        /// Update the secure attributes on a conversation.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="body">Conversation Secure Attributes</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> PatchConversationSecureattributesWithHttpInfo (string conversationId, ConversationSecureAttributes body);
 
         /// <summary>
         /// Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants
@@ -3373,6 +3461,50 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<FaxSendResponse> PostConversationsFaxesWithHttpInfo (FaxSendRequest body);
 
         /// <summary>
+        /// Setup configurations for encryption key creation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Encryption Configuration</param>
+        /// <returns>ConversationEncryptionConfiguration</returns>
+        ConversationEncryptionConfiguration PostConversationsKeyconfigurations (ConversationEncryptionConfiguration body);
+
+        /// <summary>
+        /// Setup configurations for encryption key creation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Encryption Configuration</param>
+        /// <returns>ApiResponse of ConversationEncryptionConfiguration</returns>
+        ApiResponse<ConversationEncryptionConfiguration> PostConversationsKeyconfigurationsWithHttpInfo (ConversationEncryptionConfiguration body);
+
+        /// <summary>
+        /// Validate encryption key configurations without saving it
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Encryption Configuration</param>
+        /// <returns>ConversationEncryptionConfiguration</returns>
+        ConversationEncryptionConfiguration PostConversationsKeyconfigurationsValidate (ConversationEncryptionConfiguration body);
+
+        /// <summary>
+        /// Validate encryption key configurations without saving it
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Encryption Configuration</param>
+        /// <returns>ApiResponse of ConversationEncryptionConfiguration</returns>
+        ApiResponse<ConversationEncryptionConfiguration> PostConversationsKeyconfigurationsValidateWithHttpInfo (ConversationEncryptionConfiguration body);
+
+        /// <summary>
         /// Send message
         /// </summary>
         /// <remarks>
@@ -3695,6 +3827,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> PutConversationParticipantFlaggedreasonWithHttpInfo (string conversationId, string participantId);
 
         /// <summary>
+        /// Set the secure attributes on a conversation.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="body">Conversation Secure Attributes</param>
+        /// <returns>string</returns>
+        string PutConversationSecureattributes (string conversationId, ConversationSecureAttributes body);
+
+        /// <summary>
+        /// Set the secure attributes on a conversation.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="body">Conversation Secure Attributes</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> PutConversationSecureattributesWithHttpInfo (string conversationId, ConversationSecureAttributes body);
+
+        /// <summary>
         /// Update the tags on a conversation.
         /// </summary>
         /// <remarks>
@@ -3889,6 +4045,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">SetRecordingState</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> PutConversationsEmailRecordingstateWithHttpInfo (string conversationId, SetRecordingState body);
+
+        /// <summary>
+        /// Update the encryption key configurations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyconfigurationsId">Key Configurations Id</param>
+        /// <param name="body">Encryption key configuration metadata</param>
+        /// <returns>ConversationEncryptionConfiguration</returns>
+        ConversationEncryptionConfiguration PutConversationsKeyconfiguration (string keyconfigurationsId, ConversationEncryptionConfiguration body);
+
+        /// <summary>
+        /// Update the encryption key configurations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyconfigurationsId">Key Configurations Id</param>
+        /// <param name="body">Encryption key configuration metadata</param>
+        /// <returns>ApiResponse of ConversationEncryptionConfiguration</returns>
+        ApiResponse<ConversationEncryptionConfiguration> PutConversationsKeyconfigurationWithHttpInfo (string keyconfigurationsId, ConversationEncryptionConfiguration body);
 
         /// <summary>
         /// Update a conversation by setting its recording state
@@ -4543,6 +4723,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="participantId">participant ID</param>
         /// <returns>Task of ApiResponse (List&lt;WrapupCode&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<WrapupCode>>> GetConversationParticipantWrapupcodesAsyncWithHttpInfo (string conversationId, string participantId);
+
+        /// <summary>
+        /// Get the secure attributes on a conversation.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <returns>Task of ConversationSecureAttributes</returns>
+        System.Threading.Tasks.Task<ConversationSecureAttributes> GetConversationSecureattributesAsync (string conversationId);
+
+        /// <summary>
+        /// Get the secure attributes on a conversation.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <returns>Task of ApiResponse (ConversationSecureAttributes)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ConversationSecureAttributes>> GetConversationSecureattributesAsyncWithHttpInfo (string conversationId);
 
         /// <summary>
         /// Get active conversations for the logged in user
@@ -5219,6 +5421,48 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<EmailConversationEntityListing>> GetConversationsEmailsAsyncWithHttpInfo ();
 
         /// <summary>
+        /// Get the encryption key configurations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyconfigurationsId">Key Configurations Id</param>
+        /// <returns>Task of ConversationEncryptionConfiguration</returns>
+        System.Threading.Tasks.Task<ConversationEncryptionConfiguration> GetConversationsKeyconfigurationAsync (string keyconfigurationsId);
+
+        /// <summary>
+        /// Get the encryption key configurations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyconfigurationsId">Key Configurations Id</param>
+        /// <returns>Task of ApiResponse (ConversationEncryptionConfiguration)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ConversationEncryptionConfiguration>> GetConversationsKeyconfigurationAsyncWithHttpInfo (string keyconfigurationsId);
+
+        /// <summary>
+        /// Get a list of key configurations data
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ConversationEncryptionConfigurationListing</returns>
+        System.Threading.Tasks.Task<ConversationEncryptionConfigurationListing> GetConversationsKeyconfigurationsAsync ();
+
+        /// <summary>
+        /// Get a list of key configurations data
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (ConversationEncryptionConfigurationListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ConversationEncryptionConfigurationListing>> GetConversationsKeyconfigurationsAsyncWithHttpInfo ();
+
+        /// <summary>
         /// Get message conversation
         /// </summary>
         /// <remarks>
@@ -5853,6 +6097,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Participant attributes</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchConversationParticipantAttributesAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body);
+
+        /// <summary>
+        /// Update the secure attributes on a conversation.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="body">Conversation Secure Attributes</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> PatchConversationSecureattributesAsync (string conversationId, ConversationSecureAttributes body);
+
+        /// <summary>
+        /// Update the secure attributes on a conversation.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="body">Conversation Secure Attributes</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> PatchConversationSecureattributesAsyncWithHttpInfo (string conversationId, ConversationSecureAttributes body);
 
         /// <summary>
         /// Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants
@@ -7415,6 +7683,50 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<FaxSendResponse>> PostConversationsFaxesAsyncWithHttpInfo (FaxSendRequest body);
 
         /// <summary>
+        /// Setup configurations for encryption key creation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Encryption Configuration</param>
+        /// <returns>Task of ConversationEncryptionConfiguration</returns>
+        System.Threading.Tasks.Task<ConversationEncryptionConfiguration> PostConversationsKeyconfigurationsAsync (ConversationEncryptionConfiguration body);
+
+        /// <summary>
+        /// Setup configurations for encryption key creation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Encryption Configuration</param>
+        /// <returns>Task of ApiResponse (ConversationEncryptionConfiguration)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ConversationEncryptionConfiguration>> PostConversationsKeyconfigurationsAsyncWithHttpInfo (ConversationEncryptionConfiguration body);
+
+        /// <summary>
+        /// Validate encryption key configurations without saving it
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Encryption Configuration</param>
+        /// <returns>Task of ConversationEncryptionConfiguration</returns>
+        System.Threading.Tasks.Task<ConversationEncryptionConfiguration> PostConversationsKeyconfigurationsValidateAsync (ConversationEncryptionConfiguration body);
+
+        /// <summary>
+        /// Validate encryption key configurations without saving it
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Encryption Configuration</param>
+        /// <returns>Task of ApiResponse (ConversationEncryptionConfiguration)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ConversationEncryptionConfiguration>> PostConversationsKeyconfigurationsValidateAsyncWithHttpInfo (ConversationEncryptionConfiguration body);
+
+        /// <summary>
         /// Send message
         /// </summary>
         /// <remarks>
@@ -7737,6 +8049,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> PutConversationParticipantFlaggedreasonAsyncWithHttpInfo (string conversationId, string participantId);
 
         /// <summary>
+        /// Set the secure attributes on a conversation.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="body">Conversation Secure Attributes</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> PutConversationSecureattributesAsync (string conversationId, ConversationSecureAttributes body);
+
+        /// <summary>
+        /// Set the secure attributes on a conversation.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="body">Conversation Secure Attributes</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> PutConversationSecureattributesAsyncWithHttpInfo (string conversationId, ConversationSecureAttributes body);
+
+        /// <summary>
         /// Update the tags on a conversation.
         /// </summary>
         /// <remarks>
@@ -7931,6 +8267,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">SetRecordingState</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> PutConversationsEmailRecordingstateAsyncWithHttpInfo (string conversationId, SetRecordingState body);
+
+        /// <summary>
+        /// Update the encryption key configurations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyconfigurationsId">Key Configurations Id</param>
+        /// <param name="body">Encryption key configuration metadata</param>
+        /// <returns>Task of ConversationEncryptionConfiguration</returns>
+        System.Threading.Tasks.Task<ConversationEncryptionConfiguration> PutConversationsKeyconfigurationAsync (string keyconfigurationsId, ConversationEncryptionConfiguration body);
+
+        /// <summary>
+        /// Update the encryption key configurations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyconfigurationsId">Key Configurations Id</param>
+        /// <param name="body">Encryption key configuration metadata</param>
+        /// <returns>Task of ApiResponse (ConversationEncryptionConfiguration)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ConversationEncryptionConfiguration>> PutConversationsKeyconfigurationAsyncWithHttpInfo (string keyconfigurationsId, ConversationEncryptionConfiguration body);
 
         /// <summary>
         /// Update a conversation by setting its recording state
@@ -12301,6 +12661,197 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<List<WrapupCode>>(localVarStatusCode,
                 localVarHeaders,
                 (List<WrapupCode>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WrapupCode>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get the secure attributes on a conversation. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <returns>ConversationSecureAttributes</returns>
+        public ConversationSecureAttributes GetConversationSecureattributes (string conversationId)
+        {
+             ApiResponse<ConversationSecureAttributes> localVarResponse = GetConversationSecureattributesWithHttpInfo(conversationId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the secure attributes on a conversation. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <returns>ApiResponse of ConversationSecureAttributes</returns>
+        public ApiResponse< ConversationSecureAttributes > GetConversationSecureattributesWithHttpInfo (string conversationId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationSecureattributes");
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/secureattributes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationSecureattributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationSecureattributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ConversationSecureAttributes>(localVarStatusCode,
+                localVarHeaders,
+                (ConversationSecureAttributes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationSecureAttributes)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the secure attributes on a conversation. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <returns>Task of ConversationSecureAttributes</returns>
+        public async System.Threading.Tasks.Task<ConversationSecureAttributes> GetConversationSecureattributesAsync (string conversationId)
+        {
+             ApiResponse<ConversationSecureAttributes> localVarResponse = await GetConversationSecureattributesAsyncWithHttpInfo(conversationId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the secure attributes on a conversation. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <returns>Task of ApiResponse (ConversationSecureAttributes)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ConversationSecureAttributes>> GetConversationSecureattributesAsyncWithHttpInfo (string conversationId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationSecureattributes");
+            
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/secureattributes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationSecureattributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationSecureattributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ConversationSecureAttributes>(localVarStatusCode,
+                localVarHeaders,
+                (ConversationSecureAttributes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationSecureAttributes)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -17983,6 +18534,375 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get the encryption key configurations 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyconfigurationsId">Key Configurations Id</param>
+        /// <returns>ConversationEncryptionConfiguration</returns>
+        public ConversationEncryptionConfiguration GetConversationsKeyconfiguration (string keyconfigurationsId)
+        {
+             ApiResponse<ConversationEncryptionConfiguration> localVarResponse = GetConversationsKeyconfigurationWithHttpInfo(keyconfigurationsId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the encryption key configurations 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyconfigurationsId">Key Configurations Id</param>
+        /// <returns>ApiResponse of ConversationEncryptionConfiguration</returns>
+        public ApiResponse< ConversationEncryptionConfiguration > GetConversationsKeyconfigurationWithHttpInfo (string keyconfigurationsId)
+        { 
+            // verify the required parameter 'keyconfigurationsId' is set
+            if (keyconfigurationsId == null)
+                throw new ApiException(400, "Missing required parameter 'keyconfigurationsId' when calling ConversationsApi->GetConversationsKeyconfiguration");
+
+            var localVarPath = "/api/v2/conversations/keyconfigurations/{keyconfigurationsId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (keyconfigurationsId != null) localVarPathParams.Add("keyconfigurationsId", this.Configuration.ApiClient.ParameterToString(keyconfigurationsId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsKeyconfiguration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsKeyconfiguration: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ConversationEncryptionConfiguration>(localVarStatusCode,
+                localVarHeaders,
+                (ConversationEncryptionConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationEncryptionConfiguration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the encryption key configurations 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyconfigurationsId">Key Configurations Id</param>
+        /// <returns>Task of ConversationEncryptionConfiguration</returns>
+        public async System.Threading.Tasks.Task<ConversationEncryptionConfiguration> GetConversationsKeyconfigurationAsync (string keyconfigurationsId)
+        {
+             ApiResponse<ConversationEncryptionConfiguration> localVarResponse = await GetConversationsKeyconfigurationAsyncWithHttpInfo(keyconfigurationsId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the encryption key configurations 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyconfigurationsId">Key Configurations Id</param>
+        /// <returns>Task of ApiResponse (ConversationEncryptionConfiguration)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ConversationEncryptionConfiguration>> GetConversationsKeyconfigurationAsyncWithHttpInfo (string keyconfigurationsId)
+        { 
+            // verify the required parameter 'keyconfigurationsId' is set
+            if (keyconfigurationsId == null)
+                throw new ApiException(400, "Missing required parameter 'keyconfigurationsId' when calling ConversationsApi->GetConversationsKeyconfiguration");
+            
+
+            var localVarPath = "/api/v2/conversations/keyconfigurations/{keyconfigurationsId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (keyconfigurationsId != null) localVarPathParams.Add("keyconfigurationsId", this.Configuration.ApiClient.ParameterToString(keyconfigurationsId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsKeyconfiguration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsKeyconfiguration: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ConversationEncryptionConfiguration>(localVarStatusCode,
+                localVarHeaders,
+                (ConversationEncryptionConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationEncryptionConfiguration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a list of key configurations data 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ConversationEncryptionConfigurationListing</returns>
+        public ConversationEncryptionConfigurationListing GetConversationsKeyconfigurations ()
+        {
+             ApiResponse<ConversationEncryptionConfigurationListing> localVarResponse = GetConversationsKeyconfigurationsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a list of key configurations data 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of ConversationEncryptionConfigurationListing</returns>
+        public ApiResponse< ConversationEncryptionConfigurationListing > GetConversationsKeyconfigurationsWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/conversations/keyconfigurations";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsKeyconfigurations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsKeyconfigurations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ConversationEncryptionConfigurationListing>(localVarStatusCode,
+                localVarHeaders,
+                (ConversationEncryptionConfigurationListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationEncryptionConfigurationListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a list of key configurations data 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ConversationEncryptionConfigurationListing</returns>
+        public async System.Threading.Tasks.Task<ConversationEncryptionConfigurationListing> GetConversationsKeyconfigurationsAsync ()
+        {
+             ApiResponse<ConversationEncryptionConfigurationListing> localVarResponse = await GetConversationsKeyconfigurationsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a list of key configurations data 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (ConversationEncryptionConfigurationListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ConversationEncryptionConfigurationListing>> GetConversationsKeyconfigurationsAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/conversations/keyconfigurations";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsKeyconfigurations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsKeyconfigurations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ConversationEncryptionConfigurationListing>(localVarStatusCode,
+                localVarHeaders,
+                (ConversationEncryptionConfigurationListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationEncryptionConfigurationListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get message conversation 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -23136,6 +24056,220 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
                 null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update the secure attributes on a conversation. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="body">Conversation Secure Attributes</param>
+        /// <returns>string</returns>
+        public string PatchConversationSecureattributes (string conversationId, ConversationSecureAttributes body)
+        {
+             ApiResponse<string> localVarResponse = PatchConversationSecureattributesWithHttpInfo(conversationId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update the secure attributes on a conversation. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="body">Conversation Secure Attributes</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > PatchConversationSecureattributesWithHttpInfo (string conversationId, ConversationSecureAttributes body)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PatchConversationSecureattributes");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationSecureattributes");
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/secureattributes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationSecureattributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationSecureattributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarHeaders,
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update the secure attributes on a conversation. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="body">Conversation Secure Attributes</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> PatchConversationSecureattributesAsync (string conversationId, ConversationSecureAttributes body)
+        {
+             ApiResponse<string> localVarResponse = await PatchConversationSecureattributesAsyncWithHttpInfo(conversationId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update the secure attributes on a conversation. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="body">Conversation Secure Attributes</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> PatchConversationSecureattributesAsyncWithHttpInfo (string conversationId, ConversationSecureAttributes body)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PatchConversationSecureattributes");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationSecureattributes");
+            
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/secureattributes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationSecureattributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationSecureattributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarHeaders,
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -36795,6 +37929,408 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Setup configurations for encryption key creation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Encryption Configuration</param>
+        /// <returns>ConversationEncryptionConfiguration</returns>
+        public ConversationEncryptionConfiguration PostConversationsKeyconfigurations (ConversationEncryptionConfiguration body)
+        {
+             ApiResponse<ConversationEncryptionConfiguration> localVarResponse = PostConversationsKeyconfigurationsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Setup configurations for encryption key creation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Encryption Configuration</param>
+        /// <returns>ApiResponse of ConversationEncryptionConfiguration</returns>
+        public ApiResponse< ConversationEncryptionConfiguration > PostConversationsKeyconfigurationsWithHttpInfo (ConversationEncryptionConfiguration body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsKeyconfigurations");
+
+            var localVarPath = "/api/v2/conversations/keyconfigurations";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsKeyconfigurations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsKeyconfigurations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ConversationEncryptionConfiguration>(localVarStatusCode,
+                localVarHeaders,
+                (ConversationEncryptionConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationEncryptionConfiguration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Setup configurations for encryption key creation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Encryption Configuration</param>
+        /// <returns>Task of ConversationEncryptionConfiguration</returns>
+        public async System.Threading.Tasks.Task<ConversationEncryptionConfiguration> PostConversationsKeyconfigurationsAsync (ConversationEncryptionConfiguration body)
+        {
+             ApiResponse<ConversationEncryptionConfiguration> localVarResponse = await PostConversationsKeyconfigurationsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Setup configurations for encryption key creation 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Encryption Configuration</param>
+        /// <returns>Task of ApiResponse (ConversationEncryptionConfiguration)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ConversationEncryptionConfiguration>> PostConversationsKeyconfigurationsAsyncWithHttpInfo (ConversationEncryptionConfiguration body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsKeyconfigurations");
+            
+
+            var localVarPath = "/api/v2/conversations/keyconfigurations";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsKeyconfigurations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsKeyconfigurations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ConversationEncryptionConfiguration>(localVarStatusCode,
+                localVarHeaders,
+                (ConversationEncryptionConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationEncryptionConfiguration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Validate encryption key configurations without saving it 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Encryption Configuration</param>
+        /// <returns>ConversationEncryptionConfiguration</returns>
+        public ConversationEncryptionConfiguration PostConversationsKeyconfigurationsValidate (ConversationEncryptionConfiguration body)
+        {
+             ApiResponse<ConversationEncryptionConfiguration> localVarResponse = PostConversationsKeyconfigurationsValidateWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Validate encryption key configurations without saving it 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Encryption Configuration</param>
+        /// <returns>ApiResponse of ConversationEncryptionConfiguration</returns>
+        public ApiResponse< ConversationEncryptionConfiguration > PostConversationsKeyconfigurationsValidateWithHttpInfo (ConversationEncryptionConfiguration body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsKeyconfigurationsValidate");
+
+            var localVarPath = "/api/v2/conversations/keyconfigurations/validate";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsKeyconfigurationsValidate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsKeyconfigurationsValidate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ConversationEncryptionConfiguration>(localVarStatusCode,
+                localVarHeaders,
+                (ConversationEncryptionConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationEncryptionConfiguration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Validate encryption key configurations without saving it 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Encryption Configuration</param>
+        /// <returns>Task of ConversationEncryptionConfiguration</returns>
+        public async System.Threading.Tasks.Task<ConversationEncryptionConfiguration> PostConversationsKeyconfigurationsValidateAsync (ConversationEncryptionConfiguration body)
+        {
+             ApiResponse<ConversationEncryptionConfiguration> localVarResponse = await PostConversationsKeyconfigurationsValidateAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Validate encryption key configurations without saving it 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Encryption Configuration</param>
+        /// <returns>Task of ApiResponse (ConversationEncryptionConfiguration)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ConversationEncryptionConfiguration>> PostConversationsKeyconfigurationsValidateAsyncWithHttpInfo (ConversationEncryptionConfiguration body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsKeyconfigurationsValidate");
+            
+
+            var localVarPath = "/api/v2/conversations/keyconfigurations/validate";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsKeyconfigurationsValidate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsKeyconfigurationsValidate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ConversationEncryptionConfiguration>(localVarStatusCode,
+                localVarHeaders,
+                (ConversationEncryptionConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationEncryptionConfiguration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Send message Send message on existing conversation/communication. Only one message body field can be accepted, per request. Example: 1 textBody, 1 mediaId, 1 stickerId, or 1 messageTemplate.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -39669,6 +41205,220 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Set the secure attributes on a conversation. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="body">Conversation Secure Attributes</param>
+        /// <returns>string</returns>
+        public string PutConversationSecureattributes (string conversationId, ConversationSecureAttributes body)
+        {
+             ApiResponse<string> localVarResponse = PutConversationSecureattributesWithHttpInfo(conversationId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Set the secure attributes on a conversation. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="body">Conversation Secure Attributes</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > PutConversationSecureattributesWithHttpInfo (string conversationId, ConversationSecureAttributes body)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PutConversationSecureattributes");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationSecureattributes");
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/secureattributes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutConversationSecureattributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutConversationSecureattributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarHeaders,
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Set the secure attributes on a conversation. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="body">Conversation Secure Attributes</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> PutConversationSecureattributesAsync (string conversationId, ConversationSecureAttributes body)
+        {
+             ApiResponse<string> localVarResponse = await PutConversationSecureattributesAsyncWithHttpInfo(conversationId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Set the secure attributes on a conversation. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="body">Conversation Secure Attributes</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> PutConversationSecureattributesAsyncWithHttpInfo (string conversationId, ConversationSecureAttributes body)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PutConversationSecureattributes");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationSecureattributes");
+            
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/secureattributes";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutConversationSecureattributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutConversationSecureattributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarHeaders,
+                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Update the tags on a conversation. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -41400,6 +43150,220 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<string>(localVarStatusCode,
                 localVarHeaders,
                 (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update the encryption key configurations 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyconfigurationsId">Key Configurations Id</param>
+        /// <param name="body">Encryption key configuration metadata</param>
+        /// <returns>ConversationEncryptionConfiguration</returns>
+        public ConversationEncryptionConfiguration PutConversationsKeyconfiguration (string keyconfigurationsId, ConversationEncryptionConfiguration body)
+        {
+             ApiResponse<ConversationEncryptionConfiguration> localVarResponse = PutConversationsKeyconfigurationWithHttpInfo(keyconfigurationsId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update the encryption key configurations 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyconfigurationsId">Key Configurations Id</param>
+        /// <param name="body">Encryption key configuration metadata</param>
+        /// <returns>ApiResponse of ConversationEncryptionConfiguration</returns>
+        public ApiResponse< ConversationEncryptionConfiguration > PutConversationsKeyconfigurationWithHttpInfo (string keyconfigurationsId, ConversationEncryptionConfiguration body)
+        { 
+            // verify the required parameter 'keyconfigurationsId' is set
+            if (keyconfigurationsId == null)
+                throw new ApiException(400, "Missing required parameter 'keyconfigurationsId' when calling ConversationsApi->PutConversationsKeyconfiguration");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsKeyconfiguration");
+
+            var localVarPath = "/api/v2/conversations/keyconfigurations/{keyconfigurationsId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (keyconfigurationsId != null) localVarPathParams.Add("keyconfigurationsId", this.Configuration.ApiClient.ParameterToString(keyconfigurationsId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutConversationsKeyconfiguration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutConversationsKeyconfiguration: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ConversationEncryptionConfiguration>(localVarStatusCode,
+                localVarHeaders,
+                (ConversationEncryptionConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationEncryptionConfiguration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update the encryption key configurations 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyconfigurationsId">Key Configurations Id</param>
+        /// <param name="body">Encryption key configuration metadata</param>
+        /// <returns>Task of ConversationEncryptionConfiguration</returns>
+        public async System.Threading.Tasks.Task<ConversationEncryptionConfiguration> PutConversationsKeyconfigurationAsync (string keyconfigurationsId, ConversationEncryptionConfiguration body)
+        {
+             ApiResponse<ConversationEncryptionConfiguration> localVarResponse = await PutConversationsKeyconfigurationAsyncWithHttpInfo(keyconfigurationsId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update the encryption key configurations 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="keyconfigurationsId">Key Configurations Id</param>
+        /// <param name="body">Encryption key configuration metadata</param>
+        /// <returns>Task of ApiResponse (ConversationEncryptionConfiguration)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ConversationEncryptionConfiguration>> PutConversationsKeyconfigurationAsyncWithHttpInfo (string keyconfigurationsId, ConversationEncryptionConfiguration body)
+        { 
+            // verify the required parameter 'keyconfigurationsId' is set
+            if (keyconfigurationsId == null)
+                throw new ApiException(400, "Missing required parameter 'keyconfigurationsId' when calling ConversationsApi->PutConversationsKeyconfiguration");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsKeyconfiguration");
+            
+
+            var localVarPath = "/api/v2/conversations/keyconfigurations/{keyconfigurationsId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (keyconfigurationsId != null) localVarPathParams.Add("keyconfigurationsId", this.Configuration.ApiClient.ParameterToString(keyconfigurationsId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutConversationsKeyconfiguration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutConversationsKeyconfiguration: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ConversationEncryptionConfiguration>(localVarStatusCode,
+                localVarHeaders,
+                (ConversationEncryptionConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationEncryptionConfiguration)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

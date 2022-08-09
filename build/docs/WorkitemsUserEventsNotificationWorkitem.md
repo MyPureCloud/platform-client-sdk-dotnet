@@ -33,6 +33,7 @@ title: WorkitemsUserEventsNotificationWorkitem
 | **AssignmentState** | **string** |  | [optional] |
 | **AssignmentId** | **string** |  | [optional] |
 | **AlertTimeoutSeconds** | **int?** |  | [optional] |
+| **CustomFields** | [**Dictionary&lt;string, WorkitemsUserEventsNotificationCustomAttribute&gt;**](WorkitemsUserEventsNotificationCustomAttribute.html) |  | [optional] |
 {: class="table table-striped"}
 
 

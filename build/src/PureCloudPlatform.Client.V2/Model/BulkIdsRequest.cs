@@ -22,7 +22,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="BulkIdsRequest" /> class.
         /// </summary>
         /// <param name="Entities">Entities.</param>
-        public BulkIdsRequest(List<Entity> Entities = null)
+        public BulkIdsRequest(List<WritableEntity> Entities = null)
         {
             this.Entities = Entities;
             
@@ -34,7 +34,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<Entity> Entities { get; set; }
+        public List<WritableEntity> Entities { get; set; }
 
 
         /// <summary>

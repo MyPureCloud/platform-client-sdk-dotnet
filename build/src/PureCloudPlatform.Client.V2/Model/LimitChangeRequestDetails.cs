@@ -19,6 +19,363 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class LimitChangeRequestDetails :  IEquatable<LimitChangeRequestDetails>
     {
         /// <summary>
+        /// Namespace the key belongs to (see https://developer.mypurecloud.com/api/rest/v2/organization/limits.html#available_limits)
+        /// </summary>
+        /// <value>Namespace the key belongs to (see https://developer.mypurecloud.com/api/rest/v2/organization/limits.html#available_limits)</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum NamespaceEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Contacts for "contacts"
+            /// </summary>
+            [EnumMember(Value = "contacts")]
+            Contacts,
+            
+            /// <summary>
+            /// Enum Agentassistant for "agent.assistant"
+            /// </summary>
+            [EnumMember(Value = "agent.assistant")]
+            Agentassistant,
+            
+            /// <summary>
+            /// Enum Analyticsalerting for "analytics.alerting"
+            /// </summary>
+            [EnumMember(Value = "analytics.alerting")]
+            Analyticsalerting,
+            
+            /// <summary>
+            /// Enum Analytics for "analytics"
+            /// </summary>
+            [EnumMember(Value = "analytics")]
+            Analytics,
+            
+            /// <summary>
+            /// Enum Analyticsrealtime for "analytics.realtime"
+            /// </summary>
+            [EnumMember(Value = "analytics.realtime")]
+            Analyticsrealtime,
+            
+            /// <summary>
+            /// Enum Analyticsreportingsettings for "analytics.reporting.settings"
+            /// </summary>
+            [EnumMember(Value = "analytics.reporting.settings")]
+            Analyticsreportingsettings,
+            
+            /// <summary>
+            /// Enum Architect for "architect"
+            /// </summary>
+            [EnumMember(Value = "architect")]
+            Architect,
+            
+            /// <summary>
+            /// Enum Audiohook for "audiohook"
+            /// </summary>
+            [EnumMember(Value = "audiohook")]
+            Audiohook,
+            
+            /// <summary>
+            /// Enum Audit for "audit"
+            /// </summary>
+            [EnumMember(Value = "audit")]
+            Audit,
+            
+            /// <summary>
+            /// Enum Authapi for "auth.api"
+            /// </summary>
+            [EnumMember(Value = "auth.api")]
+            Authapi,
+            
+            /// <summary>
+            /// Enum Authorization for "authorization"
+            /// </summary>
+            [EnumMember(Value = "authorization")]
+            Authorization,
+            
+            /// <summary>
+            /// Enum Automationtesting for "automation.testing"
+            /// </summary>
+            [EnumMember(Value = "automation.testing")]
+            Automationtesting,
+            
+            /// <summary>
+            /// Enum Bots for "bots"
+            /// </summary>
+            [EnumMember(Value = "bots")]
+            Bots,
+            
+            /// <summary>
+            /// Enum Botsvoice for "bots.voice"
+            /// </summary>
+            [EnumMember(Value = "bots.voice")]
+            Botsvoice,
+            
+            /// <summary>
+            /// Enum Cobrowse for "cobrowse"
+            /// </summary>
+            [EnumMember(Value = "cobrowse")]
+            Cobrowse,
+            
+            /// <summary>
+            /// Enum Contentmanagement for "content.management"
+            /// </summary>
+            [EnumMember(Value = "content.management")]
+            Contentmanagement,
+            
+            /// <summary>
+            /// Enum Conversation for "conversation"
+            /// </summary>
+            [EnumMember(Value = "conversation")]
+            Conversation,
+            
+            /// <summary>
+            /// Enum Dataactions for "dataactions"
+            /// </summary>
+            [EnumMember(Value = "dataactions")]
+            Dataactions,
+            
+            /// <summary>
+            /// Enum Datatables for "datatables"
+            /// </summary>
+            [EnumMember(Value = "datatables")]
+            Datatables,
+            
+            /// <summary>
+            /// Enum Directory for "directory"
+            /// </summary>
+            [EnumMember(Value = "directory")]
+            Directory,
+            
+            /// <summary>
+            /// Enum Email for "email"
+            /// </summary>
+            [EnumMember(Value = "email")]
+            Email,
+            
+            /// <summary>
+            /// Enum Eventorchestration for "event.orchestration"
+            /// </summary>
+            [EnumMember(Value = "event.orchestration")]
+            Eventorchestration,
+            
+            /// <summary>
+            /// Enum Externalcontacts for "external.contacts"
+            /// </summary>
+            [EnumMember(Value = "external.contacts")]
+            Externalcontacts,
+            
+            /// <summary>
+            /// Enum Gcv for "gcv"
+            /// </summary>
+            [EnumMember(Value = "gcv")]
+            Gcv,
+            
+            /// <summary>
+            /// Enum Gdpr for "gdpr"
+            /// </summary>
+            [EnumMember(Value = "gdpr")]
+            Gdpr,
+            
+            /// <summary>
+            /// Enum Groups for "groups"
+            /// </summary>
+            [EnumMember(Value = "groups")]
+            Groups,
+            
+            /// <summary>
+            /// Enum Historicaladherence for "historical.adherence"
+            /// </summary>
+            [EnumMember(Value = "historical.adherence")]
+            Historicaladherence,
+            
+            /// <summary>
+            /// Enum Infrastructureascode for "infrastructureascode"
+            /// </summary>
+            [EnumMember(Value = "infrastructureascode")]
+            Infrastructureascode,
+            
+            /// <summary>
+            /// Enum Integrations for "integrations"
+            /// </summary>
+            [EnumMember(Value = "integrations")]
+            Integrations,
+            
+            /// <summary>
+            /// Enum Intentminer for "intent.miner"
+            /// </summary>
+            [EnumMember(Value = "intent.miner")]
+            Intentminer,
+            
+            /// <summary>
+            /// Enum Journey for "journey"
+            /// </summary>
+            [EnumMember(Value = "journey")]
+            Journey,
+            
+            /// <summary>
+            /// Enum Knowledge for "knowledge"
+            /// </summary>
+            [EnumMember(Value = "knowledge")]
+            Knowledge,
+            
+            /// <summary>
+            /// Enum Languageunderstanding for "language.understanding"
+            /// </summary>
+            [EnumMember(Value = "language.understanding")]
+            Languageunderstanding,
+            
+            /// <summary>
+            /// Enum Limitregistry for "limit.registry"
+            /// </summary>
+            [EnumMember(Value = "limit.registry")]
+            Limitregistry,
+            
+            /// <summary>
+            /// Enum Marketplace for "marketplace"
+            /// </summary>
+            [EnumMember(Value = "marketplace")]
+            Marketplace,
+            
+            /// <summary>
+            /// Enum Messaging for "messaging"
+            /// </summary>
+            [EnumMember(Value = "messaging")]
+            Messaging,
+            
+            /// <summary>
+            /// Enum Notifications for "notifications"
+            /// </summary>
+            [EnumMember(Value = "notifications")]
+            Notifications,
+            
+            /// <summary>
+            /// Enum Onboarding for "onboarding"
+            /// </summary>
+            [EnumMember(Value = "onboarding")]
+            Onboarding,
+            
+            /// <summary>
+            /// Enum Outbound for "outbound"
+            /// </summary>
+            [EnumMember(Value = "outbound")]
+            Outbound,
+            
+            /// <summary>
+            /// Enum Platformapi for "platform.api"
+            /// </summary>
+            [EnumMember(Value = "platform.api")]
+            Platformapi,
+            
+            /// <summary>
+            /// Enum Predictiverouting for "predictive.routing"
+            /// </summary>
+            [EnumMember(Value = "predictive.routing")]
+            Predictiverouting,
+            
+            /// <summary>
+            /// Enum Quality for "quality"
+            /// </summary>
+            [EnumMember(Value = "quality")]
+            Quality,
+            
+            /// <summary>
+            /// Enum Recording for "recording"
+            /// </summary>
+            [EnumMember(Value = "recording")]
+            Recording,
+            
+            /// <summary>
+            /// Enum Responsemanagement for "response.management"
+            /// </summary>
+            [EnumMember(Value = "response.management")]
+            Responsemanagement,
+            
+            /// <summary>
+            /// Enum Routing for "routing"
+            /// </summary>
+            [EnumMember(Value = "routing")]
+            Routing,
+            
+            /// <summary>
+            /// Enum Scim for "scim"
+            /// </summary>
+            [EnumMember(Value = "scim")]
+            Scim,
+            
+            /// <summary>
+            /// Enum Search for "search"
+            /// </summary>
+            [EnumMember(Value = "search")]
+            Search,
+            
+            /// <summary>
+            /// Enum Speechandtextanalytics for "speech.and.text.analytics"
+            /// </summary>
+            [EnumMember(Value = "speech.and.text.analytics")]
+            Speechandtextanalytics,
+            
+            /// <summary>
+            /// Enum Speechintegration for "speech.integration"
+            /// </summary>
+            [EnumMember(Value = "speech.integration")]
+            Speechintegration,
+            
+            /// <summary>
+            /// Enum Supportability for "supportability"
+            /// </summary>
+            [EnumMember(Value = "supportability")]
+            Supportability,
+            
+            /// <summary>
+            /// Enum Taskmanagement for "task.management"
+            /// </summary>
+            [EnumMember(Value = "task.management")]
+            Taskmanagement,
+            
+            /// <summary>
+            /// Enum Telephonyconfiguration for "telephony.configuration"
+            /// </summary>
+            [EnumMember(Value = "telephony.configuration")]
+            Telephonyconfiguration,
+            
+            /// <summary>
+            /// Enum Webdeployments for "web.deployments"
+            /// </summary>
+            [EnumMember(Value = "web.deployments")]
+            Webdeployments,
+            
+            /// <summary>
+            /// Enum Webmessaging for "web.messaging"
+            /// </summary>
+            [EnumMember(Value = "web.messaging")]
+            Webmessaging,
+            
+            /// <summary>
+            /// Enum Webchat for "webchat"
+            /// </summary>
+            [EnumMember(Value = "webchat")]
+            Webchat,
+            
+            /// <summary>
+            /// Enum Webhooks for "webhooks"
+            /// </summary>
+            [EnumMember(Value = "webhooks")]
+            Webhooks,
+            
+            /// <summary>
+            /// Enum Workforcemanagement for "workforce.management"
+            /// </summary>
+            [EnumMember(Value = "workforce.management")]
+            Workforcemanagement
+        }
+        /// <summary>
         /// Current status of the limit change request
         /// </summary>
         /// <value>Current status of the limit change request</value>
@@ -34,28 +391,10 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Open for "Open"
-            /// </summary>
-            [EnumMember(Value = "Open")]
-            Open,
-            
-            /// <summary>
             /// Enum Approved for "Approved"
             /// </summary>
             [EnumMember(Value = "Approved")]
             Approved,
-            
-            /// <summary>
-            /// Enum Implementingchange for "ImplementingChange"
-            /// </summary>
-            [EnumMember(Value = "ImplementingChange")]
-            Implementingchange,
-            
-            /// <summary>
-            /// Enum Changeimplemented for "ChangeImplemented"
-            /// </summary>
-            [EnumMember(Value = "ChangeImplemented")]
-            Changeimplemented,
             
             /// <summary>
             /// Enum Rejected for "Rejected"
@@ -68,6 +407,54 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Rollback")]
             Rollback,
+            
+            /// <summary>
+            /// Enum Pending for "Pending"
+            /// </summary>
+            [EnumMember(Value = "Pending")]
+            Pending,
+            
+            /// <summary>
+            /// Enum Open for "Open"
+            /// </summary>
+            [EnumMember(Value = "Open")]
+            Open,
+            
+            /// <summary>
+            /// Enum Secondaryapprovalnamespacesadded for "SecondaryApprovalNamespacesAdded"
+            /// </summary>
+            [EnumMember(Value = "SecondaryApprovalNamespacesAdded")]
+            Secondaryapprovalnamespacesadded,
+            
+            /// <summary>
+            /// Enum Reviewerapproved for "ReviewerApproved"
+            /// </summary>
+            [EnumMember(Value = "ReviewerApproved")]
+            Reviewerapproved,
+            
+            /// <summary>
+            /// Enum Reviewerrejected for "ReviewerRejected"
+            /// </summary>
+            [EnumMember(Value = "ReviewerRejected")]
+            Reviewerrejected,
+            
+            /// <summary>
+            /// Enum Reviewerrollback for "ReviewerRollback"
+            /// </summary>
+            [EnumMember(Value = "ReviewerRollback")]
+            Reviewerrollback,
+            
+            /// <summary>
+            /// Enum Implementingchange for "ImplementingChange"
+            /// </summary>
+            [EnumMember(Value = "ImplementingChange")]
+            Implementingchange,
+            
+            /// <summary>
+            /// Enum Changeimplemented for "ChangeImplemented"
+            /// </summary>
+            [EnumMember(Value = "ChangeImplemented")]
+            Changeimplemented,
             
             /// <summary>
             /// Enum Implementingrollback for "ImplementingRollback"
@@ -127,6 +514,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Otherreason
         }
         /// <summary>
+        /// Namespace the key belongs to (see https://developer.mypurecloud.com/api/rest/v2/organization/limits.html#available_limits)
+        /// </summary>
+        /// <value>Namespace the key belongs to (see https://developer.mypurecloud.com/api/rest/v2/organization/limits.html#available_limits)</value>
+        [DataMember(Name="namespace", EmitDefaultValue=false)]
+        public NamespaceEnum? Namespace { get; set; }
+        /// <summary>
         /// Current status of the limit change request
         /// </summary>
         /// <value>Current status of the limit change request</value>
@@ -152,7 +545,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RequestedValue">Requested limit value for a given key (required).</param>
         /// <param name="Description">Description of the need for the limit change request (required).</param>
         /// <param name="SupportCaseUrl">The support case url created by Care (required).</param>
-        public LimitChangeRequestDetails(string Key = null, string Namespace = null, double? RequestedValue = null, string Description = null, string SupportCaseUrl = null)
+        public LimitChangeRequestDetails(string Key = null, NamespaceEnum? Namespace = null, double? RequestedValue = null, string Description = null, string SupportCaseUrl = null)
         {
             this.Key = Key;
             this.Namespace = Namespace;
@@ -182,13 +575,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
-        /// <summary>
-        /// Namespace the key belongs to (see https://developer.mypurecloud.com/api/rest/v2/organization/limits.html#available_limits)
-        /// </summary>
-        /// <value>Namespace the key belongs to (see https://developer.mypurecloud.com/api/rest/v2/organization/limits.html#available_limits)</value>
-        [DataMember(Name="namespace", EmitDefaultValue=false)]
-        public string Namespace { get; set; }
-
 
 
         /// <summary>
@@ -215,15 +601,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The support case url created by Care</value>
         [DataMember(Name="supportCaseUrl", EmitDefaultValue=false)]
         public string SupportCaseUrl { get; set; }
-
-
-
-        /// <summary>
-        /// The user who created the change request
-        /// </summary>
-        /// <value>The user who created the change request</value>
-        [DataMember(Name="createdBy", EmitDefaultValue=false)]
-        public string CreatedBy { get; private set; }
 
 
 
@@ -265,15 +642,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
-        /// <summary>
-        /// The user who last updated the status of the limit change request
-        /// </summary>
-        /// <value>The user who last updated the status of the limit change request</value>
-        [DataMember(Name="lastChangedBy", EmitDefaultValue=false)]
-        public string LastChangedBy { get; private set; }
-
-
-
 
 
         /// <summary>
@@ -299,13 +667,11 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RequestedValue: ").Append(RequestedValue).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  SupportCaseUrl: ").Append(SupportCaseUrl).Append("\n");
-            sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  CurrentValue: ").Append(CurrentValue).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  StatusHistory: ").Append(StatusHistory).Append("\n");
             sb.Append("  DateCompleted: ").Append(DateCompleted).Append("\n");
-            sb.Append("  LastChangedBy: ").Append(LastChangedBy).Append("\n");
             sb.Append("  RejectReason: ").Append(RejectReason).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -379,11 +745,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SupportCaseUrl.Equals(other.SupportCaseUrl)
                 ) &&
                 (
-                    this.CreatedBy == other.CreatedBy ||
-                    this.CreatedBy != null &&
-                    this.CreatedBy.Equals(other.CreatedBy)
-                ) &&
-                (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
@@ -407,11 +768,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateCompleted == other.DateCompleted ||
                     this.DateCompleted != null &&
                     this.DateCompleted.Equals(other.DateCompleted)
-                ) &&
-                (
-                    this.LastChangedBy == other.LastChangedBy ||
-                    this.LastChangedBy != null &&
-                    this.LastChangedBy.Equals(other.LastChangedBy)
                 ) &&
                 (
                     this.RejectReason == other.RejectReason ||
@@ -454,9 +810,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.SupportCaseUrl != null)
                     hash = hash * 59 + this.SupportCaseUrl.GetHashCode();
 
-                if (this.CreatedBy != null)
-                    hash = hash * 59 + this.CreatedBy.GetHashCode();
-
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
 
@@ -471,9 +824,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DateCompleted != null)
                     hash = hash * 59 + this.DateCompleted.GetHashCode();
-
-                if (this.LastChangedBy != null)
-                    hash = hash * 59 + this.LastChangedBy.GetHashCode();
 
                 if (this.RejectReason != null)
                     hash = hash * 59 + this.RejectReason.GetHashCode();

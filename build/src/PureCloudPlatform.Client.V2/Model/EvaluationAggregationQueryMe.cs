@@ -63,22 +63,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Divisionid,
             
             /// <summary>
-            /// Enum Evaluationcreateddate for "evaluationCreatedDate"
-            /// </summary>
-            [EnumMember(Value = "evaluationCreatedDate")]
-            Evaluationcreateddate,
-            
-            /// <summary>
             /// Enum Evaluationid for "evaluationId"
             /// </summary>
             [EnumMember(Value = "evaluationId")]
             Evaluationid,
-            
-            /// <summary>
-            /// Enum Evaluationreleasedate for "evaluationReleaseDate"
-            /// </summary>
-            [EnumMember(Value = "evaluationReleaseDate")]
-            Evaluationreleasedate,
             
             /// <summary>
             /// Enum Evaluatorid for "evaluatorId"

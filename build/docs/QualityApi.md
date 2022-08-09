@@ -133,7 +133,7 @@ namespace Example
 
 <a name="deletequalityconversationevaluation"></a>
 
-## [**Evaluation**](Evaluation.html) DeleteQualityConversationEvaluation (string conversationId, string evaluationId, string expand = null)
+## [**EvaluationResponse**](EvaluationResponse.html) DeleteQualityConversationEvaluation (string conversationId, string evaluationId, string expand = null)
 
 
 
@@ -174,7 +174,7 @@ namespace Example
             try
             { 
                 // Delete an evaluation
-                Evaluation result = apiInstance.DeleteQualityConversationEvaluation(conversationId, evaluationId, expand);
+                EvaluationResponse result = apiInstance.DeleteQualityConversationEvaluation(conversationId, evaluationId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -198,7 +198,7 @@ namespace Example
 
 ### Return type
 
-[**Evaluation**](Evaluation.html)
+[**EvaluationResponse**](EvaluationResponse.html)
 
 <a name="deletequalityform"></a>
 
@@ -635,7 +635,7 @@ namespace Example
 
 <a name="getqualityconversationevaluation"></a>
 
-## [**Evaluation**](Evaluation.html) GetQualityConversationEvaluation (string conversationId, string evaluationId, string expand = null)
+## [**EvaluationResponse**](EvaluationResponse.html) GetQualityConversationEvaluation (string conversationId, string evaluationId, string expand = null)
 
 
 
@@ -676,7 +676,7 @@ namespace Example
             try
             { 
                 // Get an evaluation
-                Evaluation result = apiInstance.GetQualityConversationEvaluation(conversationId, evaluationId, expand);
+                EvaluationResponse result = apiInstance.GetQualityConversationEvaluation(conversationId, evaluationId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -700,7 +700,7 @@ namespace Example
 
 ### Return type
 
-[**Evaluation**](Evaluation.html)
+[**EvaluationResponse**](EvaluationResponse.html)
 
 <a name="getqualityconversationsurveys"></a>
 
@@ -3507,7 +3507,7 @@ namespace Example
 
 <a name="putqualityconversationevaluation"></a>
 
-## [**Evaluation**](Evaluation.html) PutQualityConversationEvaluation (string conversationId, string evaluationId, Evaluation body, string expand = null)
+## [**EvaluationResponse**](EvaluationResponse.html) PutQualityConversationEvaluation (string conversationId, string evaluationId, Evaluation body, string expand = null)
 
 
 
@@ -3553,7 +3553,7 @@ namespace Example
             try
             { 
                 // Update an evaluation
-                Evaluation result = apiInstance.PutQualityConversationEvaluation(conversationId, evaluationId, body, expand);
+                EvaluationResponse result = apiInstance.PutQualityConversationEvaluation(conversationId, evaluationId, body, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3578,7 +3578,7 @@ namespace Example
 
 ### Return type
 
-[**Evaluation**](Evaluation.html)
+[**EvaluationResponse**](EvaluationResponse.html)
 
 <a name="putqualityform"></a>
 

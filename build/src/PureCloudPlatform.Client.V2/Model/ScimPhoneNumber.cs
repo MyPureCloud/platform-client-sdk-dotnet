@@ -88,10 +88,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Zoomphone,
             
             /// <summary>
-            /// Enum Eighbyeight for "eighbyeight"
+            /// Enum Eightbyeight for "eightbyeight"
             /// </summary>
-            [EnumMember(Value = "eighbyeight")]
-            Eighbyeight
+            [EnumMember(Value = "eightbyeight")]
+            Eightbyeight
         }
         /// <summary>
         /// The type of phone number.

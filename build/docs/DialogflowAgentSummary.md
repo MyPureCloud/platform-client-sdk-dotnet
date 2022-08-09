@@ -9,8 +9,9 @@ title: DialogflowAgentSummary
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** |  | [optional] |
-| **Project** | [**DialogflowProject**](DialogflowProject.html) | The project this Dialogflow agent belongs to | [optional] |
-| **Description** | **string** | A description of the Dialogflow agent | [optional] |
+| **Project** | [**DialogflowProject**](DialogflowProject.html) | The project this Dialogflow agent belongs to. | [optional] |
+| **Description** | **string** | A description of the Dialogflow agent. | [optional] |
+| **Integration** | [**DomainEntityRef**](DomainEntityRef.html) | The Integration this Dialogflow agent was referenced from. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

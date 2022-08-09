@@ -25,12 +25,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="NextUri">NextUri.</param>
         /// <param name="SelfUri">SelfUri.</param>
         /// <param name="PreviousUri">PreviousUri.</param>
-        public CursorOrganizationListing(List<ExternalOrganization> Entities = null, string NextUri = null, string SelfUri = null, string PreviousUri = null)
+        /// <param name="Cursors">The cursor that points to the next set of entities being returned..</param>
+        public CursorOrganizationListing(List<ExternalOrganization> Entities = null, string NextUri = null, string SelfUri = null, string PreviousUri = null, Cursors Cursors = null)
         {
             this.Entities = Entities;
             this.NextUri = NextUri;
             this.SelfUri = SelfUri;
             this.PreviousUri = PreviousUri;
+            this.Cursors = Cursors;
             
         }
         
@@ -67,6 +69,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string PreviousUri { get; set; }
 
 
+
+        /// <summary>
+        /// The cursor that points to the next set of entities being returned.
+        /// </summary>
+        /// <value>The cursor that points to the next set of entities being returned.</value>
+        [DataMember(Name="cursors", EmitDefaultValue=false)]
+        public Cursors Cursors { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -80,6 +91,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  NextUri: ").Append(NextUri).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  PreviousUri: ").Append(PreviousUri).Append("\n");
+            sb.Append("  Cursors: ").Append(Cursors).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -139,6 +151,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PreviousUri == other.PreviousUri ||
                     this.PreviousUri != null &&
                     this.PreviousUri.Equals(other.PreviousUri)
+                ) &&
+                (
+                    this.Cursors == other.Cursors ||
+                    this.Cursors != null &&
+                    this.Cursors.Equals(other.Cursors)
                 );
         }
 
@@ -164,6 +181,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.PreviousUri != null)
                     hash = hash * 59 + this.PreviousUri.GetHashCode();
+
+                if (this.Cursors != null)
+                    hash = hash * 59 + this.Cursors.GetHashCode();
 
                 return hash;
             }

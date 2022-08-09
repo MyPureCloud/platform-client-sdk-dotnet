@@ -28,9 +28,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="TextBotTextModeConstraints" /> class.
         /// </summary>
         /// <param name="LanguagePreferences">The list of language preferences by their ISO language code. (required).</param>
-        public TextBotTextModeConstraints(List<string> LanguagePreferences = null)
+        /// <param name="NoInputTimeoutMilliseconds">The amount of time, in milliseconds, before the client should send the 'NoInput' event  to trigger the \"no input\" bot response and handling on digital channels.  Note: This optional field will only be returned for 'Digital Bot Flow' turns..</param>
+        public TextBotTextModeConstraints(List<string> LanguagePreferences = null, int? NoInputTimeoutMilliseconds = null)
         {
             this.LanguagePreferences = LanguagePreferences;
+            this.NoInputTimeoutMilliseconds = NoInputTimeoutMilliseconds;
             
         }
         
@@ -44,6 +46,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> LanguagePreferences { get; set; }
 
 
+
+        /// <summary>
+        /// The amount of time, in milliseconds, before the client should send the 'NoInput' event  to trigger the \"no input\" bot response and handling on digital channels.  Note: This optional field will only be returned for 'Digital Bot Flow' turns.
+        /// </summary>
+        /// <value>The amount of time, in milliseconds, before the client should send the 'NoInput' event  to trigger the \"no input\" bot response and handling on digital channels.  Note: This optional field will only be returned for 'Digital Bot Flow' turns.</value>
+        [DataMember(Name="noInputTimeoutMilliseconds", EmitDefaultValue=false)]
+        public int? NoInputTimeoutMilliseconds { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,6 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class TextBotTextModeConstraints {\n");
 
             sb.Append("  LanguagePreferences: ").Append(LanguagePreferences).Append("\n");
+            sb.Append("  NoInputTimeoutMilliseconds: ").Append(NoInputTimeoutMilliseconds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -98,6 +110,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LanguagePreferences == other.LanguagePreferences ||
                     this.LanguagePreferences != null &&
                     this.LanguagePreferences.SequenceEqual(other.LanguagePreferences)
+                ) &&
+                (
+                    this.NoInputTimeoutMilliseconds == other.NoInputTimeoutMilliseconds ||
+                    this.NoInputTimeoutMilliseconds != null &&
+                    this.NoInputTimeoutMilliseconds.Equals(other.NoInputTimeoutMilliseconds)
                 );
         }
 
@@ -114,6 +131,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.LanguagePreferences != null)
                     hash = hash * 59 + this.LanguagePreferences.GetHashCode();
+
+                if (this.NoInputTimeoutMilliseconds != null)
+                    hash = hash * 59 + this.NoInputTimeoutMilliseconds.GetHashCode();
 
                 return hash;
             }

@@ -32,8 +32,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Priority">The priority for routing.</param>
         /// <param name="SkillIds">A list of skill identifiers to be considered in routing.</param>
         /// <param name="PreferredAgentIds">A list of agents to be preferred in routing.</param>
-        /// <param name="ScoredAgents">A list of scored agents for routing decisions.</param>
-        /// <param name="RoutingFlags">An array of flags indicating how the conversation should be routed.</param>
+        /// <param name="ScoredAgents">A list of scored agents for routing decisions. For Agent Owned Callbacks use one scored agent with a score of 100..</param>
+        /// <param name="RoutingFlags">An array of flags indicating how the conversation should be routed. Use \"AGENT_OWNED_CALLBACK\" when creating an Agent Owned Callback..</param>
         public RoutingData(string QueueId = null, string LanguageId = null, int? Priority = null, List<string> SkillIds = null, List<string> PreferredAgentIds = null, List<ScoredAgent> ScoredAgents = null, List<string> RoutingFlags = null)
         {
             this.QueueId = QueueId;
@@ -94,18 +94,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A list of scored agents for routing decisions
+        /// A list of scored agents for routing decisions. For Agent Owned Callbacks use one scored agent with a score of 100.
         /// </summary>
-        /// <value>A list of scored agents for routing decisions</value>
+        /// <value>A list of scored agents for routing decisions. For Agent Owned Callbacks use one scored agent with a score of 100.</value>
         [DataMember(Name="scoredAgents", EmitDefaultValue=false)]
         public List<ScoredAgent> ScoredAgents { get; set; }
 
 
 
         /// <summary>
-        /// An array of flags indicating how the conversation should be routed
+        /// An array of flags indicating how the conversation should be routed. Use \"AGENT_OWNED_CALLBACK\" when creating an Agent Owned Callback.
         /// </summary>
-        /// <value>An array of flags indicating how the conversation should be routed</value>
+        /// <value>An array of flags indicating how the conversation should be routed. Use \"AGENT_OWNED_CALLBACK\" when creating an Agent Owned Callback.</value>
         [DataMember(Name="routingFlags", EmitDefaultValue=false)]
         public List<string> RoutingFlags { get; set; }
 

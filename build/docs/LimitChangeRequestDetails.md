@@ -13,13 +13,11 @@ title: LimitChangeRequestDetails
 | **RequestedValue** | **double?** | Requested limit value for a given key | |
 | **Description** | **string** | Description of the need for the limit change request | |
 | **SupportCaseUrl** | **string** | The support case url created by Care | |
-| **CreatedBy** | **string** | The user who created the change request | [optional] |
 | **Status** | **string** | Current status of the limit change request | [optional] |
 | **CurrentValue** | **double?** | Current limit value for a given key | [optional] |
 | **DateCreated** | **DateTime?** | The date of the limit change request creation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **StatusHistory** | [**List&lt;StatusChange&gt;**](StatusChange.html) | List of statuses that a limit change request has gone through | [optional] |
 | **DateCompleted** | **DateTime?** | The date of the limit change request completion (ChangeImplemented, Rejected, or RollbackImplemented. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **LastChangedBy** | **string** | The user who last updated the status of the limit change request | [optional] |
 | **RejectReason** | **string** | The reason for rejecting the limit override request | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

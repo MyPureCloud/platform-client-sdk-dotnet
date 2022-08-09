@@ -175,6 +175,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Indicates an estimation of the size of the current email as a whole, in its final, ready to be sent form.
+        /// </summary>
+        /// <value>Indicates an estimation of the size of the current email as a whole, in its final, ready to be sent form.</value>
+        [DataMember(Name="emailSizeBytes", EmitDefaultValue=false)]
+        public int? EmailSizeBytes { get; private set; }
+
+
+
+        /// <summary>
+        /// Indicates the maximum allowed size for an email to be send via SMTP server, based on the email domain configuration
+        /// </summary>
+        /// <value>Indicates the maximum allowed size for an email to be send via SMTP server, based on the email domain configuration</value>
+        [DataMember(Name="maxEmailSizeBytes", EmitDefaultValue=false)]
+        public int? MaxEmailSizeBytes { get; private set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -204,6 +222,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  HtmlBody: ").Append(HtmlBody).Append("\n");
             sb.Append("  Time: ").Append(Time).Append("\n");
             sb.Append("  HistoryIncluded: ").Append(HistoryIncluded).Append("\n");
+            sb.Append("  EmailSizeBytes: ").Append(EmailSizeBytes).Append("\n");
+            sb.Append("  MaxEmailSizeBytes: ").Append(MaxEmailSizeBytes).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -311,6 +331,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.HistoryIncluded.Equals(other.HistoryIncluded)
                 ) &&
                 (
+                    this.EmailSizeBytes == other.EmailSizeBytes ||
+                    this.EmailSizeBytes != null &&
+                    this.EmailSizeBytes.Equals(other.EmailSizeBytes)
+                ) &&
+                (
+                    this.MaxEmailSizeBytes == other.MaxEmailSizeBytes ||
+                    this.MaxEmailSizeBytes != null &&
+                    this.MaxEmailSizeBytes.Equals(other.MaxEmailSizeBytes)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -366,6 +396,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.HistoryIncluded != null)
                     hash = hash * 59 + this.HistoryIncluded.GetHashCode();
+
+                if (this.EmailSizeBytes != null)
+                    hash = hash * 59 + this.EmailSizeBytes.GetHashCode();
+
+                if (this.MaxEmailSizeBytes != null)
+                    hash = hash * 59 + this.MaxEmailSizeBytes.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

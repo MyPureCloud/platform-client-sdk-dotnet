@@ -224,6 +224,8 @@ docs/AuthzSubject.md
 docs/AutoStart.md
 docs/AutomaticTimeZoneMappingSettings.md
 docs/AvailableLanguageList.md
+docs/AvailableMediaType.md
+docs/AvailableMediaTypeEntityListing.md
 docs/AvailableTime.md
 docs/AvailableTimeOffRange.md
 docs/AvailableTimeOffRequest.md
@@ -679,6 +681,8 @@ docs/ConversationEmailEventTopicJourneyCustomerSession.md
 docs/ConversationEmailEventTopicScoredAgent.md
 docs/ConversationEmailEventTopicUriReference.md
 docs/ConversationEmailEventTopicWrapup.md
+docs/ConversationEncryptionConfiguration.md
+docs/ConversationEncryptionConfigurationListing.md
 docs/ConversationEntityListing.md
 docs/ConversationEventCoBrowse.md
 docs/ConversationEventPresence.md
@@ -777,6 +781,7 @@ docs/ConversationScreenShareEventTopicScreenShareConversation.md
 docs/ConversationScreenShareEventTopicScreenShareMediaParticipant.md
 docs/ConversationScreenShareEventTopicUriReference.md
 docs/ConversationScreenShareEventTopicWrapup.md
+docs/ConversationSecureAttributes.md
 docs/ConversationSocialExpressionEventTopicConversationRoutingData.md
 docs/ConversationSocialExpressionEventTopicDetail.md
 docs/ConversationSocialExpressionEventTopicErrorBody.md
@@ -1371,6 +1376,7 @@ docs/EvaluationEntityListing.md
 docs/EvaluationForm.md
 docs/EvaluationFormAndScoringSet.md
 docs/EvaluationFormEntityListing.md
+docs/EvaluationFormResponse.md
 docs/EvaluationQualityV2TopicCalibration.md
 docs/EvaluationQualityV2TopicEvaluationScoringSet.md
 docs/EvaluationQualityV2TopicEvaluationV2.md
@@ -1379,6 +1385,7 @@ docs/EvaluationQuestion.md
 docs/EvaluationQuestionGroup.md
 docs/EvaluationQuestionGroupScore.md
 docs/EvaluationQuestionScore.md
+docs/EvaluationResponse.md
 docs/EvaluationScoringSet.md
 docs/EvaluatorActivity.md
 docs/EvaluatorActivityEntityListing.md
@@ -1691,6 +1698,7 @@ docs/GetConversationRecordingAnnotations-example.txt
 docs/GetConversationRecordingmetadata-example.txt
 docs/GetConversationRecordingmetadataRecordingId-example.txt
 docs/GetConversationRecordings-example.txt
+docs/GetConversationSecureattributes-example.txt
 docs/GetConversations-example.txt
 docs/GetConversationsCall-example.txt
 docs/GetConversationsCallParticipantWrapup-example.txt
@@ -1720,6 +1728,8 @@ docs/GetConversationsEmailParticipantWrapup-example.txt
 docs/GetConversationsEmailParticipantWrapupcodes-example.txt
 docs/GetConversationsEmailSettings-example.txt
 docs/GetConversationsEmails-example.txt
+docs/GetConversationsKeyconfiguration-example.txt
+docs/GetConversationsKeyconfigurations-example.txt
 docs/GetConversationsMessage-example.txt
 docs/GetConversationsMessageCommunicationMessagesMediaMediaId-example.txt
 docs/GetConversationsMessageDetails-example.txt
@@ -2136,6 +2146,7 @@ docs/GetRoutingAssessment-example.txt
 docs/GetRoutingAssessments-example.txt
 docs/GetRoutingAssessmentsJob-example.txt
 docs/GetRoutingAssessmentsJobs-example.txt
+docs/GetRoutingAvailablemediatypes-example.txt
 docs/GetRoutingEmailDomain-example.txt
 docs/GetRoutingEmailDomainRoute-example.txt
 docs/GetRoutingEmailDomainRoutes-example.txt
@@ -3026,6 +3037,7 @@ docs/PatchContentOfferStylingConfiguration.md
 docs/PatchContentPositionProperties.md
 docs/PatchConversationParticipant-example.txt
 docs/PatchConversationParticipantAttributes-example.txt
+docs/PatchConversationSecureattributes-example.txt
 docs/PatchConversationsCall-example.txt
 docs/PatchConversationsCallParticipant-example.txt
 docs/PatchConversationsCallParticipantAttributes-example.txt
@@ -3294,6 +3306,8 @@ docs/PostConversationsEmailMessagesDraftAttachmentsCopy-example.txt
 docs/PostConversationsEmailParticipantReplace-example.txt
 docs/PostConversationsEmails-example.txt
 docs/PostConversationsFaxes-example.txt
+docs/PostConversationsKeyconfigurations-example.txt
+docs/PostConversationsKeyconfigurationsValidate-example.txt
 docs/PostConversationsMessageCommunicationMessages-example.txt
 docs/PostConversationsMessageCommunicationMessagesMedia-example.txt
 docs/PostConversationsMessageMessagesBulk-example.txt
@@ -3693,6 +3707,7 @@ docs/PutContentmanagementWorkspaceTagvalue-example.txt
 docs/PutConversationParticipantFlaggedreason-example.txt
 docs/PutConversationRecording-example.txt
 docs/PutConversationRecordingAnnotation-example.txt
+docs/PutConversationSecureattributes-example.txt
 docs/PutConversationTags-example.txt
 docs/PutConversationsCallParticipantCommunicationUuidata-example.txt
 docs/PutConversationsCallRecordingstate-example.txt
@@ -3701,6 +3716,7 @@ docs/PutConversationsChatRecordingstate-example.txt
 docs/PutConversationsCobrowsesessionRecordingstate-example.txt
 docs/PutConversationsEmailMessagesDraft-example.txt
 docs/PutConversationsEmailRecordingstate-example.txt
+docs/PutConversationsKeyconfiguration-example.txt
 docs/PutConversationsMessageRecordingstate-example.txt
 docs/PutConversationsMessagingIntegrationsLineIntegrationId-example.txt
 docs/PutConversationsMessagingSupportedcontentDefault-example.txt
@@ -5074,6 +5090,10 @@ docs/WorkdayValuesTrend.md
 docs/WorkdayValuesTrendItem.md
 docs/WorkforceManagementApi.json
 docs/WorkforceManagementApi.md
+docs/WorkitemsEventsNotificationCustomAttribute.md
+docs/WorkitemsEventsNotificationDelta.md
+docs/WorkitemsEventsNotificationWorkitem.md
+docs/WorkitemsUserEventsNotificationCustomAttribute.md
 docs/WorkitemsUserEventsNotificationDelta.md
 docs/WorkitemsUserEventsNotificationWorkitem.md
 docs/Workspace.md
@@ -5377,6 +5397,8 @@ src/PureCloudPlatform.Client.V2/Model/AuthzSubject.cs
 src/PureCloudPlatform.Client.V2/Model/AutoStart.cs
 src/PureCloudPlatform.Client.V2/Model/AutomaticTimeZoneMappingSettings.cs
 src/PureCloudPlatform.Client.V2/Model/AvailableLanguageList.cs
+src/PureCloudPlatform.Client.V2/Model/AvailableMediaType.cs
+src/PureCloudPlatform.Client.V2/Model/AvailableMediaTypeEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/AvailableTime.cs
 src/PureCloudPlatform.Client.V2/Model/AvailableTimeOffRange.cs
 src/PureCloudPlatform.Client.V2/Model/AvailableTimeOffRequest.cs
@@ -5824,6 +5846,8 @@ src/PureCloudPlatform.Client.V2/Model/ConversationEmailEventTopicJourneyCustomer
 src/PureCloudPlatform.Client.V2/Model/ConversationEmailEventTopicScoredAgent.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEmailEventTopicUriReference.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEmailEventTopicWrapup.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationEncryptionConfiguration.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationEncryptionConfigurationListing.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEventCoBrowse.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEventPresence.cs
@@ -5922,6 +5946,7 @@ src/PureCloudPlatform.Client.V2/Model/ConversationScreenShareEventTopicScreenSha
 src/PureCloudPlatform.Client.V2/Model/ConversationScreenShareEventTopicScreenShareMediaParticipant.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationScreenShareEventTopicUriReference.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationScreenShareEventTopicWrapup.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationSecureAttributes.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationSocialExpressionEventTopicConversationRoutingData.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationSocialExpressionEventTopicDetail.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationSocialExpressionEventTopicErrorBody.cs
@@ -6308,6 +6333,7 @@ src/PureCloudPlatform.Client.V2/Model/EvaluationEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationForm.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationFormAndScoringSet.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationFormEntityListing.cs
+src/PureCloudPlatform.Client.V2/Model/EvaluationFormResponse.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationQualityV2TopicCalibration.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationQualityV2TopicEvaluationScoringSet.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationQualityV2TopicEvaluationV2.cs
@@ -6316,6 +6342,7 @@ src/PureCloudPlatform.Client.V2/Model/EvaluationQuestion.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationQuestionGroup.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationQuestionGroupScore.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationQuestionScore.cs
+src/PureCloudPlatform.Client.V2/Model/EvaluationResponse.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationScoringSet.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluatorActivity.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluatorActivityEntityListing.cs
@@ -8272,6 +8299,10 @@ src/PureCloudPlatform.Client.V2/Model/WorkdayPointsTrendItem.cs
 src/PureCloudPlatform.Client.V2/Model/WorkdayValuesMetricItem.cs
 src/PureCloudPlatform.Client.V2/Model/WorkdayValuesTrend.cs
 src/PureCloudPlatform.Client.V2/Model/WorkdayValuesTrendItem.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemsEventsNotificationCustomAttribute.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemsEventsNotificationDelta.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemsEventsNotificationWorkitem.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemsUserEventsNotificationCustomAttribute.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsUserEventsNotificationDelta.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsUserEventsNotificationWorkitem.cs
 src/PureCloudPlatform.Client.V2/Model/Workspace.cs

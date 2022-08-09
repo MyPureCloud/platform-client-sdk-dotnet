@@ -42,7 +42,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Smtp for "smtp"
             /// </summary>
             [EnumMember(Value = "smtp")]
-            Smtp
+            Smtp,
+            
+            /// <summary>
+            /// Enum Audiohook for "audiohook"
+            /// </summary>
+            [EnumMember(Value = "audiohook")]
+            Audiohook
         }
         /// <summary>
         /// Gets or Sets Service

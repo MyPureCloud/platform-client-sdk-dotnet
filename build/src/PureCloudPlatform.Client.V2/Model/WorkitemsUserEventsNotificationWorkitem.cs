@@ -259,7 +259,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AssignmentState">AssignmentState.</param>
         /// <param name="AssignmentId">AssignmentId.</param>
         /// <param name="AlertTimeoutSeconds">AlertTimeoutSeconds.</param>
-        public WorkitemsUserEventsNotificationWorkitem(string Id = null, string Name = null, string TypeId = null, string Description = null, string LanguageId = null, int? Priority = null, string DateCreated = null, string DateModified = null, string DateDue = null, string DateExpires = null, int? DurationSeconds = null, int? Ttl = null, string StatusId = null, string DateClosed = null, string WorkbinId = null, string ReporterId = null, string AssigneeId = null, string ExternalContactId = null, string ExternalTag = null, string WrapupId = null, string ModifiedBy = null, OperationEnum? Operation = null, List<WorkitemsUserEventsNotificationDelta> Changes = null, AssignmentStateEnum? AssignmentState = null, string AssignmentId = null, int? AlertTimeoutSeconds = null)
+        /// <param name="CustomFields">CustomFields.</param>
+        public WorkitemsUserEventsNotificationWorkitem(string Id = null, string Name = null, string TypeId = null, string Description = null, string LanguageId = null, int? Priority = null, string DateCreated = null, string DateModified = null, string DateDue = null, string DateExpires = null, int? DurationSeconds = null, int? Ttl = null, string StatusId = null, string DateClosed = null, string WorkbinId = null, string ReporterId = null, string AssigneeId = null, string ExternalContactId = null, string ExternalTag = null, string WrapupId = null, string ModifiedBy = null, OperationEnum? Operation = null, List<WorkitemsUserEventsNotificationDelta> Changes = null, AssignmentStateEnum? AssignmentState = null, string AssignmentId = null, int? AlertTimeoutSeconds = null, Dictionary<string, WorkitemsUserEventsNotificationCustomAttribute> CustomFields = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -287,6 +288,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AssignmentState = AssignmentState;
             this.AssignmentId = AssignmentId;
             this.AlertTimeoutSeconds = AlertTimeoutSeconds;
+            this.CustomFields = CustomFields;
             
         }
         
@@ -487,6 +489,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? AlertTimeoutSeconds { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets CustomFields
+        /// </summary>
+        [DataMember(Name="customFields", EmitDefaultValue=false)]
+        public Dictionary<string, WorkitemsUserEventsNotificationCustomAttribute> CustomFields { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -522,6 +532,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AssignmentState: ").Append(AssignmentState).Append("\n");
             sb.Append("  AssignmentId: ").Append(AssignmentId).Append("\n");
             sb.Append("  AlertTimeoutSeconds: ").Append(AlertTimeoutSeconds).Append("\n");
+            sb.Append("  CustomFields: ").Append(CustomFields).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -691,6 +702,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AlertTimeoutSeconds == other.AlertTimeoutSeconds ||
                     this.AlertTimeoutSeconds != null &&
                     this.AlertTimeoutSeconds.Equals(other.AlertTimeoutSeconds)
+                ) &&
+                (
+                    this.CustomFields == other.CustomFields ||
+                    this.CustomFields != null &&
+                    this.CustomFields.SequenceEqual(other.CustomFields)
                 );
         }
 
@@ -782,6 +798,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AlertTimeoutSeconds != null)
                     hash = hash * 59 + this.AlertTimeoutSeconds.GetHashCode();
+
+                if (this.CustomFields != null)
+                    hash = hash * 59 + this.CustomFields.GetHashCode();
 
                 return hash;
             }

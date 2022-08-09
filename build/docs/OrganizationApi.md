@@ -339,7 +339,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **after** | **long?**| Timestamp indicating the date to begin after when searching for requests. | [optional]  |
 | **before** | **long?**| Timestamp indicating the date to end before when searching for requests. | [optional]  |
-| **status** | **string**| Status of the request to be filtered by | [optional] <br />**Values**: Open, Approved, ImplementingChange, ChangeImplemented, Rejected, Rollback, ImplementingRollback, RollbackImplemented |
+| **status** | **string**| Status of the request to be filtered by | [optional] <br />**Values**: Approved, Rejected, Rollback, Pending, Open, SecondaryApprovalNamespacesAdded, ReviewerApproved, ReviewerRejected, ReviewerRollback, ImplementingChange, ChangeImplemented, ImplementingRollback, RollbackImplemented |
 | **pageSize** | **int?**| Page Size | [optional] [default to 25] |
 | **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: statusHistory |
 {: class="table table-striped"}
