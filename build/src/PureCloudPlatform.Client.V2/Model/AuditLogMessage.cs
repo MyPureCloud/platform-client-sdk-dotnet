@@ -268,6 +268,33 @@ namespace PureCloudPlatform.Client.V2.Model
             Marketplace
         }
         /// <summary>
+        /// Level of this audit message, USER or SYSTEM.
+        /// </summary>
+        /// <value>Level of this audit message, USER or SYSTEM.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum LevelEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum User for "USER"
+            /// </summary>
+            [EnumMember(Value = "USER")]
+            User,
+            
+            /// <summary>
+            /// Enum System for "SYSTEM"
+            /// </summary>
+            [EnumMember(Value = "SYSTEM")]
+            System
+        }
+        /// <summary>
         /// Action that took place.
         /// </summary>
         /// <value>Action that took place.</value>
@@ -749,6 +776,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Reset")]
             Reset,
+            
+            /// <summary>
+            /// Enum Rotate for "Rotate"
+            /// </summary>
+            [EnumMember(Value = "Rotate")]
+            Rotate,
+            
+            /// <summary>
+            /// Enum Restore for "Restore"
+            /// </summary>
+            [EnumMember(Value = "Restore")]
+            Restore,
             
             /// <summary>
             /// Enum Unarchive for "Unarchive"
@@ -1468,6 +1507,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Recordingannotation,
             
             /// <summary>
+            /// Enum Recordingkey for "RecordingKey"
+            /// </summary>
+            [EnumMember(Value = "RecordingKey")]
+            Recordingkey,
+            
+            /// <summary>
+            /// Enum Recordingkeyconfig for "RecordingKeyConfig"
+            /// </summary>
+            [EnumMember(Value = "RecordingKeyConfig")]
+            Recordingkeyconfig,
+            
+            /// <summary>
             /// Enum Recordingsettings for "RecordingSettings"
             /// </summary>
             [EnumMember(Value = "RecordingSettings")]
@@ -1813,6 +1864,12 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="serviceName", EmitDefaultValue=false)]
         public ServiceNameEnum? ServiceName { get; set; }
         /// <summary>
+        /// Level of this audit message, USER or SYSTEM.
+        /// </summary>
+        /// <value>Level of this audit message, USER or SYSTEM.</value>
+        [DataMember(Name="level", EmitDefaultValue=false)]
+        public LevelEnum? Level { get; set; }
+        /// <summary>
         /// Action that took place.
         /// </summary>
         /// <value>Action that took place.</value>
@@ -1839,6 +1896,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Client">Client associated with this audit message..</param>
         /// <param name="RemoteIp">List of IP addresses of systems that originated or handled the request..</param>
         /// <param name="ServiceName">Name of the service that logged this audit message..</param>
+        /// <param name="Level">Level of this audit message, USER or SYSTEM..</param>
         /// <param name="EventDate">Date and time of when the audit message was logged. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Message">Message describing the event being audited..</param>
         /// <param name="Action">Action that took place..</param>
@@ -1847,7 +1905,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Status">Status of the event being audited.</param>
         /// <param name="PropertyChanges">List of properties that were changed and changes made to those properties..</param>
         /// <param name="Context">Additional context for this message..</param>
-        public AuditLogMessage(string Id = null, string UserHomeOrgId = null, DomainEntityRef User = null, AddressableEntityRef Client = null, List<string> RemoteIp = null, ServiceNameEnum? ServiceName = null, DateTime? EventDate = null, MessageInfo Message = null, ActionEnum? Action = null, DomainEntityRef Entity = null, EntityTypeEnum? EntityType = null, StatusEnum? Status = null, List<PropertyChange> PropertyChanges = null, Dictionary<string, string> Context = null)
+        public AuditLogMessage(string Id = null, string UserHomeOrgId = null, DomainEntityRef User = null, AddressableEntityRef Client = null, List<string> RemoteIp = null, ServiceNameEnum? ServiceName = null, LevelEnum? Level = null, DateTime? EventDate = null, MessageInfo Message = null, ActionEnum? Action = null, DomainEntityRef Entity = null, EntityTypeEnum? EntityType = null, StatusEnum? Status = null, List<PropertyChange> PropertyChanges = null, Dictionary<string, string> Context = null)
         {
             this.Id = Id;
             this.UserHomeOrgId = UserHomeOrgId;
@@ -1855,6 +1913,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Client = Client;
             this.RemoteIp = RemoteIp;
             this.ServiceName = ServiceName;
+            this.Level = Level;
             this.EventDate = EventDate;
             this.Message = Message;
             this.Action = Action;
@@ -1910,6 +1969,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>List of IP addresses of systems that originated or handled the request.</value>
         [DataMember(Name="remoteIp", EmitDefaultValue=false)]
         public List<string> RemoteIp { get; set; }
+
+
 
 
 
@@ -1980,6 +2041,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Client: ").Append(Client).Append("\n");
             sb.Append("  RemoteIp: ").Append(RemoteIp).Append("\n");
             sb.Append("  ServiceName: ").Append(ServiceName).Append("\n");
+            sb.Append("  Level: ").Append(Level).Append("\n");
             sb.Append("  EventDate: ").Append(EventDate).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("  Action: ").Append(Action).Append("\n");
@@ -2059,6 +2121,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ServiceName.Equals(other.ServiceName)
                 ) &&
                 (
+                    this.Level == other.Level ||
+                    this.Level != null &&
+                    this.Level.Equals(other.Level)
+                ) &&
+                (
                     this.EventDate == other.EventDate ||
                     this.EventDate != null &&
                     this.EventDate.Equals(other.EventDate)
@@ -2128,6 +2195,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ServiceName != null)
                     hash = hash * 59 + this.ServiceName.GetHashCode();
+
+                if (this.Level != null)
+                    hash = hash * 59 + this.Level.GetHashCode();
 
                 if (this.EventDate != null)
                     hash = hash * 59 + this.EventDate.GetHashCode();

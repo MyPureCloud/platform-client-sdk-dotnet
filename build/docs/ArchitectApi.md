@@ -1893,7 +1893,7 @@ namespace Example
 
 <a name="getarchitectivrs"></a>
 
-## [**IVREntityListing**](IVREntityListing.html) GetArchitectIvrs (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
+## [**IVREntityListing**](IVREntityListing.html) GetArchitectIvrs (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null)
 
 
 
@@ -1932,11 +1932,12 @@ namespace Example
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to "name")
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "ASC")
             var name = name_example;  // string | Name of the IVR to filter by. (optional) 
+            var dnis = dnis_example;  // string | The phone number of the IVR to filter by. (optional) 
 
             try
             { 
                 // Get IVR configs.
-                IVREntityListing result = apiInstance.GetArchitectIvrs(pageNumber, pageSize, sortBy, sortOrder, name);
+                IVREntityListing result = apiInstance.GetArchitectIvrs(pageNumber, pageSize, sortBy, sortOrder, name, dnis);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1958,6 +1959,7 @@ namespace Example
 | **sortBy** | **string**| Sort by | [optional] [default to "name"] |
 | **sortOrder** | **string**| Sort order | [optional] [default to "ASC"] |
 | **name** | **string**| Name of the IVR to filter by. | [optional]  |
+| **dnis** | **string**| The phone number of the IVR to filter by. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

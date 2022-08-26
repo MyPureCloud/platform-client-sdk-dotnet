@@ -12,6 +12,7 @@ title: ConversationAppSettings
 | **AutoStartType** | **string** | Deprecated. The auto start type for the messenger conversation | [optional] |
 | **AutoStart** | [**AutoStart**](AutoStart.html) | The auto start for the messenger conversation | [optional] |
 | **Markdown** | [**Markdown**](Markdown.html) | The markdown for the messenger app | [optional] |
+| **ConversationDisconnect** | [**ConversationDisconnectSettings**](ConversationDisconnectSettings.html) | The conversation disconnect settings for the messenger app | [optional] |
 {: class="table table-striped"}
 
 

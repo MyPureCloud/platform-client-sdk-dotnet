@@ -592,6 +592,12 @@ namespace PureCloudPlatform.Client.V2.Model
             PredictiveRoutingModelView,
             
             /// <summary>
+            /// Enum PredictiveRoutingImpactView for "PREDICTIVE_ROUTING_IMPACT_VIEW"
+            /// </summary>
+            [EnumMember(Value = "PREDICTIVE_ROUTING_IMPACT_VIEW")]
+            PredictiveRoutingImpactView,
+            
+            /// <summary>
             /// Enum DataActionsPerformanceSummaryView for "DATA_ACTIONS_PERFORMANCE_SUMMARY_VIEW"
             /// </summary>
             [EnumMember(Value = "DATA_ACTIONS_PERFORMANCE_SUMMARY_VIEW")]

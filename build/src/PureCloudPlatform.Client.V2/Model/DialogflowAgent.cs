@@ -26,13 +26,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Languages">The supported languages of the Dialogflow agent.</param>
         /// <param name="Intents">An array of Intents associated with this agent.</param>
         /// <param name="Environments">Available environments for this agent.</param>
-        public DialogflowAgent(string Name = null, DialogflowProject Project = null, List<string> Languages = null, List<DialogflowIntent> Intents = null, List<string> Environments = null)
+        /// <param name="Integration">The Integration this Dialogflow agent was referenced from..</param>
+        public DialogflowAgent(string Name = null, DialogflowProject Project = null, List<string> Languages = null, List<DialogflowIntent> Intents = null, List<string> Environments = null, DomainEntityRef Integration = null)
         {
             this.Name = Name;
             this.Project = Project;
             this.Languages = Languages;
             this.Intents = Intents;
             this.Environments = Environments;
+            this.Integration = Integration;
             
         }
         
@@ -92,6 +94,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The Integration this Dialogflow agent was referenced from.
+        /// </summary>
+        /// <value>The Integration this Dialogflow agent was referenced from.</value>
+        [DataMember(Name="integration", EmitDefaultValue=false)]
+        public DomainEntityRef Integration { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -114,6 +125,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Languages: ").Append(Languages).Append("\n");
             sb.Append("  Intents: ").Append(Intents).Append("\n");
             sb.Append("  Environments: ").Append(Environments).Append("\n");
+            sb.Append("  Integration: ").Append(Integration).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -186,6 +198,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Environments.SequenceEqual(other.Environments)
                 ) &&
                 (
+                    this.Integration == other.Integration ||
+                    this.Integration != null &&
+                    this.Integration.Equals(other.Integration)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -220,6 +237,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Environments != null)
                     hash = hash * 59 + this.Environments.GetHashCode();
+
+                if (this.Integration != null)
+                    hash = hash * 59 + this.Integration.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -692,8 +692,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "name")</param>
         /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the IVR to filter by. (optional)</param>
+        /// <param name="dnis">The phone number of the IVR to filter by. (optional)</param>
         /// <returns>IVREntityListing</returns>
-        IVREntityListing GetArchitectIvrs (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
+        IVREntityListing GetArchitectIvrs (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null);
 
         /// <summary>
         /// Get IVR configs.
@@ -707,8 +708,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "name")</param>
         /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the IVR to filter by. (optional)</param>
+        /// <param name="dnis">The phone number of the IVR to filter by. (optional)</param>
         /// <returns>ApiResponse of IVREntityListing</returns>
-        ApiResponse<IVREntityListing> GetArchitectIvrsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
+        ApiResponse<IVREntityListing> GetArchitectIvrsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null);
 
         /// <summary>
         /// Get specified user prompt
@@ -3426,8 +3428,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "name")</param>
         /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the IVR to filter by. (optional)</param>
+        /// <param name="dnis">The phone number of the IVR to filter by. (optional)</param>
         /// <returns>Task of IVREntityListing</returns>
-        System.Threading.Tasks.Task<IVREntityListing> GetArchitectIvrsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
+        System.Threading.Tasks.Task<IVREntityListing> GetArchitectIvrsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null);
 
         /// <summary>
         /// Get IVR configs.
@@ -3441,8 +3444,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "name")</param>
         /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the IVR to filter by. (optional)</param>
+        /// <param name="dnis">The phone number of the IVR to filter by. (optional)</param>
         /// <returns>Task of ApiResponse (IVREntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<IVREntityListing>> GetArchitectIvrsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
+        System.Threading.Tasks.Task<ApiResponse<IVREntityListing>> GetArchitectIvrsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null);
 
         /// <summary>
         /// Get specified user prompt
@@ -10815,10 +10819,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "name")</param>
         /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the IVR to filter by. (optional)</param>
+        /// <param name="dnis">The phone number of the IVR to filter by. (optional)</param>
         /// <returns>IVREntityListing</returns>
-        public IVREntityListing GetArchitectIvrs (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
+        public IVREntityListing GetArchitectIvrs (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null)
         {
-             ApiResponse<IVREntityListing> localVarResponse = GetArchitectIvrsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name);
+             ApiResponse<IVREntityListing> localVarResponse = GetArchitectIvrsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name, dnis);
              return localVarResponse.Data;
         }
 
@@ -10831,8 +10836,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "name")</param>
         /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the IVR to filter by. (optional)</param>
+        /// <param name="dnis">The phone number of the IVR to filter by. (optional)</param>
         /// <returns>ApiResponse of IVREntityListing</returns>
-        public ApiResponse< IVREntityListing > GetArchitectIvrsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
+        public ApiResponse< IVREntityListing > GetArchitectIvrsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null)
         { 
 
             var localVarPath = "/api/v2/architect/ivrs";
@@ -10872,6 +10878,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (dnis != null) localVarQueryParams.Add(new Tuple<string, string>("dnis", this.Configuration.ApiClient.ParameterToString(dnis)));
 
             // Header params
 
@@ -10918,10 +10925,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "name")</param>
         /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the IVR to filter by. (optional)</param>
+        /// <param name="dnis">The phone number of the IVR to filter by. (optional)</param>
         /// <returns>Task of IVREntityListing</returns>
-        public async System.Threading.Tasks.Task<IVREntityListing> GetArchitectIvrsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
+        public async System.Threading.Tasks.Task<IVREntityListing> GetArchitectIvrsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null)
         {
-             ApiResponse<IVREntityListing> localVarResponse = await GetArchitectIvrsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name);
+             ApiResponse<IVREntityListing> localVarResponse = await GetArchitectIvrsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name, dnis);
              return localVarResponse.Data;
 
         }
@@ -10935,8 +10943,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "name")</param>
         /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the IVR to filter by. (optional)</param>
+        /// <param name="dnis">The phone number of the IVR to filter by. (optional)</param>
         /// <returns>Task of ApiResponse (IVREntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<IVREntityListing>> GetArchitectIvrsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
+        public async System.Threading.Tasks.Task<ApiResponse<IVREntityListing>> GetArchitectIvrsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null)
         { 
 
             var localVarPath = "/api/v2/architect/ivrs";
@@ -10976,6 +10985,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (dnis != null) localVarQueryParams.Add(new Tuple<string, string>("dnis", this.Configuration.ApiClient.ParameterToString(dnis)));
 
             // Header params
 

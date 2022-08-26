@@ -17,6 +17,7 @@ title: DncList
 | **DncSourceType** | **string** | The type of the DncList. | |
 | **ContactMethod** | **string** | The contact method. Required if dncSourceType is rds. | [optional] |
 | **LoginId** | **string** | A dnc.com loginId. Required if the dncSourceType is dnc.com. | [optional] |
+| **CampaignId** | **string** | A dnc.com campaignId. Optional if the dncSourceType is dnc.com. | [optional] |
 | **DncCodes** | **List&lt;string&gt;** | The list of dnc.com codes to be treated as DNC. Required if the dncSourceType is dnc.com. | [optional] |
 | **LicenseId** | **string** | A gryphon license number. Required if the dncSourceType is gryphon. | [optional] |
 | **Division** | [**DomainEntityRef**](DomainEntityRef.html) | The division this DncList belongs to. | [optional] |

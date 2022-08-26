@@ -80,13 +80,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="ActionTemplate">Action template associated with the action map..</param>
         /// <param name="MediaType">Media type of action..</param>
+        /// <param name="ActionTargetId">Action target ID..</param>
+        /// <param name="IsPacingEnabled">Whether this action should be throttled..</param>
+        /// <param name="Props">Additional properties..</param>
         /// <param name="ArchitectFlowFields">Architect Flow Id and input contract..</param>
         /// <param name="WebMessagingOfferFields">Admin-configurable fields of a web messaging offer action..</param>
         /// <param name="OpenActionFields">Admin-configurable fields of an open action..</param>
-        public ActionMapAction(ActionMapActionTemplate ActionTemplate = null, MediaTypeEnum? MediaType = null, ArchitectFlowFields ArchitectFlowFields = null, WebMessagingOfferFields WebMessagingOfferFields = null, OpenActionFields OpenActionFields = null)
+        public ActionMapAction(ActionMapActionTemplate ActionTemplate = null, MediaTypeEnum? MediaType = null, string ActionTargetId = null, bool? IsPacingEnabled = null, ActionProperties Props = null, ArchitectFlowFields ArchitectFlowFields = null, WebMessagingOfferFields WebMessagingOfferFields = null, OpenActionFields OpenActionFields = null)
         {
             this.ActionTemplate = ActionTemplate;
             this.MediaType = MediaType;
+            this.ActionTargetId = ActionTargetId;
+            this.IsPacingEnabled = IsPacingEnabled;
+            this.Props = Props;
             this.ArchitectFlowFields = ArchitectFlowFields;
             this.WebMessagingOfferFields = WebMessagingOfferFields;
             this.OpenActionFields = OpenActionFields;
@@ -103,6 +109,33 @@ namespace PureCloudPlatform.Client.V2.Model
         public ActionMapActionTemplate ActionTemplate { get; set; }
 
 
+
+
+
+        /// <summary>
+        /// Action target ID.
+        /// </summary>
+        /// <value>Action target ID.</value>
+        [DataMember(Name="actionTargetId", EmitDefaultValue=false)]
+        public string ActionTargetId { get; set; }
+
+
+
+        /// <summary>
+        /// Whether this action should be throttled.
+        /// </summary>
+        /// <value>Whether this action should be throttled.</value>
+        [DataMember(Name="isPacingEnabled", EmitDefaultValue=false)]
+        public bool? IsPacingEnabled { get; set; }
+
+
+
+        /// <summary>
+        /// Additional properties.
+        /// </summary>
+        /// <value>Additional properties.</value>
+        [DataMember(Name="props", EmitDefaultValue=false)]
+        public ActionProperties Props { get; set; }
 
 
 
@@ -143,6 +176,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  ActionTemplate: ").Append(ActionTemplate).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
+            sb.Append("  ActionTargetId: ").Append(ActionTargetId).Append("\n");
+            sb.Append("  IsPacingEnabled: ").Append(IsPacingEnabled).Append("\n");
+            sb.Append("  Props: ").Append(Props).Append("\n");
             sb.Append("  ArchitectFlowFields: ").Append(ArchitectFlowFields).Append("\n");
             sb.Append("  WebMessagingOfferFields: ").Append(WebMessagingOfferFields).Append("\n");
             sb.Append("  OpenActionFields: ").Append(OpenActionFields).Append("\n");
@@ -197,6 +233,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MediaType.Equals(other.MediaType)
                 ) &&
                 (
+                    this.ActionTargetId == other.ActionTargetId ||
+                    this.ActionTargetId != null &&
+                    this.ActionTargetId.Equals(other.ActionTargetId)
+                ) &&
+                (
+                    this.IsPacingEnabled == other.IsPacingEnabled ||
+                    this.IsPacingEnabled != null &&
+                    this.IsPacingEnabled.Equals(other.IsPacingEnabled)
+                ) &&
+                (
+                    this.Props == other.Props ||
+                    this.Props != null &&
+                    this.Props.Equals(other.Props)
+                ) &&
+                (
                     this.ArchitectFlowFields == other.ArchitectFlowFields ||
                     this.ArchitectFlowFields != null &&
                     this.ArchitectFlowFields.Equals(other.ArchitectFlowFields)
@@ -229,6 +280,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
+
+                if (this.ActionTargetId != null)
+                    hash = hash * 59 + this.ActionTargetId.GetHashCode();
+
+                if (this.IsPacingEnabled != null)
+                    hash = hash * 59 + this.IsPacingEnabled.GetHashCode();
+
+                if (this.Props != null)
+                    hash = hash * 59 + this.Props.GetHashCode();
 
                 if (this.ArchitectFlowFields != null)
                     hash = hash * 59 + this.ArchitectFlowFields.GetHashCode();

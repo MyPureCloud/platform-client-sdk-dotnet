@@ -176,7 +176,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Redacted">Is only true when the user making the request does not have sufficient permissions to see evaluation.</param>
         /// <param name="IsScoringIndex">IsScoringIndex.</param>
         /// <param name="AuthorizedActions">List of user authorized actions on evaluation. Possible values: edit, editScore, editAgentSignoff, delete, viewAudit.</param>
-        public EvaluationResponse(string Name = null, ConversationReference Conversation = null, EvaluationFormResponse EvaluationForm = null, User Evaluator = null, User Agent = null, Calibration Calibration = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, Queue Queue = null, List<MediaTypeEnum> MediaType = null, bool? Rescore = null, DateTime? ConversationDate = null, DateTime? ConversationEndDate = null, bool? NeverRelease = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, bool? IsScoringIndex = null, List<string> AuthorizedActions = null)
+        /// <param name="HasAssistanceFailed">Is true when evaluation assistance didn't execute successfully.</param>
+        public EvaluationResponse(string Name = null, ConversationReference Conversation = null, EvaluationFormResponse EvaluationForm = null, User Evaluator = null, User Agent = null, Calibration Calibration = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, Queue Queue = null, List<MediaTypeEnum> MediaType = null, bool? Rescore = null, DateTime? ConversationDate = null, DateTime? ConversationEndDate = null, bool? NeverRelease = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, bool? IsScoringIndex = null, List<string> AuthorizedActions = null, bool? HasAssistanceFailed = null)
         {
             this.Name = Name;
             this.Conversation = Conversation;
@@ -201,6 +202,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Redacted = Redacted;
             this.IsScoringIndex = IsScoringIndex;
             this.AuthorizedActions = AuthorizedActions;
+            this.HasAssistanceFailed = HasAssistanceFailed;
             
         }
         
@@ -400,6 +402,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Is true when evaluation assistance didn't execute successfully
+        /// </summary>
+        /// <value>Is true when evaluation assistance didn't execute successfully</value>
+        [DataMember(Name="hasAssistanceFailed", EmitDefaultValue=false)]
+        public bool? HasAssistanceFailed { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -440,6 +451,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Redacted: ").Append(Redacted).Append("\n");
             sb.Append("  IsScoringIndex: ").Append(IsScoringIndex).Append("\n");
             sb.Append("  AuthorizedActions: ").Append(AuthorizedActions).Append("\n");
+            sb.Append("  HasAssistanceFailed: ").Append(HasAssistanceFailed).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -602,6 +614,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AuthorizedActions.SequenceEqual(other.AuthorizedActions)
                 ) &&
                 (
+                    this.HasAssistanceFailed == other.HasAssistanceFailed ||
+                    this.HasAssistanceFailed != null &&
+                    this.HasAssistanceFailed.Equals(other.HasAssistanceFailed)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -690,6 +707,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AuthorizedActions != null)
                     hash = hash * 59 + this.AuthorizedActions.GetHashCode();
+
+                if (this.HasAssistanceFailed != null)
+                    hash = hash * 59 + this.HasAssistanceFailed.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

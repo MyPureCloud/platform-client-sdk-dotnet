@@ -191,11 +191,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CreatedByClient">CreatedByClient.</param>
         /// <param name="ConfigurationUri">ConfigurationUri.</param>
         /// <param name="DateCreated">DateCreated.</param>
+        /// <param name="DateCheckedIn">DateCheckedIn.</param>
+        /// <param name="DateSaved">DateSaved.</param>
         /// <param name="GenerationId">GenerationId.</param>
         /// <param name="PublishResultUri">PublishResultUri.</param>
         /// <param name="InputSchema">InputSchema.</param>
         /// <param name="OutputSchema">OutputSchema.</param>
-        public FlowVersion(string Id = null, string Name = null, string CommitVersion = null, string ConfigurationVersion = null, TypeEnum? Type = null, bool? Secure = null, bool? Debug = null, User CreatedBy = null, DomainEntityRef CreatedByClient = null, string ConfigurationUri = null, long? DateCreated = null, string GenerationId = null, string PublishResultUri = null, JsonSchemaDocument InputSchema = null, JsonSchemaDocument OutputSchema = null)
+        public FlowVersion(string Id = null, string Name = null, string CommitVersion = null, string ConfigurationVersion = null, TypeEnum? Type = null, bool? Secure = null, bool? Debug = null, User CreatedBy = null, DomainEntityRef CreatedByClient = null, string ConfigurationUri = null, long? DateCreated = null, long? DateCheckedIn = null, long? DateSaved = null, string GenerationId = null, string PublishResultUri = null, JsonSchemaDocument InputSchema = null, JsonSchemaDocument OutputSchema = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -208,6 +210,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CreatedByClient = CreatedByClient;
             this.ConfigurationUri = ConfigurationUri;
             this.DateCreated = DateCreated;
+            this.DateCheckedIn = DateCheckedIn;
+            this.DateSaved = DateSaved;
             this.GenerationId = GenerationId;
             this.PublishResultUri = PublishResultUri;
             this.InputSchema = InputSchema;
@@ -301,6 +305,22 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets DateCheckedIn
+        /// </summary>
+        [DataMember(Name="dateCheckedIn", EmitDefaultValue=false)]
+        public long? DateCheckedIn { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets DateSaved
+        /// </summary>
+        [DataMember(Name="dateSaved", EmitDefaultValue=false)]
+        public long? DateSaved { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets GenerationId
         /// </summary>
         [DataMember(Name="generationId", EmitDefaultValue=false)]
@@ -387,6 +407,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CreatedByClient: ").Append(CreatedByClient).Append("\n");
             sb.Append("  ConfigurationUri: ").Append(ConfigurationUri).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            sb.Append("  DateCheckedIn: ").Append(DateCheckedIn).Append("\n");
+            sb.Append("  DateSaved: ").Append(DateSaved).Append("\n");
             sb.Append("  GenerationId: ").Append(GenerationId).Append("\n");
             sb.Append("  PublishResultUri: ").Append(PublishResultUri).Append("\n");
             sb.Append("  InputSchema: ").Append(InputSchema).Append("\n");
@@ -491,6 +513,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateCreated.Equals(other.DateCreated)
                 ) &&
                 (
+                    this.DateCheckedIn == other.DateCheckedIn ||
+                    this.DateCheckedIn != null &&
+                    this.DateCheckedIn.Equals(other.DateCheckedIn)
+                ) &&
+                (
+                    this.DateSaved == other.DateSaved ||
+                    this.DateSaved != null &&
+                    this.DateSaved.Equals(other.DateSaved)
+                ) &&
+                (
                     this.GenerationId == other.GenerationId ||
                     this.GenerationId != null &&
                     this.GenerationId.Equals(other.GenerationId)
@@ -575,6 +607,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
+
+                if (this.DateCheckedIn != null)
+                    hash = hash * 59 + this.DateCheckedIn.GetHashCode();
+
+                if (this.DateSaved != null)
+                    hash = hash * 59 + this.DateSaved.GetHashCode();
 
                 if (this.GenerationId != null)
                     hash = hash * 59 + this.GenerationId.GetHashCode();

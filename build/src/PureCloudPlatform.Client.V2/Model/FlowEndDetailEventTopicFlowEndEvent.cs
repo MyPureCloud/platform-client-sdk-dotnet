@@ -380,7 +380,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Bot for "BOT"
             /// </summary>
             [EnumMember(Value = "BOT")]
-            Bot
+            Bot,
+            
+            /// <summary>
+            /// Enum Digitalbot for "DIGITALBOT"
+            /// </summary>
+            [EnumMember(Value = "DIGITALBOT")]
+            Digitalbot
         }
         /// <summary>
         /// Gets or Sets DisconnectType

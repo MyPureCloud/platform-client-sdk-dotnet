@@ -8,10 +8,33 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**DeleteKnowledgeKnowledgebase**](KnowledgeApi.html#deleteknowledgeknowledgebase) | **DELETE** /api/v2/knowledge/knowledgebases/{knowledgeBaseId} | Delete knowledge base |
+| [**DeleteKnowledgeKnowledgebaseCategory**](KnowledgeApi.html#deleteknowledgeknowledgebasecategory) | **DELETE** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories/{categoryId} | Delete category |
+| [**DeleteKnowledgeKnowledgebaseDocument**](KnowledgeApi.html#deleteknowledgeknowledgebasedocument) | **DELETE** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId} | Delete document. |
+| [**DeleteKnowledgeKnowledgebaseDocumentVariation**](KnowledgeApi.html#deleteknowledgeknowledgebasedocumentvariation) | **DELETE** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations/{documentVariationId} | Delete a variation for a document. |
+| [**DeleteKnowledgeKnowledgebaseExportJob**](KnowledgeApi.html#deleteknowledgeknowledgebaseexportjob) | **DELETE** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/export/jobs/{exportJobId} | Delete export job |
+| [**DeleteKnowledgeKnowledgebaseImportJob**](KnowledgeApi.html#deleteknowledgeknowledgebaseimportjob) | **DELETE** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/import/jobs/{importJobId} | Delete import job |
+| [**DeleteKnowledgeKnowledgebaseLabel**](KnowledgeApi.html#deleteknowledgeknowledgebaselabel) | **DELETE** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/labels/{labelId} | Delete label |
 | [**DeleteKnowledgeKnowledgebaseLanguageCategory**](KnowledgeApi.html#deleteknowledgeknowledgebaselanguagecategory) | **DELETE** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/categories/{categoryId} | Delete category |
 | [**DeleteKnowledgeKnowledgebaseLanguageDocument**](KnowledgeApi.html#deleteknowledgeknowledgebaselanguagedocument) | **DELETE** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/{documentId} | Delete document |
 | [**DeleteKnowledgeKnowledgebaseLanguageDocumentsImport**](KnowledgeApi.html#deleteknowledgeknowledgebaselanguagedocumentsimport) | **DELETE** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports/{importId} | Delete import operation |
+| [**GetKnowledgeGuestSessionCategories**](KnowledgeApi.html#getknowledgeguestsessioncategories) | **GET** /api/v2/knowledge/guest/sessions/{sessionId}/categories | Get categories |
+| [**GetKnowledgeGuestSessionDocument**](KnowledgeApi.html#getknowledgeguestsessiondocument) | **GET** /api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId} | Get a knowledge document by ID. |
+| [**GetKnowledgeGuestSessionDocuments**](KnowledgeApi.html#getknowledgeguestsessiondocuments) | **GET** /api/v2/knowledge/guest/sessions/{sessionId}/documents | Get documents. |
 | [**GetKnowledgeKnowledgebase**](KnowledgeApi.html#getknowledgeknowledgebase) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId} | Get knowledge base |
+| [**GetKnowledgeKnowledgebaseCategories**](KnowledgeApi.html#getknowledgeknowledgebasecategories) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories | Get categories |
+| [**GetKnowledgeKnowledgebaseCategory**](KnowledgeApi.html#getknowledgeknowledgebasecategory) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories/{categoryId} | Get category |
+| [**GetKnowledgeKnowledgebaseDocument**](KnowledgeApi.html#getknowledgeknowledgebasedocument) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId} | Get document. |
+| [**GetKnowledgeKnowledgebaseDocumentVariation**](KnowledgeApi.html#getknowledgeknowledgebasedocumentvariation) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations/{documentVariationId} | Get a variation for a document. |
+| [**GetKnowledgeKnowledgebaseDocumentVariations**](KnowledgeApi.html#getknowledgeknowledgebasedocumentvariations) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations | Get variations for a document. |
+| [**GetKnowledgeKnowledgebaseDocumentVersion**](KnowledgeApi.html#getknowledgeknowledgebasedocumentversion) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions/{versionId} | Get document version. |
+| [**GetKnowledgeKnowledgebaseDocumentVersionVariation**](KnowledgeApi.html#getknowledgeknowledgebasedocumentversionvariation) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions/{versionId}/variations/{variationId} | Get variation for the given document version. |
+| [**GetKnowledgeKnowledgebaseDocumentVersionVariations**](KnowledgeApi.html#getknowledgeknowledgebasedocumentversionvariations) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions/{versionId}/variations | Get variations for the given document version. |
+| [**GetKnowledgeKnowledgebaseDocumentVersions**](KnowledgeApi.html#getknowledgeknowledgebasedocumentversions) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions | Get document versions. |
+| [**GetKnowledgeKnowledgebaseDocuments**](KnowledgeApi.html#getknowledgeknowledgebasedocuments) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents | Get documents. |
+| [**GetKnowledgeKnowledgebaseExportJob**](KnowledgeApi.html#getknowledgeknowledgebaseexportjob) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/export/jobs/{exportJobId} | Get export job report |
+| [**GetKnowledgeKnowledgebaseImportJob**](KnowledgeApi.html#getknowledgeknowledgebaseimportjob) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/import/jobs/{importJobId} | Get import job report |
+| [**GetKnowledgeKnowledgebaseLabel**](KnowledgeApi.html#getknowledgeknowledgebaselabel) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/labels/{labelId} | Get label |
+| [**GetKnowledgeKnowledgebaseLabels**](KnowledgeApi.html#getknowledgeknowledgebaselabels) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/labels | Get labels |
 | [**GetKnowledgeKnowledgebaseLanguageCategories**](KnowledgeApi.html#getknowledgeknowledgebaselanguagecategories) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/categories | Get categories |
 | [**GetKnowledgeKnowledgebaseLanguageCategory**](KnowledgeApi.html#getknowledgeknowledgebaselanguagecategory) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/categories/{categoryId} | Get category |
 | [**GetKnowledgeKnowledgebaseLanguageDocument**](KnowledgeApi.html#getknowledgeknowledgebaselanguagedocument) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/{documentId} | Get document |
@@ -19,13 +42,36 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetKnowledgeKnowledgebaseLanguageDocumentsImport**](KnowledgeApi.html#getknowledgeknowledgebaselanguagedocumentsimport) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports/{importId} | Get import operation report |
 | [**GetKnowledgeKnowledgebaseLanguageTraining**](KnowledgeApi.html#getknowledgeknowledgebaselanguagetraining) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/trainings/{trainingId} | Get training detail |
 | [**GetKnowledgeKnowledgebaseLanguageTrainings**](KnowledgeApi.html#getknowledgeknowledgebaselanguagetrainings) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/trainings | Get all trainings information for a knowledgebase |
+| [**GetKnowledgeKnowledgebaseUnansweredGroup**](KnowledgeApi.html#getknowledgeknowledgebaseunansweredgroup) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups/{groupId} | Get knowledge base unanswered group for a particular groupId |
+| [**GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroup**](KnowledgeApi.html#getknowledgeknowledgebaseunansweredgroupphrasegroup) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups/{groupId}/phrasegroups/{phraseGroupId} | Get knowledge base unanswered phrase group for a particular phraseGroupId |
+| [**GetKnowledgeKnowledgebaseUnansweredGroups**](KnowledgeApi.html#getknowledgeknowledgebaseunansweredgroups) | **GET** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups | Get knowledge base unanswered groups |
 | [**GetKnowledgeKnowledgebases**](KnowledgeApi.html#getknowledgeknowledgebases) | **GET** /api/v2/knowledge/knowledgebases | Get knowledge bases |
+| [**PatchKnowledgeGuestSessionDocumentsSearchSearchId**](KnowledgeApi.html#patchknowledgeguestsessiondocumentssearchsearchid) | **PATCH** /api/v2/knowledge/guest/sessions/{sessionId}/documents/search/{searchId} | Update search result. |
 | [**PatchKnowledgeKnowledgebase**](KnowledgeApi.html#patchknowledgeknowledgebase) | **PATCH** /api/v2/knowledge/knowledgebases/{knowledgeBaseId} | Update knowledge base |
+| [**PatchKnowledgeKnowledgebaseCategory**](KnowledgeApi.html#patchknowledgeknowledgebasecategory) | **PATCH** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories/{categoryId} | Update category |
+| [**PatchKnowledgeKnowledgebaseDocument**](KnowledgeApi.html#patchknowledgeknowledgebasedocument) | **PATCH** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId} | Update document. |
+| [**PatchKnowledgeKnowledgebaseDocumentVariation**](KnowledgeApi.html#patchknowledgeknowledgebasedocumentvariation) | **PATCH** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations/{documentVariationId} | Update a variation for a document. |
+| [**PatchKnowledgeKnowledgebaseDocumentsSearchSearchId**](KnowledgeApi.html#patchknowledgeknowledgebasedocumentssearchsearchid) | **PATCH** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/search/{searchId} | Update search result. |
+| [**PatchKnowledgeKnowledgebaseImportJob**](KnowledgeApi.html#patchknowledgeknowledgebaseimportjob) | **PATCH** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/import/jobs/{importJobId} | Start import job |
+| [**PatchKnowledgeKnowledgebaseLabel**](KnowledgeApi.html#patchknowledgeknowledgebaselabel) | **PATCH** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/labels/{labelId} | Update label |
 | [**PatchKnowledgeKnowledgebaseLanguageCategory**](KnowledgeApi.html#patchknowledgeknowledgebaselanguagecategory) | **PATCH** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/categories/{categoryId} | Update category |
 | [**PatchKnowledgeKnowledgebaseLanguageDocument**](KnowledgeApi.html#patchknowledgeknowledgebaselanguagedocument) | **PATCH** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/{documentId} | Update document |
 | [**PatchKnowledgeKnowledgebaseLanguageDocuments**](KnowledgeApi.html#patchknowledgeknowledgebaselanguagedocuments) | **PATCH** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents | Update documents collection |
 | [**PatchKnowledgeKnowledgebaseLanguageDocumentsImport**](KnowledgeApi.html#patchknowledgeknowledgebaselanguagedocumentsimport) | **PATCH** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports/{importId} | Start import operation |
+| [**PatchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup**](KnowledgeApi.html#patchknowledgeknowledgebaseunansweredgroupphrasegroup) | **PATCH** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups/{groupId}/phrasegroups/{phraseGroupId} | Update a Knowledge base unanswered phrase group |
 | [**PostKnowledgeDocumentuploads**](KnowledgeApi.html#postknowledgedocumentuploads) | **POST** /api/v2/knowledge/documentuploads | Creates a presigned URL for uploading a knowledge import file with a set of documents |
+| [**PostKnowledgeGuestSessionDocumentsSearch**](KnowledgeApi.html#postknowledgeguestsessiondocumentssearch) | **POST** /api/v2/knowledge/guest/sessions/{sessionId}/documents/search | Search the documents in a guest session. |
+| [**PostKnowledgeGuestSessionDocumentsSearchSuggestions**](KnowledgeApi.html#postknowledgeguestsessiondocumentssearchsuggestions) | **POST** /api/v2/knowledge/guest/sessions/{sessionId}/documents/search/suggestions | Query the knowledge documents to provide suggestions for auto completion. |
+| [**PostKnowledgeGuestSessions**](KnowledgeApi.html#postknowledgeguestsessions) | **POST** /api/v2/knowledge/guest/sessions | Create guest session |
+| [**PostKnowledgeKnowledgebaseCategories**](KnowledgeApi.html#postknowledgeknowledgebasecategories) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories | Create new category |
+| [**PostKnowledgeKnowledgebaseDocumentVariations**](KnowledgeApi.html#postknowledgeknowledgebasedocumentvariations) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations | Create a variation for a document. |
+| [**PostKnowledgeKnowledgebaseDocumentVersions**](KnowledgeApi.html#postknowledgeknowledgebasedocumentversions) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions | Creates or restores a document version. |
+| [**PostKnowledgeKnowledgebaseDocuments**](KnowledgeApi.html#postknowledgeknowledgebasedocuments) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents | Create document. |
+| [**PostKnowledgeKnowledgebaseDocumentsSearch**](KnowledgeApi.html#postknowledgeknowledgebasedocumentssearch) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/search | Search the documents in a knowledge base. |
+| [**PostKnowledgeKnowledgebaseDocumentsSearchSuggestions**](KnowledgeApi.html#postknowledgeknowledgebasedocumentssearchsuggestions) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/search/suggestions | Query the knowledge documents to provide suggestions for auto completion. |
+| [**PostKnowledgeKnowledgebaseExportJobs**](KnowledgeApi.html#postknowledgeknowledgebaseexportjobs) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/export/jobs | Create export job |
+| [**PostKnowledgeKnowledgebaseImportJobs**](KnowledgeApi.html#postknowledgeknowledgebaseimportjobs) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/import/jobs | Create import job |
+| [**PostKnowledgeKnowledgebaseLabels**](KnowledgeApi.html#postknowledgeknowledgebaselabels) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/labels | Create new label |
 | [**PostKnowledgeKnowledgebaseLanguageCategories**](KnowledgeApi.html#postknowledgeknowledgebaselanguagecategories) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/categories | Create new category |
 | [**PostKnowledgeKnowledgebaseLanguageDocuments**](KnowledgeApi.html#postknowledgeknowledgebaselanguagedocuments) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents | Create document |
 | [**PostKnowledgeKnowledgebaseLanguageDocumentsImports**](KnowledgeApi.html#postknowledgeknowledgebaselanguagedocumentsimports) | **POST** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/imports | Create import operation |
@@ -100,6 +146,407 @@ namespace Example
 
 [**KnowledgeBase**](KnowledgeBase.html)
 
+<a name="deleteknowledgeknowledgebasecategory"></a>
+
+## [**CategoryResponse**](CategoryResponse.html) DeleteKnowledgeKnowledgebaseCategory (string knowledgeBaseId, string categoryId)
+
+
+
+Delete category
+
+
+
+Requires ALL permissions: 
+
+* knowledge:category:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteKnowledgeKnowledgebaseCategoryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var categoryId = categoryId_example;  // string | Category ID
+
+            try
+            { 
+                // Delete category
+                CategoryResponse result = apiInstance.DeleteKnowledgeKnowledgebaseCategory(knowledgeBaseId, categoryId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.DeleteKnowledgeKnowledgebaseCategory: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **categoryId** | **string**| Category ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CategoryResponse**](CategoryResponse.html)
+
+<a name="deleteknowledgeknowledgebasedocument"></a>
+
+## void DeleteKnowledgeKnowledgebaseDocument (string knowledgeBaseId, string documentId)
+
+
+
+Delete document.
+
+
+
+Requires ALL permissions: 
+
+* knowledge:document:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteKnowledgeKnowledgebaseDocumentExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID.
+            var documentId = documentId_example;  // string | Document ID.
+
+            try
+            { 
+                // Delete document.
+                apiInstance.DeleteKnowledgeKnowledgebaseDocument(knowledgeBaseId, documentId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.DeleteKnowledgeKnowledgebaseDocument: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID. |  |
+| **documentId** | **string**| Document ID. |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteknowledgeknowledgebasedocumentvariation"></a>
+
+## void DeleteKnowledgeKnowledgebaseDocumentVariation (string documentVariationId, string documentId, string knowledgeBaseId)
+
+
+
+Delete a variation for a document.
+
+
+
+Requires ANY permissions: 
+
+* knowledge:document:delete
+* knowledge:document:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteKnowledgeKnowledgebaseDocumentVariationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var documentVariationId = documentVariationId_example;  // string | Globally unique identifier for a document variation.
+            var documentId = documentId_example;  // string | Globally unique identifier for a document.
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Globally unique identifier for a knowledge base.
+
+            try
+            { 
+                // Delete a variation for a document.
+                apiInstance.DeleteKnowledgeKnowledgebaseDocumentVariation(documentVariationId, documentId, knowledgeBaseId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.DeleteKnowledgeKnowledgebaseDocumentVariation: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **documentVariationId** | **string**| Globally unique identifier for a document variation. |  |
+| **documentId** | **string**| Globally unique identifier for a document. |  |
+| **knowledgeBaseId** | **string**| Globally unique identifier for a knowledge base. |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteknowledgeknowledgebaseexportjob"></a>
+
+## void DeleteKnowledgeKnowledgebaseExportJob (string knowledgeBaseId, string exportJobId)
+
+
+
+Delete export job
+
+
+
+Requires ALL permissions: 
+
+* knowledge:exportJob:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteKnowledgeKnowledgebaseExportJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var exportJobId = exportJobId_example;  // string | Export job ID
+
+            try
+            { 
+                // Delete export job
+                apiInstance.DeleteKnowledgeKnowledgebaseExportJob(knowledgeBaseId, exportJobId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.DeleteKnowledgeKnowledgebaseExportJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **exportJobId** | **string**| Export job ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteknowledgeknowledgebaseimportjob"></a>
+
+## void DeleteKnowledgeKnowledgebaseImportJob (string knowledgeBaseId, string importJobId)
+
+
+
+Delete import job
+
+
+
+Requires ALL permissions: 
+
+* knowledge:importJob:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteKnowledgeKnowledgebaseImportJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var importJobId = importJobId_example;  // string | Import job ID
+
+            try
+            { 
+                // Delete import job
+                apiInstance.DeleteKnowledgeKnowledgebaseImportJob(knowledgeBaseId, importJobId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.DeleteKnowledgeKnowledgebaseImportJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **importJobId** | **string**| Import job ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteknowledgeknowledgebaselabel"></a>
+
+## [**LabelResponse**](LabelResponse.html) DeleteKnowledgeKnowledgebaseLabel (string knowledgeBaseId, string labelId)
+
+
+
+Delete label
+
+
+
+Requires ALL permissions: 
+
+* knowledge:label:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteKnowledgeKnowledgebaseLabelExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var labelId = labelId_example;  // string | Label ID
+
+            try
+            { 
+                // Delete label
+                LabelResponse result = apiInstance.DeleteKnowledgeKnowledgebaseLabel(knowledgeBaseId, labelId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.DeleteKnowledgeKnowledgebaseLabel: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **labelId** | **string**| Label ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LabelResponse**](LabelResponse.html)
+
 <a name="deleteknowledgeknowledgebaselanguagecategory"></a>
 
 ## [**KnowledgeCategory**](KnowledgeCategory.html) DeleteKnowledgeKnowledgebaseLanguageCategory (string categoryId, string knowledgeBaseId, string languageCode)
@@ -162,7 +609,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **categoryId** | **string**| Category ID |  |
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, de-DE, es-US, es-ES, fr-FR, pt-BR, nl-NL, it-IT, fr-CA |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT |
 {: class="table table-striped"}
 
 ### Return type
@@ -231,7 +678,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **documentId** | **string**| Document ID |  |
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, de-DE, es-US, es-ES, fr-FR, pt-BR, nl-NL, it-IT, fr-CA |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT |
 {: class="table table-striped"}
 
 ### Return type
@@ -298,13 +745,213 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, de-DE, es-US, es-ES, fr-FR, pt-BR, nl-NL, it-IT, fr-CA |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT |
 | **importId** | **string**| Import ID |  |
 {: class="table table-striped"}
 
 ### Return type
 
 void (empty response body)
+
+<a name="getknowledgeguestsessioncategories"></a>
+
+## [**GuestCategoryResponseListing**](GuestCategoryResponseListing.html) GetKnowledgeGuestSessionCategories (string sessionId, string before = null, string after = null, string pageSize = null, string parentId = null, bool? isRoot = null, string name = null, string sortBy = null, string expand = null, bool? includeDocumentCount = null)
+
+
+
+Get categories
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeGuestSessionCategoriesExample
+    {
+        public void main()
+        { 
+
+            var apiInstance = new KnowledgeApi();
+            var sessionId = sessionId_example;  // string | Knowledge guest session ID.
+            var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+            var parentId = parentId_example;  // string | If specified, retrieves the children categories by parent category ID. (optional) 
+            var isRoot = true;  // bool? | If specified, retrieves only the root categories. (optional) 
+            var name = name_example;  // string | Filter to return the categories that starts with the given category name. (optional) 
+            var sortBy = sortBy_example;  // string | Name: sort by category names alphabetically; Hierarchy: sort by the full path of hierarchical category names alphabetically (optional)  (default to Name)
+            var expand = expand_example;  // string | The specified entity attribute will be filled. Supported value:\"Ancestors\": every ancestors will be filled via the parent attribute recursively,but only the id, name, parentId will be present for the ancestors. (optional) 
+            var includeDocumentCount = true;  // bool? | If specified, retrieves the number of documents related to category. (optional) 
+
+            try
+            { 
+                // Get categories
+                GuestCategoryResponseListing result = apiInstance.GetKnowledgeGuestSessionCategories(sessionId, before, after, pageSize, parentId, isRoot, name, sortBy, expand, includeDocumentCount);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeGuestSessionCategories: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sessionId** | **string**| Knowledge guest session ID. |  |
+| **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+| **parentId** | **string**| If specified, retrieves the children categories by parent category ID. | [optional]  |
+| **isRoot** | **bool?**| If specified, retrieves only the root categories. | [optional]  |
+| **name** | **string**| Filter to return the categories that starts with the given category name. | [optional]  |
+| **sortBy** | **string**| Name: sort by category names alphabetically; Hierarchy: sort by the full path of hierarchical category names alphabetically | [optional] [default to Name]<br />**Values**: Name, Hierarchy |
+| **expand** | **string**| The specified entity attribute will be filled. Supported value:\&quot;Ancestors\&quot;: every ancestors will be filled via the parent attribute recursively,but only the id, name, parentId will be present for the ancestors. | [optional]  |
+| **includeDocumentCount** | **bool?**| If specified, retrieves the number of documents related to category. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**GuestCategoryResponseListing**](GuestCategoryResponseListing.html)
+
+<a name="getknowledgeguestsessiondocument"></a>
+
+## [**KnowledgeGuestDocument**](KnowledgeGuestDocument.html) GetKnowledgeGuestSessionDocument (string sessionId, string documentId)
+
+
+
+Get a knowledge document by ID.
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeGuestSessionDocumentExample
+    {
+        public void main()
+        { 
+
+            var apiInstance = new KnowledgeApi();
+            var sessionId = sessionId_example;  // string | Knowledge guest session ID.
+            var documentId = documentId_example;  // string | Document ID
+
+            try
+            { 
+                // Get a knowledge document by ID.
+                KnowledgeGuestDocument result = apiInstance.GetKnowledgeGuestSessionDocument(sessionId, documentId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeGuestSessionDocument: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sessionId** | **string**| Knowledge guest session ID. |  |
+| **documentId** | **string**| Document ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeGuestDocument**](KnowledgeGuestDocument.html)
+
+<a name="getknowledgeguestsessiondocuments"></a>
+
+## [**KnowledgeGuestDocumentResponseListing**](KnowledgeGuestDocumentResponseListing.html) GetKnowledgeGuestSessionDocuments (string sessionId, List<string> categoryId = null, bool? includeSubcategories = null, string pageSize = null)
+
+
+
+Get documents.
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeGuestSessionDocumentsExample
+    {
+        public void main()
+        { 
+
+            var apiInstance = new KnowledgeApi();
+            var sessionId = sessionId_example;  // string | Knowledge guest session ID.
+            var categoryId = new List<string>(); // List<string> | If specified, retrieves documents associated with category ids, comma separated values expected. (optional) 
+            var includeSubcategories = true;  // bool? | Works along with 'categoryId' query parameter. If specified, retrieves documents associated with category ids and its children categories. (optional) 
+            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+
+            try
+            { 
+                // Get documents.
+                KnowledgeGuestDocumentResponseListing result = apiInstance.GetKnowledgeGuestSessionDocuments(sessionId, categoryId, includeSubcategories, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeGuestSessionDocuments: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sessionId** | **string**| Knowledge guest session ID. |  |
+| **categoryId** | [**List<string>**](string.html)| If specified, retrieves documents associated with category ids, comma separated values expected. | [optional]  |
+| **includeSubcategories** | **bool?**| Works along with &#39;categoryId&#39; query parameter. If specified, retrieves documents associated with category ids and its children categories. | [optional]  |
+| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeGuestDocumentResponseListing**](KnowledgeGuestDocumentResponseListing.html)
 
 <a name="getknowledgeknowledgebase"></a>
 
@@ -371,6 +1018,1024 @@ namespace Example
 
 [**KnowledgeBase**](KnowledgeBase.html)
 
+<a name="getknowledgeknowledgebasecategories"></a>
+
+## [**CategoryResponseListing**](CategoryResponseListing.html) GetKnowledgeKnowledgebaseCategories (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, string parentId = null, bool? isRoot = null, string name = null, string sortBy = null, string expand = null, bool? includeDocumentCount = null)
+
+
+
+Get categories
+
+
+
+Requires ALL permissions: 
+
+* knowledge:category:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeKnowledgebaseCategoriesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+            var parentId = parentId_example;  // string | If specified, retrieves the children categories by parent category ID. (optional) 
+            var isRoot = true;  // bool? | If specified, retrieves only the root categories. (optional) 
+            var name = name_example;  // string | Filter to return the categories that starts with the given category name. (optional) 
+            var sortBy = sortBy_example;  // string | Name: sort by category names alphabetically; Hierarchy: sort by the full path of hierarchical category names alphabetically (optional)  (default to Name)
+            var expand = expand_example;  // string | The specified entity attribute will be filled. Supported value:\"Ancestors\": every ancestors will be filled via the parent attribute recursively,but only the id, name, parentId will be present for the ancestors. (optional) 
+            var includeDocumentCount = true;  // bool? | If specified, retrieves the number of documents related to category. (optional) 
+
+            try
+            { 
+                // Get categories
+                CategoryResponseListing result = apiInstance.GetKnowledgeKnowledgebaseCategories(knowledgeBaseId, before, after, pageSize, parentId, isRoot, name, sortBy, expand, includeDocumentCount);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeKnowledgebaseCategories: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+| **parentId** | **string**| If specified, retrieves the children categories by parent category ID. | [optional]  |
+| **isRoot** | **bool?**| If specified, retrieves only the root categories. | [optional]  |
+| **name** | **string**| Filter to return the categories that starts with the given category name. | [optional]  |
+| **sortBy** | **string**| Name: sort by category names alphabetically; Hierarchy: sort by the full path of hierarchical category names alphabetically | [optional] [default to Name]<br />**Values**: Name, Hierarchy |
+| **expand** | **string**| The specified entity attribute will be filled. Supported value:\&quot;Ancestors\&quot;: every ancestors will be filled via the parent attribute recursively,but only the id, name, parentId will be present for the ancestors. | [optional]  |
+| **includeDocumentCount** | **bool?**| If specified, retrieves the number of documents related to category. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CategoryResponseListing**](CategoryResponseListing.html)
+
+<a name="getknowledgeknowledgebasecategory"></a>
+
+## [**CategoryResponse**](CategoryResponse.html) GetKnowledgeKnowledgebaseCategory (string knowledgeBaseId, string categoryId)
+
+
+
+Get category
+
+
+
+Requires ALL permissions: 
+
+* knowledge:category:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeKnowledgebaseCategoryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var categoryId = categoryId_example;  // string | Category ID
+
+            try
+            { 
+                // Get category
+                CategoryResponse result = apiInstance.GetKnowledgeKnowledgebaseCategory(knowledgeBaseId, categoryId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeKnowledgebaseCategory: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **categoryId** | **string**| Category ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CategoryResponse**](CategoryResponse.html)
+
+<a name="getknowledgeknowledgebasedocument"></a>
+
+## [**KnowledgeDocumentResponse**](KnowledgeDocumentResponse.html) GetKnowledgeKnowledgebaseDocument (string knowledgeBaseId, string documentId, List<string> expand = null, string state = null)
+
+
+
+Get document.
+
+
+
+Requires ALL permissions: 
+
+* knowledge:document:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeKnowledgebaseDocumentExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID.
+            var documentId = documentId_example;  // string | Document ID.
+            var expand = new List<string>(); // List<string> | The specified entity attributes will be filled. Comma separated values expected. Max No. of variations that can be returned on expand is 20. (optional) 
+            var state = state_example;  // string | \"when state is \"Draft\", draft version of the document is returned,otherwise by default published version is returned in the response. (optional) 
+
+            try
+            { 
+                // Get document.
+                KnowledgeDocumentResponse result = apiInstance.GetKnowledgeKnowledgebaseDocument(knowledgeBaseId, documentId, expand, state);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeKnowledgebaseDocument: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID. |  |
+| **documentId** | **string**| Document ID. |  |
+| **expand** | [**List<string>**](string.html)| The specified entity attributes will be filled. Comma separated values expected. Max No. of variations that can be returned on expand is 20. | [optional] <br />**Values**: category, labels, variations |
+| **state** | **string**| \&quot;when state is \&quot;Draft\&quot;, draft version of the document is returned,otherwise by default published version is returned in the response. | [optional] <br />**Values**: Draft, Published |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeDocumentResponse**](KnowledgeDocumentResponse.html)
+
+<a name="getknowledgeknowledgebasedocumentvariation"></a>
+
+## [**DocumentVariation**](DocumentVariation.html) GetKnowledgeKnowledgebaseDocumentVariation (string documentVariationId, string documentId, string knowledgeBaseId, string documentState = null)
+
+
+
+Get a variation for a document.
+
+
+
+Requires ALL permissions: 
+
+* knowledge:document:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeKnowledgebaseDocumentVariationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var documentVariationId = documentVariationId_example;  // string | Globally unique identifier for a document variation.
+            var documentId = documentId_example;  // string | Globally unique identifier for a document.
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Globally unique identifier for a knowledge base.
+            var documentState = documentState_example;  // string | The state of the document. (optional) 
+
+            try
+            { 
+                // Get a variation for a document.
+                DocumentVariation result = apiInstance.GetKnowledgeKnowledgebaseDocumentVariation(documentVariationId, documentId, knowledgeBaseId, documentState);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeKnowledgebaseDocumentVariation: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **documentVariationId** | **string**| Globally unique identifier for a document variation. |  |
+| **documentId** | **string**| Globally unique identifier for a document. |  |
+| **knowledgeBaseId** | **string**| Globally unique identifier for a knowledge base. |  |
+| **documentState** | **string**| The state of the document. | [optional] <br />**Values**: Draft, Published |
+{: class="table table-striped"}
+
+### Return type
+
+[**DocumentVariation**](DocumentVariation.html)
+
+<a name="getknowledgeknowledgebasedocumentvariations"></a>
+
+## [**DocumentVariationListing**](DocumentVariationListing.html) GetKnowledgeKnowledgebaseDocumentVariations (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, string documentState = null)
+
+
+
+Get variations for a document.
+
+
+
+Requires ALL permissions: 
+
+* knowledge:document:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeKnowledgebaseDocumentVariationsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Globally unique identifier for the knowledge base.
+            var documentId = documentId_example;  // string | Globally unique identifier for the document.
+            var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+            var documentState = documentState_example;  // string | The state of the document. (optional) 
+
+            try
+            { 
+                // Get variations for a document.
+                DocumentVariationListing result = apiInstance.GetKnowledgeKnowledgebaseDocumentVariations(knowledgeBaseId, documentId, before, after, pageSize, documentState);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeKnowledgebaseDocumentVariations: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Globally unique identifier for the knowledge base. |  |
+| **documentId** | **string**| Globally unique identifier for the document. |  |
+| **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+| **documentState** | **string**| The state of the document. | [optional] <br />**Values**: Draft, Published |
+{: class="table table-striped"}
+
+### Return type
+
+[**DocumentVariationListing**](DocumentVariationListing.html)
+
+<a name="getknowledgeknowledgebasedocumentversion"></a>
+
+## [**KnowledgeDocumentVersion**](KnowledgeDocumentVersion.html) GetKnowledgeKnowledgebaseDocumentVersion (string knowledgeBaseId, string documentId, string versionId, List<string> expand = null)
+
+
+
+Get document version.
+
+
+
+Requires ALL permissions: 
+
+* knowledge:documentVersion:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeKnowledgebaseDocumentVersionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Globally unique identifier for the knowledge base.
+            var documentId = documentId_example;  // string | Globally unique identifier for the document.
+            var versionId = versionId_example;  // string | Globally unique identifier for the document version.
+            var expand = new List<string>(); // List<string> | The specified entity attributes will be filled. Comma separated values expected. (optional) 
+
+            try
+            { 
+                // Get document version.
+                KnowledgeDocumentVersion result = apiInstance.GetKnowledgeKnowledgebaseDocumentVersion(knowledgeBaseId, documentId, versionId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeKnowledgebaseDocumentVersion: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Globally unique identifier for the knowledge base. |  |
+| **documentId** | **string**| Globally unique identifier for the document. |  |
+| **versionId** | **string**| Globally unique identifier for the document version. |  |
+| **expand** | [**List<string>**](string.html)| The specified entity attributes will be filled. Comma separated values expected. | [optional] <br />**Values**: category, labels |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeDocumentVersion**](KnowledgeDocumentVersion.html)
+
+<a name="getknowledgeknowledgebasedocumentversionvariation"></a>
+
+## [**KnowledgeDocumentVersionVariation**](KnowledgeDocumentVersionVariation.html) GetKnowledgeKnowledgebaseDocumentVersionVariation (string knowledgeBaseId, string documentId, string versionId, string variationId)
+
+
+
+Get variation for the given document version.
+
+
+
+Requires ALL permissions: 
+
+* knowledge:documentVersion:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeKnowledgebaseDocumentVersionVariationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Globally unique identifier for the knowledge base.
+            var documentId = documentId_example;  // string | Globally unique identifier for the document.
+            var versionId = versionId_example;  // string | Globally unique identifier for the document version.
+            var variationId = variationId_example;  // string | Globally unique identifier for the document version variation.
+
+            try
+            { 
+                // Get variation for the given document version.
+                KnowledgeDocumentVersionVariation result = apiInstance.GetKnowledgeKnowledgebaseDocumentVersionVariation(knowledgeBaseId, documentId, versionId, variationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeKnowledgebaseDocumentVersionVariation: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Globally unique identifier for the knowledge base. |  |
+| **documentId** | **string**| Globally unique identifier for the document. |  |
+| **versionId** | **string**| Globally unique identifier for the document version. |  |
+| **variationId** | **string**| Globally unique identifier for the document version variation. |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeDocumentVersionVariation**](KnowledgeDocumentVersionVariation.html)
+
+<a name="getknowledgeknowledgebasedocumentversionvariations"></a>
+
+## [**KnowledgeDocumentVersionVariationListing**](KnowledgeDocumentVersionVariationListing.html) GetKnowledgeKnowledgebaseDocumentVersionVariations (string knowledgeBaseId, string documentId, string versionId, string before = null, string after = null, string pageSize = null)
+
+
+
+Get variations for the given document version.
+
+
+
+Requires ALL permissions: 
+
+* knowledge:documentVersion:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeKnowledgebaseDocumentVersionVariationsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Globally unique identifier for the knowledge base.
+            var documentId = documentId_example;  // string | Globally unique identifier for the document.
+            var versionId = versionId_example;  // string | Globally unique identifier for the document version.
+            var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+
+            try
+            { 
+                // Get variations for the given document version.
+                KnowledgeDocumentVersionVariationListing result = apiInstance.GetKnowledgeKnowledgebaseDocumentVersionVariations(knowledgeBaseId, documentId, versionId, before, after, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeKnowledgebaseDocumentVersionVariations: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Globally unique identifier for the knowledge base. |  |
+| **documentId** | **string**| Globally unique identifier for the document. |  |
+| **versionId** | **string**| Globally unique identifier for the document version. |  |
+| **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeDocumentVersionVariationListing**](KnowledgeDocumentVersionVariationListing.html)
+
+<a name="getknowledgeknowledgebasedocumentversions"></a>
+
+## [**KnowledgeDocumentVersionListing**](KnowledgeDocumentVersionListing.html) GetKnowledgeKnowledgebaseDocumentVersions (string knowledgeBaseId, string documentId, string before = null, string after = null, string pageSize = null, List<string> expand = null)
+
+
+
+Get document versions.
+
+
+
+Requires ALL permissions: 
+
+* knowledge:documentVersion:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeKnowledgebaseDocumentVersionsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Globally unique identifier for the knowledge base.
+            var documentId = documentId_example;  // string | Globally unique identifier for the document.
+            var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+            var expand = new List<string>(); // List<string> | The specified entity attributes will be filled. Comma separated values expected. (optional) 
+
+            try
+            { 
+                // Get document versions.
+                KnowledgeDocumentVersionListing result = apiInstance.GetKnowledgeKnowledgebaseDocumentVersions(knowledgeBaseId, documentId, before, after, pageSize, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeKnowledgebaseDocumentVersions: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Globally unique identifier for the knowledge base. |  |
+| **documentId** | **string**| Globally unique identifier for the document. |  |
+| **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+| **expand** | [**List<string>**](string.html)| The specified entity attributes will be filled. Comma separated values expected. | [optional] <br />**Values**: category, labels |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeDocumentVersionListing**](KnowledgeDocumentVersionListing.html)
+
+<a name="getknowledgeknowledgebasedocuments"></a>
+
+## [**KnowledgeDocumentResponseListing**](KnowledgeDocumentResponseListing.html) GetKnowledgeKnowledgebaseDocuments (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, string interval = null, List<string> categoryId = null, bool? includeSubcategories = null, bool? includeDrafts = null, List<string> labelIds = null, List<string> expand = null)
+
+
+
+Get documents.
+
+
+
+Requires ALL permissions: 
+
+* knowledge:document:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeKnowledgebaseDocumentsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+            var interval = interval_example;  // string | Retrieves the documents modified in specified date and time range. If the after and before cursor parameters are within this interval, it would return valid data, otherwise it throws an error.The dates in the interval are represented in ISO-8601 format: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ (optional) 
+            var categoryId = new List<string>(); // List<string> | If specified, retrieves documents associated with category ids, comma separated values expected. (optional) 
+            var includeSubcategories = true;  // bool? | Works along with 'categoryId' query parameter. If specified, retrieves documents associated with category ids and its children categories. (optional) 
+            var includeDrafts = true;  // bool? | If includeDrafts is true, Documents in the draft state are also returned in the response. (optional) 
+            var labelIds = new List<string>(); // List<string> | If specified, retrieves documents associated with label ids, comma separated values expected. (optional) 
+            var expand = new List<string>(); // List<string> | The specified entity attributes will be filled. Comma separated values expected. (optional) 
+
+            try
+            { 
+                // Get documents.
+                KnowledgeDocumentResponseListing result = apiInstance.GetKnowledgeKnowledgebaseDocuments(knowledgeBaseId, before, after, pageSize, interval, categoryId, includeSubcategories, includeDrafts, labelIds, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeKnowledgebaseDocuments: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+| **interval** | **string**| Retrieves the documents modified in specified date and time range. If the after and before cursor parameters are within this interval, it would return valid data, otherwise it throws an error.The dates in the interval are represented in ISO-8601 format: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ | [optional]  |
+| **categoryId** | [**List<string>**](string.html)| If specified, retrieves documents associated with category ids, comma separated values expected. | [optional]  |
+| **includeSubcategories** | **bool?**| Works along with &#39;categoryId&#39; query parameter. If specified, retrieves documents associated with category ids and its children categories. | [optional]  |
+| **includeDrafts** | **bool?**| If includeDrafts is true, Documents in the draft state are also returned in the response. | [optional]  |
+| **labelIds** | [**List<string>**](string.html)| If specified, retrieves documents associated with label ids, comma separated values expected. | [optional]  |
+| **expand** | [**List<string>**](string.html)| The specified entity attributes will be filled. Comma separated values expected. | [optional] <br />**Values**: category, labels, variations |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeDocumentResponseListing**](KnowledgeDocumentResponseListing.html)
+
+<a name="getknowledgeknowledgebaseexportjob"></a>
+
+## [**KnowledgeExportJobResponse**](KnowledgeExportJobResponse.html) GetKnowledgeKnowledgebaseExportJob (string knowledgeBaseId, string exportJobId)
+
+
+
+Get export job report
+
+
+
+Requires ALL permissions: 
+
+* knowledge:exportJob:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeKnowledgebaseExportJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var exportJobId = exportJobId_example;  // string | Export job ID
+
+            try
+            { 
+                // Get export job report
+                KnowledgeExportJobResponse result = apiInstance.GetKnowledgeKnowledgebaseExportJob(knowledgeBaseId, exportJobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeKnowledgebaseExportJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **exportJobId** | **string**| Export job ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeExportJobResponse**](KnowledgeExportJobResponse.html)
+
+<a name="getknowledgeknowledgebaseimportjob"></a>
+
+## [**KnowledgeImportJobResponse**](KnowledgeImportJobResponse.html) GetKnowledgeKnowledgebaseImportJob (string knowledgeBaseId, string importJobId)
+
+
+
+Get import job report
+
+
+
+Requires ALL permissions: 
+
+* knowledge:importJob:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeKnowledgebaseImportJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var importJobId = importJobId_example;  // string | Import job ID
+
+            try
+            { 
+                // Get import job report
+                KnowledgeImportJobResponse result = apiInstance.GetKnowledgeKnowledgebaseImportJob(knowledgeBaseId, importJobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeKnowledgebaseImportJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **importJobId** | **string**| Import job ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeImportJobResponse**](KnowledgeImportJobResponse.html)
+
+<a name="getknowledgeknowledgebaselabel"></a>
+
+## [**LabelResponse**](LabelResponse.html) GetKnowledgeKnowledgebaseLabel (string knowledgeBaseId, string labelId)
+
+
+
+Get label
+
+
+
+Requires ALL permissions: 
+
+* knowledge:label:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeKnowledgebaseLabelExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var labelId = labelId_example;  // string | Label ID
+
+            try
+            { 
+                // Get label
+                LabelResponse result = apiInstance.GetKnowledgeKnowledgebaseLabel(knowledgeBaseId, labelId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeKnowledgebaseLabel: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **labelId** | **string**| Label ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LabelResponse**](LabelResponse.html)
+
+<a name="getknowledgeknowledgebaselabels"></a>
+
+## [**LabelListing**](LabelListing.html) GetKnowledgeKnowledgebaseLabels (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, string name = null, bool? includeDocumentCount = null)
+
+
+
+Get labels
+
+
+
+Requires ALL permissions: 
+
+* knowledge:label:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeKnowledgebaseLabelsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+            var name = name_example;  // string | Filter to return the labels that contains the given phrase in the name. (optional) 
+            var includeDocumentCount = true;  // bool? | If specified, retrieves the number of documents related to label. (optional) 
+
+            try
+            { 
+                // Get labels
+                LabelListing result = apiInstance.GetKnowledgeKnowledgebaseLabels(knowledgeBaseId, before, after, pageSize, name, includeDocumentCount);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeKnowledgebaseLabels: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+| **name** | **string**| Filter to return the labels that contains the given phrase in the name. | [optional]  |
+| **includeDocumentCount** | **bool?**| If specified, retrieves the number of documents related to label. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LabelListing**](LabelListing.html)
+
 <a name="getknowledgeknowledgebaselanguagecategories"></a>
 
 ## [**CategoryListing**](CategoryListing.html) GetKnowledgeKnowledgebaseLanguageCategories (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string name = null)
@@ -436,7 +2101,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, de-DE, es-US, es-ES, fr-FR, pt-BR, nl-NL, it-IT, fr-CA |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT |
 | **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **limit** | **string**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize | [optional]  |
@@ -510,7 +2175,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **categoryId** | **string**| Category ID |  |
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, de-DE, es-US, es-ES, fr-FR, pt-BR, nl-NL, it-IT, fr-CA |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT |
 {: class="table table-striped"}
 
 ### Return type
@@ -579,7 +2244,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **documentId** | **string**| Document ID |  |
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, de-DE, es-US, es-ES, fr-FR, pt-BR, nl-NL, it-IT, fr-CA |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT |
 {: class="table table-striped"}
 
 ### Return type
@@ -655,7 +2320,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, de-DE, es-US, es-ES, fr-FR, pt-BR, nl-NL, it-IT, fr-CA |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT |
 | **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **limit** | **string**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize | [optional]  |
@@ -732,7 +2397,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, de-DE, es-US, es-ES, fr-FR, pt-BR, nl-NL, it-IT, fr-CA |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT |
 | **importId** | **string**| Import ID |  |
 {: class="table table-striped"}
 
@@ -801,7 +2466,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, de-DE, es-US, es-ES, fr-FR, pt-BR, nl-NL, it-IT, fr-CA |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT |
 | **trainingId** | **string**| Training ID |  |
 {: class="table table-striped"}
 
@@ -874,7 +2539,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, de-DE, es-US, es-ES, fr-FR, pt-BR, nl-NL, it-IT, fr-CA |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT |
 | **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **limit** | **string**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize | [optional]  |
@@ -885,6 +2550,213 @@ namespace Example
 ### Return type
 
 [**TrainingListing**](TrainingListing.html)
+
+<a name="getknowledgeknowledgebaseunansweredgroup"></a>
+
+## [**UnansweredGroup**](UnansweredGroup.html) GetKnowledgeKnowledgebaseUnansweredGroup (string knowledgeBaseId, string groupId, string app = null)
+
+
+
+Get knowledge base unanswered group for a particular groupId
+
+
+
+Requires ALL permissions: 
+
+* knowledge:groups:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeKnowledgebaseUnansweredGroupExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var groupId = groupId_example;  // string | The ID of the group to be retrieved.
+            var app = app_example;  // string | The app value to be used for filtering phrases. (optional) 
+
+            try
+            { 
+                // Get knowledge base unanswered group for a particular groupId
+                UnansweredGroup result = apiInstance.GetKnowledgeKnowledgebaseUnansweredGroup(knowledgeBaseId, groupId, app);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeKnowledgebaseUnansweredGroup: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **groupId** | **string**| The ID of the group to be retrieved. |  |
+| **app** | **string**| The app value to be used for filtering phrases. | [optional] <br />**Values**: SupportCenter, MessengerKnowledgeApp, BotFlow, Assistant, SmartAdvisor |
+{: class="table table-striped"}
+
+### Return type
+
+[**UnansweredGroup**](UnansweredGroup.html)
+
+<a name="getknowledgeknowledgebaseunansweredgroupphrasegroup"></a>
+
+## [**UnansweredPhraseGroup**](UnansweredPhraseGroup.html) GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroup (string knowledgeBaseId, string groupId, string phraseGroupId, string app = null)
+
+
+
+Get knowledge base unanswered phrase group for a particular phraseGroupId
+
+
+
+Requires ALL permissions: 
+
+* knowledge:groups:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroupExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var groupId = groupId_example;  // string | The ID of the group to be retrieved.
+            var phraseGroupId = phraseGroupId_example;  // string | The ID of the phraseGroup to be retrieved.
+            var app = app_example;  // string | The app value to be used for filtering phrases. (optional) 
+
+            try
+            { 
+                // Get knowledge base unanswered phrase group for a particular phraseGroupId
+                UnansweredPhraseGroup result = apiInstance.GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroup(knowledgeBaseId, groupId, phraseGroupId, app);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroup: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **groupId** | **string**| The ID of the group to be retrieved. |  |
+| **phraseGroupId** | **string**| The ID of the phraseGroup to be retrieved. |  |
+| **app** | **string**| The app value to be used for filtering phrases. | [optional] <br />**Values**: SupportCenter, MessengerKnowledgeApp, BotFlow, Assistant, SmartAdvisor |
+{: class="table table-striped"}
+
+### Return type
+
+[**UnansweredPhraseGroup**](UnansweredPhraseGroup.html)
+
+<a name="getknowledgeknowledgebaseunansweredgroups"></a>
+
+## [**UnansweredGroups**](UnansweredGroups.html) GetKnowledgeKnowledgebaseUnansweredGroups (string knowledgeBaseId, string app = null)
+
+
+
+Get knowledge base unanswered groups
+
+
+
+Requires ALL permissions: 
+
+* knowledge:groups:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeKnowledgebaseUnansweredGroupsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var app = app_example;  // string | The app value to be used for filtering phrases. (optional) 
+
+            try
+            { 
+                // Get knowledge base unanswered groups
+                UnansweredGroups result = apiInstance.GetKnowledgeKnowledgebaseUnansweredGroups(knowledgeBaseId, app);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeKnowledgebaseUnansweredGroups: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **app** | **string**| The app value to be used for filtering phrases. | [optional] <br />**Values**: SupportCenter, MessengerKnowledgeApp, BotFlow, Assistant, SmartAdvisor |
+{: class="table table-striped"}
+
+### Return type
+
+[**UnansweredGroups**](UnansweredGroups.html)
 
 <a name="getknowledgeknowledgebases"></a>
 
@@ -957,7 +2829,7 @@ namespace Example
 | **limit** | **string**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
 | **name** | **string**| Filter by Name. | [optional]  |
-| **coreLanguage** | **string**| Filter by core language. | [optional] <br />**Values**: en-US, en-UK, en-AU, de-DE, es-US, es-ES, fr-FR, pt-BR, nl-NL, it-IT, fr-CA |
+| **coreLanguage** | **string**| Filter by core language. | [optional] <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT |
 | **published** | **bool?**| Filter by published status. | [optional]  |
 | **sortBy** | **string**| Sort by. | [optional] <br />**Values**: Name, Date |
 | **sortOrder** | **string**| Sort Order. | [optional] <br />**Values**: ASC, ascending, DESC, descending |
@@ -966,6 +2838,67 @@ namespace Example
 ### Return type
 
 [**KnowledgeBaseListing**](KnowledgeBaseListing.html)
+
+<a name="patchknowledgeguestsessiondocumentssearchsearchid"></a>
+
+## void PatchKnowledgeGuestSessionDocumentsSearchSearchId (string sessionId, string searchId, SearchUpdateRequest body)
+
+
+
+Update search result.
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchKnowledgeGuestSessionDocumentsSearchSearchIdExample
+    {
+        public void main()
+        { 
+
+            var apiInstance = new KnowledgeApi();
+            var sessionId = sessionId_example;  // string | Knowledge guest session ID.
+            var searchId = searchId_example;  // string | Search Result ID
+            var body = new SearchUpdateRequest(); // SearchUpdateRequest | 
+
+            try
+            { 
+                // Update search result.
+                apiInstance.PatchKnowledgeGuestSessionDocumentsSearchSearchId(sessionId, searchId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PatchKnowledgeGuestSessionDocumentsSearchSearchId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sessionId** | **string**| Knowledge guest session ID. |  |
+| **searchId** | **string**| Search Result ID |  |
+| **body** | [**SearchUpdateRequest**](SearchUpdateRequest.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="patchknowledgeknowledgebase"></a>
 
@@ -1034,6 +2967,421 @@ namespace Example
 
 [**KnowledgeBase**](KnowledgeBase.html)
 
+<a name="patchknowledgeknowledgebasecategory"></a>
+
+## [**CategoryResponse**](CategoryResponse.html) PatchKnowledgeKnowledgebaseCategory (string knowledgeBaseId, string categoryId, CategoryRequest body)
+
+
+
+Update category
+
+
+
+Requires ALL permissions: 
+
+* knowledge:category:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchKnowledgeKnowledgebaseCategoryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var categoryId = categoryId_example;  // string | Category ID
+            var body = new CategoryRequest(); // CategoryRequest | 
+
+            try
+            { 
+                // Update category
+                CategoryResponse result = apiInstance.PatchKnowledgeKnowledgebaseCategory(knowledgeBaseId, categoryId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PatchKnowledgeKnowledgebaseCategory: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **categoryId** | **string**| Category ID |  |
+| **body** | [**CategoryRequest**](CategoryRequest.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CategoryResponse**](CategoryResponse.html)
+
+<a name="patchknowledgeknowledgebasedocument"></a>
+
+## [**KnowledgeDocumentResponse**](KnowledgeDocumentResponse.html) PatchKnowledgeKnowledgebaseDocument (string knowledgeBaseId, string documentId, KnowledgeDocumentReq body)
+
+
+
+Update document.
+
+
+
+Requires ALL permissions: 
+
+* knowledge:document:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchKnowledgeKnowledgebaseDocumentExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID.
+            var documentId = documentId_example;  // string | Document ID.
+            var body = new KnowledgeDocumentReq(); // KnowledgeDocumentReq | 
+
+            try
+            { 
+                // Update document.
+                KnowledgeDocumentResponse result = apiInstance.PatchKnowledgeKnowledgebaseDocument(knowledgeBaseId, documentId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PatchKnowledgeKnowledgebaseDocument: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID. |  |
+| **documentId** | **string**| Document ID. |  |
+| **body** | [**KnowledgeDocumentReq**](KnowledgeDocumentReq.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeDocumentResponse**](KnowledgeDocumentResponse.html)
+
+<a name="patchknowledgeknowledgebasedocumentvariation"></a>
+
+## [**DocumentVariation**](DocumentVariation.html) PatchKnowledgeKnowledgebaseDocumentVariation (string documentVariationId, string documentId, string knowledgeBaseId, DocumentVariation body)
+
+
+
+Update a variation for a document.
+
+
+
+Requires ALL permissions: 
+
+* knowledge:document:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchKnowledgeKnowledgebaseDocumentVariationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var documentVariationId = documentVariationId_example;  // string | Globally unique identifier for a document variation.
+            var documentId = documentId_example;  // string | Globally unique identifier for a document.
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Globally unique identifier for a knowledge base.
+            var body = new DocumentVariation(); // DocumentVariation | 
+
+            try
+            { 
+                // Update a variation for a document.
+                DocumentVariation result = apiInstance.PatchKnowledgeKnowledgebaseDocumentVariation(documentVariationId, documentId, knowledgeBaseId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PatchKnowledgeKnowledgebaseDocumentVariation: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **documentVariationId** | **string**| Globally unique identifier for a document variation. |  |
+| **documentId** | **string**| Globally unique identifier for a document. |  |
+| **knowledgeBaseId** | **string**| Globally unique identifier for a knowledge base. |  |
+| **body** | [**DocumentVariation**](DocumentVariation.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DocumentVariation**](DocumentVariation.html)
+
+<a name="patchknowledgeknowledgebasedocumentssearchsearchid"></a>
+
+## void PatchKnowledgeKnowledgebaseDocumentsSearchSearchId (string knowledgeBaseId, string searchId, SearchUpdateRequest body = null)
+
+
+
+Update search result.
+
+
+
+Requires ALL permissions: 
+
+* knowledge:search:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchKnowledgeKnowledgebaseDocumentsSearchSearchIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | The ID of knowledge base containing the documents to query.
+            var searchId = searchId_example;  // string | Search Result ID
+            var body = new SearchUpdateRequest(); // SearchUpdateRequest |  (optional) 
+
+            try
+            { 
+                // Update search result.
+                apiInstance.PatchKnowledgeKnowledgebaseDocumentsSearchSearchId(knowledgeBaseId, searchId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PatchKnowledgeKnowledgebaseDocumentsSearchSearchId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| The ID of knowledge base containing the documents to query. |  |
+| **searchId** | **string**| Search Result ID |  |
+| **body** | [**SearchUpdateRequest**](SearchUpdateRequest.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="patchknowledgeknowledgebaseimportjob"></a>
+
+## [**KnowledgeImportJobResponse**](KnowledgeImportJobResponse.html) PatchKnowledgeKnowledgebaseImportJob (string knowledgeBaseId, string importJobId, ImportStatusRequest body)
+
+
+
+Start import job
+
+
+
+Requires ALL permissions: 
+
+* knowledge:importJob:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchKnowledgeKnowledgebaseImportJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var importJobId = importJobId_example;  // string | Import job ID
+            var body = new ImportStatusRequest(); // ImportStatusRequest | 
+
+            try
+            { 
+                // Start import job
+                KnowledgeImportJobResponse result = apiInstance.PatchKnowledgeKnowledgebaseImportJob(knowledgeBaseId, importJobId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PatchKnowledgeKnowledgebaseImportJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **importJobId** | **string**| Import job ID |  |
+| **body** | [**ImportStatusRequest**](ImportStatusRequest.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeImportJobResponse**](KnowledgeImportJobResponse.html)
+
+<a name="patchknowledgeknowledgebaselabel"></a>
+
+## [**LabelResponse**](LabelResponse.html) PatchKnowledgeKnowledgebaseLabel (string knowledgeBaseId, string labelId, LabelUpdateRequest body)
+
+
+
+Update label
+
+
+
+Requires ALL permissions: 
+
+* knowledge:label:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchKnowledgeKnowledgebaseLabelExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var labelId = labelId_example;  // string | Label ID
+            var body = new LabelUpdateRequest(); // LabelUpdateRequest | 
+
+            try
+            { 
+                // Update label
+                LabelResponse result = apiInstance.PatchKnowledgeKnowledgebaseLabel(knowledgeBaseId, labelId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PatchKnowledgeKnowledgebaseLabel: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **labelId** | **string**| Label ID |  |
+| **body** | [**LabelUpdateRequest**](LabelUpdateRequest.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LabelResponse**](LabelResponse.html)
+
 <a name="patchknowledgeknowledgebaselanguagecategory"></a>
 
 ## [**KnowledgeExtendedCategory**](KnowledgeExtendedCategory.html) PatchKnowledgeKnowledgebaseLanguageCategory (string categoryId, string knowledgeBaseId, string languageCode, KnowledgeCategoryRequest body)
@@ -1097,7 +3445,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **categoryId** | **string**| Category ID |  |
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, de-DE, es-US, es-ES, fr-FR, pt-BR, nl-NL, it-IT, fr-CA |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT |
 | **body** | [**KnowledgeCategoryRequest**](KnowledgeCategoryRequest.html)|  |  |
 {: class="table table-striped"}
 
@@ -1168,7 +3516,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **documentId** | **string**| Document ID |  |
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, de-DE, es-US, es-ES, fr-FR, pt-BR, nl-NL, it-IT, fr-CA |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT |
 | **body** | [**KnowledgeDocumentRequest**](KnowledgeDocumentRequest.html)|  |  |
 {: class="table table-striped"}
 
@@ -1237,7 +3585,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, de-DE, es-US, es-ES, fr-FR, pt-BR, nl-NL, it-IT, fr-CA |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT |
 | **body** | [**List<KnowledgeDocumentBulkRequest>**](KnowledgeDocumentBulkRequest.html)|  |  |
 {: class="table table-striped"}
 
@@ -1308,7 +3656,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, de-DE, es-US, es-ES, fr-FR, pt-BR, nl-NL, it-IT, fr-CA |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT |
 | **importId** | **string**| Import ID |  |
 | **body** | [**ImportStatusRequest**](ImportStatusRequest.html)|  |  |
 {: class="table table-striped"}
@@ -1316,6 +3664,78 @@ namespace Example
 ### Return type
 
 [**KnowledgeImport**](KnowledgeImport.html)
+
+<a name="patchknowledgeknowledgebaseunansweredgroupphrasegroup"></a>
+
+## [**UnansweredPhraseGroupUpdateResponse**](UnansweredPhraseGroupUpdateResponse.html) PatchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup (string knowledgeBaseId, string groupId, string phraseGroupId, UnansweredPhraseGroupPatchRequestBody body)
+
+
+
+Update a Knowledge base unanswered phrase group
+
+
+
+Requires ALL permissions: 
+
+* knowledge:groups:edit
+* knowledge:document:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchKnowledgeKnowledgebaseUnansweredGroupPhrasegroupExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var groupId = groupId_example;  // string | The ID of the group to be updated.
+            var phraseGroupId = phraseGroupId_example;  // string | The ID of the phraseGroup to be updated.
+            var body = new UnansweredPhraseGroupPatchRequestBody(); // UnansweredPhraseGroupPatchRequestBody | Request body of the update unanswered group endpoint.
+
+            try
+            { 
+                // Update a Knowledge base unanswered phrase group
+                UnansweredPhraseGroupUpdateResponse result = apiInstance.PatchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup(knowledgeBaseId, groupId, phraseGroupId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PatchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **groupId** | **string**| The ID of the group to be updated. |  |
+| **phraseGroupId** | **string**| The ID of the phraseGroup to be updated. |  |
+| **body** | [**UnansweredPhraseGroupPatchRequestBody**](UnansweredPhraseGroupPatchRequestBody.html)| Request body of the update unanswered group endpoint. |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UnansweredPhraseGroupUpdateResponse**](UnansweredPhraseGroupUpdateResponse.html)
 
 <a name="postknowledgedocumentuploads"></a>
 
@@ -1382,6 +3802,796 @@ namespace Example
 
 [**UploadUrlResponse**](UploadUrlResponse.html)
 
+<a name="postknowledgeguestsessiondocumentssearch"></a>
+
+## [**KnowledgeDocumentGuestSearch**](KnowledgeDocumentGuestSearch.html) PostKnowledgeGuestSessionDocumentsSearch (string sessionId, List<string> expand = null, KnowledgeDocumentGuestSearchRequest body = null)
+
+
+
+Search the documents in a guest session.
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeGuestSessionDocumentsSearchExample
+    {
+        public void main()
+        { 
+
+            var apiInstance = new KnowledgeApi();
+            var sessionId = sessionId_example;  // string | Knowledge guest session ID.
+            var expand = new List<string>(); // List<string> | Fields, if any, to expand for each document in the search result matching the query. (optional) 
+            var body = new KnowledgeDocumentGuestSearchRequest(); // KnowledgeDocumentGuestSearchRequest |  (optional) 
+
+            try
+            { 
+                // Search the documents in a guest session.
+                KnowledgeDocumentGuestSearch result = apiInstance.PostKnowledgeGuestSessionDocumentsSearch(sessionId, expand, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeGuestSessionDocumentsSearch: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sessionId** | **string**| Knowledge guest session ID. |  |
+| **expand** | [**List<string>**](string.html)| Fields, if any, to expand for each document in the search result matching the query. | [optional] <br />**Values**: documentVariations, documentAlternatives |
+| **body** | [**KnowledgeDocumentGuestSearchRequest**](KnowledgeDocumentGuestSearchRequest.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeDocumentGuestSearch**](KnowledgeDocumentGuestSearch.html)
+
+<a name="postknowledgeguestsessiondocumentssearchsuggestions"></a>
+
+## [**KnowledgeGuestDocumentSuggestion**](KnowledgeGuestDocumentSuggestion.html) PostKnowledgeGuestSessionDocumentsSearchSuggestions (string sessionId, KnowledgeDocumentSuggestionRequest body = null)
+
+
+
+Query the knowledge documents to provide suggestions for auto completion.
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeGuestSessionDocumentsSearchSuggestionsExample
+    {
+        public void main()
+        { 
+
+            var apiInstance = new KnowledgeApi();
+            var sessionId = sessionId_example;  // string | Knowledge guest session ID.
+            var body = new KnowledgeDocumentSuggestionRequest(); // KnowledgeDocumentSuggestionRequest |  (optional) 
+
+            try
+            { 
+                // Query the knowledge documents to provide suggestions for auto completion.
+                KnowledgeGuestDocumentSuggestion result = apiInstance.PostKnowledgeGuestSessionDocumentsSearchSuggestions(sessionId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeGuestSessionDocumentsSearchSuggestions: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sessionId** | **string**| Knowledge guest session ID. |  |
+| **body** | [**KnowledgeDocumentSuggestionRequest**](KnowledgeDocumentSuggestionRequest.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeGuestDocumentSuggestion**](KnowledgeGuestDocumentSuggestion.html)
+
+<a name="postknowledgeguestsessions"></a>
+
+## [**KnowledgeGuestSession**](KnowledgeGuestSession.html) PostKnowledgeGuestSessions (KnowledgeGuestSession body)
+
+
+
+Create guest session
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeGuestSessionsExample
+    {
+        public void main()
+        { 
+
+            var apiInstance = new KnowledgeApi();
+            var body = new KnowledgeGuestSession(); // KnowledgeGuestSession | 
+
+            try
+            { 
+                // Create guest session
+                KnowledgeGuestSession result = apiInstance.PostKnowledgeGuestSessions(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeGuestSessions: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**KnowledgeGuestSession**](KnowledgeGuestSession.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeGuestSession**](KnowledgeGuestSession.html)
+
+<a name="postknowledgeknowledgebasecategories"></a>
+
+## [**CategoryResponse**](CategoryResponse.html) PostKnowledgeKnowledgebaseCategories (string knowledgeBaseId, CategoryRequest body)
+
+
+
+Create new category
+
+
+
+Requires ALL permissions: 
+
+* knowledge:category:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeKnowledgebaseCategoriesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var body = new CategoryRequest(); // CategoryRequest | 
+
+            try
+            { 
+                // Create new category
+                CategoryResponse result = apiInstance.PostKnowledgeKnowledgebaseCategories(knowledgeBaseId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeKnowledgebaseCategories: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **body** | [**CategoryRequest**](CategoryRequest.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CategoryResponse**](CategoryResponse.html)
+
+<a name="postknowledgeknowledgebasedocumentvariations"></a>
+
+## [**DocumentVariation**](DocumentVariation.html) PostKnowledgeKnowledgebaseDocumentVariations (string knowledgeBaseId, string documentId, DocumentVariation body)
+
+
+
+Create a variation for a document.
+
+
+
+Requires ANY permissions: 
+
+* knowledge:document:add
+* knowledge:document:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeKnowledgebaseDocumentVariationsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Globally unique identifier for the knowledge base.
+            var documentId = documentId_example;  // string | Globally unique identifier for the document.
+            var body = new DocumentVariation(); // DocumentVariation | 
+
+            try
+            { 
+                // Create a variation for a document.
+                DocumentVariation result = apiInstance.PostKnowledgeKnowledgebaseDocumentVariations(knowledgeBaseId, documentId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeKnowledgebaseDocumentVariations: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Globally unique identifier for the knowledge base. |  |
+| **documentId** | **string**| Globally unique identifier for the document. |  |
+| **body** | [**DocumentVariation**](DocumentVariation.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DocumentVariation**](DocumentVariation.html)
+
+<a name="postknowledgeknowledgebasedocumentversions"></a>
+
+## [**KnowledgeDocumentVersion**](KnowledgeDocumentVersion.html) PostKnowledgeKnowledgebaseDocumentVersions (string knowledgeBaseId, string documentId, KnowledgeDocumentVersion body)
+
+
+
+Creates or restores a document version.
+
+
+
+Requires ALL permissions: 
+
+* knowledge:documentVersion:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeKnowledgebaseDocumentVersionsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Globally unique identifier for the knowledge base.
+            var documentId = documentId_example;  // string | Globally unique identifier for the document.
+            var body = new KnowledgeDocumentVersion(); // KnowledgeDocumentVersion | 
+
+            try
+            { 
+                // Creates or restores a document version.
+                KnowledgeDocumentVersion result = apiInstance.PostKnowledgeKnowledgebaseDocumentVersions(knowledgeBaseId, documentId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeKnowledgebaseDocumentVersions: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Globally unique identifier for the knowledge base. |  |
+| **documentId** | **string**| Globally unique identifier for the document. |  |
+| **body** | [**KnowledgeDocumentVersion**](KnowledgeDocumentVersion.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeDocumentVersion**](KnowledgeDocumentVersion.html)
+
+<a name="postknowledgeknowledgebasedocuments"></a>
+
+## [**KnowledgeDocumentResponse**](KnowledgeDocumentResponse.html) PostKnowledgeKnowledgebaseDocuments (string knowledgeBaseId, KnowledgeDocumentReq body)
+
+
+
+Create document.
+
+
+
+Requires ALL permissions: 
+
+* knowledge:document:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeKnowledgebaseDocumentsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var body = new KnowledgeDocumentReq(); // KnowledgeDocumentReq | 
+
+            try
+            { 
+                // Create document.
+                KnowledgeDocumentResponse result = apiInstance.PostKnowledgeKnowledgebaseDocuments(knowledgeBaseId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeKnowledgebaseDocuments: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **body** | [**KnowledgeDocumentReq**](KnowledgeDocumentReq.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeDocumentResponse**](KnowledgeDocumentResponse.html)
+
+<a name="postknowledgeknowledgebasedocumentssearch"></a>
+
+## [**KnowledgeDocumentSearch**](KnowledgeDocumentSearch.html) PostKnowledgeKnowledgebaseDocumentsSearch (string knowledgeBaseId, List<string> expand = null, KnowledgeDocumentSearchRequest body = null)
+
+
+
+Search the documents in a knowledge base.
+
+
+
+Requires ALL permissions: 
+
+* knowledge:knowledgebase:search
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeKnowledgebaseDocumentsSearchExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | The ID of knowledge base containing the documents to query.
+            var expand = new List<string>(); // List<string> | Fields, if any, to expand for each document in the search result matching the query. (optional) 
+            var body = new KnowledgeDocumentSearchRequest(); // KnowledgeDocumentSearchRequest |  (optional) 
+
+            try
+            { 
+                // Search the documents in a knowledge base.
+                KnowledgeDocumentSearch result = apiInstance.PostKnowledgeKnowledgebaseDocumentsSearch(knowledgeBaseId, expand, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeKnowledgebaseDocumentsSearch: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| The ID of knowledge base containing the documents to query. |  |
+| **expand** | [**List<string>**](string.html)| Fields, if any, to expand for each document in the search result matching the query. | [optional] <br />**Values**: documentVariations, documentAlternatives |
+| **body** | [**KnowledgeDocumentSearchRequest**](KnowledgeDocumentSearchRequest.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeDocumentSearch**](KnowledgeDocumentSearch.html)
+
+<a name="postknowledgeknowledgebasedocumentssearchsuggestions"></a>
+
+## [**KnowledgeDocumentSuggestion**](KnowledgeDocumentSuggestion.html) PostKnowledgeKnowledgebaseDocumentsSearchSuggestions (string knowledgeBaseId, KnowledgeDocumentSuggestionRequest body = null)
+
+
+
+Query the knowledge documents to provide suggestions for auto completion.
+
+
+
+Requires ALL permissions: 
+
+* knowledge:knowledgebase:search
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeKnowledgebaseDocumentsSearchSuggestionsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | The ID of knowledge base containing the documents to query.
+            var body = new KnowledgeDocumentSuggestionRequest(); // KnowledgeDocumentSuggestionRequest |  (optional) 
+
+            try
+            { 
+                // Query the knowledge documents to provide suggestions for auto completion.
+                KnowledgeDocumentSuggestion result = apiInstance.PostKnowledgeKnowledgebaseDocumentsSearchSuggestions(knowledgeBaseId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeKnowledgebaseDocumentsSearchSuggestions: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| The ID of knowledge base containing the documents to query. |  |
+| **body** | [**KnowledgeDocumentSuggestionRequest**](KnowledgeDocumentSuggestionRequest.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeDocumentSuggestion**](KnowledgeDocumentSuggestion.html)
+
+<a name="postknowledgeknowledgebaseexportjobs"></a>
+
+## [**KnowledgeExportJobResponse**](KnowledgeExportJobResponse.html) PostKnowledgeKnowledgebaseExportJobs (string knowledgeBaseId, KnowledgeExportJobRequest body)
+
+
+
+Create export job
+
+
+
+Requires ALL permissions: 
+
+* knowledge:exportJob:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeKnowledgebaseExportJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var body = new KnowledgeExportJobRequest(); // KnowledgeExportJobRequest | 
+
+            try
+            { 
+                // Create export job
+                KnowledgeExportJobResponse result = apiInstance.PostKnowledgeKnowledgebaseExportJobs(knowledgeBaseId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeKnowledgebaseExportJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **body** | [**KnowledgeExportJobRequest**](KnowledgeExportJobRequest.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeExportJobResponse**](KnowledgeExportJobResponse.html)
+
+<a name="postknowledgeknowledgebaseimportjobs"></a>
+
+## [**KnowledgeImportJobResponse**](KnowledgeImportJobResponse.html) PostKnowledgeKnowledgebaseImportJobs (string knowledgeBaseId, KnowledgeImportJobRequest body)
+
+
+
+Create import job
+
+
+
+Requires ALL permissions: 
+
+* knowledge:importJob:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeKnowledgebaseImportJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var body = new KnowledgeImportJobRequest(); // KnowledgeImportJobRequest | 
+
+            try
+            { 
+                // Create import job
+                KnowledgeImportJobResponse result = apiInstance.PostKnowledgeKnowledgebaseImportJobs(knowledgeBaseId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeKnowledgebaseImportJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **body** | [**KnowledgeImportJobRequest**](KnowledgeImportJobRequest.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**KnowledgeImportJobResponse**](KnowledgeImportJobResponse.html)
+
+<a name="postknowledgeknowledgebaselabels"></a>
+
+## [**LabelResponse**](LabelResponse.html) PostKnowledgeKnowledgebaseLabels (string knowledgeBaseId, LabelCreateRequest body)
+
+
+
+Create new label
+
+
+
+Requires ALL permissions: 
+
+* knowledge:label:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeKnowledgebaseLabelsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge base ID
+            var body = new LabelCreateRequest(); // LabelCreateRequest | 
+
+            try
+            { 
+                // Create new label
+                LabelResponse result = apiInstance.PostKnowledgeKnowledgebaseLabels(knowledgeBaseId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeKnowledgebaseLabels: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge base ID |  |
+| **body** | [**LabelCreateRequest**](LabelCreateRequest.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LabelResponse**](LabelResponse.html)
+
 <a name="postknowledgeknowledgebaselanguagecategories"></a>
 
 ## [**KnowledgeExtendedCategory**](KnowledgeExtendedCategory.html) PostKnowledgeKnowledgebaseLanguageCategories (string knowledgeBaseId, string languageCode, KnowledgeCategoryRequest body)
@@ -1443,7 +4653,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, de-DE, es-US, es-ES, fr-FR, pt-BR, nl-NL, it-IT, fr-CA |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT |
 | **body** | [**KnowledgeCategoryRequest**](KnowledgeCategoryRequest.html)|  |  |
 {: class="table table-striped"}
 
@@ -1512,7 +4722,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, de-DE, es-US, es-ES, fr-FR, pt-BR, nl-NL, it-IT, fr-CA |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT |
 | **body** | [**KnowledgeDocumentRequest**](KnowledgeDocumentRequest.html)|  |  |
 {: class="table table-striped"}
 
@@ -1581,7 +4791,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, de-DE, es-US, es-ES, fr-FR, pt-BR, nl-NL, it-IT, fr-CA |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT |
 | **body** | [**KnowledgeImport**](KnowledgeImport.html)|  |  |
 {: class="table table-striped"}
 
@@ -1650,7 +4860,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, de-DE, es-US, es-ES, fr-FR, pt-BR, nl-NL, it-IT, fr-CA |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT |
 | **trainingId** | **string**| Training ID |  |
 {: class="table table-striped"}
 
@@ -1718,7 +4928,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
-| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, de-DE, es-US, es-ES, fr-FR, pt-BR, nl-NL, it-IT, fr-CA |
+| **languageCode** | **string**| Language code, format: iso2-LOCALE | <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT |
 {: class="table table-striped"}
 
 ### Return type

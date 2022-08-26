@@ -70,9 +70,9 @@ namespace PureCloudPlatform.Client.V2.Model
             _90
         }
         /// <summary>
-        /// The phrase sentiment, default value is Unspecified
+        /// The phrase sentiment, default value is Unspecified.
         /// </summary>
-        /// <value>The phrase sentiment, default value is Unspecified</value>
+        /// <value>The phrase sentiment, default value is Unspecified.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum SentimentEnum
         {
@@ -115,9 +115,9 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="strictness", EmitDefaultValue=false)]
         public StrictnessEnum? Strictness { get; set; }
         /// <summary>
-        /// The phrase sentiment, default value is Unspecified
+        /// The phrase sentiment, default value is Unspecified.
         /// </summary>
-        /// <value>The phrase sentiment, default value is Unspecified</value>
+        /// <value>The phrase sentiment, default value is Unspecified.</value>
         [DataMember(Name="sentiment", EmitDefaultValue=false)]
         public SentimentEnum? Sentiment { get; set; }
 
@@ -131,7 +131,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Text">The phrase text (required).</param>
         /// <param name="Strictness">The phrase strictness, default value is null.</param>
-        /// <param name="Sentiment">The phrase sentiment, default value is Unspecified.</param>
+        /// <param name="Sentiment">The phrase sentiment, default value is Unspecified..</param>
         public Phrase(string Text = null, StrictnessEnum? Strictness = null, SentimentEnum? Sentiment = null)
         {
             this.Text = Text;

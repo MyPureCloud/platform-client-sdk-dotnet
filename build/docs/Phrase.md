@@ -9,7 +9,7 @@ title: Phrase
 |------------ | ------------- | ------------- | -------------|
 | **Text** | **string** | The phrase text | |
 | **Strictness** | **string** | The phrase strictness, default value is null | [optional] |
-| **Sentiment** | **string** | The phrase sentiment, default value is Unspecified | [optional] |
+| **Sentiment** | **string** | The phrase sentiment, default value is Unspecified. | [optional] |
 {: class="table table-striped"}
 
 

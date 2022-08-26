@@ -59,13 +59,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AutoStartType">Deprecated. The auto start type for the messenger conversation.</param>
         /// <param name="AutoStart">The auto start for the messenger conversation.</param>
         /// <param name="Markdown">The markdown for the messenger app.</param>
-        public ConversationAppSettings(bool? ShowAgentTypingIndicator = null, bool? ShowUserTypingIndicator = null, AutoStartTypeEnum? AutoStartType = null, AutoStart AutoStart = null, Markdown Markdown = null)
+        /// <param name="ConversationDisconnect">The conversation disconnect settings for the messenger app.</param>
+        public ConversationAppSettings(bool? ShowAgentTypingIndicator = null, bool? ShowUserTypingIndicator = null, AutoStartTypeEnum? AutoStartType = null, AutoStart AutoStart = null, Markdown Markdown = null, ConversationDisconnectSettings ConversationDisconnect = null)
         {
             this.ShowAgentTypingIndicator = ShowAgentTypingIndicator;
             this.ShowUserTypingIndicator = ShowUserTypingIndicator;
             this.AutoStartType = AutoStartType;
             this.AutoStart = AutoStart;
             this.Markdown = Markdown;
+            this.ConversationDisconnect = ConversationDisconnect;
             
         }
         
@@ -108,6 +110,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public Markdown Markdown { get; set; }
 
 
+
+        /// <summary>
+        /// The conversation disconnect settings for the messenger app
+        /// </summary>
+        /// <value>The conversation disconnect settings for the messenger app</value>
+        [DataMember(Name="conversationDisconnect", EmitDefaultValue=false)]
+        public ConversationDisconnectSettings ConversationDisconnect { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -122,6 +133,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AutoStartType: ").Append(AutoStartType).Append("\n");
             sb.Append("  AutoStart: ").Append(AutoStart).Append("\n");
             sb.Append("  Markdown: ").Append(Markdown).Append("\n");
+            sb.Append("  ConversationDisconnect: ").Append(ConversationDisconnect).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -186,6 +198,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Markdown == other.Markdown ||
                     this.Markdown != null &&
                     this.Markdown.Equals(other.Markdown)
+                ) &&
+                (
+                    this.ConversationDisconnect == other.ConversationDisconnect ||
+                    this.ConversationDisconnect != null &&
+                    this.ConversationDisconnect.Equals(other.ConversationDisconnect)
                 );
         }
 
@@ -214,6 +231,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Markdown != null)
                     hash = hash * 59 + this.Markdown.GetHashCode();
+
+                if (this.ConversationDisconnect != null)
+                    hash = hash * 59 + this.ConversationDisconnect.GetHashCode();
 
                 return hash;
             }

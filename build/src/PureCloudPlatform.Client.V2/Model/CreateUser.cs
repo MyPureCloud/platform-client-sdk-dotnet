@@ -71,7 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Email">User's email and username (required).</param>
         /// <param name="Addresses">Email addresses and phone numbers for this user.</param>
         /// <param name="Title">Title.</param>
-        /// <param name="Password">User's password (required).</param>
+        /// <param name="Password">User's password.</param>
         /// <param name="DivisionId">The division to which this user will belong (required).</param>
         /// <param name="State">Optional initialized state of the user. If not specified, state will be Active if invites are sent, otherwise Inactive..</param>
         public CreateUser(string Name = null, string Department = null, string Email = null, List<Contact> Addresses = null, string Title = null, string Password = null, string DivisionId = null, StateEnum? State = null)

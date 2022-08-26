@@ -730,6 +730,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Recordingannotation,
             
             /// <summary>
+            /// Enum Recordingkey for "RecordingKey"
+            /// </summary>
+            [EnumMember(Value = "RecordingKey")]
+            Recordingkey,
+            
+            /// <summary>
+            /// Enum Recordingkeyconfig for "RecordingKeyConfig"
+            /// </summary>
+            [EnumMember(Value = "RecordingKeyConfig")]
+            Recordingkeyconfig,
+            
+            /// <summary>
             /// Enum Recordingsettings for "RecordingSettings"
             /// </summary>
             [EnumMember(Value = "RecordingSettings")]
@@ -1516,6 +1528,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Reset")]
             Reset,
+            
+            /// <summary>
+            /// Enum Rotate for "Rotate"
+            /// </summary>
+            [EnumMember(Value = "Rotate")]
+            Rotate,
+            
+            /// <summary>
+            /// Enum Restore for "Restore"
+            /// </summary>
+            [EnumMember(Value = "Restore")]
+            Restore,
             
             /// <summary>
             /// Enum Unarchive for "Unarchive"

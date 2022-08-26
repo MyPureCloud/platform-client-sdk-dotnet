@@ -160,10 +160,88 @@ namespace PureCloudPlatform.Client.V2.Model
             Enau,
             
             /// <summary>
+            /// Enum Enca for "en-CA"
+            /// </summary>
+            [EnumMember(Value = "en-CA")]
+            Enca,
+            
+            /// <summary>
+            /// Enum Enhk for "en-HK"
+            /// </summary>
+            [EnumMember(Value = "en-HK")]
+            Enhk,
+            
+            /// <summary>
+            /// Enum Enin for "en-IN"
+            /// </summary>
+            [EnumMember(Value = "en-IN")]
+            Enin,
+            
+            /// <summary>
+            /// Enum Enie for "en-IE"
+            /// </summary>
+            [EnumMember(Value = "en-IE")]
+            Enie,
+            
+            /// <summary>
+            /// Enum Ennz for "en-NZ"
+            /// </summary>
+            [EnumMember(Value = "en-NZ")]
+            Ennz,
+            
+            /// <summary>
+            /// Enum Enph for "en-PH"
+            /// </summary>
+            [EnumMember(Value = "en-PH")]
+            Enph,
+            
+            /// <summary>
+            /// Enum Ensg for "en-SG"
+            /// </summary>
+            [EnumMember(Value = "en-SG")]
+            Ensg,
+            
+            /// <summary>
+            /// Enum Enza for "en-ZA"
+            /// </summary>
+            [EnumMember(Value = "en-ZA")]
+            Enza,
+            
+            /// <summary>
             /// Enum Dede for "de-DE"
             /// </summary>
             [EnumMember(Value = "de-DE")]
             Dede,
+            
+            /// <summary>
+            /// Enum Deat for "de-AT"
+            /// </summary>
+            [EnumMember(Value = "de-AT")]
+            Deat,
+            
+            /// <summary>
+            /// Enum Dech for "de-CH"
+            /// </summary>
+            [EnumMember(Value = "de-CH")]
+            Dech,
+            
+            /// <summary>
+            /// Enum Esar for "es-AR"
+            /// </summary>
+            [EnumMember(Value = "es-AR")]
+            Esar,
+            
+            /// <summary>
+            /// Enum Esco for "es-CO"
+            /// </summary>
+            [EnumMember(Value = "es-CO")]
+            Esco,
+            
+            /// <summary>
+            /// Enum Esmx for "es-MX"
+            /// </summary>
+            [EnumMember(Value = "es-MX")]
+            Esmx,
             
             /// <summary>
             /// Enum Esus for "es-US"
@@ -184,10 +262,34 @@ namespace PureCloudPlatform.Client.V2.Model
             Frfr,
             
             /// <summary>
+            /// Enum Frbe for "fr-BE"
+            /// </summary>
+            [EnumMember(Value = "fr-BE")]
+            Frbe,
+            
+            /// <summary>
+            /// Enum Frca for "fr-CA"
+            /// </summary>
+            [EnumMember(Value = "fr-CA")]
+            Frca,
+            
+            /// <summary>
+            /// Enum Frch for "fr-CH"
+            /// </summary>
+            [EnumMember(Value = "fr-CH")]
+            Frch,
+            
+            /// <summary>
             /// Enum Ptbr for "pt-BR"
             /// </summary>
             [EnumMember(Value = "pt-BR")]
             Ptbr,
+            
+            /// <summary>
+            /// Enum Ptpt for "pt-PT"
+            /// </summary>
+            [EnumMember(Value = "pt-PT")]
+            Ptpt,
             
             /// <summary>
             /// Enum Nlnl for "nl-NL"
@@ -196,16 +298,16 @@ namespace PureCloudPlatform.Client.V2.Model
             Nlnl,
             
             /// <summary>
+            /// Enum Nlbe for "nl-BE"
+            /// </summary>
+            [EnumMember(Value = "nl-BE")]
+            Nlbe,
+            
+            /// <summary>
             /// Enum Itit for "it-IT"
             /// </summary>
             [EnumMember(Value = "it-IT")]
-            Itit,
-            
-            /// <summary>
-            /// Enum Frca for "fr-CA"
-            /// </summary>
-            [EnumMember(Value = "fr-CA")]
-            Frca
+            Itit
         }
         /// <summary>
         /// file type of the document

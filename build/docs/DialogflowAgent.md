@@ -13,6 +13,7 @@ title: DialogflowAgent
 | **Languages** | **List&lt;string&gt;** | The supported languages of the Dialogflow agent | [optional] |
 | **Intents** | [**List&lt;DialogflowIntent&gt;**](DialogflowIntent.html) | An array of Intents associated with this agent | [optional] |
 | **Environments** | **List&lt;string&gt;** | Available environments for this agent | [optional] |
+| **Integration** | [**DomainEntityRef**](DomainEntityRef.html) | The Integration this Dialogflow agent was referenced from. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

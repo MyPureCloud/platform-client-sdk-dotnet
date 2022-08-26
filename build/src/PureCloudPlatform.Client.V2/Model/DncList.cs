@@ -103,15 +103,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
         /// <param name="ContactMethod">The contact method. Required if dncSourceType is rds..</param>
         /// <param name="LoginId">A dnc.com loginId. Required if the dncSourceType is dnc.com..</param>
+        /// <param name="CampaignId">A dnc.com campaignId. Optional if the dncSourceType is dnc.com..</param>
         /// <param name="DncCodes">The list of dnc.com codes to be treated as DNC. Required if the dncSourceType is dnc.com..</param>
         /// <param name="LicenseId">A gryphon license number. Required if the dncSourceType is gryphon..</param>
         /// <param name="Division">The division this DncList belongs to..</param>
-        public DncList(string Name = null, int? Version = null, ContactMethodEnum? ContactMethod = null, string LoginId = null, List<string> DncCodes = null, string LicenseId = null, DomainEntityRef Division = null)
+        public DncList(string Name = null, int? Version = null, ContactMethodEnum? ContactMethod = null, string LoginId = null, string CampaignId = null, List<string> DncCodes = null, string LicenseId = null, DomainEntityRef Division = null)
         {
             this.Name = Name;
             this.Version = Version;
             this.ContactMethod = ContactMethod;
             this.LoginId = LoginId;
+            this.CampaignId = CampaignId;
             this.DncCodes = DncCodes;
             this.LicenseId = LicenseId;
             this.Division = Division;
@@ -197,6 +199,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// A dnc.com campaignId. Optional if the dncSourceType is dnc.com.
+        /// </summary>
+        /// <value>A dnc.com campaignId. Optional if the dncSourceType is dnc.com.</value>
+        [DataMember(Name="campaignId", EmitDefaultValue=false)]
+        public string CampaignId { get; set; }
+
+
+
+        /// <summary>
         /// The list of dnc.com codes to be treated as DNC. Required if the dncSourceType is dnc.com.
         /// </summary>
         /// <value>The list of dnc.com codes to be treated as DNC. Required if the dncSourceType is dnc.com.</value>
@@ -250,6 +261,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DncSourceType: ").Append(DncSourceType).Append("\n");
             sb.Append("  ContactMethod: ").Append(ContactMethod).Append("\n");
             sb.Append("  LoginId: ").Append(LoginId).Append("\n");
+            sb.Append("  CampaignId: ").Append(CampaignId).Append("\n");
             sb.Append("  DncCodes: ").Append(DncCodes).Append("\n");
             sb.Append("  LicenseId: ").Append(LicenseId).Append("\n");
             sb.Append("  Division: ").Append(Division).Append("\n");
@@ -345,6 +357,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LoginId.Equals(other.LoginId)
                 ) &&
                 (
+                    this.CampaignId == other.CampaignId ||
+                    this.CampaignId != null &&
+                    this.CampaignId.Equals(other.CampaignId)
+                ) &&
+                (
                     this.DncCodes == other.DncCodes ||
                     this.DncCodes != null &&
                     this.DncCodes.SequenceEqual(other.DncCodes)
@@ -406,6 +423,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.LoginId != null)
                     hash = hash * 59 + this.LoginId.GetHashCode();
+
+                if (this.CampaignId != null)
+                    hash = hash * 59 + this.CampaignId.GetHashCode();
 
                 if (this.DncCodes != null)
                     hash = hash * 59 + this.DncCodes.GetHashCode();

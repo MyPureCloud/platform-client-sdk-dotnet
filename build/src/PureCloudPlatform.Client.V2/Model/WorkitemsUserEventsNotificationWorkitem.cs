@@ -218,7 +218,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Held for "Held"
             /// </summary>
             [EnumMember(Value = "Held")]
-            Held
+            Held,
+            
+            /// <summary>
+            /// Enum Acdcancelled for "AcdCancelled"
+            /// </summary>
+            [EnumMember(Value = "AcdCancelled")]
+            Acdcancelled
         }
         /// <summary>
         /// Gets or Sets Operation

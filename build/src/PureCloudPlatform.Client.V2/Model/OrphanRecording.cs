@@ -202,6 +202,92 @@ namespace PureCloudPlatform.Client.V2.Model
             Evaluated
         }
         /// <summary>
+        /// Gets or Sets Region
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum RegionEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Afsouth1 for "af-south-1"
+            /// </summary>
+            [EnumMember(Value = "af-south-1")]
+            Afsouth1,
+            
+            /// <summary>
+            /// Enum Apnortheast1 for "ap-northeast-1"
+            /// </summary>
+            [EnumMember(Value = "ap-northeast-1")]
+            Apnortheast1,
+            
+            /// <summary>
+            /// Enum Apnortheast2 for "ap-northeast-2"
+            /// </summary>
+            [EnumMember(Value = "ap-northeast-2")]
+            Apnortheast2,
+            
+            /// <summary>
+            /// Enum Apsouth1 for "ap-south-1"
+            /// </summary>
+            [EnumMember(Value = "ap-south-1")]
+            Apsouth1,
+            
+            /// <summary>
+            /// Enum Apsoutheast2 for "ap-southeast-2"
+            /// </summary>
+            [EnumMember(Value = "ap-southeast-2")]
+            Apsoutheast2,
+            
+            /// <summary>
+            /// Enum Cacentral1 for "ca-central-1"
+            /// </summary>
+            [EnumMember(Value = "ca-central-1")]
+            Cacentral1,
+            
+            /// <summary>
+            /// Enum Eucentral1 for "eu-central-1"
+            /// </summary>
+            [EnumMember(Value = "eu-central-1")]
+            Eucentral1,
+            
+            /// <summary>
+            /// Enum Euwest1 for "eu-west-1"
+            /// </summary>
+            [EnumMember(Value = "eu-west-1")]
+            Euwest1,
+            
+            /// <summary>
+            /// Enum Euwest2 for "eu-west-2"
+            /// </summary>
+            [EnumMember(Value = "eu-west-2")]
+            Euwest2,
+            
+            /// <summary>
+            /// Enum Saeast1 for "sa-east-1"
+            /// </summary>
+            [EnumMember(Value = "sa-east-1")]
+            Saeast1,
+            
+            /// <summary>
+            /// Enum Useast1 for "us-east-1"
+            /// </summary>
+            [EnumMember(Value = "us-east-1")]
+            Useast1,
+            
+            /// <summary>
+            /// Enum Uswest2 for "us-west-2"
+            /// </summary>
+            [EnumMember(Value = "us-west-2")]
+            Uswest2
+        }
+        /// <summary>
         /// Gets or Sets ProviderType
         /// </summary>
         [DataMember(Name="providerType", EmitDefaultValue=false)]
@@ -223,6 +309,11 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="orphanStatus", EmitDefaultValue=false)]
         public OrphanStatusEnum? OrphanStatus { get; set; }
         /// <summary>
+        /// Gets or Sets Region
+        /// </summary>
+        [DataMember(Name="region", EmitDefaultValue=false)]
+        public RegionEnum? Region { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="OrphanRecording" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -236,7 +327,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Recording">Recording.</param>
         /// <param name="OrphanStatus">The status of the orphaned recording's conversation..</param>
         /// <param name="SourceOrphaningId">An identifier used during recovery operations by the supplying hybrid platform to track back and determine which interaction this recording is associated with.</param>
-        public OrphanRecording(string Name = null, DateTime? CreatedTime = null, DateTime? RecoveredTime = null, ProviderTypeEnum? ProviderType = null, long? MediaSizeBytes = null, MediaTypeEnum? MediaType = null, FileStateEnum? FileState = null, Endpoint ProviderEndpoint = null, Recording Recording = null, OrphanStatusEnum? OrphanStatus = null, string SourceOrphaningId = null)
+        /// <param name="Region">Region.</param>
+        public OrphanRecording(string Name = null, DateTime? CreatedTime = null, DateTime? RecoveredTime = null, ProviderTypeEnum? ProviderType = null, long? MediaSizeBytes = null, MediaTypeEnum? MediaType = null, FileStateEnum? FileState = null, Endpoint ProviderEndpoint = null, Recording Recording = null, OrphanStatusEnum? OrphanStatus = null, string SourceOrphaningId = null, RegionEnum? Region = null)
         {
             this.Name = Name;
             this.CreatedTime = CreatedTime;
@@ -249,6 +341,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Recording = Recording;
             this.OrphanStatus = OrphanStatus;
             this.SourceOrphaningId = SourceOrphaningId;
+            this.Region = Region;
             
         }
         
@@ -330,6 +423,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -359,6 +454,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Recording: ").Append(Recording).Append("\n");
             sb.Append("  OrphanStatus: ").Append(OrphanStatus).Append("\n");
             sb.Append("  SourceOrphaningId: ").Append(SourceOrphaningId).Append("\n");
+            sb.Append("  Region: ").Append(Region).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -461,6 +557,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SourceOrphaningId.Equals(other.SourceOrphaningId)
                 ) &&
                 (
+                    this.Region == other.Region ||
+                    this.Region != null &&
+                    this.Region.Equals(other.Region)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -513,6 +614,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SourceOrphaningId != null)
                     hash = hash * 59 + this.SourceOrphaningId.GetHashCode();
+
+                if (this.Region != null)
+                    hash = hash * 59 + this.Region.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
