@@ -13,15 +13,15 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Information about the channel.
+    /// MarkContactAddressUncontactableActionSettings
     /// </summary>
     [DataContract]
-    public partial class ConversationMessagingChannelMetadata :  IEquatable<ConversationMessagingChannelMetadata>
+    public partial class MarkContactAddressUncontactableActionSettings :  IEquatable<MarkContactAddressUncontactableActionSettings>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ConversationMessagingChannelMetadata" /> class.
+        /// Initializes a new instance of the <see cref="MarkContactAddressUncontactableActionSettings" /> class.
         /// </summary>
-        public ConversationMessagingChannelMetadata()
+        public MarkContactAddressUncontactableActionSettings()
         {
             
         }
@@ -34,7 +34,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ConversationMessagingChannelMetadata {\n");
+            sb.Append("class MarkContactAddressUncontactableActionSettings {\n");
 
             sb.Append("}\n");
             return sb.ToString();
@@ -61,15 +61,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ConversationMessagingChannelMetadata);
+            return this.Equals(obj as MarkContactAddressUncontactableActionSettings);
         }
 
         /// <summary>
-        /// Returns true if ConversationMessagingChannelMetadata instances are equal
+        /// Returns true if MarkContactAddressUncontactableActionSettings instances are equal
         /// </summary>
-        /// <param name="other">Instance of ConversationMessagingChannelMetadata to be compared</param>
+        /// <param name="other">Instance of MarkContactAddressUncontactableActionSettings to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ConversationMessagingChannelMetadata other)
+        public bool Equals(MarkContactAddressUncontactableActionSettings other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

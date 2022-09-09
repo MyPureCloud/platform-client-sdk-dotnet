@@ -225,6 +225,26 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DataAvailabilityResponse> GetAnalyticsConversationsDetailsJobsAvailabilityWithHttpInfo ();
 
         /// <summary>
+        /// Get analytics data retention setting
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>AnalyticsDataRetentionResponse</returns>
+        AnalyticsDataRetentionResponse GetAnalyticsDataretentionSettings ();
+
+        /// <summary>
+        /// Get analytics data retention setting
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of AnalyticsDataRetentionResponse</returns>
+        ApiResponse<AnalyticsDataRetentionResponse> GetAnalyticsDataretentionSettingsWithHttpInfo ();
+
+        /// <summary>
         /// Get all view export requests for a user
         /// </summary>
         /// <remarks>
@@ -1029,6 +1049,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UserObservationQueryResponse> PostAnalyticsUsersObservationsQueryWithHttpInfo (UserObservationQuery body);
 
         /// <summary>
+        /// Update analytics data retention setting
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">retentionDays</param>
+        /// <returns>AnalyticsDataRetentionResponse</returns>
+        AnalyticsDataRetentionResponse PutAnalyticsDataretentionSettings (UpdateAnalyticsDataRetentionRequest body);
+
+        /// <summary>
+        /// Update analytics data retention setting
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">retentionDays</param>
+        /// <returns>ApiResponse of AnalyticsDataRetentionResponse</returns>
+        ApiResponse<AnalyticsDataRetentionResponse> PutAnalyticsDataretentionSettingsWithHttpInfo (UpdateAnalyticsDataRetentionRequest body);
+
+        /// <summary>
         /// Update a scheduled report job.
         /// </summary>
         /// <remarks>
@@ -1263,6 +1305,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (DataAvailabilityResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<DataAvailabilityResponse>> GetAnalyticsConversationsDetailsJobsAvailabilityAsyncWithHttpInfo ();
+
+        /// <summary>
+        /// Get analytics data retention setting
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of AnalyticsDataRetentionResponse</returns>
+        System.Threading.Tasks.Task<AnalyticsDataRetentionResponse> GetAnalyticsDataretentionSettingsAsync ();
+
+        /// <summary>
+        /// Get analytics data retention setting
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (AnalyticsDataRetentionResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AnalyticsDataRetentionResponse>> GetAnalyticsDataretentionSettingsAsyncWithHttpInfo ();
 
         /// <summary>
         /// Get all view export requests for a user
@@ -2067,6 +2129,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (UserObservationQueryResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserObservationQueryResponse>> PostAnalyticsUsersObservationsQueryAsyncWithHttpInfo (UserObservationQuery body);
+
+        /// <summary>
+        /// Update analytics data retention setting
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">retentionDays</param>
+        /// <returns>Task of AnalyticsDataRetentionResponse</returns>
+        System.Threading.Tasks.Task<AnalyticsDataRetentionResponse> PutAnalyticsDataretentionSettingsAsync (UpdateAnalyticsDataRetentionRequest body);
+
+        /// <summary>
+        /// Update analytics data retention setting
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">retentionDays</param>
+        /// <returns>Task of ApiResponse (AnalyticsDataRetentionResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AnalyticsDataRetentionResponse>> PutAnalyticsDataretentionSettingsAsyncWithHttpInfo (UpdateAnalyticsDataRetentionRequest body);
 
         /// <summary>
         /// Update a scheduled report job.
@@ -3907,6 +3991,184 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<DataAvailabilityResponse>(localVarStatusCode,
                 localVarHeaders,
                 (DataAvailabilityResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataAvailabilityResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get analytics data retention setting 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>AnalyticsDataRetentionResponse</returns>
+        public AnalyticsDataRetentionResponse GetAnalyticsDataretentionSettings ()
+        {
+             ApiResponse<AnalyticsDataRetentionResponse> localVarResponse = GetAnalyticsDataretentionSettingsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get analytics data retention setting 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of AnalyticsDataRetentionResponse</returns>
+        public ApiResponse< AnalyticsDataRetentionResponse > GetAnalyticsDataretentionSettingsWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/analytics/dataretention/settings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsDataretentionSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsDataretentionSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AnalyticsDataRetentionResponse>(localVarStatusCode,
+                localVarHeaders,
+                (AnalyticsDataRetentionResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AnalyticsDataRetentionResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get analytics data retention setting 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of AnalyticsDataRetentionResponse</returns>
+        public async System.Threading.Tasks.Task<AnalyticsDataRetentionResponse> GetAnalyticsDataretentionSettingsAsync ()
+        {
+             ApiResponse<AnalyticsDataRetentionResponse> localVarResponse = await GetAnalyticsDataretentionSettingsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get analytics data retention setting 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (AnalyticsDataRetentionResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AnalyticsDataRetentionResponse>> GetAnalyticsDataretentionSettingsAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/analytics/dataretention/settings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsDataretentionSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAnalyticsDataretentionSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AnalyticsDataRetentionResponse>(localVarStatusCode,
+                localVarHeaders,
+                (AnalyticsDataRetentionResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AnalyticsDataRetentionResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -10977,6 +11239,207 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<UserObservationQueryResponse>(localVarStatusCode,
                 localVarHeaders,
                 (UserObservationQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserObservationQueryResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update analytics data retention setting 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">retentionDays</param>
+        /// <returns>AnalyticsDataRetentionResponse</returns>
+        public AnalyticsDataRetentionResponse PutAnalyticsDataretentionSettings (UpdateAnalyticsDataRetentionRequest body)
+        {
+             ApiResponse<AnalyticsDataRetentionResponse> localVarResponse = PutAnalyticsDataretentionSettingsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update analytics data retention setting 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">retentionDays</param>
+        /// <returns>ApiResponse of AnalyticsDataRetentionResponse</returns>
+        public ApiResponse< AnalyticsDataRetentionResponse > PutAnalyticsDataretentionSettingsWithHttpInfo (UpdateAnalyticsDataRetentionRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PutAnalyticsDataretentionSettings");
+
+            var localVarPath = "/api/v2/analytics/dataretention/settings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutAnalyticsDataretentionSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutAnalyticsDataretentionSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AnalyticsDataRetentionResponse>(localVarStatusCode,
+                localVarHeaders,
+                (AnalyticsDataRetentionResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AnalyticsDataRetentionResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update analytics data retention setting 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">retentionDays</param>
+        /// <returns>Task of AnalyticsDataRetentionResponse</returns>
+        public async System.Threading.Tasks.Task<AnalyticsDataRetentionResponse> PutAnalyticsDataretentionSettingsAsync (UpdateAnalyticsDataRetentionRequest body)
+        {
+             ApiResponse<AnalyticsDataRetentionResponse> localVarResponse = await PutAnalyticsDataretentionSettingsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update analytics data retention setting 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">retentionDays</param>
+        /// <returns>Task of ApiResponse (AnalyticsDataRetentionResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AnalyticsDataRetentionResponse>> PutAnalyticsDataretentionSettingsAsyncWithHttpInfo (UpdateAnalyticsDataRetentionRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PutAnalyticsDataretentionSettings");
+            
+
+            var localVarPath = "/api/v2/analytics/dataretention/settings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutAnalyticsDataretentionSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutAnalyticsDataretentionSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AnalyticsDataRetentionResponse>(localVarStatusCode,
+                localVarHeaders,
+                (AnalyticsDataRetentionResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AnalyticsDataRetentionResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

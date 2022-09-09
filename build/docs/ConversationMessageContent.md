@@ -7,16 +7,15 @@ title: ConversationMessageContent
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **ContentType** | **string** | Type of this content element. If contentType &#x3D; \&quot;Attachment\&quot; only one item is allowed. | |
+| **ContentType** | **string** | Type of this content element. | |
 | **Location** | [**ConversationContentLocation**](ConversationContentLocation.html) | Location content. | [optional] |
-| **Story** | [**ConversationContentStory**](ConversationContentStory.html) | Ephemeral story content. | [optional] |
 | **Attachment** | [**ConversationContentAttachment**](ConversationContentAttachment.html) | Attachment content. | [optional] |
 | **QuickReply** | [**ConversationContentQuickReply**](ConversationContentQuickReply.html) | Quick reply content. | [optional] |
-| **Template** | [**ConversationContentNotificationTemplate**](ConversationContentNotificationTemplate.html) | Template notification content. | [optional] |
 | **ButtonResponse** | [**ConversationContentButtonResponse**](ConversationContentButtonResponse.html) | Button response content. | [optional] |
-| **Generic** | [**ConversationContentGeneric**](ConversationContentGeneric.html) | Generic Template Object (Deprecated). | [optional] |
-| **Card** | [**ConversationContentCard**](ConversationContentCard.html) | Card (Generic Template) Object | [optional] |
-| **Carousel** | [**ConversationContentCarousel**](ConversationContentCarousel.html) | Carousel (Multiple Generic Template) Object | [optional] |
+| **Template** | [**ConversationContentNotificationTemplate**](ConversationContentNotificationTemplate.html) | Template notification content. | [optional] |
+| **Story** | [**ConversationContentStory**](ConversationContentStory.html) | Ephemeral story content. | [optional] |
+| **Card** | [**ConversationContentCard**](ConversationContentCard.html) | Card content | [optional] |
+| **Carousel** | [**ConversationContentCarousel**](ConversationContentCarousel.html) | Carousel content | [optional] |
 {: class="table table-striped"}
 
 

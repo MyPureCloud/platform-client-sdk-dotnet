@@ -18,6 +18,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteOutboundContactlistContacts**](OutboundApi.html#deleteoutboundcontactlistcontacts) | **DELETE** /api/v2/outbound/contactlists/{contactListId}/contacts | Delete contacts from a contact list. |
 | [**DeleteOutboundContactlistfilter**](OutboundApi.html#deleteoutboundcontactlistfilter) | **DELETE** /api/v2/outbound/contactlistfilters/{contactListFilterId} | Delete Contact List Filter |
 | [**DeleteOutboundContactlists**](OutboundApi.html#deleteoutboundcontactlists) | **DELETE** /api/v2/outbound/contactlists | Delete multiple contact lists. |
+| [**DeleteOutboundDigitalruleset**](OutboundApi.html#deleteoutbounddigitalruleset) | **DELETE** /api/v2/outbound/digitalrulesets/{digitalRuleSetId} | Delete an Outbound Digital Rule Set |
 | [**DeleteOutboundDnclist**](OutboundApi.html#deleteoutbounddnclist) | **DELETE** /api/v2/outbound/dnclists/{dncListId} | Delete dialer DNC list |
 | [**DeleteOutboundMessagingcampaign**](OutboundApi.html#deleteoutboundmessagingcampaign) | **DELETE** /api/v2/outbound/messagingcampaigns/{messagingCampaignId} | Delete an Outbound Messaging Campaign |
 | [**DeleteOutboundMessagingcampaignProgress**](OutboundApi.html#deleteoutboundmessagingcampaignprogress) | **DELETE** /api/v2/outbound/messagingcampaigns/{messagingCampaignId}/progress | Reset messaging campaign progress and recycle the messaging campaign |
@@ -56,6 +57,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOutboundContactlists**](OutboundApi.html#getoutboundcontactlists) | **GET** /api/v2/outbound/contactlists | Query a list of contact lists. |
 | [**GetOutboundContactlistsDivisionview**](OutboundApi.html#getoutboundcontactlistsdivisionview) | **GET** /api/v2/outbound/contactlists/divisionviews/{contactListId} | Get a basic ContactList information object |
 | [**GetOutboundContactlistsDivisionviews**](OutboundApi.html#getoutboundcontactlistsdivisionviews) | **GET** /api/v2/outbound/contactlists/divisionviews | Query a list of simplified contact list objects. |
+| [**GetOutboundDigitalruleset**](OutboundApi.html#getoutbounddigitalruleset) | **GET** /api/v2/outbound/digitalrulesets/{digitalRuleSetId} | Get an Outbound Digital Rule Set |
+| [**GetOutboundDigitalrulesets**](OutboundApi.html#getoutbounddigitalrulesets) | **GET** /api/v2/outbound/digitalrulesets | Query a list of Outbound Digital Rule Sets |
 | [**GetOutboundDnclist**](OutboundApi.html#getoutbounddnclist) | **GET** /api/v2/outbound/dnclists/{dncListId} | Get dialer DNC list |
 | [**GetOutboundDnclistExport**](OutboundApi.html#getoutbounddnclistexport) | **GET** /api/v2/outbound/dnclists/{dncListId}/export | Get the URI of a DNC list export. |
 | [**GetOutboundDnclistImportstatus**](OutboundApi.html#getoutbounddnclistimportstatus) | **GET** /api/v2/outbound/dnclists/{dncListId}/importstatus | Get dialer dncList import status. |
@@ -101,6 +104,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostOutboundContactlistfiltersPreview**](OutboundApi.html#postoutboundcontactlistfilterspreview) | **POST** /api/v2/outbound/contactlistfilters/preview | Get a preview of the output of a contact list filter |
 | [**PostOutboundContactlists**](OutboundApi.html#postoutboundcontactlists) | **POST** /api/v2/outbound/contactlists | Create a contact List. |
 | [**PostOutboundConversationDnc**](OutboundApi.html#postoutboundconversationdnc) | **POST** /api/v2/outbound/conversations/{conversationId}/dnc | Add phone numbers to a Dialer DNC list. |
+| [**PostOutboundDigitalrulesets**](OutboundApi.html#postoutbounddigitalrulesets) | **POST** /api/v2/outbound/digitalrulesets | Create an Outbound Digital Rule Set |
 | [**PostOutboundDnclistExport**](OutboundApi.html#postoutbounddnclistexport) | **POST** /api/v2/outbound/dnclists/{dncListId}/export | Initiate the export of a dnc list. |
 | [**PostOutboundDnclistPhonenumbers**](OutboundApi.html#postoutbounddnclistphonenumbers) | **POST** /api/v2/outbound/dnclists/{dncListId}/phonenumbers | Add phone numbers to a DNC list. |
 | [**PostOutboundDnclists**](OutboundApi.html#postoutbounddnclists) | **POST** /api/v2/outbound/dnclists | Create dialer DNC list |
@@ -117,6 +121,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutOutboundContactlist**](OutboundApi.html#putoutboundcontactlist) | **PUT** /api/v2/outbound/contactlists/{contactListId} | Update a contact list. |
 | [**PutOutboundContactlistContact**](OutboundApi.html#putoutboundcontactlistcontact) | **PUT** /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} | Update a contact. |
 | [**PutOutboundContactlistfilter**](OutboundApi.html#putoutboundcontactlistfilter) | **PUT** /api/v2/outbound/contactlistfilters/{contactListFilterId} | Update Contact List Filter |
+| [**PutOutboundDigitalruleset**](OutboundApi.html#putoutbounddigitalruleset) | **PUT** /api/v2/outbound/digitalrulesets/{digitalRuleSetId} | Update an Outbound Digital Rule Set |
 | [**PutOutboundDnclist**](OutboundApi.html#putoutbounddnclist) | **PUT** /api/v2/outbound/dnclists/{dncListId} | Update dialer DNC list |
 | [**PutOutboundMessagingcampaign**](OutboundApi.html#putoutboundmessagingcampaign) | **PUT** /api/v2/outbound/messagingcampaigns/{messagingCampaignId} | Update an Outbound Messaging Campaign |
 | [**PutOutboundRuleset**](OutboundApi.html#putoutboundruleset) | **PUT** /api/v2/outbound/rulesets/{ruleSetId} | Update a Rule Set. |
@@ -831,6 +836,70 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | [**List<string>**](string.html)| contact list id(s) to delete |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteoutbounddigitalruleset"></a>
+
+## void DeleteOutboundDigitalruleset (string digitalRuleSetId)
+
+
+
+Delete an Outbound Digital Rule Set
+
+
+
+Requires ANY permissions: 
+
+* outbound:digitalRuleSet:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteOutboundDigitalrulesetExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var digitalRuleSetId = digitalRuleSetId_example;  // string | The Digital Rule Set ID
+
+            try
+            { 
+                // Delete an Outbound Digital Rule Set
+                apiInstance.DeleteOutboundDigitalruleset(digitalRuleSetId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.DeleteOutboundDigitalruleset: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **digitalRuleSetId** | **string**| The Digital Rule Set ID |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3485,6 +3554,146 @@ namespace Example
 ### Return type
 
 [**ContactListDivisionViewListing**](ContactListDivisionViewListing.html)
+
+<a name="getoutbounddigitalruleset"></a>
+
+## [**DigitalRuleSet**](DigitalRuleSet.html) GetOutboundDigitalruleset (string digitalRuleSetId)
+
+
+
+Get an Outbound Digital Rule Set
+
+
+
+Requires ANY permissions: 
+
+* outbound:digitalRuleSet:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundDigitalrulesetExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var digitalRuleSetId = digitalRuleSetId_example;  // string | The Digital Rule Set ID
+
+            try
+            { 
+                // Get an Outbound Digital Rule Set
+                DigitalRuleSet result = apiInstance.GetOutboundDigitalruleset(digitalRuleSetId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundDigitalruleset: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **digitalRuleSetId** | **string**| The Digital Rule Set ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DigitalRuleSet**](DigitalRuleSet.html)
+
+<a name="getoutbounddigitalrulesets"></a>
+
+## [**DigitalRuleSetEntityListing**](DigitalRuleSetEntityListing.html) GetOutboundDigitalrulesets (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null)
+
+
+
+Query a list of Outbound Digital Rule Sets
+
+
+
+Requires ANY permissions: 
+
+* outbound:digitalRuleSet:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundDigitalrulesetsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var sortBy = sortBy_example;  // string | The field to sort by (optional)  (default to name)
+            var sortOrder = sortOrder_example;  // string | The direction to sort (optional)  (default to ascending)
+            var name = name_example;  // string | Name (optional) 
+            var id = new List<string>(); // List<string> | A list of digital rule set ids to bulk fetch (optional) 
+
+            try
+            { 
+                // Query a list of Outbound Digital Rule Sets
+                DigitalRuleSetEntityListing result = apiInstance.GetOutboundDigitalrulesets(pageSize, pageNumber, sortBy, sortOrder, name, id);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundDigitalrulesets: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size. The max that will be returned is 100. | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **sortBy** | **string**| The field to sort by | [optional] [default to name]<br />**Values**: name |
+| **sortOrder** | **string**| The direction to sort | [optional] [default to ascending]<br />**Values**: ascending, descending |
+| **name** | **string**| Name | [optional]  |
+| **id** | [**List<string>**](string.html)| A list of digital rule set ids to bulk fetch | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DigitalRuleSetEntityListing**](DigitalRuleSetEntityListing.html)
 
 <a name="getoutbounddnclist"></a>
 
@@ -6534,6 +6743,71 @@ namespace Example
 
 void (empty response body)
 
+<a name="postoutbounddigitalrulesets"></a>
+
+## [**DigitalRuleSet**](DigitalRuleSet.html) PostOutboundDigitalrulesets (DigitalRuleSet body)
+
+
+
+Create an Outbound Digital Rule Set
+
+
+
+Requires ANY permissions: 
+
+* outbound:digitalRuleSet:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostOutboundDigitalrulesetsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var body = new DigitalRuleSet(); // DigitalRuleSet | Digital Rule Set
+
+            try
+            { 
+                // Create an Outbound Digital Rule Set
+                DigitalRuleSet result = apiInstance.PostOutboundDigitalrulesets(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostOutboundDigitalrulesets: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**DigitalRuleSet**](DigitalRuleSet.html)| Digital Rule Set |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DigitalRuleSet**](DigitalRuleSet.html)
+
 <a name="postoutbounddnclistexport"></a>
 
 ## [**DomainEntityRef**](DomainEntityRef.html) PostOutboundDnclistExport (string dncListId)
@@ -7606,6 +7880,73 @@ namespace Example
 ### Return type
 
 [**ContactListFilter**](ContactListFilter.html)
+
+<a name="putoutbounddigitalruleset"></a>
+
+## [**DigitalRuleSet**](DigitalRuleSet.html) PutOutboundDigitalruleset (string digitalRuleSetId, DigitalRuleSet body)
+
+
+
+Update an Outbound Digital Rule Set
+
+
+
+Requires ANY permissions: 
+
+* outbound:digitalRuleSet:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutOutboundDigitalrulesetExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var digitalRuleSetId = digitalRuleSetId_example;  // string | The Digital Rule Set ID
+            var body = new DigitalRuleSet(); // DigitalRuleSet | Digital Rule Set
+
+            try
+            { 
+                // Update an Outbound Digital Rule Set
+                DigitalRuleSet result = apiInstance.PutOutboundDigitalruleset(digitalRuleSetId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PutOutboundDigitalruleset: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **digitalRuleSetId** | **string**| The Digital Rule Set ID |  |
+| **body** | [**DigitalRuleSet**](DigitalRuleSet.html)| Digital Rule Set |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DigitalRuleSet**](DigitalRuleSet.html)
 
 <a name="putoutbounddnclist"></a>
 

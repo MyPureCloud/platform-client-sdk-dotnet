@@ -46,12 +46,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Location,
             
             /// <summary>
-            /// Enum Story for "Story"
-            /// </summary>
-            [EnumMember(Value = "Story")]
-            Story,
-            
-            /// <summary>
             /// Enum Quickreply for "QuickReply"
             /// </summary>
             [EnumMember(Value = "QuickReply")]
@@ -70,28 +64,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Buttonresponse,
             
             /// <summary>
-            /// Enum Generictemplate for "GenericTemplate"
+            /// Enum Story for "Story"
             /// </summary>
-            [EnumMember(Value = "GenericTemplate")]
-            Generictemplate,
-            
-            /// <summary>
-            /// Enum Listtemplate for "ListTemplate"
-            /// </summary>
-            [EnumMember(Value = "ListTemplate")]
-            Listtemplate,
-            
-            /// <summary>
-            /// Enum Postback for "Postback"
-            /// </summary>
-            [EnumMember(Value = "Postback")]
-            Postback,
-            
-            /// <summary>
-            /// Enum Reactions for "Reactions"
-            /// </summary>
-            [EnumMember(Value = "Reactions")]
-            Reactions,
+            [EnumMember(Value = "Story")]
+            Story,
             
             /// <summary>
             /// Enum Mention for "Mention"

@@ -89,12 +89,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">WhatsApp Integration name.</param>
         /// <param name="SupportedContent">Defines the SupportedContent profile configured for an integration.</param>
-        /// <param name="MessagingSetting">MessagingSetting.</param>
+        /// <param name="MessagingSetting">Defines the message settings to be applied for this integration.</param>
         /// <param name="Action">The action used to activate and then confirm a WhatsApp Integration..</param>
         /// <param name="AuthenticationMethod">The authentication method used to confirm a WhatsApp Integration activation. If action is set to Activate, then authenticationMethod is a required field. .</param>
         /// <param name="ConfirmationCode">The confirmation code sent by Whatsapp to you during the activation step. If action is set to Confirm, then confirmationCode is a required field..</param>
         /// <param name="PhoneNumber">Phone number to associate with the WhatsApp integration.</param>
-        public WhatsAppIntegrationUpdateRequest(string Name = null, SupportedContentReference SupportedContent = null, MessagingSettingReference MessagingSetting = null, ActionEnum? Action = null, AuthenticationMethodEnum? AuthenticationMethod = null, string ConfirmationCode = null, string PhoneNumber = null)
+        public WhatsAppIntegrationUpdateRequest(string Name = null, SupportedContentReference SupportedContent = null, MessagingSettingRequestReference MessagingSetting = null, ActionEnum? Action = null, AuthenticationMethodEnum? AuthenticationMethod = null, string ConfirmationCode = null, string PhoneNumber = null)
         {
             this.Name = Name;
             this.SupportedContent = SupportedContent;
@@ -136,10 +136,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets MessagingSetting
+        /// Defines the message settings to be applied for this integration
         /// </summary>
+        /// <value>Defines the message settings to be applied for this integration</value>
         [DataMember(Name="messagingSetting", EmitDefaultValue=false)]
-        public MessagingSettingReference MessagingSetting { get; set; }
+        public MessagingSettingRequestReference MessagingSetting { get; set; }
 
 
 

@@ -16,6 +16,7 @@ title: ConversationScreenShareEventTopicScreenShareMediaParticipant
 | **StartHoldTime** | **DateTime?** |  | [optional] |
 | **Purpose** | **string** |  | [optional] |
 | **State** | **string** |  | [optional] |
+| **InitialState** | **string** |  | [optional] |
 | **Direction** | **string** |  | [optional] |
 | **DisconnectType** | **string** |  | [optional] |
 | **Held** | **bool?** |  | [optional] |

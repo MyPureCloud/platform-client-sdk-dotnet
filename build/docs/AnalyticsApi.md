@@ -16,6 +16,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetAnalyticsConversationsDetailsJob**](AnalyticsApi.html#getanalyticsconversationsdetailsjob) | **GET** /api/v2/analytics/conversations/details/jobs/{jobId} | Get status for async query for conversation details |
 | [**GetAnalyticsConversationsDetailsJobResults**](AnalyticsApi.html#getanalyticsconversationsdetailsjobresults) | **GET** /api/v2/analytics/conversations/details/jobs/{jobId}/results | Fetch a page of results for an async query |
 | [**GetAnalyticsConversationsDetailsJobsAvailability**](AnalyticsApi.html#getanalyticsconversationsdetailsjobsavailability) | **GET** /api/v2/analytics/conversations/details/jobs/availability | Lookup the datalake availability date and time |
+| [**GetAnalyticsDataretentionSettings**](AnalyticsApi.html#getanalyticsdataretentionsettings) | **GET** /api/v2/analytics/dataretention/settings | Get analytics data retention setting |
 | [**GetAnalyticsReportingExports**](AnalyticsApi.html#getanalyticsreportingexports) | **GET** /api/v2/analytics/reporting/exports | Get all view export requests for a user |
 | [**GetAnalyticsReportingExportsMetadata**](AnalyticsApi.html#getanalyticsreportingexportsmetadata) | **GET** /api/v2/analytics/reporting/exports/metadata | Get all export metadata |
 | [**GetAnalyticsReportingMetadata**](AnalyticsApi.html#getanalyticsreportingmetadata) | **GET** /api/v2/analytics/reporting/metadata | Get list of reporting metadata. |
@@ -52,6 +53,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostAnalyticsUsersDetailsJobs**](AnalyticsApi.html#postanalyticsusersdetailsjobs) | **POST** /api/v2/analytics/users/details/jobs | Query for user details asynchronously |
 | [**PostAnalyticsUsersDetailsQuery**](AnalyticsApi.html#postanalyticsusersdetailsquery) | **POST** /api/v2/analytics/users/details/query | Query for user details |
 | [**PostAnalyticsUsersObservationsQuery**](AnalyticsApi.html#postanalyticsusersobservationsquery) | **POST** /api/v2/analytics/users/observations/query | Query for user observations |
+| [**PutAnalyticsDataretentionSettings**](AnalyticsApi.html#putanalyticsdataretentionsettings) | **PUT** /api/v2/analytics/dataretention/settings | Update analytics data retention setting |
 | [**PutAnalyticsReportingSchedule**](AnalyticsApi.html#putanalyticsreportingschedule) | **PUT** /api/v2/analytics/reporting/schedules/{scheduleId} | Update a scheduled report job. |
 {: class="table table-striped"}
 
@@ -647,6 +649,66 @@ This endpoint does require any parameters.
 ### Return type
 
 [**DataAvailabilityResponse**](DataAvailabilityResponse.html)
+
+<a name="getanalyticsdataretentionsettings"></a>
+
+## [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse.html) GetAnalyticsDataretentionSettings ()
+
+
+
+Get analytics data retention setting
+
+
+
+Requires ANY permissions: 
+
+* analytics:dataRetention:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAnalyticsDataretentionSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AnalyticsApi();
+
+            try
+            { 
+                // Get analytics data retention setting
+                AnalyticsDataRetentionResponse result = apiInstance.GetAnalyticsDataretentionSettings();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.GetAnalyticsDataretentionSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+
+### Return type
+
+[**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse.html)
 
 <a name="getanalyticsreportingexports"></a>
 
@@ -2992,6 +3054,71 @@ namespace Example
 ### Return type
 
 [**UserObservationQueryResponse**](UserObservationQueryResponse.html)
+
+<a name="putanalyticsdataretentionsettings"></a>
+
+## [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse.html) PutAnalyticsDataretentionSettings (UpdateAnalyticsDataRetentionRequest body)
+
+
+
+Update analytics data retention setting
+
+
+
+Requires ANY permissions: 
+
+* analytics:dataRetention:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutAnalyticsDataretentionSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AnalyticsApi();
+            var body = new UpdateAnalyticsDataRetentionRequest(); // UpdateAnalyticsDataRetentionRequest | retentionDays
+
+            try
+            { 
+                // Update analytics data retention setting
+                AnalyticsDataRetentionResponse result = apiInstance.PutAnalyticsDataretentionSettings(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.PutAnalyticsDataretentionSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**UpdateAnalyticsDataRetentionRequest**](UpdateAnalyticsDataRetentionRequest.html)| retentionDays |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse.html)
 
 <a name="putanalyticsreportingschedule"></a>
 

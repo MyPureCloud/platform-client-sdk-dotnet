@@ -23,7 +23,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="ProcessedEntities">The list of processed entities.</param>
         /// <param name="UnprocessedEntities">The list of unprocessed entities.</param>
-        public ExternalMetricDataWriteResponse(List<ExternalMetricDataItem> ProcessedEntities = null, List<ExternalMetricDataUnprocessedItem> UnprocessedEntities = null)
+        public ExternalMetricDataWriteResponse(List<ExternalMetricDataProcessedItem> ProcessedEntities = null, List<ExternalMetricDataUnprocessedItem> UnprocessedEntities = null)
         {
             this.ProcessedEntities = ProcessedEntities;
             this.UnprocessedEntities = UnprocessedEntities;
@@ -37,7 +37,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The list of processed entities</value>
         [DataMember(Name="processedEntities", EmitDefaultValue=false)]
-        public List<ExternalMetricDataItem> ProcessedEntities { get; set; }
+        public List<ExternalMetricDataProcessedItem> ProcessedEntities { get; set; }
 
 
 

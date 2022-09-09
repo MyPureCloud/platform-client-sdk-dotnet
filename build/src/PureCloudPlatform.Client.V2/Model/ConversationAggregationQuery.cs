@@ -659,6 +659,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Tanswered,
             
             /// <summary>
+            /// Enum Tbarging for "tBarging"
+            /// </summary>
+            [EnumMember(Value = "tBarging")]
+            Tbarging,
+            
+            /// <summary>
             /// Enum Tcallback for "tCallback"
             /// </summary>
             [EnumMember(Value = "tCallback")]

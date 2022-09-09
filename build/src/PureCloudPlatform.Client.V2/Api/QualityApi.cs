@@ -498,7 +498,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">variable name requested to sort by (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="expand">Expand (optional)</param>
+        /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>EvaluationFormEntityListing</returns>
@@ -516,7 +516,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">variable name requested to sort by (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="expand">Expand (optional)</param>
+        /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
@@ -584,7 +584,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">variable name requested to sort by (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="expand">Expand (optional)</param>
+        /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>EvaluationFormEntityListing</returns>
@@ -602,7 +602,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">variable name requested to sort by (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="expand">Expand (optional)</param>
+        /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
@@ -690,7 +690,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">variable name requested to sort by (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="expand">Expand (optional)</param>
+        /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>SurveyFormEntityListing</returns>
@@ -708,7 +708,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">variable name requested to sort by (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="expand">Expand (optional)</param>
+        /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>ApiResponse of SurveyFormEntityListing</returns>
@@ -1926,7 +1926,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">variable name requested to sort by (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="expand">Expand (optional)</param>
+        /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>Task of EvaluationFormEntityListing</returns>
@@ -1944,7 +1944,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">variable name requested to sort by (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="expand">Expand (optional)</param>
+        /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
@@ -2012,7 +2012,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">variable name requested to sort by (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="expand">Expand (optional)</param>
+        /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>Task of EvaluationFormEntityListing</returns>
@@ -2030,7 +2030,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">variable name requested to sort by (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="expand">Expand (optional)</param>
+        /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
@@ -2118,7 +2118,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">variable name requested to sort by (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="expand">Expand (optional)</param>
+        /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>Task of SurveyFormEntityListing</returns>
@@ -2136,7 +2136,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">variable name requested to sort by (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="expand">Expand (optional)</param>
+        /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>Task of ApiResponse (SurveyFormEntityListing)</returns>
@@ -6373,7 +6373,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">variable name requested to sort by (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="expand">Expand (optional)</param>
+        /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>EvaluationFormEntityListing</returns>
@@ -6392,7 +6392,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">variable name requested to sort by (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="expand">Expand (optional)</param>
+        /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
@@ -6485,7 +6485,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">variable name requested to sort by (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="expand">Expand (optional)</param>
+        /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>Task of EvaluationFormEntityListing</returns>
@@ -6505,7 +6505,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">variable name requested to sort by (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="expand">Expand (optional)</param>
+        /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
@@ -6999,7 +6999,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">variable name requested to sort by (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="expand">Expand (optional)</param>
+        /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>EvaluationFormEntityListing</returns>
@@ -7018,7 +7018,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">variable name requested to sort by (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="expand">Expand (optional)</param>
+        /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
@@ -7111,7 +7111,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">variable name requested to sort by (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="expand">Expand (optional)</param>
+        /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>Task of EvaluationFormEntityListing</returns>
@@ -7131,7 +7131,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">variable name requested to sort by (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="expand">Expand (optional)</param>
+        /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
@@ -7810,7 +7810,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">variable name requested to sort by (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="expand">Expand (optional)</param>
+        /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>SurveyFormEntityListing</returns>
@@ -7829,7 +7829,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">variable name requested to sort by (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="expand">Expand (optional)</param>
+        /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>ApiResponse of SurveyFormEntityListing</returns>
@@ -7922,7 +7922,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">variable name requested to sort by (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="expand">Expand (optional)</param>
+        /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>Task of SurveyFormEntityListing</returns>
@@ -7942,7 +7942,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">variable name requested to sort by (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
-        /// <param name="expand">Expand (optional)</param>
+        /// <param name="expand">If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortOrder">Order to sort results, either asc or desc (optional)</param>
         /// <returns>Task of ApiResponse (SurveyFormEntityListing)</returns>

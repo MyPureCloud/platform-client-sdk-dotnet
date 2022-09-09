@@ -1,7 +1,7 @@
 ---
-title: ConversationMessagingChannelMetadata
+title: MarkContactAddressUncontactableActionSettings
 ---
-## ININ.PureCloudApi.Model.ConversationMessagingChannelMetadata
+## ININ.PureCloudApi.Model.MarkContactAddressUncontactableActionSettings
 
 ## Properties
 

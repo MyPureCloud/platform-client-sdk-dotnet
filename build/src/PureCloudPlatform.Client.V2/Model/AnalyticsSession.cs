@@ -323,6 +323,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Ani">Automatic Number Identification (caller's number).</param>
         /// <param name="AssignerId">ID of the user that manually assigned a conversation.</param>
         /// <param name="Authenticated">Flag that indicates that the identity of the customer has been asserted as verified by the provider..</param>
+        /// <param name="BargedParticipantId">The participantId being barged in on (if someone (e.g. an agent) is being barged in on, this would correspond to one of the other participantIds present in the conversation).</param>
         /// <param name="CallbackNumbers">Callback phone number(s).</param>
         /// <param name="CallbackScheduledTime">Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="CallbackUserName">The name of the user requesting a call back.</param>
@@ -386,7 +387,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Flow">IVR flow execution associated with this session.</param>
         /// <param name="Metrics">List of metrics for this session.</param>
         /// <param name="Segments">List of segments for this session.</param>
-        public AnalyticsSession(List<string> ActiveSkillIds = null, bool? AcwSkipped = null, string AddressFrom = null, string AddressOther = null, string AddressSelf = null, string AddressTo = null, string AgentAssistantId = null, int? AgentBullseyeRing = null, bool? AgentOwned = null, string Ani = null, string AssignerId = null, bool? Authenticated = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CallbackUserName = null, string CoachedParticipantId = null, string CobrowseRole = null, string CobrowseRoomId = null, DeliveryStatusEnum? DeliveryStatus = null, DateTime? DeliveryStatusChangeDate = null, List<string> DestinationAddresses = null, DirectionEnum? Direction = null, string DispositionAnalyzer = null, string DispositionName = null, string Dnis = null, string EdgeId = null, List<int?> EligibleAgentCounts = null, string ExtendedDeliveryStatus = null, string FlowInType = null, string FlowOutType = null, string JourneyActionId = null, string JourneyActionMapId = null, int? JourneyActionMapVersion = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string MediaBridgeId = null, int? MediaCount = null, MediaTypeEnum? MediaType = null, string MessageType = null, string MonitoredParticipantId = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string PeerId = null, string ProtocolCallId = null, string Provider = null, bool? Recording = null, string Remote = null, string RemoteNameDisplayable = null, List<string> RemovedSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, string RoomId = null, int? RoutingRing = null, string ScreenShareAddressSelf = null, string ScreenShareRoomId = null, string ScriptId = null, string SelectedAgentId = null, int? SelectedAgentRank = null, string SessionDnis = null, string SessionId = null, bool? SharingScreen = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, UsedRoutingEnum? UsedRouting = null, string VideoAddressSelf = null, string VideoRoomId = null, List<int?> WaitingInteractionCounts = null, List<AnalyticsProposedAgent> ProposedAgents = null, List<AnalyticsAgentGroup> AgentGroups = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, AnalyticsFlow Flow = null, List<AnalyticsSessionMetric> Metrics = null, List<AnalyticsConversationSegment> Segments = null)
+        public AnalyticsSession(List<string> ActiveSkillIds = null, bool? AcwSkipped = null, string AddressFrom = null, string AddressOther = null, string AddressSelf = null, string AddressTo = null, string AgentAssistantId = null, int? AgentBullseyeRing = null, bool? AgentOwned = null, string Ani = null, string AssignerId = null, bool? Authenticated = null, string BargedParticipantId = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CallbackUserName = null, string CoachedParticipantId = null, string CobrowseRole = null, string CobrowseRoomId = null, DeliveryStatusEnum? DeliveryStatus = null, DateTime? DeliveryStatusChangeDate = null, List<string> DestinationAddresses = null, DirectionEnum? Direction = null, string DispositionAnalyzer = null, string DispositionName = null, string Dnis = null, string EdgeId = null, List<int?> EligibleAgentCounts = null, string ExtendedDeliveryStatus = null, string FlowInType = null, string FlowOutType = null, string JourneyActionId = null, string JourneyActionMapId = null, int? JourneyActionMapVersion = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string MediaBridgeId = null, int? MediaCount = null, MediaTypeEnum? MediaType = null, string MessageType = null, string MonitoredParticipantId = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string PeerId = null, string ProtocolCallId = null, string Provider = null, bool? Recording = null, string Remote = null, string RemoteNameDisplayable = null, List<string> RemovedSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, string RoomId = null, int? RoutingRing = null, string ScreenShareAddressSelf = null, string ScreenShareRoomId = null, string ScriptId = null, string SelectedAgentId = null, int? SelectedAgentRank = null, string SessionDnis = null, string SessionId = null, bool? SharingScreen = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, UsedRoutingEnum? UsedRouting = null, string VideoAddressSelf = null, string VideoRoomId = null, List<int?> WaitingInteractionCounts = null, List<AnalyticsProposedAgent> ProposedAgents = null, List<AnalyticsAgentGroup> AgentGroups = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, AnalyticsFlow Flow = null, List<AnalyticsSessionMetric> Metrics = null, List<AnalyticsConversationSegment> Segments = null)
         {
             this.ActiveSkillIds = ActiveSkillIds;
             this.AcwSkipped = AcwSkipped;
@@ -400,6 +401,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Ani = Ani;
             this.AssignerId = AssignerId;
             this.Authenticated = Authenticated;
+            this.BargedParticipantId = BargedParticipantId;
             this.CallbackNumbers = CallbackNumbers;
             this.CallbackScheduledTime = CallbackScheduledTime;
             this.CallbackUserName = CallbackUserName;
@@ -573,6 +575,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Flag that indicates that the identity of the customer has been asserted as verified by the provider.</value>
         [DataMember(Name="authenticated", EmitDefaultValue=false)]
         public bool? Authenticated { get; set; }
+
+
+
+        /// <summary>
+        /// The participantId being barged in on (if someone (e.g. an agent) is being barged in on, this would correspond to one of the other participantIds present in the conversation)
+        /// </summary>
+        /// <value>The participantId being barged in on (if someone (e.g. an agent) is being barged in on, this would correspond to one of the other participantIds present in the conversation)</value>
+        [DataMember(Name="bargedParticipantId", EmitDefaultValue=false)]
+        public string BargedParticipantId { get; set; }
 
 
 
@@ -1135,6 +1146,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Ani: ").Append(Ani).Append("\n");
             sb.Append("  AssignerId: ").Append(AssignerId).Append("\n");
             sb.Append("  Authenticated: ").Append(Authenticated).Append("\n");
+            sb.Append("  BargedParticipantId: ").Append(BargedParticipantId).Append("\n");
             sb.Append("  CallbackNumbers: ").Append(CallbackNumbers).Append("\n");
             sb.Append("  CallbackScheduledTime: ").Append(CallbackScheduledTime).Append("\n");
             sb.Append("  CallbackUserName: ").Append(CallbackUserName).Append("\n");
@@ -1297,6 +1309,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Authenticated == other.Authenticated ||
                     this.Authenticated != null &&
                     this.Authenticated.Equals(other.Authenticated)
+                ) &&
+                (
+                    this.BargedParticipantId == other.BargedParticipantId ||
+                    this.BargedParticipantId != null &&
+                    this.BargedParticipantId.Equals(other.BargedParticipantId)
                 ) &&
                 (
                     this.CallbackNumbers == other.CallbackNumbers ||
@@ -1661,6 +1678,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Authenticated != null)
                     hash = hash * 59 + this.Authenticated.GetHashCode();
+
+                if (this.BargedParticipantId != null)
+                    hash = hash * 59 + this.BargedParticipantId.GetHashCode();
 
                 if (this.CallbackNumbers != null)
                     hash = hash * 59 + this.CallbackNumbers.GetHashCode();

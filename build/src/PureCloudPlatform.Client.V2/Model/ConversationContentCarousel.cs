@@ -13,15 +13,21 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// ConversationContentCarousel
+    /// Carousel content object.
     /// </summary>
     [DataContract]
     public partial class ConversationContentCarousel :  IEquatable<ConversationContentCarousel>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationContentCarousel" /> class.
         /// </summary>
-        /// <param name="Cards">A List of card objects..</param>
+        [JsonConstructorAttribute]
+        protected ConversationContentCarousel() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ConversationContentCarousel" /> class.
+        /// </summary>
+        /// <param name="Cards">An array of card objects. (required).</param>
         public ConversationContentCarousel(List<ConversationContentCard> Cards = null)
         {
             this.Cards = Cards;
@@ -31,9 +37,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A List of card objects.
+        /// An array of card objects.
         /// </summary>
-        /// <value>A List of card objects.</value>
+        /// <value>An array of card objects.</value>
         [DataMember(Name="cards", EmitDefaultValue=false)]
         public List<ConversationContentCard> Cards { get; set; }
 

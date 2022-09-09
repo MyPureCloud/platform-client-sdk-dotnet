@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// CardAction Object
+    /// A card action that a user can take.
     /// </summary>
     [DataContract]
     public partial class ConversationContentCardAction :  IEquatable<ConversationContentCardAction>
@@ -62,7 +62,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Type">Describes the type of action..</param>
         /// <param name="Text">The response text from the button click..</param>
-        /// <param name="Payload">Text to be returned as the payload from a ButtonResponse when a button is clicked..</param>
+        /// <param name="Payload">Text to be returned as the payload from a ButtonResponse when a button is clicked. The payload and text are a combination which will have to be unique across each card and carousel in order to determine which button was clicked in that card or carousel..</param>
         /// <param name="Url">A URL of a web page to direct the user to..</param>
         public ConversationContentCardAction(TypeEnum? Type = null, string Text = null, string Payload = null, string Url = null)
         {
@@ -87,9 +87,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Text to be returned as the payload from a ButtonResponse when a button is clicked.
+        /// Text to be returned as the payload from a ButtonResponse when a button is clicked. The payload and text are a combination which will have to be unique across each card and carousel in order to determine which button was clicked in that card or carousel.
         /// </summary>
-        /// <value>Text to be returned as the payload from a ButtonResponse when a button is clicked.</value>
+        /// <value>Text to be returned as the payload from a ButtonResponse when a button is clicked. The payload and text are a combination which will have to be unique across each card and carousel in order to determine which button was clicked in that card or carousel.</value>
         [DataMember(Name="payload", EmitDefaultValue=false)]
         public string Payload { get; set; }
 

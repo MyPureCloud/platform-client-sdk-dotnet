@@ -23,10 +23,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">The name of the Facebook Integration.</param>
         /// <param name="SupportedContent">Defines the SupportedContent profile configured for an integration.</param>
-        /// <param name="MessagingSetting">MessagingSetting.</param>
+        /// <param name="MessagingSetting">Defines the message settings to be applied for this integration.</param>
         /// <param name="PageAccessToken">The long-lived Page Access Token of Facebook page.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  Either pageAccessToken or userAccessToken should be provided..</param>
         /// <param name="UserAccessToken">The short-lived User Access Token of the Facebook user logged into the Facebook app.  See https://developers.facebook.com/docs/facebook-login/access-tokens.  Either pageAccessToken or userAccessToken should be provided..</param>
-        public FacebookIntegrationUpdateRequest(string Name = null, SupportedContentReference SupportedContent = null, MessagingSettingReference MessagingSetting = null, string PageAccessToken = null, string UserAccessToken = null)
+        public FacebookIntegrationUpdateRequest(string Name = null, SupportedContentReference SupportedContent = null, MessagingSettingRequestReference MessagingSetting = null, string PageAccessToken = null, string UserAccessToken = null)
         {
             this.Name = Name;
             this.SupportedContent = SupportedContent;
@@ -66,10 +66,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets MessagingSetting
+        /// Defines the message settings to be applied for this integration
         /// </summary>
+        /// <value>Defines the message settings to be applied for this integration</value>
         [DataMember(Name="messagingSetting", EmitDefaultValue=false)]
-        public MessagingSettingReference MessagingSetting { get; set; }
+        public MessagingSettingRequestReference MessagingSetting { get; set; }
 
 
 

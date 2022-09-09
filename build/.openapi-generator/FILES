@@ -88,6 +88,7 @@ docs/AnalyticsConversationQueryResponse.md
 docs/AnalyticsConversationSegment.md
 docs/AnalyticsConversationWithoutAttributes.md
 docs/AnalyticsConversationWithoutAttributesMultiGetResponse.md
+docs/AnalyticsDataRetentionResponse.md
 docs/AnalyticsEvaluation.md
 docs/AnalyticsFlow.md
 docs/AnalyticsFlowOutcome.md
@@ -113,6 +114,7 @@ docs/AnswerOption.md
 docs/ApiUsageQuery.md
 docs/ApiUsageQueryResult.md
 docs/ApiUsageRow.md
+docs/AppendToDncActionSettings.md
 docs/ArchitectApi.json
 docs/ArchitectApi.md
 docs/ArchitectDependencyTrackingBuildNotificationClient.md
@@ -525,9 +527,12 @@ docs/ConsumedResourcesEntityListing.md
 docs/ConsumingResourcesEntityListing.md
 docs/Contact.md
 docs/ContactAddress.md
+docs/ContactAddressConditionSettings.md
+docs/ContactAddressTypeConditionSettings.md
 docs/ContactAddressableEntityRef.md
 docs/ContactCallbackRequest.md
 docs/ContactCenterSettings.md
+docs/ContactColumnConditionSettings.md
 docs/ContactColumnTimeZone.md
 docs/ContactColumnToDataActionFieldMapping.md
 docs/ContactDetailEventTopicContactUpdateEvent.md
@@ -595,7 +600,6 @@ docs/ConversationAggregationView.md
 docs/ConversationAppSettings.md
 docs/ConversationAssociation.md
 docs/ConversationBasic.md
-docs/ConversationButtonComponent.md
 docs/ConversationCallEventTopicCallConversation.md
 docs/ConversationCallEventTopicCallMediaParticipant.md
 docs/ConversationCallEventTopicConversationRoutingData.md
@@ -627,6 +631,7 @@ docs/ConversationCallbackEventTopicUriReference.md
 docs/ConversationCallbackEventTopicVoicemail.md
 docs/ConversationCallbackEventTopicWrapup.md
 docs/ConversationChannel.md
+docs/ConversationChannelMetadata.md
 docs/ConversationChat.md
 docs/ConversationChatEventTopicChatConversation.md
 docs/ConversationChatEventTopicChatMediaParticipant.md
@@ -654,13 +659,11 @@ docs/ConversationCobrowseEventTopicJourneyCustomerSession.md
 docs/ConversationCobrowseEventTopicScoredAgent.md
 docs/ConversationCobrowseEventTopicUriReference.md
 docs/ConversationCobrowseEventTopicWrapup.md
-docs/ConversationContentActions.md
 docs/ConversationContentAttachment.md
 docs/ConversationContentButtonResponse.md
 docs/ConversationContentCard.md
 docs/ConversationContentCardAction.md
 docs/ConversationContentCarousel.md
-docs/ConversationContentGeneric.md
 docs/ConversationContentLocation.md
 docs/ConversationContentNotificationTemplate.md
 docs/ConversationContentQuickReply.md
@@ -755,7 +758,6 @@ docs/ConversationMessageMetadata.md
 docs/ConversationMessageMetadataContent.md
 docs/ConversationMessageMetadataEvent.md
 docs/ConversationMessagingChannel.md
-docs/ConversationMessagingChannelMetadata.md
 docs/ConversationMessagingFromRecipient.md
 docs/ConversationMessagingToRecipient.md
 docs/ConversationMetrics.md
@@ -1040,6 +1042,7 @@ docs/DeleteOutboundContactlistContact-example.txt
 docs/DeleteOutboundContactlistContacts-example.txt
 docs/DeleteOutboundContactlistfilter-example.txt
 docs/DeleteOutboundContactlists-example.txt
+docs/DeleteOutboundDigitalruleset-example.txt
 docs/DeleteOutboundDnclist-example.txt
 docs/DeleteOutboundMessagingcampaign-example.txt
 docs/DeleteOutboundMessagingcampaignProgress-example.txt
@@ -1225,6 +1228,11 @@ docs/DialogflowIntent.md
 docs/DialogflowParameter.md
 docs/DialogflowProject.md
 docs/DigitLength.md
+docs/DigitalAction.md
+docs/DigitalCondition.md
+docs/DigitalRule.md
+docs/DigitalRuleSet.md
+docs/DigitalRuleSetEntityListing.md
 docs/Digits.md
 docs/DirectoryUserDevicesListing.md
 docs/DisallowedEntityLearningAssignmentItem.md
@@ -1240,6 +1248,7 @@ docs/DncListDivisionViewListing.md
 docs/DncListEntityListing.md
 docs/DnclistDownloadReadyExportUri.md
 docs/DnclistImportStatusImportStatus.md
+docs/DoNotSendActionSettings.md
 docs/Document.md
 docs/DocumentArticle.md
 docs/DocumentAttribute.md
@@ -1454,6 +1463,7 @@ docs/ExternalContactsUnresolvedContactChangedTopicTwitterId.md
 docs/ExternalContactsUnresolvedContactChangedTopicWhatsAppId.md
 docs/ExternalDataSource.md
 docs/ExternalMetricDataItem.md
+docs/ExternalMetricDataProcessedItem.md
 docs/ExternalMetricDataUnprocessedItem.md
 docs/ExternalMetricDataWriteRequest.md
 docs/ExternalMetricDataWriteResponse.md
@@ -1601,6 +1611,7 @@ docs/GetAnalyticsConversationsDetailsJobResults-example.txt
 docs/GetAnalyticsConversationsDetailsJobResults-example.txt
 docs/GetAnalyticsConversationsDetailsJobsAvailability-example.txt
 docs/GetAnalyticsConversationsDetailsJobsAvailability-example.txt
+docs/GetAnalyticsDataretentionSettings-example.txt
 docs/GetAnalyticsReportingExports-example.txt
 docs/GetAnalyticsReportingExportsMetadata-example.txt
 docs/GetAnalyticsReportingMetadata-example.txt
@@ -2105,6 +2116,8 @@ docs/GetOutboundContactlistfilters-example.txt
 docs/GetOutboundContactlists-example.txt
 docs/GetOutboundContactlistsDivisionview-example.txt
 docs/GetOutboundContactlistsDivisionviews-example.txt
+docs/GetOutboundDigitalruleset-example.txt
+docs/GetOutboundDigitalrulesets-example.txt
 docs/GetOutboundDnclist-example.txt
 docs/GetOutboundDnclistExport-example.txt
 docs/GetOutboundDnclistImportstatus-example.txt
@@ -2181,6 +2194,7 @@ docs/GetRecordingMediaretentionpolicy-example.txt
 docs/GetRecordingRecordingkeys-example.txt
 docs/GetRecordingRecordingkeysRotationschedule-example.txt
 docs/GetRecordingSettings-example.txt
+docs/GetRecordingsRetentionQuery-example.txt
 docs/GetRecordingsScreensessions-example.txt
 docs/GetResponsemanagementLibraries-example.txt
 docs/GetResponsemanagementLibrary-example.txt
@@ -2432,6 +2446,7 @@ docs/GetWebdeploymentsConfigurationVersions-example.txt
 docs/GetWebdeploymentsConfigurationVersionsDraft-example.txt
 docs/GetWebdeploymentsConfigurations-example.txt
 docs/GetWebdeploymentsDeployment-example.txt
+docs/GetWebdeploymentsDeploymentConfigurations-example.txt
 docs/GetWebdeploymentsDeployments-example.txt
 docs/GetWebmessagingMessages-example.txt
 docs/GetWidgetsDeployment-example.txt
@@ -2775,6 +2790,10 @@ docs/LanguageUnderstandingApi.json
 docs/LanguageUnderstandingApi.md
 docs/LanguagesApi.json
 docs/LanguagesApi.md
+docs/LastAttemptByColumnConditionSettings.md
+docs/LastAttemptOverallConditionSettings.md
+docs/LastResultByColumnConditionSettings.md
+docs/LastResultOverallConditionSettings.md
 docs/LauncherButtonSettings.md
 docs/Leaderboard.md
 docs/LeaderboardItem.md
@@ -2894,6 +2913,8 @@ docs/ManagementUnitReference.md
 docs/ManagementUnitSettingsRequest.md
 docs/ManagementUnitSettingsResponse.md
 docs/Manager.md
+docs/MarkContactAddressUncontactableActionSettings.md
+docs/MarkContactUncontactableActionSettings.md
 docs/Markdown.md
 docs/MatchShiftTradeRequest.md
 docs/MatchShiftTradeResponse.md
@@ -2944,6 +2965,7 @@ docs/MessagingIntegration.md
 docs/MessagingIntegrationEntityListing.md
 docs/MessagingRecipient.md
 docs/MessagingSettingReference.md
+docs/MessagingSettingRequestReference.md
 docs/MessagingSticker.md
 docs/MessagingStickerEntityListing.md
 docs/MessagingTemplate.md
@@ -3582,6 +3604,7 @@ docs/PostOutboundContactlistfilters-example.txt
 docs/PostOutboundContactlistfiltersPreview-example.txt
 docs/PostOutboundContactlists-example.txt
 docs/PostOutboundConversationDnc-example.txt
+docs/PostOutboundDigitalrulesets-example.txt
 docs/PostOutboundDnclistExport-example.txt
 docs/PostOutboundDnclistPhonenumbers-example.txt
 docs/PostOutboundDnclists-example.txt
@@ -3691,6 +3714,7 @@ docs/PostUploadsPublicassetsImages-example.txt
 docs/PostUploadsRecordings-example.txt
 docs/PostUploadsWorkforcemanagementHistoricaldataCsv-example.txt
 docs/PostUsageQuery-example.txt
+docs/PostUserExternalid-example.txt
 docs/PostUserGreetings-example.txt
 docs/PostUserInvite-example.txt
 docs/PostUserPassword-example.txt
@@ -3804,6 +3828,7 @@ docs/PureCloud.md
 docs/PureEngage.md
 docs/PutAlertingInteractionstatsAlert-example.txt
 docs/PutAlertingInteractionstatsRule-example.txt
+docs/PutAnalyticsDataretentionSettings-example.txt
 docs/PutAnalyticsReportingSchedule-example.txt
 docs/PutArchitectEmergencygroup-example.txt
 docs/PutArchitectIvr-example.txt
@@ -3905,6 +3930,7 @@ docs/PutOutboundCampaignrule-example.txt
 docs/PutOutboundContactlist-example.txt
 docs/PutOutboundContactlistContact-example.txt
 docs/PutOutboundContactlistfilter-example.txt
+docs/PutOutboundDigitalruleset-example.txt
 docs/PutOutboundDnclist-example.txt
 docs/PutOutboundMessagingcampaign-example.txt
 docs/PutOutboundRuleset-example.txt
@@ -4275,6 +4301,8 @@ docs/RecordingJobFailedRecording.md
 docs/RecordingJobsQuery.md
 docs/RecordingMessagingMessage.md
 docs/RecordingMetadata.md
+docs/RecordingRetention.md
+docs/RecordingRetentionCursorEntityListing.md
 docs/RecordingSettings.md
 docs/RecordingTranscodeCompleteTopicMediaResult.md
 docs/RecordingTranscodeCompleteTopicRecording.md
@@ -4479,6 +4507,7 @@ docs/Session.md
 docs/SessionEndDetails.md
 docs/SessionLastEvent.md
 docs/SessionSegmentAssignment.md
+docs/SetContentTemplateActionSettings.md
 docs/SetRecordingState.md
 docs/SetTimeOffLimitValuesRequest.md
 docs/SetUuiDataRequest.md
@@ -4689,6 +4718,7 @@ docs/Topic.md
 docs/TopicDuration.md
 docs/TopicJob.md
 docs/TopicJobRequest.md
+docs/TopicOffset.md
 docs/TopicRequest.md
 docs/TopicsEntityListing.md
 docs/TrainingListing.md
@@ -4784,9 +4814,11 @@ docs/UnreadMetric.md
 docs/UnreadStatus.md
 docs/UpdateActionInput.md
 docs/UpdateActivityCodeRequest.md
+docs/UpdateAnalyticsDataRetentionRequest.md
 docs/UpdateBusinessUnitRequest.md
 docs/UpdateBusinessUnitSettings.md
 docs/UpdateCoachingAppointmentRequest.md
+docs/UpdateContactColumnActionSettings.md
 docs/UpdateDraftInput.md
 docs/UpdateManagementUnitRequest.md
 docs/UpdateNotificationResponse.md
@@ -4844,6 +4876,7 @@ docs/UserDevice.md
 docs/UserEndDetailEventTopicUserEndEvent.md
 docs/UserEntityListing.md
 docs/UserExpands.md
+docs/UserExternalIdentifier.md
 docs/UserGreetingEventGreeting.md
 docs/UserGreetingEventGreetingAudioFile.md
 docs/UserGreetingEventGreetingOwner.md
@@ -5009,6 +5042,7 @@ docs/WebChatRoutingTarget.md
 docs/WebChatSettings.md
 docs/WebChatTyping.md
 docs/WebDeployment.md
+docs/WebDeploymentActiveConfigurationOnDeployment.md
 docs/WebDeploymentConfigurationVersion.md
 docs/WebDeploymentConfigurationVersionEntityListing.md
 docs/WebDeploymentConfigurationVersionEntityRef.md
@@ -5394,6 +5428,7 @@ src/PureCloudPlatform.Client.V2/Model/AnalyticsConversationQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AnalyticsConversationSegment.cs
 src/PureCloudPlatform.Client.V2/Model/AnalyticsConversationWithoutAttributes.cs
 src/PureCloudPlatform.Client.V2/Model/AnalyticsConversationWithoutAttributesMultiGetResponse.cs
+src/PureCloudPlatform.Client.V2/Model/AnalyticsDataRetentionResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AnalyticsEvaluation.cs
 src/PureCloudPlatform.Client.V2/Model/AnalyticsFlow.cs
 src/PureCloudPlatform.Client.V2/Model/AnalyticsFlowOutcome.cs
@@ -5419,6 +5454,7 @@ src/PureCloudPlatform.Client.V2/Model/AnswerOption.cs
 src/PureCloudPlatform.Client.V2/Model/ApiUsageQuery.cs
 src/PureCloudPlatform.Client.V2/Model/ApiUsageQueryResult.cs
 src/PureCloudPlatform.Client.V2/Model/ApiUsageRow.cs
+src/PureCloudPlatform.Client.V2/Model/AppendToDncActionSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ArchitectDependencyTrackingBuildNotificationClient.cs
 src/PureCloudPlatform.Client.V2/Model/ArchitectDependencyTrackingBuildNotificationDependencyTrackingBuildNotification.cs
 src/PureCloudPlatform.Client.V2/Model/ArchitectDependencyTrackingBuildNotificationHomeOrganization.cs
@@ -5819,9 +5855,12 @@ src/PureCloudPlatform.Client.V2/Model/ConsumedResourcesEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/ConsumingResourcesEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/Contact.cs
 src/PureCloudPlatform.Client.V2/Model/ContactAddress.cs
+src/PureCloudPlatform.Client.V2/Model/ContactAddressConditionSettings.cs
+src/PureCloudPlatform.Client.V2/Model/ContactAddressTypeConditionSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ContactAddressableEntityRef.cs
 src/PureCloudPlatform.Client.V2/Model/ContactCallbackRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ContactCenterSettings.cs
+src/PureCloudPlatform.Client.V2/Model/ContactColumnConditionSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ContactColumnTimeZone.cs
 src/PureCloudPlatform.Client.V2/Model/ContactColumnToDataActionFieldMapping.cs
 src/PureCloudPlatform.Client.V2/Model/ContactDetailEventTopicContactUpdateEvent.cs
@@ -5887,7 +5926,6 @@ src/PureCloudPlatform.Client.V2/Model/ConversationAggregationView.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationAppSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationAssociation.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationBasic.cs
-src/PureCloudPlatform.Client.V2/Model/ConversationButtonComponent.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationCallEventTopicCallConversation.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationCallEventTopicCallMediaParticipant.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationCallEventTopicConversationRoutingData.cs
@@ -5919,6 +5957,7 @@ src/PureCloudPlatform.Client.V2/Model/ConversationCallbackEventTopicUriReference
 src/PureCloudPlatform.Client.V2/Model/ConversationCallbackEventTopicVoicemail.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationCallbackEventTopicWrapup.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationChannel.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationChannelMetadata.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationChat.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationChatEventTopicChatConversation.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationChatEventTopicChatMediaParticipant.cs
@@ -5946,13 +5985,11 @@ src/PureCloudPlatform.Client.V2/Model/ConversationCobrowseEventTopicJourneyCusto
 src/PureCloudPlatform.Client.V2/Model/ConversationCobrowseEventTopicScoredAgent.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationCobrowseEventTopicUriReference.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationCobrowseEventTopicWrapup.cs
-src/PureCloudPlatform.Client.V2/Model/ConversationContentActions.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentAttachment.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentButtonResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentCard.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentCardAction.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentCarousel.cs
-src/PureCloudPlatform.Client.V2/Model/ConversationContentGeneric.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentLocation.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentNotificationTemplate.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentQuickReply.cs
@@ -6047,7 +6084,6 @@ src/PureCloudPlatform.Client.V2/Model/ConversationMessageMetadata.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationMessageMetadataContent.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationMessageMetadataEvent.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationMessagingChannel.cs
-src/PureCloudPlatform.Client.V2/Model/ConversationMessagingChannelMetadata.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationMessagingFromRecipient.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationMessagingToRecipient.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationMetrics.cs
@@ -6303,6 +6339,11 @@ src/PureCloudPlatform.Client.V2/Model/DialogflowIntent.cs
 src/PureCloudPlatform.Client.V2/Model/DialogflowParameter.cs
 src/PureCloudPlatform.Client.V2/Model/DialogflowProject.cs
 src/PureCloudPlatform.Client.V2/Model/DigitLength.cs
+src/PureCloudPlatform.Client.V2/Model/DigitalAction.cs
+src/PureCloudPlatform.Client.V2/Model/DigitalCondition.cs
+src/PureCloudPlatform.Client.V2/Model/DigitalRule.cs
+src/PureCloudPlatform.Client.V2/Model/DigitalRuleSet.cs
+src/PureCloudPlatform.Client.V2/Model/DigitalRuleSetEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/Digits.cs
 src/PureCloudPlatform.Client.V2/Model/DirectoryUserDevicesListing.cs
 src/PureCloudPlatform.Client.V2/Model/DisallowedEntityLearningAssignmentItem.cs
@@ -6318,6 +6359,7 @@ src/PureCloudPlatform.Client.V2/Model/DncListDivisionViewListing.cs
 src/PureCloudPlatform.Client.V2/Model/DncListEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/DnclistDownloadReadyExportUri.cs
 src/PureCloudPlatform.Client.V2/Model/DnclistImportStatusImportStatus.cs
+src/PureCloudPlatform.Client.V2/Model/DoNotSendActionSettings.cs
 src/PureCloudPlatform.Client.V2/Model/Document.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentArticle.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentAttribute.cs
@@ -6530,6 +6572,7 @@ src/PureCloudPlatform.Client.V2/Model/ExternalContactsUnresolvedContactChangedTo
 src/PureCloudPlatform.Client.V2/Model/ExternalContactsUnresolvedContactChangedTopicWhatsAppId.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalDataSource.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalMetricDataItem.cs
+src/PureCloudPlatform.Client.V2/Model/ExternalMetricDataProcessedItem.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalMetricDataUnprocessedItem.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalMetricDataWriteRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalMetricDataWriteResponse.cs
@@ -6912,6 +6955,10 @@ src/PureCloudPlatform.Client.V2/Model/Language.cs
 src/PureCloudPlatform.Client.V2/Model/LanguageEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/LanguageOverride.cs
 src/PureCloudPlatform.Client.V2/Model/LanguageReference.cs
+src/PureCloudPlatform.Client.V2/Model/LastAttemptByColumnConditionSettings.cs
+src/PureCloudPlatform.Client.V2/Model/LastAttemptOverallConditionSettings.cs
+src/PureCloudPlatform.Client.V2/Model/LastResultByColumnConditionSettings.cs
+src/PureCloudPlatform.Client.V2/Model/LastResultOverallConditionSettings.cs
 src/PureCloudPlatform.Client.V2/Model/LauncherButtonSettings.cs
 src/PureCloudPlatform.Client.V2/Model/Leaderboard.cs
 src/PureCloudPlatform.Client.V2/Model/LeaderboardItem.cs
@@ -7025,6 +7072,8 @@ src/PureCloudPlatform.Client.V2/Model/ManagementUnitReference.cs
 src/PureCloudPlatform.Client.V2/Model/ManagementUnitSettingsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ManagementUnitSettingsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/Manager.cs
+src/PureCloudPlatform.Client.V2/Model/MarkContactAddressUncontactableActionSettings.cs
+src/PureCloudPlatform.Client.V2/Model/MarkContactUncontactableActionSettings.cs
 src/PureCloudPlatform.Client.V2/Model/Markdown.cs
 src/PureCloudPlatform.Client.V2/Model/MatchShiftTradeRequest.cs
 src/PureCloudPlatform.Client.V2/Model/MatchShiftTradeResponse.cs
@@ -7073,6 +7122,7 @@ src/PureCloudPlatform.Client.V2/Model/MessagingIntegration.cs
 src/PureCloudPlatform.Client.V2/Model/MessagingIntegrationEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/MessagingRecipient.cs
 src/PureCloudPlatform.Client.V2/Model/MessagingSettingReference.cs
+src/PureCloudPlatform.Client.V2/Model/MessagingSettingRequestReference.cs
 src/PureCloudPlatform.Client.V2/Model/MessagingSticker.cs
 src/PureCloudPlatform.Client.V2/Model/MessagingStickerEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/MessagingTemplate.cs
@@ -7613,6 +7663,8 @@ src/PureCloudPlatform.Client.V2/Model/RecordingJobFailedRecording.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingJobsQuery.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingMessagingMessage.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingMetadata.cs
+src/PureCloudPlatform.Client.V2/Model/RecordingRetention.cs
+src/PureCloudPlatform.Client.V2/Model/RecordingRetentionCursorEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingSettings.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingTranscodeCompleteTopicMediaResult.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingTranscodeCompleteTopicRecording.cs
@@ -7807,6 +7859,7 @@ src/PureCloudPlatform.Client.V2/Model/Session.cs
 src/PureCloudPlatform.Client.V2/Model/SessionEndDetails.cs
 src/PureCloudPlatform.Client.V2/Model/SessionLastEvent.cs
 src/PureCloudPlatform.Client.V2/Model/SessionSegmentAssignment.cs
+src/PureCloudPlatform.Client.V2/Model/SetContentTemplateActionSettings.cs
 src/PureCloudPlatform.Client.V2/Model/SetRecordingState.cs
 src/PureCloudPlatform.Client.V2/Model/SetTimeOffLimitValuesRequest.cs
 src/PureCloudPlatform.Client.V2/Model/SetUuiDataRequest.cs
@@ -8001,6 +8054,7 @@ src/PureCloudPlatform.Client.V2/Model/Topic.cs
 src/PureCloudPlatform.Client.V2/Model/TopicDuration.cs
 src/PureCloudPlatform.Client.V2/Model/TopicJob.cs
 src/PureCloudPlatform.Client.V2/Model/TopicJobRequest.cs
+src/PureCloudPlatform.Client.V2/Model/TopicOffset.cs
 src/PureCloudPlatform.Client.V2/Model/TopicRequest.cs
 src/PureCloudPlatform.Client.V2/Model/TopicsEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/TrainingListing.cs
@@ -8096,9 +8150,11 @@ src/PureCloudPlatform.Client.V2/Model/UnreadMetric.cs
 src/PureCloudPlatform.Client.V2/Model/UnreadStatus.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateActionInput.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateActivityCodeRequest.cs
+src/PureCloudPlatform.Client.V2/Model/UpdateAnalyticsDataRetentionRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateBusinessUnitRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateBusinessUnitSettings.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateCoachingAppointmentRequest.cs
+src/PureCloudPlatform.Client.V2/Model/UpdateContactColumnActionSettings.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateDraftInput.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateManagementUnitRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateNotificationResponse.cs
@@ -8152,6 +8208,7 @@ src/PureCloudPlatform.Client.V2/Model/UserDevice.cs
 src/PureCloudPlatform.Client.V2/Model/UserEndDetailEventTopicUserEndEvent.cs
 src/PureCloudPlatform.Client.V2/Model/UserEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/UserExpands.cs
+src/PureCloudPlatform.Client.V2/Model/UserExternalIdentifier.cs
 src/PureCloudPlatform.Client.V2/Model/UserGreetingEventGreeting.cs
 src/PureCloudPlatform.Client.V2/Model/UserGreetingEventGreetingAudioFile.cs
 src/PureCloudPlatform.Client.V2/Model/UserGreetingEventGreetingOwner.cs
@@ -8307,6 +8364,7 @@ src/PureCloudPlatform.Client.V2/Model/WebChatRoutingTarget.cs
 src/PureCloudPlatform.Client.V2/Model/WebChatSettings.cs
 src/PureCloudPlatform.Client.V2/Model/WebChatTyping.cs
 src/PureCloudPlatform.Client.V2/Model/WebDeployment.cs
+src/PureCloudPlatform.Client.V2/Model/WebDeploymentActiveConfigurationOnDeployment.cs
 src/PureCloudPlatform.Client.V2/Model/WebDeploymentConfigurationVersion.cs
 src/PureCloudPlatform.Client.V2/Model/WebDeploymentConfigurationVersionEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/WebDeploymentConfigurationVersionEntityRef.cs

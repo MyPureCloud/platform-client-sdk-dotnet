@@ -85,12 +85,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Join,
             
             /// <summary>
-            /// Enum Disconnect for "Disconnect"
-            /// </summary>
-            [EnumMember(Value = "Disconnect")]
-            Disconnect,
-            
-            /// <summary>
             /// Enum Offering for "Offering"
             /// </summary>
             [EnumMember(Value = "Offering")]
@@ -113,6 +107,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "OfferingRejected")]
             Offeringrejected,
+            
+            /// <summary>
+            /// Enum Disconnect for "Disconnect"
+            /// </summary>
+            [EnumMember(Value = "Disconnect")]
+            Disconnect,
             
             /// <summary>
             /// Enum Unknown for "Unknown"

@@ -14,6 +14,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWebdeploymentsConfigurationVersionsDraft**](WebDeploymentsApi.html#getwebdeploymentsconfigurationversionsdraft) | **GET** /api/v2/webdeployments/configurations/{configurationId}/versions/draft | Get the configuration draft |
 | [**GetWebdeploymentsConfigurations**](WebDeploymentsApi.html#getwebdeploymentsconfigurations) | **GET** /api/v2/webdeployments/configurations | View configuration drafts |
 | [**GetWebdeploymentsDeployment**](WebDeploymentsApi.html#getwebdeploymentsdeployment) | **GET** /api/v2/webdeployments/deployments/{deploymentId} | Get a deployment |
+| [**GetWebdeploymentsDeploymentConfigurations**](WebDeploymentsApi.html#getwebdeploymentsdeploymentconfigurations) | **GET** /api/v2/webdeployments/deployments/{deploymentId}/configurations | Get active configuration for a given deployment |
 | [**GetWebdeploymentsDeployments**](WebDeploymentsApi.html#getwebdeploymentsdeployments) | **GET** /api/v2/webdeployments/deployments | Get deployments |
 | [**PostWebdeploymentsConfigurationVersionsDraftPublish**](WebDeploymentsApi.html#postwebdeploymentsconfigurationversionsdraftpublish) | **POST** /api/v2/webdeployments/configurations/{configurationId}/versions/draft/publish | Publish the configuration draft and create a new version |
 | [**PostWebdeploymentsConfigurations**](WebDeploymentsApi.html#postwebdeploymentsconfigurations) | **POST** /api/v2/webdeployments/configurations | Create a configuration draft |
@@ -478,6 +479,72 @@ namespace Example
 ### Return type
 
 [**WebDeployment**](WebDeployment.html)
+
+<a name="getwebdeploymentsdeploymentconfigurations"></a>
+
+## [**WebDeploymentActiveConfigurationOnDeployment**](WebDeploymentActiveConfigurationOnDeployment.html) GetWebdeploymentsDeploymentConfigurations (string deploymentId, string type = null)
+
+
+
+Get active configuration for a given deployment
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWebdeploymentsDeploymentConfigurationsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WebDeploymentsApi();
+            var deploymentId = deploymentId_example;  // string | The deployment ID
+            var type = type_example;  // string | Get active configuration on a deployment (optional) 
+
+            try
+            { 
+                // Get active configuration for a given deployment
+                WebDeploymentActiveConfigurationOnDeployment result = apiInstance.GetWebdeploymentsDeploymentConfigurations(deploymentId, type);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WebDeploymentsApi.GetWebdeploymentsDeploymentConfigurations: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **deploymentId** | **string**| The deployment ID |  |
+| **type** | **string**| Get active configuration on a deployment | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**WebDeploymentActiveConfigurationOnDeployment**](WebDeploymentActiveConfigurationOnDeployment.html)
 
 <a name="getwebdeploymentsdeployments"></a>
 

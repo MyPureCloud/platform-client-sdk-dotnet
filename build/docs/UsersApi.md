@@ -67,6 +67,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostAuthorizationSubjectBulkremove**](UsersApi.html#postauthorizationsubjectbulkremove) | **POST** /api/v2/authorization/subjects/{subjectId}/bulkremove | Bulk-remove grants from a subject. |
 | [**PostAuthorizationSubjectBulkreplace**](UsersApi.html#postauthorizationsubjectbulkreplace) | **POST** /api/v2/authorization/subjects/{subjectId}/bulkreplace | Replace subject&#39;s roles and divisions with the exact list supplied in the request. |
 | [**PostAuthorizationSubjectDivisionRole**](UsersApi.html#postauthorizationsubjectdivisionrole) | **POST** /api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId} | Make a grant of a role in a division |
+| [**PostUserExternalid**](UsersApi.html#postuserexternalid) | **POST** /api/v2/users/{userId}/externalid | Create mapping between external identifier and user. Limit 100 per entity. |
 | [**PostUserInvite**](UsersApi.html#postuserinvite) | **POST** /api/v2/users/{userId}/invite | Send an activation email to the user |
 | [**PostUserPassword**](UsersApi.html#postuserpassword) | **POST** /api/v2/users/{userId}/password | Change a users password |
 | [**PostUserRoutinglanguages**](UsersApi.html#postuserroutinglanguages) | **POST** /api/v2/users/{userId}/routinglanguages | Add routing language to user |
@@ -4161,6 +4162,75 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+<a name="postuserexternalid"></a>
+
+## [**List&lt;UserExternalIdentifier&gt;**](UserExternalIdentifier.html) PostUserExternalid (string userId, UserExternalIdentifier body)
+
+
+
+Create mapping between external identifier and user. Limit 100 per entity.
+
+Authority Name and External key are case sensitive.
+
+
+
+Requires ANY permissions: 
+
+* directory:user:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostUserExternalidExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new UsersApi();
+            var userId = userId_example;  // string | User ID
+            var body = new UserExternalIdentifier(); // UserExternalIdentifier | 
+
+            try
+            { 
+                // Create mapping between external identifier and user. Limit 100 per entity.
+                List<UserExternalIdentifier> result = apiInstance.PostUserExternalid(userId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.PostUserExternalid: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+| **body** | [**UserExternalIdentifier**](UserExternalIdentifier.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**List<UserExternalIdentifier>**](UserExternalIdentifier.html)
 
 <a name="postuserinvite"></a>
 

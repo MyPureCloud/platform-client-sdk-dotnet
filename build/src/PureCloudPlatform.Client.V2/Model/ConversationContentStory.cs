@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Story object.
+    /// An ephemeral story.
     /// </summary>
     [DataContract]
     public partial class ConversationContentStory :  IEquatable<ConversationContentStory>

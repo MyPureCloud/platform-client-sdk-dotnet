@@ -103,6 +103,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Authenticated,
             
             /// <summary>
+            /// Enum Bargedparticipantid for "bargedParticipantId"
+            /// </summary>
+            [EnumMember(Value = "bargedParticipantId")]
+            Bargedparticipantid,
+            
+            /// <summary>
             /// Enum Callbacknumber for "callbackNumber"
             /// </summary>
             [EnumMember(Value = "callbackNumber")]

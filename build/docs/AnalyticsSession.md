@@ -19,6 +19,7 @@ title: AnalyticsSession
 | **Ani** | **string** | Automatic Number Identification (caller&#39;s number) | [optional] |
 | **AssignerId** | **string** | ID of the user that manually assigned a conversation | [optional] |
 | **Authenticated** | **bool?** | Flag that indicates that the identity of the customer has been asserted as verified by the provider. | [optional] |
+| **BargedParticipantId** | **string** | The participantId being barged in on (if someone (e.g. an agent) is being barged in on, this would correspond to one of the other participantIds present in the conversation) | [optional] |
 | **CallbackNumbers** | **List&lt;string&gt;** | Callback phone number(s) | [optional] |
 | **CallbackScheduledTime** | **DateTime?** | Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **CallbackUserName** | **string** | The name of the user requesting a call back | [optional] |

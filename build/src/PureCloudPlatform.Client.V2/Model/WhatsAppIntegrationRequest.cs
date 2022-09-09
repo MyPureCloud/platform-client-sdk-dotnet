@@ -29,10 +29,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">The name of the WhatsApp Integration (required).</param>
         /// <param name="SupportedContent">Defines the SupportedContent profile configured for an integration.</param>
-        /// <param name="MessagingSetting">MessagingSetting.</param>
+        /// <param name="MessagingSetting">Defines the message settings to be applied for this integration.</param>
         /// <param name="PhoneNumber">The phone number associated to the whatsApp integration (required).</param>
         /// <param name="WabaCertificate">The waba(WhatsApp Business Manager) certificate associated to the WhatsApp integration phone number (required).</param>
-        public WhatsAppIntegrationRequest(string Name = null, SupportedContentReference SupportedContent = null, MessagingSettingReference MessagingSetting = null, string PhoneNumber = null, string WabaCertificate = null)
+        public WhatsAppIntegrationRequest(string Name = null, SupportedContentReference SupportedContent = null, MessagingSettingRequestReference MessagingSetting = null, string PhoneNumber = null, string WabaCertificate = null)
         {
             this.Name = Name;
             this.SupportedContent = SupportedContent;
@@ -72,10 +72,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets MessagingSetting
+        /// Defines the message settings to be applied for this integration
         /// </summary>
+        /// <value>Defines the message settings to be applied for this integration</value>
         [DataMember(Name="messagingSetting", EmitDefaultValue=false)]
-        public MessagingSettingReference MessagingSetting { get; set; }
+        public MessagingSettingRequestReference MessagingSetting { get; set; }
 
 
 

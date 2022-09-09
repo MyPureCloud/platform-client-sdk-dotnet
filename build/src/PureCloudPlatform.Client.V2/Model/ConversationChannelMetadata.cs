@@ -13,41 +13,19 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Structured template button object.
+    /// Information about the channel.
     /// </summary>
     [DataContract]
-    public partial class ConversationButtonComponent :  IEquatable<ConversationButtonComponent>
+    public partial class ConversationChannelMetadata :  IEquatable<ConversationChannelMetadata>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ConversationButtonComponent" /> class.
+        /// Initializes a new instance of the <see cref="ConversationChannelMetadata" /> class.
         /// </summary>
-        /// <param name="Title">Text to show inside the button..</param>
-        /// <param name="Actions">The button actions..</param>
-        public ConversationButtonComponent(string Title = null, ConversationContentActions Actions = null)
+        public ConversationChannelMetadata()
         {
-            this.Title = Title;
-            this.Actions = Actions;
             
         }
         
-
-
-        /// <summary>
-        /// Text to show inside the button.
-        /// </summary>
-        /// <value>Text to show inside the button.</value>
-        [DataMember(Name="title", EmitDefaultValue=false)]
-        public string Title { get; set; }
-
-
-
-        /// <summary>
-        /// The button actions.
-        /// </summary>
-        /// <value>The button actions.</value>
-        [DataMember(Name="actions", EmitDefaultValue=false)]
-        public ConversationContentActions Actions { get; set; }
-
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -56,10 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ConversationButtonComponent {\n");
+            sb.Append("class ConversationChannelMetadata {\n");
 
-            sb.Append("  Title: ").Append(Title).Append("\n");
-            sb.Append("  Actions: ").Append(Actions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -85,31 +61,21 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ConversationButtonComponent);
+            return this.Equals(obj as ConversationChannelMetadata);
         }
 
         /// <summary>
-        /// Returns true if ConversationButtonComponent instances are equal
+        /// Returns true if ConversationChannelMetadata instances are equal
         /// </summary>
-        /// <param name="other">Instance of ConversationButtonComponent to be compared</param>
+        /// <param name="other">Instance of ConversationChannelMetadata to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ConversationButtonComponent other)
+        public bool Equals(ConversationChannelMetadata other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
                 return false;
 
-            return true &&
-                (
-                    this.Title == other.Title ||
-                    this.Title != null &&
-                    this.Title.Equals(other.Title)
-                ) &&
-                (
-                    this.Actions == other.Actions ||
-                    this.Actions != null &&
-                    this.Actions.Equals(other.Actions)
-                );
+            return true && false;
         }
 
         /// <summary>
@@ -123,12 +89,6 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Title != null)
-                    hash = hash * 59 + this.Title.GetHashCode();
-
-                if (this.Actions != null)
-                    hash = hash * 59 + this.Actions.GetHashCode();
-
                 return hash;
             }
         }

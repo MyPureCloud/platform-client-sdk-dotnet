@@ -38,8 +38,9 @@ This will remove any responses associated with the library.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* responses:library:delete
 
 ### Example
 ```{"language":"csharp"}
@@ -103,8 +104,9 @@ This will remove the response from any libraries associated with it.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* responses:response:delete
 
 ### Example
 ```{"language":"csharp"}
@@ -230,8 +232,9 @@ Gets a list of existing response libraries.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* responses:library:view
 
 ### Example
 ```{"language":"csharp"}
@@ -298,8 +301,9 @@ Get details about an existing response library.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* responses:library:view
 
 ### Example
 ```{"language":"csharp"}
@@ -362,8 +366,9 @@ Get details about an existing response.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* responses:response:view
 
 ### Example
 ```{"language":"csharp"}
@@ -558,8 +563,9 @@ Gets a list of existing responses.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* responses:response:view
 
 ### Example
 ```{"language":"csharp"}
@@ -628,8 +634,9 @@ Create a response library.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* responses:library:add
 
 ### Example
 ```{"language":"csharp"}
@@ -824,8 +831,9 @@ Create a response.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* responses:response:add
 
 ### Example
 ```{"language":"csharp"}
@@ -890,8 +898,9 @@ Query responses
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* responses:response:view
 
 ### Example
 ```{"language":"csharp"}
@@ -956,8 +965,9 @@ Fields that can be updated: name. The most recent version is required for update
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* responses:library:edit
 
 ### Example
 ```{"language":"csharp"}
@@ -1024,8 +1034,9 @@ Fields that can be updated: name, libraries, and texts. The most recent version 
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* responses:response:edit
 
 ### Example
 ```{"language":"csharp"}

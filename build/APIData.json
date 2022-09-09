@@ -318,6 +318,13 @@
     "return": "DataAvailabilityResponse",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetAnalyticsConversationsDetailsJobsAvailabilityExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n\n            try\n            { \n                // Lookup the datalake availability date and time\n                DataAvailabilityResponse result = apiInstance.GetAnalyticsConversationsDetailsJobsAvailability();\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.GetAnalyticsConversationsDetailsJobsAvailability: \" + e.Message );\n            }\n        }\n    }\n}"
   },
+  "getanalyticsdataretentionsettings": {
+    "operationId": "getanalyticsdataretentionsettings",
+    "functionName": "GetAnalyticsDataretentionSettings",
+    "signature": "GetAnalyticsDataretentionSettings()",
+    "return": "AnalyticsDataRetentionResponse",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetAnalyticsDataretentionSettingsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new AnalyticsApi();\n\n            try\n            { \n                // Get analytics data retention setting\n                AnalyticsDataRetentionResponse result = apiInstance.GetAnalyticsDataretentionSettings();\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Analytics.GetAnalyticsDataretentionSettings: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
   "getanalyticsreportingexports": {
     "operationId": "getanalyticsreportingexports",
     "functionName": "GetAnalyticsReportingExports",
@@ -841,6 +848,20 @@
     ],
     "return": "UserObservationQueryResponse",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostAnalyticsUsersObservationsQueryExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new UsersApi();\n            var body = new UserObservationQuery(); // UserObservationQuery | query\n\n            try\n            { \n                // Query for user observations\n                UserObservationQueryResponse result = apiInstance.PostAnalyticsUsersObservationsQuery(body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Users.PostAnalyticsUsersObservationsQuery: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "putanalyticsdataretentionsettings": {
+    "operationId": "putanalyticsdataretentionsettings",
+    "functionName": "PutAnalyticsDataretentionSettings",
+    "signature": "PutAnalyticsDataretentionSettings(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "UpdateAnalyticsDataRetentionRequest",
+        "required": "true"
+      }
+    ],
+    "return": "AnalyticsDataRetentionResponse",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PutAnalyticsDataretentionSettingsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new AnalyticsApi();\n            var body = new UpdateAnalyticsDataRetentionRequest(); // UpdateAnalyticsDataRetentionRequest | retentionDays\n\n            try\n            { \n                // Update analytics data retention setting\n                AnalyticsDataRetentionResponse result = apiInstance.PutAnalyticsDataretentionSettings(body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Analytics.PutAnalyticsDataretentionSettings: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "putanalyticsreportingschedule": {
     "operationId": "putanalyticsreportingschedule",
@@ -14701,7 +14722,7 @@
   "getknowledgeknowledgebasedocuments": {
     "operationId": "getknowledgeknowledgebasedocuments",
     "functionName": "GetKnowledgeKnowledgebaseDocuments",
-    "signature": "GetKnowledgeKnowledgebaseDocuments(knowledgeBaseId, before, after, pageSize, interval, categoryId, includeSubcategories, includeDrafts, labelIds, expand)",
+    "signature": "GetKnowledgeKnowledgebaseDocuments(knowledgeBaseId, before, after, pageSize, interval, documentId, categoryId, includeSubcategories, includeDrafts, labelIds, expand)",
     "parameters": [
       {
         "name": "knowledgeBaseId",
@@ -14726,6 +14747,11 @@
       {
         "name": "interval",
         "type": "string",
+        "required": "false"
+      },
+      {
+        "name": "documentId",
+        "type": "List<string>",
         "required": "false"
       },
       {
@@ -14755,7 +14781,7 @@
       }
     ],
     "return": "KnowledgeDocumentResponseListing",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetKnowledgeKnowledgebaseDocumentsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new KnowledgeApi();\n            var knowledgeBaseId = \"knowledgeBaseId_example\";  // string | Knowledge base ID\n            var before = \"before_example\";  // string | The cursor that points to the start of the set of entities that has been returned. (optional) \n            var after = \"after_example\";  // string | The cursor that points to the end of the set of entities that has been returned. (optional) \n            var pageSize = \"pageSize_example\";  // string | Number of entities to return. Maximum of 200. (optional) \n            var interval = \"interval_example\";  // string | Retrieves the documents modified in specified date and time range. If the after and before cursor parameters are within this interval, it would return valid data, otherwise it throws an error.The dates in the interval are represented in ISO-8601 format: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ (optional) \n            var categoryId = new List<string>(); // List<string> | If specified, retrieves documents associated with category ids, comma separated values expected. (optional) \n            var includeSubcategories = true;  // bool? | Works along with 'categoryId' query parameter. If specified, retrieves documents associated with category ids and its children categories. (optional) \n            var includeDrafts = true;  // bool? | If includeDrafts is true, Documents in the draft state are also returned in the response. (optional) \n            var labelIds = new List<string>(); // List<string> | If specified, retrieves documents associated with label ids, comma separated values expected. (optional) \n            var expand = new List<string>(); // List<string> | The specified entity attributes will be filled. Comma separated values expected. (optional) \n\n            try\n            { \n                // Get documents.\n                KnowledgeDocumentResponseListing result = apiInstance.GetKnowledgeKnowledgebaseDocuments(knowledgeBaseId, before, after, pageSize, interval, categoryId, includeSubcategories, includeDrafts, labelIds, expand);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Knowledge.GetKnowledgeKnowledgebaseDocuments: \" + e.Message );\n            }\n        }\n    }\n}"
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetKnowledgeKnowledgebaseDocumentsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new KnowledgeApi();\n            var knowledgeBaseId = \"knowledgeBaseId_example\";  // string | Knowledge base ID\n            var before = \"before_example\";  // string | The cursor that points to the start of the set of entities that has been returned. (optional) \n            var after = \"after_example\";  // string | The cursor that points to the end of the set of entities that has been returned. (optional) \n            var pageSize = \"pageSize_example\";  // string | Number of entities to return. Maximum of 200. (optional) \n            var interval = \"interval_example\";  // string | Retrieves the documents modified in specified date and time range. If the after and before cursor parameters are within this interval, it would return valid data, otherwise it throws an error.The dates in the interval are represented in ISO-8601 format: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ (optional) \n            var documentId = new List<string>(); // List<string> | Retrieves the specified documents, comma separated values expected. (optional) \n            var categoryId = new List<string>(); // List<string> | If specified, retrieves documents associated with category ids, comma separated values expected. (optional) \n            var includeSubcategories = true;  // bool? | Works along with 'categoryId' query parameter. If specified, retrieves documents associated with category ids and its children categories. (optional) \n            var includeDrafts = true;  // bool? | If includeDrafts is true, Documents in the draft state are also returned in the response. (optional) \n            var labelIds = new List<string>(); // List<string> | If specified, retrieves documents associated with label ids, comma separated values expected. (optional) \n            var expand = new List<string>(); // List<string> | The specified entity attributes will be filled. Comma separated values expected. (optional) \n\n            try\n            { \n                // Get documents.\n                KnowledgeDocumentResponseListing result = apiInstance.GetKnowledgeKnowledgebaseDocuments(knowledgeBaseId, before, after, pageSize, interval, documentId, categoryId, includeSubcategories, includeDrafts, labelIds, expand);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Knowledge.GetKnowledgeKnowledgebaseDocuments: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "getknowledgeknowledgebaseexportjob": {
     "operationId": "getknowledgeknowledgebaseexportjob",
@@ -19036,6 +19062,19 @@
     ],
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class DeleteOutboundContactlistsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OutboundApi();\n            var id = new List<string>(); // List<string> | contact list id(s) to delete\n\n            try\n            { \n                // Delete multiple contact lists.\n                apiInstance.DeleteOutboundContactlists(id);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Outbound.DeleteOutboundContactlists: \" + e.Message );\n            }\n        }\n    }\n}"
   },
+  "deleteoutbounddigitalruleset": {
+    "operationId": "deleteoutbounddigitalruleset",
+    "functionName": "DeleteOutboundDigitalruleset",
+    "signature": "DeleteOutboundDigitalruleset(digitalRuleSetId)",
+    "parameters": [
+      {
+        "name": "digitalRuleSetId",
+        "type": "string",
+        "required": "true"
+      }
+    ],
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class DeleteOutboundDigitalrulesetExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OutboundApi();\n            var digitalRuleSetId = \"digitalRuleSetId_example\";  // string | The Digital Rule Set ID\n\n            try\n            { \n                // Delete an Outbound Digital Rule Set\n                apiInstance.DeleteOutboundDigitalruleset(digitalRuleSetId);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Outbound.DeleteOutboundDigitalruleset: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
   "deleteoutbounddnclist": {
     "operationId": "deleteoutbounddnclist",
     "functionName": "DeleteOutboundDnclist",
@@ -19985,6 +20024,59 @@
     "return": "ContactListDivisionViewListing",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetOutboundContactlistsDivisionviewsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OutboundApi();\n            var includeImportStatus = true;  // bool? | Include import status (optional)  (default to false)\n            var includeSize = true;  // bool? | Include size (optional)  (default to false)\n            var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)\n            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)\n            var filterType = \"filterType_example\";  // string | Filter type (optional)  (default to Prefix)\n            var name = \"name_example\";  // string | Name (optional) \n            var id = new List<string>(); // List<string> | id (optional) \n            var sortBy = \"sortBy_example\";  // string | Sort by (optional) \n            var sortOrder = \"sortOrder_example\";  // string | Sort order (optional)  (default to a)\n\n            try\n            { \n                // Query a list of simplified contact list objects.\n                ContactListDivisionViewListing result = apiInstance.GetOutboundContactlistsDivisionviews(includeImportStatus, includeSize, pageSize, pageNumber, filterType, name, id, sortBy, sortOrder);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Outbound.GetOutboundContactlistsDivisionviews: \" + e.Message );\n            }\n        }\n    }\n}"
   },
+  "getoutbounddigitalruleset": {
+    "operationId": "getoutbounddigitalruleset",
+    "functionName": "GetOutboundDigitalruleset",
+    "signature": "GetOutboundDigitalruleset(digitalRuleSetId)",
+    "parameters": [
+      {
+        "name": "digitalRuleSetId",
+        "type": "string",
+        "required": "true"
+      }
+    ],
+    "return": "DigitalRuleSet",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetOutboundDigitalrulesetExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OutboundApi();\n            var digitalRuleSetId = \"digitalRuleSetId_example\";  // string | The Digital Rule Set ID\n\n            try\n            { \n                // Get an Outbound Digital Rule Set\n                DigitalRuleSet result = apiInstance.GetOutboundDigitalruleset(digitalRuleSetId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Outbound.GetOutboundDigitalruleset: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getoutbounddigitalrulesets": {
+    "operationId": "getoutbounddigitalrulesets",
+    "functionName": "GetOutboundDigitalrulesets",
+    "signature": "GetOutboundDigitalrulesets(pageSize, pageNumber, sortBy, sortOrder, name, id)",
+    "parameters": [
+      {
+        "name": "pageSize",
+        "type": "int?",
+        "required": "false"
+      },
+      {
+        "name": "pageNumber",
+        "type": "int?",
+        "required": "false"
+      },
+      {
+        "name": "sortBy",
+        "type": "string",
+        "required": "false"
+      },
+      {
+        "name": "sortOrder",
+        "type": "string",
+        "required": "false"
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "required": "false"
+      },
+      {
+        "name": "id",
+        "type": "List<string>",
+        "required": "false"
+      }
+    ],
+    "return": "DigitalRuleSetEntityListing",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetOutboundDigitalrulesetsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OutboundApi();\n            var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)\n            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)\n            var sortBy = \"sortBy_example\";  // string | The field to sort by (optional)  (default to name)\n            var sortOrder = \"sortOrder_example\";  // string | The direction to sort (optional)  (default to ascending)\n            var name = \"name_example\";  // string | Name (optional) \n            var id = new List<string>(); // List<string> | A list of digital rule set ids to bulk fetch (optional) \n\n            try\n            { \n                // Query a list of Outbound Digital Rule Sets\n                DigitalRuleSetEntityListing result = apiInstance.GetOutboundDigitalrulesets(pageSize, pageNumber, sortBy, sortOrder, name, id);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Outbound.GetOutboundDigitalrulesets: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
   "getoutbounddnclist": {
     "operationId": "getoutbounddnclist",
     "functionName": "GetOutboundDnclist",
@@ -20910,6 +21002,20 @@
     ],
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostOutboundConversationDncExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OutboundApi();\n            var conversationId = \"conversationId_example\";  // string | Conversation ID\n\n            try\n            { \n                // Add phone numbers to a Dialer DNC list.\n                apiInstance.PostOutboundConversationDnc(conversationId);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Outbound.PostOutboundConversationDnc: \" + e.Message );\n            }\n        }\n    }\n}"
   },
+  "postoutbounddigitalrulesets": {
+    "operationId": "postoutbounddigitalrulesets",
+    "functionName": "PostOutboundDigitalrulesets",
+    "signature": "PostOutboundDigitalrulesets(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "DigitalRuleSet",
+        "required": "true"
+      }
+    ],
+    "return": "DigitalRuleSet",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostOutboundDigitalrulesetsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OutboundApi();\n            var body = new DigitalRuleSet(); // DigitalRuleSet | Digital Rule Set\n\n            try\n            { \n                // Create an Outbound Digital Rule Set\n                DigitalRuleSet result = apiInstance.PostOutboundDigitalrulesets(body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Outbound.PostOutboundDigitalrulesets: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
   "postoutbounddnclistexport": {
     "operationId": "postoutbounddnclistexport",
     "functionName": "PostOutboundDnclistExport",
@@ -21197,6 +21303,25 @@
     ],
     "return": "ContactListFilter",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PutOutboundContactlistfilterExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OutboundApi();\n            var contactListFilterId = \"contactListFilterId_example\";  // string | Contact List Filter ID\n            var body = new ContactListFilter(); // ContactListFilter | ContactListFilter\n\n            try\n            { \n                // Update Contact List Filter\n                ContactListFilter result = apiInstance.PutOutboundContactlistfilter(contactListFilterId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Outbound.PutOutboundContactlistfilter: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "putoutbounddigitalruleset": {
+    "operationId": "putoutbounddigitalruleset",
+    "functionName": "PutOutboundDigitalruleset",
+    "signature": "PutOutboundDigitalruleset(digitalRuleSetId, body)",
+    "parameters": [
+      {
+        "name": "digitalRuleSetId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "DigitalRuleSet",
+        "required": "true"
+      }
+    ],
+    "return": "DigitalRuleSet",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PutOutboundDigitalrulesetExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OutboundApi();\n            var digitalRuleSetId = \"digitalRuleSetId_example\";  // string | The Digital Rule Set ID\n            var body = new DigitalRuleSet(); // DigitalRuleSet | Digital Rule Set\n\n            try\n            { \n                // Update an Outbound Digital Rule Set\n                DigitalRuleSet result = apiInstance.PutOutboundDigitalruleset(digitalRuleSetId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Outbound.PutOutboundDigitalruleset: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "putoutbounddnclist": {
     "operationId": "putoutbounddnclist",
@@ -22118,7 +22243,7 @@
       }
     ],
     "return": "EvaluationFormEntityListing",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetQualityFormsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new QualityApi();\n            var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)\n            var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)\n            var sortBy = \"sortBy_example\";  // string | variable name requested to sort by (optional) \n            var nextPage = \"nextPage_example\";  // string | next page token (optional) \n            var previousPage = \"previousPage_example\";  // string | Previous page token (optional) \n            var expand = \"expand_example\";  // string | Expand (optional) \n            var name = \"name_example\";  // string | Name (optional) \n            var sortOrder = \"sortOrder_example\";  // string | Order to sort results, either asc or desc (optional) \n\n            try\n            { \n                // Get the list of evaluation forms\n                EvaluationFormEntityListing result = apiInstance.GetQualityForms(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Quality.GetQualityForms: \" + e.Message );\n            }\n        }\n    }\n}"
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetQualityFormsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new QualityApi();\n            var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)\n            var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)\n            var sortBy = \"sortBy_example\";  // string | variable name requested to sort by (optional) \n            var nextPage = \"nextPage_example\";  // string | next page token (optional) \n            var previousPage = \"previousPage_example\";  // string | Previous page token (optional) \n            var expand = \"expand_example\";  // string | If 'expand=publishHistory', then each unpublished evaluation form includes a listing of its published versions (optional) \n            var name = \"name_example\";  // string | Name (optional) \n            var sortOrder = \"sortOrder_example\";  // string | Order to sort results, either asc or desc (optional) \n\n            try\n            { \n                // Get the list of evaluation forms\n                EvaluationFormEntityListing result = apiInstance.GetQualityForms(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Quality.GetQualityForms: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "getqualityformsevaluation": {
     "operationId": "getqualityformsevaluation",
@@ -22210,7 +22335,7 @@
       }
     ],
     "return": "EvaluationFormEntityListing",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetQualityFormsEvaluationsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new QualityApi();\n            var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)\n            var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)\n            var sortBy = \"sortBy_example\";  // string | variable name requested to sort by (optional) \n            var nextPage = \"nextPage_example\";  // string | next page token (optional) \n            var previousPage = \"previousPage_example\";  // string | Previous page token (optional) \n            var expand = \"expand_example\";  // string | Expand (optional) \n            var name = \"name_example\";  // string | Name (optional) \n            var sortOrder = \"sortOrder_example\";  // string | Order to sort results, either asc or desc (optional) \n\n            try\n            { \n                // Get the list of evaluation forms\n                EvaluationFormEntityListing result = apiInstance.GetQualityFormsEvaluations(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Quality.GetQualityFormsEvaluations: \" + e.Message );\n            }\n        }\n    }\n}"
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetQualityFormsEvaluationsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new QualityApi();\n            var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)\n            var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)\n            var sortBy = \"sortBy_example\";  // string | variable name requested to sort by (optional) \n            var nextPage = \"nextPage_example\";  // string | next page token (optional) \n            var previousPage = \"previousPage_example\";  // string | Previous page token (optional) \n            var expand = \"expand_example\";  // string | If 'expand=publishHistory', then each unpublished evaluation form includes a listing of its published versions (optional) \n            var name = \"name_example\";  // string | Name (optional) \n            var sortOrder = \"sortOrder_example\";  // string | Order to sort results, either asc or desc (optional) \n\n            try\n            { \n                // Get the list of evaluation forms\n                EvaluationFormEntityListing result = apiInstance.GetQualityFormsEvaluations(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Quality.GetQualityFormsEvaluations: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "getqualityformsevaluationsbulkcontexts": {
     "operationId": "getqualityformsevaluationsbulkcontexts",
@@ -22311,7 +22436,7 @@
       }
     ],
     "return": "SurveyFormEntityListing",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetQualityFormsSurveysExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new QualityApi();\n            var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)\n            var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)\n            var sortBy = \"sortBy_example\";  // string | variable name requested to sort by (optional) \n            var nextPage = \"nextPage_example\";  // string | next page token (optional) \n            var previousPage = \"previousPage_example\";  // string | Previous page token (optional) \n            var expand = \"expand_example\";  // string | Expand (optional) \n            var name = \"name_example\";  // string | Name (optional) \n            var sortOrder = \"sortOrder_example\";  // string | Order to sort results, either asc or desc (optional) \n\n            try\n            { \n                // Get the list of survey forms\n                SurveyFormEntityListing result = apiInstance.GetQualityFormsSurveys(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Quality.GetQualityFormsSurveys: \" + e.Message );\n            }\n        }\n    }\n}"
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetQualityFormsSurveysExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new QualityApi();\n            var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)\n            var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)\n            var sortBy = \"sortBy_example\";  // string | variable name requested to sort by (optional) \n            var nextPage = \"nextPage_example\";  // string | next page token (optional) \n            var previousPage = \"previousPage_example\";  // string | Previous page token (optional) \n            var expand = \"expand_example\";  // string | If 'expand=publishHistory', then each unpublished evaluation form includes a listing of its published versions (optional) \n            var name = \"name_example\";  // string | Name (optional) \n            var sortOrder = \"sortOrder_example\";  // string | Order to sort results, either asc or desc (optional) \n\n            try\n            { \n                // Get the list of survey forms\n                SurveyFormEntityListing result = apiInstance.GetQualityFormsSurveys(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Quality.GetQualityFormsSurveys: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "getqualityformssurveysbulk": {
     "operationId": "getqualityformssurveysbulk",
@@ -23560,6 +23685,30 @@
     ],
     "return": "RecordingSettings",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetRecordingSettingsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new RecordingApi();\n            var createDefault = true;  // bool? | If no settings are found, a new one is created with default values (optional)  (default to false)\n\n            try\n            { \n                // Get the Recording Settings for the Organization\n                RecordingSettings result = apiInstance.GetRecordingSettings(createDefault);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Recording.GetRecordingSettings: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getrecordingsretentionquery": {
+    "operationId": "getrecordingsretentionquery",
+    "functionName": "GetRecordingsRetentionQuery",
+    "signature": "GetRecordingsRetentionQuery(retentionThresholdDays, cursor, pageSize)",
+    "parameters": [
+      {
+        "name": "retentionThresholdDays",
+        "type": "int?",
+        "required": "true"
+      },
+      {
+        "name": "cursor",
+        "type": "string",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "int?",
+        "required": "false"
+      }
+    ],
+    "return": "RecordingRetentionCursorEntityListing",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetRecordingsRetentionQueryExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new RecordingApi();\n            var retentionThresholdDays = 56;  // int? | Fetch retention data for recordings retained for more days than the provided value.\n            var cursor = \"cursor_example\";  // string | Indicates where to resume query results (not required for first page) (optional) \n            var pageSize = 56;  // int? | Page size. Maximum is 500. (optional)  (default to 25)\n\n            try\n            { \n                // Query for recording retention data\n                RecordingRetentionCursorEntityListing result = apiInstance.GetRecordingsRetentionQuery(retentionThresholdDays, cursor, pageSize);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Recording.GetRecordingsRetentionQuery: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "getrecordingsscreensessions": {
     "operationId": "getrecordingsscreensessions",
@@ -31953,6 +32102,25 @@
     "return": "UserEntityListing",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PatchUsersBulkExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new UsersApi();\n            var body = new List<PatchUser>(); // List<PatchUser> | Users\n\n            try\n            { \n                // Update bulk acd autoanswer on users\n                UserEntityListing result = apiInstance.PatchUsersBulk(body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Users.PatchUsersBulk: \" + e.Message );\n            }\n        }\n    }\n}"
   },
+  "postuserexternalid": {
+    "operationId": "postuserexternalid",
+    "functionName": "PostUserExternalid",
+    "signature": "PostUserExternalid(userId, body)",
+    "parameters": [
+      {
+        "name": "userId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "UserExternalIdentifier",
+        "required": "true"
+      }
+    ],
+    "return": "List<UserExternalIdentifier>",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostUserExternalidExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new UsersApi();\n            var userId = \"userId_example\";  // string | User ID\n            var body = new UserExternalIdentifier(); // UserExternalIdentifier | \n\n            try\n            { \n                // Create mapping between external identifier and user. Limit 100 per entity.\n                List<UserExternalIdentifier> result = apiInstance.PostUserExternalid(userId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Users.PostUserExternalid: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
   "postuserinvite": {
     "operationId": "postuserinvite",
     "functionName": "PostUserInvite",
@@ -32985,6 +33153,25 @@
     ],
     "return": "WebDeployment",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetWebdeploymentsDeploymentExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new WebDeploymentsApi();\n            var deploymentId = \"deploymentId_example\";  // string | The deployment ID\n\n            try\n            { \n                // Get a deployment\n                WebDeployment result = apiInstance.GetWebdeploymentsDeployment(deploymentId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WebDeployments.GetWebdeploymentsDeployment: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getwebdeploymentsdeploymentconfigurations": {
+    "operationId": "getwebdeploymentsdeploymentconfigurations",
+    "functionName": "GetWebdeploymentsDeploymentConfigurations",
+    "signature": "GetWebdeploymentsDeploymentConfigurations(deploymentId, type)",
+    "parameters": [
+      {
+        "name": "deploymentId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "type",
+        "type": "string",
+        "required": "false"
+      }
+    ],
+    "return": "WebDeploymentActiveConfigurationOnDeployment",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetWebdeploymentsDeploymentConfigurationsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new WebDeploymentsApi();\n            var deploymentId = \"deploymentId_example\";  // string | The deployment ID\n            var type = \"type_example\";  // string | Get active configuration on a deployment (optional) \n\n            try\n            { \n                // Get active configuration for a given deployment\n                WebDeploymentActiveConfigurationOnDeployment result = apiInstance.GetWebdeploymentsDeploymentConfigurations(deploymentId, type);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WebDeployments.GetWebdeploymentsDeploymentConfigurations: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "getwebdeploymentsdeployments": {
     "operationId": "getwebdeploymentsdeployments",

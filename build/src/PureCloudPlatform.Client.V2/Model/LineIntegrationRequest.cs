@@ -29,12 +29,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">The name of the LINE Integration (required).</param>
         /// <param name="SupportedContent">Defines the SupportedContent profile configured for an integration.</param>
-        /// <param name="MessagingSetting">MessagingSetting.</param>
+        /// <param name="MessagingSetting">Defines the message settings to be applied for this integration.</param>
         /// <param name="ChannelId">The Channel Id from LINE messenger. New Official LINE account: To create a new official account, LINE requires a Webhook URL. It can be created without specifying Channel Id & Channel Secret. Once the Official account is created by LINE, use the update LINE Integration API to update Channel Id and Channel Secret.  All other accounts: Channel Id is mandatory. (NOTE: ChannelId can only be updated if the integration is set to inactive).</param>
         /// <param name="ChannelSecret">The Channel Secret from LINE messenger. New Official LINE account: To create a new official account, LINE requires a Webhook URL. It can be created without specifying Channel Id & Channel Secret. Once the Official account is created by LINE, use the update LINE Integration API to update Channel Id and Channel Secret.  All other accounts: Channel Secret is mandatory. (NOTE: ChannelSecret can only be updated if the integration is set to inactive).</param>
         /// <param name="SwitcherSecret">The Switcher Secret from LINE messenger. Some line official accounts are switcher functionality enabled. If the LINE account used for this integration is switcher enabled, then switcher secret is a required field. This secret can be found in your create documentation provided by LINE.</param>
         /// <param name="ServiceCode">The Service Code from LINE messenger. Only applicable to LINE Enterprise accounts. This service code can be found in your create documentation provided by LINE.</param>
-        public LineIntegrationRequest(string Name = null, SupportedContentReference SupportedContent = null, MessagingSettingReference MessagingSetting = null, string ChannelId = null, string ChannelSecret = null, string SwitcherSecret = null, string ServiceCode = null)
+        public LineIntegrationRequest(string Name = null, SupportedContentReference SupportedContent = null, MessagingSettingRequestReference MessagingSetting = null, string ChannelId = null, string ChannelSecret = null, string SwitcherSecret = null, string ServiceCode = null)
         {
             this.Name = Name;
             this.SupportedContent = SupportedContent;
@@ -76,10 +76,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets MessagingSetting
+        /// Defines the message settings to be applied for this integration
         /// </summary>
+        /// <value>Defines the message settings to be applied for this integration</value>
         [DataMember(Name="messagingSetting", EmitDefaultValue=false)]
-        public MessagingSettingReference MessagingSetting { get; set; }
+        public MessagingSettingRequestReference MessagingSetting { get; set; }
 
 
 

@@ -203,7 +203,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Type">Message type. (required).</param>
         /// <param name="Text">Message text..</param>
-        /// <param name="Content">List of content elements.</param>
+        /// <param name="Content">List of content elements..</param>
         /// <param name="Events">List of event elements..</param>
         /// <param name="OriginatingEntity">Specifies if this message was sent by a human agent or bot. The platform may use this to apply appropriate provider policies..</param>
         /// <param name="Metadata">Additional metadata about this message..</param>
@@ -250,9 +250,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// List of content elements
+        /// List of content elements.
         /// </summary>
-        /// <value>List of content elements</value>
+        /// <value>List of content elements.</value>
         [DataMember(Name="content", EmitDefaultValue=false)]
         public List<ConversationMessageContent> Content { get; set; }
 

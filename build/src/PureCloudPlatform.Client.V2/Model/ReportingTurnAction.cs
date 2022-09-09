@@ -255,6 +255,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Finduserpromptaction,
             
             /// <summary>
+            /// Enum Transferpurematchaction for "TransferPureMatchAction"
+            /// </summary>
+            [EnumMember(Value = "TransferPureMatchAction")]
+            Transferpurematchaction,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]

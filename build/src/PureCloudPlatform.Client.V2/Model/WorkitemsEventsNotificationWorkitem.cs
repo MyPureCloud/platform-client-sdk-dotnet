@@ -19,6 +19,50 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class WorkitemsEventsNotificationWorkitem :  IEquatable<WorkitemsEventsNotificationWorkitem>
     {
         /// <summary>
+        /// Gets or Sets StatusCategory
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum StatusCategoryEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum Open for "Open"
+            /// </summary>
+            [EnumMember(Value = "Open")]
+            Open,
+            
+            /// <summary>
+            /// Enum Inprogress for "InProgress"
+            /// </summary>
+            [EnumMember(Value = "InProgress")]
+            Inprogress,
+            
+            /// <summary>
+            /// Enum Waiting for "Waiting"
+            /// </summary>
+            [EnumMember(Value = "Waiting")]
+            Waiting,
+            
+            /// <summary>
+            /// Enum Closed for "Closed"
+            /// </summary>
+            [EnumMember(Value = "Closed")]
+            Closed
+        }
+        /// <summary>
         /// Gets or Sets Operation
         /// </summary>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
@@ -227,6 +271,11 @@ namespace PureCloudPlatform.Client.V2.Model
             Acdcancelled
         }
         /// <summary>
+        /// Gets or Sets StatusCategory
+        /// </summary>
+        [DataMember(Name="statusCategory", EmitDefaultValue=false)]
+        public StatusCategoryEnum? StatusCategory { get; set; }
+        /// <summary>
         /// Gets or Sets Operation
         /// </summary>
         [DataMember(Name="operation", EmitDefaultValue=false)]
@@ -252,6 +301,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DurationSeconds">DurationSeconds.</param>
         /// <param name="Ttl">Ttl.</param>
         /// <param name="StatusId">StatusId.</param>
+        /// <param name="StatusCategory">StatusCategory.</param>
         /// <param name="DateClosed">DateClosed.</param>
         /// <param name="WorkbinId">WorkbinId.</param>
         /// <param name="ReporterId">ReporterId.</param>
@@ -265,8 +315,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AssignmentState">AssignmentState.</param>
         /// <param name="AssignmentId">AssignmentId.</param>
         /// <param name="AlertTimeoutSeconds">AlertTimeoutSeconds.</param>
+        /// <param name="QueueId">QueueId.</param>
         /// <param name="CustomFields">CustomFields.</param>
-        public WorkitemsEventsNotificationWorkitem(string Id = null, string Name = null, string TypeId = null, string Description = null, string LanguageId = null, int? Priority = null, string DateCreated = null, string DateModified = null, string DateDue = null, string DateExpires = null, int? DurationSeconds = null, int? Ttl = null, string StatusId = null, string DateClosed = null, string WorkbinId = null, string ReporterId = null, string AssigneeId = null, string ExternalContactId = null, string ExternalTag = null, string WrapupId = null, string ModifiedBy = null, OperationEnum? Operation = null, List<WorkitemsEventsNotificationDelta> Changes = null, AssignmentStateEnum? AssignmentState = null, string AssignmentId = null, int? AlertTimeoutSeconds = null, Dictionary<string, WorkitemsEventsNotificationCustomAttribute> CustomFields = null)
+        public WorkitemsEventsNotificationWorkitem(string Id = null, string Name = null, string TypeId = null, string Description = null, string LanguageId = null, int? Priority = null, string DateCreated = null, string DateModified = null, string DateDue = null, string DateExpires = null, int? DurationSeconds = null, int? Ttl = null, string StatusId = null, StatusCategoryEnum? StatusCategory = null, string DateClosed = null, string WorkbinId = null, string ReporterId = null, string AssigneeId = null, string ExternalContactId = null, string ExternalTag = null, string WrapupId = null, string ModifiedBy = null, OperationEnum? Operation = null, List<WorkitemsEventsNotificationDelta> Changes = null, AssignmentStateEnum? AssignmentState = null, string AssignmentId = null, int? AlertTimeoutSeconds = null, string QueueId = null, Dictionary<string, WorkitemsEventsNotificationCustomAttribute> CustomFields = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -281,6 +332,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DurationSeconds = DurationSeconds;
             this.Ttl = Ttl;
             this.StatusId = StatusId;
+            this.StatusCategory = StatusCategory;
             this.DateClosed = DateClosed;
             this.WorkbinId = WorkbinId;
             this.ReporterId = ReporterId;
@@ -294,6 +346,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AssignmentState = AssignmentState;
             this.AssignmentId = AssignmentId;
             this.AlertTimeoutSeconds = AlertTimeoutSeconds;
+            this.QueueId = QueueId;
             this.CustomFields = CustomFields;
             
         }
@@ -404,6 +457,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
         /// <summary>
         /// Gets or Sets DateClosed
         /// </summary>
@@ -497,6 +552,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets QueueId
+        /// </summary>
+        [DataMember(Name="queueId", EmitDefaultValue=false)]
+        public string QueueId { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets CustomFields
         /// </summary>
         [DataMember(Name="customFields", EmitDefaultValue=false)]
@@ -525,6 +588,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DurationSeconds: ").Append(DurationSeconds).Append("\n");
             sb.Append("  Ttl: ").Append(Ttl).Append("\n");
             sb.Append("  StatusId: ").Append(StatusId).Append("\n");
+            sb.Append("  StatusCategory: ").Append(StatusCategory).Append("\n");
             sb.Append("  DateClosed: ").Append(DateClosed).Append("\n");
             sb.Append("  WorkbinId: ").Append(WorkbinId).Append("\n");
             sb.Append("  ReporterId: ").Append(ReporterId).Append("\n");
@@ -538,6 +602,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AssignmentState: ").Append(AssignmentState).Append("\n");
             sb.Append("  AssignmentId: ").Append(AssignmentId).Append("\n");
             sb.Append("  AlertTimeoutSeconds: ").Append(AlertTimeoutSeconds).Append("\n");
+            sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  CustomFields: ").Append(CustomFields).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -645,6 +710,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.StatusId.Equals(other.StatusId)
                 ) &&
                 (
+                    this.StatusCategory == other.StatusCategory ||
+                    this.StatusCategory != null &&
+                    this.StatusCategory.Equals(other.StatusCategory)
+                ) &&
+                (
                     this.DateClosed == other.DateClosed ||
                     this.DateClosed != null &&
                     this.DateClosed.Equals(other.DateClosed)
@@ -710,6 +780,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AlertTimeoutSeconds.Equals(other.AlertTimeoutSeconds)
                 ) &&
                 (
+                    this.QueueId == other.QueueId ||
+                    this.QueueId != null &&
+                    this.QueueId.Equals(other.QueueId)
+                ) &&
+                (
                     this.CustomFields == other.CustomFields ||
                     this.CustomFields != null &&
                     this.CustomFields.SequenceEqual(other.CustomFields)
@@ -766,6 +841,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.StatusId != null)
                     hash = hash * 59 + this.StatusId.GetHashCode();
 
+                if (this.StatusCategory != null)
+                    hash = hash * 59 + this.StatusCategory.GetHashCode();
+
                 if (this.DateClosed != null)
                     hash = hash * 59 + this.DateClosed.GetHashCode();
 
@@ -804,6 +882,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AlertTimeoutSeconds != null)
                     hash = hash * 59 + this.AlertTimeoutSeconds.GetHashCode();
+
+                if (this.QueueId != null)
+                    hash = hash * 59 + this.QueueId.GetHashCode();
 
                 if (this.CustomFields != null)
                     hash = hash * 59 + this.CustomFields.GetHashCode();

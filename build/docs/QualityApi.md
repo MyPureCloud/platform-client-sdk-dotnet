@@ -1264,7 +1264,7 @@ namespace Example
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
             var nextPage = nextPage_example;  // string | next page token (optional) 
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
-            var expand = expand_example;  // string | Expand (optional) 
+            var expand = expand_example;  // string | If 'expand=publishHistory', then each unpublished evaluation form includes a listing of its published versions (optional) 
             var name = name_example;  // string | Name (optional) 
             var sortOrder = sortOrder_example;  // string | Order to sort results, either asc or desc (optional) 
 
@@ -1293,7 +1293,7 @@ namespace Example
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
-| **expand** | **string**| Expand | [optional]  |
+| **expand** | **string**| If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions | [optional] <br />**Values**: publishHistory |
 | **name** | **string**| Name | [optional]  |
 | **sortOrder** | **string**| Order to sort results, either asc or desc | [optional]  |
 {: class="table table-striped"}
@@ -1479,7 +1479,7 @@ namespace Example
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
             var nextPage = nextPage_example;  // string | next page token (optional) 
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
-            var expand = expand_example;  // string | Expand (optional) 
+            var expand = expand_example;  // string | If 'expand=publishHistory', then each unpublished evaluation form includes a listing of its published versions (optional) 
             var name = name_example;  // string | Name (optional) 
             var sortOrder = sortOrder_example;  // string | Order to sort results, either asc or desc (optional) 
 
@@ -1508,7 +1508,7 @@ namespace Example
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
-| **expand** | **string**| Expand | [optional]  |
+| **expand** | **string**| If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions | [optional] <br />**Values**: publishHistory |
 | **name** | **string**| Name | [optional]  |
 | **sortOrder** | **string**| Order to sort results, either asc or desc | [optional]  |
 {: class="table table-striped"}
@@ -1757,7 +1757,7 @@ namespace Example
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
             var nextPage = nextPage_example;  // string | next page token (optional) 
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
-            var expand = expand_example;  // string | Expand (optional) 
+            var expand = expand_example;  // string | If 'expand=publishHistory', then each unpublished evaluation form includes a listing of its published versions (optional) 
             var name = name_example;  // string | Name (optional) 
             var sortOrder = sortOrder_example;  // string | Order to sort results, either asc or desc (optional) 
 
@@ -1786,7 +1786,7 @@ namespace Example
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
-| **expand** | **string**| Expand | [optional]  |
+| **expand** | **string**| If &#39;expand&#x3D;publishHistory&#39;, then each unpublished evaluation form includes a listing of its published versions | [optional] <br />**Values**: publishHistory |
 | **name** | **string**| Name | [optional]  |
 | **sortOrder** | **string**| Order to sort results, either asc or desc | [optional]  |
 {: class="table table-striped"}

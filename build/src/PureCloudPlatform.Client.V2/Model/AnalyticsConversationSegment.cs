@@ -151,6 +151,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Alert,
             
             /// <summary>
+            /// Enum Barging for "barging"
+            /// </summary>
+            [EnumMember(Value = "barging")]
+            Barging,
+            
+            /// <summary>
             /// Enum Callback for "callback"
             /// </summary>
             [EnumMember(Value = "callback")]

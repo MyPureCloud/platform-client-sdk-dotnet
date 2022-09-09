@@ -105,6 +105,92 @@ namespace PureCloudPlatform.Client.V2.Model
             None
         }
         /// <summary>
+        /// Gets or Sets InitialState
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum InitialStateEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Alerting for "alerting"
+            /// </summary>
+            [EnumMember(Value = "alerting")]
+            Alerting,
+            
+            /// <summary>
+            /// Enum Dialing for "dialing"
+            /// </summary>
+            [EnumMember(Value = "dialing")]
+            Dialing,
+            
+            /// <summary>
+            /// Enum Contacting for "contacting"
+            /// </summary>
+            [EnumMember(Value = "contacting")]
+            Contacting,
+            
+            /// <summary>
+            /// Enum Offering for "offering"
+            /// </summary>
+            [EnumMember(Value = "offering")]
+            Offering,
+            
+            /// <summary>
+            /// Enum Connected for "connected"
+            /// </summary>
+            [EnumMember(Value = "connected")]
+            Connected,
+            
+            /// <summary>
+            /// Enum Disconnected for "disconnected"
+            /// </summary>
+            [EnumMember(Value = "disconnected")]
+            Disconnected,
+            
+            /// <summary>
+            /// Enum Terminated for "terminated"
+            /// </summary>
+            [EnumMember(Value = "terminated")]
+            Terminated,
+            
+            /// <summary>
+            /// Enum Converting for "converting"
+            /// </summary>
+            [EnumMember(Value = "converting")]
+            Converting,
+            
+            /// <summary>
+            /// Enum Uploading for "uploading"
+            /// </summary>
+            [EnumMember(Value = "uploading")]
+            Uploading,
+            
+            /// <summary>
+            /// Enum Transmitting for "transmitting"
+            /// </summary>
+            [EnumMember(Value = "transmitting")]
+            Transmitting,
+            
+            /// <summary>
+            /// Enum Scheduled for "scheduled"
+            /// </summary>
+            [EnumMember(Value = "scheduled")]
+            Scheduled,
+            
+            /// <summary>
+            /// Enum None for "none"
+            /// </summary>
+            [EnumMember(Value = "none")]
+            None
+        }
+        /// <summary>
         /// Gets or Sets Direction
         /// </summary>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
@@ -266,6 +352,11 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
         /// <summary>
+        /// Gets or Sets InitialState
+        /// </summary>
+        [DataMember(Name="initialState", EmitDefaultValue=false)]
+        public InitialStateEnum? InitialState { get; set; }
+        /// <summary>
         /// Gets or Sets Direction
         /// </summary>
         [DataMember(Name="direction", EmitDefaultValue=false)]
@@ -292,6 +383,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StartHoldTime">StartHoldTime.</param>
         /// <param name="Purpose">Purpose.</param>
         /// <param name="State">State.</param>
+        /// <param name="InitialState">InitialState.</param>
         /// <param name="Direction">Direction.</param>
         /// <param name="DisconnectType">DisconnectType.</param>
         /// <param name="Held">Held.</param>
@@ -320,7 +412,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Context">Context.</param>
         /// <param name="PeerCount">PeerCount.</param>
         /// <param name="Sharing">Sharing.</param>
-        public QueueConversationScreenShareEventTopicScreenShareMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationScreenShareEventTopicUriReference User = null, QueueConversationScreenShareEventTopicUriReference Queue = null, QueueConversationScreenShareEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, QueueConversationScreenShareEventTopicErrorBody ErrorInfo = null, QueueConversationScreenShareEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, QueueConversationScreenShareEventTopicUriReference ExternalContact = null, QueueConversationScreenShareEventTopicUriReference ExternalOrganization = null, QueueConversationScreenShareEventTopicWrapup Wrapup = null, QueueConversationScreenShareEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, QueueConversationScreenShareEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, string Context = null, int? PeerCount = null, bool? Sharing = null)
+        public QueueConversationScreenShareEventTopicScreenShareMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationScreenShareEventTopicUriReference User = null, QueueConversationScreenShareEventTopicUriReference Queue = null, QueueConversationScreenShareEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, QueueConversationScreenShareEventTopicErrorBody ErrorInfo = null, QueueConversationScreenShareEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, QueueConversationScreenShareEventTopicUriReference ExternalContact = null, QueueConversationScreenShareEventTopicUriReference ExternalOrganization = null, QueueConversationScreenShareEventTopicWrapup Wrapup = null, QueueConversationScreenShareEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, QueueConversationScreenShareEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, string Context = null, int? PeerCount = null, bool? Sharing = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -331,6 +423,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.StartHoldTime = StartHoldTime;
             this.Purpose = Purpose;
             this.State = State;
+            this.InitialState = InitialState;
             this.Direction = Direction;
             this.DisconnectType = DisconnectType;
             this.Held = Held;
@@ -425,6 +518,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="purpose", EmitDefaultValue=false)]
         public string Purpose { get; set; }
+
+
 
 
 
@@ -653,6 +748,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  StartHoldTime: ").Append(StartHoldTime).Append("\n");
             sb.Append("  Purpose: ").Append(Purpose).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
+            sb.Append("  InitialState: ").Append(InitialState).Append("\n");
             sb.Append("  Direction: ").Append(Direction).Append("\n");
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
             sb.Append("  Held: ").Append(Held).Append("\n");
@@ -765,6 +861,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
+                ) &&
+                (
+                    this.InitialState == other.InitialState ||
+                    this.InitialState != null &&
+                    this.InitialState.Equals(other.InitialState)
                 ) &&
                 (
                     this.Direction == other.Direction ||
@@ -945,6 +1046,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
+
+                if (this.InitialState != null)
+                    hash = hash * 59 + this.InitialState.GetHashCode();
 
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();

@@ -38,6 +38,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRecordingRecordingkeys**](RecordingApi.html#getrecordingrecordingkeys) | **GET** /api/v2/recording/recordingkeys | Get encryption key list |
 | [**GetRecordingRecordingkeysRotationschedule**](RecordingApi.html#getrecordingrecordingkeysrotationschedule) | **GET** /api/v2/recording/recordingkeys/rotationschedule | Get key rotation schedule |
 | [**GetRecordingSettings**](RecordingApi.html#getrecordingsettings) | **GET** /api/v2/recording/settings | Get the Recording Settings for the Organization |
+| [**GetRecordingsRetentionQuery**](RecordingApi.html#getrecordingsretentionquery) | **GET** /api/v2/recordings/retention/query | Query for recording retention data |
 | [**GetRecordingsScreensessions**](RecordingApi.html#getrecordingsscreensessions) | **GET** /api/v2/recordings/screensessions | Retrieves a paged listing of screen recording sessions |
 | [**PatchRecordingCrossplatformMediaretentionpolicy**](RecordingApi.html#patchrecordingcrossplatformmediaretentionpolicy) | **PATCH** /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId} | Patch a media retention policy |
 | [**PatchRecordingMediaretentionpolicy**](RecordingApi.html#patchrecordingmediaretentionpolicy) | **PATCH** /api/v2/recording/mediaretentionpolicies/{policyId} | Patch a media retention policy |
@@ -2205,6 +2206,75 @@ namespace Example
 ### Return type
 
 [**RecordingSettings**](RecordingSettings.html)
+
+<a name="getrecordingsretentionquery"></a>
+
+## [**RecordingRetentionCursorEntityListing**](RecordingRetentionCursorEntityListing.html) GetRecordingsRetentionQuery (int? retentionThresholdDays, string cursor = null, int? pageSize = null)
+
+
+
+Query for recording retention data
+
+
+
+Requires ANY permissions: 
+
+* recording:recording:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRecordingsRetentionQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RecordingApi();
+            var retentionThresholdDays = 56;  // int? | Fetch retention data for recordings retained for more days than the provided value.
+            var cursor = cursor_example;  // string | Indicates where to resume query results (not required for first page) (optional) 
+            var pageSize = 56;  // int? | Page size. Maximum is 500. (optional)  (default to 25)
+
+            try
+            { 
+                // Query for recording retention data
+                RecordingRetentionCursorEntityListing result = apiInstance.GetRecordingsRetentionQuery(retentionThresholdDays, cursor, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.GetRecordingsRetentionQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **retentionThresholdDays** | **int?**| Fetch retention data for recordings retained for more days than the provided value. |  |
+| **cursor** | **string**| Indicates where to resume query results (not required for first page) | [optional]  |
+| **pageSize** | **int?**| Page size. Maximum is 500. | [optional] [default to 25] |
+{: class="table table-striped"}
+
+### Return type
+
+[**RecordingRetentionCursorEntityListing**](RecordingRetentionCursorEntityListing.html)
 
 <a name="getrecordingsscreensessions"></a>
 

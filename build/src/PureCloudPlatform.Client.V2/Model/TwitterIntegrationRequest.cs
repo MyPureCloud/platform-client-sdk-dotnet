@@ -62,14 +62,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">The name of the Twitter Integration (required).</param>
         /// <param name="SupportedContent">Defines the SupportedContent profile configured for an integration.</param>
-        /// <param name="MessagingSetting">MessagingSetting.</param>
+        /// <param name="MessagingSetting">Defines the message settings to be applied for this integration.</param>
         /// <param name="AccessTokenKey">The Access Token Key from Twitter messenger (required).</param>
         /// <param name="AccessTokenSecret">The Access Token Secret from Twitter messenger (required).</param>
         /// <param name="ConsumerKey">The Consumer Key from Twitter messenger (required).</param>
         /// <param name="ConsumerSecret">The Consumer Secret from Twitter messenger (required).</param>
         /// <param name="Tier">The type of twitter account to be used for the integration (required).</param>
         /// <param name="EnvName">The Twitter environment name, e.g.: env-beta (required for premium tier).</param>
-        public TwitterIntegrationRequest(string Name = null, SupportedContentReference SupportedContent = null, MessagingSettingReference MessagingSetting = null, string AccessTokenKey = null, string AccessTokenSecret = null, string ConsumerKey = null, string ConsumerSecret = null, TierEnum? Tier = null, string EnvName = null)
+        public TwitterIntegrationRequest(string Name = null, SupportedContentReference SupportedContent = null, MessagingSettingRequestReference MessagingSetting = null, string AccessTokenKey = null, string AccessTokenSecret = null, string ConsumerKey = null, string ConsumerSecret = null, TierEnum? Tier = null, string EnvName = null)
         {
             this.Name = Name;
             this.SupportedContent = SupportedContent;
@@ -113,10 +113,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets MessagingSetting
+        /// Defines the message settings to be applied for this integration
         /// </summary>
+        /// <value>Defines the message settings to be applied for this integration</value>
         [DataMember(Name="messagingSetting", EmitDefaultValue=false)]
-        public MessagingSettingReference MessagingSetting { get; set; }
+        public MessagingSettingRequestReference MessagingSetting { get; set; }
 
 
 

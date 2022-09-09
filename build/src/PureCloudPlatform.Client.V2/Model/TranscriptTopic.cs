@@ -91,6 +91,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public TopicDuration Duration { get; set; }
 
 
+
+        /// <summary>
+        /// Location of the phrase
+        /// </summary>
+        /// <value>Location of the phrase</value>
+        [DataMember(Name="offset", EmitDefaultValue=false)]
+        public TopicOffset Offset { get; private set; }
+
+
+
+        /// <summary>
+        /// Location of the phrase in the recording in milliseconds
+        /// </summary>
+        /// <value>Location of the phrase in the recording in milliseconds</value>
+        [DataMember(Name="recordingLocation", EmitDefaultValue=false)]
+        public long? RecordingLocation { get; private set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -107,6 +125,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Confidence: ").Append(Confidence).Append("\n");
             sb.Append("  StartTimeMilliseconds: ").Append(StartTimeMilliseconds).Append("\n");
             sb.Append("  Duration: ").Append(Duration).Append("\n");
+            sb.Append("  Offset: ").Append(Offset).Append("\n");
+            sb.Append("  RecordingLocation: ").Append(RecordingLocation).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -181,6 +201,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Duration == other.Duration ||
                     this.Duration != null &&
                     this.Duration.Equals(other.Duration)
+                ) &&
+                (
+                    this.Offset == other.Offset ||
+                    this.Offset != null &&
+                    this.Offset.Equals(other.Offset)
+                ) &&
+                (
+                    this.RecordingLocation == other.RecordingLocation ||
+                    this.RecordingLocation != null &&
+                    this.RecordingLocation.Equals(other.RecordingLocation)
                 );
         }
 
@@ -215,6 +245,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Duration != null)
                     hash = hash * 59 + this.Duration.GetHashCode();
+
+                if (this.Offset != null)
+                    hash = hash * 59 + this.Offset.GetHashCode();
+
+                if (this.RecordingLocation != null)
+                    hash = hash * 59 + this.RecordingLocation.GetHashCode();
 
                 return hash;
             }

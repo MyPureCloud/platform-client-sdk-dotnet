@@ -660,13 +660,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="interval">Retrieves the documents modified in specified date and time range. If the after and before cursor parameters are within this interval, it would return valid data, otherwise it throws an error.The dates in the interval are represented in ISO-8601 format: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ (optional)</param>
+        /// <param name="documentId">Retrieves the specified documents, comma separated values expected. (optional)</param>
         /// <param name="categoryId">If specified, retrieves documents associated with category ids, comma separated values expected. (optional)</param>
         /// <param name="includeSubcategories">Works along with &#39;categoryId&#39; query parameter. If specified, retrieves documents associated with category ids and its children categories. (optional)</param>
         /// <param name="includeDrafts">If includeDrafts is true, Documents in the draft state are also returned in the response. (optional)</param>
         /// <param name="labelIds">If specified, retrieves documents associated with label ids, comma separated values expected. (optional)</param>
         /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
         /// <returns>KnowledgeDocumentResponseListing</returns>
-        KnowledgeDocumentResponseListing GetKnowledgeKnowledgebaseDocuments (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, string interval = null, List<string> categoryId = null, bool? includeSubcategories = null, bool? includeDrafts = null, List<string> labelIds = null, List<string> expand = null);
+        KnowledgeDocumentResponseListing GetKnowledgeKnowledgebaseDocuments (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, string interval = null, List<string> documentId = null, List<string> categoryId = null, bool? includeSubcategories = null, bool? includeDrafts = null, List<string> labelIds = null, List<string> expand = null);
 
         /// <summary>
         /// Get documents.
@@ -680,13 +681,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="interval">Retrieves the documents modified in specified date and time range. If the after and before cursor parameters are within this interval, it would return valid data, otherwise it throws an error.The dates in the interval are represented in ISO-8601 format: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ (optional)</param>
+        /// <param name="documentId">Retrieves the specified documents, comma separated values expected. (optional)</param>
         /// <param name="categoryId">If specified, retrieves documents associated with category ids, comma separated values expected. (optional)</param>
         /// <param name="includeSubcategories">Works along with &#39;categoryId&#39; query parameter. If specified, retrieves documents associated with category ids and its children categories. (optional)</param>
         /// <param name="includeDrafts">If includeDrafts is true, Documents in the draft state are also returned in the response. (optional)</param>
         /// <param name="labelIds">If specified, retrieves documents associated with label ids, comma separated values expected. (optional)</param>
         /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
         /// <returns>ApiResponse of KnowledgeDocumentResponseListing</returns>
-        ApiResponse<KnowledgeDocumentResponseListing> GetKnowledgeKnowledgebaseDocumentsWithHttpInfo (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, string interval = null, List<string> categoryId = null, bool? includeSubcategories = null, bool? includeDrafts = null, List<string> labelIds = null, List<string> expand = null);
+        ApiResponse<KnowledgeDocumentResponseListing> GetKnowledgeKnowledgebaseDocumentsWithHttpInfo (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, string interval = null, List<string> documentId = null, List<string> categoryId = null, bool? includeSubcategories = null, bool? includeDrafts = null, List<string> labelIds = null, List<string> expand = null);
 
         /// <summary>
         /// Get export job report
@@ -2606,13 +2608,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="interval">Retrieves the documents modified in specified date and time range. If the after and before cursor parameters are within this interval, it would return valid data, otherwise it throws an error.The dates in the interval are represented in ISO-8601 format: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ (optional)</param>
+        /// <param name="documentId">Retrieves the specified documents, comma separated values expected. (optional)</param>
         /// <param name="categoryId">If specified, retrieves documents associated with category ids, comma separated values expected. (optional)</param>
         /// <param name="includeSubcategories">Works along with &#39;categoryId&#39; query parameter. If specified, retrieves documents associated with category ids and its children categories. (optional)</param>
         /// <param name="includeDrafts">If includeDrafts is true, Documents in the draft state are also returned in the response. (optional)</param>
         /// <param name="labelIds">If specified, retrieves documents associated with label ids, comma separated values expected. (optional)</param>
         /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
         /// <returns>Task of KnowledgeDocumentResponseListing</returns>
-        System.Threading.Tasks.Task<KnowledgeDocumentResponseListing> GetKnowledgeKnowledgebaseDocumentsAsync (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, string interval = null, List<string> categoryId = null, bool? includeSubcategories = null, bool? includeDrafts = null, List<string> labelIds = null, List<string> expand = null);
+        System.Threading.Tasks.Task<KnowledgeDocumentResponseListing> GetKnowledgeKnowledgebaseDocumentsAsync (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, string interval = null, List<string> documentId = null, List<string> categoryId = null, bool? includeSubcategories = null, bool? includeDrafts = null, List<string> labelIds = null, List<string> expand = null);
 
         /// <summary>
         /// Get documents.
@@ -2626,13 +2629,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="interval">Retrieves the documents modified in specified date and time range. If the after and before cursor parameters are within this interval, it would return valid data, otherwise it throws an error.The dates in the interval are represented in ISO-8601 format: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ (optional)</param>
+        /// <param name="documentId">Retrieves the specified documents, comma separated values expected. (optional)</param>
         /// <param name="categoryId">If specified, retrieves documents associated with category ids, comma separated values expected. (optional)</param>
         /// <param name="includeSubcategories">Works along with &#39;categoryId&#39; query parameter. If specified, retrieves documents associated with category ids and its children categories. (optional)</param>
         /// <param name="includeDrafts">If includeDrafts is true, Documents in the draft state are also returned in the response. (optional)</param>
         /// <param name="labelIds">If specified, retrieves documents associated with label ids, comma separated values expected. (optional)</param>
         /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
         /// <returns>Task of ApiResponse (KnowledgeDocumentResponseListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<KnowledgeDocumentResponseListing>> GetKnowledgeKnowledgebaseDocumentsAsyncWithHttpInfo (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, string interval = null, List<string> categoryId = null, bool? includeSubcategories = null, bool? includeDrafts = null, List<string> labelIds = null, List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<KnowledgeDocumentResponseListing>> GetKnowledgeKnowledgebaseDocumentsAsyncWithHttpInfo (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, string interval = null, List<string> documentId = null, List<string> categoryId = null, bool? includeSubcategories = null, bool? includeDrafts = null, List<string> labelIds = null, List<string> expand = null);
 
         /// <summary>
         /// Get export job report
@@ -8913,15 +8917,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="interval">Retrieves the documents modified in specified date and time range. If the after and before cursor parameters are within this interval, it would return valid data, otherwise it throws an error.The dates in the interval are represented in ISO-8601 format: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ (optional)</param>
+        /// <param name="documentId">Retrieves the specified documents, comma separated values expected. (optional)</param>
         /// <param name="categoryId">If specified, retrieves documents associated with category ids, comma separated values expected. (optional)</param>
         /// <param name="includeSubcategories">Works along with &#39;categoryId&#39; query parameter. If specified, retrieves documents associated with category ids and its children categories. (optional)</param>
         /// <param name="includeDrafts">If includeDrafts is true, Documents in the draft state are also returned in the response. (optional)</param>
         /// <param name="labelIds">If specified, retrieves documents associated with label ids, comma separated values expected. (optional)</param>
         /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
         /// <returns>KnowledgeDocumentResponseListing</returns>
-        public KnowledgeDocumentResponseListing GetKnowledgeKnowledgebaseDocuments (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, string interval = null, List<string> categoryId = null, bool? includeSubcategories = null, bool? includeDrafts = null, List<string> labelIds = null, List<string> expand = null)
+        public KnowledgeDocumentResponseListing GetKnowledgeKnowledgebaseDocuments (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, string interval = null, List<string> documentId = null, List<string> categoryId = null, bool? includeSubcategories = null, bool? includeDrafts = null, List<string> labelIds = null, List<string> expand = null)
         {
-             ApiResponse<KnowledgeDocumentResponseListing> localVarResponse = GetKnowledgeKnowledgebaseDocumentsWithHttpInfo(knowledgeBaseId, before, after, pageSize, interval, categoryId, includeSubcategories, includeDrafts, labelIds, expand);
+             ApiResponse<KnowledgeDocumentResponseListing> localVarResponse = GetKnowledgeKnowledgebaseDocumentsWithHttpInfo(knowledgeBaseId, before, after, pageSize, interval, documentId, categoryId, includeSubcategories, includeDrafts, labelIds, expand);
              return localVarResponse.Data;
         }
 
@@ -8934,13 +8939,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="interval">Retrieves the documents modified in specified date and time range. If the after and before cursor parameters are within this interval, it would return valid data, otherwise it throws an error.The dates in the interval are represented in ISO-8601 format: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ (optional)</param>
+        /// <param name="documentId">Retrieves the specified documents, comma separated values expected. (optional)</param>
         /// <param name="categoryId">If specified, retrieves documents associated with category ids, comma separated values expected. (optional)</param>
         /// <param name="includeSubcategories">Works along with &#39;categoryId&#39; query parameter. If specified, retrieves documents associated with category ids and its children categories. (optional)</param>
         /// <param name="includeDrafts">If includeDrafts is true, Documents in the draft state are also returned in the response. (optional)</param>
         /// <param name="labelIds">If specified, retrieves documents associated with label ids, comma separated values expected. (optional)</param>
         /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
         /// <returns>ApiResponse of KnowledgeDocumentResponseListing</returns>
-        public ApiResponse< KnowledgeDocumentResponseListing > GetKnowledgeKnowledgebaseDocumentsWithHttpInfo (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, string interval = null, List<string> categoryId = null, bool? includeSubcategories = null, bool? includeDrafts = null, List<string> labelIds = null, List<string> expand = null)
+        public ApiResponse< KnowledgeDocumentResponseListing > GetKnowledgeKnowledgebaseDocumentsWithHttpInfo (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, string interval = null, List<string> documentId = null, List<string> categoryId = null, bool? includeSubcategories = null, bool? includeDrafts = null, List<string> labelIds = null, List<string> expand = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)
@@ -8983,6 +8989,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (interval != null) localVarQueryParams.Add(new Tuple<string, string>("interval", this.Configuration.ApiClient.ParameterToString(interval)));
+            if (documentId != null) documentId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("documentId", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (categoryId != null) categoryId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("categoryId", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (includeSubcategories != null) localVarQueryParams.Add(new Tuple<string, string>("includeSubcategories", this.Configuration.ApiClient.ParameterToString(includeSubcategories)));
             if (includeDrafts != null) localVarQueryParams.Add(new Tuple<string, string>("includeDrafts", this.Configuration.ApiClient.ParameterToString(includeDrafts)));
@@ -9034,15 +9041,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="interval">Retrieves the documents modified in specified date and time range. If the after and before cursor parameters are within this interval, it would return valid data, otherwise it throws an error.The dates in the interval are represented in ISO-8601 format: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ (optional)</param>
+        /// <param name="documentId">Retrieves the specified documents, comma separated values expected. (optional)</param>
         /// <param name="categoryId">If specified, retrieves documents associated with category ids, comma separated values expected. (optional)</param>
         /// <param name="includeSubcategories">Works along with &#39;categoryId&#39; query parameter. If specified, retrieves documents associated with category ids and its children categories. (optional)</param>
         /// <param name="includeDrafts">If includeDrafts is true, Documents in the draft state are also returned in the response. (optional)</param>
         /// <param name="labelIds">If specified, retrieves documents associated with label ids, comma separated values expected. (optional)</param>
         /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
         /// <returns>Task of KnowledgeDocumentResponseListing</returns>
-        public async System.Threading.Tasks.Task<KnowledgeDocumentResponseListing> GetKnowledgeKnowledgebaseDocumentsAsync (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, string interval = null, List<string> categoryId = null, bool? includeSubcategories = null, bool? includeDrafts = null, List<string> labelIds = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<KnowledgeDocumentResponseListing> GetKnowledgeKnowledgebaseDocumentsAsync (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, string interval = null, List<string> documentId = null, List<string> categoryId = null, bool? includeSubcategories = null, bool? includeDrafts = null, List<string> labelIds = null, List<string> expand = null)
         {
-             ApiResponse<KnowledgeDocumentResponseListing> localVarResponse = await GetKnowledgeKnowledgebaseDocumentsAsyncWithHttpInfo(knowledgeBaseId, before, after, pageSize, interval, categoryId, includeSubcategories, includeDrafts, labelIds, expand);
+             ApiResponse<KnowledgeDocumentResponseListing> localVarResponse = await GetKnowledgeKnowledgebaseDocumentsAsyncWithHttpInfo(knowledgeBaseId, before, after, pageSize, interval, documentId, categoryId, includeSubcategories, includeDrafts, labelIds, expand);
              return localVarResponse.Data;
 
         }
@@ -9056,13 +9064,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="interval">Retrieves the documents modified in specified date and time range. If the after and before cursor parameters are within this interval, it would return valid data, otherwise it throws an error.The dates in the interval are represented in ISO-8601 format: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ (optional)</param>
+        /// <param name="documentId">Retrieves the specified documents, comma separated values expected. (optional)</param>
         /// <param name="categoryId">If specified, retrieves documents associated with category ids, comma separated values expected. (optional)</param>
         /// <param name="includeSubcategories">Works along with &#39;categoryId&#39; query parameter. If specified, retrieves documents associated with category ids and its children categories. (optional)</param>
         /// <param name="includeDrafts">If includeDrafts is true, Documents in the draft state are also returned in the response. (optional)</param>
         /// <param name="labelIds">If specified, retrieves documents associated with label ids, comma separated values expected. (optional)</param>
         /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected. (optional)</param>
         /// <returns>Task of ApiResponse (KnowledgeDocumentResponseListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<KnowledgeDocumentResponseListing>> GetKnowledgeKnowledgebaseDocumentsAsyncWithHttpInfo (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, string interval = null, List<string> categoryId = null, bool? includeSubcategories = null, bool? includeDrafts = null, List<string> labelIds = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<KnowledgeDocumentResponseListing>> GetKnowledgeKnowledgebaseDocumentsAsyncWithHttpInfo (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, string interval = null, List<string> documentId = null, List<string> categoryId = null, bool? includeSubcategories = null, bool? includeDrafts = null, List<string> labelIds = null, List<string> expand = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
             if (knowledgeBaseId == null)
@@ -9106,6 +9115,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (interval != null) localVarQueryParams.Add(new Tuple<string, string>("interval", this.Configuration.ApiClient.ParameterToString(interval)));
+            if (documentId != null) documentId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("documentId", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (categoryId != null) categoryId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("categoryId", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (includeSubcategories != null) localVarQueryParams.Add(new Tuple<string, string>("includeSubcategories", this.Configuration.ApiClient.ParameterToString(includeSubcategories)));
             if (includeDrafts != null) localVarQueryParams.Add(new Tuple<string, string>("includeDrafts", this.Configuration.ApiClient.ParameterToString(includeDrafts)));

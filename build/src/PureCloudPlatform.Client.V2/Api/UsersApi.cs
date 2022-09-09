@@ -1519,6 +1519,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> PostAuthorizationSubjectDivisionRoleWithHttpInfo (string subjectId, string divisionId, string roleId, string subjectType = null);
 
         /// <summary>
+        /// Create mapping between external identifier and user. Limit 100 per entity.
+        /// </summary>
+        /// <remarks>
+        /// Authority Name and External key are case sensitive.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body"></param>
+        /// <returns>List&lt;UserExternalIdentifier&gt;</returns>
+        List<UserExternalIdentifier> PostUserExternalid (string userId, UserExternalIdentifier body);
+
+        /// <summary>
+        /// Create mapping between external identifier and user. Limit 100 per entity.
+        /// </summary>
+        /// <remarks>
+        /// Authority Name and External key are case sensitive.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of List&lt;UserExternalIdentifier&gt;</returns>
+        ApiResponse<List<UserExternalIdentifier>> PostUserExternalidWithHttpInfo (string userId, UserExternalIdentifier body);
+
+        /// <summary>
         /// Send an activation email to the user
         /// </summary>
         /// <remarks>
@@ -3473,6 +3497,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="subjectType">what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional, default to "PC_USER")</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationSubjectDivisionRoleAsyncWithHttpInfo (string subjectId, string divisionId, string roleId, string subjectType = null);
+
+        /// <summary>
+        /// Create mapping between external identifier and user. Limit 100 per entity.
+        /// </summary>
+        /// <remarks>
+        /// Authority Name and External key are case sensitive.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of List&lt;UserExternalIdentifier&gt;</returns>
+        System.Threading.Tasks.Task<List<UserExternalIdentifier>> PostUserExternalidAsync (string userId, UserExternalIdentifier body);
+
+        /// <summary>
+        /// Create mapping between external identifier and user. Limit 100 per entity.
+        /// </summary>
+        /// <remarks>
+        /// Authority Name and External key are case sensitive.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (List&lt;UserExternalIdentifier&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<UserExternalIdentifier>>> PostUserExternalidAsyncWithHttpInfo (string userId, UserExternalIdentifier body);
 
         /// <summary>
         /// Send an activation email to the user
@@ -16266,6 +16314,220 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
                 null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Create mapping between external identifier and user. Limit 100 per entity. Authority Name and External key are case sensitive.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body"></param>
+        /// <returns>List&lt;UserExternalIdentifier&gt;</returns>
+        public List<UserExternalIdentifier> PostUserExternalid (string userId, UserExternalIdentifier body)
+        {
+             ApiResponse<List<UserExternalIdentifier>> localVarResponse = PostUserExternalidWithHttpInfo(userId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create mapping between external identifier and user. Limit 100 per entity. Authority Name and External key are case sensitive.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of List&lt;UserExternalIdentifier&gt;</returns>
+        public ApiResponse< List<UserExternalIdentifier> > PostUserExternalidWithHttpInfo (string userId, UserExternalIdentifier body)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PostUserExternalid");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUserExternalid");
+
+            var localVarPath = "/api/v2/users/{userId}/externalid";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostUserExternalid: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostUserExternalid: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<UserExternalIdentifier>>(localVarStatusCode,
+                localVarHeaders,
+                (List<UserExternalIdentifier>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UserExternalIdentifier>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create mapping between external identifier and user. Limit 100 per entity. Authority Name and External key are case sensitive.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of List&lt;UserExternalIdentifier&gt;</returns>
+        public async System.Threading.Tasks.Task<List<UserExternalIdentifier>> PostUserExternalidAsync (string userId, UserExternalIdentifier body)
+        {
+             ApiResponse<List<UserExternalIdentifier>> localVarResponse = await PostUserExternalidAsyncWithHttpInfo(userId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create mapping between external identifier and user. Limit 100 per entity. Authority Name and External key are case sensitive.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (List&lt;UserExternalIdentifier&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<UserExternalIdentifier>>> PostUserExternalidAsyncWithHttpInfo (string userId, UserExternalIdentifier body)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PostUserExternalid");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUserExternalid");
+            
+
+            var localVarPath = "/api/v2/users/{userId}/externalid";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostUserExternalid: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostUserExternalid: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<UserExternalIdentifier>>(localVarStatusCode,
+                localVarHeaders,
+                (List<UserExternalIdentifier>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UserExternalIdentifier>)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

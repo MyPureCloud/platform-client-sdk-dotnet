@@ -263,6 +263,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteOutboundContactlistsWithHttpInfo (List<string> id);
 
         /// <summary>
+        /// Delete an Outbound Digital Rule Set
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
+        /// <returns></returns>
+        void DeleteOutboundDigitalruleset (string digitalRuleSetId);
+
+        /// <summary>
+        /// Delete an Outbound Digital Rule Set
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteOutboundDigitalrulesetWithHttpInfo (string digitalRuleSetId);
+
+        /// <summary>
         /// Delete dialer DNC list
         /// </summary>
         /// <remarks>
@@ -1267,6 +1289,60 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>ApiResponse of ContactListDivisionViewListing</returns>
         ApiResponse<ContactListDivisionViewListing> GetOutboundContactlistsDivisionviewsWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Get an Outbound Digital Rule Set
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
+        /// <returns>DigitalRuleSet</returns>
+        DigitalRuleSet GetOutboundDigitalruleset (string digitalRuleSetId);
+
+        /// <summary>
+        /// Get an Outbound Digital Rule Set
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
+        /// <returns>ApiResponse of DigitalRuleSet</returns>
+        ApiResponse<DigitalRuleSet> GetOutboundDigitalrulesetWithHttpInfo (string digitalRuleSetId);
+
+        /// <summary>
+        /// Query a list of Outbound Digital Rule Sets
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">The field to sort by (optional, default to name)</param>
+        /// <param name="sortOrder">The direction to sort (optional, default to ascending)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="id">A list of digital rule set ids to bulk fetch (optional)</param>
+        /// <returns>DigitalRuleSetEntityListing</returns>
+        DigitalRuleSetEntityListing GetOutboundDigitalrulesets (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null);
+
+        /// <summary>
+        /// Query a list of Outbound Digital Rule Sets
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">The field to sort by (optional, default to name)</param>
+        /// <param name="sortOrder">The direction to sort (optional, default to ascending)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="id">A list of digital rule set ids to bulk fetch (optional)</param>
+        /// <returns>ApiResponse of DigitalRuleSetEntityListing</returns>
+        ApiResponse<DigitalRuleSetEntityListing> GetOutboundDigitalrulesetsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null);
 
         /// <summary>
         /// Get dialer DNC list
@@ -2383,6 +2459,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> PostOutboundConversationDncWithHttpInfo (string conversationId);
 
         /// <summary>
+        /// Create an Outbound Digital Rule Set
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Digital Rule Set</param>
+        /// <returns>DigitalRuleSet</returns>
+        DigitalRuleSet PostOutboundDigitalrulesets (DigitalRuleSet body);
+
+        /// <summary>
+        /// Create an Outbound Digital Rule Set
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Digital Rule Set</param>
+        /// <returns>ApiResponse of DigitalRuleSet</returns>
+        ApiResponse<DigitalRuleSet> PostOutboundDigitalrulesetsWithHttpInfo (DigitalRuleSet body);
+
+        /// <summary>
         /// Initiate the export of a dnc list.
         /// </summary>
         /// <remarks>
@@ -2759,6 +2857,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ContactListFilter</param>
         /// <returns>ApiResponse of ContactListFilter</returns>
         ApiResponse<ContactListFilter> PutOutboundContactlistfilterWithHttpInfo (string contactListFilterId, ContactListFilter body);
+
+        /// <summary>
+        /// Update an Outbound Digital Rule Set
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
+        /// <param name="body">Digital Rule Set</param>
+        /// <returns>DigitalRuleSet</returns>
+        DigitalRuleSet PutOutboundDigitalruleset (string digitalRuleSetId, DigitalRuleSet body);
+
+        /// <summary>
+        /// Update an Outbound Digital Rule Set
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
+        /// <param name="body">Digital Rule Set</param>
+        /// <returns>ApiResponse of DigitalRuleSet</returns>
+        ApiResponse<DigitalRuleSet> PutOutboundDigitalrulesetWithHttpInfo (string digitalRuleSetId, DigitalRuleSet body);
 
         /// <summary>
         /// Update dialer DNC list
@@ -3223,6 +3345,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">contact list id(s) to delete</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundContactlistsAsyncWithHttpInfo (List<string> id);
+
+        /// <summary>
+        /// Delete an Outbound Digital Rule Set
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteOutboundDigitalrulesetAsync (string digitalRuleSetId);
+
+        /// <summary>
+        /// Delete an Outbound Digital Rule Set
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundDigitalrulesetAsyncWithHttpInfo (string digitalRuleSetId);
 
         /// <summary>
         /// Delete dialer DNC list
@@ -4229,6 +4373,60 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (ContactListDivisionViewListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ContactListDivisionViewListing>> GetOutboundContactlistsDivisionviewsAsyncWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Get an Outbound Digital Rule Set
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
+        /// <returns>Task of DigitalRuleSet</returns>
+        System.Threading.Tasks.Task<DigitalRuleSet> GetOutboundDigitalrulesetAsync (string digitalRuleSetId);
+
+        /// <summary>
+        /// Get an Outbound Digital Rule Set
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
+        /// <returns>Task of ApiResponse (DigitalRuleSet)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DigitalRuleSet>> GetOutboundDigitalrulesetAsyncWithHttpInfo (string digitalRuleSetId);
+
+        /// <summary>
+        /// Query a list of Outbound Digital Rule Sets
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">The field to sort by (optional, default to name)</param>
+        /// <param name="sortOrder">The direction to sort (optional, default to ascending)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="id">A list of digital rule set ids to bulk fetch (optional)</param>
+        /// <returns>Task of DigitalRuleSetEntityListing</returns>
+        System.Threading.Tasks.Task<DigitalRuleSetEntityListing> GetOutboundDigitalrulesetsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null);
+
+        /// <summary>
+        /// Query a list of Outbound Digital Rule Sets
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">The field to sort by (optional, default to name)</param>
+        /// <param name="sortOrder">The direction to sort (optional, default to ascending)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="id">A list of digital rule set ids to bulk fetch (optional)</param>
+        /// <returns>Task of ApiResponse (DigitalRuleSetEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DigitalRuleSetEntityListing>> GetOutboundDigitalrulesetsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null);
 
         /// <summary>
         /// Get dialer DNC list
@@ -5345,6 +5543,28 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> PostOutboundConversationDncAsyncWithHttpInfo (string conversationId);
 
         /// <summary>
+        /// Create an Outbound Digital Rule Set
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Digital Rule Set</param>
+        /// <returns>Task of DigitalRuleSet</returns>
+        System.Threading.Tasks.Task<DigitalRuleSet> PostOutboundDigitalrulesetsAsync (DigitalRuleSet body);
+
+        /// <summary>
+        /// Create an Outbound Digital Rule Set
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Digital Rule Set</param>
+        /// <returns>Task of ApiResponse (DigitalRuleSet)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DigitalRuleSet>> PostOutboundDigitalrulesetsAsyncWithHttpInfo (DigitalRuleSet body);
+
+        /// <summary>
         /// Initiate the export of a dnc list.
         /// </summary>
         /// <remarks>
@@ -5721,6 +5941,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">ContactListFilter</param>
         /// <returns>Task of ApiResponse (ContactListFilter)</returns>
         System.Threading.Tasks.Task<ApiResponse<ContactListFilter>> PutOutboundContactlistfilterAsyncWithHttpInfo (string contactListFilterId, ContactListFilter body);
+
+        /// <summary>
+        /// Update an Outbound Digital Rule Set
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
+        /// <param name="body">Digital Rule Set</param>
+        /// <returns>Task of DigitalRuleSet</returns>
+        System.Threading.Tasks.Task<DigitalRuleSet> PutOutboundDigitalrulesetAsync (string digitalRuleSetId, DigitalRuleSet body);
+
+        /// <summary>
+        /// Update an Outbound Digital Rule Set
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
+        /// <param name="body">Digital Rule Set</param>
+        /// <returns>Task of ApiResponse (DigitalRuleSet)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DigitalRuleSet>> PutOutboundDigitalrulesetAsyncWithHttpInfo (string digitalRuleSetId, DigitalRuleSet body);
 
         /// <summary>
         /// Update dialer DNC list
@@ -8125,6 +8369,195 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundContactlists: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundContactlists: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete an Outbound Digital Rule Set 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
+        /// <returns></returns>
+        public void DeleteOutboundDigitalruleset (string digitalRuleSetId)
+        {
+             DeleteOutboundDigitalrulesetWithHttpInfo(digitalRuleSetId);
+        }
+
+        /// <summary>
+        /// Delete an Outbound Digital Rule Set 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteOutboundDigitalrulesetWithHttpInfo (string digitalRuleSetId)
+        { 
+            // verify the required parameter 'digitalRuleSetId' is set
+            if (digitalRuleSetId == null)
+                throw new ApiException(400, "Missing required parameter 'digitalRuleSetId' when calling OutboundApi->DeleteOutboundDigitalruleset");
+
+            var localVarPath = "/api/v2/outbound/digitalrulesets/{digitalRuleSetId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (digitalRuleSetId != null) localVarPathParams.Add("digitalRuleSetId", this.Configuration.ApiClient.ParameterToString(digitalRuleSetId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundDigitalruleset: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundDigitalruleset: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete an Outbound Digital Rule Set 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteOutboundDigitalrulesetAsync (string digitalRuleSetId)
+        {
+             await DeleteOutboundDigitalrulesetAsyncWithHttpInfo(digitalRuleSetId);
+
+        }
+
+        /// <summary>
+        /// Delete an Outbound Digital Rule Set 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundDigitalrulesetAsyncWithHttpInfo (string digitalRuleSetId)
+        { 
+            // verify the required parameter 'digitalRuleSetId' is set
+            if (digitalRuleSetId == null)
+                throw new ApiException(400, "Missing required parameter 'digitalRuleSetId' when calling OutboundApi->DeleteOutboundDigitalruleset");
+            
+
+            var localVarPath = "/api/v2/outbound/digitalrulesets/{digitalRuleSetId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (digitalRuleSetId != null) localVarPathParams.Add("digitalRuleSetId", this.Configuration.ApiClient.ParameterToString(digitalRuleSetId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundDigitalruleset: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundDigitalruleset: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -15811,6 +16244,411 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ContactListDivisionViewListing>(localVarStatusCode,
                 localVarHeaders,
                 (ContactListDivisionViewListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactListDivisionViewListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get an Outbound Digital Rule Set 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
+        /// <returns>DigitalRuleSet</returns>
+        public DigitalRuleSet GetOutboundDigitalruleset (string digitalRuleSetId)
+        {
+             ApiResponse<DigitalRuleSet> localVarResponse = GetOutboundDigitalrulesetWithHttpInfo(digitalRuleSetId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get an Outbound Digital Rule Set 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
+        /// <returns>ApiResponse of DigitalRuleSet</returns>
+        public ApiResponse< DigitalRuleSet > GetOutboundDigitalrulesetWithHttpInfo (string digitalRuleSetId)
+        { 
+            // verify the required parameter 'digitalRuleSetId' is set
+            if (digitalRuleSetId == null)
+                throw new ApiException(400, "Missing required parameter 'digitalRuleSetId' when calling OutboundApi->GetOutboundDigitalruleset");
+
+            var localVarPath = "/api/v2/outbound/digitalrulesets/{digitalRuleSetId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (digitalRuleSetId != null) localVarPathParams.Add("digitalRuleSetId", this.Configuration.ApiClient.ParameterToString(digitalRuleSetId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundDigitalruleset: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundDigitalruleset: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DigitalRuleSet>(localVarStatusCode,
+                localVarHeaders,
+                (DigitalRuleSet) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DigitalRuleSet)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get an Outbound Digital Rule Set 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
+        /// <returns>Task of DigitalRuleSet</returns>
+        public async System.Threading.Tasks.Task<DigitalRuleSet> GetOutboundDigitalrulesetAsync (string digitalRuleSetId)
+        {
+             ApiResponse<DigitalRuleSet> localVarResponse = await GetOutboundDigitalrulesetAsyncWithHttpInfo(digitalRuleSetId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get an Outbound Digital Rule Set 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
+        /// <returns>Task of ApiResponse (DigitalRuleSet)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DigitalRuleSet>> GetOutboundDigitalrulesetAsyncWithHttpInfo (string digitalRuleSetId)
+        { 
+            // verify the required parameter 'digitalRuleSetId' is set
+            if (digitalRuleSetId == null)
+                throw new ApiException(400, "Missing required parameter 'digitalRuleSetId' when calling OutboundApi->GetOutboundDigitalruleset");
+            
+
+            var localVarPath = "/api/v2/outbound/digitalrulesets/{digitalRuleSetId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (digitalRuleSetId != null) localVarPathParams.Add("digitalRuleSetId", this.Configuration.ApiClient.ParameterToString(digitalRuleSetId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundDigitalruleset: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundDigitalruleset: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DigitalRuleSet>(localVarStatusCode,
+                localVarHeaders,
+                (DigitalRuleSet) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DigitalRuleSet)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Query a list of Outbound Digital Rule Sets 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">The field to sort by (optional, default to name)</param>
+        /// <param name="sortOrder">The direction to sort (optional, default to ascending)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="id">A list of digital rule set ids to bulk fetch (optional)</param>
+        /// <returns>DigitalRuleSetEntityListing</returns>
+        public DigitalRuleSetEntityListing GetOutboundDigitalrulesets (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null)
+        {
+             ApiResponse<DigitalRuleSetEntityListing> localVarResponse = GetOutboundDigitalrulesetsWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, name, id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query a list of Outbound Digital Rule Sets 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">The field to sort by (optional, default to name)</param>
+        /// <param name="sortOrder">The direction to sort (optional, default to ascending)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="id">A list of digital rule set ids to bulk fetch (optional)</param>
+        /// <returns>ApiResponse of DigitalRuleSetEntityListing</returns>
+        public ApiResponse< DigitalRuleSetEntityListing > GetOutboundDigitalrulesetsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null)
+        { 
+
+            var localVarPath = "/api/v2/outbound/digitalrulesets";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundDigitalrulesets: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundDigitalrulesets: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DigitalRuleSetEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (DigitalRuleSetEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DigitalRuleSetEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Query a list of Outbound Digital Rule Sets 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">The field to sort by (optional, default to name)</param>
+        /// <param name="sortOrder">The direction to sort (optional, default to ascending)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="id">A list of digital rule set ids to bulk fetch (optional)</param>
+        /// <returns>Task of DigitalRuleSetEntityListing</returns>
+        public async System.Threading.Tasks.Task<DigitalRuleSetEntityListing> GetOutboundDigitalrulesetsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null)
+        {
+             ApiResponse<DigitalRuleSetEntityListing> localVarResponse = await GetOutboundDigitalrulesetsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, name, id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query a list of Outbound Digital Rule Sets 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size. The max that will be returned is 100. (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">The field to sort by (optional, default to name)</param>
+        /// <param name="sortOrder">The direction to sort (optional, default to ascending)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="id">A list of digital rule set ids to bulk fetch (optional)</param>
+        /// <returns>Task of ApiResponse (DigitalRuleSetEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DigitalRuleSetEntityListing>> GetOutboundDigitalrulesetsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null)
+        { 
+
+            var localVarPath = "/api/v2/outbound/digitalrulesets";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundDigitalrulesets: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundDigitalrulesets: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DigitalRuleSetEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (DigitalRuleSetEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DigitalRuleSetEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -24849,6 +25687,207 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Create an Outbound Digital Rule Set 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Digital Rule Set</param>
+        /// <returns>DigitalRuleSet</returns>
+        public DigitalRuleSet PostOutboundDigitalrulesets (DigitalRuleSet body)
+        {
+             ApiResponse<DigitalRuleSet> localVarResponse = PostOutboundDigitalrulesetsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create an Outbound Digital Rule Set 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Digital Rule Set</param>
+        /// <returns>ApiResponse of DigitalRuleSet</returns>
+        public ApiResponse< DigitalRuleSet > PostOutboundDigitalrulesetsWithHttpInfo (DigitalRuleSet body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundDigitalrulesets");
+
+            var localVarPath = "/api/v2/outbound/digitalrulesets";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundDigitalrulesets: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundDigitalrulesets: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DigitalRuleSet>(localVarStatusCode,
+                localVarHeaders,
+                (DigitalRuleSet) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DigitalRuleSet)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create an Outbound Digital Rule Set 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Digital Rule Set</param>
+        /// <returns>Task of DigitalRuleSet</returns>
+        public async System.Threading.Tasks.Task<DigitalRuleSet> PostOutboundDigitalrulesetsAsync (DigitalRuleSet body)
+        {
+             ApiResponse<DigitalRuleSet> localVarResponse = await PostOutboundDigitalrulesetsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create an Outbound Digital Rule Set 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Digital Rule Set</param>
+        /// <returns>Task of ApiResponse (DigitalRuleSet)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DigitalRuleSet>> PostOutboundDigitalrulesetsAsyncWithHttpInfo (DigitalRuleSet body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundDigitalrulesets");
+            
+
+            var localVarPath = "/api/v2/outbound/digitalrulesets";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundDigitalrulesets: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundDigitalrulesets: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DigitalRuleSet>(localVarStatusCode,
+                localVarHeaders,
+                (DigitalRuleSet) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DigitalRuleSet)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Initiate the export of a dnc list. Returns 200 if received OK.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -28208,6 +29247,220 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ContactListFilter>(localVarStatusCode,
                 localVarHeaders,
                 (ContactListFilter) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactListFilter)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update an Outbound Digital Rule Set 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
+        /// <param name="body">Digital Rule Set</param>
+        /// <returns>DigitalRuleSet</returns>
+        public DigitalRuleSet PutOutboundDigitalruleset (string digitalRuleSetId, DigitalRuleSet body)
+        {
+             ApiResponse<DigitalRuleSet> localVarResponse = PutOutboundDigitalrulesetWithHttpInfo(digitalRuleSetId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update an Outbound Digital Rule Set 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
+        /// <param name="body">Digital Rule Set</param>
+        /// <returns>ApiResponse of DigitalRuleSet</returns>
+        public ApiResponse< DigitalRuleSet > PutOutboundDigitalrulesetWithHttpInfo (string digitalRuleSetId, DigitalRuleSet body)
+        { 
+            // verify the required parameter 'digitalRuleSetId' is set
+            if (digitalRuleSetId == null)
+                throw new ApiException(400, "Missing required parameter 'digitalRuleSetId' when calling OutboundApi->PutOutboundDigitalruleset");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundDigitalruleset");
+
+            var localVarPath = "/api/v2/outbound/digitalrulesets/{digitalRuleSetId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (digitalRuleSetId != null) localVarPathParams.Add("digitalRuleSetId", this.Configuration.ApiClient.ParameterToString(digitalRuleSetId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutOutboundDigitalruleset: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutOutboundDigitalruleset: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DigitalRuleSet>(localVarStatusCode,
+                localVarHeaders,
+                (DigitalRuleSet) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DigitalRuleSet)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update an Outbound Digital Rule Set 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
+        /// <param name="body">Digital Rule Set</param>
+        /// <returns>Task of DigitalRuleSet</returns>
+        public async System.Threading.Tasks.Task<DigitalRuleSet> PutOutboundDigitalrulesetAsync (string digitalRuleSetId, DigitalRuleSet body)
+        {
+             ApiResponse<DigitalRuleSet> localVarResponse = await PutOutboundDigitalrulesetAsyncWithHttpInfo(digitalRuleSetId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update an Outbound Digital Rule Set 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="digitalRuleSetId">The Digital Rule Set ID</param>
+        /// <param name="body">Digital Rule Set</param>
+        /// <returns>Task of ApiResponse (DigitalRuleSet)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DigitalRuleSet>> PutOutboundDigitalrulesetAsyncWithHttpInfo (string digitalRuleSetId, DigitalRuleSet body)
+        { 
+            // verify the required parameter 'digitalRuleSetId' is set
+            if (digitalRuleSetId == null)
+                throw new ApiException(400, "Missing required parameter 'digitalRuleSetId' when calling OutboundApi->PutOutboundDigitalruleset");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundDigitalruleset");
+            
+
+            var localVarPath = "/api/v2/outbound/digitalrulesets/{digitalRuleSetId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (digitalRuleSetId != null) localVarPathParams.Add("digitalRuleSetId", this.Configuration.ApiClient.ParameterToString(digitalRuleSetId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutOutboundDigitalruleset: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutOutboundDigitalruleset: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DigitalRuleSet>(localVarStatusCode,
+                localVarHeaders,
+                (DigitalRuleSet) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DigitalRuleSet)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

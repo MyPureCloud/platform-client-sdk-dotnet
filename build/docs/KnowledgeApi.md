@@ -1679,7 +1679,7 @@ namespace Example
 
 <a name="getknowledgeknowledgebasedocuments"></a>
 
-## [**KnowledgeDocumentResponseListing**](KnowledgeDocumentResponseListing.html) GetKnowledgeKnowledgebaseDocuments (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, string interval = null, List<string> categoryId = null, bool? includeSubcategories = null, bool? includeDrafts = null, List<string> labelIds = null, List<string> expand = null)
+## [**KnowledgeDocumentResponseListing**](KnowledgeDocumentResponseListing.html) GetKnowledgeKnowledgebaseDocuments (string knowledgeBaseId, string before = null, string after = null, string pageSize = null, string interval = null, List<string> documentId = null, List<string> categoryId = null, bool? includeSubcategories = null, bool? includeDrafts = null, List<string> labelIds = null, List<string> expand = null)
 
 
 
@@ -1718,6 +1718,7 @@ namespace Example
             var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
             var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
             var interval = interval_example;  // string | Retrieves the documents modified in specified date and time range. If the after and before cursor parameters are within this interval, it would return valid data, otherwise it throws an error.The dates in the interval are represented in ISO-8601 format: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ (optional) 
+            var documentId = new List<string>(); // List<string> | Retrieves the specified documents, comma separated values expected. (optional) 
             var categoryId = new List<string>(); // List<string> | If specified, retrieves documents associated with category ids, comma separated values expected. (optional) 
             var includeSubcategories = true;  // bool? | Works along with 'categoryId' query parameter. If specified, retrieves documents associated with category ids and its children categories. (optional) 
             var includeDrafts = true;  // bool? | If includeDrafts is true, Documents in the draft state are also returned in the response. (optional) 
@@ -1727,7 +1728,7 @@ namespace Example
             try
             { 
                 // Get documents.
-                KnowledgeDocumentResponseListing result = apiInstance.GetKnowledgeKnowledgebaseDocuments(knowledgeBaseId, before, after, pageSize, interval, categoryId, includeSubcategories, includeDrafts, labelIds, expand);
+                KnowledgeDocumentResponseListing result = apiInstance.GetKnowledgeKnowledgebaseDocuments(knowledgeBaseId, before, after, pageSize, interval, documentId, categoryId, includeSubcategories, includeDrafts, labelIds, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1749,6 +1750,7 @@ namespace Example
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
 | **interval** | **string**| Retrieves the documents modified in specified date and time range. If the after and before cursor parameters are within this interval, it would return valid data, otherwise it throws an error.The dates in the interval are represented in ISO-8601 format: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ | [optional]  |
+| **documentId** | [**List<string>**](string.html)| Retrieves the specified documents, comma separated values expected. | [optional]  |
 | **categoryId** | [**List<string>**](string.html)| If specified, retrieves documents associated with category ids, comma separated values expected. | [optional]  |
 | **includeSubcategories** | **bool?**| Works along with &#39;categoryId&#39; query parameter. If specified, retrieves documents associated with category ids and its children categories. | [optional]  |
 | **includeDrafts** | **bool?**| If includeDrafts is true, Documents in the draft state are also returned in the response. | [optional]  |
