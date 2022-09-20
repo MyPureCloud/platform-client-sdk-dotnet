@@ -441,8 +441,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="expand"> (optional)</param>
-        /// <returns>BusinessUnit</returns>
-        BusinessUnit GetWorkforcemanagementBusinessunit (string businessUnitId, List<string> expand = null);
+        /// <returns>BusinessUnitResponse</returns>
+        BusinessUnitResponse GetWorkforcemanagementBusinessunit (string businessUnitId, List<string> expand = null);
 
         /// <summary>
         /// Get business unit
@@ -453,8 +453,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="expand"> (optional)</param>
-        /// <returns>ApiResponse of BusinessUnit</returns>
-        ApiResponse<BusinessUnit> GetWorkforcemanagementBusinessunitWithHttpInfo (string businessUnitId, List<string> expand = null);
+        /// <returns>ApiResponse of BusinessUnitResponse</returns>
+        ApiResponse<BusinessUnitResponse> GetWorkforcemanagementBusinessunitWithHttpInfo (string businessUnitId, List<string> expand = null);
 
         /// <summary>
         /// Get an activity code
@@ -1875,8 +1875,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>BusinessUnit</returns>
-        BusinessUnit PatchWorkforcemanagementBusinessunit (string businessUnitId, UpdateBusinessUnitRequest body = null);
+        /// <returns>BusinessUnitResponse</returns>
+        BusinessUnitResponse PatchWorkforcemanagementBusinessunit (string businessUnitId, UpdateBusinessUnitRequest body = null);
 
         /// <summary>
         /// Update business unit
@@ -1887,8 +1887,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>ApiResponse of BusinessUnit</returns>
-        ApiResponse<BusinessUnit> PatchWorkforcemanagementBusinessunitWithHttpInfo (string businessUnitId, UpdateBusinessUnitRequest body = null);
+        /// <returns>ApiResponse of BusinessUnitResponse</returns>
+        ApiResponse<BusinessUnitResponse> PatchWorkforcemanagementBusinessunitWithHttpInfo (string businessUnitId, UpdateBusinessUnitRequest body = null);
 
         /// <summary>
         /// Update an activity code
@@ -2740,8 +2740,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
-        /// <returns>BusinessUnit</returns>
-        BusinessUnit PostWorkforcemanagementBusinessunits (CreateBusinessUnitRequest body = null);
+        /// <returns>BusinessUnitResponse</returns>
+        BusinessUnitResponse PostWorkforcemanagementBusinessunits (CreateBusinessUnitRequest body = null);
 
         /// <summary>
         /// Add a new business unit
@@ -2751,8 +2751,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
-        /// <returns>ApiResponse of BusinessUnit</returns>
-        ApiResponse<BusinessUnit> PostWorkforcemanagementBusinessunitsWithHttpInfo (CreateBusinessUnitRequest body = null);
+        /// <returns>ApiResponse of BusinessUnitResponse</returns>
+        ApiResponse<BusinessUnitResponse> PostWorkforcemanagementBusinessunitsWithHttpInfo (CreateBusinessUnitRequest body = null);
 
         /// <summary>
         /// Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned
@@ -3865,8 +3865,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="expand"> (optional)</param>
-        /// <returns>Task of BusinessUnit</returns>
-        System.Threading.Tasks.Task<BusinessUnit> GetWorkforcemanagementBusinessunitAsync (string businessUnitId, List<string> expand = null);
+        /// <returns>Task of BusinessUnitResponse</returns>
+        System.Threading.Tasks.Task<BusinessUnitResponse> GetWorkforcemanagementBusinessunitAsync (string businessUnitId, List<string> expand = null);
 
         /// <summary>
         /// Get business unit
@@ -3877,8 +3877,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="expand"> (optional)</param>
-        /// <returns>Task of ApiResponse (BusinessUnit)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BusinessUnit>> GetWorkforcemanagementBusinessunitAsyncWithHttpInfo (string businessUnitId, List<string> expand = null);
+        /// <returns>Task of ApiResponse (BusinessUnitResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BusinessUnitResponse>> GetWorkforcemanagementBusinessunitAsyncWithHttpInfo (string businessUnitId, List<string> expand = null);
 
         /// <summary>
         /// Get an activity code
@@ -5299,8 +5299,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>Task of BusinessUnit</returns>
-        System.Threading.Tasks.Task<BusinessUnit> PatchWorkforcemanagementBusinessunitAsync (string businessUnitId, UpdateBusinessUnitRequest body = null);
+        /// <returns>Task of BusinessUnitResponse</returns>
+        System.Threading.Tasks.Task<BusinessUnitResponse> PatchWorkforcemanagementBusinessunitAsync (string businessUnitId, UpdateBusinessUnitRequest body = null);
 
         /// <summary>
         /// Update business unit
@@ -5311,8 +5311,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>Task of ApiResponse (BusinessUnit)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BusinessUnit>> PatchWorkforcemanagementBusinessunitAsyncWithHttpInfo (string businessUnitId, UpdateBusinessUnitRequest body = null);
+        /// <returns>Task of ApiResponse (BusinessUnitResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BusinessUnitResponse>> PatchWorkforcemanagementBusinessunitAsyncWithHttpInfo (string businessUnitId, UpdateBusinessUnitRequest body = null);
 
         /// <summary>
         /// Update an activity code
@@ -6164,8 +6164,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
-        /// <returns>Task of BusinessUnit</returns>
-        System.Threading.Tasks.Task<BusinessUnit> PostWorkforcemanagementBusinessunitsAsync (CreateBusinessUnitRequest body = null);
+        /// <returns>Task of BusinessUnitResponse</returns>
+        System.Threading.Tasks.Task<BusinessUnitResponse> PostWorkforcemanagementBusinessunitsAsync (CreateBusinessUnitRequest body = null);
 
         /// <summary>
         /// Add a new business unit
@@ -6175,8 +6175,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
-        /// <returns>Task of ApiResponse (BusinessUnit)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BusinessUnit>> PostWorkforcemanagementBusinessunitsAsyncWithHttpInfo (CreateBusinessUnitRequest body = null);
+        /// <returns>Task of ApiResponse (BusinessUnitResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BusinessUnitResponse>> PostWorkforcemanagementBusinessunitsAsyncWithHttpInfo (CreateBusinessUnitRequest body = null);
 
         /// <summary>
         /// Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned
@@ -10502,10 +10502,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="expand"> (optional)</param>
-        /// <returns>BusinessUnit</returns>
-        public BusinessUnit GetWorkforcemanagementBusinessunit (string businessUnitId, List<string> expand = null)
+        /// <returns>BusinessUnitResponse</returns>
+        public BusinessUnitResponse GetWorkforcemanagementBusinessunit (string businessUnitId, List<string> expand = null)
         {
-             ApiResponse<BusinessUnit> localVarResponse = GetWorkforcemanagementBusinessunitWithHttpInfo(businessUnitId, expand);
+             ApiResponse<BusinessUnitResponse> localVarResponse = GetWorkforcemanagementBusinessunitWithHttpInfo(businessUnitId, expand);
              return localVarResponse.Data;
         }
 
@@ -10515,8 +10515,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="expand"> (optional)</param>
-        /// <returns>ApiResponse of BusinessUnit</returns>
-        public ApiResponse< BusinessUnit > GetWorkforcemanagementBusinessunitWithHttpInfo (string businessUnitId, List<string> expand = null)
+        /// <returns>ApiResponse of BusinessUnitResponse</returns>
+        public ApiResponse< BusinessUnitResponse > GetWorkforcemanagementBusinessunitWithHttpInfo (string businessUnitId, List<string> expand = null)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -10585,9 +10585,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunit: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<BusinessUnit>(localVarStatusCode,
+            return new ApiResponse<BusinessUnitResponse>(localVarStatusCode,
                 localVarHeaders,
-                (BusinessUnit) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BusinessUnit)),
+                (BusinessUnitResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BusinessUnitResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -10599,10 +10599,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="expand"> (optional)</param>
-        /// <returns>Task of BusinessUnit</returns>
-        public async System.Threading.Tasks.Task<BusinessUnit> GetWorkforcemanagementBusinessunitAsync (string businessUnitId, List<string> expand = null)
+        /// <returns>Task of BusinessUnitResponse</returns>
+        public async System.Threading.Tasks.Task<BusinessUnitResponse> GetWorkforcemanagementBusinessunitAsync (string businessUnitId, List<string> expand = null)
         {
-             ApiResponse<BusinessUnit> localVarResponse = await GetWorkforcemanagementBusinessunitAsyncWithHttpInfo(businessUnitId, expand);
+             ApiResponse<BusinessUnitResponse> localVarResponse = await GetWorkforcemanagementBusinessunitAsyncWithHttpInfo(businessUnitId, expand);
              return localVarResponse.Data;
 
         }
@@ -10613,8 +10613,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="expand"> (optional)</param>
-        /// <returns>Task of ApiResponse (BusinessUnit)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BusinessUnit>> GetWorkforcemanagementBusinessunitAsyncWithHttpInfo (string businessUnitId, List<string> expand = null)
+        /// <returns>Task of ApiResponse (BusinessUnitResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<BusinessUnitResponse>> GetWorkforcemanagementBusinessunitAsyncWithHttpInfo (string businessUnitId, List<string> expand = null)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -10684,9 +10684,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementBusinessunit: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<BusinessUnit>(localVarStatusCode,
+            return new ApiResponse<BusinessUnitResponse>(localVarStatusCode,
                 localVarHeaders,
-                (BusinessUnit) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BusinessUnit)),
+                (BusinessUnitResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BusinessUnitResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -22403,10 +22403,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>BusinessUnit</returns>
-        public BusinessUnit PatchWorkforcemanagementBusinessunit (string businessUnitId, UpdateBusinessUnitRequest body = null)
+        /// <returns>BusinessUnitResponse</returns>
+        public BusinessUnitResponse PatchWorkforcemanagementBusinessunit (string businessUnitId, UpdateBusinessUnitRequest body = null)
         {
-             ApiResponse<BusinessUnit> localVarResponse = PatchWorkforcemanagementBusinessunitWithHttpInfo(businessUnitId, body);
+             ApiResponse<BusinessUnitResponse> localVarResponse = PatchWorkforcemanagementBusinessunitWithHttpInfo(businessUnitId, body);
              return localVarResponse.Data;
         }
 
@@ -22416,8 +22416,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>ApiResponse of BusinessUnit</returns>
-        public ApiResponse< BusinessUnit > PatchWorkforcemanagementBusinessunitWithHttpInfo (string businessUnitId, UpdateBusinessUnitRequest body = null)
+        /// <returns>ApiResponse of BusinessUnitResponse</returns>
+        public ApiResponse< BusinessUnitResponse > PatchWorkforcemanagementBusinessunitWithHttpInfo (string businessUnitId, UpdateBusinessUnitRequest body = null)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -22491,9 +22491,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementBusinessunit: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<BusinessUnit>(localVarStatusCode,
+            return new ApiResponse<BusinessUnitResponse>(localVarStatusCode,
                 localVarHeaders,
-                (BusinessUnit) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BusinessUnit)),
+                (BusinessUnitResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BusinessUnitResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -22505,10 +22505,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>Task of BusinessUnit</returns>
-        public async System.Threading.Tasks.Task<BusinessUnit> PatchWorkforcemanagementBusinessunitAsync (string businessUnitId, UpdateBusinessUnitRequest body = null)
+        /// <returns>Task of BusinessUnitResponse</returns>
+        public async System.Threading.Tasks.Task<BusinessUnitResponse> PatchWorkforcemanagementBusinessunitAsync (string businessUnitId, UpdateBusinessUnitRequest body = null)
         {
-             ApiResponse<BusinessUnit> localVarResponse = await PatchWorkforcemanagementBusinessunitAsyncWithHttpInfo(businessUnitId, body);
+             ApiResponse<BusinessUnitResponse> localVarResponse = await PatchWorkforcemanagementBusinessunitAsyncWithHttpInfo(businessUnitId, body);
              return localVarResponse.Data;
 
         }
@@ -22519,8 +22519,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="businessUnitId">The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
-        /// <returns>Task of ApiResponse (BusinessUnit)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BusinessUnit>> PatchWorkforcemanagementBusinessunitAsyncWithHttpInfo (string businessUnitId, UpdateBusinessUnitRequest body = null)
+        /// <returns>Task of ApiResponse (BusinessUnitResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<BusinessUnitResponse>> PatchWorkforcemanagementBusinessunitAsyncWithHttpInfo (string businessUnitId, UpdateBusinessUnitRequest body = null)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -22595,9 +22595,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PatchWorkforcemanagementBusinessunit: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<BusinessUnit>(localVarStatusCode,
+            return new ApiResponse<BusinessUnitResponse>(localVarStatusCode,
                 localVarHeaders,
-                (BusinessUnit) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BusinessUnit)),
+                (BusinessUnitResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BusinessUnitResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -29754,10 +29754,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
-        /// <returns>BusinessUnit</returns>
-        public BusinessUnit PostWorkforcemanagementBusinessunits (CreateBusinessUnitRequest body = null)
+        /// <returns>BusinessUnitResponse</returns>
+        public BusinessUnitResponse PostWorkforcemanagementBusinessunits (CreateBusinessUnitRequest body = null)
         {
-             ApiResponse<BusinessUnit> localVarResponse = PostWorkforcemanagementBusinessunitsWithHttpInfo(body);
+             ApiResponse<BusinessUnitResponse> localVarResponse = PostWorkforcemanagementBusinessunitsWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -29766,8 +29766,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
-        /// <returns>ApiResponse of BusinessUnit</returns>
-        public ApiResponse< BusinessUnit > PostWorkforcemanagementBusinessunitsWithHttpInfo (CreateBusinessUnitRequest body = null)
+        /// <returns>ApiResponse of BusinessUnitResponse</returns>
+        public ApiResponse< BusinessUnitResponse > PostWorkforcemanagementBusinessunitsWithHttpInfo (CreateBusinessUnitRequest body = null)
         { 
 
             var localVarPath = "/api/v2/workforcemanagement/businessunits";
@@ -29837,9 +29837,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunits: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<BusinessUnit>(localVarStatusCode,
+            return new ApiResponse<BusinessUnitResponse>(localVarStatusCode,
                 localVarHeaders,
-                (BusinessUnit) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BusinessUnit)),
+                (BusinessUnitResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BusinessUnitResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -29850,10 +29850,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
-        /// <returns>Task of BusinessUnit</returns>
-        public async System.Threading.Tasks.Task<BusinessUnit> PostWorkforcemanagementBusinessunitsAsync (CreateBusinessUnitRequest body = null)
+        /// <returns>Task of BusinessUnitResponse</returns>
+        public async System.Threading.Tasks.Task<BusinessUnitResponse> PostWorkforcemanagementBusinessunitsAsync (CreateBusinessUnitRequest body = null)
         {
-             ApiResponse<BusinessUnit> localVarResponse = await PostWorkforcemanagementBusinessunitsAsyncWithHttpInfo(body);
+             ApiResponse<BusinessUnitResponse> localVarResponse = await PostWorkforcemanagementBusinessunitsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -29863,8 +29863,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
-        /// <returns>Task of ApiResponse (BusinessUnit)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BusinessUnit>> PostWorkforcemanagementBusinessunitsAsyncWithHttpInfo (CreateBusinessUnitRequest body = null)
+        /// <returns>Task of ApiResponse (BusinessUnitResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<BusinessUnitResponse>> PostWorkforcemanagementBusinessunitsAsyncWithHttpInfo (CreateBusinessUnitRequest body = null)
         { 
 
             var localVarPath = "/api/v2/workforcemanagement/businessunits";
@@ -29934,9 +29934,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementBusinessunits: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<BusinessUnit>(localVarStatusCode,
+            return new ApiResponse<BusinessUnitResponse>(localVarStatusCode,
                 localVarHeaders,
-                (BusinessUnit) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BusinessUnit)),
+                (BusinessUnitResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BusinessUnitResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

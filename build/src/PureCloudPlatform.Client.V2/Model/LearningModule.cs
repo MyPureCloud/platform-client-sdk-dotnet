@@ -79,6 +79,33 @@ namespace PureCloudPlatform.Client.V2.Model
             Assessment
         }
         /// <summary>
+        /// The mode of archival for learning module
+        /// </summary>
+        /// <value>The mode of archival for learning module</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ArchivalModeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Graceful for "Graceful"
+            /// </summary>
+            [EnumMember(Value = "Graceful")]
+            Graceful,
+            
+            /// <summary>
+            /// Enum Immediate for "Immediate"
+            /// </summary>
+            [EnumMember(Value = "Immediate")]
+            Immediate
+        }
+        /// <summary>
         /// The source of the learning module
         /// </summary>
         /// <value>The source of the learning module</value>
@@ -90,6 +117,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The type for the learning module</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+        /// <summary>
+        /// The mode of archival for learning module
+        /// </summary>
+        /// <value>The mode of archival for learning module</value>
+        [DataMember(Name="archivalMode", EmitDefaultValue=false)]
+        public ArchivalModeEnum? ArchivalMode { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="LearningModule" /> class.
@@ -107,7 +140,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AssessmentForm">The assessment form for learning module.</param>
         /// <param name="SummaryData">The learning module summary data.</param>
         /// <param name="CoverArt">The cover art for the learning module.</param>
-        public LearningModule(string Name = null, string Description = null, int? CompletionTimeInDays = null, TypeEnum? Type = null, List<LearningModuleInformStep> InformSteps = null, AssessmentForm AssessmentForm = null, LearningModuleSummary SummaryData = null, LearningModuleCoverArtResponse CoverArt = null)
+        /// <param name="ArchivalMode">The mode of archival for learning module.</param>
+        public LearningModule(string Name = null, string Description = null, int? CompletionTimeInDays = null, TypeEnum? Type = null, List<LearningModuleInformStep> InformSteps = null, AssessmentForm AssessmentForm = null, LearningModuleSummary SummaryData = null, LearningModuleCoverArtResponse CoverArt = null, ArchivalModeEnum? ArchivalMode = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -117,6 +151,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AssessmentForm = AssessmentForm;
             this.SummaryData = SummaryData;
             this.CoverArt = CoverArt;
+            this.ArchivalMode = ArchivalMode;
             
         }
         
@@ -287,6 +322,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public LearningModuleCoverArtResponse CoverArt { get; set; }
 
 
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -316,6 +353,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AssessmentForm: ").Append(AssessmentForm).Append("\n");
             sb.Append("  SummaryData: ").Append(SummaryData).Append("\n");
             sb.Append("  CoverArt: ").Append(CoverArt).Append("\n");
+            sb.Append("  ArchivalMode: ").Append(ArchivalMode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -455,6 +493,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CoverArt == other.CoverArt ||
                     this.CoverArt != null &&
                     this.CoverArt.Equals(other.CoverArt)
+                ) &&
+                (
+                    this.ArchivalMode == other.ArchivalMode ||
+                    this.ArchivalMode != null &&
+                    this.ArchivalMode.Equals(other.ArchivalMode)
                 );
         }
 
@@ -528,6 +571,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.CoverArt != null)
                     hash = hash * 59 + this.CoverArt.GetHashCode();
+
+                if (this.ArchivalMode != null)
+                    hash = hash * 59 + this.ArchivalMode.GetHashCode();
 
                 return hash;
             }

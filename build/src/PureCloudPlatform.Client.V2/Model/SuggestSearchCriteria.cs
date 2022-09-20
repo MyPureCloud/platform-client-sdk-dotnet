@@ -63,21 +63,21 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EndValue">The end value of the range. This field is used for range search types..</param>
         /// <param name="Values">A list of values for the search to match against.</param>
         /// <param name="StartValue">The start value of the range. This field is used for range search types..</param>
-        /// <param name="Fields">Field names to search against.</param>
         /// <param name="Value">A value for the search to match against.</param>
         /// <param name="Operator">How to apply this search criteria against other criteria.</param>
         /// <param name="Group">Groups multiple conditions.</param>
         /// <param name="DateFormat">Set date format for criteria values when using date range search type.  Supports Java date format syntax, example yyyy-MM-dd'T'HH:mm:ss.SSSX..</param>
-        public SuggestSearchCriteria(string EndValue = null, List<string> Values = null, string StartValue = null, List<string> Fields = null, string Value = null, OperatorEnum? Operator = null, List<SuggestSearchCriteria> Group = null, string DateFormat = null)
+        /// <param name="Fields">Field names to search against.</param>
+        public SuggestSearchCriteria(string EndValue = null, List<string> Values = null, string StartValue = null, string Value = null, OperatorEnum? Operator = null, List<SuggestSearchCriteria> Group = null, string DateFormat = null, List<string> Fields = null)
         {
             this.EndValue = EndValue;
             this.Values = Values;
             this.StartValue = StartValue;
-            this.Fields = Fields;
             this.Value = Value;
             this.Operator = Operator;
             this.Group = Group;
             this.DateFormat = DateFormat;
+            this.Fields = Fields;
             
         }
         
@@ -111,15 +111,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Field names to search against
-        /// </summary>
-        /// <value>Field names to search against</value>
-        [DataMember(Name="fields", EmitDefaultValue=false)]
-        public List<string> Fields { get; set; }
-
-
-
-        /// <summary>
         /// A value for the search to match against
         /// </summary>
         /// <value>A value for the search to match against</value>
@@ -147,6 +138,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string DateFormat { get; set; }
 
 
+
+        /// <summary>
+        /// Field names to search against
+        /// </summary>
+        /// <value>Field names to search against</value>
+        [DataMember(Name="fields", EmitDefaultValue=false)]
+        public List<string> Fields { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -159,11 +159,11 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EndValue: ").Append(EndValue).Append("\n");
             sb.Append("  Values: ").Append(Values).Append("\n");
             sb.Append("  StartValue: ").Append(StartValue).Append("\n");
-            sb.Append("  Fields: ").Append(Fields).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Operator: ").Append(Operator).Append("\n");
             sb.Append("  Group: ").Append(Group).Append("\n");
             sb.Append("  DateFormat: ").Append(DateFormat).Append("\n");
+            sb.Append("  Fields: ").Append(Fields).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -220,11 +220,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.StartValue.Equals(other.StartValue)
                 ) &&
                 (
-                    this.Fields == other.Fields ||
-                    this.Fields != null &&
-                    this.Fields.SequenceEqual(other.Fields)
-                ) &&
-                (
                     this.Value == other.Value ||
                     this.Value != null &&
                     this.Value.Equals(other.Value)
@@ -243,6 +238,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateFormat == other.DateFormat ||
                     this.DateFormat != null &&
                     this.DateFormat.Equals(other.DateFormat)
+                ) &&
+                (
+                    this.Fields == other.Fields ||
+                    this.Fields != null &&
+                    this.Fields.SequenceEqual(other.Fields)
                 );
         }
 
@@ -266,9 +266,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.StartValue != null)
                     hash = hash * 59 + this.StartValue.GetHashCode();
 
-                if (this.Fields != null)
-                    hash = hash * 59 + this.Fields.GetHashCode();
-
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
 
@@ -280,6 +277,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DateFormat != null)
                     hash = hash * 59 + this.DateFormat.GetHashCode();
+
+                if (this.Fields != null)
+                    hash = hash * 59 + this.Fields.GetHashCode();
 
                 return hash;
             }

@@ -167,6 +167,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+        /// <summary>
+        /// The version of the action template.
+        /// </summary>
+        /// <value>The version of the action template.</value>
+        [DataMember(Name="version", EmitDefaultValue=false)]
+        public int? Version { get; private set; }
+
+
+
 
 
 
@@ -218,6 +227,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  ContentOffer: ").Append(ContentOffer).Append("\n");
@@ -280,6 +290,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Description.Equals(other.Description)
                 ) &&
                 (
+                    this.Version == other.Version ||
+                    this.Version != null &&
+                    this.Version.Equals(other.Version)
+                ) &&
+                (
                     this.MediaType == other.MediaType ||
                     this.MediaType != null &&
                     this.MediaType.Equals(other.MediaType)
@@ -330,6 +345,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
+
+                if (this.Version != null)
+                    hash = hash * 59 + this.Version.GetHashCode();
 
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();

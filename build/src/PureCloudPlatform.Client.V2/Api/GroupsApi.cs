@@ -246,9 +246,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="id">id (optional)</param>
+        /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>GroupProfileEntityListing</returns>
-        GroupProfileEntityListing GetProfilesGroups (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null);
+        GroupProfileEntityListing GetProfilesGroups (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null);
 
         /// <summary>
         /// Get group profile listing
@@ -260,9 +261,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="id">id (optional)</param>
+        /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>ApiResponse of GroupProfileEntityListing</returns>
-        ApiResponse<GroupProfileEntityListing> GetProfilesGroupsWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null);
+        ApiResponse<GroupProfileEntityListing> GetProfilesGroupsWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null);
 
         /// <summary>
         /// Add members
@@ -590,9 +592,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="id">id (optional)</param>
+        /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of GroupProfileEntityListing</returns>
-        System.Threading.Tasks.Task<GroupProfileEntityListing> GetProfilesGroupsAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null);
+        System.Threading.Tasks.Task<GroupProfileEntityListing> GetProfilesGroupsAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null);
 
         /// <summary>
         /// Get group profile listing
@@ -604,9 +607,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="id">id (optional)</param>
+        /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of ApiResponse (GroupProfileEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GroupProfileEntityListing>> GetProfilesGroupsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<GroupProfileEntityListing>> GetProfilesGroupsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null);
 
         /// <summary>
         /// Add members
@@ -2582,11 +2586,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="id">id (optional)</param>
+        /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>GroupProfileEntityListing</returns>
-        public GroupProfileEntityListing GetProfilesGroups (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null)
+        public GroupProfileEntityListing GetProfilesGroups (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null)
         {
-             ApiResponse<GroupProfileEntityListing> localVarResponse = GetProfilesGroupsWithHttpInfo(pageSize, pageNumber, id, sortOrder);
+             ApiResponse<GroupProfileEntityListing> localVarResponse = GetProfilesGroupsWithHttpInfo(pageSize, pageNumber, id, jabberId, sortOrder);
              return localVarResponse.Data;
         }
 
@@ -2597,9 +2602,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="id">id (optional)</param>
+        /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>ApiResponse of GroupProfileEntityListing</returns>
-        public ApiResponse< GroupProfileEntityListing > GetProfilesGroupsWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null)
+        public ApiResponse< GroupProfileEntityListing > GetProfilesGroupsWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/profiles/groups";
@@ -2637,6 +2643,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (jabberId != null) jabberId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("jabberId", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 
             // Header params
@@ -2682,11 +2689,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="id">id (optional)</param>
+        /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of GroupProfileEntityListing</returns>
-        public async System.Threading.Tasks.Task<GroupProfileEntityListing> GetProfilesGroupsAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<GroupProfileEntityListing> GetProfilesGroupsAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null)
         {
-             ApiResponse<GroupProfileEntityListing> localVarResponse = await GetProfilesGroupsAsyncWithHttpInfo(pageSize, pageNumber, id, sortOrder);
+             ApiResponse<GroupProfileEntityListing> localVarResponse = await GetProfilesGroupsAsyncWithHttpInfo(pageSize, pageNumber, id, jabberId, sortOrder);
              return localVarResponse.Data;
 
         }
@@ -2698,9 +2706,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="id">id (optional)</param>
+        /// <param name="jabberId">A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of ApiResponse (GroupProfileEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GroupProfileEntityListing>> GetProfilesGroupsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<GroupProfileEntityListing>> GetProfilesGroupsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/profiles/groups";
@@ -2738,6 +2747,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (jabberId != null) jabberId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("jabberId", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 
             // Header params

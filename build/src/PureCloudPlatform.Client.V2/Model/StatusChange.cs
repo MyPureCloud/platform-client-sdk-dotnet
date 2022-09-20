@@ -502,6 +502,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Search,
             
             /// <summary>
+            /// Enum Skills for "skills"
+            /// </summary>
+            [EnumMember(Value = "skills")]
+            Skills,
+            
+            /// <summary>
             /// Enum Speechandtextanalytics for "speech.and.text.analytics"
             /// </summary>
             [EnumMember(Value = "speech.and.text.analytics")]

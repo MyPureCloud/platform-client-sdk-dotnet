@@ -358,6 +358,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Tdialing,
             
             /// <summary>
+            /// Enum Tfirstconnect for "tFirstConnect"
+            /// </summary>
+            [EnumMember(Value = "tFirstConnect")]
+            Tfirstconnect,
+            
+            /// <summary>
+            /// Enum Tfirstdial for "tFirstDial"
+            /// </summary>
+            [EnumMember(Value = "tFirstDial")]
+            Tfirstdial,
+            
+            /// <summary>
             /// Enum Tflow for "tFlow"
             /// </summary>
             [EnumMember(Value = "tFlow")]

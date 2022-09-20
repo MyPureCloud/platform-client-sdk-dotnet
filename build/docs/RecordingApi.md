@@ -2622,8 +2622,10 @@ Submit a batch download request for recordings. Recordings in response will be i
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* recording:recording:view
+* recording:recordingSegment:view
 
 ### Example
 ```{"language":"csharp"}

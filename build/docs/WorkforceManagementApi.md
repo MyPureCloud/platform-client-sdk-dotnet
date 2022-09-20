@@ -1389,7 +1389,7 @@ This endpoint does require any parameters.
 
 <a name="getworkforcemanagementbusinessunit"></a>
 
-## [**BusinessUnit**](BusinessUnit.html) GetWorkforcemanagementBusinessunit (string businessUnitId, List<string> expand = null)
+## [**BusinessUnitResponse**](BusinessUnitResponse.html) GetWorkforcemanagementBusinessunit (string businessUnitId, List<string> expand = null)
 
 
 
@@ -1494,7 +1494,7 @@ namespace Example
             try
             { 
                 // Get business unit
-                BusinessUnit result = apiInstance.GetWorkforcemanagementBusinessunit(businessUnitId, expand);
+                BusinessUnitResponse result = apiInstance.GetWorkforcemanagementBusinessunit(businessUnitId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1517,7 +1517,7 @@ namespace Example
 
 ### Return type
 
-[**BusinessUnit**](BusinessUnit.html)
+[**BusinessUnitResponse**](BusinessUnitResponse.html)
 
 <a name="getworkforcemanagementbusinessunitactivitycode"></a>
 
@@ -5615,7 +5615,7 @@ namespace Example
 
 <a name="patchworkforcemanagementbusinessunit"></a>
 
-## [**BusinessUnit**](BusinessUnit.html) PatchWorkforcemanagementBusinessunit (string businessUnitId, UpdateBusinessUnitRequest body = null)
+## [**BusinessUnitResponse**](BusinessUnitResponse.html) PatchWorkforcemanagementBusinessunit (string businessUnitId, UpdateBusinessUnitRequest body = null)
 
 
 
@@ -5655,7 +5655,7 @@ namespace Example
             try
             { 
                 // Update business unit
-                BusinessUnit result = apiInstance.PatchWorkforcemanagementBusinessunit(businessUnitId, body);
+                BusinessUnitResponse result = apiInstance.PatchWorkforcemanagementBusinessunit(businessUnitId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5678,7 +5678,7 @@ namespace Example
 
 ### Return type
 
-[**BusinessUnit**](BusinessUnit.html)
+[**BusinessUnitResponse**](BusinessUnitResponse.html)
 
 <a name="patchworkforcemanagementbusinessunitactivitycode"></a>
 
@@ -7915,7 +7915,7 @@ namespace Example
 
 <a name="postworkforcemanagementbusinessunits"></a>
 
-## [**BusinessUnit**](BusinessUnit.html) PostWorkforcemanagementBusinessunits (CreateBusinessUnitRequest body = null)
+## [**BusinessUnitResponse**](BusinessUnitResponse.html) PostWorkforcemanagementBusinessunits (CreateBusinessUnitRequest body = null)
 
 
 
@@ -7956,7 +7956,7 @@ namespace Example
             try
             { 
                 // Add a new business unit
-                BusinessUnit result = apiInstance.PostWorkforcemanagementBusinessunits(body);
+                BusinessUnitResponse result = apiInstance.PostWorkforcemanagementBusinessunits(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -7978,7 +7978,7 @@ namespace Example
 
 ### Return type
 
-[**BusinessUnit**](BusinessUnit.html)
+[**BusinessUnitResponse**](BusinessUnitResponse.html)
 
 <a name="postworkforcemanagementcalendarurlics"></a>
 

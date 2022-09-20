@@ -24,7 +24,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">The name of the business unit.</param>
         /// <param name="DivisionId">The ID of the division to which the business unit should be moved.</param>
         /// <param name="Settings">Configuration for the business unit.</param>
-        public UpdateBusinessUnitRequest(string Name = null, string DivisionId = null, UpdateBusinessUnitSettings Settings = null)
+        public UpdateBusinessUnitRequest(string Name = null, string DivisionId = null, UpdateBusinessUnitSettingsRequest Settings = null)
         {
             this.Name = Name;
             this.DivisionId = DivisionId;
@@ -57,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Configuration for the business unit</value>
         [DataMember(Name="settings", EmitDefaultValue=false)]
-        public UpdateBusinessUnitSettings Settings { get; set; }
+        public UpdateBusinessUnitSettingsRequest Settings { get; set; }
 
 
         /// <summary>

@@ -33,8 +33,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetIntegrationsCredential**](IntegrationsApi.html#getintegrationscredential) | **GET** /api/v2/integrations/credentials/{credentialId} | Get a single credential with sensitive fields redacted |
 | [**GetIntegrationsCredentials**](IntegrationsApi.html#getintegrationscredentials) | **GET** /api/v2/integrations/credentials | List multiple sets of credentials |
 | [**GetIntegrationsCredentialsTypes**](IntegrationsApi.html#getintegrationscredentialstypes) | **GET** /api/v2/integrations/credentials/types | List all credential types |
-| [**GetIntegrationsEventlog**](IntegrationsApi.html#getintegrationseventlog) | **GET** /api/v2/integrations/eventlog | List all events |
-| [**GetIntegrationsEventlogEventId**](IntegrationsApi.html#getintegrationseventlogeventid) | **GET** /api/v2/integrations/eventlog/{eventId} | Get a single event |
 | [**GetIntegrationsSpeechDialogflowAgent**](IntegrationsApi.html#getintegrationsspeechdialogflowagent) | **GET** /api/v2/integrations/speech/dialogflow/agents/{agentId} | Get details about a Dialogflow agent |
 | [**GetIntegrationsSpeechDialogflowAgents**](IntegrationsApi.html#getintegrationsspeechdialogflowagents) | **GET** /api/v2/integrations/speech/dialogflow/agents | Get a list of Dialogflow agents in the customers&#39; Google accounts |
 | [**GetIntegrationsSpeechLexBotAlias**](IntegrationsApi.html#getintegrationsspeechlexbotalias) | **GET** /api/v2/integrations/speech/lex/bot/alias/{aliasId} | Get details about a Lex bot alias |
@@ -61,7 +59,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostIntegrationsActions**](IntegrationsApi.html#postintegrationsactions) | **POST** /api/v2/integrations/actions | Create a new Action |
 | [**PostIntegrationsActionsDrafts**](IntegrationsApi.html#postintegrationsactionsdrafts) | **POST** /api/v2/integrations/actions/drafts | Create a new Draft |
 | [**PostIntegrationsCredentials**](IntegrationsApi.html#postintegrationscredentials) | **POST** /api/v2/integrations/credentials | Create a set of credentials |
-| [**PostIntegrationsWorkforcemanagementVendorconnection**](IntegrationsApi.html#postintegrationsworkforcemanagementvendorconnection) | **POST** /api/v2/integrations/workforcemanagement/vendorconnection | Add a vendor connection |
 | [**PutIntegrationConfigCurrent**](IntegrationsApi.html#putintegrationconfigcurrent) | **PUT** /api/v2/integrations/{integrationId}/config/current | Update integration configuration. |
 | [**PutIntegrationsBotconnectorIntegrationIdBots**](IntegrationsApi.html#putintegrationsbotconnectorintegrationidbots) | **PUT** /api/v2/integrations/botconnector/{integrationId}/bots | Set a list of botConnector bots plus versions for this integration |
 | [**PutIntegrationsCredential**](IntegrationsApi.html#putintegrationscredential) | **PUT** /api/v2/integrations/credentials/{credentialId} | Update a set of credentials |
@@ -1882,146 +1879,6 @@ This endpoint does require any parameters.
 
 [**CredentialTypeListing**](CredentialTypeListing.html)
 
-<a name="getintegrationseventlog"></a>
-
-## [**IntegrationEventEntityListing**](IntegrationEventEntityListing.html) GetIntegrationsEventlog (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string entityId = null)
-
-
-
-List all events
-
-
-
-Requires ANY permissions: 
-
-* integrations:integration:view
-* bridge:notification:view
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetIntegrationsEventlogExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new IntegrationsApi();
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to "timestamp")
-            var sortOrder = sortOrder_example;  // string | Order by (optional)  (default to "descending")
-            var entityId = entityId_example;  // string | Include only events with this entity ID (optional) 
-
-            try
-            { 
-                // List all events
-                IntegrationEventEntityListing result = apiInstance.GetIntegrationsEventlog(pageSize, pageNumber, sortBy, sortOrder, entityId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsEventlog: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **sortBy** | **string**| Sort by | [optional] [default to "timestamp"] |
-| **sortOrder** | **string**| Order by | [optional] [default to "descending"] |
-| **entityId** | **string**| Include only events with this entity ID | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-[**IntegrationEventEntityListing**](IntegrationEventEntityListing.html)
-
-<a name="getintegrationseventlogeventid"></a>
-
-## [**IntegrationEvent**](IntegrationEvent.html) GetIntegrationsEventlogEventId (string eventId)
-
-
-
-Get a single event
-
-
-
-Requires ANY permissions: 
-
-* integrations:integration:view
-* bridge:notification:view
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetIntegrationsEventlogEventIdExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new IntegrationsApi();
-            var eventId = eventId_example;  // string | Event Id
-
-            try
-            { 
-                // Get a single event
-                IntegrationEvent result = apiInstance.GetIntegrationsEventlogEventId(eventId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsEventlogEventId: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **eventId** | **string**| Event Id |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**IntegrationEvent**](IntegrationEvent.html)
-
 <a name="getintegrationsspeechdialogflowagent"></a>
 
 ## [**DialogflowAgent**](DialogflowAgent.html) GetIntegrationsSpeechDialogflowAgent (string agentId)
@@ -3788,70 +3645,6 @@ namespace Example
 ### Return type
 
 [**CredentialInfo**](CredentialInfo.html)
-
-<a name="postintegrationsworkforcemanagementvendorconnection"></a>
-
-## [**UserActionCategoryEntityListing**](UserActionCategoryEntityListing.html) PostIntegrationsWorkforcemanagementVendorconnection (VendorConnectionRequest body = null)
-
-
-
-Add a vendor connection
-
-
-
-Requires NO permissions: 
-
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PostIntegrationsWorkforcemanagementVendorconnectionExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new IntegrationsApi();
-            var body = new VendorConnectionRequest(); // VendorConnectionRequest |  (optional) 
-
-            try
-            { 
-                // Add a vendor connection
-                UserActionCategoryEntityListing result = apiInstance.PostIntegrationsWorkforcemanagementVendorconnection(body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling IntegrationsApi.PostIntegrationsWorkforcemanagementVendorconnection: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **body** | [**VendorConnectionRequest**](VendorConnectionRequest.html)|  | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-[**UserActionCategoryEntityListing**](UserActionCategoryEntityListing.html)
 
 <a name="putintegrationconfigcurrent"></a>
 

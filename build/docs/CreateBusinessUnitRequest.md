@@ -9,7 +9,7 @@ title: CreateBusinessUnitRequest
 |------------ | ------------- | ------------- | -------------|
 | **Name** | **string** | The name of the business unit | |
 | **DivisionId** | **string** | The ID of the division to which the business unit should be added | |
-| **Settings** | [**CreateBusinessUnitSettings**](CreateBusinessUnitSettings.html) | Configuration for the business unit | |
+| **Settings** | [**CreateBusinessUnitSettingsRequest**](CreateBusinessUnitSettingsRequest.html) | Configuration for the business unit | |
 {: class="table table-striped"}
 
 

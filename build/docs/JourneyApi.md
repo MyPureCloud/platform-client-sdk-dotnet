@@ -13,6 +13,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteJourneySegment**](JourneyApi.html#deletejourneysegment) | **DELETE** /api/v2/journey/segments/{segmentId} | Delete a segment. |
 | [**GetJourneyActionmap**](JourneyApi.html#getjourneyactionmap) | **GET** /api/v2/journey/actionmaps/{actionMapId} | Retrieve a single action map. |
 | [**GetJourneyActionmaps**](JourneyApi.html#getjourneyactionmaps) | **GET** /api/v2/journey/actionmaps | Retrieve all action maps. |
+| [**GetJourneyActionmapsEstimatesJob**](JourneyApi.html#getjourneyactionmapsestimatesjob) | **GET** /api/v2/journey/actionmaps/estimates/jobs/{jobId} | Get status of job. |
+| [**GetJourneyActionmapsEstimatesJobResults**](JourneyApi.html#getjourneyactionmapsestimatesjobresults) | **GET** /api/v2/journey/actionmaps/estimates/jobs/{jobId}/results | Get estimates from completed job. |
 | [**GetJourneyActiontarget**](JourneyApi.html#getjourneyactiontarget) | **GET** /api/v2/journey/actiontargets/{actionTargetId} | Retrieve a single action target. |
 | [**GetJourneyActiontargets**](JourneyApi.html#getjourneyactiontargets) | **GET** /api/v2/journey/actiontargets | Retrieve all action targets. |
 | [**GetJourneyActiontemplate**](JourneyApi.html#getjourneyactiontemplate) | **GET** /api/v2/journey/actiontemplates/{actionTemplateId} | Retrieve a single action template. |
@@ -30,6 +32,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchJourneySegment**](JourneyApi.html#patchjourneysegment) | **PATCH** /api/v2/journey/segments/{segmentId} | Update a segment. |
 | [**PostAnalyticsJourneysAggregatesQuery**](JourneyApi.html#postanalyticsjourneysaggregatesquery) | **POST** /api/v2/analytics/journeys/aggregates/query | Query for journey aggregates |
 | [**PostJourneyActionmaps**](JourneyApi.html#postjourneyactionmaps) | **POST** /api/v2/journey/actionmaps | Create an action map. |
+| [**PostJourneyActionmapsEstimatesJobs**](JourneyApi.html#postjourneyactionmapsestimatesjobs) | **POST** /api/v2/journey/actionmaps/estimates/jobs | Query for estimates |
 | [**PostJourneyActiontemplates**](JourneyApi.html#postjourneyactiontemplates) | **POST** /api/v2/journey/actiontemplates | Create a single action template. |
 | [**PostJourneyOutcomes**](JourneyApi.html#postjourneyoutcomes) | **POST** /api/v2/journey/outcomes | Create an outcome. |
 | [**PostJourneySegments**](JourneyApi.html#postjourneysegments) | **POST** /api/v2/journey/segments | Create a segment. |
@@ -436,6 +439,136 @@ namespace Example
 ### Return type
 
 [**ActionMapListing**](ActionMapListing.html)
+
+<a name="getjourneyactionmapsestimatesjob"></a>
+
+## **string** GetJourneyActionmapsEstimatesJob (string jobId)
+
+
+
+Get status of job.
+
+
+
+Requires ALL permissions: 
+
+* journey:actionmapEstimateJob:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetJourneyActionmapsEstimatesJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var jobId = jobId_example;  // string | ID of the job.
+
+            try
+            { 
+                // Get status of job.
+                string result = apiInstance.GetJourneyActionmapsEstimatesJob(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.GetJourneyActionmapsEstimatesJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| ID of the job. |  |
+{: class="table table-striped"}
+
+### Return type
+
+**string**
+
+<a name="getjourneyactionmapsestimatesjobresults"></a>
+
+## [**ActionMapEstimateResult**](ActionMapEstimateResult.html) GetJourneyActionmapsEstimatesJobResults (string jobId)
+
+
+
+Get estimates from completed job.
+
+
+
+Requires ALL permissions: 
+
+* journey:actionmapEstimate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetJourneyActionmapsEstimatesJobResultsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var jobId = jobId_example;  // string | ID of the job.
+
+            try
+            { 
+                // Get estimates from completed job.
+                ActionMapEstimateResult result = apiInstance.GetJourneyActionmapsEstimatesJobResults(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.GetJourneyActionmapsEstimatesJobResults: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| ID of the job. |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ActionMapEstimateResult**](ActionMapEstimateResult.html)
 
 <a name="getjourneyactiontarget"></a>
 
@@ -1588,6 +1721,71 @@ namespace Example
 ### Return type
 
 [**ActionMap**](ActionMap.html)
+
+<a name="postjourneyactionmapsestimatesjobs"></a>
+
+## [**EstimateJobAsyncResponse**](EstimateJobAsyncResponse.html) PostJourneyActionmapsEstimatesJobs (ActionMapEstimateRequest body)
+
+
+
+Query for estimates
+
+
+
+Requires ANY permissions: 
+
+* journey:actionmapEstimateJob:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostJourneyActionmapsEstimatesJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var body = new ActionMapEstimateRequest(); // ActionMapEstimateRequest | audience estimator request
+
+            try
+            { 
+                // Query for estimates
+                EstimateJobAsyncResponse result = apiInstance.PostJourneyActionmapsEstimatesJobs(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.PostJourneyActionmapsEstimatesJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ActionMapEstimateRequest**](ActionMapEstimateRequest.html)| audience estimator request |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EstimateJobAsyncResponse**](EstimateJobAsyncResponse.html)
 
 <a name="postjourneyactiontemplates"></a>
 

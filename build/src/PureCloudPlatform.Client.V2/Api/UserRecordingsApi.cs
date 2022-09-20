@@ -71,8 +71,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
+        /// <param name="async">When set to true, api will return 202 response until the recording is ready for download (optional)</param>
         /// <returns>DownloadResponse</returns>
-        DownloadResponse GetUserrecordingMedia (string recordingId, string formatId = null);
+        DownloadResponse GetUserrecordingMedia (string recordingId, string formatId = null, bool? async = null);
 
         /// <summary>
         /// Download a user recording.
@@ -83,8 +84,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
+        /// <param name="async">When set to true, api will return 202 response until the recording is ready for download (optional)</param>
         /// <returns>ApiResponse of DownloadResponse</returns>
-        ApiResponse<DownloadResponse> GetUserrecordingMediaWithHttpInfo (string recordingId, string formatId = null);
+        ApiResponse<DownloadResponse> GetUserrecordingMediaWithHttpInfo (string recordingId, string formatId = null, bool? async = null);
 
         /// <summary>
         /// Get a list of user recordings.
@@ -217,8 +219,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
+        /// <param name="async">When set to true, api will return 202 response until the recording is ready for download (optional)</param>
         /// <returns>Task of DownloadResponse</returns>
-        System.Threading.Tasks.Task<DownloadResponse> GetUserrecordingMediaAsync (string recordingId, string formatId = null);
+        System.Threading.Tasks.Task<DownloadResponse> GetUserrecordingMediaAsync (string recordingId, string formatId = null, bool? async = null);
 
         /// <summary>
         /// Download a user recording.
@@ -229,8 +232,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
+        /// <param name="async">When set to true, api will return 202 response until the recording is ready for download (optional)</param>
         /// <returns>Task of ApiResponse (DownloadResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DownloadResponse>> GetUserrecordingMediaAsyncWithHttpInfo (string recordingId, string formatId = null);
+        System.Threading.Tasks.Task<ApiResponse<DownloadResponse>> GetUserrecordingMediaAsyncWithHttpInfo (string recordingId, string formatId = null, bool? async = null);
 
         /// <summary>
         /// Get a list of user recordings.
@@ -788,10 +792,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
+        /// <param name="async">When set to true, api will return 202 response until the recording is ready for download (optional)</param>
         /// <returns>DownloadResponse</returns>
-        public DownloadResponse GetUserrecordingMedia (string recordingId, string formatId = null)
+        public DownloadResponse GetUserrecordingMedia (string recordingId, string formatId = null, bool? async = null)
         {
-             ApiResponse<DownloadResponse> localVarResponse = GetUserrecordingMediaWithHttpInfo(recordingId, formatId);
+             ApiResponse<DownloadResponse> localVarResponse = GetUserrecordingMediaWithHttpInfo(recordingId, formatId, async);
              return localVarResponse.Data;
         }
 
@@ -801,8 +806,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
+        /// <param name="async">When set to true, api will return 202 response until the recording is ready for download (optional)</param>
         /// <returns>ApiResponse of DownloadResponse</returns>
-        public ApiResponse< DownloadResponse > GetUserrecordingMediaWithHttpInfo (string recordingId, string formatId = null)
+        public ApiResponse< DownloadResponse > GetUserrecordingMediaWithHttpInfo (string recordingId, string formatId = null, bool? async = null)
         { 
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
@@ -842,6 +848,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (formatId != null) localVarQueryParams.Add(new Tuple<string, string>("formatId", this.Configuration.ApiClient.ParameterToString(formatId)));
+            if (async != null) localVarQueryParams.Add(new Tuple<string, string>("async", this.Configuration.ApiClient.ParameterToString(async)));
 
             // Header params
 
@@ -885,10 +892,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
+        /// <param name="async">When set to true, api will return 202 response until the recording is ready for download (optional)</param>
         /// <returns>Task of DownloadResponse</returns>
-        public async System.Threading.Tasks.Task<DownloadResponse> GetUserrecordingMediaAsync (string recordingId, string formatId = null)
+        public async System.Threading.Tasks.Task<DownloadResponse> GetUserrecordingMediaAsync (string recordingId, string formatId = null, bool? async = null)
         {
-             ApiResponse<DownloadResponse> localVarResponse = await GetUserrecordingMediaAsyncWithHttpInfo(recordingId, formatId);
+             ApiResponse<DownloadResponse> localVarResponse = await GetUserrecordingMediaAsyncWithHttpInfo(recordingId, formatId, async);
              return localVarResponse.Data;
 
         }
@@ -899,8 +907,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
+        /// <param name="async">When set to true, api will return 202 response until the recording is ready for download (optional)</param>
         /// <returns>Task of ApiResponse (DownloadResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DownloadResponse>> GetUserrecordingMediaAsyncWithHttpInfo (string recordingId, string formatId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DownloadResponse>> GetUserrecordingMediaAsyncWithHttpInfo (string recordingId, string formatId = null, bool? async = null)
         { 
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
@@ -941,6 +950,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (formatId != null) localVarQueryParams.Add(new Tuple<string, string>("formatId", this.Configuration.ApiClient.ParameterToString(formatId)));
+            if (async != null) localVarQueryParams.Add(new Tuple<string, string>("async", this.Configuration.ApiClient.ParameterToString(async)));
 
             // Header params
 

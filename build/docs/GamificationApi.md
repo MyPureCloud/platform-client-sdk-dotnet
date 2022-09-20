@@ -17,7 +17,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetGamificationMetric**](GamificationApi.html#getgamificationmetric) | **GET** /api/v2/gamification/metrics/{metricId} | Gamified metric by id |
 | [**GetGamificationMetricdefinition**](GamificationApi.html#getgamificationmetricdefinition) | **GET** /api/v2/gamification/metricdefinitions/{metricDefinitionId} | Metric definition by id |
 | [**GetGamificationMetricdefinitions**](GamificationApi.html#getgamificationmetricdefinitions) | **GET** /api/v2/gamification/metricdefinitions | All metric definitions |
-| [**GetGamificationMetrics**](GamificationApi.html#getgamificationmetrics) | **GET** /api/v2/gamification/metrics | All gamified metrics for a given profile |
 | [**GetGamificationProfile**](GamificationApi.html#getgamificationprofile) | **GET** /api/v2/gamification/profiles/{profileId} | Performance profile by id |
 | [**GetGamificationProfileMembers**](GamificationApi.html#getgamificationprofilemembers) | **GET** /api/v2/gamification/profiles/{profileId}/members | Members of a given performance profile |
 | [**GetGamificationProfileMetric**](GamificationApi.html#getgamificationprofilemetric) | **GET** /api/v2/gamification/profiles/{profileId}/metrics/{metricId} | Performance profile gamified metric by id |
@@ -52,7 +51,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchEmployeeperformanceExternalmetricsDefinition**](GamificationApi.html#patchemployeeperformanceexternalmetricsdefinition) | **PATCH** /api/v2/employeeperformance/externalmetrics/definitions/{metricId} | Update External Metric Definition |
 | [**PostEmployeeperformanceExternalmetricsData**](GamificationApi.html#postemployeeperformanceexternalmetricsdata) | **POST** /api/v2/employeeperformance/externalmetrics/data | Write External Metric Data |
 | [**PostEmployeeperformanceExternalmetricsDefinitions**](GamificationApi.html#postemployeeperformanceexternalmetricsdefinitions) | **POST** /api/v2/employeeperformance/externalmetrics/definitions | Create External Metric Definition |
-| [**PostGamificationMetrics**](GamificationApi.html#postgamificationmetrics) | **POST** /api/v2/gamification/metrics | Creates a gamified metric with a given metric definition and metric objective |
 | [**PostGamificationProfileActivate**](GamificationApi.html#postgamificationprofileactivate) | **POST** /api/v2/gamification/profiles/{profileId}/activate | Activate a performance profile |
 | [**PostGamificationProfileDeactivate**](GamificationApi.html#postgamificationprofiledeactivate) | **POST** /api/v2/gamification/profiles/{profileId}/deactivate | Deactivate a performance profile |
 | [**PostGamificationProfileMembers**](GamificationApi.html#postgamificationprofilemembers) | **POST** /api/v2/gamification/profiles/{profileId}/members | Assign members to a given performance profile |
@@ -730,77 +728,6 @@ This endpoint does require any parameters.
 ### Return type
 
 [**GetMetricDefinitionsResponse**](GetMetricDefinitionsResponse.html)
-
-<a name="getgamificationmetrics"></a>
-
-## [**GetMetricsResponse**](GetMetricsResponse.html) GetGamificationMetrics (string performanceProfileId = null, String workday = null)
-
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
-
-All gamified metrics for a given profile
-
-This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics instead.
-
-
-
-Requires ANY permissions: 
-
-* gamification:profile:view
-* gamification:leaderboard:view
-* gamification:scorecard:view
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetGamificationMetricsExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new GamificationApi();
-            var performanceProfileId = performanceProfileId_example;  // string | The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. (optional) 
-            var workday = 2013-10-20;  // String | The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) 
-
-            try
-            { 
-                // All gamified metrics for a given profile
-                GetMetricsResponse result = apiInstance.GetGamificationMetrics(performanceProfileId, workday);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling GamificationApi.GetGamificationMetrics: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **performanceProfileId** | **string**| The profile id of the metrics you are trying to retrieve. The DEFAULT profile is used if nothing is given. | [optional]  |
-| **workday** | **String**| The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-[**GetMetricsResponse**](GetMetricsResponse.html)
 
 <a name="getgamificationprofile"></a>
 
@@ -3116,73 +3043,6 @@ namespace Example
 ### Return type
 
 [**ExternalMetricDefinition**](ExternalMetricDefinition.html)
-
-<a name="postgamificationmetrics"></a>
-
-## [**Metric**](Metric.html) PostGamificationMetrics (CreateMetric body)
-
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
-
-Creates a gamified metric with a given metric definition and metric objective
-
-This API is deprecated. Use /api/v2/gamification/profiles/{profileId}/metrics instead.
-
-
-
-Requires ALL permissions: 
-
-* gamification:profile:update
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PostGamificationMetricsExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new GamificationApi();
-            var body = new CreateMetric(); // CreateMetric | Metric
-
-            try
-            { 
-                // Creates a gamified metric with a given metric definition and metric objective
-                Metric result = apiInstance.PostGamificationMetrics(body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling GamificationApi.PostGamificationMetrics: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **body** | [**CreateMetric**](CreateMetric.html)| Metric |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**Metric**](Metric.html)
 
 <a name="postgamificationprofileactivate"></a>
 

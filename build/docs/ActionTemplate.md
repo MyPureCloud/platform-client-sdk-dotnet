@@ -10,6 +10,7 @@ title: ActionTemplate
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** | Name of the action template. | |
 | **Description** | **string** | Description of the action template&#39;s functionality. | [optional] |
+| **Version** | **int?** | The version of the action template. | [optional] |
 | **MediaType** | **string** | Media type of action described by the action template. | |
 | **State** | **string** | Whether the action template is currently active, inactive or deleted. | |
 | **ContentOffer** | [**ContentOffer**](ContentOffer.html) | Properties used to configure an action of type content offer | [optional] |

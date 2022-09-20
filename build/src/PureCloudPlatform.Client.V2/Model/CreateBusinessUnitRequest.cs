@@ -30,7 +30,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">The name of the business unit (required).</param>
         /// <param name="DivisionId">The ID of the division to which the business unit should be added (required).</param>
         /// <param name="Settings">Configuration for the business unit (required).</param>
-        public CreateBusinessUnitRequest(string Name = null, string DivisionId = null, CreateBusinessUnitSettings Settings = null)
+        public CreateBusinessUnitRequest(string Name = null, string DivisionId = null, CreateBusinessUnitSettingsRequest Settings = null)
         {
             this.Name = Name;
             this.DivisionId = DivisionId;
@@ -63,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Configuration for the business unit</value>
         [DataMember(Name="settings", EmitDefaultValue=false)]
-        public CreateBusinessUnitSettings Settings { get; set; }
+        public CreateBusinessUnitSettingsRequest Settings { get; set; }
 
 
         /// <summary>

@@ -32,13 +32,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Data">An ordered map of the contact's columns and corresponding values. (required).</param>
         /// <param name="Callable">Indicates whether or not the contact can be called..</param>
         /// <param name="PhoneNumberStatus">A map of phone number columns to PhoneNumberStatuses, which indicate if the phone number is callable or not..</param>
-        public WritableDialerContact(string Id = null, string ContactListId = null, Dictionary<string, Object> Data = null, bool? Callable = null, Dictionary<string, PhoneNumberStatus> PhoneNumberStatus = null)
+        /// <param name="ContactableStatus">A map of media types(voice, sms and email) to ContactableStatus, which indicates where or not the contact can be contacted using the specified media type..</param>
+        public WritableDialerContact(string Id = null, string ContactListId = null, Dictionary<string, Object> Data = null, bool? Callable = null, Dictionary<string, PhoneNumberStatus> PhoneNumberStatus = null, Dictionary<string, ContactableStatus> ContactableStatus = null)
         {
             this.Id = Id;
             this.ContactListId = ContactListId;
             this.Data = Data;
             this.Callable = Callable;
             this.PhoneNumberStatus = PhoneNumberStatus;
+            this.ContactableStatus = ContactableStatus;
             
         }
         
@@ -97,6 +99,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public Dictionary<string, PhoneNumberStatus> PhoneNumberStatus { get; set; }
 
 
+
+        /// <summary>
+        /// A map of media types(voice, sms and email) to ContactableStatus, which indicates where or not the contact can be contacted using the specified media type.
+        /// </summary>
+        /// <value>A map of media types(voice, sms and email) to ContactableStatus, which indicates where or not the contact can be contacted using the specified media type.</value>
+        [DataMember(Name="contactableStatus", EmitDefaultValue=false)]
+        public Dictionary<string, ContactableStatus> ContactableStatus { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -112,6 +123,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  LatestSmsEvaluations: ").Append(LatestSmsEvaluations).Append("\n");
             sb.Append("  Callable: ").Append(Callable).Append("\n");
             sb.Append("  PhoneNumberStatus: ").Append(PhoneNumberStatus).Append("\n");
+            sb.Append("  ContactableStatus: ").Append(ContactableStatus).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -181,6 +193,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PhoneNumberStatus == other.PhoneNumberStatus ||
                     this.PhoneNumberStatus != null &&
                     this.PhoneNumberStatus.SequenceEqual(other.PhoneNumberStatus)
+                ) &&
+                (
+                    this.ContactableStatus == other.ContactableStatus ||
+                    this.ContactableStatus != null &&
+                    this.ContactableStatus.SequenceEqual(other.ContactableStatus)
                 );
         }
 
@@ -212,6 +229,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.PhoneNumberStatus != null)
                     hash = hash * 59 + this.PhoneNumberStatus.GetHashCode();
+
+                if (this.ContactableStatus != null)
+                    hash = hash * 59 + this.ContactableStatus.GetHashCode();
 
                 return hash;
             }

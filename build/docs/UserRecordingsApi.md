@@ -146,7 +146,7 @@ namespace Example
 
 <a name="getuserrecordingmedia"></a>
 
-## [**DownloadResponse**](DownloadResponse.html) GetUserrecordingMedia (string recordingId, string formatId = null)
+## [**DownloadResponse**](DownloadResponse.html) GetUserrecordingMedia (string recordingId, string formatId = null, bool? async = null)
 
 
 
@@ -181,11 +181,12 @@ namespace Example
             var apiInstance = new UserRecordingsApi();
             var recordingId = recordingId_example;  // string | User Recording ID
             var formatId = formatId_example;  // string | The desired media format. (optional)  (default to WEBM)
+            var async = true;  // bool? | When set to true, api will return 202 response until the recording is ready for download (optional) 
 
             try
             { 
                 // Download a user recording.
-                DownloadResponse result = apiInstance.GetUserrecordingMedia(recordingId, formatId);
+                DownloadResponse result = apiInstance.GetUserrecordingMedia(recordingId, formatId, async);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -204,6 +205,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **recordingId** | **string**| User Recording ID |  |
 | **formatId** | **string**| The desired media format. | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
+| **async** | **bool?**| When set to true, api will return 202 response until the recording is ready for download | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

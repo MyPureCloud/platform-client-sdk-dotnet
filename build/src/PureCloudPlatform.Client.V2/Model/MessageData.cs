@@ -205,10 +205,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ToAddress">The recipient of the text message..</param>
         /// <param name="Direction">The direction of the message..</param>
         /// <param name="MessengerType">Type of text messenger..</param>
-        /// <param name="TextBody">The body of the text message. (required).</param>
+        /// <param name="TextBody">The body of the text message. (Deprecated - Instead use normalizedMessage.text) (required).</param>
         /// <param name="Status">The status of the message. (required).</param>
-        /// <param name="Media">The media details associated to a message..</param>
-        /// <param name="Stickers">The sticker details associated to a message..</param>
+        /// <param name="Media">The media details associated to a message. (Deprecated - Instead use normalizedMessage.content[index].attachment).</param>
+        /// <param name="Stickers">The sticker details associated to a message. (Deprecated - Instead use normalizedMessage.content[index].attachment.</param>
         /// <param name="CreatedBy">User who sent this message..</param>
         /// <param name="ConversationId">The id of the conversation of this message..</param>
         public MessageData(string Name = null, string ProviderMessageId = null, DateTime? Timestamp = null, string FromAddress = null, string ToAddress = null, DirectionEnum? Direction = null, MessengerTypeEnum? MessengerType = null, string TextBody = null, StatusEnum? Status = null, List<MessageMedia> Media = null, List<MessageSticker> Stickers = null, User CreatedBy = null, string ConversationId = null)
@@ -289,9 +289,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The body of the text message.
+        /// The body of the text message. (Deprecated - Instead use normalizedMessage.text)
         /// </summary>
-        /// <value>The body of the text message.</value>
+        /// <value>The body of the text message. (Deprecated - Instead use normalizedMessage.text)</value>
         [DataMember(Name="textBody", EmitDefaultValue=false)]
         public string TextBody { get; set; }
 
@@ -300,18 +300,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The media details associated to a message.
+        /// The media details associated to a message. (Deprecated - Instead use normalizedMessage.content[index].attachment)
         /// </summary>
-        /// <value>The media details associated to a message.</value>
+        /// <value>The media details associated to a message. (Deprecated - Instead use normalizedMessage.content[index].attachment)</value>
         [DataMember(Name="media", EmitDefaultValue=false)]
         public List<MessageMedia> Media { get; set; }
 
 
 
         /// <summary>
-        /// The sticker details associated to a message.
+        /// The sticker details associated to a message. (Deprecated - Instead use normalizedMessage.content[index].attachment
         /// </summary>
-        /// <value>The sticker details associated to a message.</value>
+        /// <value>The sticker details associated to a message. (Deprecated - Instead use normalizedMessage.content[index].attachment</value>
         [DataMember(Name="stickers", EmitDefaultValue=false)]
         public List<MessageSticker> Stickers { get; set; }
 

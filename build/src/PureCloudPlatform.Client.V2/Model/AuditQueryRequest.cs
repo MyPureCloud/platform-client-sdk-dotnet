@@ -124,6 +124,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Limits,
             
             /// <summary>
+            /// Enum Logcapture for "LogCapture"
+            /// </summary>
+            [EnumMember(Value = "LogCapture")]
+            Logcapture,
+            
+            /// <summary>
             /// Enum Outbound for "Outbound"
             /// </summary>
             [EnumMember(Value = "Outbound")]
