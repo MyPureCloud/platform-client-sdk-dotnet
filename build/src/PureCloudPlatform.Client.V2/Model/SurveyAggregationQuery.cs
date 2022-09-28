@@ -81,12 +81,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Surveyanswerid,
             
             /// <summary>
-            /// Enum Surveycreateddate for "surveyCreatedDate"
-            /// </summary>
-            [EnumMember(Value = "surveyCreatedDate")]
-            Surveycreateddate,
-            
-            /// <summary>
             /// Enum Surveyerrorreason for "surveyErrorReason"
             /// </summary>
             [EnumMember(Value = "surveyErrorReason")]

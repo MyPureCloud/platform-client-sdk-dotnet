@@ -49,7 +49,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Campaignemailtemplate for "CampaignEmailTemplate"
             /// </summary>
             [EnumMember(Value = "CampaignEmailTemplate")]
-            Campaignemailtemplate
+            Campaignemailtemplate,
+            
+            /// <summary>
+            /// Enum Footer for "Footer"
+            /// </summary>
+            [EnumMember(Value = "Footer")]
+            Footer
         }
         /// <summary>
         /// This value is deprecated. Responses representing message templates may be added to any library.

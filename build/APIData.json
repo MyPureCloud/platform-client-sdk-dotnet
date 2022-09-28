@@ -24079,7 +24079,7 @@
   "putconversationrecording": {
     "operationId": "putconversationrecording",
     "functionName": "PutConversationRecording",
-    "signature": "PutConversationRecording(conversationId, recordingId, body)",
+    "signature": "PutConversationRecording(conversationId, recordingId, body, clearExport)",
     "parameters": [
       {
         "name": "conversationId",
@@ -24095,10 +24095,15 @@
         "name": "body",
         "type": "Recording",
         "required": "true"
+      },
+      {
+        "name": "clearExport",
+        "type": "bool?",
+        "required": "false"
       }
     ],
     "return": "Recording",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PutConversationRecordingExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new RecordingApi();\n            var conversationId = \"conversationId_example\";  // string | Conversation ID\n            var recordingId = \"recordingId_example\";  // string | Recording ID\n            var body = new Recording(); // Recording | recording\n\n            try\n            { \n                // Updates the retention records on a recording.\n                Recording result = apiInstance.PutConversationRecording(conversationId, recordingId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Recording.PutConversationRecording: \" + e.Message );\n            }\n        }\n    }\n}"
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PutConversationRecordingExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new RecordingApi();\n            var conversationId = \"conversationId_example\";  // string | Conversation ID\n            var recordingId = \"recordingId_example\";  // string | Recording ID\n            var body = new Recording(); // Recording | recording\n            var clearExport = true;  // bool? | Whether to clear the pending export for the recording (optional) \n\n            try\n            { \n                // Updates the retention records on a recording.\n                Recording result = apiInstance.PutConversationRecording(conversationId, recordingId, body, clearExport);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Recording.PutConversationRecording: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "putconversationrecordingannotation": {
     "operationId": "putconversationrecordingannotation",
@@ -25077,6 +25082,39 @@
     ],
     "return": "Predictor",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetRoutingPredictorExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new RoutingApi();\n            var predictorId = \"predictorId_example\";  // string | Predictor ID\n\n            try\n            { \n                // Retrieve a single predictor.\n                Predictor result = apiInstance.GetRoutingPredictor(predictorId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Routing.GetRoutingPredictor: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getroutingpredictormodelfeatures": {
+    "operationId": "getroutingpredictormodelfeatures",
+    "functionName": "GetRoutingPredictorModelFeatures",
+    "signature": "GetRoutingPredictorModelFeatures(predictorId, modelId)",
+    "parameters": [
+      {
+        "name": "predictorId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "modelId",
+        "type": "string",
+        "required": "true"
+      }
+    ],
+    "return": "PredictorModelFeatureListing",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetRoutingPredictorModelFeaturesExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new RoutingApi();\n            var predictorId = \"predictorId_example\";  // string | Predictor ID\n            var modelId = \"modelId_example\";  // string | Model ID\n\n            try\n            { \n                // Retrieve Predictor Model Features.\n                PredictorModelFeatureListing result = apiInstance.GetRoutingPredictorModelFeatures(predictorId, modelId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Routing.GetRoutingPredictorModelFeatures: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getroutingpredictormodels": {
+    "operationId": "getroutingpredictormodels",
+    "functionName": "GetRoutingPredictorModels",
+    "signature": "GetRoutingPredictorModels(predictorId)",
+    "parameters": [
+      {
+        "name": "predictorId",
+        "type": "string",
+        "required": "true"
+      }
+    ],
+    "return": "PredictorModels",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetRoutingPredictorModelsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new RoutingApi();\n            var predictorId = \"predictorId_example\";  // string | Predictor ID\n\n            try\n            { \n                // Retrieve Predictor Models and Top Features.\n                PredictorModels result = apiInstance.GetRoutingPredictorModels(predictorId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Routing.GetRoutingPredictorModels: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "getroutingpredictors": {
     "operationId": "getroutingpredictors",
@@ -33289,9 +33327,16 @@
   "getwebdeploymentsdeployments": {
     "operationId": "getwebdeploymentsdeployments",
     "functionName": "GetWebdeploymentsDeployments",
-    "signature": "GetWebdeploymentsDeployments()",
+    "signature": "GetWebdeploymentsDeployments(expand)",
+    "parameters": [
+      {
+        "name": "expand",
+        "type": "List<string>",
+        "required": "false"
+      }
+    ],
     "return": "WebDeploymentEntityListing",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetWebdeploymentsDeploymentsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new WebDeploymentsApi();\n\n            try\n            { \n                // Get deployments\n                WebDeploymentEntityListing result = apiInstance.GetWebdeploymentsDeployments();\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WebDeployments.GetWebdeploymentsDeployments: \" + e.Message );\n            }\n        }\n    }\n}"
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetWebdeploymentsDeploymentsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new WebDeploymentsApi();\n            var expand = new List<string>(); // List<string> | The specified entity attributes will be filled. Comma separated values expected. Valid values: (optional) \n\n            try\n            { \n                // Get deployments\n                WebDeploymentEntityListing result = apiInstance.GetWebdeploymentsDeployments(expand);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WebDeployments.GetWebdeploymentsDeployments: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "postwebdeploymentsconfigurationversionsdraftpublish": {
     "operationId": "postwebdeploymentsconfigurationversionsdraftpublish",

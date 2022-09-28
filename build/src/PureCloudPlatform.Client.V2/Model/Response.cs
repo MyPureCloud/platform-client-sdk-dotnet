@@ -82,7 +82,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Campaignemailtemplate for "CampaignEmailTemplate"
             /// </summary>
             [EnumMember(Value = "CampaignEmailTemplate")]
-            Campaignemailtemplate
+            Campaignemailtemplate,
+            
+            /// <summary>
+            /// Enum Footer for "Footer"
+            /// </summary>
+            [EnumMember(Value = "Footer")]
+            Footer
         }
         /// <summary>
         /// The interaction type for this response.
@@ -115,7 +121,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ResponseType">The response type represented by the response..</param>
         /// <param name="MessagingTemplate">An optional messaging template definition for responseType.MessagingTemplate..</param>
         /// <param name="Assets">Assets used in the response.</param>
-        public Response(string Name = null, int? Version = null, List<DomainEntityRef> Libraries = null, List<ResponseText> Texts = null, InteractionTypeEnum? InteractionType = null, List<ResponseSubstitution> Substitutions = null, JsonSchemaDocument SubstitutionsSchema = null, ResponseTypeEnum? ResponseType = null, MessagingTemplate MessagingTemplate = null, List<AddressableEntityRef> Assets = null)
+        /// <param name="Footer">Footer template definition for responseType.Footer..</param>
+        public Response(string Name = null, int? Version = null, List<DomainEntityRef> Libraries = null, List<ResponseText> Texts = null, InteractionTypeEnum? InteractionType = null, List<ResponseSubstitution> Substitutions = null, JsonSchemaDocument SubstitutionsSchema = null, ResponseTypeEnum? ResponseType = null, MessagingTemplate MessagingTemplate = null, List<AddressableEntityRef> Assets = null, FooterTemplate Footer = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -127,6 +134,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ResponseType = ResponseType;
             this.MessagingTemplate = MessagingTemplate;
             this.Assets = Assets;
+            this.Footer = Footer;
             
         }
         
@@ -235,6 +243,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Footer template definition for responseType.Footer.
+        /// </summary>
+        /// <value>Footer template definition for responseType.Footer.</value>
+        [DataMember(Name="footer", EmitDefaultValue=false)]
+        public FooterTemplate Footer { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -264,6 +281,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ResponseType: ").Append(ResponseType).Append("\n");
             sb.Append("  MessagingTemplate: ").Append(MessagingTemplate).Append("\n");
             sb.Append("  Assets: ").Append(Assets).Append("\n");
+            sb.Append("  Footer: ").Append(Footer).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -371,6 +389,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Assets.SequenceEqual(other.Assets)
                 ) &&
                 (
+                    this.Footer == other.Footer ||
+                    this.Footer != null &&
+                    this.Footer.Equals(other.Footer)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -426,6 +449,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Assets != null)
                     hash = hash * 59 + this.Assets.GetHashCode();
+
+                if (this.Footer != null)
+                    hash = hash * 59 + this.Footer.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

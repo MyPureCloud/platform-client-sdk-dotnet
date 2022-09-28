@@ -733,6 +733,52 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Predictor> GetRoutingPredictorWithHttpInfo (string predictorId);
 
         /// <summary>
+        /// Retrieve Predictor Model Features.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <param name="modelId">Model ID</param>
+        /// <returns>PredictorModelFeatureListing</returns>
+        PredictorModelFeatureListing GetRoutingPredictorModelFeatures (string predictorId, string modelId);
+
+        /// <summary>
+        /// Retrieve Predictor Model Features.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <param name="modelId">Model ID</param>
+        /// <returns>ApiResponse of PredictorModelFeatureListing</returns>
+        ApiResponse<PredictorModelFeatureListing> GetRoutingPredictorModelFeaturesWithHttpInfo (string predictorId, string modelId);
+
+        /// <summary>
+        /// Retrieve Predictor Models and Top Features.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <returns>PredictorModels</returns>
+        PredictorModels GetRoutingPredictorModels (string predictorId);
+
+        /// <summary>
+        /// Retrieve Predictor Models and Top Features.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <returns>ApiResponse of PredictorModels</returns>
+        ApiResponse<PredictorModels> GetRoutingPredictorModelsWithHttpInfo (string predictorId);
+
+        /// <summary>
         /// Retrieve all predictors.
         /// </summary>
         /// <remarks>
@@ -3309,6 +3355,52 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="predictorId">Predictor ID</param>
         /// <returns>Task of ApiResponse (Predictor)</returns>
         System.Threading.Tasks.Task<ApiResponse<Predictor>> GetRoutingPredictorAsyncWithHttpInfo (string predictorId);
+
+        /// <summary>
+        /// Retrieve Predictor Model Features.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <param name="modelId">Model ID</param>
+        /// <returns>Task of PredictorModelFeatureListing</returns>
+        System.Threading.Tasks.Task<PredictorModelFeatureListing> GetRoutingPredictorModelFeaturesAsync (string predictorId, string modelId);
+
+        /// <summary>
+        /// Retrieve Predictor Model Features.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <param name="modelId">Model ID</param>
+        /// <returns>Task of ApiResponse (PredictorModelFeatureListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PredictorModelFeatureListing>> GetRoutingPredictorModelFeaturesAsyncWithHttpInfo (string predictorId, string modelId);
+
+        /// <summary>
+        /// Retrieve Predictor Models and Top Features.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <returns>Task of PredictorModels</returns>
+        System.Threading.Tasks.Task<PredictorModels> GetRoutingPredictorModelsAsync (string predictorId);
+
+        /// <summary>
+        /// Retrieve Predictor Models and Top Features.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <returns>Task of ApiResponse (PredictorModels)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PredictorModels>> GetRoutingPredictorModelsAsyncWithHttpInfo (string predictorId);
 
         /// <summary>
         /// Retrieve all predictors.
@@ -11229,6 +11321,401 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Predictor>(localVarStatusCode,
                 localVarHeaders,
                 (Predictor) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Predictor)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Retrieve Predictor Model Features. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <param name="modelId">Model ID</param>
+        /// <returns>PredictorModelFeatureListing</returns>
+        public PredictorModelFeatureListing GetRoutingPredictorModelFeatures (string predictorId, string modelId)
+        {
+             ApiResponse<PredictorModelFeatureListing> localVarResponse = GetRoutingPredictorModelFeaturesWithHttpInfo(predictorId, modelId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Predictor Model Features. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <param name="modelId">Model ID</param>
+        /// <returns>ApiResponse of PredictorModelFeatureListing</returns>
+        public ApiResponse< PredictorModelFeatureListing > GetRoutingPredictorModelFeaturesWithHttpInfo (string predictorId, string modelId)
+        { 
+            // verify the required parameter 'predictorId' is set
+            if (predictorId == null)
+                throw new ApiException(400, "Missing required parameter 'predictorId' when calling RoutingApi->GetRoutingPredictorModelFeatures");
+            // verify the required parameter 'modelId' is set
+            if (modelId == null)
+                throw new ApiException(400, "Missing required parameter 'modelId' when calling RoutingApi->GetRoutingPredictorModelFeatures");
+
+            var localVarPath = "/api/v2/routing/predictors/{predictorId}/models/{modelId}/features";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (predictorId != null) localVarPathParams.Add("predictorId", this.Configuration.ApiClient.ParameterToString(predictorId));
+            if (modelId != null) localVarPathParams.Add("modelId", this.Configuration.ApiClient.ParameterToString(modelId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingPredictorModelFeatures: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingPredictorModelFeatures: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PredictorModelFeatureListing>(localVarStatusCode,
+                localVarHeaders,
+                (PredictorModelFeatureListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PredictorModelFeatureListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Retrieve Predictor Model Features. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <param name="modelId">Model ID</param>
+        /// <returns>Task of PredictorModelFeatureListing</returns>
+        public async System.Threading.Tasks.Task<PredictorModelFeatureListing> GetRoutingPredictorModelFeaturesAsync (string predictorId, string modelId)
+        {
+             ApiResponse<PredictorModelFeatureListing> localVarResponse = await GetRoutingPredictorModelFeaturesAsyncWithHttpInfo(predictorId, modelId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve Predictor Model Features. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <param name="modelId">Model ID</param>
+        /// <returns>Task of ApiResponse (PredictorModelFeatureListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PredictorModelFeatureListing>> GetRoutingPredictorModelFeaturesAsyncWithHttpInfo (string predictorId, string modelId)
+        { 
+            // verify the required parameter 'predictorId' is set
+            if (predictorId == null)
+                throw new ApiException(400, "Missing required parameter 'predictorId' when calling RoutingApi->GetRoutingPredictorModelFeatures");
+            
+            // verify the required parameter 'modelId' is set
+            if (modelId == null)
+                throw new ApiException(400, "Missing required parameter 'modelId' when calling RoutingApi->GetRoutingPredictorModelFeatures");
+            
+
+            var localVarPath = "/api/v2/routing/predictors/{predictorId}/models/{modelId}/features";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (predictorId != null) localVarPathParams.Add("predictorId", this.Configuration.ApiClient.ParameterToString(predictorId));
+            if (modelId != null) localVarPathParams.Add("modelId", this.Configuration.ApiClient.ParameterToString(modelId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingPredictorModelFeatures: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingPredictorModelFeatures: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PredictorModelFeatureListing>(localVarStatusCode,
+                localVarHeaders,
+                (PredictorModelFeatureListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PredictorModelFeatureListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Retrieve Predictor Models and Top Features. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <returns>PredictorModels</returns>
+        public PredictorModels GetRoutingPredictorModels (string predictorId)
+        {
+             ApiResponse<PredictorModels> localVarResponse = GetRoutingPredictorModelsWithHttpInfo(predictorId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve Predictor Models and Top Features. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <returns>ApiResponse of PredictorModels</returns>
+        public ApiResponse< PredictorModels > GetRoutingPredictorModelsWithHttpInfo (string predictorId)
+        { 
+            // verify the required parameter 'predictorId' is set
+            if (predictorId == null)
+                throw new ApiException(400, "Missing required parameter 'predictorId' when calling RoutingApi->GetRoutingPredictorModels");
+
+            var localVarPath = "/api/v2/routing/predictors/{predictorId}/models";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (predictorId != null) localVarPathParams.Add("predictorId", this.Configuration.ApiClient.ParameterToString(predictorId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingPredictorModels: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingPredictorModels: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PredictorModels>(localVarStatusCode,
+                localVarHeaders,
+                (PredictorModels) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PredictorModels)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Retrieve Predictor Models and Top Features. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <returns>Task of PredictorModels</returns>
+        public async System.Threading.Tasks.Task<PredictorModels> GetRoutingPredictorModelsAsync (string predictorId)
+        {
+             ApiResponse<PredictorModels> localVarResponse = await GetRoutingPredictorModelsAsyncWithHttpInfo(predictorId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve Predictor Models and Top Features. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="predictorId">Predictor ID</param>
+        /// <returns>Task of ApiResponse (PredictorModels)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PredictorModels>> GetRoutingPredictorModelsAsyncWithHttpInfo (string predictorId)
+        { 
+            // verify the required parameter 'predictorId' is set
+            if (predictorId == null)
+                throw new ApiException(400, "Missing required parameter 'predictorId' when calling RoutingApi->GetRoutingPredictorModels");
+            
+
+            var localVarPath = "/api/v2/routing/predictors/{predictorId}/models";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (predictorId != null) localVarPathParams.Add("predictorId", this.Configuration.ApiClient.ParameterToString(predictorId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingPredictorModels: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingPredictorModels: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PredictorModels>(localVarStatusCode,
+                localVarHeaders,
+                (PredictorModels) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PredictorModels)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

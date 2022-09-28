@@ -90,8 +90,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MessagesPerMinute">How many messages this messaging campaign will send per minute. (required).</param>
         /// <param name="ContactListFilters">The contact list filter to check before sending a message for this messaging campaign..</param>
         /// <param name="Errors">A list of current error conditions associated with this messaging campaign..</param>
+        /// <param name="EmailConfig">Configuration for this messaging campaign to send Email messages..</param>
         /// <param name="SmsConfig">Configuration for this messaging campaign to send SMS messages..</param>
-        public MessagingCampaign(string Name = null, int? Version = null, DomainEntityRef Division = null, CampaignStatusEnum? CampaignStatus = null, DomainEntityRef CallableTimeSet = null, DomainEntityRef ContactList = null, List<DomainEntityRef> DncLists = null, bool? AlwaysRunning = null, List<ContactSort> ContactSorts = null, int? MessagesPerMinute = null, List<DomainEntityRef> ContactListFilters = null, List<RestErrorDetail> Errors = null, SmsConfig SmsConfig = null)
+        public MessagingCampaign(string Name = null, int? Version = null, DomainEntityRef Division = null, CampaignStatusEnum? CampaignStatus = null, DomainEntityRef CallableTimeSet = null, DomainEntityRef ContactList = null, List<DomainEntityRef> DncLists = null, bool? AlwaysRunning = null, List<ContactSort> ContactSorts = null, int? MessagesPerMinute = null, List<DomainEntityRef> ContactListFilters = null, List<RestErrorDetail> Errors = null, EmailConfig EmailConfig = null, SmsConfig SmsConfig = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -105,6 +106,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MessagesPerMinute = MessagesPerMinute;
             this.ContactListFilters = ContactListFilters;
             this.Errors = Errors;
+            this.EmailConfig = EmailConfig;
             this.SmsConfig = SmsConfig;
             
         }
@@ -239,6 +241,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Configuration for this messaging campaign to send Email messages.
+        /// </summary>
+        /// <value>Configuration for this messaging campaign to send Email messages.</value>
+        [DataMember(Name="emailConfig", EmitDefaultValue=false)]
+        public EmailConfig EmailConfig { get; set; }
+
+
+
+        /// <summary>
         /// Configuration for this messaging campaign to send SMS messages.
         /// </summary>
         /// <value>Configuration for this messaging campaign to send SMS messages.</value>
@@ -279,6 +290,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MessagesPerMinute: ").Append(MessagesPerMinute).Append("\n");
             sb.Append("  ContactListFilters: ").Append(ContactListFilters).Append("\n");
             sb.Append("  Errors: ").Append(Errors).Append("\n");
+            sb.Append("  EmailConfig: ").Append(EmailConfig).Append("\n");
             sb.Append("  SmsConfig: ").Append(SmsConfig).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -397,6 +409,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Errors.SequenceEqual(other.Errors)
                 ) &&
                 (
+                    this.EmailConfig == other.EmailConfig ||
+                    this.EmailConfig != null &&
+                    this.EmailConfig.Equals(other.EmailConfig)
+                ) &&
+                (
                     this.SmsConfig == other.SmsConfig ||
                     this.SmsConfig != null &&
                     this.SmsConfig.Equals(other.SmsConfig)
@@ -463,6 +480,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Errors != null)
                     hash = hash * 59 + this.Errors.GetHashCode();
+
+                if (this.EmailConfig != null)
+                    hash = hash * 59 + this.EmailConfig.GetHashCode();
 
                 if (this.SmsConfig != null)
                     hash = hash * 59 + this.SmsConfig.GetHashCode();

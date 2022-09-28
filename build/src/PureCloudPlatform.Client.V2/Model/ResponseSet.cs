@@ -31,12 +31,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
         /// <param name="Responses">Map of disposition identifiers to reactions. For example: {\"disposition.classification.callable.person\": {\"reactionType\": \"transfer\"}}. (required).</param>
         /// <param name="BeepDetectionEnabled">Whether to enable answering machine beep detection.</param>
-        public ResponseSet(string Name = null, int? Version = null, Dictionary<string, Reaction> Responses = null, bool? BeepDetectionEnabled = null)
+        /// <param name="AmdSpeechDistinguishEnabled">Whether to enable answering machine detection.</param>
+        public ResponseSet(string Name = null, int? Version = null, Dictionary<string, Reaction> Responses = null, bool? BeepDetectionEnabled = null, bool? AmdSpeechDistinguishEnabled = null)
         {
             this.Name = Name;
             this.Version = Version;
             this.Responses = Responses;
             this.BeepDetectionEnabled = BeepDetectionEnabled;
+            this.AmdSpeechDistinguishEnabled = AmdSpeechDistinguishEnabled;
             
         }
         
@@ -106,6 +108,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Whether to enable answering machine detection
+        /// </summary>
+        /// <value>Whether to enable answering machine detection</value>
+        [DataMember(Name="amdSpeechDistinguishEnabled", EmitDefaultValue=false)]
+        public bool? AmdSpeechDistinguishEnabled { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -129,6 +140,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  Responses: ").Append(Responses).Append("\n");
             sb.Append("  BeepDetectionEnabled: ").Append(BeepDetectionEnabled).Append("\n");
+            sb.Append("  AmdSpeechDistinguishEnabled: ").Append(AmdSpeechDistinguishEnabled).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -206,6 +218,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.BeepDetectionEnabled.Equals(other.BeepDetectionEnabled)
                 ) &&
                 (
+                    this.AmdSpeechDistinguishEnabled == other.AmdSpeechDistinguishEnabled ||
+                    this.AmdSpeechDistinguishEnabled != null &&
+                    this.AmdSpeechDistinguishEnabled.Equals(other.AmdSpeechDistinguishEnabled)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -243,6 +260,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.BeepDetectionEnabled != null)
                     hash = hash * 59 + this.BeepDetectionEnabled.GetHashCode();
+
+                if (this.AmdSpeechDistinguishEnabled != null)
+                    hash = hash * 59 + this.AmdSpeechDistinguishEnabled.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

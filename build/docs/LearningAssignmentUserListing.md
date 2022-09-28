@@ -12,8 +12,8 @@ title: LearningAssignmentUserListing
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** | The number of users matching search term | [optional] |
 | **UnfilteredTotal** | **int?** | The total number of users | [optional] |
-| **LastUri** | **string** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
+| **LastUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |

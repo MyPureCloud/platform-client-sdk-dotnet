@@ -1242,8 +1242,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
+        /// <param name="clearExport">Whether to clear the pending export for the recording (optional)</param>
         /// <returns>Recording</returns>
-        Recording PutConversationRecording (string conversationId, string recordingId, Recording body);
+        Recording PutConversationRecording (string conversationId, string recordingId, Recording body, bool? clearExport = null);
 
         /// <summary>
         /// Updates the retention records on a recording.
@@ -1255,8 +1256,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
+        /// <param name="clearExport">Whether to clear the pending export for the recording (optional)</param>
         /// <returns>ApiResponse of Recording</returns>
-        ApiResponse<Recording> PutConversationRecordingWithHttpInfo (string conversationId, string recordingId, Recording body);
+        ApiResponse<Recording> PutConversationRecordingWithHttpInfo (string conversationId, string recordingId, Recording body, bool? clearExport = null);
 
         /// <summary>
         /// Update annotation
@@ -2728,8 +2730,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
+        /// <param name="clearExport">Whether to clear the pending export for the recording (optional)</param>
         /// <returns>Task of Recording</returns>
-        System.Threading.Tasks.Task<Recording> PutConversationRecordingAsync (string conversationId, string recordingId, Recording body);
+        System.Threading.Tasks.Task<Recording> PutConversationRecordingAsync (string conversationId, string recordingId, Recording body, bool? clearExport = null);
 
         /// <summary>
         /// Updates the retention records on a recording.
@@ -2741,8 +2744,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
+        /// <param name="clearExport">Whether to clear the pending export for the recording (optional)</param>
         /// <returns>Task of ApiResponse (Recording)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Recording>> PutConversationRecordingAsyncWithHttpInfo (string conversationId, string recordingId, Recording body);
+        System.Threading.Tasks.Task<ApiResponse<Recording>> PutConversationRecordingAsyncWithHttpInfo (string conversationId, string recordingId, Recording body, bool? clearExport = null);
 
         /// <summary>
         /// Update annotation
@@ -12988,10 +12992,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
+        /// <param name="clearExport">Whether to clear the pending export for the recording (optional)</param>
         /// <returns>Recording</returns>
-        public Recording PutConversationRecording (string conversationId, string recordingId, Recording body)
+        public Recording PutConversationRecording (string conversationId, string recordingId, Recording body, bool? clearExport = null)
         {
-             ApiResponse<Recording> localVarResponse = PutConversationRecordingWithHttpInfo(conversationId, recordingId, body);
+             ApiResponse<Recording> localVarResponse = PutConversationRecordingWithHttpInfo(conversationId, recordingId, body, clearExport);
              return localVarResponse.Data;
         }
 
@@ -13002,8 +13007,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
+        /// <param name="clearExport">Whether to clear the pending export for the recording (optional)</param>
         /// <returns>ApiResponse of Recording</returns>
-        public ApiResponse< Recording > PutConversationRecordingWithHttpInfo (string conversationId, string recordingId, Recording body)
+        public ApiResponse< Recording > PutConversationRecordingWithHttpInfo (string conversationId, string recordingId, Recording body, bool? clearExport = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -13050,6 +13056,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (recordingId != null) localVarPathParams.Add("recordingId", this.Configuration.ApiClient.ParameterToString(recordingId));
 
             // Query params
+            if (clearExport != null) localVarQueryParams.Add(new Tuple<string, string>("clearExport", this.Configuration.ApiClient.ParameterToString(clearExport)));
 
             // Header params
 
@@ -13099,10 +13106,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
+        /// <param name="clearExport">Whether to clear the pending export for the recording (optional)</param>
         /// <returns>Task of Recording</returns>
-        public async System.Threading.Tasks.Task<Recording> PutConversationRecordingAsync (string conversationId, string recordingId, Recording body)
+        public async System.Threading.Tasks.Task<Recording> PutConversationRecordingAsync (string conversationId, string recordingId, Recording body, bool? clearExport = null)
         {
-             ApiResponse<Recording> localVarResponse = await PutConversationRecordingAsyncWithHttpInfo(conversationId, recordingId, body);
+             ApiResponse<Recording> localVarResponse = await PutConversationRecordingAsyncWithHttpInfo(conversationId, recordingId, body, clearExport);
              return localVarResponse.Data;
 
         }
@@ -13114,8 +13122,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
+        /// <param name="clearExport">Whether to clear the pending export for the recording (optional)</param>
         /// <returns>Task of ApiResponse (Recording)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Recording>> PutConversationRecordingAsyncWithHttpInfo (string conversationId, string recordingId, Recording body)
+        public async System.Threading.Tasks.Task<ApiResponse<Recording>> PutConversationRecordingAsyncWithHttpInfo (string conversationId, string recordingId, Recording body, bool? clearExport = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -13165,6 +13174,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (recordingId != null) localVarPathParams.Add("recordingId", this.Configuration.ApiClient.ParameterToString(recordingId));
 
             // Query params
+            if (clearExport != null) localVarQueryParams.Add(new Tuple<string, string>("clearExport", this.Configuration.ApiClient.ParameterToString(clearExport)));
 
             // Header params
 

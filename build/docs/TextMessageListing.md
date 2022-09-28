@@ -11,8 +11,8 @@ title: TextMessageListing
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
-| **LastUri** | **string** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
+| **LastUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |

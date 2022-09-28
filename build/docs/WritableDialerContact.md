@@ -13,7 +13,7 @@ title: WritableDialerContact
 | **LatestSmsEvaluations** | [**Dictionary&lt;string, MessageEvaluation&gt;**](MessageEvaluation.html) | A map of SMS records for the contact phone columns. | [optional] |
 | **Callable** | **bool?** | Indicates whether or not the contact can be called. | [optional] |
 | **PhoneNumberStatus** | [**Dictionary&lt;string, PhoneNumberStatus&gt;**](PhoneNumberStatus.html) | A map of phone number columns to PhoneNumberStatuses, which indicate if the phone number is callable or not. | [optional] |
-| **ContactableStatus** | [**Dictionary&lt;string, ContactableStatus&gt;**](ContactableStatus.html) | A map of media types(voice, sms and email) to ContactableStatus, which indicates where or not the contact can be contacted using the specified media type. | [optional] |
+| **ContactableStatus** | [**Dictionary&lt;string, ContactableStatus&gt;**](ContactableStatus.html) | A map of media types (Voice, SMS and Email) to ContactableStatus, which indicates if the contact can be contacted using the specified media type. | [optional] |
 {: class="table table-striped"}
 
 

@@ -32,6 +32,7 @@ title: UserQueue
 | **EnableTranscription** | **bool?** | Indicates whether voice transcription is enabled for this queue. | [optional] |
 | **EnableManualAssignment** | **bool?** | Indicates whether manual assignment is enabled for this queue. | [optional] |
 | **AgentOwnedRouting** | [**AgentOwnedRouting**](AgentOwnedRouting.html) | The Agent Owned Routing settings for the queue | [optional] |
+| **VipRouting** | [**VipRouting**](VipRouting.html) | The VIP Routing settings for the queue | [optional] |
 | **CallingPartyName** | **string** | The name to use for caller identification for outbound calls from this queue. | [optional] |
 | **CallingPartyNumber** | **string** | The phone number to use for caller identification for outbound calls from this queue. | [optional] |
 | **DefaultScripts** | [**Dictionary&lt;string, Script&gt;**](Script.html) | The default script Ids for the communication types. | [optional] |

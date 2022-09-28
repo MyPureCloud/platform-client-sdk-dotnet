@@ -22,6 +22,7 @@ title: MessagingCampaign
 | **MessagesPerMinute** | **int?** | How many messages this messaging campaign will send per minute. | |
 | **ContactListFilters** | [**List&lt;DomainEntityRef&gt;**](DomainEntityRef.html) | The contact list filter to check before sending a message for this messaging campaign. | [optional] |
 | **Errors** | [**List&lt;RestErrorDetail&gt;**](RestErrorDetail.html) | A list of current error conditions associated with this messaging campaign. | [optional] |
+| **EmailConfig** | [**EmailConfig**](EmailConfig.html) | Configuration for this messaging campaign to send Email messages. | [optional] |
 | **SmsConfig** | [**SmsConfig**](SmsConfig.html) | Configuration for this messaging campaign to send SMS messages. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

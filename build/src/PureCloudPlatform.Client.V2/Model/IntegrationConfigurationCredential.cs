@@ -13,67 +13,46 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// WebDeploymentConfigurationVersionEntityRef
+    /// Configuration credential for the integration
     /// </summary>
     [DataContract]
-    public partial class WebDeploymentConfigurationVersionEntityRef :  IEquatable<WebDeploymentConfigurationVersionEntityRef>
+    public partial class IntegrationConfigurationCredential :  IEquatable<IntegrationConfigurationCredential>
     {
-
         /// <summary>
-        /// Initializes a new instance of the <see cref="WebDeploymentConfigurationVersionEntityRef" /> class.
+        /// Initializes a new instance of the <see cref="IntegrationConfigurationCredential" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected WebDeploymentConfigurationVersionEntityRef() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WebDeploymentConfigurationVersionEntityRef" /> class.
-        /// </summary>
-        /// <param name="Id">The configuration version ID (required).</param>
-        /// <param name="Name">The configuration version name.</param>
-        /// <param name="SelfUri">SelfUri.</param>
-        /// <param name="Version">The version of the configuration (required).</param>
-        public WebDeploymentConfigurationVersionEntityRef(string Id = null, string Name = null, string SelfUri = null, string Version = null)
+        /// <param name="Name">Name.</param>
+        public IntegrationConfigurationCredential(string Name = null)
         {
-            this.Id = Id;
             this.Name = Name;
-            this.SelfUri = SelfUri;
-            this.Version = Version;
             
         }
         
 
 
         /// <summary>
-        /// The configuration version ID
+        /// The globally unique identifier for the object.
         /// </summary>
-        /// <value>The configuration version ID</value>
+        /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
+        public string Id { get; private set; }
 
 
 
         /// <summary>
-        /// The configuration version name
+        /// Gets or Sets Name
         /// </summary>
-        /// <value>The configuration version name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets SelfUri
+        /// The URI for this object
         /// </summary>
+        /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-
-
-
-        /// <summary>
-        /// The version of the configuration
-        /// </summary>
-        /// <value>The version of the configuration</value>
-        [DataMember(Name="version", EmitDefaultValue=false)]
-        public string Version { get; set; }
+        public string SelfUri { get; private set; }
 
 
         /// <summary>
@@ -83,12 +62,11 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class WebDeploymentConfigurationVersionEntityRef {\n");
+            sb.Append("class IntegrationConfigurationCredential {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -114,15 +92,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as WebDeploymentConfigurationVersionEntityRef);
+            return this.Equals(obj as IntegrationConfigurationCredential);
         }
 
         /// <summary>
-        /// Returns true if WebDeploymentConfigurationVersionEntityRef instances are equal
+        /// Returns true if IntegrationConfigurationCredential instances are equal
         /// </summary>
-        /// <param name="other">Instance of WebDeploymentConfigurationVersionEntityRef to be compared</param>
+        /// <param name="other">Instance of IntegrationConfigurationCredential to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(WebDeploymentConfigurationVersionEntityRef other)
+        public bool Equals(IntegrationConfigurationCredential other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -143,11 +121,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
-                ) &&
-                (
-                    this.Version == other.Version ||
-                    this.Version != null &&
-                    this.Version.Equals(other.Version)
                 );
         }
 
@@ -170,9 +143,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-
-                if (this.Version != null)
-                    hash = hash * 59 + this.Version.GetHashCode();
 
                 return hash;
             }

@@ -32,7 +32,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Data">An ordered map of the contact's columns and corresponding values. (required).</param>
         /// <param name="Callable">Indicates whether or not the contact can be called..</param>
         /// <param name="PhoneNumberStatus">A map of phone number columns to PhoneNumberStatuses, which indicate if the phone number is callable or not..</param>
-        /// <param name="ContactableStatus">A map of media types(voice, sms and email) to ContactableStatus, which indicates where or not the contact can be contacted using the specified media type..</param>
+        /// <param name="ContactableStatus">A map of media types (Voice, SMS and Email) to ContactableStatus, which indicates if the contact can be contacted using the specified media type..</param>
         public DialerContact(string Name = null, string ContactListId = null, Dictionary<string, Object> Data = null, bool? Callable = null, Dictionary<string, PhoneNumberStatus> PhoneNumberStatus = null, Dictionary<string, ContactableStatus> ContactableStatus = null)
         {
             this.Name = Name;
@@ -118,9 +118,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A map of media types(voice, sms and email) to ContactableStatus, which indicates where or not the contact can be contacted using the specified media type.
+        /// A map of media types (Voice, SMS and Email) to ContactableStatus, which indicates if the contact can be contacted using the specified media type.
         /// </summary>
-        /// <value>A map of media types(voice, sms and email) to ContactableStatus, which indicates where or not the contact can be contacted using the specified media type.</value>
+        /// <value>A map of media types (Voice, SMS and Email) to ContactableStatus, which indicates if the contact can be contacted using the specified media type.</value>
         [DataMember(Name="contactableStatus", EmitDefaultValue=false)]
         public Dictionary<string, ContactableStatus> ContactableStatus { get; set; }
 

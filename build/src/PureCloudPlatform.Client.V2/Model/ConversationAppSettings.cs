@@ -60,7 +60,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AutoStart">The auto start for the messenger conversation.</param>
         /// <param name="Markdown">The markdown for the messenger app.</param>
         /// <param name="ConversationDisconnect">The conversation disconnect settings for the messenger app.</param>
-        public ConversationAppSettings(bool? ShowAgentTypingIndicator = null, bool? ShowUserTypingIndicator = null, AutoStartTypeEnum? AutoStartType = null, AutoStart AutoStart = null, Markdown Markdown = null, ConversationDisconnectSettings ConversationDisconnect = null)
+        /// <param name="Humanize">The humanize conversations settings for the messenger app.</param>
+        public ConversationAppSettings(bool? ShowAgentTypingIndicator = null, bool? ShowUserTypingIndicator = null, AutoStartTypeEnum? AutoStartType = null, AutoStart AutoStart = null, Markdown Markdown = null, ConversationDisconnectSettings ConversationDisconnect = null, Humanize Humanize = null)
         {
             this.ShowAgentTypingIndicator = ShowAgentTypingIndicator;
             this.ShowUserTypingIndicator = ShowUserTypingIndicator;
@@ -68,6 +69,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AutoStart = AutoStart;
             this.Markdown = Markdown;
             this.ConversationDisconnect = ConversationDisconnect;
+            this.Humanize = Humanize;
             
         }
         
@@ -119,6 +121,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public ConversationDisconnectSettings ConversationDisconnect { get; set; }
 
 
+
+        /// <summary>
+        /// The humanize conversations settings for the messenger app
+        /// </summary>
+        /// <value>The humanize conversations settings for the messenger app</value>
+        [DataMember(Name="humanize", EmitDefaultValue=false)]
+        public Humanize Humanize { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -134,6 +145,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AutoStart: ").Append(AutoStart).Append("\n");
             sb.Append("  Markdown: ").Append(Markdown).Append("\n");
             sb.Append("  ConversationDisconnect: ").Append(ConversationDisconnect).Append("\n");
+            sb.Append("  Humanize: ").Append(Humanize).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -203,6 +215,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ConversationDisconnect == other.ConversationDisconnect ||
                     this.ConversationDisconnect != null &&
                     this.ConversationDisconnect.Equals(other.ConversationDisconnect)
+                ) &&
+                (
+                    this.Humanize == other.Humanize ||
+                    this.Humanize != null &&
+                    this.Humanize.Equals(other.Humanize)
                 );
         }
 
@@ -234,6 +251,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ConversationDisconnect != null)
                     hash = hash * 59 + this.ConversationDisconnect.GetHashCode();
+
+                if (this.Humanize != null)
+                    hash = hash * 59 + this.Humanize.GetHashCode();
 
                 return hash;
             }

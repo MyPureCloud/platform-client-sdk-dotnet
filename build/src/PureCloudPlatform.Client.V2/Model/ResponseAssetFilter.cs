@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class ResponseAssetFilter :  IEquatable<ResponseAssetFilter>
     {
         /// <summary>
-        /// How to apply this search criteria against other criteria
+        /// How to apply this search criteria against other criteria. Filter type supported for each field:- name:[STARTS_WITH, TERM], divisionId:[TERM, TERMS], contentLength:[RANGE, GREATER_THAN_EQUAL_TO, LESS_THAN_EQUAL_TO], contentType:[STARTS_WITH, TERM] dateCreated:[DATE_RANGE]
         /// </summary>
-        /// <value>How to apply this search criteria against other criteria</value>
+        /// <value>How to apply this search criteria against other criteria. Filter type supported for each field:- name:[STARTS_WITH, TERM], divisionId:[TERM, TERMS], contentLength:[RANGE, GREATER_THAN_EQUAL_TO, LESS_THAN_EQUAL_TO], contentType:[STARTS_WITH, TERM] dateCreated:[DATE_RANGE]</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
@@ -76,9 +76,9 @@ namespace PureCloudPlatform.Client.V2.Model
             DateRange
         }
         /// <summary>
-        /// How to apply this search criteria against other criteria
+        /// How to apply this search criteria against other criteria. Filter type supported for each field:- name:[STARTS_WITH, TERM], divisionId:[TERM, TERMS], contentLength:[RANGE, GREATER_THAN_EQUAL_TO, LESS_THAN_EQUAL_TO], contentType:[STARTS_WITH, TERM] dateCreated:[DATE_RANGE]
         /// </summary>
-        /// <value>How to apply this search criteria against other criteria</value>
+        /// <value>How to apply this search criteria against other criteria. Filter type supported for each field:- name:[STARTS_WITH, TERM], divisionId:[TERM, TERMS], contentLength:[RANGE, GREATER_THAN_EQUAL_TO, LESS_THAN_EQUAL_TO], contentType:[STARTS_WITH, TERM] dateCreated:[DATE_RANGE]</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
         /// <summary>
@@ -89,7 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StartValue">The start value of the range. This field is used for range search types. Accepts numbers and date in ISO8601 format.</param>
         /// <param name="Fields">Field name to search against. Allowed Values: divisionId, name, contentLength, contentType, dateCreated.</param>
         /// <param name="Value">A value for the search to match against.</param>
-        /// <param name="Type">How to apply this search criteria against other criteria.</param>
+        /// <param name="Type">How to apply this search criteria against other criteria. Filter type supported for each field:- name:[STARTS_WITH, TERM], divisionId:[TERM, TERMS], contentLength:[RANGE, GREATER_THAN_EQUAL_TO, LESS_THAN_EQUAL_TO], contentType:[STARTS_WITH, TERM] dateCreated:[DATE_RANGE].</param>
         public ResponseAssetFilter(string EndValue = null, List<string> Values = null, string StartValue = null, List<string> Fields = null, string Value = null, TypeEnum? Type = null)
         {
             this.EndValue = EndValue;

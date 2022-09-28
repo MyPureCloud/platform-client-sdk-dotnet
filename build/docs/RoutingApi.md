@@ -38,6 +38,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRoutingMessageRecipient**](RoutingApi.html#getroutingmessagerecipient) | **GET** /api/v2/routing/message/recipients/{recipientId} | Get a recipient |
 | [**GetRoutingMessageRecipients**](RoutingApi.html#getroutingmessagerecipients) | **GET** /api/v2/routing/message/recipients | Get recipients |
 | [**GetRoutingPredictor**](RoutingApi.html#getroutingpredictor) | **GET** /api/v2/routing/predictors/{predictorId} | Retrieve a single predictor. |
+| [**GetRoutingPredictorModelFeatures**](RoutingApi.html#getroutingpredictormodelfeatures) | **GET** /api/v2/routing/predictors/{predictorId}/models/{modelId}/features | Retrieve Predictor Model Features. |
+| [**GetRoutingPredictorModels**](RoutingApi.html#getroutingpredictormodels) | **GET** /api/v2/routing/predictors/{predictorId}/models | Retrieve Predictor Models and Top Features. |
 | [**GetRoutingPredictors**](RoutingApi.html#getroutingpredictors) | **GET** /api/v2/routing/predictors | Retrieve all predictors. |
 | [**GetRoutingPredictorsKeyperformanceindicators**](RoutingApi.html#getroutingpredictorskeyperformanceindicators) | **GET** /api/v2/routing/predictors/keyperformanceindicators | Get a list of Key Performance Indicators |
 | [**GetRoutingQueue**](RoutingApi.html#getroutingqueue) | **GET** /api/v2/routing/queues/{queueId} | Get details about this queue. |
@@ -2136,6 +2138,138 @@ namespace Example
 ### Return type
 
 [**Predictor**](Predictor.html)
+
+<a name="getroutingpredictormodelfeatures"></a>
+
+## [**PredictorModelFeatureListing**](PredictorModelFeatureListing.html) GetRoutingPredictorModelFeatures (string predictorId, string modelId)
+
+
+
+Retrieve Predictor Model Features.
+
+
+
+Requires ALL permissions: 
+
+* routing:predictorModelFeature:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingPredictorModelFeaturesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var predictorId = predictorId_example;  // string | Predictor ID
+            var modelId = modelId_example;  // string | Model ID
+
+            try
+            { 
+                // Retrieve Predictor Model Features.
+                PredictorModelFeatureListing result = apiInstance.GetRoutingPredictorModelFeatures(predictorId, modelId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingPredictorModelFeatures: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **predictorId** | **string**| Predictor ID |  |
+| **modelId** | **string**| Model ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**PredictorModelFeatureListing**](PredictorModelFeatureListing.html)
+
+<a name="getroutingpredictormodels"></a>
+
+## [**PredictorModels**](PredictorModels.html) GetRoutingPredictorModels (string predictorId)
+
+
+
+Retrieve Predictor Models and Top Features.
+
+
+
+Requires ALL permissions: 
+
+* routing:predictorModel:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingPredictorModelsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var predictorId = predictorId_example;  // string | Predictor ID
+
+            try
+            { 
+                // Retrieve Predictor Models and Top Features.
+                PredictorModels result = apiInstance.GetRoutingPredictorModels(predictorId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingPredictorModels: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **predictorId** | **string**| Predictor ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**PredictorModels**](PredictorModels.html)
 
 <a name="getroutingpredictors"></a>
 

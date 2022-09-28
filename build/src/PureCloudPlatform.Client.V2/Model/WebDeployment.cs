@@ -85,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AllowedDomains">The list of domains that are approved to use this deployment; the list will be added to CORS headers for ease of web use..</param>
         /// <param name="Flow">A reference to the inboundshortmessage flow used by this deployment.</param>
         /// <param name="Status">The current status of the deployment.</param>
-        public WebDeployment(string Name = null, string Description = null, WebDeploymentConfigurationVersionEntityRef Configuration = null, bool? AllowAllDomains = null, List<string> AllowedDomains = null, DomainEntityRef Flow = null, StatusEnum? Status = null)
+        public WebDeployment(string Name = null, string Description = null, WebDeploymentConfigurationVersion Configuration = null, bool? AllowAllDomains = null, List<string> AllowedDomains = null, DomainEntityRef Flow = null, StatusEnum? Status = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -131,7 +131,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The config version this deployment uses</value>
         [DataMember(Name="configuration", EmitDefaultValue=false)]
-        public WebDeploymentConfigurationVersionEntityRef Configuration { get; set; }
+        public WebDeploymentConfigurationVersion Configuration { get; set; }
 
 
 

@@ -267,6 +267,7 @@ docs/BotConnectorBotVersion.md
 docs/BotConnectorBotVersionSummaryEntityListing.md
 docs/BotIntent.md
 docs/BotList.md
+docs/BotMessengerProfile.md
 docs/BotSearchResponse.md
 docs/BotSearchResponseEntityListing.md
 docs/BotSlot.md
@@ -1555,6 +1556,7 @@ docs/FlowVersion.md
 docs/FlowVersionEntityListing.md
 docs/FlowsApi.json
 docs/FlowsApi.md
+docs/FooterTemplate.md
 docs/ForecastAbandonRateResponse.md
 docs/ForecastAverageSpeedOfAnswerResponse.md
 docs/ForecastPlanningGroupData.md
@@ -2225,6 +2227,8 @@ docs/GetRoutingLanguages-example.txt
 docs/GetRoutingMessageRecipient-example.txt
 docs/GetRoutingMessageRecipients-example.txt
 docs/GetRoutingPredictor-example.txt
+docs/GetRoutingPredictorModelFeatures-example.txt
+docs/GetRoutingPredictorModels-example.txt
 docs/GetRoutingPredictors-example.txt
 docs/GetRoutingPredictorsKeyperformanceindicators-example.txt
 docs/GetRoutingQueue-example.txt
@@ -2566,6 +2570,7 @@ docs/HistoricalImportStatusListing.md
 docs/HistoryEntry.md
 docs/HistoryListing.md
 docs/HomerRecord.md
+docs/Humanize.md
 docs/IVR.md
 docs/IVREntityListing.md
 docs/IdentityNow.md
@@ -2594,6 +2599,7 @@ docs/Integration.md
 docs/IntegrationAction.md
 docs/IntegrationActionFields.md
 docs/IntegrationConfiguration.md
+docs/IntegrationConfigurationCredential.md
 docs/IntegrationConfigurationInfo.md
 docs/IntegrationEntityListing.md
 docs/IntegrationExport.md
@@ -3075,6 +3081,7 @@ docs/OpenIntegrationEntityListing.md
 docs/OpenIntegrationRequest.md
 docs/OpenIntegrationUpdateRequest.md
 docs/OpenMessageContent.md
+docs/OpenMessageEvent.md
 docs/OpenMessagingChannel.md
 docs/OpenMessagingFromRecipient.md
 docs/OpenMessagingToRecipient.md
@@ -3802,6 +3809,10 @@ docs/PredictionResults.md
 docs/PredictiveRouting.md
 docs/Predictor.md
 docs/PredictorListing.md
+docs/PredictorModel.md
+docs/PredictorModelFeature.md
+docs/PredictorModelFeatureListing.md
+docs/PredictorModels.md
 docs/PredictorSchedule.md
 docs/PredictorWorkloadBalancing.md
 docs/PresenceApi.json
@@ -5027,6 +5038,10 @@ docs/ValueWrapperPlanningPeriodSettings.md
 docs/ValueWrapperString.md
 docs/Video.md
 docs/ViewFilter.md
+docs/VipBackup.md
+docs/VipCallMediaSettings.md
+docs/VipMediaSettings.md
+docs/VipRouting.md
 docs/VisibilityCondition.md
 docs/VmPairingInfo.md
 docs/Voicemail.md
@@ -5071,7 +5086,6 @@ docs/WebDeployment.md
 docs/WebDeploymentActiveConfigurationOnDeployment.md
 docs/WebDeploymentConfigurationVersion.md
 docs/WebDeploymentConfigurationVersionEntityListing.md
-docs/WebDeploymentConfigurationVersionEntityRef.md
 docs/WebDeploymentEntityListing.md
 docs/WebDeploymentsApi.json
 docs/WebDeploymentsApi.md
@@ -5626,6 +5640,7 @@ src/PureCloudPlatform.Client.V2/Model/BotConnectorBotVersion.cs
 src/PureCloudPlatform.Client.V2/Model/BotConnectorBotVersionSummaryEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/BotIntent.cs
 src/PureCloudPlatform.Client.V2/Model/BotList.cs
+src/PureCloudPlatform.Client.V2/Model/BotMessengerProfile.cs
 src/PureCloudPlatform.Client.V2/Model/BotSearchResponse.cs
 src/PureCloudPlatform.Client.V2/Model/BotSearchResponseEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/BotSlot.cs
@@ -6686,6 +6701,7 @@ src/PureCloudPlatform.Client.V2/Model/FlowRuntimeExecution.cs
 src/PureCloudPlatform.Client.V2/Model/FlowStartDetailEventTopicFlowStartEvent.cs
 src/PureCloudPlatform.Client.V2/Model/FlowVersion.cs
 src/PureCloudPlatform.Client.V2/Model/FlowVersionEntityListing.cs
+src/PureCloudPlatform.Client.V2/Model/FooterTemplate.cs
 src/PureCloudPlatform.Client.V2/Model/ForecastAbandonRateResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ForecastAverageSpeedOfAnswerResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ForecastPlanningGroupData.cs
@@ -6767,6 +6783,7 @@ src/PureCloudPlatform.Client.V2/Model/HistoricalImportStatusListing.cs
 src/PureCloudPlatform.Client.V2/Model/HistoryEntry.cs
 src/PureCloudPlatform.Client.V2/Model/HistoryListing.cs
 src/PureCloudPlatform.Client.V2/Model/HomerRecord.cs
+src/PureCloudPlatform.Client.V2/Model/Humanize.cs
 src/PureCloudPlatform.Client.V2/Model/IVR.cs
 src/PureCloudPlatform.Client.V2/Model/IVREntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/IdentityNow.cs
@@ -6793,6 +6810,7 @@ src/PureCloudPlatform.Client.V2/Model/Integration.cs
 src/PureCloudPlatform.Client.V2/Model/IntegrationAction.cs
 src/PureCloudPlatform.Client.V2/Model/IntegrationActionFields.cs
 src/PureCloudPlatform.Client.V2/Model/IntegrationConfiguration.cs
+src/PureCloudPlatform.Client.V2/Model/IntegrationConfigurationCredential.cs
 src/PureCloudPlatform.Client.V2/Model/IntegrationConfigurationInfo.cs
 src/PureCloudPlatform.Client.V2/Model/IntegrationEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/IntegrationExport.cs
@@ -7248,6 +7266,7 @@ src/PureCloudPlatform.Client.V2/Model/OpenIntegrationEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/OpenIntegrationRequest.cs
 src/PureCloudPlatform.Client.V2/Model/OpenIntegrationUpdateRequest.cs
 src/PureCloudPlatform.Client.V2/Model/OpenMessageContent.cs
+src/PureCloudPlatform.Client.V2/Model/OpenMessageEvent.cs
 src/PureCloudPlatform.Client.V2/Model/OpenMessagingChannel.cs
 src/PureCloudPlatform.Client.V2/Model/OpenMessagingFromRecipient.cs
 src/PureCloudPlatform.Client.V2/Model/OpenMessagingToRecipient.cs
@@ -7384,6 +7403,10 @@ src/PureCloudPlatform.Client.V2/Model/PredictionResults.cs
 src/PureCloudPlatform.Client.V2/Model/PredictiveRouting.cs
 src/PureCloudPlatform.Client.V2/Model/Predictor.cs
 src/PureCloudPlatform.Client.V2/Model/PredictorListing.cs
+src/PureCloudPlatform.Client.V2/Model/PredictorModel.cs
+src/PureCloudPlatform.Client.V2/Model/PredictorModelFeature.cs
+src/PureCloudPlatform.Client.V2/Model/PredictorModelFeatureListing.cs
+src/PureCloudPlatform.Client.V2/Model/PredictorModels.cs
 src/PureCloudPlatform.Client.V2/Model/PredictorSchedule.cs
 src/PureCloudPlatform.Client.V2/Model/PredictorWorkloadBalancing.cs
 src/PureCloudPlatform.Client.V2/Model/PresenceDefinition.cs
@@ -8372,6 +8395,10 @@ src/PureCloudPlatform.Client.V2/Model/ValueWrapperPlanningPeriodSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ValueWrapperString.cs
 src/PureCloudPlatform.Client.V2/Model/Video.cs
 src/PureCloudPlatform.Client.V2/Model/ViewFilter.cs
+src/PureCloudPlatform.Client.V2/Model/VipBackup.cs
+src/PureCloudPlatform.Client.V2/Model/VipCallMediaSettings.cs
+src/PureCloudPlatform.Client.V2/Model/VipMediaSettings.cs
+src/PureCloudPlatform.Client.V2/Model/VipRouting.cs
 src/PureCloudPlatform.Client.V2/Model/VisibilityCondition.cs
 src/PureCloudPlatform.Client.V2/Model/VmPairingInfo.cs
 src/PureCloudPlatform.Client.V2/Model/Voicemail.cs
@@ -8412,7 +8439,6 @@ src/PureCloudPlatform.Client.V2/Model/WebDeployment.cs
 src/PureCloudPlatform.Client.V2/Model/WebDeploymentActiveConfigurationOnDeployment.cs
 src/PureCloudPlatform.Client.V2/Model/WebDeploymentConfigurationVersion.cs
 src/PureCloudPlatform.Client.V2/Model/WebDeploymentConfigurationVersionEntityListing.cs
-src/PureCloudPlatform.Client.V2/Model/WebDeploymentConfigurationVersionEntityRef.cs
 src/PureCloudPlatform.Client.V2/Model/WebDeploymentEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/WebDeploymentsConfigTopicWebMessagingConfigChangeEventBody.cs
 src/PureCloudPlatform.Client.V2/Model/WebDeploymentsDeploymentTopicWebMessagingConfigChangeEventBody.cs

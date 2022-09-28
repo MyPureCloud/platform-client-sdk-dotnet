@@ -548,7 +548,7 @@ namespace Example
 
 <a name="getwebdeploymentsdeployments"></a>
 
-## [**WebDeploymentEntityListing**](WebDeploymentEntityListing.html) GetWebdeploymentsDeployments ()
+## [**WebDeploymentEntityListing**](WebDeploymentEntityListing.html) GetWebdeploymentsDeployments (List<string> expand = null)
 
 
 
@@ -582,11 +582,12 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WebDeploymentsApi();
+            var expand = new List<string>(); // List<string> | The specified entity attributes will be filled. Comma separated values expected. Valid values: (optional) 
 
             try
             { 
                 // Get deployments
-                WebDeploymentEntityListing result = apiInstance.GetWebdeploymentsDeployments();
+                WebDeploymentEntityListing result = apiInstance.GetWebdeploymentsDeployments(expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -599,8 +600,12 @@ namespace Example
 ```
 
 ### Parameters
-This endpoint does require any parameters.
 
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **expand** | [**List<string>**](string.html)| The specified entity attributes will be filled. Comma separated values expected. Valid values: | [optional] <br />**Values**: Configuration |
+{: class="table table-striped"}
 
 ### Return type
 

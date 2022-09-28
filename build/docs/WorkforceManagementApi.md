@@ -1414,6 +1414,7 @@ Requires ANY permissions:
 * wfm:businessUnit:edit
 * wfm:businessUnit:view
 * wfm:historicalAdherence:view
+* wfm:shrinkage:view
 * wfm:intraday:view
 * wfm:managementUnit:add
 * wfm:managementUnit:delete
@@ -1611,6 +1612,7 @@ Requires ANY permissions:
 * wfm:businessUnit:edit
 * wfm:businessUnit:view
 * wfm:historicalAdherence:view
+* wfm:shrinkage:view
 * wfm:intraday:view
 * wfm:managementUnit:add
 * wfm:managementUnit:delete
@@ -3506,6 +3508,7 @@ Requires ANY permissions:
 * wfm:businessUnit:edit
 * wfm:businessUnit:view
 * wfm:historicalAdherence:view
+* wfm:shrinkage:view
 * wfm:intraday:view
 * wfm:managementUnit:add
 * wfm:managementUnit:delete
@@ -3631,6 +3634,7 @@ Requires ANY permissions:
 * wfm:businessUnit:edit
 * wfm:businessUnit:view
 * wfm:historicalAdherence:view
+* wfm:shrinkage:view
 * wfm:intraday:view
 * wfm:managementUnit:add
 * wfm:managementUnit:delete

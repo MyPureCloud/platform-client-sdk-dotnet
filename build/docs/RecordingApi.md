@@ -3391,7 +3391,7 @@ void (empty response body)
 
 <a name="putconversationrecording"></a>
 
-## [**Recording**](Recording.html) PutConversationRecording (string conversationId, string recordingId, Recording body)
+## [**Recording**](Recording.html) PutConversationRecording (string conversationId, string recordingId, Recording body, bool? clearExport = null)
 
 
 
@@ -3432,11 +3432,12 @@ namespace Example
             var conversationId = conversationId_example;  // string | Conversation ID
             var recordingId = recordingId_example;  // string | Recording ID
             var body = new Recording(); // Recording | recording
+            var clearExport = true;  // bool? | Whether to clear the pending export for the recording (optional) 
 
             try
             { 
                 // Updates the retention records on a recording.
-                Recording result = apiInstance.PutConversationRecording(conversationId, recordingId, body);
+                Recording result = apiInstance.PutConversationRecording(conversationId, recordingId, body, clearExport);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3456,6 +3457,7 @@ namespace Example
 | **conversationId** | **string**| Conversation ID |  |
 | **recordingId** | **string**| Recording ID |  |
 | **body** | [**Recording**](Recording.html)| recording |  |
+| **clearExport** | **bool?**| Whether to clear the pending export for the recording | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
