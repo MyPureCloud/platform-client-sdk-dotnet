@@ -23,15 +23,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Entities">Entities.</param>
         /// <param name="PageSize">PageSize.</param>
-        /// <param name="SelfUri">SelfUri.</param>
         /// <param name="NextUri">NextUri.</param>
+        /// <param name="SelfUri">SelfUri.</param>
         /// <param name="PageCount">PageCount.</param>
-        public ProgramsEntityListing(List<ListedProgram> Entities = null, int? PageSize = null, string SelfUri = null, string NextUri = null, int? PageCount = null)
+        public ProgramsEntityListing(List<ListedProgram> Entities = null, int? PageSize = null, string NextUri = null, string SelfUri = null, int? PageCount = null)
         {
             this.Entities = Entities;
             this.PageSize = PageSize;
-            this.SelfUri = SelfUri;
             this.NextUri = NextUri;
+            this.SelfUri = SelfUri;
             this.PageCount = PageCount;
             
         }
@@ -55,18 +55,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets SelfUri
-        /// </summary>
-        [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-
-
-
-        /// <summary>
         /// Gets or Sets NextUri
         /// </summary>
         [DataMember(Name="nextUri", EmitDefaultValue=false)]
         public string NextUri { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets SelfUri
+        /// </summary>
+        [DataMember(Name="selfUri", EmitDefaultValue=false)]
+        public string SelfUri { get; set; }
 
 
 
@@ -88,8 +88,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Entities: ").Append(Entities).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
-            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  NextUri: ").Append(NextUri).Append("\n");
+            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  PageCount: ").Append(PageCount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -142,14 +142,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PageSize.Equals(other.PageSize)
                 ) &&
                 (
-                    this.SelfUri == other.SelfUri ||
-                    this.SelfUri != null &&
-                    this.SelfUri.Equals(other.SelfUri)
-                ) &&
-                (
                     this.NextUri == other.NextUri ||
                     this.NextUri != null &&
                     this.NextUri.Equals(other.NextUri)
+                ) &&
+                (
+                    this.SelfUri == other.SelfUri ||
+                    this.SelfUri != null &&
+                    this.SelfUri.Equals(other.SelfUri)
                 ) &&
                 (
                     this.PageCount == other.PageCount ||
@@ -175,11 +175,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.PageSize != null)
                     hash = hash * 59 + this.PageSize.GetHashCode();
 
-                if (this.SelfUri != null)
-                    hash = hash * 59 + this.SelfUri.GetHashCode();
-
                 if (this.NextUri != null)
                     hash = hash * 59 + this.NextUri.GetHashCode();
+
+                if (this.SelfUri != null)
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
 
                 if (this.PageCount != null)
                     hash = hash * 59 + this.PageCount.GetHashCode();

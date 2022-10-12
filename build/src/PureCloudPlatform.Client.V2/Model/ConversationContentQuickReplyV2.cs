@@ -13,46 +13,46 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Configuration credential for the integration
+    /// Quick reply object V2.
     /// </summary>
     [DataContract]
-    public partial class IntegrationConfigurationCredential :  IEquatable<IntegrationConfigurationCredential>
+    public partial class ConversationContentQuickReplyV2 :  IEquatable<ConversationContentQuickReplyV2>
     {
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="IntegrationConfigurationCredential" /> class.
+        /// Initializes a new instance of the <see cref="ConversationContentQuickReplyV2" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
-        public IntegrationConfigurationCredential(string Name = null)
+        [JsonConstructorAttribute]
+        protected ConversationContentQuickReplyV2() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ConversationContentQuickReplyV2" /> class.
+        /// </summary>
+        /// <param name="Title">Text to show as the title of the quick reply. (required).</param>
+        /// <param name="Actions">An array of quick reply objects. (required).</param>
+        public ConversationContentQuickReplyV2(string Title = null, List<ConversationContentQuickReply> Actions = null)
         {
-            this.Name = Name;
+            this.Title = Title;
+            this.Actions = Actions;
             
         }
         
 
 
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// Text to show as the title of the quick reply.
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        /// <value>Text to show as the title of the quick reply.</value>
+        [DataMember(Name="title", EmitDefaultValue=false)]
+        public string Title { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets Name
+        /// An array of quick reply objects.
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
-
-
-
-        /// <summary>
-        /// The URI for this object
-        /// </summary>
-        /// <value>The URI for this object</value>
-        [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; private set; }
+        /// <value>An array of quick reply objects.</value>
+        [DataMember(Name="actions", EmitDefaultValue=false)]
+        public List<ConversationContentQuickReply> Actions { get; set; }
 
 
         /// <summary>
@@ -62,11 +62,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class IntegrationConfigurationCredential {\n");
+            sb.Append("class ConversationContentQuickReplyV2 {\n");
 
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            sb.Append("  Title: ").Append(Title).Append("\n");
+            sb.Append("  Actions: ").Append(Actions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -92,15 +91,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as IntegrationConfigurationCredential);
+            return this.Equals(obj as ConversationContentQuickReplyV2);
         }
 
         /// <summary>
-        /// Returns true if IntegrationConfigurationCredential instances are equal
+        /// Returns true if ConversationContentQuickReplyV2 instances are equal
         /// </summary>
-        /// <param name="other">Instance of IntegrationConfigurationCredential to be compared</param>
+        /// <param name="other">Instance of ConversationContentQuickReplyV2 to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(IntegrationConfigurationCredential other)
+        public bool Equals(ConversationContentQuickReplyV2 other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -108,19 +107,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
+                    this.Title == other.Title ||
+                    this.Title != null &&
+                    this.Title.Equals(other.Title)
                 ) &&
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
-                ) &&
-                (
-                    this.SelfUri == other.SelfUri ||
-                    this.SelfUri != null &&
-                    this.SelfUri.Equals(other.SelfUri)
+                    this.Actions == other.Actions ||
+                    this.Actions != null &&
+                    this.Actions.SequenceEqual(other.Actions)
                 );
         }
 
@@ -135,14 +129,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
+                if (this.Title != null)
+                    hash = hash * 59 + this.Title.GetHashCode();
 
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
-
-                if (this.SelfUri != null)
-                    hash = hash * 59 + this.SelfUri.GetHashCode();
+                if (this.Actions != null)
+                    hash = hash * 59 + this.Actions.GetHashCode();
 
                 return hash;
             }

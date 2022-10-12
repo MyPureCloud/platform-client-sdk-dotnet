@@ -37,9 +37,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FromEmail">The sender email to use for outgoing replies..</param>
         /// <param name="Flow">The flow to use for processing the email..</param>
         /// <param name="ReplyEmailAddress">The route to use for email replies..</param>
-        /// <param name="AutoBcc">The recipients that should be  automatically blind copied on outbound emails associated with this InboundRoute..</param>
+        /// <param name="AutoBcc">The recipients that should be automatically blind copied on outbound emails associated with this InboundRoute..</param>
         /// <param name="SpamFlow">The flow to use for processing inbound emails that have been marked as spam..</param>
-        public InboundRoute(string Name = null, string Pattern = null, DomainEntityRef Queue = null, int? Priority = null, List<DomainEntityRef> Skills = null, DomainEntityRef Language = null, string FromName = null, string FromEmail = null, DomainEntityRef Flow = null, QueueEmailAddress ReplyEmailAddress = null, List<EmailAddress> AutoBcc = null, DomainEntityRef SpamFlow = null)
+        /// <param name="Signature">The configuration for the canned response signature that will be appended to outbound emails sent via this route.</param>
+        public InboundRoute(string Name = null, string Pattern = null, DomainEntityRef Queue = null, int? Priority = null, List<DomainEntityRef> Skills = null, DomainEntityRef Language = null, string FromName = null, string FromEmail = null, DomainEntityRef Flow = null, QueueEmailAddress ReplyEmailAddress = null, List<EmailAddress> AutoBcc = null, DomainEntityRef SpamFlow = null, Signature Signature = null)
         {
             this.Name = Name;
             this.Pattern = Pattern;
@@ -53,6 +54,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ReplyEmailAddress = ReplyEmailAddress;
             this.AutoBcc = AutoBcc;
             this.SpamFlow = SpamFlow;
+            this.Signature = Signature;
             
         }
         
@@ -157,9 +159,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The recipients that should be  automatically blind copied on outbound emails associated with this InboundRoute.
+        /// The recipients that should be automatically blind copied on outbound emails associated with this InboundRoute.
         /// </summary>
-        /// <value>The recipients that should be  automatically blind copied on outbound emails associated with this InboundRoute.</value>
+        /// <value>The recipients that should be automatically blind copied on outbound emails associated with this InboundRoute.</value>
         [DataMember(Name="autoBcc", EmitDefaultValue=false)]
         public List<EmailAddress> AutoBcc { get; set; }
 
@@ -171,6 +173,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The flow to use for processing inbound emails that have been marked as spam.</value>
         [DataMember(Name="spamFlow", EmitDefaultValue=false)]
         public DomainEntityRef SpamFlow { get; set; }
+
+
+
+        /// <summary>
+        /// The configuration for the canned response signature that will be appended to outbound emails sent via this route
+        /// </summary>
+        /// <value>The configuration for the canned response signature that will be appended to outbound emails sent via this route</value>
+        [DataMember(Name="signature", EmitDefaultValue=false)]
+        public Signature Signature { get; set; }
 
 
 
@@ -204,6 +215,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ReplyEmailAddress: ").Append(ReplyEmailAddress).Append("\n");
             sb.Append("  AutoBcc: ").Append(AutoBcc).Append("\n");
             sb.Append("  SpamFlow: ").Append(SpamFlow).Append("\n");
+            sb.Append("  Signature: ").Append(Signature).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -311,6 +323,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SpamFlow.Equals(other.SpamFlow)
                 ) &&
                 (
+                    this.Signature == other.Signature ||
+                    this.Signature != null &&
+                    this.Signature.Equals(other.Signature)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -366,6 +383,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SpamFlow != null)
                     hash = hash * 59 + this.SpamFlow.GetHashCode();
+
+                if (this.Signature != null)
+                    hash = hash * 59 + this.Signature.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

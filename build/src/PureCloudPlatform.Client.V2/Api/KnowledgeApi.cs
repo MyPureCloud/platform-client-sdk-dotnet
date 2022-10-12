@@ -1528,7 +1528,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sessionId">Knowledge guest session ID.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>KnowledgeGuestDocumentSuggestion</returns>
-        KnowledgeGuestDocumentSuggestion PostKnowledgeGuestSessionDocumentsSearchSuggestions (string sessionId, KnowledgeDocumentSuggestionRequest body = null);
+        KnowledgeGuestDocumentSuggestion PostKnowledgeGuestSessionDocumentsSearchSuggestions (string sessionId, KnowledgeGuestDocumentSuggestionRequest body = null);
 
         /// <summary>
         /// Query the knowledge documents to provide suggestions for auto completion.
@@ -1540,7 +1540,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sessionId">Knowledge guest session ID.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of KnowledgeGuestDocumentSuggestion</returns>
-        ApiResponse<KnowledgeGuestDocumentSuggestion> PostKnowledgeGuestSessionDocumentsSearchSuggestionsWithHttpInfo (string sessionId, KnowledgeDocumentSuggestionRequest body = null);
+        ApiResponse<KnowledgeGuestDocumentSuggestion> PostKnowledgeGuestSessionDocumentsSearchSuggestionsWithHttpInfo (string sessionId, KnowledgeGuestDocumentSuggestionRequest body = null);
 
         /// <summary>
         /// Create guest session
@@ -3476,7 +3476,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sessionId">Knowledge guest session ID.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of KnowledgeGuestDocumentSuggestion</returns>
-        System.Threading.Tasks.Task<KnowledgeGuestDocumentSuggestion> PostKnowledgeGuestSessionDocumentsSearchSuggestionsAsync (string sessionId, KnowledgeDocumentSuggestionRequest body = null);
+        System.Threading.Tasks.Task<KnowledgeGuestDocumentSuggestion> PostKnowledgeGuestSessionDocumentsSearchSuggestionsAsync (string sessionId, KnowledgeGuestDocumentSuggestionRequest body = null);
 
         /// <summary>
         /// Query the knowledge documents to provide suggestions for auto completion.
@@ -3488,7 +3488,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sessionId">Knowledge guest session ID.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (KnowledgeGuestDocumentSuggestion)</returns>
-        System.Threading.Tasks.Task<ApiResponse<KnowledgeGuestDocumentSuggestion>> PostKnowledgeGuestSessionDocumentsSearchSuggestionsAsyncWithHttpInfo (string sessionId, KnowledgeDocumentSuggestionRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<KnowledgeGuestDocumentSuggestion>> PostKnowledgeGuestSessionDocumentsSearchSuggestionsAsyncWithHttpInfo (string sessionId, KnowledgeGuestDocumentSuggestionRequest body = null);
 
         /// <summary>
         /// Create guest session
@@ -15833,7 +15833,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sessionId">Knowledge guest session ID.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>KnowledgeGuestDocumentSuggestion</returns>
-        public KnowledgeGuestDocumentSuggestion PostKnowledgeGuestSessionDocumentsSearchSuggestions (string sessionId, KnowledgeDocumentSuggestionRequest body = null)
+        public KnowledgeGuestDocumentSuggestion PostKnowledgeGuestSessionDocumentsSearchSuggestions (string sessionId, KnowledgeGuestDocumentSuggestionRequest body = null)
         {
              ApiResponse<KnowledgeGuestDocumentSuggestion> localVarResponse = PostKnowledgeGuestSessionDocumentsSearchSuggestionsWithHttpInfo(sessionId, body);
              return localVarResponse.Data;
@@ -15846,7 +15846,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sessionId">Knowledge guest session ID.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of KnowledgeGuestDocumentSuggestion</returns>
-        public ApiResponse< KnowledgeGuestDocumentSuggestion > PostKnowledgeGuestSessionDocumentsSearchSuggestionsWithHttpInfo (string sessionId, KnowledgeDocumentSuggestionRequest body = null)
+        public ApiResponse< KnowledgeGuestDocumentSuggestion > PostKnowledgeGuestSessionDocumentsSearchSuggestionsWithHttpInfo (string sessionId, KnowledgeGuestDocumentSuggestionRequest body = null)
         { 
             // verify the required parameter 'sessionId' is set
             if (sessionId == null)
@@ -15928,7 +15928,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sessionId">Knowledge guest session ID.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of KnowledgeGuestDocumentSuggestion</returns>
-        public async System.Threading.Tasks.Task<KnowledgeGuestDocumentSuggestion> PostKnowledgeGuestSessionDocumentsSearchSuggestionsAsync (string sessionId, KnowledgeDocumentSuggestionRequest body = null)
+        public async System.Threading.Tasks.Task<KnowledgeGuestDocumentSuggestion> PostKnowledgeGuestSessionDocumentsSearchSuggestionsAsync (string sessionId, KnowledgeGuestDocumentSuggestionRequest body = null)
         {
              ApiResponse<KnowledgeGuestDocumentSuggestion> localVarResponse = await PostKnowledgeGuestSessionDocumentsSearchSuggestionsAsyncWithHttpInfo(sessionId, body);
              return localVarResponse.Data;
@@ -15942,7 +15942,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sessionId">Knowledge guest session ID.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (KnowledgeGuestDocumentSuggestion)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<KnowledgeGuestDocumentSuggestion>> PostKnowledgeGuestSessionDocumentsSearchSuggestionsAsyncWithHttpInfo (string sessionId, KnowledgeDocumentSuggestionRequest body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<KnowledgeGuestDocumentSuggestion>> PostKnowledgeGuestSessionDocumentsSearchSuggestionsAsyncWithHttpInfo (string sessionId, KnowledgeGuestDocumentSuggestionRequest body = null)
         { 
             // verify the required parameter 'sessionId' is set
             if (sessionId == null)

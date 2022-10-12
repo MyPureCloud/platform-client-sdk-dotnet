@@ -268,6 +268,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Dashboardsettings,
             
             /// <summary>
+            /// Enum Defaultpanelsettings for "DefaultPanelSettings"
+            /// </summary>
+            [EnumMember(Value = "DefaultPanelSettings")]
+            Defaultpanelsettings,
+            
+            /// <summary>
             /// Enum Dependencytrackingbuild for "DependencyTrackingBuild"
             /// </summary>
             [EnumMember(Value = "DependencyTrackingBuild")]
@@ -296,6 +302,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "DigitalRuleSet")]
             Digitalruleset,
+            
+            /// <summary>
+            /// Enum Directorygroup for "DirectoryGroup"
+            /// </summary>
+            [EnumMember(Value = "DirectoryGroup")]
+            Directorygroup,
             
             /// <summary>
             /// Enum Dnclist for "DNCList"
@@ -466,6 +478,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Forecast,
             
             /// <summary>
+            /// Enum Gdprrequest for "GdprRequest"
+            /// </summary>
+            [EnumMember(Value = "GdprRequest")]
+            Gdprrequest,
+            
+            /// <summary>
             /// Enum Historicaldata for "HistoricalData"
             /// </summary>
             [EnumMember(Value = "HistoricalData")]
@@ -512,6 +530,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "KnowledgeDocumentVariation")]
             Knowledgedocumentvariation,
+            
+            /// <summary>
+            /// Enum Knowledgelabel for "KnowledgeLabel"
+            /// </summary>
+            [EnumMember(Value = "KnowledgeLabel")]
+            Knowledgelabel,
             
             /// <summary>
             /// Enum Knowledgesearchfeedback for "KnowledgeSearchFeedback"
@@ -890,6 +914,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Site")]
             Site,
+            
+            /// <summary>
+            /// Enum Skillsgroup for "SkillsGroup"
+            /// </summary>
+            [EnumMember(Value = "SkillsGroup")]
+            Skillsgroup,
             
             /// <summary>
             /// Enum Speechtextanalyticssettings for "SpeechTextAnalyticsSettings"

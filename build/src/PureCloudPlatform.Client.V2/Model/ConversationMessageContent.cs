@@ -88,6 +88,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Carousel,
             
             /// <summary>
+            /// Enum Text for "Text"
+            /// </summary>
+            [EnumMember(Value = "Text")]
+            Text,
+            
+            /// <summary>
+            /// Enum Quickreplyv2 for "QuickReplyV2"
+            /// </summary>
+            [EnumMember(Value = "QuickReplyV2")]
+            Quickreplyv2,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]
@@ -117,7 +129,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Story">Ephemeral story content..</param>
         /// <param name="Card">Card content.</param>
         /// <param name="Carousel">Carousel content.</param>
-        public ConversationMessageContent(ContentTypeEnum? ContentType = null, ConversationContentLocation Location = null, ConversationContentAttachment Attachment = null, ConversationContentQuickReply QuickReply = null, ConversationContentButtonResponse ButtonResponse = null, ConversationContentNotificationTemplate Template = null, ConversationContentStory Story = null, ConversationContentCard Card = null, ConversationContentCarousel Carousel = null)
+        /// <param name="Text">Text content..</param>
+        /// <param name="QuickReplyV2">Quick reply V2 content..</param>
+        public ConversationMessageContent(ContentTypeEnum? ContentType = null, ConversationContentLocation Location = null, ConversationContentAttachment Attachment = null, ConversationContentQuickReply QuickReply = null, ConversationContentButtonResponse ButtonResponse = null, ConversationContentNotificationTemplate Template = null, ConversationContentStory Story = null, ConversationContentCard Card = null, ConversationContentCarousel Carousel = null, ConversationContentText Text = null, ConversationContentQuickReplyV2 QuickReplyV2 = null)
         {
             this.ContentType = ContentType;
             this.Location = Location;
@@ -128,6 +142,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Story = Story;
             this.Card = Card;
             this.Carousel = Carousel;
+            this.Text = Text;
+            this.QuickReplyV2 = QuickReplyV2;
             
         }
         
@@ -206,6 +222,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public ConversationContentCarousel Carousel { get; set; }
 
 
+
+        /// <summary>
+        /// Text content.
+        /// </summary>
+        /// <value>Text content.</value>
+        [DataMember(Name="text", EmitDefaultValue=false)]
+        public ConversationContentText Text { get; set; }
+
+
+
+        /// <summary>
+        /// Quick reply V2 content.
+        /// </summary>
+        /// <value>Quick reply V2 content.</value>
+        [DataMember(Name="quickReplyV2", EmitDefaultValue=false)]
+        public ConversationContentQuickReplyV2 QuickReplyV2 { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -224,6 +258,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Story: ").Append(Story).Append("\n");
             sb.Append("  Card: ").Append(Card).Append("\n");
             sb.Append("  Carousel: ").Append(Carousel).Append("\n");
+            sb.Append("  Text: ").Append(Text).Append("\n");
+            sb.Append("  QuickReplyV2: ").Append(QuickReplyV2).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -308,6 +344,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Carousel == other.Carousel ||
                     this.Carousel != null &&
                     this.Carousel.Equals(other.Carousel)
+                ) &&
+                (
+                    this.Text == other.Text ||
+                    this.Text != null &&
+                    this.Text.Equals(other.Text)
+                ) &&
+                (
+                    this.QuickReplyV2 == other.QuickReplyV2 ||
+                    this.QuickReplyV2 != null &&
+                    this.QuickReplyV2.Equals(other.QuickReplyV2)
                 );
         }
 
@@ -348,6 +394,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Carousel != null)
                     hash = hash * 59 + this.Carousel.GetHashCode();
+
+                if (this.Text != null)
+                    hash = hash * 59 + this.Text.GetHashCode();
+
+                if (this.QuickReplyV2 != null)
+                    hash = hash * 59 + this.QuickReplyV2.GetHashCode();
 
                 return hash;
             }

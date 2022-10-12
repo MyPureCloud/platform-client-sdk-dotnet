@@ -13,48 +13,46 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// WebDeploymentEntityListing
+    /// MergeRequest
     /// </summary>
     [DataContract]
-    public partial class WebDeploymentEntityListing :  IEquatable<WebDeploymentEntityListing>
+    public partial class MergeRequest :  IEquatable<MergeRequest>
     {
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="WebDeploymentEntityListing" /> class.
+        /// Initializes a new instance of the <see cref="MergeRequest" /> class.
         /// </summary>
-        /// <param name="Total">Total.</param>
-        /// <param name="Entities">Entities.</param>
-        /// <param name="SelfUri">SelfUri.</param>
-        public WebDeploymentEntityListing(long? Total = null, List<WebDeployment> Entities = null, string SelfUri = null)
+        [JsonConstructorAttribute]
+        protected MergeRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MergeRequest" /> class.
+        /// </summary>
+        /// <param name="SourceContactId">The ID of the source contact for the merge operation (required).</param>
+        /// <param name="TargetContactId">The ID of the target contact for the merge operation (required).</param>
+        public MergeRequest(string SourceContactId = null, string TargetContactId = null)
         {
-            this.Total = Total;
-            this.Entities = Entities;
-            this.SelfUri = SelfUri;
+            this.SourceContactId = SourceContactId;
+            this.TargetContactId = TargetContactId;
             
         }
         
 
 
         /// <summary>
-        /// Gets or Sets Total
+        /// The ID of the source contact for the merge operation
         /// </summary>
-        [DataMember(Name="total", EmitDefaultValue=false)]
-        public long? Total { get; set; }
+        /// <value>The ID of the source contact for the merge operation</value>
+        [DataMember(Name="sourceContactId", EmitDefaultValue=false)]
+        public string SourceContactId { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets Entities
+        /// The ID of the target contact for the merge operation
         /// </summary>
-        [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<WebDeployment> Entities { get; set; }
-
-
-
-        /// <summary>
-        /// Gets or Sets SelfUri
-        /// </summary>
-        [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
+        /// <value>The ID of the target contact for the merge operation</value>
+        [DataMember(Name="targetContactId", EmitDefaultValue=false)]
+        public string TargetContactId { get; set; }
 
 
         /// <summary>
@@ -64,11 +62,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class WebDeploymentEntityListing {\n");
+            sb.Append("class MergeRequest {\n");
 
-            sb.Append("  Total: ").Append(Total).Append("\n");
-            sb.Append("  Entities: ").Append(Entities).Append("\n");
-            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            sb.Append("  SourceContactId: ").Append(SourceContactId).Append("\n");
+            sb.Append("  TargetContactId: ").Append(TargetContactId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -94,15 +91,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as WebDeploymentEntityListing);
+            return this.Equals(obj as MergeRequest);
         }
 
         /// <summary>
-        /// Returns true if WebDeploymentEntityListing instances are equal
+        /// Returns true if MergeRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of WebDeploymentEntityListing to be compared</param>
+        /// <param name="other">Instance of MergeRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(WebDeploymentEntityListing other)
+        public bool Equals(MergeRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -110,19 +107,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Total == other.Total ||
-                    this.Total != null &&
-                    this.Total.Equals(other.Total)
+                    this.SourceContactId == other.SourceContactId ||
+                    this.SourceContactId != null &&
+                    this.SourceContactId.Equals(other.SourceContactId)
                 ) &&
                 (
-                    this.Entities == other.Entities ||
-                    this.Entities != null &&
-                    this.Entities.SequenceEqual(other.Entities)
-                ) &&
-                (
-                    this.SelfUri == other.SelfUri ||
-                    this.SelfUri != null &&
-                    this.SelfUri.Equals(other.SelfUri)
+                    this.TargetContactId == other.TargetContactId ||
+                    this.TargetContactId != null &&
+                    this.TargetContactId.Equals(other.TargetContactId)
                 );
         }
 
@@ -137,14 +129,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Total != null)
-                    hash = hash * 59 + this.Total.GetHashCode();
+                if (this.SourceContactId != null)
+                    hash = hash * 59 + this.SourceContactId.GetHashCode();
 
-                if (this.Entities != null)
-                    hash = hash * 59 + this.Entities.GetHashCode();
-
-                if (this.SelfUri != null)
-                    hash = hash * 59 + this.SelfUri.GetHashCode();
+                if (this.TargetContactId != null)
+                    hash = hash * 59 + this.TargetContactId.GetHashCode();
 
                 return hash;
             }

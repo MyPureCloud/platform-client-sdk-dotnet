@@ -123,6 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Limits,
             
             /// <summary>
+            /// Enum Logcapture for "LogCapture"
+            /// </summary>
+            [EnumMember(Value = "LogCapture")]
+            Logcapture,
+            
+            /// <summary>
             /// Enum Outbound for "Outbound"
             /// </summary>
             [EnumMember(Value = "Outbound")]
@@ -749,6 +755,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Reset,
             
             /// <summary>
+            /// Enum Rotate for "Rotate"
+            /// </summary>
+            [EnumMember(Value = "Rotate")]
+            Rotate,
+            
+            /// <summary>
             /// Enum Restore for "Restore"
             /// </summary>
             [EnumMember(Value = "Restore")]
@@ -758,7 +770,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Unarchive for "Unarchive"
             /// </summary>
             [EnumMember(Value = "Unarchive")]
-            Unarchive
+            Unarchive,
+            
+            /// <summary>
+            /// Enum Enablecapture for "EnableCapture"
+            /// </summary>
+            [EnumMember(Value = "EnableCapture")]
+            Enablecapture,
+            
+            /// <summary>
+            /// Enum Downloadcapture for "DownloadCapture"
+            /// </summary>
+            [EnumMember(Value = "DownloadCapture")]
+            Downloadcapture
         }
         /// <summary>
         /// Gets or Sets EntityType
@@ -1033,6 +1057,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Didpool,
             
             /// <summary>
+            /// Enum Digitalruleset for "DigitalRuleSet"
+            /// </summary>
+            [EnumMember(Value = "DigitalRuleSet")]
+            Digitalruleset,
+            
+            /// <summary>
             /// Enum Dnclist for "DNCList"
             /// </summary>
             [EnumMember(Value = "DNCList")]
@@ -1097,6 +1127,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "EdgeTraceLevel")]
             Edgetracelevel,
+            
+            /// <summary>
+            /// Enum Emailcampaignschedule for "EmailCampaignSchedule"
+            /// </summary>
+            [EnumMember(Value = "EmailCampaignSchedule")]
+            Emailcampaignschedule,
             
             /// <summary>
             /// Enum Emergencygroup for "EmergencyGroup"
@@ -1297,6 +1333,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Messagingcampaign,
             
             /// <summary>
+            /// Enum Messagingcampaignschedule for "MessagingCampaignSchedule"
+            /// </summary>
+            [EnumMember(Value = "MessagingCampaignSchedule")]
+            Messagingcampaignschedule,
+            
+            /// <summary>
             /// Enum Metric for "Metric"
             /// </summary>
             [EnumMember(Value = "Metric")]
@@ -1469,6 +1511,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "RecordingAnnotation")]
             Recordingannotation,
+            
+            /// <summary>
+            /// Enum Recordingkey for "RecordingKey"
+            /// </summary>
+            [EnumMember(Value = "RecordingKey")]
+            Recordingkey,
+            
+            /// <summary>
+            /// Enum Recordingkeyconfig for "RecordingKeyConfig"
+            /// </summary>
+            [EnumMember(Value = "RecordingKeyConfig")]
+            Recordingkeyconfig,
             
             /// <summary>
             /// Enum Recordingsettings for "RecordingSettings"

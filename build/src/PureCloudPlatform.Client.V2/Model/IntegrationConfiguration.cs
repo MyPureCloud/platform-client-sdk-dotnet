@@ -33,7 +33,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Advanced">Advanced configuration described by the schema in the advancedSchemaUri field. (required).</param>
         /// <param name="Notes">Notes about the integration. (required).</param>
         /// <param name="Credentials">Credentials required by the integration. The required keys are indicated in the credentials property of the Integration Type (required).</param>
-        public IntegrationConfiguration(string Name = null, int? Version = null, Object Properties = null, Object Advanced = null, string Notes = null, Dictionary<string, IntegrationConfigurationCredential> Credentials = null)
+        public IntegrationConfiguration(string Name = null, int? Version = null, Object Properties = null, Object Advanced = null, string Notes = null, Dictionary<string, CredentialInfo> Credentials = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -105,7 +105,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Credentials required by the integration. The required keys are indicated in the credentials property of the Integration Type</value>
         [DataMember(Name="credentials", EmitDefaultValue=false)]
-        public Dictionary<string, IntegrationConfigurationCredential> Credentials { get; set; }
+        public Dictionary<string, CredentialInfo> Credentials { get; set; }
 
 
 

@@ -80,20 +80,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">The deployment name (required).</param>
         /// <param name="Description">The description of the config.</param>
-        /// <param name="Configuration">The config version this deployment uses (required).</param>
         /// <param name="AllowAllDomains">Property indicates whether all domains are allowed or not. allowedDomains must be empty when this is set as true..</param>
         /// <param name="AllowedDomains">The list of domains that are approved to use this deployment; the list will be added to CORS headers for ease of web use..</param>
         /// <param name="Flow">A reference to the inboundshortmessage flow used by this deployment.</param>
         /// <param name="Status">The current status of the deployment.</param>
-        public WebDeployment(string Name = null, string Description = null, WebDeploymentConfigurationVersion Configuration = null, bool? AllowAllDomains = null, List<string> AllowedDomains = null, DomainEntityRef Flow = null, StatusEnum? Status = null)
+        /// <param name="Configuration">The config version this deployment uses (required).</param>
+        public WebDeployment(string Name = null, string Description = null, bool? AllowAllDomains = null, List<string> AllowedDomains = null, DomainEntityRef Flow = null, StatusEnum? Status = null, WebDeploymentConfigurationVersionEntityRef Configuration = null)
         {
             this.Name = Name;
             this.Description = Description;
-            this.Configuration = Configuration;
             this.AllowAllDomains = AllowAllDomains;
             this.AllowedDomains = AllowedDomains;
             this.Flow = Flow;
             this.Status = Status;
+            this.Configuration = Configuration;
             
         }
         
@@ -123,15 +123,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The description of the config</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-
-
-
-        /// <summary>
-        /// The config version this deployment uses
-        /// </summary>
-        /// <value>The config version this deployment uses</value>
-        [DataMember(Name="configuration", EmitDefaultValue=false)]
-        public WebDeploymentConfigurationVersion Configuration { get; set; }
 
 
 
@@ -201,6 +192,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The config version this deployment uses
+        /// </summary>
+        /// <value>The config version this deployment uses</value>
+        [DataMember(Name="configuration", EmitDefaultValue=false)]
+        public WebDeploymentConfigurationVersionEntityRef Configuration { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -220,7 +220,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
-            sb.Append("  Configuration: ").Append(Configuration).Append("\n");
             sb.Append("  AllowAllDomains: ").Append(AllowAllDomains).Append("\n");
             sb.Append("  AllowedDomains: ").Append(AllowedDomains).Append("\n");
             sb.Append("  Snippet: ").Append(Snippet).Append("\n");
@@ -229,6 +228,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  LastModifiedUser: ").Append(LastModifiedUser).Append("\n");
             sb.Append("  Flow: ").Append(Flow).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  Configuration: ").Append(Configuration).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -286,11 +286,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Description.Equals(other.Description)
                 ) &&
                 (
-                    this.Configuration == other.Configuration ||
-                    this.Configuration != null &&
-                    this.Configuration.Equals(other.Configuration)
-                ) &&
-                (
                     this.AllowAllDomains == other.AllowAllDomains ||
                     this.AllowAllDomains != null &&
                     this.AllowAllDomains.Equals(other.AllowAllDomains)
@@ -331,6 +326,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Status.Equals(other.Status)
                 ) &&
                 (
+                    this.Configuration == other.Configuration ||
+                    this.Configuration != null &&
+                    this.Configuration.Equals(other.Configuration)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -357,9 +357,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
 
-                if (this.Configuration != null)
-                    hash = hash * 59 + this.Configuration.GetHashCode();
-
                 if (this.AllowAllDomains != null)
                     hash = hash * 59 + this.AllowAllDomains.GetHashCode();
 
@@ -383,6 +380,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
+
+                if (this.Configuration != null)
+                    hash = hash * 59 + this.Configuration.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

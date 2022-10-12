@@ -15,8 +15,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteExternalcontactsOrganizationTrustor**](ExternalContactsApi.html#deleteexternalcontactsorganizationtrustor) | **DELETE** /api/v2/externalcontacts/organizations/{externalOrganizationId}/trustor | Unlink the Trustor for this External Organization |
 | [**DeleteExternalcontactsRelationship**](ExternalContactsApi.html#deleteexternalcontactsrelationship) | **DELETE** /api/v2/externalcontacts/relationships/{relationshipId} | Delete a relationship |
 | [**GetExternalcontactsContact**](ExternalContactsApi.html#getexternalcontactscontact) | **GET** /api/v2/externalcontacts/contacts/{contactId} | Fetch an external contact |
+| [**GetExternalcontactsContactIdentifiers**](ExternalContactsApi.html#getexternalcontactscontactidentifiers) | **GET** /api/v2/externalcontacts/contacts/{contactId}/identifiers | List the identifiers for a contact |
 | [**GetExternalcontactsContactNote**](ExternalContactsApi.html#getexternalcontactscontactnote) | **GET** /api/v2/externalcontacts/contacts/{contactId}/notes/{noteId} | Fetch a note for an external contact |
 | [**GetExternalcontactsContactNotes**](ExternalContactsApi.html#getexternalcontactscontactnotes) | **GET** /api/v2/externalcontacts/contacts/{contactId}/notes | List notes for an external contact |
+| [**GetExternalcontactsContactUnresolved**](ExternalContactsApi.html#getexternalcontactscontactunresolved) | **GET** /api/v2/externalcontacts/contacts/{contactId}/unresolved | Fetch an unresolved external contact |
 | [**GetExternalcontactsContacts**](ExternalContactsApi.html#getexternalcontactscontacts) | **GET** /api/v2/externalcontacts/contacts | Search for external contacts |
 | [**GetExternalcontactsContactsSchema**](ExternalContactsApi.html#getexternalcontactscontactsschema) | **GET** /api/v2/externalcontacts/contacts/schemas/{schemaId} | Get a schema |
 | [**GetExternalcontactsContactsSchemaVersion**](ExternalContactsApi.html#getexternalcontactscontactsschemaversion) | **GET** /api/v2/externalcontacts/contacts/schemas/{schemaId}/versions/{versionId} | Get a specific version of a schema |
@@ -38,9 +40,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetExternalcontactsScanNotes**](ExternalContactsApi.html#getexternalcontactsscannotes) | **GET** /api/v2/externalcontacts/scan/notes | Scan for notes using paging |
 | [**GetExternalcontactsScanOrganizations**](ExternalContactsApi.html#getexternalcontactsscanorganizations) | **GET** /api/v2/externalcontacts/scan/organizations | Scan for external organizations using paging |
 | [**GetExternalcontactsScanRelationships**](ExternalContactsApi.html#getexternalcontactsscanrelationships) | **GET** /api/v2/externalcontacts/scan/relationships | Scan for relationships |
+| [**PatchExternalcontactsContactIdentifiers**](ExternalContactsApi.html#patchexternalcontactscontactidentifiers) | **PATCH** /api/v2/externalcontacts/contacts/{contactId}/identifiers | Claim or release identifiers for a contact |
 | [**PostExternalcontactsBulkContacts**](ExternalContactsApi.html#postexternalcontactsbulkcontacts) | **POST** /api/v2/externalcontacts/bulk/contacts | Bulk fetch contacts |
 | [**PostExternalcontactsBulkContactsAdd**](ExternalContactsApi.html#postexternalcontactsbulkcontactsadd) | **POST** /api/v2/externalcontacts/bulk/contacts/add | Bulk add contacts |
 | [**PostExternalcontactsBulkContactsRemove**](ExternalContactsApi.html#postexternalcontactsbulkcontactsremove) | **POST** /api/v2/externalcontacts/bulk/contacts/remove | Bulk remove contacts |
+| [**PostExternalcontactsBulkContactsUnresolved**](ExternalContactsApi.html#postexternalcontactsbulkcontactsunresolved) | **POST** /api/v2/externalcontacts/bulk/contacts/unresolved | Bulk fetch unresolved ancestor contacts |
 | [**PostExternalcontactsBulkContactsUpdate**](ExternalContactsApi.html#postexternalcontactsbulkcontactsupdate) | **POST** /api/v2/externalcontacts/bulk/contacts/update | Bulk update contacts |
 | [**PostExternalcontactsBulkNotes**](ExternalContactsApi.html#postexternalcontactsbulknotes) | **POST** /api/v2/externalcontacts/bulk/notes | Bulk fetch notes |
 | [**PostExternalcontactsBulkNotesAdd**](ExternalContactsApi.html#postexternalcontactsbulknotesadd) | **POST** /api/v2/externalcontacts/bulk/notes/add | Bulk add notes |
@@ -55,8 +59,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostExternalcontactsBulkRelationshipsRemove**](ExternalContactsApi.html#postexternalcontactsbulkrelationshipsremove) | **POST** /api/v2/externalcontacts/bulk/relationships/remove | Bulk remove relationships |
 | [**PostExternalcontactsBulkRelationshipsUpdate**](ExternalContactsApi.html#postexternalcontactsbulkrelationshipsupdate) | **POST** /api/v2/externalcontacts/bulk/relationships/update | Bulk update relationships |
 | [**PostExternalcontactsContactNotes**](ExternalContactsApi.html#postexternalcontactscontactnotes) | **POST** /api/v2/externalcontacts/contacts/{contactId}/notes | Create a note for an external contact |
+| [**PostExternalcontactsContactPromotion**](ExternalContactsApi.html#postexternalcontactscontactpromotion) | **POST** /api/v2/externalcontacts/contacts/{contactId}/promotion | Promote an observed contact (ephemeral or identified) to a curated contact |
 | [**PostExternalcontactsContacts**](ExternalContactsApi.html#postexternalcontactscontacts) | **POST** /api/v2/externalcontacts/contacts | Create an external contact |
 | [**PostExternalcontactsContactsSchemas**](ExternalContactsApi.html#postexternalcontactscontactsschemas) | **POST** /api/v2/externalcontacts/contacts/schemas | Create a schema |
+| [**PostExternalcontactsIdentifierlookup**](ExternalContactsApi.html#postexternalcontactsidentifierlookup) | **POST** /api/v2/externalcontacts/identifierlookup | Fetch a contact using an identifier type and value. |
+| [**PostExternalcontactsMergeContacts**](ExternalContactsApi.html#postexternalcontactsmergecontacts) | **POST** /api/v2/externalcontacts/merge/contacts | Merge two contacts into a new contact record |
 | [**PostExternalcontactsOrganizationNotes**](ExternalContactsApi.html#postexternalcontactsorganizationnotes) | **POST** /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes | Create a note for an external organization |
 | [**PostExternalcontactsOrganizations**](ExternalContactsApi.html#postexternalcontactsorganizations) | **POST** /api/v2/externalcontacts/organizations | Create an external organization |
 | [**PostExternalcontactsOrganizationsSchemas**](ExternalContactsApi.html#postexternalcontactsorganizationsschemas) | **POST** /api/v2/externalcontacts/organizations/schemas | Create a schema |
@@ -597,6 +604,71 @@ namespace Example
 
 [**ExternalContact**](ExternalContact.html)
 
+<a name="getexternalcontactscontactidentifiers"></a>
+
+## [**EntityListing**](EntityListing.html) GetExternalcontactsContactIdentifiers (string contactId)
+
+
+
+List the identifiers for a contact
+
+
+
+Requires ANY permissions: 
+
+* externalContacts:contact:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetExternalcontactsContactIdentifiersExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var contactId = contactId_example;  // string | ExternalContact ID
+
+            try
+            { 
+                // List the identifiers for a contact
+                EntityListing result = apiInstance.GetExternalcontactsContactIdentifiers(contactId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.GetExternalcontactsContactIdentifiers: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contactId** | **string**| ExternalContact ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EntityListing**](EntityListing.html)
+
 <a name="getexternalcontactscontactnote"></a>
 
 ## [**Note**](Note.html) GetExternalcontactsContactNote (string contactId, string noteId, List<string> expand = null)
@@ -738,6 +810,73 @@ namespace Example
 ### Return type
 
 [**NoteListing**](NoteListing.html)
+
+<a name="getexternalcontactscontactunresolved"></a>
+
+## [**ExternalContact**](ExternalContact.html) GetExternalcontactsContactUnresolved (string contactId, List<string> expand = null)
+
+
+
+Fetch an unresolved external contact
+
+
+
+Requires ANY permissions: 
+
+* externalContacts:contact:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetExternalcontactsContactUnresolvedExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var contactId = contactId_example;  // string | ExternalContact ID
+            var expand = new List<string>(); // List<string> | which fields, if any, to expand (externalOrganization,externalDataSources) (optional) 
+
+            try
+            { 
+                // Fetch an unresolved external contact
+                ExternalContact result = apiInstance.GetExternalcontactsContactUnresolved(contactId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.GetExternalcontactsContactUnresolved: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contactId** | **string**| ExternalContact ID |  |
+| **expand** | [**List<string>**](string.html)| which fields, if any, to expand (externalOrganization,externalDataSources) | [optional] <br />**Values**: externalOrganization, externalDataSources |
+{: class="table table-striped"}
+
+### Return type
+
+[**ExternalContact**](ExternalContact.html)
 
 <a name="getexternalcontactscontacts"></a>
 
@@ -2168,6 +2307,73 @@ namespace Example
 
 [**CursorRelationshipListing**](CursorRelationshipListing.html)
 
+<a name="patchexternalcontactscontactidentifiers"></a>
+
+## [**ContactIdentifier**](ContactIdentifier.html) PatchExternalcontactsContactIdentifiers (string contactId, IdentifierClaimRequest body)
+
+
+
+Claim or release identifiers for a contact
+
+
+
+Requires ANY permissions: 
+
+* externalContacts:contact:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchExternalcontactsContactIdentifiersExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var contactId = contactId_example;  // string | ExternalContact ID
+            var body = new IdentifierClaimRequest(); // IdentifierClaimRequest | ClaimRequest
+
+            try
+            { 
+                // Claim or release identifiers for a contact
+                ContactIdentifier result = apiInstance.PatchExternalcontactsContactIdentifiers(contactId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PatchExternalcontactsContactIdentifiers: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contactId** | **string**| ExternalContact ID |  |
+| **body** | [**IdentifierClaimRequest**](IdentifierClaimRequest.html)| ClaimRequest |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ContactIdentifier**](ContactIdentifier.html)
+
 <a name="postexternalcontactsbulkcontacts"></a>
 
 ## [**BulkFetchContactsResponse**](BulkFetchContactsResponse.html) PostExternalcontactsBulkContacts (BulkIdsRequest body)
@@ -2362,6 +2568,71 @@ namespace Example
 ### Return type
 
 [**BulkDeleteResponse**](BulkDeleteResponse.html)
+
+<a name="postexternalcontactsbulkcontactsunresolved"></a>
+
+## [**BulkFetchContactsResponse**](BulkFetchContactsResponse.html) PostExternalcontactsBulkContactsUnresolved (BulkIdsRequest body)
+
+
+
+Bulk fetch unresolved ancestor contacts
+
+
+
+Requires ANY permissions: 
+
+* externalContacts:contact:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostExternalcontactsBulkContactsUnresolvedExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var body = new BulkIdsRequest(); // BulkIdsRequest | Contact ids
+
+            try
+            { 
+                // Bulk fetch unresolved ancestor contacts
+                BulkFetchContactsResponse result = apiInstance.PostExternalcontactsBulkContactsUnresolved(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PostExternalcontactsBulkContactsUnresolved: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**BulkIdsRequest**](BulkIdsRequest.html)| Contact ids |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BulkFetchContactsResponse**](BulkFetchContactsResponse.html)
 
 <a name="postexternalcontactsbulkcontactsupdate"></a>
 
@@ -3283,6 +3554,71 @@ namespace Example
 
 [**Note**](Note.html)
 
+<a name="postexternalcontactscontactpromotion"></a>
+
+## [**ExternalContact**](ExternalContact.html) PostExternalcontactsContactPromotion (string contactId)
+
+
+
+Promote an observed contact (ephemeral or identified) to a curated contact
+
+
+
+Requires ANY permissions: 
+
+* externalContacts:identity:promote
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostExternalcontactsContactPromotionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var contactId = contactId_example;  // string | ExternalContact ID
+
+            try
+            { 
+                // Promote an observed contact (ephemeral or identified) to a curated contact
+                ExternalContact result = apiInstance.PostExternalcontactsContactPromotion(contactId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PostExternalcontactsContactPromotion: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contactId** | **string**| ExternalContact ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ExternalContact**](ExternalContact.html)
+
 <a name="postexternalcontactscontacts"></a>
 
 ## [**ExternalContact**](ExternalContact.html) PostExternalcontactsContacts (ExternalContact body)
@@ -3412,6 +3748,140 @@ namespace Example
 ### Return type
 
 [**DataSchema**](DataSchema.html)
+
+<a name="postexternalcontactsidentifierlookup"></a>
+
+## [**ExternalContact**](ExternalContact.html) PostExternalcontactsIdentifierlookup (ContactIdentifier identifier)
+
+
+
+Fetch a contact using an identifier type and value.
+
+Phone number identifier values must be provided with the country code and a leading '+' symbol. Example: \"+1 704 298 4733\"
+
+
+
+Requires ANY permissions: 
+
+* externalContacts:contact:view
+* relate:contact:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostExternalcontactsIdentifierlookupExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var identifier = new ContactIdentifier(); // ContactIdentifier | 
+
+            try
+            { 
+                // Fetch a contact using an identifier type and value.
+                ExternalContact result = apiInstance.PostExternalcontactsIdentifierlookup(identifier);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PostExternalcontactsIdentifierlookup: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **identifier** | [**ContactIdentifier**](ContactIdentifier.html)|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ExternalContact**](ExternalContact.html)
+
+<a name="postexternalcontactsmergecontacts"></a>
+
+## [**ExternalContact**](ExternalContact.html) PostExternalcontactsMergeContacts (MergeRequest body)
+
+
+
+Merge two contacts into a new contact record
+
+
+
+Requires ANY permissions: 
+
+* externalContacts:contact:edit
+* externalContacts:identity:merge
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostExternalcontactsMergeContactsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var body = new MergeRequest(); // MergeRequest | MergeRequest
+
+            try
+            { 
+                // Merge two contacts into a new contact record
+                ExternalContact result = apiInstance.PostExternalcontactsMergeContacts(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PostExternalcontactsMergeContacts: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**MergeRequest**](MergeRequest.html)| MergeRequest |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ExternalContact**](ExternalContact.html)
 
 <a name="postexternalcontactsorganizationnotes"></a>
 

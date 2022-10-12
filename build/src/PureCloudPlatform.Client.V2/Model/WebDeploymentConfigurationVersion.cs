@@ -79,6 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="WebDeploymentConfigurationVersion" /> class.
         /// </summary>
         /// <param name="Name">The configuration version name (required).</param>
+        /// <param name="HeadlessMode">Headless Mode Support which Controls UI components. When enabled, native UI components will be disabled and allows for custom-built UI..</param>
         /// <param name="Description">The description of the configuration.</param>
         /// <param name="Languages">A list of languages supported on the configuration required if the messenger is enabled.</param>
         /// <param name="DefaultLanguage">The default language to use for the configuration required if the messenger is enabled.</param>
@@ -90,9 +91,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="JourneyEvents">The settings for journey events.</param>
         /// <param name="AuthenticationSettings">The settings for authenticated deployments.</param>
         /// <param name="Status">The current status of the configuration version.</param>
-        public WebDeploymentConfigurationVersion(string Name = null, string Description = null, List<string> Languages = null, string DefaultLanguage = null, List<CustomI18nLabels> CustomI18nLabels = null, MessengerSettings Messenger = null, PositionSettings Position = null, SupportCenterSettings SupportCenter = null, CobrowseSettings Cobrowse = null, JourneyEventsSettings JourneyEvents = null, AuthenticationSettings AuthenticationSettings = null, StatusEnum? Status = null)
+        public WebDeploymentConfigurationVersion(string Name = null, WebDeploymentHeadlessMode HeadlessMode = null, string Description = null, List<string> Languages = null, string DefaultLanguage = null, List<CustomI18nLabels> CustomI18nLabels = null, MessengerSettings Messenger = null, PositionSettings Position = null, SupportCenterSettings SupportCenter = null, CobrowseSettings Cobrowse = null, JourneyEventsSettings JourneyEvents = null, AuthenticationSettings AuthenticationSettings = null, StatusEnum? Status = null)
         {
             this.Name = Name;
+            this.HeadlessMode = HeadlessMode;
             this.Description = Description;
             this.Languages = Languages;
             this.DefaultLanguage = DefaultLanguage;
@@ -133,6 +135,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The version of the configuration</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public string Version { get; private set; }
+
+
+
+        /// <summary>
+        /// Headless Mode Support which Controls UI components. When enabled, native UI components will be disabled and allows for custom-built UI.
+        /// </summary>
+        /// <value>Headless Mode Support which Controls UI components. When enabled, native UI components will be disabled and allows for custom-built UI.</value>
+        [DataMember(Name="headlessMode", EmitDefaultValue=false)]
+        public WebDeploymentHeadlessMode HeadlessMode { get; set; }
 
 
 
@@ -302,6 +313,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
+            sb.Append("  HeadlessMode: ").Append(HeadlessMode).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Languages: ").Append(Languages).Append("\n");
             sb.Append("  DefaultLanguage: ").Append(DefaultLanguage).Append("\n");
@@ -374,6 +386,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
+                ) &&
+                (
+                    this.HeadlessMode == other.HeadlessMode ||
+                    this.HeadlessMode != null &&
+                    this.HeadlessMode.Equals(other.HeadlessMode)
                 ) &&
                 (
                     this.Description == other.Description ||
@@ -486,6 +503,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
+
+                if (this.HeadlessMode != null)
+                    hash = hash * 59 + this.HeadlessMode.GetHashCode();
 
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();

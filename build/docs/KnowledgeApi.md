@@ -3868,7 +3868,7 @@ namespace Example
 
 <a name="postknowledgeguestsessiondocumentssearchsuggestions"></a>
 
-## [**KnowledgeGuestDocumentSuggestion**](KnowledgeGuestDocumentSuggestion.html) PostKnowledgeGuestSessionDocumentsSearchSuggestions (string sessionId, KnowledgeDocumentSuggestionRequest body = null)
+## [**KnowledgeGuestDocumentSuggestion**](KnowledgeGuestDocumentSuggestion.html) PostKnowledgeGuestSessionDocumentsSearchSuggestions (string sessionId, KnowledgeGuestDocumentSuggestionRequest body = null)
 
 
 
@@ -3896,7 +3896,7 @@ namespace Example
 
             var apiInstance = new KnowledgeApi();
             var sessionId = sessionId_example;  // string | Knowledge guest session ID.
-            var body = new KnowledgeDocumentSuggestionRequest(); // KnowledgeDocumentSuggestionRequest |  (optional) 
+            var body = new KnowledgeGuestDocumentSuggestionRequest(); // KnowledgeGuestDocumentSuggestionRequest |  (optional) 
 
             try
             { 
@@ -3919,7 +3919,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **sessionId** | **string**| Knowledge guest session ID. |  |
-| **body** | [**KnowledgeDocumentSuggestionRequest**](KnowledgeDocumentSuggestionRequest.html)|  | [optional]  |
+| **body** | [**KnowledgeGuestDocumentSuggestionRequest**](KnowledgeGuestDocumentSuggestionRequest.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

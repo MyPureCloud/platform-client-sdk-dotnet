@@ -34,6 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Agentconfig for "AgentConfig"
+            /// </summary>
+            [EnumMember(Value = "AgentConfig")]
+            Agentconfig,
+            
+            /// <summary>
             /// Enum Analyticsreporting for "AnalyticsReporting"
             /// </summary>
             [EnumMember(Value = "AnalyticsReporting")]
@@ -1063,6 +1069,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Dashboardsettings,
             
             /// <summary>
+            /// Enum Defaultpanelsettings for "DefaultPanelSettings"
+            /// </summary>
+            [EnumMember(Value = "DefaultPanelSettings")]
+            Defaultpanelsettings,
+            
+            /// <summary>
             /// Enum Dependencytrackingbuild for "DependencyTrackingBuild"
             /// </summary>
             [EnumMember(Value = "DependencyTrackingBuild")]
@@ -1091,6 +1103,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "DigitalRuleSet")]
             Digitalruleset,
+            
+            /// <summary>
+            /// Enum Directorygroup for "DirectoryGroup"
+            /// </summary>
+            [EnumMember(Value = "DirectoryGroup")]
+            Directorygroup,
             
             /// <summary>
             /// Enum Dnclist for "DNCList"
@@ -1261,6 +1279,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Forecast,
             
             /// <summary>
+            /// Enum Gdprrequest for "GdprRequest"
+            /// </summary>
+            [EnumMember(Value = "GdprRequest")]
+            Gdprrequest,
+            
+            /// <summary>
             /// Enum Historicaldata for "HistoricalData"
             /// </summary>
             [EnumMember(Value = "HistoricalData")]
@@ -1307,6 +1331,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "KnowledgeDocumentVariation")]
             Knowledgedocumentvariation,
+            
+            /// <summary>
+            /// Enum Knowledgelabel for "KnowledgeLabel"
+            /// </summary>
+            [EnumMember(Value = "KnowledgeLabel")]
+            Knowledgelabel,
             
             /// <summary>
             /// Enum Knowledgesearchfeedback for "KnowledgeSearchFeedback"
@@ -1687,6 +1717,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Site,
             
             /// <summary>
+            /// Enum Skillsgroup for "SkillsGroup"
+            /// </summary>
+            [EnumMember(Value = "SkillsGroup")]
+            Skillsgroup,
+            
+            /// <summary>
             /// Enum Speechtextanalyticssettings for "SpeechTextAnalyticsSettings"
             /// </summary>
             [EnumMember(Value = "SpeechTextAnalyticsSettings")]
@@ -1939,9 +1975,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Entity">Entity that was impacted..</param>
         /// <param name="EntityType">Type of the entity that was impacted..</param>
         /// <param name="Status">Status of the event being audited.</param>
+        /// <param name="Application">Name of the application used to perform the audit's action.</param>
+        /// <param name="InitiatingAction">Id and action of the audit initiating the transaction.</param>
+        /// <param name="TransactionInitiator">Whether the current audit is the initiator of the transaction.</param>
         /// <param name="PropertyChanges">List of properties that were changed and changes made to those properties..</param>
         /// <param name="Context">Additional context for this message..</param>
-        public AuditLogMessage(string Id = null, string UserHomeOrgId = null, DomainEntityRef User = null, AddressableEntityRef Client = null, List<string> RemoteIp = null, ServiceNameEnum? ServiceName = null, LevelEnum? Level = null, DateTime? EventDate = null, MessageInfo Message = null, ActionEnum? Action = null, DomainEntityRef Entity = null, EntityTypeEnum? EntityType = null, StatusEnum? Status = null, List<PropertyChange> PropertyChanges = null, Dictionary<string, string> Context = null)
+        /// <param name="EntityChanges">List of entities that were changed and changes made to those entities..</param>
+        public AuditLogMessage(string Id = null, string UserHomeOrgId = null, DomainEntityRef User = null, AddressableEntityRef Client = null, List<string> RemoteIp = null, ServiceNameEnum? ServiceName = null, LevelEnum? Level = null, DateTime? EventDate = null, MessageInfo Message = null, ActionEnum? Action = null, DomainEntityRef Entity = null, EntityTypeEnum? EntityType = null, StatusEnum? Status = null, string Application = null, InitiatingAction InitiatingAction = null, bool? TransactionInitiator = null, List<PropertyChange> PropertyChanges = null, Dictionary<string, string> Context = null, List<EntityChange> EntityChanges = null)
         {
             this.Id = Id;
             this.UserHomeOrgId = UserHomeOrgId;
@@ -1956,8 +1996,12 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Entity = Entity;
             this.EntityType = EntityType;
             this.Status = Status;
+            this.Application = Application;
+            this.InitiatingAction = InitiatingAction;
+            this.TransactionInitiator = TransactionInitiator;
             this.PropertyChanges = PropertyChanges;
             this.Context = Context;
+            this.EntityChanges = EntityChanges;
             
         }
         
@@ -2046,6 +2090,33 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Name of the application used to perform the audit's action
+        /// </summary>
+        /// <value>Name of the application used to perform the audit's action</value>
+        [DataMember(Name="application", EmitDefaultValue=false)]
+        public string Application { get; set; }
+
+
+
+        /// <summary>
+        /// Id and action of the audit initiating the transaction
+        /// </summary>
+        /// <value>Id and action of the audit initiating the transaction</value>
+        [DataMember(Name="initiatingAction", EmitDefaultValue=false)]
+        public InitiatingAction InitiatingAction { get; set; }
+
+
+
+        /// <summary>
+        /// Whether the current audit is the initiator of the transaction
+        /// </summary>
+        /// <value>Whether the current audit is the initiator of the transaction</value>
+        [DataMember(Name="transactionInitiator", EmitDefaultValue=false)]
+        public bool? TransactionInitiator { get; set; }
+
+
+
+        /// <summary>
         /// List of properties that were changed and changes made to those properties.
         /// </summary>
         /// <value>List of properties that were changed and changes made to those properties.</value>
@@ -2060,6 +2131,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Additional context for this message.</value>
         [DataMember(Name="context", EmitDefaultValue=false)]
         public Dictionary<string, string> Context { get; set; }
+
+
+
+        /// <summary>
+        /// List of entities that were changed and changes made to those entities.
+        /// </summary>
+        /// <value>List of entities that were changed and changes made to those entities.</value>
+        [DataMember(Name="entityChanges", EmitDefaultValue=false)]
+        public List<EntityChange> EntityChanges { get; set; }
 
 
         /// <summary>
@@ -2084,8 +2164,12 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Entity: ").Append(Entity).Append("\n");
             sb.Append("  EntityType: ").Append(EntityType).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  Application: ").Append(Application).Append("\n");
+            sb.Append("  InitiatingAction: ").Append(InitiatingAction).Append("\n");
+            sb.Append("  TransactionInitiator: ").Append(TransactionInitiator).Append("\n");
             sb.Append("  PropertyChanges: ").Append(PropertyChanges).Append("\n");
             sb.Append("  Context: ").Append(Context).Append("\n");
+            sb.Append("  EntityChanges: ").Append(EntityChanges).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -2192,6 +2276,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Status.Equals(other.Status)
                 ) &&
                 (
+                    this.Application == other.Application ||
+                    this.Application != null &&
+                    this.Application.Equals(other.Application)
+                ) &&
+                (
+                    this.InitiatingAction == other.InitiatingAction ||
+                    this.InitiatingAction != null &&
+                    this.InitiatingAction.Equals(other.InitiatingAction)
+                ) &&
+                (
+                    this.TransactionInitiator == other.TransactionInitiator ||
+                    this.TransactionInitiator != null &&
+                    this.TransactionInitiator.Equals(other.TransactionInitiator)
+                ) &&
+                (
                     this.PropertyChanges == other.PropertyChanges ||
                     this.PropertyChanges != null &&
                     this.PropertyChanges.SequenceEqual(other.PropertyChanges)
@@ -2200,6 +2299,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Context == other.Context ||
                     this.Context != null &&
                     this.Context.SequenceEqual(other.Context)
+                ) &&
+                (
+                    this.EntityChanges == other.EntityChanges ||
+                    this.EntityChanges != null &&
+                    this.EntityChanges.SequenceEqual(other.EntityChanges)
                 );
         }
 
@@ -2253,11 +2357,23 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
 
+                if (this.Application != null)
+                    hash = hash * 59 + this.Application.GetHashCode();
+
+                if (this.InitiatingAction != null)
+                    hash = hash * 59 + this.InitiatingAction.GetHashCode();
+
+                if (this.TransactionInitiator != null)
+                    hash = hash * 59 + this.TransactionInitiator.GetHashCode();
+
                 if (this.PropertyChanges != null)
                     hash = hash * 59 + this.PropertyChanges.GetHashCode();
 
                 if (this.Context != null)
                     hash = hash * 59 + this.Context.GetHashCode();
+
+                if (this.EntityChanges != null)
+                    hash = hash * 59 + this.EntityChanges.GetHashCode();
 
                 return hash;
             }

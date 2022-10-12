@@ -11,8 +11,8 @@ title: QueueMemberEntityListing
 | **PageNumber** | **int?** |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
-| **SelfUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
+| **SelfUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 {: class="table table-striped"}
 

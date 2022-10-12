@@ -43,7 +43,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Desc for "desc"
             /// </summary>
             [EnumMember(Value = "desc")]
-            Desc
+            Desc,
+            
+            /// <summary>
+            /// Enum Unordered for "unordered"
+            /// </summary>
+            [EnumMember(Value = "unordered")]
+            Unordered
         }
         /// <summary>
         /// Sort the result set in ascending/descending order. Default is ascending

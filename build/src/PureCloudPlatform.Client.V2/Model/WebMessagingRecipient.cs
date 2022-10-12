@@ -56,6 +56,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// URL of an image that represents the recipient.
+        /// </summary>
+        /// <value>URL of an image that represents the recipient.</value>
+        [DataMember(Name="image", EmitDefaultValue=false)]
+        public string Image { get; private set; }
+
+
+
+        /// <summary>
         /// List of recipient additional identifiers
         /// </summary>
         /// <value>List of recipient additional identifiers</value>
@@ -75,6 +84,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FirstName: ").Append(FirstName).Append("\n");
             sb.Append("  LastName: ").Append(LastName).Append("\n");
             sb.Append("  Nickname: ").Append(Nickname).Append("\n");
+            sb.Append("  Image: ").Append(Image).Append("\n");
             sb.Append("  AdditionalIds: ").Append(AdditionalIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -132,6 +142,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Nickname.Equals(other.Nickname)
                 ) &&
                 (
+                    this.Image == other.Image ||
+                    this.Image != null &&
+                    this.Image.Equals(other.Image)
+                ) &&
+                (
                     this.AdditionalIds == other.AdditionalIds ||
                     this.AdditionalIds != null &&
                     this.AdditionalIds.SequenceEqual(other.AdditionalIds)
@@ -157,6 +172,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Nickname != null)
                     hash = hash * 59 + this.Nickname.GetHashCode();
+
+                if (this.Image != null)
+                    hash = hash * 59 + this.Image.GetHashCode();
 
                 if (this.AdditionalIds != null)
                     hash = hash * 59 + this.AdditionalIds.GetHashCode();

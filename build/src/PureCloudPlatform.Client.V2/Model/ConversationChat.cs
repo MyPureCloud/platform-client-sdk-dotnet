@@ -82,6 +82,69 @@ namespace PureCloudPlatform.Client.V2.Model
             None
         }
         /// <summary>
+        /// The initial connection state of this communication.
+        /// </summary>
+        /// <value>The initial connection state of this communication.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum InitialStateEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Alerting for "alerting"
+            /// </summary>
+            [EnumMember(Value = "alerting")]
+            Alerting,
+            
+            /// <summary>
+            /// Enum Dialing for "dialing"
+            /// </summary>
+            [EnumMember(Value = "dialing")]
+            Dialing,
+            
+            /// <summary>
+            /// Enum Contacting for "contacting"
+            /// </summary>
+            [EnumMember(Value = "contacting")]
+            Contacting,
+            
+            /// <summary>
+            /// Enum Offering for "offering"
+            /// </summary>
+            [EnumMember(Value = "offering")]
+            Offering,
+            
+            /// <summary>
+            /// Enum Connected for "connected"
+            /// </summary>
+            [EnumMember(Value = "connected")]
+            Connected,
+            
+            /// <summary>
+            /// Enum Disconnected for "disconnected"
+            /// </summary>
+            [EnumMember(Value = "disconnected")]
+            Disconnected,
+            
+            /// <summary>
+            /// Enum Terminated for "terminated"
+            /// </summary>
+            [EnumMember(Value = "terminated")]
+            Terminated,
+            
+            /// <summary>
+            /// Enum None for "none"
+            /// </summary>
+            [EnumMember(Value = "none")]
+            None
+        }
+        /// <summary>
         /// The direction of the chat
         /// </summary>
         /// <value>The direction of the chat</value>
@@ -196,74 +259,17 @@ namespace PureCloudPlatform.Client.V2.Model
             Timeout
         }
         /// <summary>
-        /// The initial connection state of this communication.
-        /// </summary>
-        /// <value>The initial connection state of this communication.</value>
-        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
-        public enum InitialStateEnum
-        {
-            /// <summary>
-            /// Your SDK version is out of date and an unknown enum value was encountered. 
-            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
-            /// in the Package Manager Console
-            /// </summary>
-            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
-            OutdatedSdkVersion,
-            
-            /// <summary>
-            /// Enum Alerting for "alerting"
-            /// </summary>
-            [EnumMember(Value = "alerting")]
-            Alerting,
-            
-            /// <summary>
-            /// Enum Dialing for "dialing"
-            /// </summary>
-            [EnumMember(Value = "dialing")]
-            Dialing,
-            
-            /// <summary>
-            /// Enum Contacting for "contacting"
-            /// </summary>
-            [EnumMember(Value = "contacting")]
-            Contacting,
-            
-            /// <summary>
-            /// Enum Offering for "offering"
-            /// </summary>
-            [EnumMember(Value = "offering")]
-            Offering,
-            
-            /// <summary>
-            /// Enum Connected for "connected"
-            /// </summary>
-            [EnumMember(Value = "connected")]
-            Connected,
-            
-            /// <summary>
-            /// Enum Disconnected for "disconnected"
-            /// </summary>
-            [EnumMember(Value = "disconnected")]
-            Disconnected,
-            
-            /// <summary>
-            /// Enum Terminated for "terminated"
-            /// </summary>
-            [EnumMember(Value = "terminated")]
-            Terminated,
-            
-            /// <summary>
-            /// Enum None for "none"
-            /// </summary>
-            [EnumMember(Value = "none")]
-            None
-        }
-        /// <summary>
         /// The connection state of this communication.
         /// </summary>
         /// <value>The connection state of this communication.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        /// <summary>
+        /// The initial connection state of this communication.
+        /// </summary>
+        /// <value>The initial connection state of this communication.</value>
+        [DataMember(Name="initialState", EmitDefaultValue=false)]
+        public InitialStateEnum? InitialState { get; set; }
         /// <summary>
         /// The direction of the chat
         /// </summary>
@@ -277,15 +283,10 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
         /// <summary>
-        /// The initial connection state of this communication.
-        /// </summary>
-        /// <value>The initial connection state of this communication.</value>
-        [DataMember(Name="initialState", EmitDefaultValue=false)]
-        public InitialStateEnum? InitialState { get; set; }
-        /// <summary>
         /// Initializes a new instance of the <see cref="ConversationChat" /> class.
         /// </summary>
         /// <param name="State">The connection state of this communication..</param>
+        /// <param name="InitialState">The initial connection state of this communication..</param>
         /// <param name="Id">A globally unique identifier for this communication..</param>
         /// <param name="RoomId">The room id for the chat..</param>
         /// <param name="RecordingId">A globally unique identifier for the recording associated with this chat..</param>
@@ -305,10 +306,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Wrapup">Call wrap up or disposition data..</param>
         /// <param name="AfterCallWork">After-call work for the communication..</param>
         /// <param name="AfterCallWorkRequired">Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
-        /// <param name="InitialState">The initial connection state of this communication..</param>
-        public ConversationChat(StateEnum? State = null, string Id = null, string RoomId = null, string RecordingId = null, List<Segment> Segments = null, bool? Held = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, string ScriptId = null, string PeerId = null, string AvatarImageUrl = null, JourneyContext JourneyContext = null, Wrapup Wrapup = null, AfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, InitialStateEnum? InitialState = null)
+        public ConversationChat(StateEnum? State = null, InitialStateEnum? InitialState = null, string Id = null, string RoomId = null, string RecordingId = null, List<Segment> Segments = null, bool? Held = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, string ScriptId = null, string PeerId = null, string AvatarImageUrl = null, JourneyContext JourneyContext = null, Wrapup Wrapup = null, AfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null)
         {
             this.State = State;
+            this.InitialState = InitialState;
             this.Id = Id;
             this.RoomId = RoomId;
             this.RecordingId = RecordingId;
@@ -328,10 +329,11 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Wrapup = Wrapup;
             this.AfterCallWork = AfterCallWork;
             this.AfterCallWorkRequired = AfterCallWorkRequired;
-            this.InitialState = InitialState;
             
         }
         
+
+
 
 
 
@@ -492,8 +494,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? AfterCallWorkRequired { get; set; }
 
 
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -504,6 +504,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ConversationChat {\n");
 
             sb.Append("  State: ").Append(State).Append("\n");
+            sb.Append("  InitialState: ").Append(InitialState).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  RoomId: ").Append(RoomId).Append("\n");
             sb.Append("  RecordingId: ").Append(RecordingId).Append("\n");
@@ -523,7 +524,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             sb.Append("  AfterCallWork: ").Append(AfterCallWork).Append("\n");
             sb.Append("  AfterCallWorkRequired: ").Append(AfterCallWorkRequired).Append("\n");
-            sb.Append("  InitialState: ").Append(InitialState).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -568,6 +568,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
+                ) &&
+                (
+                    this.InitialState == other.InitialState ||
+                    this.InitialState != null &&
+                    this.InitialState.Equals(other.InitialState)
                 ) &&
                 (
                     this.Id == other.Id ||
@@ -663,11 +668,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AfterCallWorkRequired == other.AfterCallWorkRequired ||
                     this.AfterCallWorkRequired != null &&
                     this.AfterCallWorkRequired.Equals(other.AfterCallWorkRequired)
-                ) &&
-                (
-                    this.InitialState == other.InitialState ||
-                    this.InitialState != null &&
-                    this.InitialState.Equals(other.InitialState)
                 );
         }
 
@@ -684,6 +684,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
+
+                if (this.InitialState != null)
+                    hash = hash * 59 + this.InitialState.GetHashCode();
 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
@@ -741,9 +744,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AfterCallWorkRequired != null)
                     hash = hash * 59 + this.AfterCallWorkRequired.GetHashCode();
-
-                if (this.InitialState != null)
-                    hash = hash * 59 + this.InitialState.GetHashCode();
 
                 return hash;
             }

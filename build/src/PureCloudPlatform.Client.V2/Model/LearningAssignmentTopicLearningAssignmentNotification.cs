@@ -60,7 +60,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Notcompleted for "NotCompleted"
             /// </summary>
             [EnumMember(Value = "NotCompleted")]
-            Notcompleted
+            Notcompleted,
+            
+            /// <summary>
+            /// Enum Invalidschedule for "InvalidSchedule"
+            /// </summary>
+            [EnumMember(Value = "InvalidSchedule")]
+            Invalidschedule
         }
         /// <summary>
         /// Gets or Sets State

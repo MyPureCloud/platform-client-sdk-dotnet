@@ -7,7 +7,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**DeletePresenceSource**](PresenceApi.html#deletepresencesource) | **DELETE** /api/v2/presence/sources/{sourceId} | Delete a Presence Source |
 | [**DeletePresencedefinition**](PresenceApi.html#deletepresencedefinition) | **DELETE** /api/v2/presencedefinitions/{presenceId} | Delete a Presence Definition |
+| [**GetPresenceSource**](PresenceApi.html#getpresencesource) | **GET** /api/v2/presence/sources/{sourceId} | Get a Presence Source |
+| [**GetPresenceSources**](PresenceApi.html#getpresencesources) | **GET** /api/v2/presence/sources | Get a list of Presence Sources |
+| [**GetPresenceUserPrimarysource**](PresenceApi.html#getpresenceuserprimarysource) | **GET** /api/v2/presence/users/{userId}/primarysource | Get a user&#39;s Primary Presence Source |
 | [**GetPresencedefinition**](PresenceApi.html#getpresencedefinition) | **GET** /api/v2/presencedefinitions/{presenceId} | Get a Presence Definition |
 | [**GetPresencedefinitions**](PresenceApi.html#getpresencedefinitions) | **GET** /api/v2/presencedefinitions | Get an Organization&#39;s list of Presence Definitions |
 | [**GetSystempresences**](PresenceApi.html#getsystempresences) | **GET** /api/v2/systempresences | Get the list of SystemPresences |
@@ -15,10 +19,78 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetUserPresencesPurecloud**](PresenceApi.html#getuserpresencespurecloud) | **GET** /api/v2/users/{userId}/presences/purecloud | Get a user&#39;s Genesys Cloud presence. |
 | [**PatchUserPresence**](PresenceApi.html#patchuserpresence) | **PATCH** /api/v2/users/{userId}/presences/{sourceId} | Patch a user&#39;s Presence |
 | [**PatchUserPresencesPurecloud**](PresenceApi.html#patchuserpresencespurecloud) | **PATCH** /api/v2/users/{userId}/presences/purecloud | Patch a Genesys Cloud user&#39;s presence |
+| [**PostPresenceSources**](PresenceApi.html#postpresencesources) | **POST** /api/v2/presence/sources | Create a Presence Source |
 | [**PostPresencedefinitions**](PresenceApi.html#postpresencedefinitions) | **POST** /api/v2/presencedefinitions | Create a Presence Definition |
+| [**PutPresenceSource**](PresenceApi.html#putpresencesource) | **PUT** /api/v2/presence/sources/{sourceId} | Update a Presence Source |
+| [**PutPresenceUserPrimarysource**](PresenceApi.html#putpresenceuserprimarysource) | **PUT** /api/v2/presence/users/{userId}/primarysource | Update a user&#39;s Primary Presence Source |
 | [**PutPresencedefinition**](PresenceApi.html#putpresencedefinition) | **PUT** /api/v2/presencedefinitions/{presenceId} | Update a Presence Definition |
 | [**PutUsersPresencesBulk**](PresenceApi.html#putuserspresencesbulk) | **PUT** /api/v2/users/presences/bulk | Update bulk user Presences |
 {: class="table table-striped"}
+
+<a name="deletepresencesource"></a>
+
+## void DeletePresenceSource (string sourceId)
+
+
+
+Delete a Presence Source
+
+
+
+Requires ANY permissions: 
+
+* presence:source:delete
+* presence:source:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeletePresenceSourceExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new PresenceApi();
+            var sourceId = sourceId_example;  // string | Presence Source ID
+
+            try
+            { 
+                // Delete a Presence Source
+                apiInstance.DeletePresenceSource(sourceId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PresenceApi.DeletePresenceSource: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sourceId** | **string**| Presence Source ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="deletepresencedefinition"></a>
 
@@ -83,6 +155,201 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+<a name="getpresencesource"></a>
+
+## [**Source**](Source.html) GetPresenceSource (string sourceId)
+
+
+
+Get a Presence Source
+
+
+
+Requires ALL permissions: 
+
+* presence:source:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetPresenceSourceExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new PresenceApi();
+            var sourceId = sourceId_example;  // string | Presence Source ID
+
+            try
+            { 
+                // Get a Presence Source
+                Source result = apiInstance.GetPresenceSource(sourceId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PresenceApi.GetPresenceSource: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sourceId** | **string**| Presence Source ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Source**](Source.html)
+
+<a name="getpresencesources"></a>
+
+## [**SourceEntityListing**](SourceEntityListing.html) GetPresenceSources (string deleted = null)
+
+
+
+Get a list of Presence Sources
+
+
+
+Requires ALL permissions: 
+
+* presence:source:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetPresenceSourcesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new PresenceApi();
+            var deleted = deleted_example;  // string | Deleted query can be TRUE or FALSE (optional)  (default to "false")
+
+            try
+            { 
+                // Get a list of Presence Sources
+                SourceEntityListing result = apiInstance.GetPresenceSources(deleted);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PresenceApi.GetPresenceSources: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **deleted** | **string**| Deleted query can be TRUE or FALSE | [optional] [default to "false"] |
+{: class="table table-striped"}
+
+### Return type
+
+[**SourceEntityListing**](SourceEntityListing.html)
+
+<a name="getpresenceuserprimarysource"></a>
+
+## [**UserPrimarySource**](UserPrimarySource.html) GetPresenceUserPrimarysource (string userId)
+
+
+
+Get a user's Primary Presence Source
+
+
+
+Requires ALL permissions: 
+
+* presence:userPrimarySource:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetPresenceUserPrimarysourceExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new PresenceApi();
+            var userId = userId_example;  // string | user ID
+
+            try
+            { 
+                // Get a user's Primary Presence Source
+                UserPrimarySource result = apiInstance.GetPresenceUserPrimarysource(userId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PresenceApi.GetPresenceUserPrimarysource: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| user ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserPrimarySource**](UserPrimarySource.html)
 
 <a name="getpresencedefinition"></a>
 
@@ -551,6 +818,71 @@ namespace Example
 
 [**UserPresence**](UserPresence.html)
 
+<a name="postpresencesources"></a>
+
+## [**Source**](Source.html) PostPresenceSources (Source body)
+
+
+
+Create a Presence Source
+
+
+
+Requires ALL permissions: 
+
+* presence:source:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostPresenceSourcesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new PresenceApi();
+            var body = new Source(); // Source | The Presence Source to create
+
+            try
+            { 
+                // Create a Presence Source
+                Source result = apiInstance.PostPresenceSources(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PresenceApi.PostPresenceSources: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**Source**](Source.html)| The Presence Source to create |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Source**](Source.html)
+
 <a name="postpresencedefinitions"></a>
 
 ## [**OrganizationPresence**](OrganizationPresence.html) PostPresencedefinitions (OrganizationPresence body)
@@ -615,6 +947,140 @@ namespace Example
 ### Return type
 
 [**OrganizationPresence**](OrganizationPresence.html)
+
+<a name="putpresencesource"></a>
+
+## [**Source**](Source.html) PutPresenceSource (string sourceId, Source body)
+
+
+
+Update a Presence Source
+
+
+
+Requires ALL permissions: 
+
+* presence:source:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutPresenceSourceExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new PresenceApi();
+            var sourceId = sourceId_example;  // string | Presence Source ID
+            var body = new Source(); // Source | The updated Presence Source
+
+            try
+            { 
+                // Update a Presence Source
+                Source result = apiInstance.PutPresenceSource(sourceId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PresenceApi.PutPresenceSource: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sourceId** | **string**| Presence Source ID |  |
+| **body** | [**Source**](Source.html)| The updated Presence Source |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Source**](Source.html)
+
+<a name="putpresenceuserprimarysource"></a>
+
+## [**UserPrimarySource**](UserPrimarySource.html) PutPresenceUserPrimarysource (string userId, UserPrimarySource body)
+
+
+
+Update a user's Primary Presence Source
+
+
+
+Requires ALL permissions: 
+
+* presence:userPrimarySource:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutPresenceUserPrimarysourceExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new PresenceApi();
+            var userId = userId_example;  // string | user ID
+            var body = new UserPrimarySource(); // UserPrimarySource | Primary Source
+
+            try
+            { 
+                // Update a user's Primary Presence Source
+                UserPrimarySource result = apiInstance.PutPresenceUserPrimarysource(userId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PresenceApi.PutPresenceUserPrimarysource: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| user ID |  |
+| **body** | [**UserPrimarySource**](UserPrimarySource.html)| Primary Source |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserPrimarySource**](UserPrimarySource.html)
 
 <a name="putpresencedefinition"></a>
 

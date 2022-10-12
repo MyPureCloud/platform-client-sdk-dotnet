@@ -49,7 +49,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Receipt for "Receipt"
             /// </summary>
             [EnumMember(Value = "Receipt")]
-            Receipt
+            Receipt,
+            
+            /// <summary>
+            /// Enum Message for "Message"
+            /// </summary>
+            [EnumMember(Value = "Message")]
+            Message
         }
         /// <summary>
         /// Message type

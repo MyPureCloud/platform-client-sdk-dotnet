@@ -149,6 +149,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsEmailMessagesDraftAttachmentsCopy**](ConversationsApi.html#postconversationsemailmessagesdraftattachmentscopy) | **POST** /api/v2/conversations/emails/{conversationId}/messages/draft/attachments/copy | Copy attachments from an email message to the current draft. |
 | [**PostConversationsEmailParticipantReplace**](ConversationsApi.html#postconversationsemailparticipantreplace) | **POST** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
 | [**PostConversationsEmails**](ConversationsApi.html#postconversationsemails) | **POST** /api/v2/conversations/emails | Create an email conversation |
+| [**PostConversationsEmailsAgentless**](ConversationsApi.html#postconversationsemailsagentless) | **POST** /api/v2/conversations/emails/agentless | Create an email conversation, per API |
 | [**PostConversationsFaxes**](ConversationsApi.html#postconversationsfaxes) | **POST** /api/v2/conversations/faxes | Create Fax Conversation |
 | [**PostConversationsKeyconfigurations**](ConversationsApi.html#postconversationskeyconfigurations) | **POST** /api/v2/conversations/keyconfigurations | Setup configurations for encryption key creation |
 | [**PostConversationsKeyconfigurationsValidate**](ConversationsApi.html#postconversationskeyconfigurationsvalidate) | **POST** /api/v2/conversations/keyconfigurations/validate | Validate encryption key configurations without saving it |
@@ -3766,7 +3767,7 @@ namespace Example
 
 <a name="getconversationsmessagedetails"></a>
 
-## [**MessageData**](MessageData.html) GetConversationsMessageDetails (string messageId)
+## [**MessageData**](MessageData.html) GetConversationsMessageDetails (string messageId, bool? useNormalizedMessage = null)
 
 
 
@@ -3802,11 +3803,12 @@ namespace Example
 
             var apiInstance = new ConversationsApi();
             var messageId = messageId_example;  // string | messageId
+            var useNormalizedMessage = true;  // bool? | If true, response removes deprecated fields (textBody, media, stickers) (optional)  (default to false)
 
             try
             { 
                 // Get message
-                MessageData result = apiInstance.GetConversationsMessageDetails(messageId);
+                MessageData result = apiInstance.GetConversationsMessageDetails(messageId, useNormalizedMessage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3824,6 +3826,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **messageId** | **string**| messageId |  |
+| **useNormalizedMessage** | **bool?**| If true, response removes deprecated fields (textBody, media, stickers) | [optional] [default to false] |
 {: class="table table-striped"}
 
 ### Return type
@@ -3832,7 +3835,7 @@ namespace Example
 
 <a name="getconversationsmessagemessage"></a>
 
-## [**MessageData**](MessageData.html) GetConversationsMessageMessage (string conversationId, string messageId)
+## [**MessageData**](MessageData.html) GetConversationsMessageMessage (string conversationId, string messageId, bool? useNormalizedMessage = null)
 
 
 
@@ -3869,11 +3872,12 @@ namespace Example
             var apiInstance = new ConversationsApi();
             var conversationId = conversationId_example;  // string | conversationId
             var messageId = messageId_example;  // string | messageId
+            var useNormalizedMessage = true;  // bool? | If true, response removes deprecated fields (textBody, media, stickers) (optional)  (default to false)
 
             try
             { 
                 // Get conversation message
-                MessageData result = apiInstance.GetConversationsMessageMessage(conversationId, messageId);
+                MessageData result = apiInstance.GetConversationsMessageMessage(conversationId, messageId, useNormalizedMessage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3892,6 +3896,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **messageId** | **string**| messageId |  |
+| **useNormalizedMessage** | **bool?**| If true, response removes deprecated fields (textBody, media, stickers) | [optional] [default to false] |
 {: class="table table-striped"}
 
 ### Return type
@@ -9607,6 +9612,72 @@ namespace Example
 
 [**EmailConversation**](EmailConversation.html)
 
+<a name="postconversationsemailsagentless"></a>
+
+## [**AgentlessEmailSendResponseDto**](AgentlessEmailSendResponseDto.html) PostConversationsEmailsAgentless (AgentlessEmailSendRequestDto body)
+
+
+
+Create an email conversation, per API
+
+
+
+Requires ANY permissions: 
+
+* conversation:email:create
+* conversation:agentlessEmail:send
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsEmailsAgentlessExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var body = new AgentlessEmailSendRequestDto(); // AgentlessEmailSendRequestDto | Create agentless email request
+
+            try
+            { 
+                // Create an email conversation, per API
+                AgentlessEmailSendResponseDto result = apiInstance.PostConversationsEmailsAgentless(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsEmailsAgentless: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**AgentlessEmailSendRequestDto**](AgentlessEmailSendRequestDto.html)| Create agentless email request |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AgentlessEmailSendResponseDto**](AgentlessEmailSendResponseDto.html)
+
 <a name="postconversationsfaxes"></a>
 
 ## [**FaxSendResponse**](FaxSendResponse.html) PostConversationsFaxes (FaxSendRequest body)
@@ -9803,7 +9874,7 @@ namespace Example
 
 <a name="postconversationsmessagecommunicationmessages"></a>
 
-## [**MessageData**](MessageData.html) PostConversationsMessageCommunicationMessages (string conversationId, string communicationId, AdditionalMessage body)
+## [**MessageData**](MessageData.html) PostConversationsMessageCommunicationMessages (string conversationId, string communicationId, AdditionalMessage body, bool? useNormalizedMessage = null)
 
 
 
@@ -9843,11 +9914,12 @@ namespace Example
             var conversationId = conversationId_example;  // string | conversationId
             var communicationId = communicationId_example;  // string | communicationId
             var body = new AdditionalMessage(); // AdditionalMessage | Message
+            var useNormalizedMessage = true;  // bool? | If true, response removes deprecated fields (textBody, media, stickers) (optional)  (default to false)
 
             try
             { 
                 // Send message
-                MessageData result = apiInstance.PostConversationsMessageCommunicationMessages(conversationId, communicationId, body);
+                MessageData result = apiInstance.PostConversationsMessageCommunicationMessages(conversationId, communicationId, body, useNormalizedMessage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -9867,6 +9939,7 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **communicationId** | **string**| communicationId |  |
 | **body** | [**AdditionalMessage**](AdditionalMessage.html)| Message |  |
+| **useNormalizedMessage** | **bool?**| If true, response removes deprecated fields (textBody, media, stickers) | [optional] [default to false] |
 {: class="table table-striped"}
 
 ### Return type
@@ -9945,7 +10018,7 @@ namespace Example
 
 <a name="postconversationsmessagemessagesbulk"></a>
 
-## [**TextMessageListing**](TextMessageListing.html) PostConversationsMessageMessagesBulk (string conversationId, List<string> body = null)
+## [**TextMessageListing**](TextMessageListing.html) PostConversationsMessageMessagesBulk (string conversationId, bool? useNormalizedMessage = null, List<string> body = null)
 
 
 
@@ -9983,12 +10056,13 @@ namespace Example
 
             var apiInstance = new ConversationsApi();
             var conversationId = conversationId_example;  // string | 
+            var useNormalizedMessage = true;  // bool? | If true, response removes deprecated fields (textBody, media, stickers) (optional)  (default to false)
             var body = new List<string>(); // List<string> | messageIds (optional) 
 
             try
             { 
                 // Get messages in batch
-                TextMessageListing result = apiInstance.PostConversationsMessageMessagesBulk(conversationId, body);
+                TextMessageListing result = apiInstance.PostConversationsMessageMessagesBulk(conversationId, useNormalizedMessage, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -10006,6 +10080,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**|  |  |
+| **useNormalizedMessage** | **bool?**| If true, response removes deprecated fields (textBody, media, stickers) | [optional] [default to false] |
 | **body** | [**List<string>**](string.html)| messageIds | [optional]  |
 {: class="table table-striped"}
 

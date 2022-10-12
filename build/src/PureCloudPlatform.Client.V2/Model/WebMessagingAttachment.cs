@@ -55,7 +55,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum File for "File"
             /// </summary>
             [EnumMember(Value = "File")]
-            File
+            File,
+            
+            /// <summary>
+            /// Enum Link for "Link"
+            /// </summary>
+            [EnumMember(Value = "Link")]
+            Link
         }
         /// <summary>
         /// The type of attachment this instance represents.

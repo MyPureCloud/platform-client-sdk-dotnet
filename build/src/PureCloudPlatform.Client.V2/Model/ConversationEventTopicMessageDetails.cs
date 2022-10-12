@@ -73,7 +73,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Read for "read"
             /// </summary>
             [EnumMember(Value = "read")]
-            Read
+            Read,
+            
+            /// <summary>
+            /// Enum Removed for "removed"
+            /// </summary>
+            [EnumMember(Value = "removed")]
+            Removed
         }
         /// <summary>
         /// Indicates the delivery status of the message.

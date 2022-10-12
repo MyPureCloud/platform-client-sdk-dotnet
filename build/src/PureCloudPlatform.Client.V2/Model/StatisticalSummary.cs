@@ -32,7 +32,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Numerator">Numerator.</param>
         /// <param name="Denominator">Denominator.</param>
         /// <param name="Target">Target.</param>
-        public StatisticalSummary(double? Max = null, double? Min = null, long? Count = null, long? CountNegative = null, long? CountPositive = null, double? Sum = null, double? Current = null, double? Ratio = null, double? Numerator = null, double? Denominator = null, double? Target = null)
+        /// <param name="P95">P95.</param>
+        /// <param name="P99">P99.</param>
+        public StatisticalSummary(double? Max = null, double? Min = null, long? Count = null, long? CountNegative = null, long? CountPositive = null, double? Sum = null, double? Current = null, double? Ratio = null, double? Numerator = null, double? Denominator = null, double? Target = null, long? P95 = null, long? P99 = null)
         {
             this.Max = Max;
             this.Min = Min;
@@ -45,6 +47,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Numerator = Numerator;
             this.Denominator = Denominator;
             this.Target = Target;
+            this.P95 = P95;
+            this.P99 = P99;
             
         }
         
@@ -137,6 +141,22 @@ namespace PureCloudPlatform.Client.V2.Model
         public double? Target { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets P95
+        /// </summary>
+        [DataMember(Name="p95", EmitDefaultValue=false)]
+        public long? P95 { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets P99
+        /// </summary>
+        [DataMember(Name="p99", EmitDefaultValue=false)]
+        public long? P99 { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -157,6 +177,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Numerator: ").Append(Numerator).Append("\n");
             sb.Append("  Denominator: ").Append(Denominator).Append("\n");
             sb.Append("  Target: ").Append(Target).Append("\n");
+            sb.Append("  P95: ").Append(P95).Append("\n");
+            sb.Append("  P99: ").Append(P99).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -251,6 +273,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Target == other.Target ||
                     this.Target != null &&
                     this.Target.Equals(other.Target)
+                ) &&
+                (
+                    this.P95 == other.P95 ||
+                    this.P95 != null &&
+                    this.P95.Equals(other.P95)
+                ) &&
+                (
+                    this.P99 == other.P99 ||
+                    this.P99 != null &&
+                    this.P99.Equals(other.P99)
                 );
         }
 
@@ -297,6 +329,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Target != null)
                     hash = hash * 59 + this.Target.GetHashCode();
+
+                if (this.P95 != null)
+                    hash = hash * 59 + this.P95.GetHashCode();
+
+                if (this.P99 != null)
+                    hash = hash * 59 + this.P99.GetHashCode();
 
                 return hash;
             }

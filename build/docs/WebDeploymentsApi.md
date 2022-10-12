@@ -548,7 +548,7 @@ namespace Example
 
 <a name="getwebdeploymentsdeployments"></a>
 
-## [**WebDeploymentEntityListing**](WebDeploymentEntityListing.html) GetWebdeploymentsDeployments (List<string> expand = null)
+## [**ExpandableWebDeploymentEntityListing**](ExpandableWebDeploymentEntityListing.html) GetWebdeploymentsDeployments (List<string> expand = null)
 
 
 
@@ -587,7 +587,7 @@ namespace Example
             try
             { 
                 // Get deployments
-                WebDeploymentEntityListing result = apiInstance.GetWebdeploymentsDeployments(expand);
+                ExpandableWebDeploymentEntityListing result = apiInstance.GetWebdeploymentsDeployments(expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -609,7 +609,7 @@ namespace Example
 
 ### Return type
 
-[**WebDeploymentEntityListing**](WebDeploymentEntityListing.html)
+[**ExpandableWebDeploymentEntityListing**](ExpandableWebDeploymentEntityListing.html)
 
 <a name="postwebdeploymentsconfigurationversionsdraftpublish"></a>
 

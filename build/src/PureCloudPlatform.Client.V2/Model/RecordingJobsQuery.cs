@@ -63,14 +63,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Action">Operation to perform bulk task. The date when the action will be performed can either be specified as an absolute date for all recordings with the actionDate/screenRecordingActionDate parameters, or as the number of days after each recording's creation time with the actionAge/screenRecordingActionAge parameters. If the operation will cause the delete date of a recording to be older than the export date, the export date will be adjusted to the delete date. (required).</param>
         /// <param name="ActionDate">The date when the action will be performed. If screenRecordingActionDate is also provided, this value is only used for non-screen recordings. Otherwise this value is used for all recordings. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="IntegrationId">IntegrationId to Access AWS S3 bucket for bulk recording exports. This field is required and used only for EXPORT action..</param>
+        /// <param name="IncludeRecordingsWithSensitiveData">Whether to include recordings with PCI DSS and/or PII data, default value = false .</param>
         /// <param name="IncludeScreenRecordings">Whether to include Screen recordings for the action, default value = true .</param>
+        /// <param name="ClearExport">For DELETE action, setting this to true will clear any pending exports for recordings. This field is not used for EXPORT action. Default value = false.</param>
         /// <param name="ConversationQuery">Conversation Query. Note: After the recording is created, it might take up to 48 hours for the recording to be included in the submitted job query.  This result depends on the analytics data lake job completion. See also: https://developer.genesys.cloud/analyticsdatamanagement/analytics/jobs/conversation-details-job#data-availability (required).</param>
-        public RecordingJobsQuery(ActionEnum? Action = null, DateTime? ActionDate = null, string IntegrationId = null, bool? IncludeScreenRecordings = null, AsyncConversationQuery ConversationQuery = null)
+        public RecordingJobsQuery(ActionEnum? Action = null, DateTime? ActionDate = null, string IntegrationId = null, bool? IncludeRecordingsWithSensitiveData = null, bool? IncludeScreenRecordings = null, bool? ClearExport = null, AsyncConversationQuery ConversationQuery = null)
         {
             this.Action = Action;
             this.ActionDate = ActionDate;
             this.IntegrationId = IntegrationId;
+            this.IncludeRecordingsWithSensitiveData = IncludeRecordingsWithSensitiveData;
             this.IncludeScreenRecordings = IncludeScreenRecordings;
+            this.ClearExport = ClearExport;
             this.ConversationQuery = ConversationQuery;
             
         }
@@ -98,11 +102,29 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Whether to include recordings with PCI DSS and/or PII data, default value = false 
+        /// </summary>
+        /// <value>Whether to include recordings with PCI DSS and/or PII data, default value = false </value>
+        [DataMember(Name="includeRecordingsWithSensitiveData", EmitDefaultValue=false)]
+        public bool? IncludeRecordingsWithSensitiveData { get; set; }
+
+
+
+        /// <summary>
         /// Whether to include Screen recordings for the action, default value = true 
         /// </summary>
         /// <value>Whether to include Screen recordings for the action, default value = true </value>
         [DataMember(Name="includeScreenRecordings", EmitDefaultValue=false)]
         public bool? IncludeScreenRecordings { get; set; }
+
+
+
+        /// <summary>
+        /// For DELETE action, setting this to true will clear any pending exports for recordings. This field is not used for EXPORT action. Default value = false
+        /// </summary>
+        /// <value>For DELETE action, setting this to true will clear any pending exports for recordings. This field is not used for EXPORT action. Default value = false</value>
+        [DataMember(Name="clearExport", EmitDefaultValue=false)]
+        public bool? ClearExport { get; set; }
 
 
 
@@ -126,7 +148,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("  ActionDate: ").Append(ActionDate).Append("\n");
             sb.Append("  IntegrationId: ").Append(IntegrationId).Append("\n");
+            sb.Append("  IncludeRecordingsWithSensitiveData: ").Append(IncludeRecordingsWithSensitiveData).Append("\n");
             sb.Append("  IncludeScreenRecordings: ").Append(IncludeScreenRecordings).Append("\n");
+            sb.Append("  ClearExport: ").Append(ClearExport).Append("\n");
             sb.Append("  ConversationQuery: ").Append(ConversationQuery).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -184,9 +208,19 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.IntegrationId.Equals(other.IntegrationId)
                 ) &&
                 (
+                    this.IncludeRecordingsWithSensitiveData == other.IncludeRecordingsWithSensitiveData ||
+                    this.IncludeRecordingsWithSensitiveData != null &&
+                    this.IncludeRecordingsWithSensitiveData.Equals(other.IncludeRecordingsWithSensitiveData)
+                ) &&
+                (
                     this.IncludeScreenRecordings == other.IncludeScreenRecordings ||
                     this.IncludeScreenRecordings != null &&
                     this.IncludeScreenRecordings.Equals(other.IncludeScreenRecordings)
+                ) &&
+                (
+                    this.ClearExport == other.ClearExport ||
+                    this.ClearExport != null &&
+                    this.ClearExport.Equals(other.ClearExport)
                 ) &&
                 (
                     this.ConversationQuery == other.ConversationQuery ||
@@ -215,8 +249,14 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.IntegrationId != null)
                     hash = hash * 59 + this.IntegrationId.GetHashCode();
 
+                if (this.IncludeRecordingsWithSensitiveData != null)
+                    hash = hash * 59 + this.IncludeRecordingsWithSensitiveData.GetHashCode();
+
                 if (this.IncludeScreenRecordings != null)
                     hash = hash * 59 + this.IncludeScreenRecordings.GetHashCode();
+
+                if (this.ClearExport != null)
+                    hash = hash * 59 + this.ClearExport.GetHashCode();
 
                 if (this.ConversationQuery != null)
                     hash = hash * 59 + this.ConversationQuery.GetHashCode();

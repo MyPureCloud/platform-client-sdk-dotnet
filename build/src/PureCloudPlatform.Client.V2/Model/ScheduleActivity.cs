@@ -37,7 +37,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Coaching for "Coaching"
             /// </summary>
             [EnumMember(Value = "Coaching")]
-            Coaching
+            Coaching,
+            
+            /// <summary>
+            /// Enum Learning for "Learning"
+            /// </summary>
+            [EnumMember(Value = "Learning")]
+            Learning
         }
         /// <summary>
         /// The type of the external activity associated with this activity, if applicable

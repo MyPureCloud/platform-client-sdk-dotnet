@@ -1,0 +1,157 @@
+using System;
+using System.Linq;
+using System.IO;
+using System.Text;
+using System.Collections;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Runtime.Serialization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using PureCloudPlatform.Client.V2.Client;
+
+namespace PureCloudPlatform.Client.V2.Model
+{
+    /// <summary>
+    /// Signature
+    /// </summary>
+    [DataContract]
+    public partial class Signature :  IEquatable<Signature>
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Signature" /> class.
+        /// </summary>
+        /// <param name="Enabled">A toggle to enable the signature on email send..</param>
+        /// <param name="CannedResponseId">The identifier referring to an email signature canned response..</param>
+        /// <param name="AlwaysIncluded">A toggle that defines if a signature is always included or only set on the first email in an email chain..</param>
+        public Signature(bool? Enabled = null, string CannedResponseId = null, bool? AlwaysIncluded = null)
+        {
+            this.Enabled = Enabled;
+            this.CannedResponseId = CannedResponseId;
+            this.AlwaysIncluded = AlwaysIncluded;
+            
+        }
+        
+
+
+        /// <summary>
+        /// A toggle to enable the signature on email send.
+        /// </summary>
+        /// <value>A toggle to enable the signature on email send.</value>
+        [DataMember(Name="enabled", EmitDefaultValue=false)]
+        public bool? Enabled { get; set; }
+
+
+
+        /// <summary>
+        /// The identifier referring to an email signature canned response.
+        /// </summary>
+        /// <value>The identifier referring to an email signature canned response.</value>
+        [DataMember(Name="cannedResponseId", EmitDefaultValue=false)]
+        public string CannedResponseId { get; set; }
+
+
+
+        /// <summary>
+        /// A toggle that defines if a signature is always included or only set on the first email in an email chain.
+        /// </summary>
+        /// <value>A toggle that defines if a signature is always included or only set on the first email in an email chain.</value>
+        [DataMember(Name="alwaysIncluded", EmitDefaultValue=false)]
+        public bool? AlwaysIncluded { get; set; }
+
+
+        /// <summary>
+        /// Returns the string presentation of the object
+        /// </summary>
+        /// <returns>String presentation of the object</returns>
+        public override string ToString()
+        {
+            var sb = new StringBuilder();
+            sb.Append("class Signature {\n");
+
+            sb.Append("  Enabled: ").Append(Enabled).Append("\n");
+            sb.Append("  CannedResponseId: ").Append(CannedResponseId).Append("\n");
+            sb.Append("  AlwaysIncluded: ").Append(AlwaysIncluded).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
+        }
+  
+        /// <summary>
+        /// Returns the JSON string presentation of the object
+        /// </summary>
+        /// <returns>JSON string presentation of the object</returns>
+        public string ToJson()
+        {
+            return JsonConvert.SerializeObject(this, new JsonSerializerSettings
+            {
+                MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+                Formatting = Formatting.Indented
+            });
+        }
+
+        /// <summary>
+        /// Returns true if objects are equal
+        /// </summary>
+        /// <param name="obj">Object to be compared</param>
+        /// <returns>Boolean</returns>
+        public override bool Equals(object obj)
+        {
+            // credit: http://stackoverflow.com/a/10454552/677735
+            return this.Equals(obj as Signature);
+        }
+
+        /// <summary>
+        /// Returns true if Signature instances are equal
+        /// </summary>
+        /// <param name="other">Instance of Signature to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(Signature other)
+        {
+            // credit: http://stackoverflow.com/a/10454552/677735
+            if (other == null)
+                return false;
+
+            return true &&
+                (
+                    this.Enabled == other.Enabled ||
+                    this.Enabled != null &&
+                    this.Enabled.Equals(other.Enabled)
+                ) &&
+                (
+                    this.CannedResponseId == other.CannedResponseId ||
+                    this.CannedResponseId != null &&
+                    this.CannedResponseId.Equals(other.CannedResponseId)
+                ) &&
+                (
+                    this.AlwaysIncluded == other.AlwaysIncluded ||
+                    this.AlwaysIncluded != null &&
+                    this.AlwaysIncluded.Equals(other.AlwaysIncluded)
+                );
+        }
+
+        /// <summary>
+        /// Gets the hash code
+        /// </summary>
+        /// <returns>Hash code</returns>
+        public override int GetHashCode()
+        {
+            // credit: http://stackoverflow.com/a/263416/677735
+            unchecked // Overflow is fine, just wrap
+            {
+                int hash = 41;
+                // Suitable nullity checks etc, of course :)
+                if (this.Enabled != null)
+                    hash = hash * 59 + this.Enabled.GetHashCode();
+
+                if (this.CannedResponseId != null)
+                    hash = hash * 59 + this.CannedResponseId.GetHashCode();
+
+                if (this.AlwaysIncluded != null)
+                    hash = hash * 59 + this.AlwaysIncluded.GetHashCode();
+
+                return hash;
+            }
+        }
+    }
+
+}

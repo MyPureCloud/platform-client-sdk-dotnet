@@ -1296,8 +1296,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">messageId</param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, media, stickers) (optional, default to false)</param>
         /// <returns>MessageData</returns>
-        MessageData GetConversationsMessageDetails (string messageId);
+        MessageData GetConversationsMessageDetails (string messageId, bool? useNormalizedMessage = null);
 
         /// <summary>
         /// Get message
@@ -1307,8 +1308,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">messageId</param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, media, stickers) (optional, default to false)</param>
         /// <returns>ApiResponse of MessageData</returns>
-        ApiResponse<MessageData> GetConversationsMessageDetailsWithHttpInfo (string messageId);
+        ApiResponse<MessageData> GetConversationsMessageDetailsWithHttpInfo (string messageId, bool? useNormalizedMessage = null);
 
         /// <summary>
         /// Get conversation message
@@ -1319,8 +1321,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="messageId">messageId</param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, media, stickers) (optional, default to false)</param>
         /// <returns>MessageData</returns>
-        MessageData GetConversationsMessageMessage (string conversationId, string messageId);
+        MessageData GetConversationsMessageMessage (string conversationId, string messageId, bool? useNormalizedMessage = null);
 
         /// <summary>
         /// Get conversation message
@@ -1331,8 +1334,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="messageId">messageId</param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, media, stickers) (optional, default to false)</param>
         /// <returns>ApiResponse of MessageData</returns>
-        ApiResponse<MessageData> GetConversationsMessageMessageWithHttpInfo (string conversationId, string messageId);
+        ApiResponse<MessageData> GetConversationsMessageMessageWithHttpInfo (string conversationId, string messageId, bool? useNormalizedMessage = null);
 
         /// <summary>
         /// Get the wrap-up for this conversation participant. 
@@ -3439,6 +3443,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<EmailConversation> PostConversationsEmailsWithHttpInfo (CreateEmailRequest body);
 
         /// <summary>
+        /// Create an email conversation, per API
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Create agentless email request</param>
+        /// <returns>AgentlessEmailSendResponseDto</returns>
+        AgentlessEmailSendResponseDto PostConversationsEmailsAgentless (AgentlessEmailSendRequestDto body);
+
+        /// <summary>
+        /// Create an email conversation, per API
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Create agentless email request</param>
+        /// <returns>ApiResponse of AgentlessEmailSendResponseDto</returns>
+        ApiResponse<AgentlessEmailSendResponseDto> PostConversationsEmailsAgentlessWithHttpInfo (AgentlessEmailSendRequestDto body);
+
+        /// <summary>
         /// Create Fax Conversation
         /// </summary>
         /// <remarks>
@@ -3514,8 +3540,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Message</param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, media, stickers) (optional, default to false)</param>
         /// <returns>MessageData</returns>
-        MessageData PostConversationsMessageCommunicationMessages (string conversationId, string communicationId, AdditionalMessage body);
+        MessageData PostConversationsMessageCommunicationMessages (string conversationId, string communicationId, AdditionalMessage body, bool? useNormalizedMessage = null);
 
         /// <summary>
         /// Send message
@@ -3527,8 +3554,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Message</param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, media, stickers) (optional, default to false)</param>
         /// <returns>ApiResponse of MessageData</returns>
-        ApiResponse<MessageData> PostConversationsMessageCommunicationMessagesWithHttpInfo (string conversationId, string communicationId, AdditionalMessage body);
+        ApiResponse<MessageData> PostConversationsMessageCommunicationMessagesWithHttpInfo (string conversationId, string communicationId, AdditionalMessage body, bool? useNormalizedMessage = null);
 
         /// <summary>
         /// Create media
@@ -3562,9 +3590,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId"></param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, media, stickers) (optional, default to false)</param>
         /// <param name="body">messageIds (optional)</param>
         /// <returns>TextMessageListing</returns>
-        TextMessageListing PostConversationsMessageMessagesBulk (string conversationId, List<string> body = null);
+        TextMessageListing PostConversationsMessageMessagesBulk (string conversationId, bool? useNormalizedMessage = null, List<string> body = null);
 
         /// <summary>
         /// Get messages in batch
@@ -3574,9 +3603,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId"></param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, media, stickers) (optional, default to false)</param>
         /// <param name="body">messageIds (optional)</param>
         /// <returns>ApiResponse of TextMessageListing</returns>
-        ApiResponse<TextMessageListing> PostConversationsMessageMessagesBulkWithHttpInfo (string conversationId, List<string> body = null);
+        ApiResponse<TextMessageListing> PostConversationsMessageMessagesBulkWithHttpInfo (string conversationId, bool? useNormalizedMessage = null, List<string> body = null);
 
         /// <summary>
         /// Replace this participant with the specified user and/or address
@@ -5518,8 +5548,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">messageId</param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, media, stickers) (optional, default to false)</param>
         /// <returns>Task of MessageData</returns>
-        System.Threading.Tasks.Task<MessageData> GetConversationsMessageDetailsAsync (string messageId);
+        System.Threading.Tasks.Task<MessageData> GetConversationsMessageDetailsAsync (string messageId, bool? useNormalizedMessage = null);
 
         /// <summary>
         /// Get message
@@ -5529,8 +5560,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">messageId</param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, media, stickers) (optional, default to false)</param>
         /// <returns>Task of ApiResponse (MessageData)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MessageData>> GetConversationsMessageDetailsAsyncWithHttpInfo (string messageId);
+        System.Threading.Tasks.Task<ApiResponse<MessageData>> GetConversationsMessageDetailsAsyncWithHttpInfo (string messageId, bool? useNormalizedMessage = null);
 
         /// <summary>
         /// Get conversation message
@@ -5541,8 +5573,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="messageId">messageId</param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, media, stickers) (optional, default to false)</param>
         /// <returns>Task of MessageData</returns>
-        System.Threading.Tasks.Task<MessageData> GetConversationsMessageMessageAsync (string conversationId, string messageId);
+        System.Threading.Tasks.Task<MessageData> GetConversationsMessageMessageAsync (string conversationId, string messageId, bool? useNormalizedMessage = null);
 
         /// <summary>
         /// Get conversation message
@@ -5553,8 +5586,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="messageId">messageId</param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, media, stickers) (optional, default to false)</param>
         /// <returns>Task of ApiResponse (MessageData)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MessageData>> GetConversationsMessageMessageAsyncWithHttpInfo (string conversationId, string messageId);
+        System.Threading.Tasks.Task<ApiResponse<MessageData>> GetConversationsMessageMessageAsyncWithHttpInfo (string conversationId, string messageId, bool? useNormalizedMessage = null);
 
         /// <summary>
         /// Get the wrap-up for this conversation participant. 
@@ -7661,6 +7695,28 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<EmailConversation>> PostConversationsEmailsAsyncWithHttpInfo (CreateEmailRequest body);
 
         /// <summary>
+        /// Create an email conversation, per API
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Create agentless email request</param>
+        /// <returns>Task of AgentlessEmailSendResponseDto</returns>
+        System.Threading.Tasks.Task<AgentlessEmailSendResponseDto> PostConversationsEmailsAgentlessAsync (AgentlessEmailSendRequestDto body);
+
+        /// <summary>
+        /// Create an email conversation, per API
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Create agentless email request</param>
+        /// <returns>Task of ApiResponse (AgentlessEmailSendResponseDto)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AgentlessEmailSendResponseDto>> PostConversationsEmailsAgentlessAsyncWithHttpInfo (AgentlessEmailSendRequestDto body);
+
+        /// <summary>
         /// Create Fax Conversation
         /// </summary>
         /// <remarks>
@@ -7736,8 +7792,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Message</param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, media, stickers) (optional, default to false)</param>
         /// <returns>Task of MessageData</returns>
-        System.Threading.Tasks.Task<MessageData> PostConversationsMessageCommunicationMessagesAsync (string conversationId, string communicationId, AdditionalMessage body);
+        System.Threading.Tasks.Task<MessageData> PostConversationsMessageCommunicationMessagesAsync (string conversationId, string communicationId, AdditionalMessage body, bool? useNormalizedMessage = null);
 
         /// <summary>
         /// Send message
@@ -7749,8 +7806,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Message</param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, media, stickers) (optional, default to false)</param>
         /// <returns>Task of ApiResponse (MessageData)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MessageData>> PostConversationsMessageCommunicationMessagesAsyncWithHttpInfo (string conversationId, string communicationId, AdditionalMessage body);
+        System.Threading.Tasks.Task<ApiResponse<MessageData>> PostConversationsMessageCommunicationMessagesAsyncWithHttpInfo (string conversationId, string communicationId, AdditionalMessage body, bool? useNormalizedMessage = null);
 
         /// <summary>
         /// Create media
@@ -7784,9 +7842,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId"></param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, media, stickers) (optional, default to false)</param>
         /// <param name="body">messageIds (optional)</param>
         /// <returns>Task of TextMessageListing</returns>
-        System.Threading.Tasks.Task<TextMessageListing> PostConversationsMessageMessagesBulkAsync (string conversationId, List<string> body = null);
+        System.Threading.Tasks.Task<TextMessageListing> PostConversationsMessageMessagesBulkAsync (string conversationId, bool? useNormalizedMessage = null, List<string> body = null);
 
         /// <summary>
         /// Get messages in batch
@@ -7796,9 +7855,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId"></param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, media, stickers) (optional, default to false)</param>
         /// <param name="body">messageIds (optional)</param>
         /// <returns>Task of ApiResponse (TextMessageListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TextMessageListing>> PostConversationsMessageMessagesBulkAsyncWithHttpInfo (string conversationId, List<string> body = null);
+        System.Threading.Tasks.Task<ApiResponse<TextMessageListing>> PostConversationsMessageMessagesBulkAsyncWithHttpInfo (string conversationId, bool? useNormalizedMessage = null, List<string> body = null);
 
         /// <summary>
         /// Replace this participant with the specified user and/or address
@@ -19315,10 +19375,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">messageId</param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, media, stickers) (optional, default to false)</param>
         /// <returns>MessageData</returns>
-        public MessageData GetConversationsMessageDetails (string messageId)
+        public MessageData GetConversationsMessageDetails (string messageId, bool? useNormalizedMessage = null)
         {
-             ApiResponse<MessageData> localVarResponse = GetConversationsMessageDetailsWithHttpInfo(messageId);
+             ApiResponse<MessageData> localVarResponse = GetConversationsMessageDetailsWithHttpInfo(messageId, useNormalizedMessage);
              return localVarResponse.Data;
         }
 
@@ -19327,8 +19388,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">messageId</param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, media, stickers) (optional, default to false)</param>
         /// <returns>ApiResponse of MessageData</returns>
-        public ApiResponse< MessageData > GetConversationsMessageDetailsWithHttpInfo (string messageId)
+        public ApiResponse< MessageData > GetConversationsMessageDetailsWithHttpInfo (string messageId, bool? useNormalizedMessage = null)
         { 
             // verify the required parameter 'messageId' is set
             if (messageId == null)
@@ -19367,6 +19429,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (messageId != null) localVarPathParams.Add("messageId", this.Configuration.ApiClient.ParameterToString(messageId));
 
             // Query params
+            if (useNormalizedMessage != null) localVarQueryParams.Add(new Tuple<string, string>("useNormalizedMessage", this.Configuration.ApiClient.ParameterToString(useNormalizedMessage)));
 
             // Header params
 
@@ -19409,10 +19472,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">messageId</param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, media, stickers) (optional, default to false)</param>
         /// <returns>Task of MessageData</returns>
-        public async System.Threading.Tasks.Task<MessageData> GetConversationsMessageDetailsAsync (string messageId)
+        public async System.Threading.Tasks.Task<MessageData> GetConversationsMessageDetailsAsync (string messageId, bool? useNormalizedMessage = null)
         {
-             ApiResponse<MessageData> localVarResponse = await GetConversationsMessageDetailsAsyncWithHttpInfo(messageId);
+             ApiResponse<MessageData> localVarResponse = await GetConversationsMessageDetailsAsyncWithHttpInfo(messageId, useNormalizedMessage);
              return localVarResponse.Data;
 
         }
@@ -19422,8 +19486,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">messageId</param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, media, stickers) (optional, default to false)</param>
         /// <returns>Task of ApiResponse (MessageData)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MessageData>> GetConversationsMessageDetailsAsyncWithHttpInfo (string messageId)
+        public async System.Threading.Tasks.Task<ApiResponse<MessageData>> GetConversationsMessageDetailsAsyncWithHttpInfo (string messageId, bool? useNormalizedMessage = null)
         { 
             // verify the required parameter 'messageId' is set
             if (messageId == null)
@@ -19463,6 +19528,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (messageId != null) localVarPathParams.Add("messageId", this.Configuration.ApiClient.ParameterToString(messageId));
 
             // Query params
+            if (useNormalizedMessage != null) localVarQueryParams.Add(new Tuple<string, string>("useNormalizedMessage", this.Configuration.ApiClient.ParameterToString(useNormalizedMessage)));
 
             // Header params
 
@@ -19507,10 +19573,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="messageId">messageId</param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, media, stickers) (optional, default to false)</param>
         /// <returns>MessageData</returns>
-        public MessageData GetConversationsMessageMessage (string conversationId, string messageId)
+        public MessageData GetConversationsMessageMessage (string conversationId, string messageId, bool? useNormalizedMessage = null)
         {
-             ApiResponse<MessageData> localVarResponse = GetConversationsMessageMessageWithHttpInfo(conversationId, messageId);
+             ApiResponse<MessageData> localVarResponse = GetConversationsMessageMessageWithHttpInfo(conversationId, messageId, useNormalizedMessage);
              return localVarResponse.Data;
         }
 
@@ -19520,8 +19587,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="messageId">messageId</param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, media, stickers) (optional, default to false)</param>
         /// <returns>ApiResponse of MessageData</returns>
-        public ApiResponse< MessageData > GetConversationsMessageMessageWithHttpInfo (string conversationId, string messageId)
+        public ApiResponse< MessageData > GetConversationsMessageMessageWithHttpInfo (string conversationId, string messageId, bool? useNormalizedMessage = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -19564,6 +19632,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (messageId != null) localVarPathParams.Add("messageId", this.Configuration.ApiClient.ParameterToString(messageId));
 
             // Query params
+            if (useNormalizedMessage != null) localVarQueryParams.Add(new Tuple<string, string>("useNormalizedMessage", this.Configuration.ApiClient.ParameterToString(useNormalizedMessage)));
 
             // Header params
 
@@ -19607,10 +19676,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="messageId">messageId</param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, media, stickers) (optional, default to false)</param>
         /// <returns>Task of MessageData</returns>
-        public async System.Threading.Tasks.Task<MessageData> GetConversationsMessageMessageAsync (string conversationId, string messageId)
+        public async System.Threading.Tasks.Task<MessageData> GetConversationsMessageMessageAsync (string conversationId, string messageId, bool? useNormalizedMessage = null)
         {
-             ApiResponse<MessageData> localVarResponse = await GetConversationsMessageMessageAsyncWithHttpInfo(conversationId, messageId);
+             ApiResponse<MessageData> localVarResponse = await GetConversationsMessageMessageAsyncWithHttpInfo(conversationId, messageId, useNormalizedMessage);
              return localVarResponse.Data;
 
         }
@@ -19621,8 +19691,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="messageId">messageId</param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, media, stickers) (optional, default to false)</param>
         /// <returns>Task of ApiResponse (MessageData)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MessageData>> GetConversationsMessageMessageAsyncWithHttpInfo (string conversationId, string messageId)
+        public async System.Threading.Tasks.Task<ApiResponse<MessageData>> GetConversationsMessageMessageAsyncWithHttpInfo (string conversationId, string messageId, bool? useNormalizedMessage = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -19667,6 +19738,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (messageId != null) localVarPathParams.Add("messageId", this.Configuration.ApiClient.ParameterToString(messageId));
 
             // Query params
+            if (useNormalizedMessage != null) localVarQueryParams.Add(new Tuple<string, string>("useNormalizedMessage", this.Configuration.ApiClient.ParameterToString(useNormalizedMessage)));
 
             // Header params
 
@@ -37728,6 +37800,207 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Create an email conversation, per API 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Create agentless email request</param>
+        /// <returns>AgentlessEmailSendResponseDto</returns>
+        public AgentlessEmailSendResponseDto PostConversationsEmailsAgentless (AgentlessEmailSendRequestDto body)
+        {
+             ApiResponse<AgentlessEmailSendResponseDto> localVarResponse = PostConversationsEmailsAgentlessWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create an email conversation, per API 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Create agentless email request</param>
+        /// <returns>ApiResponse of AgentlessEmailSendResponseDto</returns>
+        public ApiResponse< AgentlessEmailSendResponseDto > PostConversationsEmailsAgentlessWithHttpInfo (AgentlessEmailSendRequestDto body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsEmailsAgentless");
+
+            var localVarPath = "/api/v2/conversations/emails/agentless";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmailsAgentless: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmailsAgentless: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AgentlessEmailSendResponseDto>(localVarStatusCode,
+                localVarHeaders,
+                (AgentlessEmailSendResponseDto) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentlessEmailSendResponseDto)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create an email conversation, per API 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Create agentless email request</param>
+        /// <returns>Task of AgentlessEmailSendResponseDto</returns>
+        public async System.Threading.Tasks.Task<AgentlessEmailSendResponseDto> PostConversationsEmailsAgentlessAsync (AgentlessEmailSendRequestDto body)
+        {
+             ApiResponse<AgentlessEmailSendResponseDto> localVarResponse = await PostConversationsEmailsAgentlessAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create an email conversation, per API 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Create agentless email request</param>
+        /// <returns>Task of ApiResponse (AgentlessEmailSendResponseDto)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AgentlessEmailSendResponseDto>> PostConversationsEmailsAgentlessAsyncWithHttpInfo (AgentlessEmailSendRequestDto body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsEmailsAgentless");
+            
+
+            var localVarPath = "/api/v2/conversations/emails/agentless";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmailsAgentless: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmailsAgentless: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AgentlessEmailSendResponseDto>(localVarStatusCode,
+                localVarHeaders,
+                (AgentlessEmailSendResponseDto) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentlessEmailSendResponseDto)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Create Fax Conversation 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -38337,10 +38610,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Message</param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, media, stickers) (optional, default to false)</param>
         /// <returns>MessageData</returns>
-        public MessageData PostConversationsMessageCommunicationMessages (string conversationId, string communicationId, AdditionalMessage body)
+        public MessageData PostConversationsMessageCommunicationMessages (string conversationId, string communicationId, AdditionalMessage body, bool? useNormalizedMessage = null)
         {
-             ApiResponse<MessageData> localVarResponse = PostConversationsMessageCommunicationMessagesWithHttpInfo(conversationId, communicationId, body);
+             ApiResponse<MessageData> localVarResponse = PostConversationsMessageCommunicationMessagesWithHttpInfo(conversationId, communicationId, body, useNormalizedMessage);
              return localVarResponse.Data;
         }
 
@@ -38351,8 +38625,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Message</param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, media, stickers) (optional, default to false)</param>
         /// <returns>ApiResponse of MessageData</returns>
-        public ApiResponse< MessageData > PostConversationsMessageCommunicationMessagesWithHttpInfo (string conversationId, string communicationId, AdditionalMessage body)
+        public ApiResponse< MessageData > PostConversationsMessageCommunicationMessagesWithHttpInfo (string conversationId, string communicationId, AdditionalMessage body, bool? useNormalizedMessage = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -38399,6 +38674,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (communicationId != null) localVarPathParams.Add("communicationId", this.Configuration.ApiClient.ParameterToString(communicationId));
 
             // Query params
+            if (useNormalizedMessage != null) localVarQueryParams.Add(new Tuple<string, string>("useNormalizedMessage", this.Configuration.ApiClient.ParameterToString(useNormalizedMessage)));
 
             // Header params
 
@@ -38448,10 +38724,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Message</param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, media, stickers) (optional, default to false)</param>
         /// <returns>Task of MessageData</returns>
-        public async System.Threading.Tasks.Task<MessageData> PostConversationsMessageCommunicationMessagesAsync (string conversationId, string communicationId, AdditionalMessage body)
+        public async System.Threading.Tasks.Task<MessageData> PostConversationsMessageCommunicationMessagesAsync (string conversationId, string communicationId, AdditionalMessage body, bool? useNormalizedMessage = null)
         {
-             ApiResponse<MessageData> localVarResponse = await PostConversationsMessageCommunicationMessagesAsyncWithHttpInfo(conversationId, communicationId, body);
+             ApiResponse<MessageData> localVarResponse = await PostConversationsMessageCommunicationMessagesAsyncWithHttpInfo(conversationId, communicationId, body, useNormalizedMessage);
              return localVarResponse.Data;
 
         }
@@ -38463,8 +38740,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Message</param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, media, stickers) (optional, default to false)</param>
         /// <returns>Task of ApiResponse (MessageData)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MessageData>> PostConversationsMessageCommunicationMessagesAsyncWithHttpInfo (string conversationId, string communicationId, AdditionalMessage body)
+        public async System.Threading.Tasks.Task<ApiResponse<MessageData>> PostConversationsMessageCommunicationMessagesAsyncWithHttpInfo (string conversationId, string communicationId, AdditionalMessage body, bool? useNormalizedMessage = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -38514,6 +38792,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (communicationId != null) localVarPathParams.Add("communicationId", this.Configuration.ApiClient.ParameterToString(communicationId));
 
             // Query params
+            if (useNormalizedMessage != null) localVarQueryParams.Add(new Tuple<string, string>("useNormalizedMessage", this.Configuration.ApiClient.ParameterToString(useNormalizedMessage)));
 
             // Header params
 
@@ -38766,11 +39045,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId"></param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, media, stickers) (optional, default to false)</param>
         /// <param name="body">messageIds (optional)</param>
         /// <returns>TextMessageListing</returns>
-        public TextMessageListing PostConversationsMessageMessagesBulk (string conversationId, List<string> body = null)
+        public TextMessageListing PostConversationsMessageMessagesBulk (string conversationId, bool? useNormalizedMessage = null, List<string> body = null)
         {
-             ApiResponse<TextMessageListing> localVarResponse = PostConversationsMessageMessagesBulkWithHttpInfo(conversationId, body);
+             ApiResponse<TextMessageListing> localVarResponse = PostConversationsMessageMessagesBulkWithHttpInfo(conversationId, useNormalizedMessage, body);
              return localVarResponse.Data;
         }
 
@@ -38779,9 +39059,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId"></param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, media, stickers) (optional, default to false)</param>
         /// <param name="body">messageIds (optional)</param>
         /// <returns>ApiResponse of TextMessageListing</returns>
-        public ApiResponse< TextMessageListing > PostConversationsMessageMessagesBulkWithHttpInfo (string conversationId, List<string> body = null)
+        public ApiResponse< TextMessageListing > PostConversationsMessageMessagesBulkWithHttpInfo (string conversationId, bool? useNormalizedMessage = null, List<string> body = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -38821,6 +39102,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
 
             // Query params
+            if (useNormalizedMessage != null) localVarQueryParams.Add(new Tuple<string, string>("useNormalizedMessage", this.Configuration.ApiClient.ParameterToString(useNormalizedMessage)));
 
             // Header params
 
@@ -38868,11 +39150,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId"></param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, media, stickers) (optional, default to false)</param>
         /// <param name="body">messageIds (optional)</param>
         /// <returns>Task of TextMessageListing</returns>
-        public async System.Threading.Tasks.Task<TextMessageListing> PostConversationsMessageMessagesBulkAsync (string conversationId, List<string> body = null)
+        public async System.Threading.Tasks.Task<TextMessageListing> PostConversationsMessageMessagesBulkAsync (string conversationId, bool? useNormalizedMessage = null, List<string> body = null)
         {
-             ApiResponse<TextMessageListing> localVarResponse = await PostConversationsMessageMessagesBulkAsyncWithHttpInfo(conversationId, body);
+             ApiResponse<TextMessageListing> localVarResponse = await PostConversationsMessageMessagesBulkAsyncWithHttpInfo(conversationId, useNormalizedMessage, body);
              return localVarResponse.Data;
 
         }
@@ -38882,9 +39165,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId"></param>
+        /// <param name="useNormalizedMessage">If true, response removes deprecated fields (textBody, media, stickers) (optional, default to false)</param>
         /// <param name="body">messageIds (optional)</param>
         /// <returns>Task of ApiResponse (TextMessageListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TextMessageListing>> PostConversationsMessageMessagesBulkAsyncWithHttpInfo (string conversationId, List<string> body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TextMessageListing>> PostConversationsMessageMessagesBulkAsyncWithHttpInfo (string conversationId, bool? useNormalizedMessage = null, List<string> body = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -38925,6 +39209,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
 
             // Query params
+            if (useNormalizedMessage != null) localVarQueryParams.Add(new Tuple<string, string>("useNormalizedMessage", this.Configuration.ApiClient.ParameterToString(useNormalizedMessage)));
 
             // Header params
 

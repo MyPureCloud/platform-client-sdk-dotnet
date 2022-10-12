@@ -16,6 +16,8 @@ title: ConversationMessageContent
 | **Story** | [**ConversationContentStory**](ConversationContentStory.html) | Ephemeral story content. | [optional] |
 | **Card** | [**ConversationContentCard**](ConversationContentCard.html) | Card content | [optional] |
 | **Carousel** | [**ConversationContentCarousel**](ConversationContentCarousel.html) | Carousel content | [optional] |
+| **Text** | [**ConversationContentText**](ConversationContentText.html) | Text content. | [optional] |
+| **QuickReplyV2** | [**ConversationContentQuickReplyV2**](ConversationContentQuickReplyV2.html) | Quick reply V2 content. | [optional] |
 {: class="table table-striped"}
 
 

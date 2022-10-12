@@ -8,6 +8,7 @@ title: Callback
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **State** | **string** | The connection state of this communication. | [optional] |
+| **InitialState** | **string** | The initial connection state of this communication. | [optional] |
 | **Id** | **string** | A globally unique identifier for this communication. | [optional] |
 | **Segments** | [**List&lt;Segment&gt;**](Segment.html) | The time line of the participant&#39;s callback, divided into activity segments. | [optional] |
 | **Direction** | **string** | The direction of the call | [optional] |
@@ -34,7 +35,6 @@ title: Callback
 | **AfterCallWorkRequired** | **bool?** | Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested. | [optional] |
 | **CallerId** | **string** | The phone number displayed to recipients of the phone call. The value should conform to the E164 format. | [optional] |
 | **CallerIdName** | **string** | The name displayed to recipients of the phone call. | [optional] |
-| **InitialState** | **string** | The initial connection state of this communication. | [optional] |
 {: class="table table-striped"}
 
 

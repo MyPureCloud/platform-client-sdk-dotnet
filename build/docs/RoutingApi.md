@@ -10,6 +10,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteRoutingAssessment**](RoutingApi.html#deleteroutingassessment) | **DELETE** /api/v2/routing/assessments/{assessmentId} | Delete single benefit assessment. |
 | [**DeleteRoutingEmailDomain**](RoutingApi.html#deleteroutingemaildomain) | **DELETE** /api/v2/routing/email/domains/{domainId} | Delete a domain |
 | [**DeleteRoutingEmailDomainRoute**](RoutingApi.html#deleteroutingemaildomainroute) | **DELETE** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Delete a route |
+| [**DeleteRoutingEmailOutboundDomain**](RoutingApi.html#deleteroutingemailoutbounddomain) | **DELETE** /api/v2/routing/email/outbound/domains/{domainId} | Delete an outbound domain |
 | [**DeleteRoutingPredictor**](RoutingApi.html#deleteroutingpredictor) | **DELETE** /api/v2/routing/predictors/{predictorId} | Delete single predictor. |
 | [**DeleteRoutingQueue**](RoutingApi.html#deleteroutingqueue) | **DELETE** /api/v2/routing/queues/{queueId} | Delete a queue |
 | [**DeleteRoutingQueueMember**](RoutingApi.html#deleteroutingqueuemember) | **DELETE** /api/v2/routing/queues/{queueId}/members/{memberId} | Delete a queue member. |
@@ -33,6 +34,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRoutingEmailDomainRoute**](RoutingApi.html#getroutingemaildomainroute) | **GET** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Get a route |
 | [**GetRoutingEmailDomainRoutes**](RoutingApi.html#getroutingemaildomainroutes) | **GET** /api/v2/routing/email/domains/{domainName}/routes | Get routes |
 | [**GetRoutingEmailDomains**](RoutingApi.html#getroutingemaildomains) | **GET** /api/v2/routing/email/domains | Get domains |
+| [**GetRoutingEmailOutboundDomain**](RoutingApi.html#getroutingemailoutbounddomain) | **GET** /api/v2/routing/email/outbound/domains/{domainId} | Get domain |
+| [**GetRoutingEmailOutboundDomainActivation**](RoutingApi.html#getroutingemailoutbounddomainactivation) | **GET** /api/v2/routing/email/outbound/domains/{domainId}/activation | Get activation status (cname + dkim) of an outbound domain |
+| [**GetRoutingEmailOutboundDomainSearch**](RoutingApi.html#getroutingemailoutbounddomainsearch) | **GET** /api/v2/routing/email/outbound/domains/{domainId}/search | Search a domain across organizations |
+| [**GetRoutingEmailOutboundDomains**](RoutingApi.html#getroutingemailoutbounddomains) | **GET** /api/v2/routing/email/outbound/domains | Get outbound domains |
 | [**GetRoutingEmailSetup**](RoutingApi.html#getroutingemailsetup) | **GET** /api/v2/routing/email/setup | Get email setup |
 | [**GetRoutingLanguages**](RoutingApi.html#getroutinglanguages) | **GET** /api/v2/routing/languages | Get the list of supported languages. |
 | [**GetRoutingMessageRecipient**](RoutingApi.html#getroutingmessagerecipient) | **GET** /api/v2/routing/message/recipients/{recipientId} | Get a recipient |
@@ -91,6 +96,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostRoutingEmailDomainRoutes**](RoutingApi.html#postroutingemaildomainroutes) | **POST** /api/v2/routing/email/domains/{domainName}/routes | Create a route |
 | [**PostRoutingEmailDomainTestconnection**](RoutingApi.html#postroutingemaildomaintestconnection) | **POST** /api/v2/routing/email/domains/{domainId}/testconnection | Tests the custom SMTP server integration connection set on this domain |
 | [**PostRoutingEmailDomains**](RoutingApi.html#postroutingemaildomains) | **POST** /api/v2/routing/email/domains | Create a domain |
+| [**PostRoutingEmailOutboundDomains**](RoutingApi.html#postroutingemailoutbounddomains) | **POST** /api/v2/routing/email/outbound/domains | Create a domain |
+| [**PostRoutingEmailOutboundDomainsSimulated**](RoutingApi.html#postroutingemailoutbounddomainssimulated) | **POST** /api/v2/routing/email/outbound/domains/simulated | Create a simulated domain |
 | [**PostRoutingLanguages**](RoutingApi.html#postroutinglanguages) | **POST** /api/v2/routing/languages | Create Language |
 | [**PostRoutingPredictors**](RoutingApi.html#postroutingpredictors) | **POST** /api/v2/routing/predictors | Create a predictor. |
 | [**PostRoutingQueueMembers**](RoutingApi.html#postroutingqueuemembers) | **POST** /api/v2/routing/queues/{queueId}/members | Bulk add or delete up to 100 queue members |
@@ -104,6 +111,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostUserRoutinglanguages**](RoutingApi.html#postuserroutinglanguages) | **POST** /api/v2/users/{userId}/routinglanguages | Add routing language to user |
 | [**PostUserRoutingskills**](RoutingApi.html#postuserroutingskills) | **POST** /api/v2/users/{userId}/routingskills | Add routing skill to user |
 | [**PutRoutingEmailDomainRoute**](RoutingApi.html#putroutingemaildomainroute) | **PUT** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Update a route |
+| [**PutRoutingEmailOutboundDomainActivation**](RoutingApi.html#putroutingemailoutbounddomainactivation) | **PUT** /api/v2/routing/email/outbound/domains/{domainId}/activation | Request an activation status (cname + dkim) update of an outbound domain |
 | [**PutRoutingMessageRecipient**](RoutingApi.html#putroutingmessagerecipient) | **PUT** /api/v2/routing/message/recipients/{recipientId} | Update a recipient |
 | [**PutRoutingQueue**](RoutingApi.html#putroutingqueue) | **PUT** /api/v2/routing/queues/{queueId} | Update a queue |
 | [**PutRoutingSettings**](RoutingApi.html#putroutingsettings) | **PUT** /api/v2/routing/settings | Update an organization&#39;s routing settings |
@@ -304,6 +312,70 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **domainName** | **string**| email domain |  |
 | **routeId** | **string**| route ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteroutingemailoutbounddomain"></a>
+
+## void DeleteRoutingEmailOutboundDomain (string domainId)
+
+
+
+Delete an outbound domain
+
+
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteRoutingEmailOutboundDomainExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var domainId = domainId_example;  // string | domain ID
+
+            try
+            { 
+                // Delete an outbound domain
+                apiInstance.DeleteRoutingEmailOutboundDomain(domainId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.DeleteRoutingEmailOutboundDomain: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **domainId** | **string**| domain ID |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1807,6 +1879,261 @@ namespace Example
 ### Return type
 
 [**InboundDomainEntityListing**](InboundDomainEntityListing.html)
+
+<a name="getroutingemailoutbounddomain"></a>
+
+## [**OutboundDomain**](OutboundDomain.html) GetRoutingEmailOutboundDomain (string domainId)
+
+
+
+Get domain
+
+
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingEmailOutboundDomainExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var domainId = domainId_example;  // string | domain ID
+
+            try
+            { 
+                // Get domain
+                OutboundDomain result = apiInstance.GetRoutingEmailOutboundDomain(domainId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingEmailOutboundDomain: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **domainId** | **string**| domain ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**OutboundDomain**](OutboundDomain.html)
+
+<a name="getroutingemailoutbounddomainactivation"></a>
+
+## [**EmailOutboundDomainResult**](EmailOutboundDomainResult.html) GetRoutingEmailOutboundDomainActivation (string domainId)
+
+
+
+Get activation status (cname + dkim) of an outbound domain
+
+
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingEmailOutboundDomainActivationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var domainId = domainId_example;  // string | domain ID
+
+            try
+            { 
+                // Get activation status (cname + dkim) of an outbound domain
+                EmailOutboundDomainResult result = apiInstance.GetRoutingEmailOutboundDomainActivation(domainId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingEmailOutboundDomainActivation: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **domainId** | **string**| domain ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EmailOutboundDomainResult**](EmailOutboundDomainResult.html)
+
+<a name="getroutingemailoutbounddomainsearch"></a>
+
+## [**OutboundDomain**](OutboundDomain.html) GetRoutingEmailOutboundDomainSearch (string domainId)
+
+
+
+Search a domain across organizations
+
+
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingEmailOutboundDomainSearchExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var domainId = domainId_example;  // string | domain ID
+
+            try
+            { 
+                // Search a domain across organizations
+                OutboundDomain result = apiInstance.GetRoutingEmailOutboundDomainSearch(domainId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingEmailOutboundDomainSearch: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **domainId** | **string**| domain ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**OutboundDomain**](OutboundDomain.html)
+
+<a name="getroutingemailoutbounddomains"></a>
+
+## [**OutboundDomainEntityListing**](OutboundDomainEntityListing.html) GetRoutingEmailOutboundDomains ()
+
+
+
+Get outbound domains
+
+
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingEmailOutboundDomainsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+
+            try
+            { 
+                // Get outbound domains
+                OutboundDomainEntityListing result = apiInstance.GetRoutingEmailOutboundDomains();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingEmailOutboundDomains: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+
+### Return type
+
+[**OutboundDomainEntityListing**](OutboundDomainEntityListing.html)
 
 <a name="getroutingemailsetup"></a>
 
@@ -5787,6 +6114,136 @@ namespace Example
 
 [**InboundDomain**](InboundDomain.html)
 
+<a name="postroutingemailoutbounddomains"></a>
+
+## [**EmailOutboundDomainResult**](EmailOutboundDomainResult.html) PostRoutingEmailOutboundDomains (OutboundDomain body)
+
+
+
+Create a domain
+
+
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostRoutingEmailOutboundDomainsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var body = new OutboundDomain(); // OutboundDomain | Domain
+
+            try
+            { 
+                // Create a domain
+                EmailOutboundDomainResult result = apiInstance.PostRoutingEmailOutboundDomains(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PostRoutingEmailOutboundDomains: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**OutboundDomain**](OutboundDomain.html)| Domain |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EmailOutboundDomainResult**](EmailOutboundDomainResult.html)
+
+<a name="postroutingemailoutbounddomainssimulated"></a>
+
+## [**EmailOutboundDomainResult**](EmailOutboundDomainResult.html) PostRoutingEmailOutboundDomainsSimulated (OutboundDomain body)
+
+
+
+Create a simulated domain
+
+
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostRoutingEmailOutboundDomainsSimulatedExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var body = new OutboundDomain(); // OutboundDomain | Domain
+
+            try
+            { 
+                // Create a simulated domain
+                EmailOutboundDomainResult result = apiInstance.PostRoutingEmailOutboundDomainsSimulated(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PostRoutingEmailOutboundDomainsSimulated: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**OutboundDomain**](OutboundDomain.html)| Domain |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EmailOutboundDomainResult**](EmailOutboundDomainResult.html)
+
 <a name="postroutinglanguages"></a>
 
 ## [**Language**](Language.html) PostRoutingLanguages (Language body)
@@ -6651,6 +7108,71 @@ namespace Example
 ### Return type
 
 [**InboundRoute**](InboundRoute.html)
+
+<a name="putroutingemailoutbounddomainactivation"></a>
+
+## [**EmailOutboundDomainResult**](EmailOutboundDomainResult.html) PutRoutingEmailOutboundDomainActivation (string domainId)
+
+
+
+Request an activation status (cname + dkim) update of an outbound domain
+
+
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutRoutingEmailOutboundDomainActivationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var domainId = domainId_example;  // string | domain ID
+
+            try
+            { 
+                // Request an activation status (cname + dkim) update of an outbound domain
+                EmailOutboundDomainResult result = apiInstance.PutRoutingEmailOutboundDomainActivation(domainId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PutRoutingEmailOutboundDomainActivation: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **domainId** | **string**| domain ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EmailOutboundDomainResult**](EmailOutboundDomainResult.html)
 
 <a name="putroutingmessagerecipient"></a>
 

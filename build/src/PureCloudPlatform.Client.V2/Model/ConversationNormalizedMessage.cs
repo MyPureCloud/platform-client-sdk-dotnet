@@ -58,6 +58,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Event,
             
             /// <summary>
+            /// Enum Message for "Message"
+            /// </summary>
+            [EnumMember(Value = "Message")]
+            Message,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]

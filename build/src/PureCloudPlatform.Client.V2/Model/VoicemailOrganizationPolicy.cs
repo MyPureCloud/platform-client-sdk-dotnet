@@ -27,8 +27,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PinRequired">If this is true, a PIN is required when accessing a user's voicemail from a phone..</param>
         /// <param name="InteractiveResponseRequired">Whether user should be prompted with a confirmation prompt when connecting to a Group Ring call.</param>
         /// <param name="SendEmailNotifications">Whether email notifications are sent for new voicemails in the organization. If false, new voicemail email notifications are not be sent for the organization overriding any user or group setting..</param>
+        /// <param name="IncludeEmailTranscriptions">Whether to include the voicemail transcription in the notification email.</param>
         /// <param name="DisableEmailPii">Removes any PII from emails. This overrides any analogous group configuration value. This is always true if HIPAA is enabled or unknown for an organization..</param>
-        public VoicemailOrganizationPolicy(int? AlertTimeoutSeconds = null, PINConfiguration PinConfiguration = null, string VoicemailExtension = null, bool? PinRequired = null, bool? InteractiveResponseRequired = null, bool? SendEmailNotifications = null, bool? DisableEmailPii = null)
+        public VoicemailOrganizationPolicy(int? AlertTimeoutSeconds = null, PINConfiguration PinConfiguration = null, string VoicemailExtension = null, bool? PinRequired = null, bool? InteractiveResponseRequired = null, bool? SendEmailNotifications = null, bool? IncludeEmailTranscriptions = null, bool? DisableEmailPii = null)
         {
             this.AlertTimeoutSeconds = AlertTimeoutSeconds;
             this.PinConfiguration = PinConfiguration;
@@ -36,6 +37,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.PinRequired = PinRequired;
             this.InteractiveResponseRequired = InteractiveResponseRequired;
             this.SendEmailNotifications = SendEmailNotifications;
+            this.IncludeEmailTranscriptions = IncludeEmailTranscriptions;
             this.DisableEmailPii = DisableEmailPii;
             
         }
@@ -106,6 +108,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Whether to include the voicemail transcription in the notification email
+        /// </summary>
+        /// <value>Whether to include the voicemail transcription in the notification email</value>
+        [DataMember(Name="includeEmailTranscriptions", EmitDefaultValue=false)]
+        public bool? IncludeEmailTranscriptions { get; set; }
+
+
+
+        /// <summary>
         /// Removes any PII from emails. This overrides any analogous group configuration value. This is always true if HIPAA is enabled or unknown for an organization.
         /// </summary>
         /// <value>Removes any PII from emails. This overrides any analogous group configuration value. This is always true if HIPAA is enabled or unknown for an organization.</value>
@@ -138,6 +149,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PinRequired: ").Append(PinRequired).Append("\n");
             sb.Append("  InteractiveResponseRequired: ").Append(InteractiveResponseRequired).Append("\n");
             sb.Append("  SendEmailNotifications: ").Append(SendEmailNotifications).Append("\n");
+            sb.Append("  IncludeEmailTranscriptions: ").Append(IncludeEmailTranscriptions).Append("\n");
             sb.Append("  DisableEmailPii: ").Append(DisableEmailPii).Append("\n");
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
             sb.Append("}\n");
@@ -216,6 +228,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SendEmailNotifications.Equals(other.SendEmailNotifications)
                 ) &&
                 (
+                    this.IncludeEmailTranscriptions == other.IncludeEmailTranscriptions ||
+                    this.IncludeEmailTranscriptions != null &&
+                    this.IncludeEmailTranscriptions.Equals(other.IncludeEmailTranscriptions)
+                ) &&
+                (
                     this.DisableEmailPii == other.DisableEmailPii ||
                     this.DisableEmailPii != null &&
                     this.DisableEmailPii.Equals(other.DisableEmailPii)
@@ -258,6 +275,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SendEmailNotifications != null)
                     hash = hash * 59 + this.SendEmailNotifications.GetHashCode();
+
+                if (this.IncludeEmailTranscriptions != null)
+                    hash = hash * 59 + this.IncludeEmailTranscriptions.GetHashCode();
 
                 if (this.DisableEmailPii != null)
                     hash = hash * 59 + this.DisableEmailPii.GetHashCode();

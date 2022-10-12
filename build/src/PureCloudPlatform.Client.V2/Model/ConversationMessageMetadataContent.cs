@@ -88,6 +88,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Carousel,
             
             /// <summary>
+            /// Enum Text for "Text"
+            /// </summary>
+            [EnumMember(Value = "Text")]
+            Text,
+            
+            /// <summary>
+            /// Enum Quickreplyv2 for "QuickReplyV2"
+            /// </summary>
+            [EnumMember(Value = "QuickReplyV2")]
+            Quickreplyv2,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]

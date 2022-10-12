@@ -34,6 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Agentconfig for "AgentConfig"
+            /// </summary>
+            [EnumMember(Value = "AgentConfig")]
+            Agentconfig,
+            
+            /// <summary>
             /// Enum Analyticsreporting for "AnalyticsReporting"
             /// </summary>
             [EnumMember(Value = "AnalyticsReporting")]

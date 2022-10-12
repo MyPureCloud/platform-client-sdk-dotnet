@@ -43,7 +43,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Desc for "desc"
             /// </summary>
             [EnumMember(Value = "desc")]
-            Desc
+            Desc,
+            
+            /// <summary>
+            /// Enum Unordered for "unordered"
+            /// </summary>
+            [EnumMember(Value = "unordered")]
+            Unordered
         }
         /// <summary>
         /// Specify which data element within the result set to use for sorting. The options  to use as a basis for sorting the results: conversationStart, segmentStart, and segmentEnd. If not specified, the default is conversationStart

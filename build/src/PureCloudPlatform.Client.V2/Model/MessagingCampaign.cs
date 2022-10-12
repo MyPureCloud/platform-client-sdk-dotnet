@@ -88,11 +88,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AlwaysRunning">Whether this messaging campaign is always running.</param>
         /// <param name="ContactSorts">The order in which to sort contacts for dialing, based on up to four columns..</param>
         /// <param name="MessagesPerMinute">How many messages this messaging campaign will send per minute. (required).</param>
+        /// <param name="RuleSets">Rule Sets to be applied while this campaign is sending messages.</param>
         /// <param name="ContactListFilters">The contact list filter to check before sending a message for this messaging campaign..</param>
         /// <param name="Errors">A list of current error conditions associated with this messaging campaign..</param>
         /// <param name="EmailConfig">Configuration for this messaging campaign to send Email messages..</param>
         /// <param name="SmsConfig">Configuration for this messaging campaign to send SMS messages..</param>
-        public MessagingCampaign(string Name = null, int? Version = null, DomainEntityRef Division = null, CampaignStatusEnum? CampaignStatus = null, DomainEntityRef CallableTimeSet = null, DomainEntityRef ContactList = null, List<DomainEntityRef> DncLists = null, bool? AlwaysRunning = null, List<ContactSort> ContactSorts = null, int? MessagesPerMinute = null, List<DomainEntityRef> ContactListFilters = null, List<RestErrorDetail> Errors = null, EmailConfig EmailConfig = null, SmsConfig SmsConfig = null)
+        public MessagingCampaign(string Name = null, int? Version = null, DomainEntityRef Division = null, CampaignStatusEnum? CampaignStatus = null, DomainEntityRef CallableTimeSet = null, DomainEntityRef ContactList = null, List<DomainEntityRef> DncLists = null, bool? AlwaysRunning = null, List<ContactSort> ContactSorts = null, int? MessagesPerMinute = null, List<DomainEntityRef> RuleSets = null, List<DomainEntityRef> ContactListFilters = null, List<RestErrorDetail> Errors = null, EmailConfig EmailConfig = null, SmsConfig SmsConfig = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -104,6 +105,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AlwaysRunning = AlwaysRunning;
             this.ContactSorts = ContactSorts;
             this.MessagesPerMinute = MessagesPerMinute;
+            this.RuleSets = RuleSets;
             this.ContactListFilters = ContactListFilters;
             this.Errors = Errors;
             this.EmailConfig = EmailConfig;
@@ -223,6 +225,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Rule Sets to be applied while this campaign is sending messages
+        /// </summary>
+        /// <value>Rule Sets to be applied while this campaign is sending messages</value>
+        [DataMember(Name="ruleSets", EmitDefaultValue=false)]
+        public List<DomainEntityRef> RuleSets { get; set; }
+
+
+
+        /// <summary>
         /// The contact list filter to check before sending a message for this messaging campaign.
         /// </summary>
         /// <value>The contact list filter to check before sending a message for this messaging campaign.</value>
@@ -288,6 +299,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AlwaysRunning: ").Append(AlwaysRunning).Append("\n");
             sb.Append("  ContactSorts: ").Append(ContactSorts).Append("\n");
             sb.Append("  MessagesPerMinute: ").Append(MessagesPerMinute).Append("\n");
+            sb.Append("  RuleSets: ").Append(RuleSets).Append("\n");
             sb.Append("  ContactListFilters: ").Append(ContactListFilters).Append("\n");
             sb.Append("  Errors: ").Append(Errors).Append("\n");
             sb.Append("  EmailConfig: ").Append(EmailConfig).Append("\n");
@@ -399,6 +411,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MessagesPerMinute.Equals(other.MessagesPerMinute)
                 ) &&
                 (
+                    this.RuleSets == other.RuleSets ||
+                    this.RuleSets != null &&
+                    this.RuleSets.SequenceEqual(other.RuleSets)
+                ) &&
+                (
                     this.ContactListFilters == other.ContactListFilters ||
                     this.ContactListFilters != null &&
                     this.ContactListFilters.SequenceEqual(other.ContactListFilters)
@@ -474,6 +491,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MessagesPerMinute != null)
                     hash = hash * 59 + this.MessagesPerMinute.GetHashCode();
+
+                if (this.RuleSets != null)
+                    hash = hash * 59 + this.RuleSets.GetHashCode();
 
                 if (this.ContactListFilters != null)
                     hash = hash * 59 + this.ContactListFilters.GetHashCode();

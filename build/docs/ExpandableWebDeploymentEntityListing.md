@@ -1,14 +1,14 @@
 ---
-title: WebDeploymentEntityListing
+title: ExpandableWebDeploymentEntityListing
 ---
-## ININ.PureCloudApi.Model.WebDeploymentEntityListing
+## ININ.PureCloudApi.Model.ExpandableWebDeploymentEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Total** | **long?** |  | [optional] |
-| **Entities** | [**List&lt;WebDeployment&gt;**](WebDeployment.html) |  | [optional] |
+| **Entities** | [**List&lt;ExpandableWebDeployment&gt;**](ExpandableWebDeployment.html) |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 {: class="table table-striped"}
 

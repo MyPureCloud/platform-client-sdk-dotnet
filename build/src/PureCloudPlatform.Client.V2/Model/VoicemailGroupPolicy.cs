@@ -64,17 +64,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Enabled">Whether voicemail is enabled for the group.</param>
         /// <param name="SendEmailNotifications">Whether email notifications are sent to group members when a new voicemail is received.</param>
         /// <param name="DisableEmailPii">Removes any PII from group emails. This is overridden by the analogous organization configuration value. This is always true if HIPAA is enabled or unknown for an organization..</param>
+        /// <param name="LanguagePreference">The language preference for the group.  Used for group voicemail transcription.</param>
         /// <param name="RotateCallsSecs">How many seconds to ring before rotating to the next member in the group.</param>
         /// <param name="StopRingingAfterRotations">How many rotations to go through.</param>
         /// <param name="OverflowGroupId">A fallback group to contact when all of the members in this group did not answer the call..</param>
         /// <param name="GroupAlertType">Specifies if the members in this group should be contacted randomly, in a specific order, or by round-robin..</param>
         /// <param name="InteractiveResponsePromptId">The prompt to use when connecting a user to a Group Ring call.</param>
-        public VoicemailGroupPolicy(string Name = null, bool? Enabled = null, bool? SendEmailNotifications = null, bool? DisableEmailPii = null, int? RotateCallsSecs = null, int? StopRingingAfterRotations = null, string OverflowGroupId = null, GroupAlertTypeEnum? GroupAlertType = null, string InteractiveResponsePromptId = null)
+        public VoicemailGroupPolicy(string Name = null, bool? Enabled = null, bool? SendEmailNotifications = null, bool? DisableEmailPii = null, string LanguagePreference = null, int? RotateCallsSecs = null, int? StopRingingAfterRotations = null, string OverflowGroupId = null, GroupAlertTypeEnum? GroupAlertType = null, string InteractiveResponsePromptId = null)
         {
             this.Name = Name;
             this.Enabled = Enabled;
             this.SendEmailNotifications = SendEmailNotifications;
             this.DisableEmailPii = DisableEmailPii;
+            this.LanguagePreference = LanguagePreference;
             this.RotateCallsSecs = RotateCallsSecs;
             this.StopRingingAfterRotations = StopRingingAfterRotations;
             this.OverflowGroupId = OverflowGroupId;
@@ -130,6 +132,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The language preference for the group.  Used for group voicemail transcription
+        /// </summary>
+        /// <value>The language preference for the group.  Used for group voicemail transcription</value>
+        [DataMember(Name="languagePreference", EmitDefaultValue=false)]
+        public string LanguagePreference { get; set; }
+
+
+
+        /// <summary>
         /// How many seconds to ring before rotating to the next member in the group
         /// </summary>
         /// <value>How many seconds to ring before rotating to the next member in the group</value>
@@ -180,6 +191,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  SendEmailNotifications: ").Append(SendEmailNotifications).Append("\n");
             sb.Append("  DisableEmailPii: ").Append(DisableEmailPii).Append("\n");
+            sb.Append("  LanguagePreference: ").Append(LanguagePreference).Append("\n");
             sb.Append("  RotateCallsSecs: ").Append(RotateCallsSecs).Append("\n");
             sb.Append("  StopRingingAfterRotations: ").Append(StopRingingAfterRotations).Append("\n");
             sb.Append("  OverflowGroupId: ").Append(OverflowGroupId).Append("\n");
@@ -251,6 +263,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DisableEmailPii.Equals(other.DisableEmailPii)
                 ) &&
                 (
+                    this.LanguagePreference == other.LanguagePreference ||
+                    this.LanguagePreference != null &&
+                    this.LanguagePreference.Equals(other.LanguagePreference)
+                ) &&
+                (
                     this.RotateCallsSecs == other.RotateCallsSecs ||
                     this.RotateCallsSecs != null &&
                     this.RotateCallsSecs.Equals(other.RotateCallsSecs)
@@ -302,6 +319,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DisableEmailPii != null)
                     hash = hash * 59 + this.DisableEmailPii.GetHashCode();
+
+                if (this.LanguagePreference != null)
+                    hash = hash * 59 + this.LanguagePreference.GetHashCode();
 
                 if (this.RotateCallsSecs != null)
                     hash = hash * 59 + this.RotateCallsSecs.GetHashCode();

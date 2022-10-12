@@ -18,6 +18,132 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class KnowledgeDocumentSearchRequest :  IEquatable<KnowledgeDocumentSearchRequest>
     {
+        /// <summary>
+        /// The sort order for search results.
+        /// </summary>
+        /// <value>The sort order for search results.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum SortOrderEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Asc for "ASC"
+            /// </summary>
+            [EnumMember(Value = "ASC")]
+            Asc,
+            
+            /// <summary>
+            /// Enum Desc for "DESC"
+            /// </summary>
+            [EnumMember(Value = "DESC")]
+            Desc,
+            
+            /// <summary>
+            /// Enum Score for "SCORE"
+            /// </summary>
+            [EnumMember(Value = "SCORE")]
+            Score
+        }
+        /// <summary>
+        /// The field in the documents that you want to sort the search results by.
+        /// </summary>
+        /// <value>The field in the documents that you want to sort the search results by.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum SortByEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Confidencescore for "ConfidenceScore"
+            /// </summary>
+            [EnumMember(Value = "ConfidenceScore")]
+            Confidencescore,
+            
+            /// <summary>
+            /// Enum Datecreated for "DateCreated"
+            /// </summary>
+            [EnumMember(Value = "DateCreated")]
+            Datecreated,
+            
+            /// <summary>
+            /// Enum Datemodified for "DateModified"
+            /// </summary>
+            [EnumMember(Value = "DateModified")]
+            Datemodified,
+            
+            /// <summary>
+            /// Enum Categoryid for "CategoryId"
+            /// </summary>
+            [EnumMember(Value = "CategoryId")]
+            Categoryid,
+            
+            /// <summary>
+            /// Enum Categoryname for "CategoryName"
+            /// </summary>
+            [EnumMember(Value = "CategoryName")]
+            Categoryname,
+            
+            /// <summary>
+            /// Enum Contextid for "ContextId"
+            /// </summary>
+            [EnumMember(Value = "ContextId")]
+            Contextid,
+            
+            /// <summary>
+            /// Enum Contextname for "ContextName"
+            /// </summary>
+            [EnumMember(Value = "ContextName")]
+            Contextname,
+            
+            /// <summary>
+            /// Enum Contextvalueid for "ContextValueId"
+            /// </summary>
+            [EnumMember(Value = "ContextValueId")]
+            Contextvalueid,
+            
+            /// <summary>
+            /// Enum Contextvaluename for "ContextValueName"
+            /// </summary>
+            [EnumMember(Value = "ContextValueName")]
+            Contextvaluename,
+            
+            /// <summary>
+            /// Enum Labelid for "LabelId"
+            /// </summary>
+            [EnumMember(Value = "LabelId")]
+            Labelid,
+            
+            /// <summary>
+            /// Enum Labelname for "LabelName"
+            /// </summary>
+            [EnumMember(Value = "LabelName")]
+            Labelname
+        }
+        /// <summary>
+        /// The sort order for search results.
+        /// </summary>
+        /// <value>The sort order for search results.</value>
+        [DataMember(Name="sortOrder", EmitDefaultValue=false)]
+        public SortOrderEnum? SortOrder { get; set; }
+        /// <summary>
+        /// The field in the documents that you want to sort the search results by.
+        /// </summary>
+        /// <value>The field in the documents that you want to sort the search results by.</value>
+        [DataMember(Name="sortBy", EmitDefaultValue=false)]
+        public SortByEnum? SortBy { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="KnowledgeDocumentSearchRequest" /> class.
@@ -31,12 +157,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PageSize">Page size of the returned results..</param>
         /// <param name="PageNumber">Page number of the returned results..</param>
         /// <param name="IncludeDraftDocuments">Indicates whether the search results would also include draft documents..</param>
-        public KnowledgeDocumentSearchRequest(string Query = null, int? PageSize = null, int? PageNumber = null, bool? IncludeDraftDocuments = null)
+        /// <param name="Interval">Retrieves the documents created/modified/published in specified date and time range..</param>
+        /// <param name="Filter">Filter for the document search..</param>
+        /// <param name="SortOrder">The sort order for search results..</param>
+        /// <param name="SortBy">The field in the documents that you want to sort the search results by..</param>
+        public KnowledgeDocumentSearchRequest(string Query = null, int? PageSize = null, int? PageNumber = null, bool? IncludeDraftDocuments = null, DocumentQueryInterval Interval = null, DocumentQuery Filter = null, SortOrderEnum? SortOrder = null, SortByEnum? SortBy = null)
         {
             this.Query = Query;
             this.PageSize = PageSize;
             this.PageNumber = PageNumber;
             this.IncludeDraftDocuments = IncludeDraftDocuments;
+            this.Interval = Interval;
+            this.Filter = Filter;
+            this.SortOrder = SortOrder;
+            this.SortBy = SortBy;
             
         }
         
@@ -104,6 +238,28 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? IncludeDraftDocuments { get; set; }
 
 
+
+        /// <summary>
+        /// Retrieves the documents created/modified/published in specified date and time range.
+        /// </summary>
+        /// <value>Retrieves the documents created/modified/published in specified date and time range.</value>
+        [DataMember(Name="interval", EmitDefaultValue=false)]
+        public DocumentQueryInterval Interval { get; set; }
+
+
+
+        /// <summary>
+        /// Filter for the document search.
+        /// </summary>
+        /// <value>Filter for the document search.</value>
+        [DataMember(Name="filter", EmitDefaultValue=false)]
+        public DocumentQuery Filter { get; set; }
+
+
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -120,6 +276,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Total: ").Append(Total).Append("\n");
             sb.Append("  PageCount: ").Append(PageCount).Append("\n");
             sb.Append("  IncludeDraftDocuments: ").Append(IncludeDraftDocuments).Append("\n");
+            sb.Append("  Interval: ").Append(Interval).Append("\n");
+            sb.Append("  Filter: ").Append(Filter).Append("\n");
+            sb.Append("  SortOrder: ").Append(SortOrder).Append("\n");
+            sb.Append("  SortBy: ").Append(SortBy).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -194,6 +354,26 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.IncludeDraftDocuments == other.IncludeDraftDocuments ||
                     this.IncludeDraftDocuments != null &&
                     this.IncludeDraftDocuments.Equals(other.IncludeDraftDocuments)
+                ) &&
+                (
+                    this.Interval == other.Interval ||
+                    this.Interval != null &&
+                    this.Interval.Equals(other.Interval)
+                ) &&
+                (
+                    this.Filter == other.Filter ||
+                    this.Filter != null &&
+                    this.Filter.Equals(other.Filter)
+                ) &&
+                (
+                    this.SortOrder == other.SortOrder ||
+                    this.SortOrder != null &&
+                    this.SortOrder.Equals(other.SortOrder)
+                ) &&
+                (
+                    this.SortBy == other.SortBy ||
+                    this.SortBy != null &&
+                    this.SortBy.Equals(other.SortBy)
                 );
         }
 
@@ -228,6 +408,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.IncludeDraftDocuments != null)
                     hash = hash * 59 + this.IncludeDraftDocuments.GetHashCode();
+
+                if (this.Interval != null)
+                    hash = hash * 59 + this.Interval.GetHashCode();
+
+                if (this.Filter != null)
+                    hash = hash * 59 + this.Filter.GetHashCode();
+
+                if (this.SortOrder != null)
+                    hash = hash * 59 + this.SortOrder.GetHashCode();
+
+                if (this.SortBy != null)
+                    hash = hash * 59 + this.SortBy.GetHashCode();
 
                 return hash;
             }

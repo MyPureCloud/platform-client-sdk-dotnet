@@ -20,9 +20,11 @@ title: AnalyticsSession
 | **AssignerId** | **string** | ID of the user that manually assigned a conversation | [optional] |
 | **Authenticated** | **bool?** | Flag that indicates that the identity of the customer has been asserted as verified by the provider. | [optional] |
 | **BargedParticipantId** | **string** | The participantId being barged in on (if someone (e.g. an agent) is being barged in on, this would correspond to one of the other participantIds present in the conversation) | [optional] |
+| **Bcc** | **List&lt;string&gt;** | Blind carbon copy email address(es) | [optional] |
 | **CallbackNumbers** | **List&lt;string&gt;** | Callback phone number(s) | [optional] |
 | **CallbackScheduledTime** | **DateTime?** | Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **CallbackUserName** | **string** | The name of the user requesting a call back | [optional] |
+| **Cc** | **List&lt;string&gt;** | Carbon copy email address(es) | [optional] |
 | **CoachedParticipantId** | **string** | The participantId being coached (if someone (e.g. an agent) is being coached, this would correspond to one of the other participantIds present in the conversation) | [optional] |
 | **CobrowseRole** | **string** | Describes side of the cobrowse (sharer or viewer) | [optional] |
 | **CobrowseRoomId** | **string** | A unique identifier for a PureCloud cobrowse room | [optional] |

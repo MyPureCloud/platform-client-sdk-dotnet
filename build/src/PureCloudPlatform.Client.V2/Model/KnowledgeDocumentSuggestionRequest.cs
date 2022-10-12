@@ -30,11 +30,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Query">Query to get autocomplete suggestions for the matching knowledge documents. (required).</param>
         /// <param name="PageSize">Page size of the returned results..</param>
         /// <param name="IncludeDraftDocuments">Indicates whether the suggestion results would also include draft documents..</param>
-        public KnowledgeDocumentSuggestionRequest(string Query = null, int? PageSize = null, bool? IncludeDraftDocuments = null)
+        /// <param name="Interval">Retrieves the documents created/modified/published in specified date and time range..</param>
+        /// <param name="Filter">Filter for the document suggestions..</param>
+        public KnowledgeDocumentSuggestionRequest(string Query = null, int? PageSize = null, bool? IncludeDraftDocuments = null, DocumentQueryInterval Interval = null, DocumentQuery Filter = null)
         {
             this.Query = Query;
             this.PageSize = PageSize;
             this.IncludeDraftDocuments = IncludeDraftDocuments;
+            this.Interval = Interval;
+            this.Filter = Filter;
             
         }
         
@@ -66,6 +70,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? IncludeDraftDocuments { get; set; }
 
 
+
+        /// <summary>
+        /// Retrieves the documents created/modified/published in specified date and time range.
+        /// </summary>
+        /// <value>Retrieves the documents created/modified/published in specified date and time range.</value>
+        [DataMember(Name="interval", EmitDefaultValue=false)]
+        public DocumentQueryInterval Interval { get; set; }
+
+
+
+        /// <summary>
+        /// Filter for the document suggestions.
+        /// </summary>
+        /// <value>Filter for the document suggestions.</value>
+        [DataMember(Name="filter", EmitDefaultValue=false)]
+        public DocumentQuery Filter { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -78,6 +100,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Query: ").Append(Query).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
             sb.Append("  IncludeDraftDocuments: ").Append(IncludeDraftDocuments).Append("\n");
+            sb.Append("  Interval: ").Append(Interval).Append("\n");
+            sb.Append("  Filter: ").Append(Filter).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -132,6 +156,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.IncludeDraftDocuments == other.IncludeDraftDocuments ||
                     this.IncludeDraftDocuments != null &&
                     this.IncludeDraftDocuments.Equals(other.IncludeDraftDocuments)
+                ) &&
+                (
+                    this.Interval == other.Interval ||
+                    this.Interval != null &&
+                    this.Interval.Equals(other.Interval)
+                ) &&
+                (
+                    this.Filter == other.Filter ||
+                    this.Filter != null &&
+                    this.Filter.Equals(other.Filter)
                 );
         }
 
@@ -154,6 +188,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.IncludeDraftDocuments != null)
                     hash = hash * 59 + this.IncludeDraftDocuments.GetHashCode();
+
+                if (this.Interval != null)
+                    hash = hash * 59 + this.Interval.GetHashCode();
+
+                if (this.Filter != null)
+                    hash = hash * 59 + this.Filter.GetHashCode();
 
                 return hash;
             }
