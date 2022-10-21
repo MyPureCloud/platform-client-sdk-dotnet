@@ -1118,6 +1118,7 @@ docs/DeleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackId-example.tx
 docs/DeleteSpeechandtextanalyticsTopic-example.txt
 docs/DeleteStationAssociateduser-example.txt
 docs/DeleteTeam-example.txt
+docs/DeleteTeamMembers-example.txt
 docs/DeleteTelephonyProvidersEdge-example.txt
 docs/DeleteTelephonyProvidersEdgeLogicalinterface-example.txt
 docs/DeleteTelephonyProvidersEdgeSoftwareupdate-example.txt
@@ -1846,6 +1847,7 @@ docs/GetEmployeeperformanceExternalmetricsDefinition-example.txt
 docs/GetEmployeeperformanceExternalmetricsDefinitions-example.txt
 docs/GetExternalcontactsContact-example.txt
 docs/GetExternalcontactsContactIdentifiers-example.txt
+docs/GetExternalcontactsContactJourneySessions-example.txt
 docs/GetExternalcontactsContactNote-example.txt
 docs/GetExternalcontactsContactNotes-example.txt
 docs/GetExternalcontactsContactUnresolved-example.txt
@@ -2360,6 +2362,7 @@ docs/GetStations-example.txt
 docs/GetStationsSettings-example.txt
 docs/GetSystempresences-example.txt
 docs/GetTeam-example.txt
+docs/GetTeamMembers-example.txt
 docs/GetTeams-example.txt
 docs/GetTelephonyProvidersEdge-example.txt
 docs/GetTelephonyProvidersEdgeDiagnosticNslookup-example.txt
@@ -2617,6 +2620,7 @@ docs/HistoryEntry.md
 docs/HistoryListing.md
 docs/HoldUpdatedEvent.md
 docs/HomerRecord.md
+docs/HrisTimeOffType.md
 docs/Humanize.md
 docs/IVR.md
 docs/IVREntityListing.md
@@ -2836,6 +2840,7 @@ docs/KnowledgeImportJobRequest.md
 docs/KnowledgeImportJobResponse.md
 docs/KnowledgeImportJobSettings.md
 docs/KnowledgeImportJobStatistics.md
+docs/KnowledgeSearchClientApplication.md
 docs/KnowledgeSearchDocument.md
 docs/KnowledgeSearchRequest.md
 docs/KnowledgeSearchResponse.md
@@ -3021,6 +3026,7 @@ docs/MessageMediaPolicy.md
 docs/MessageMediaPolicyConditions.md
 docs/MessageSticker.md
 docs/MessageStickerAttachment.md
+docs/MessageTypingEventRequest.md
 docs/MessagingApi.json
 docs/MessagingApi.md
 docs/MessagingCampaign.md
@@ -3513,6 +3519,7 @@ docs/PostConversationsKeyconfigurations-example.txt
 docs/PostConversationsKeyconfigurationsValidate-example.txt
 docs/PostConversationsMessageCommunicationMessages-example.txt
 docs/PostConversationsMessageCommunicationMessagesMedia-example.txt
+docs/PostConversationsMessageCommunicationTyping-example.txt
 docs/PostConversationsMessageMessagesBulk-example.txt
 docs/PostConversationsMessageParticipantReplace-example.txt
 docs/PostConversationsMessages-example.txt
@@ -3760,6 +3767,7 @@ docs/PostSpeechandtextanalyticsTopics-example.txt
 docs/PostSpeechandtextanalyticsTopicsPublishjobs-example.txt
 docs/PostSpeechandtextanalyticsTranscriptsSearch-example.txt
 docs/PostSpeechandtextanalyticsTranscriptsSearch-example.txt
+docs/PostTeamMembers-example.txt
 docs/PostTeams-example.txt
 docs/PostTeamsSearch-example.txt
 docs/PostTeamsSearch-example.txt
@@ -3814,6 +3822,8 @@ docs/PostUsersDevelopmentActivitiesAggregatesQuery-example.txt
 docs/PostUsersMePassword-example.txt
 docs/PostUsersSearch-example.txt
 docs/PostUsersSearch-example.txt
+docs/PostUsersSearchTeamsAssign-example.txt
+docs/PostUsersSearchTeamsAssign-example.txt
 docs/PostVoicemailMessages-example.txt
 docs/PostVoicemailSearch-example.txt
 docs/PostVoicemailSearch-example.txt
@@ -3859,6 +3869,8 @@ docs/PostWorkforcemanagementManagementunitTimeoffplans-example.txt
 docs/PostWorkforcemanagementManagementunitTimeoffrequests-example.txt
 docs/PostWorkforcemanagementManagementunitTimeoffrequestsQuery-example.txt
 docs/PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery-example.txt
+docs/PostWorkforcemanagementManagementunitUserTimeoffbalanceJobs-example.txt
+docs/PostWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobs-example.txt
 docs/PostWorkforcemanagementManagementunitWeekShifttradeMatch-example.txt
 docs/PostWorkforcemanagementManagementunitWeekShifttrades-example.txt
 docs/PostWorkforcemanagementManagementunitWeekShifttradesSearch-example.txt
@@ -4608,6 +4620,7 @@ docs/ServiceLevel.md
 docs/Session.md
 docs/SessionEndDetails.md
 docs/SessionLastEvent.md
+docs/SessionListing.md
 docs/SessionSegmentAssignment.md
 docs/SetContentTemplateActionSettings.md
 docs/SetRecordingState.md
@@ -4752,7 +4765,11 @@ docs/TagValue.md
 docs/TagValueEntityListing.md
 docs/TargetPerformanceProfile.md
 docs/Team.md
+docs/TeamAddMemberFailure.md
 docs/TeamEntityListing.md
+docs/TeamMemberAddListingResponse.md
+docs/TeamMemberEntityListing.md
+docs/TeamMembers.md
 docs/TeamReference.md
 docs/TeamSearchCriteria.md
 docs/TeamSearchRequest.md
@@ -4806,6 +4823,10 @@ docs/TextbotsApi.md
 docs/Ticker.md
 docs/TimeAllowed.md
 docs/TimeInterval.md
+docs/TimeOffBalanceJobReference.md
+docs/TimeOffBalanceRequest.md
+docs/TimeOffBalanceResponse.md
+docs/TimeOffBalancesResponse.md
 docs/TimeOffLimit.md
 docs/TimeOffLimitListing.md
 docs/TimeOffLimitRange.md
@@ -5023,6 +5044,7 @@ docs/UserRecordingEntityListing.md
 docs/UserRecordingsApi.json
 docs/UserRecordingsApi.md
 docs/UserReference.md
+docs/UserReferenceWithName.md
 docs/UserRoutingLanguage.md
 docs/UserRoutingLanguagePost.md
 docs/UserRoutingSkill.md
@@ -6903,6 +6925,7 @@ src/PureCloudPlatform.Client.V2/Model/HistoryEntry.cs
 src/PureCloudPlatform.Client.V2/Model/HistoryListing.cs
 src/PureCloudPlatform.Client.V2/Model/HoldUpdatedEvent.cs
 src/PureCloudPlatform.Client.V2/Model/HomerRecord.cs
+src/PureCloudPlatform.Client.V2/Model/HrisTimeOffType.cs
 src/PureCloudPlatform.Client.V2/Model/Humanize.cs
 src/PureCloudPlatform.Client.V2/Model/IVR.cs
 src/PureCloudPlatform.Client.V2/Model/IVREntityListing.cs
@@ -7114,6 +7137,7 @@ src/PureCloudPlatform.Client.V2/Model/KnowledgeImportJobRequest.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeImportJobResponse.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeImportJobSettings.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeImportJobStatistics.cs
+src/PureCloudPlatform.Client.V2/Model/KnowledgeSearchClientApplication.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSearchDocument.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSearchRequest.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSearchResponse.cs
@@ -7289,6 +7313,7 @@ src/PureCloudPlatform.Client.V2/Model/MessageMediaPolicy.cs
 src/PureCloudPlatform.Client.V2/Model/MessageMediaPolicyConditions.cs
 src/PureCloudPlatform.Client.V2/Model/MessageSticker.cs
 src/PureCloudPlatform.Client.V2/Model/MessageStickerAttachment.cs
+src/PureCloudPlatform.Client.V2/Model/MessageTypingEventRequest.cs
 src/PureCloudPlatform.Client.V2/Model/MessagingCampaign.cs
 src/PureCloudPlatform.Client.V2/Model/MessagingCampaignDivisionView.cs
 src/PureCloudPlatform.Client.V2/Model/MessagingCampaignDivisionViewEntityListing.cs
@@ -8049,6 +8074,7 @@ src/PureCloudPlatform.Client.V2/Model/ServiceLevel.cs
 src/PureCloudPlatform.Client.V2/Model/Session.cs
 src/PureCloudPlatform.Client.V2/Model/SessionEndDetails.cs
 src/PureCloudPlatform.Client.V2/Model/SessionLastEvent.cs
+src/PureCloudPlatform.Client.V2/Model/SessionListing.cs
 src/PureCloudPlatform.Client.V2/Model/SessionSegmentAssignment.cs
 src/PureCloudPlatform.Client.V2/Model/SetContentTemplateActionSettings.cs
 src/PureCloudPlatform.Client.V2/Model/SetRecordingState.cs
@@ -8187,7 +8213,11 @@ src/PureCloudPlatform.Client.V2/Model/TagValue.cs
 src/PureCloudPlatform.Client.V2/Model/TagValueEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/TargetPerformanceProfile.cs
 src/PureCloudPlatform.Client.V2/Model/Team.cs
+src/PureCloudPlatform.Client.V2/Model/TeamAddMemberFailure.cs
 src/PureCloudPlatform.Client.V2/Model/TeamEntityListing.cs
+src/PureCloudPlatform.Client.V2/Model/TeamMemberAddListingResponse.cs
+src/PureCloudPlatform.Client.V2/Model/TeamMemberEntityListing.cs
+src/PureCloudPlatform.Client.V2/Model/TeamMembers.cs
 src/PureCloudPlatform.Client.V2/Model/TeamReference.cs
 src/PureCloudPlatform.Client.V2/Model/TeamSearchCriteria.cs
 src/PureCloudPlatform.Client.V2/Model/TeamSearchRequest.cs
@@ -8233,6 +8263,10 @@ src/PureCloudPlatform.Client.V2/Model/TextStyleProperties.cs
 src/PureCloudPlatform.Client.V2/Model/Ticker.cs
 src/PureCloudPlatform.Client.V2/Model/TimeAllowed.cs
 src/PureCloudPlatform.Client.V2/Model/TimeInterval.cs
+src/PureCloudPlatform.Client.V2/Model/TimeOffBalanceJobReference.cs
+src/PureCloudPlatform.Client.V2/Model/TimeOffBalanceRequest.cs
+src/PureCloudPlatform.Client.V2/Model/TimeOffBalanceResponse.cs
+src/PureCloudPlatform.Client.V2/Model/TimeOffBalancesResponse.cs
 src/PureCloudPlatform.Client.V2/Model/TimeOffLimit.cs
 src/PureCloudPlatform.Client.V2/Model/TimeOffLimitListing.cs
 src/PureCloudPlatform.Client.V2/Model/TimeOffLimitRange.cs
@@ -8442,6 +8476,7 @@ src/PureCloudPlatform.Client.V2/Model/UserQueueEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/UserRecording.cs
 src/PureCloudPlatform.Client.V2/Model/UserRecordingEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/UserReference.cs
+src/PureCloudPlatform.Client.V2/Model/UserReferenceWithName.cs
 src/PureCloudPlatform.Client.V2/Model/UserRoutingLanguage.cs
 src/PureCloudPlatform.Client.V2/Model/UserRoutingLanguagePost.cs
 src/PureCloudPlatform.Client.V2/Model/UserRoutingSkill.cs

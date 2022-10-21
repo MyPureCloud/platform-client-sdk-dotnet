@@ -3583,6 +3583,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<MessageMediaData> PostConversationsMessageCommunicationMessagesMediaWithHttpInfo (string conversationId, string communicationId);
 
         /// <summary>
+        /// Send message typing event
+        /// </summary>
+        /// <remarks>
+        /// Send message typing event for existing conversation/communication.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <param name="body">MessageTypingEvent</param>
+        /// <returns></returns>
+        void PostConversationsMessageCommunicationTyping (string conversationId, string communicationId, MessageTypingEventRequest body);
+
+        /// <summary>
+        /// Send message typing event
+        /// </summary>
+        /// <remarks>
+        /// Send message typing event for existing conversation/communication.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <param name="body">MessageTypingEvent</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostConversationsMessageCommunicationTypingWithHttpInfo (string conversationId, string communicationId, MessageTypingEventRequest body);
+
+        /// <summary>
         /// Get messages in batch
         /// </summary>
         /// <remarks>
@@ -7833,6 +7859,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <returns>Task of ApiResponse (MessageMediaData)</returns>
         System.Threading.Tasks.Task<ApiResponse<MessageMediaData>> PostConversationsMessageCommunicationMessagesMediaAsyncWithHttpInfo (string conversationId, string communicationId);
+
+        /// <summary>
+        /// Send message typing event
+        /// </summary>
+        /// <remarks>
+        /// Send message typing event for existing conversation/communication.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <param name="body">MessageTypingEvent</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostConversationsMessageCommunicationTypingAsync (string conversationId, string communicationId, MessageTypingEventRequest body);
+
+        /// <summary>
+        /// Send message typing event
+        /// </summary>
+        /// <remarks>
+        /// Send message typing event for existing conversation/communication.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <param name="body">MessageTypingEvent</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsMessageCommunicationTypingAsyncWithHttpInfo (string conversationId, string communicationId, MessageTypingEventRequest body);
 
         /// <summary>
         /// Get messages in batch
@@ -39034,6 +39086,231 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<MessageMediaData>(localVarStatusCode,
                 localVarHeaders,
                 (MessageMediaData) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MessageMediaData)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Send message typing event Send message typing event for existing conversation/communication.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <param name="body">MessageTypingEvent</param>
+        /// <returns></returns>
+        public void PostConversationsMessageCommunicationTyping (string conversationId, string communicationId, MessageTypingEventRequest body)
+        {
+             PostConversationsMessageCommunicationTypingWithHttpInfo(conversationId, communicationId, body);
+        }
+
+        /// <summary>
+        /// Send message typing event Send message typing event for existing conversation/communication.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <param name="body">MessageTypingEvent</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostConversationsMessageCommunicationTypingWithHttpInfo (string conversationId, string communicationId, MessageTypingEventRequest body)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationsMessageCommunicationTyping");
+            // verify the required parameter 'communicationId' is set
+            if (communicationId == null)
+                throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PostConversationsMessageCommunicationTyping");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessageCommunicationTyping");
+
+            var localVarPath = "/api/v2/conversations/messages/{conversationId}/communications/{communicationId}/typing";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+            if (communicationId != null) localVarPathParams.Add("communicationId", this.Configuration.ApiClient.ParameterToString(communicationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessageCommunicationTyping: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessageCommunicationTyping: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Send message typing event Send message typing event for existing conversation/communication.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <param name="body">MessageTypingEvent</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostConversationsMessageCommunicationTypingAsync (string conversationId, string communicationId, MessageTypingEventRequest body)
+        {
+             await PostConversationsMessageCommunicationTypingAsyncWithHttpInfo(conversationId, communicationId, body);
+
+        }
+
+        /// <summary>
+        /// Send message typing event Send message typing event for existing conversation/communication.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <param name="body">MessageTypingEvent</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsMessageCommunicationTypingAsyncWithHttpInfo (string conversationId, string communicationId, MessageTypingEventRequest body)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationsMessageCommunicationTyping");
+            
+            // verify the required parameter 'communicationId' is set
+            if (communicationId == null)
+                throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PostConversationsMessageCommunicationTyping");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessageCommunicationTyping");
+            
+
+            var localVarPath = "/api/v2/conversations/messages/{conversationId}/communications/{communicationId}/typing";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+            if (communicationId != null) localVarPathParams.Add("communicationId", this.Configuration.ApiClient.ParameterToString(communicationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessageCommunicationTyping: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessageCommunicationTyping: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

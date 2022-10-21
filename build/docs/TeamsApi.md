@@ -8,9 +8,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**DeleteTeam**](TeamsApi.html#deleteteam) | **DELETE** /api/v2/teams/{teamId} | Delete team |
+| [**DeleteTeamMembers**](TeamsApi.html#deleteteammembers) | **DELETE** /api/v2/teams/{teamId}/members | Delete team members |
 | [**GetTeam**](TeamsApi.html#getteam) | **GET** /api/v2/teams/{teamId} | Get team |
+| [**GetTeamMembers**](TeamsApi.html#getteammembers) | **GET** /api/v2/teams/{teamId}/members | Get team membership |
 | [**GetTeams**](TeamsApi.html#getteams) | **GET** /api/v2/teams | Get Team listing |
 | [**PatchTeam**](TeamsApi.html#patchteam) | **PATCH** /api/v2/teams/{teamId} | Update team |
+| [**PostTeamMembers**](TeamsApi.html#postteammembers) | **POST** /api/v2/teams/{teamId}/members | Add team members |
 | [**PostTeams**](TeamsApi.html#postteams) | **POST** /api/v2/teams | Create a team |
 | [**PostTeamsSearch**](TeamsApi.html#postteamssearch) | **POST** /api/v2/teams/search | Search resources. |
 {: class="table table-striped"}
@@ -73,6 +76,72 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **teamId** | **string**| Team ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteteammembers"></a>
+
+## void DeleteTeamMembers (string teamId, string id)
+
+
+
+Delete team members
+
+
+
+Requires ANY permissions: 
+
+* groups:team:assign
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteTeamMembersExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TeamsApi();
+            var teamId = teamId_example;  // string | Team ID
+            var id = id_example;  // string | Comma separated list of member ids to remove
+
+            try
+            { 
+                // Delete team members
+                apiInstance.DeleteTeamMembers(teamId, id);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TeamsApi.DeleteTeamMembers: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **teamId** | **string**| Team ID |  |
+| **id** | **string**| Comma separated list of member ids to remove |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -143,6 +212,79 @@ namespace Example
 ### Return type
 
 [**Team**](Team.html)
+
+<a name="getteammembers"></a>
+
+## [**TeamMemberEntityListing**](TeamMemberEntityListing.html) GetTeamMembers (string teamId, int? pageSize = null, string before = null, string after = null, string expand = null)
+
+
+
+Get team membership
+
+
+
+Requires ANY permissions: 
+
+* groups:team:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTeamMembersExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TeamsApi();
+            var teamId = teamId_example;  // string | Team ID
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var before = before_example;  // string | The cursor that points to the previous item in the complete list of teams (optional) 
+            var after = after_example;  // string | The cursor that points to the next item in the complete list of teams (optional) 
+            var expand = expand_example;  // string | Expand the name on each user (optional) 
+
+            try
+            { 
+                // Get team membership
+                TeamMemberEntityListing result = apiInstance.GetTeamMembers(teamId, pageSize, before, after, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TeamsApi.GetTeamMembers: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **teamId** | **string**| Team ID |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **before** | **string**| The cursor that points to the previous item in the complete list of teams | [optional]  |
+| **after** | **string**| The cursor that points to the next item in the complete list of teams | [optional]  |
+| **expand** | **string**| Expand the name on each user | [optional] <br />**Values**: entities |
+{: class="table table-striped"}
+
+### Return type
+
+[**TeamMemberEntityListing**](TeamMemberEntityListing.html)
 
 <a name="getteams"></a>
 
@@ -283,6 +425,73 @@ namespace Example
 ### Return type
 
 [**Team**](Team.html)
+
+<a name="postteammembers"></a>
+
+## [**TeamMemberAddListingResponse**](TeamMemberAddListingResponse.html) PostTeamMembers (string teamId, TeamMembers body)
+
+
+
+Add team members
+
+
+
+Requires ANY permissions: 
+
+* groups:team:assign
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostTeamMembersExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TeamsApi();
+            var teamId = teamId_example;  // string | Team ID
+            var body = new TeamMembers(); // TeamMembers | TeamMembers
+
+            try
+            { 
+                // Add team members
+                TeamMemberAddListingResponse result = apiInstance.PostTeamMembers(teamId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TeamsApi.PostTeamMembers: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **teamId** | **string**| Team ID |  |
+| **body** | [**TeamMembers**](TeamMembers.html)| TeamMembers |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**TeamMemberAddListingResponse**](TeamMemberAddListingResponse.html)
 
 <a name="postteams"></a>
 

@@ -16,6 +16,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteExternalcontactsRelationship**](ExternalContactsApi.html#deleteexternalcontactsrelationship) | **DELETE** /api/v2/externalcontacts/relationships/{relationshipId} | Delete a relationship |
 | [**GetExternalcontactsContact**](ExternalContactsApi.html#getexternalcontactscontact) | **GET** /api/v2/externalcontacts/contacts/{contactId} | Fetch an external contact |
 | [**GetExternalcontactsContactIdentifiers**](ExternalContactsApi.html#getexternalcontactscontactidentifiers) | **GET** /api/v2/externalcontacts/contacts/{contactId}/identifiers | List the identifiers for a contact |
+| [**GetExternalcontactsContactJourneySessions**](ExternalContactsApi.html#getexternalcontactscontactjourneysessions) | **GET** /api/v2/externalcontacts/contacts/{contactId}/journey/sessions | Retrieve all sessions for a given external contact. |
 | [**GetExternalcontactsContactNote**](ExternalContactsApi.html#getexternalcontactscontactnote) | **GET** /api/v2/externalcontacts/contacts/{contactId}/notes/{noteId} | Fetch a note for an external contact |
 | [**GetExternalcontactsContactNotes**](ExternalContactsApi.html#getexternalcontactscontactnotes) | **GET** /api/v2/externalcontacts/contacts/{contactId}/notes | List notes for an external contact |
 | [**GetExternalcontactsContactUnresolved**](ExternalContactsApi.html#getexternalcontactscontactunresolved) | **GET** /api/v2/externalcontacts/contacts/{contactId}/unresolved | Fetch an unresolved external contact |
@@ -668,6 +669,77 @@ namespace Example
 ### Return type
 
 [**EntityListing**](EntityListing.html)
+
+<a name="getexternalcontactscontactjourneysessions"></a>
+
+## [**SessionListing**](SessionListing.html) GetExternalcontactsContactJourneySessions (string contactId, string pageSize = null, string after = null, bool? includeMerged = null)
+
+
+
+Retrieve all sessions for a given external contact.
+
+
+
+Requires ANY permissions: 
+
+* externalContacts:session:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetExternalcontactsContactJourneySessionsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var contactId = contactId_example;  // string | ExternalContact ID
+            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var includeMerged = true;  // bool? | Indicates whether to return sessions from all external contacts in the merge-set of the given one. (optional) 
+
+            try
+            { 
+                // Retrieve all sessions for a given external contact.
+                SessionListing result = apiInstance.GetExternalcontactsContactJourneySessions(contactId, pageSize, after, includeMerged);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.GetExternalcontactsContactJourneySessions: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contactId** | **string**| ExternalContact ID |  |
+| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **includeMerged** | **bool?**| Indicates whether to return sessions from all external contacts in the merge-set of the given one. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SessionListing**](SessionListing.html)
 
 <a name="getexternalcontactscontactnote"></a>
 

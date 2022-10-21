@@ -131,6 +131,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementManagementunitTimeoffrequests**](WorkforceManagementApi.html#postworkforcemanagementmanagementunittimeoffrequests) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests | Create a new time off request |
 | [**PostWorkforcemanagementManagementunitTimeoffrequestsQuery**](WorkforceManagementApi.html#postworkforcemanagementmanagementunittimeoffrequestsquery) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/query | Fetches time off requests matching the conditions specified in the request body |
 | [**PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery**](WorkforceManagementApi.html#postworkforcemanagementmanagementunittimeoffrequestswaitlistpositionsquery) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/waitlistpositions/query | Retrieves daily waitlist position for a list of time off requests |
+| [**PostWorkforcemanagementManagementunitUserTimeoffbalanceJobs**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitusertimeoffbalancejobs) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffbalance/jobs | Query time off balances for a given user for specified activity code and dates |
+| [**PostWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobs**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitusertimeoffrequesttimeoffbalancejobs) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}/timeoffbalance/jobs | Query time off balances for dates spanned by a given time off request |
 | [**PostWorkforcemanagementManagementunitWeekShifttradeMatch**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekshifttradematch) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}/match | Matches a shift trade. This route can only be called by the receiving agent |
 | [**PostWorkforcemanagementManagementunitWeekShifttrades**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekshifttrades) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades | Adds a shift trade |
 | [**PostWorkforcemanagementManagementunitWeekShifttradesSearch**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitweekshifttradessearch) | **POST** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/search | Searches for potential shift trade matches for the current agent |
@@ -8857,6 +8859,144 @@ namespace Example
 ### Return type
 
 [**WaitlistPositionListing**](WaitlistPositionListing.html)
+
+<a name="postworkforcemanagementmanagementunitusertimeoffbalancejobs"></a>
+
+## [**TimeOffBalancesResponse**](TimeOffBalancesResponse.html) PostWorkforcemanagementManagementunitUserTimeoffbalanceJobs (string managementUnitId, string userId, TimeOffBalanceRequest body)
+
+
+
+Query time off balances for a given user for specified activity code and dates
+
+
+
+Requires ANY permissions: 
+
+* wfm:timeOffRequest:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementManagementunitUserTimeoffbalanceJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit
+            var userId = userId_example;  // string | The ID of the user
+            var body = new TimeOffBalanceRequest(); // TimeOffBalanceRequest | The request body
+
+            try
+            { 
+                // Query time off balances for a given user for specified activity code and dates
+                TimeOffBalancesResponse result = apiInstance.PostWorkforcemanagementManagementunitUserTimeoffbalanceJobs(managementUnitId, userId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementManagementunitUserTimeoffbalanceJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **managementUnitId** | **string**| The ID of the management unit |  |
+| **userId** | **string**| The ID of the user |  |
+| **body** | [**TimeOffBalanceRequest**](TimeOffBalanceRequest.html)| The request body |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**TimeOffBalancesResponse**](TimeOffBalancesResponse.html)
+
+<a name="postworkforcemanagementmanagementunitusertimeoffrequesttimeoffbalancejobs"></a>
+
+## [**TimeOffBalancesResponse**](TimeOffBalancesResponse.html) PostWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobs (string managementUnitId, string userId, string timeOffRequestId)
+
+
+
+Query time off balances for dates spanned by a given time off request
+
+
+
+Requires ANY permissions: 
+
+* wfm:timeOffRequest:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit.
+            var userId = userId_example;  // string | The userId to whom the time off request applies.
+            var timeOffRequestId = timeOffRequestId_example;  // string | The time off request id.
+
+            try
+            { 
+                // Query time off balances for dates spanned by a given time off request
+                TimeOffBalancesResponse result = apiInstance.PostWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobs(managementUnitId, userId, timeOffRequestId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **managementUnitId** | **string**| The ID of the management unit. |  |
+| **userId** | **string**| The userId to whom the time off request applies. |  |
+| **timeOffRequestId** | **string**| The time off request id. |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**TimeOffBalancesResponse**](TimeOffBalancesResponse.html)
 
 <a name="postworkforcemanagementmanagementunitweekshifttradematch"></a>
 

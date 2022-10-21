@@ -26,6 +26,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostSpeechandtextanalyticsTranscriptsSearch**](SearchApi.html#postspeechandtextanalyticstranscriptssearch) | **POST** /api/v2/speechandtextanalytics/transcripts/search | Search resources. |
 | [**PostTeamsSearch**](SearchApi.html#postteamssearch) | **POST** /api/v2/teams/search | Search resources. |
 | [**PostUsersSearch**](SearchApi.html#postuserssearch) | **POST** /api/v2/users/search | Search users |
+| [**PostUsersSearchTeamsAssign**](SearchApi.html#postuserssearchteamsassign) | **POST** /api/v2/users/search/teams/assign | Search users assigned to teams |
 | [**PostVoicemailSearch**](SearchApi.html#postvoicemailsearch) | **POST** /api/v2/voicemail/search | Search voicemails |
 {: class="table table-striped"}
 
@@ -1238,6 +1239,71 @@ namespace Example
             catch (Exception e)
             {
                 Debug.Print("Exception when calling SearchApi.PostUsersSearch: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**UserSearchRequest**](UserSearchRequest.html)| Search request options |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UsersSearchResponse**](UsersSearchResponse.html)
+
+<a name="postuserssearchteamsassign"></a>
+
+## [**UsersSearchResponse**](UsersSearchResponse.html) PostUsersSearchTeamsAssign (UserSearchRequest body)
+
+
+
+Search users assigned to teams
+
+
+
+Requires ANY permissions: 
+
+* groups:team:assign
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostUsersSearchTeamsAssignExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SearchApi();
+            var body = new UserSearchRequest(); // UserSearchRequest | Search request options
+
+            try
+            { 
+                // Search users assigned to teams
+                UsersSearchResponse result = apiInstance.PostUsersSearchTeamsAssign(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SearchApi.PostUsersSearchTeamsAssign: " + e.Message );
             }
         }
     }

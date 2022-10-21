@@ -161,7 +161,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Filter">Filter for the document search..</param>
         /// <param name="SortOrder">The sort order for search results..</param>
         /// <param name="SortBy">The field in the documents that you want to sort the search results by..</param>
-        public KnowledgeDocumentSearchRequest(string Query = null, int? PageSize = null, int? PageNumber = null, bool? IncludeDraftDocuments = null, DocumentQueryInterval Interval = null, DocumentQuery Filter = null, SortOrderEnum? SortOrder = null, SortByEnum? SortBy = null)
+        /// <param name="Application">The client application details from which search request was sent..</param>
+        public KnowledgeDocumentSearchRequest(string Query = null, int? PageSize = null, int? PageNumber = null, bool? IncludeDraftDocuments = null, DocumentQueryInterval Interval = null, DocumentQuery Filter = null, SortOrderEnum? SortOrder = null, SortByEnum? SortBy = null, KnowledgeSearchClientApplication Application = null)
         {
             this.Query = Query;
             this.PageSize = PageSize;
@@ -171,6 +172,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Filter = Filter;
             this.SortOrder = SortOrder;
             this.SortBy = SortBy;
+            this.Application = Application;
             
         }
         
@@ -260,6 +262,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+        /// <summary>
+        /// The client application details from which search request was sent.
+        /// </summary>
+        /// <value>The client application details from which search request was sent.</value>
+        [DataMember(Name="application", EmitDefaultValue=false)]
+        public KnowledgeSearchClientApplication Application { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -280,6 +291,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Filter: ").Append(Filter).Append("\n");
             sb.Append("  SortOrder: ").Append(SortOrder).Append("\n");
             sb.Append("  SortBy: ").Append(SortBy).Append("\n");
+            sb.Append("  Application: ").Append(Application).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -374,6 +386,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SortBy == other.SortBy ||
                     this.SortBy != null &&
                     this.SortBy.Equals(other.SortBy)
+                ) &&
+                (
+                    this.Application == other.Application ||
+                    this.Application != null &&
+                    this.Application.Equals(other.Application)
                 );
         }
 
@@ -420,6 +437,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SortBy != null)
                     hash = hash * 59 + this.SortBy.GetHashCode();
+
+                if (this.Application != null)
+                    hash = hash * 59 + this.Application.GetHashCode();
 
                 return hash;
             }

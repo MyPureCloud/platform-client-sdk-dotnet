@@ -65,42 +65,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Absolute metric (in which the KPI is based) total for the interactions handled by predictive routing (GPR was on)
-        /// </summary>
-        /// <value>Absolute metric (in which the KPI is based) total for the interactions handled by predictive routing (GPR was on)</value>
-        [DataMember(Name="kpiTotalOn", EmitDefaultValue=false)]
-        public long? KpiTotalOn { get; private set; }
-
-
-
-        /// <summary>
-        /// Absolute metric (in which the KPI is based) total for the interactions not routed by predictive routing (GPR was off)
-        /// </summary>
-        /// <value>Absolute metric (in which the KPI is based) total for the interactions not routed by predictive routing (GPR was off)</value>
-        [DataMember(Name="kpiTotalOff", EmitDefaultValue=false)]
-        public long? KpiTotalOff { get; private set; }
-
-
-
-        /// <summary>
-        /// Total interactions handled by predictive routing (GPR was on)
-        /// </summary>
-        /// <value>Total interactions handled by predictive routing (GPR was on)</value>
-        [DataMember(Name="interactionCountOn", EmitDefaultValue=false)]
-        public long? InteractionCountOn { get; private set; }
-
-
-
-        /// <summary>
-        /// Total interactions not routed by predictive routing (GPR was off)
-        /// </summary>
-        /// <value>Total interactions not routed by predictive routing (GPR was off)</value>
-        [DataMember(Name="interactionCountOff", EmitDefaultValue=false)]
-        public long? InteractionCountOff { get; private set; }
-
-
-
-        /// <summary>
         /// KPI results for each metric
         /// </summary>
         /// <value>KPI results for each metric</value>
@@ -130,10 +94,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Kpi: ").Append(Kpi).Append("\n");
             sb.Append("  DateStarted: ").Append(DateStarted).Append("\n");
             sb.Append("  DateEnded: ").Append(DateEnded).Append("\n");
-            sb.Append("  KpiTotalOn: ").Append(KpiTotalOn).Append("\n");
-            sb.Append("  KpiTotalOff: ").Append(KpiTotalOff).Append("\n");
-            sb.Append("  InteractionCountOn: ").Append(InteractionCountOn).Append("\n");
-            sb.Append("  InteractionCountOff: ").Append(InteractionCountOff).Append("\n");
             sb.Append("  KpiResults: ").Append(KpiResults).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -197,26 +157,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateEnded.Equals(other.DateEnded)
                 ) &&
                 (
-                    this.KpiTotalOn == other.KpiTotalOn ||
-                    this.KpiTotalOn != null &&
-                    this.KpiTotalOn.Equals(other.KpiTotalOn)
-                ) &&
-                (
-                    this.KpiTotalOff == other.KpiTotalOff ||
-                    this.KpiTotalOff != null &&
-                    this.KpiTotalOff.Equals(other.KpiTotalOff)
-                ) &&
-                (
-                    this.InteractionCountOn == other.InteractionCountOn ||
-                    this.InteractionCountOn != null &&
-                    this.InteractionCountOn.Equals(other.InteractionCountOn)
-                ) &&
-                (
-                    this.InteractionCountOff == other.InteractionCountOff ||
-                    this.InteractionCountOff != null &&
-                    this.InteractionCountOff.Equals(other.InteractionCountOff)
-                ) &&
-                (
                     this.KpiResults == other.KpiResults ||
                     this.KpiResults != null &&
                     this.KpiResults.SequenceEqual(other.KpiResults)
@@ -250,18 +190,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DateEnded != null)
                     hash = hash * 59 + this.DateEnded.GetHashCode();
-
-                if (this.KpiTotalOn != null)
-                    hash = hash * 59 + this.KpiTotalOn.GetHashCode();
-
-                if (this.KpiTotalOff != null)
-                    hash = hash * 59 + this.KpiTotalOff.GetHashCode();
-
-                if (this.InteractionCountOn != null)
-                    hash = hash * 59 + this.InteractionCountOn.GetHashCode();
-
-                if (this.InteractionCountOff != null)
-                    hash = hash * 59 + this.InteractionCountOff.GetHashCode();
 
                 if (this.KpiResults != null)
                     hash = hash * 59 + this.KpiResults.GetHashCode();

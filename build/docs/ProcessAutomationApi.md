@@ -8,8 +8,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**DeleteProcessautomationTrigger**](ProcessAutomationApi.html#deleteprocessautomationtrigger) | **DELETE** /api/v2/processautomation/triggers/{triggerId} | Delete a Trigger |
-| [**GetProcessautomationTrigger**](ProcessAutomationApi.html#getprocessautomationtrigger) | **GET** /api/v2/processautomation/triggers/{triggerId} | Retrieve a single Trigger matching id. |
-| [**GetProcessautomationTriggers**](ProcessAutomationApi.html#getprocessautomationtriggers) | **GET** /api/v2/processautomation/triggers | Retrieves all triggers |
+| [**GetProcessautomationTrigger**](ProcessAutomationApi.html#getprocessautomationtrigger) | **GET** /api/v2/processautomation/triggers/{triggerId} | Retrieve a single Trigger matching id |
+| [**GetProcessautomationTriggers**](ProcessAutomationApi.html#getprocessautomationtriggers) | **GET** /api/v2/processautomation/triggers | Retrieves all triggers, optionally filtered by query parameters. |
 | [**GetProcessautomationTriggersTopics**](ProcessAutomationApi.html#getprocessautomationtriggerstopics) | **GET** /api/v2/processautomation/triggers/topics | Get topics available for organization |
 | [**PostProcessautomationTriggerTest**](ProcessAutomationApi.html#postprocessautomationtriggertest) | **POST** /api/v2/processautomation/triggers/{triggerId}/test | Test the matching of a Trigger based on provided event body |
 | [**PostProcessautomationTriggers**](ProcessAutomationApi.html#postprocessautomationtriggers) | **POST** /api/v2/processautomation/triggers | Create a Trigger |
@@ -87,7 +87,7 @@ void (empty response body)
 
 
 
-Retrieve a single Trigger matching id.
+Retrieve a single Trigger matching id
 
 
 
@@ -122,7 +122,7 @@ namespace Example
 
             try
             { 
-                // Retrieve a single Trigger matching id.
+                // Retrieve a single Trigger matching id
                 Trigger result = apiInstance.GetProcessautomationTrigger(triggerId);
                 Debug.WriteLine(result);
             }
@@ -153,7 +153,7 @@ namespace Example
 
 
 
-Retrieves all triggers
+Retrieves all triggers, optionally filtered by query parameters.
 
 
 
@@ -187,12 +187,12 @@ namespace Example
             var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
             var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
             var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
-            var topicName = topicName_example;  // string | Topic name (optional) 
+            var topicName = topicName_example;  // string | Topic name(s). Separated by commas (optional) 
             var enabled = true;  // bool? | Boolean indicating desired enabled state of triggers (optional) 
 
             try
             { 
-                // Retrieves all triggers
+                // Retrieves all triggers, optionally filtered by query parameters.
                 TriggerEntityListing result = apiInstance.GetProcessautomationTriggers(before, after, pageSize, topicName, enabled);
                 Debug.WriteLine(result);
             }
@@ -213,7 +213,7 @@ namespace Example
 | **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
-| **topicName** | **string**| Topic name | [optional]  |
+| **topicName** | **string**| Topic name(s). Separated by commas | [optional]  |
 | **enabled** | **bool?**| Boolean indicating desired enabled state of triggers | [optional]  |
 {: class="table table-striped"}
 

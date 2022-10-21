@@ -82,6 +82,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Directory,
             
             /// <summary>
+            /// Enum Emails for "Emails"
+            /// </summary>
+            [EnumMember(Value = "Emails")]
+            Emails,
+            
+            /// <summary>
             /// Enum Dynamicschema for "DynamicSchema"
             /// </summary>
             [EnumMember(Value = "DynamicSchema")]
@@ -1291,6 +1297,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Historicaldata,
             
             /// <summary>
+            /// Enum Inbounddomain for "InboundDomain"
+            /// </summary>
+            [EnumMember(Value = "InboundDomain")]
+            Inbounddomain,
+            
+            /// <summary>
+            /// Enum Inboundroute for "InboundRoute"
+            /// </summary>
+            [EnumMember(Value = "InboundRoute")]
+            Inboundroute,
+            
+            /// <summary>
             /// Enum Insightsettings for "InsightSettings"
             /// </summary>
             [EnumMember(Value = "InsightSettings")]
@@ -1459,6 +1477,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Organizationintegrationsaccess,
             
             /// <summary>
+            /// Enum Organizationlimits for "OrganizationLimits"
+            /// </summary>
+            [EnumMember(Value = "OrganizationLimits")]
+            Organizationlimits,
+            
+            /// <summary>
             /// Enum Organizationsettings for "OrganizationSettings"
             /// </summary>
             [EnumMember(Value = "OrganizationSettings")]
@@ -1469,6 +1493,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "OrphanedRecording")]
             Orphanedrecording,
+            
+            /// <summary>
+            /// Enum Outbounddomain for "OutboundDomain"
+            /// </summary>
+            [EnumMember(Value = "OutboundDomain")]
+            Outbounddomain,
             
             /// <summary>
             /// Enum Outboundroute for "OutboundRoute"

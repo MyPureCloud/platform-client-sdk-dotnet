@@ -155,6 +155,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsKeyconfigurationsValidate**](ConversationsApi.html#postconversationskeyconfigurationsvalidate) | **POST** /api/v2/conversations/keyconfigurations/validate | Validate encryption key configurations without saving it |
 | [**PostConversationsMessageCommunicationMessages**](ConversationsApi.html#postconversationsmessagecommunicationmessages) | **POST** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages | Send message |
 | [**PostConversationsMessageCommunicationMessagesMedia**](ConversationsApi.html#postconversationsmessagecommunicationmessagesmedia) | **POST** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media | Create media |
+| [**PostConversationsMessageCommunicationTyping**](ConversationsApi.html#postconversationsmessagecommunicationtyping) | **POST** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/typing | Send message typing event |
 | [**PostConversationsMessageMessagesBulk**](ConversationsApi.html#postconversationsmessagemessagesbulk) | **POST** /api/v2/conversations/messages/{conversationId}/messages/bulk | Get messages in batch |
 | [**PostConversationsMessageParticipantReplace**](ConversationsApi.html#postconversationsmessageparticipantreplace) | **POST** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
 | [**PostConversationsMessages**](ConversationsApi.html#postconversationsmessages) | **POST** /api/v2/conversations/messages | Create an outbound messaging conversation. |
@@ -5258,8 +5259,9 @@ Update conversation participant.
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* conversation:participant:wrapup
 
 ### Example
 ```{"language":"csharp"}
@@ -5526,8 +5528,9 @@ Update conversation participant
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* conversation:participant:wrapup
 
 ### Example
 ```{"language":"csharp"}
@@ -5865,8 +5868,9 @@ Update conversation participant
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* conversation:participant:wrapup
 
 ### Example
 ```{"language":"csharp"}
@@ -6201,8 +6205,9 @@ Update conversation participant
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* conversation:participant:wrapup
 
 ### Example
 ```{"language":"csharp"}
@@ -6472,8 +6477,9 @@ Update conversation participant
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* conversation:participant:wrapup
 
 ### Example
 ```{"language":"csharp"}
@@ -6743,8 +6749,9 @@ Update conversation participant
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* conversation:participant:wrapup
 
 ### Example
 ```{"language":"csharp"}
@@ -7014,8 +7021,9 @@ Update conversation participant
 
 
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* conversation:participant:wrapup
 
 ### Example
 ```{"language":"csharp"}
@@ -10015,6 +10023,77 @@ namespace Example
 ### Return type
 
 [**MessageMediaData**](MessageMediaData.html)
+
+<a name="postconversationsmessagecommunicationtyping"></a>
+
+## void PostConversationsMessageCommunicationTyping (string conversationId, string communicationId, MessageTypingEventRequest body)
+
+
+
+Send message typing event
+
+Send message typing event for existing conversation/communication.
+
+
+
+Requires ANY permissions: 
+
+* conversation:message:create
+* conversation:webmessaging:create
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsMessageCommunicationTypingExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var communicationId = communicationId_example;  // string | communicationId
+            var body = new MessageTypingEventRequest(); // MessageTypingEventRequest | MessageTypingEvent
+
+            try
+            { 
+                // Send message typing event
+                apiInstance.PostConversationsMessageCommunicationTyping(conversationId, communicationId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsMessageCommunicationTyping: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **communicationId** | **string**| communicationId |  |
+| **body** | [**MessageTypingEventRequest**](MessageTypingEventRequest.html)| MessageTypingEvent |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="postconversationsmessagemessagesbulk"></a>
 

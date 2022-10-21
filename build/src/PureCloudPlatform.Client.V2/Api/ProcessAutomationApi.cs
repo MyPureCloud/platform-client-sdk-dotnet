@@ -39,7 +39,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteProcessautomationTriggerWithHttpInfo (string triggerId);
 
         /// <summary>
-        /// Retrieve a single Trigger matching id.
+        /// Retrieve a single Trigger matching id
         /// </summary>
         /// <remarks>
         /// 
@@ -50,7 +50,7 @@ namespace PureCloudPlatform.Client.V2.Api
         Trigger GetProcessautomationTrigger (string triggerId);
 
         /// <summary>
-        /// Retrieve a single Trigger matching id.
+        /// Retrieve a single Trigger matching id
         /// </summary>
         /// <remarks>
         /// 
@@ -61,7 +61,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Trigger> GetProcessautomationTriggerWithHttpInfo (string triggerId);
 
         /// <summary>
-        /// Retrieves all triggers
+        /// Retrieves all triggers, optionally filtered by query parameters.
         /// </summary>
         /// <remarks>
         /// 
@@ -70,13 +70,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="topicName">Topic name (optional)</param>
+        /// <param name="topicName">Topic name(s). Separated by commas (optional)</param>
         /// <param name="enabled">Boolean indicating desired enabled state of triggers (optional)</param>
         /// <returns>TriggerEntityListing</returns>
         TriggerEntityListing GetProcessautomationTriggers (string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null);
 
         /// <summary>
-        /// Retrieves all triggers
+        /// Retrieves all triggers, optionally filtered by query parameters.
         /// </summary>
         /// <remarks>
         /// 
@@ -85,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="topicName">Topic name (optional)</param>
+        /// <param name="topicName">Topic name(s). Separated by commas (optional)</param>
         /// <param name="enabled">Boolean indicating desired enabled state of triggers (optional)</param>
         /// <returns>ApiResponse of TriggerEntityListing</returns>
         ApiResponse<TriggerEntityListing> GetProcessautomationTriggersWithHttpInfo (string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null);
@@ -237,7 +237,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteProcessautomationTriggerAsyncWithHttpInfo (string triggerId);
 
         /// <summary>
-        /// Retrieve a single Trigger matching id.
+        /// Retrieve a single Trigger matching id
         /// </summary>
         /// <remarks>
         /// 
@@ -248,7 +248,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<Trigger> GetProcessautomationTriggerAsync (string triggerId);
 
         /// <summary>
-        /// Retrieve a single Trigger matching id.
+        /// Retrieve a single Trigger matching id
         /// </summary>
         /// <remarks>
         /// 
@@ -259,7 +259,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Trigger>> GetProcessautomationTriggerAsyncWithHttpInfo (string triggerId);
 
         /// <summary>
-        /// Retrieves all triggers
+        /// Retrieves all triggers, optionally filtered by query parameters.
         /// </summary>
         /// <remarks>
         /// 
@@ -268,13 +268,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="topicName">Topic name (optional)</param>
+        /// <param name="topicName">Topic name(s). Separated by commas (optional)</param>
         /// <param name="enabled">Boolean indicating desired enabled state of triggers (optional)</param>
         /// <returns>Task of TriggerEntityListing</returns>
         System.Threading.Tasks.Task<TriggerEntityListing> GetProcessautomationTriggersAsync (string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null);
 
         /// <summary>
-        /// Retrieves all triggers
+        /// Retrieves all triggers, optionally filtered by query parameters.
         /// </summary>
         /// <remarks>
         /// 
@@ -283,7 +283,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="topicName">Topic name (optional)</param>
+        /// <param name="topicName">Topic name(s). Separated by commas (optional)</param>
         /// <param name="enabled">Boolean indicating desired enabled state of triggers (optional)</param>
         /// <returns>Task of ApiResponse (TriggerEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<TriggerEntityListing>> GetProcessautomationTriggersAsyncWithHttpInfo (string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null);
@@ -690,7 +690,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Retrieve a single Trigger matching id. 
+        /// Retrieve a single Trigger matching id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="triggerId">triggerId</param>
@@ -702,7 +702,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Retrieve a single Trigger matching id. 
+        /// Retrieve a single Trigger matching id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="triggerId">triggerId</param>
@@ -784,7 +784,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Retrieve a single Trigger matching id. 
+        /// Retrieve a single Trigger matching id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="triggerId">triggerId</param>
@@ -797,7 +797,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Retrieve a single Trigger matching id. 
+        /// Retrieve a single Trigger matching id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="triggerId">triggerId</param>
@@ -881,13 +881,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Retrieves all triggers 
+        /// Retrieves all triggers, optionally filtered by query parameters. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="topicName">Topic name (optional)</param>
+        /// <param name="topicName">Topic name(s). Separated by commas (optional)</param>
         /// <param name="enabled">Boolean indicating desired enabled state of triggers (optional)</param>
         /// <returns>TriggerEntityListing</returns>
         public TriggerEntityListing GetProcessautomationTriggers (string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null)
@@ -897,13 +897,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Retrieves all triggers 
+        /// Retrieves all triggers, optionally filtered by query parameters. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="topicName">Topic name (optional)</param>
+        /// <param name="topicName">Topic name(s). Separated by commas (optional)</param>
         /// <param name="enabled">Boolean indicating desired enabled state of triggers (optional)</param>
         /// <returns>ApiResponse of TriggerEntityListing</returns>
         public ApiResponse< TriggerEntityListing > GetProcessautomationTriggersWithHttpInfo (string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null)
@@ -984,13 +984,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Retrieves all triggers 
+        /// Retrieves all triggers, optionally filtered by query parameters. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="topicName">Topic name (optional)</param>
+        /// <param name="topicName">Topic name(s). Separated by commas (optional)</param>
         /// <param name="enabled">Boolean indicating desired enabled state of triggers (optional)</param>
         /// <returns>Task of TriggerEntityListing</returns>
         public async System.Threading.Tasks.Task<TriggerEntityListing> GetProcessautomationTriggersAsync (string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null)
@@ -1001,13 +1001,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Retrieves all triggers 
+        /// Retrieves all triggers, optionally filtered by query parameters. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
-        /// <param name="topicName">Topic name (optional)</param>
+        /// <param name="topicName">Topic name(s). Separated by commas (optional)</param>
         /// <param name="enabled">Boolean indicating desired enabled state of triggers (optional)</param>
         /// <returns>Task of ApiResponse (TriggerEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<TriggerEntityListing>> GetProcessautomationTriggersAsyncWithHttpInfo (string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null)

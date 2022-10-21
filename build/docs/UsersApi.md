@@ -76,6 +76,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostUsersDevelopmentActivitiesAggregatesQuery**](UsersApi.html#postusersdevelopmentactivitiesaggregatesquery) | **POST** /api/v2/users/development/activities/aggregates/query | Retrieve aggregated development activity data |
 | [**PostUsersMePassword**](UsersApi.html#postusersmepassword) | **POST** /api/v2/users/me/password | Change your password |
 | [**PostUsersSearch**](UsersApi.html#postuserssearch) | **POST** /api/v2/users/search | Search users |
+| [**PostUsersSearchTeamsAssign**](UsersApi.html#postuserssearchteamsassign) | **POST** /api/v2/users/search/teams/assign | Search users assigned to teams |
 | [**PutRoutingUserUtilization**](UsersApi.html#putroutinguserutilization) | **PUT** /api/v2/routing/users/{userId}/utilization | Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. |
 | [**PutUserCallforwarding**](UsersApi.html#putusercallforwarding) | **PUT** /api/v2/users/{userId}/callforwarding | Update a user&#39;s CallForwarding |
 | [**PutUserOutofoffice**](UsersApi.html#putuseroutofoffice) | **PUT** /api/v2/users/{userId}/outofoffice | Update an OutOfOffice |
@@ -4744,6 +4745,71 @@ namespace Example
             catch (Exception e)
             {
                 Debug.Print("Exception when calling UsersApi.PostUsersSearch: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**UserSearchRequest**](UserSearchRequest.html)| Search request options |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UsersSearchResponse**](UsersSearchResponse.html)
+
+<a name="postuserssearchteamsassign"></a>
+
+## [**UsersSearchResponse**](UsersSearchResponse.html) PostUsersSearchTeamsAssign (UserSearchRequest body)
+
+
+
+Search users assigned to teams
+
+
+
+Requires ANY permissions: 
+
+* groups:team:assign
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostUsersSearchTeamsAssignExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new UsersApi();
+            var body = new UserSearchRequest(); // UserSearchRequest | Search request options
+
+            try
+            { 
+                // Search users assigned to teams
+                UsersSearchResponse result = apiInstance.PostUsersSearchTeamsAssign(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.PostUsersSearchTeamsAssign: " + e.Message );
             }
         }
     }

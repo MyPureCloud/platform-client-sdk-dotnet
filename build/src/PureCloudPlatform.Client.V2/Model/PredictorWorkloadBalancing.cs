@@ -28,9 +28,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="PredictorWorkloadBalancing" /> class.
         /// </summary>
         /// <param name="Enabled">Flag to activate and deactivate workload balancing. (required).</param>
-        public PredictorWorkloadBalancing(bool? Enabled = null)
+        /// <param name="MinimumOccupancy">Desired minimum occupancy threshold of agents. Must be between 0 and 100..</param>
+        /// <param name="MaximumOccupancy">Desired maximum occupancy threshold of agents. Must be between 0 and 100..</param>
+        public PredictorWorkloadBalancing(bool? Enabled = null, int? MinimumOccupancy = null, int? MaximumOccupancy = null)
         {
             this.Enabled = Enabled;
+            this.MinimumOccupancy = MinimumOccupancy;
+            this.MaximumOccupancy = MaximumOccupancy;
             
         }
         
@@ -44,6 +48,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? Enabled { get; set; }
 
 
+
+        /// <summary>
+        /// Desired minimum occupancy threshold of agents. Must be between 0 and 100.
+        /// </summary>
+        /// <value>Desired minimum occupancy threshold of agents. Must be between 0 and 100.</value>
+        [DataMember(Name="minimumOccupancy", EmitDefaultValue=false)]
+        public int? MinimumOccupancy { get; set; }
+
+
+
+        /// <summary>
+        /// Desired maximum occupancy threshold of agents. Must be between 0 and 100.
+        /// </summary>
+        /// <value>Desired maximum occupancy threshold of agents. Must be between 0 and 100.</value>
+        [DataMember(Name="maximumOccupancy", EmitDefaultValue=false)]
+        public int? MaximumOccupancy { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,6 +76,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class PredictorWorkloadBalancing {\n");
 
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
+            sb.Append("  MinimumOccupancy: ").Append(MinimumOccupancy).Append("\n");
+            sb.Append("  MaximumOccupancy: ").Append(MaximumOccupancy).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -98,6 +122,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Enabled == other.Enabled ||
                     this.Enabled != null &&
                     this.Enabled.Equals(other.Enabled)
+                ) &&
+                (
+                    this.MinimumOccupancy == other.MinimumOccupancy ||
+                    this.MinimumOccupancy != null &&
+                    this.MinimumOccupancy.Equals(other.MinimumOccupancy)
+                ) &&
+                (
+                    this.MaximumOccupancy == other.MaximumOccupancy ||
+                    this.MaximumOccupancy != null &&
+                    this.MaximumOccupancy.Equals(other.MaximumOccupancy)
                 );
         }
 
@@ -114,6 +148,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
+
+                if (this.MinimumOccupancy != null)
+                    hash = hash * 59 + this.MinimumOccupancy.GetHashCode();
+
+                if (this.MaximumOccupancy != null)
+                    hash = hash * 59 + this.MaximumOccupancy.GetHashCode();
 
                 return hash;
             }

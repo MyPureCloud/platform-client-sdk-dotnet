@@ -39,6 +39,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteTeamWithHttpInfo (string teamId);
 
         /// <summary>
+        /// Delete team members
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="id">Comma separated list of member ids to remove</param>
+        /// <returns></returns>
+        void DeleteTeamMembers (string teamId, string id);
+
+        /// <summary>
+        /// Delete team members
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="id">Comma separated list of member ids to remove</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteTeamMembersWithHttpInfo (string teamId, string id);
+
+        /// <summary>
         /// Get team
         /// </summary>
         /// <remarks>
@@ -59,6 +83,36 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="teamId">Team ID</param>
         /// <returns>ApiResponse of Team</returns>
         ApiResponse<Team> GetTeamWithHttpInfo (string teamId);
+
+        /// <summary>
+        /// Get team membership
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="before">The cursor that points to the previous item in the complete list of teams (optional)</param>
+        /// <param name="after">The cursor that points to the next item in the complete list of teams (optional)</param>
+        /// <param name="expand">Expand the name on each user (optional)</param>
+        /// <returns>TeamMemberEntityListing</returns>
+        TeamMemberEntityListing GetTeamMembers (string teamId, int? pageSize = null, string before = null, string after = null, string expand = null);
+
+        /// <summary>
+        /// Get team membership
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="before">The cursor that points to the previous item in the complete list of teams (optional)</param>
+        /// <param name="after">The cursor that points to the next item in the complete list of teams (optional)</param>
+        /// <param name="expand">Expand the name on each user (optional)</param>
+        /// <returns>ApiResponse of TeamMemberEntityListing</returns>
+        ApiResponse<TeamMemberEntityListing> GetTeamMembersWithHttpInfo (string teamId, int? pageSize = null, string before = null, string after = null, string expand = null);
 
         /// <summary>
         /// Get Team listing
@@ -113,6 +167,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Team</param>
         /// <returns>ApiResponse of Team</returns>
         ApiResponse<Team> PatchTeamWithHttpInfo (string teamId, Team body);
+
+        /// <summary>
+        /// Add team members
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="body">TeamMembers</param>
+        /// <returns>TeamMemberAddListingResponse</returns>
+        TeamMemberAddListingResponse PostTeamMembers (string teamId, TeamMembers body);
+
+        /// <summary>
+        /// Add team members
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="body">TeamMembers</param>
+        /// <returns>ApiResponse of TeamMemberAddListingResponse</returns>
+        ApiResponse<TeamMemberAddListingResponse> PostTeamMembersWithHttpInfo (string teamId, TeamMembers body);
 
         /// <summary>
         /// Create a team
@@ -185,6 +263,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTeamAsyncWithHttpInfo (string teamId);
 
         /// <summary>
+        /// Delete team members
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="id">Comma separated list of member ids to remove</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteTeamMembersAsync (string teamId, string id);
+
+        /// <summary>
+        /// Delete team members
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="id">Comma separated list of member ids to remove</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTeamMembersAsyncWithHttpInfo (string teamId, string id);
+
+        /// <summary>
         /// Get team
         /// </summary>
         /// <remarks>
@@ -205,6 +307,36 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="teamId">Team ID</param>
         /// <returns>Task of ApiResponse (Team)</returns>
         System.Threading.Tasks.Task<ApiResponse<Team>> GetTeamAsyncWithHttpInfo (string teamId);
+
+        /// <summary>
+        /// Get team membership
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="before">The cursor that points to the previous item in the complete list of teams (optional)</param>
+        /// <param name="after">The cursor that points to the next item in the complete list of teams (optional)</param>
+        /// <param name="expand">Expand the name on each user (optional)</param>
+        /// <returns>Task of TeamMemberEntityListing</returns>
+        System.Threading.Tasks.Task<TeamMemberEntityListing> GetTeamMembersAsync (string teamId, int? pageSize = null, string before = null, string after = null, string expand = null);
+
+        /// <summary>
+        /// Get team membership
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="before">The cursor that points to the previous item in the complete list of teams (optional)</param>
+        /// <param name="after">The cursor that points to the next item in the complete list of teams (optional)</param>
+        /// <param name="expand">Expand the name on each user (optional)</param>
+        /// <returns>Task of ApiResponse (TeamMemberEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TeamMemberEntityListing>> GetTeamMembersAsyncWithHttpInfo (string teamId, int? pageSize = null, string before = null, string after = null, string expand = null);
 
         /// <summary>
         /// Get Team listing
@@ -259,6 +391,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Team</param>
         /// <returns>Task of ApiResponse (Team)</returns>
         System.Threading.Tasks.Task<ApiResponse<Team>> PatchTeamAsyncWithHttpInfo (string teamId, Team body);
+
+        /// <summary>
+        /// Add team members
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="body">TeamMembers</param>
+        /// <returns>Task of TeamMemberAddListingResponse</returns>
+        System.Threading.Tasks.Task<TeamMemberAddListingResponse> PostTeamMembersAsync (string teamId, TeamMembers body);
+
+        /// <summary>
+        /// Add team members
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="body">TeamMembers</param>
+        /// <returns>Task of ApiResponse (TeamMemberAddListingResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TeamMemberAddListingResponse>> PostTeamMembersAsyncWithHttpInfo (string teamId, TeamMembers body);
 
         /// <summary>
         /// Create a team
@@ -586,6 +742,208 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Delete team members 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="id">Comma separated list of member ids to remove</param>
+        /// <returns></returns>
+        public void DeleteTeamMembers (string teamId, string id)
+        {
+             DeleteTeamMembersWithHttpInfo(teamId, id);
+        }
+
+        /// <summary>
+        /// Delete team members 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="id">Comma separated list of member ids to remove</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteTeamMembersWithHttpInfo (string teamId, string id)
+        { 
+            // verify the required parameter 'teamId' is set
+            if (teamId == null)
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->DeleteTeamMembers");
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling TeamsApi->DeleteTeamMembers");
+
+            var localVarPath = "/api/v2/teams/{teamId}/members";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (teamId != null) localVarPathParams.Add("teamId", this.Configuration.ApiClient.ParameterToString(teamId));
+
+            // Query params
+            if (id != null) localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(id)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteTeamMembers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteTeamMembers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete team members 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="id">Comma separated list of member ids to remove</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteTeamMembersAsync (string teamId, string id)
+        {
+             await DeleteTeamMembersAsyncWithHttpInfo(teamId, id);
+
+        }
+
+        /// <summary>
+        /// Delete team members 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="id">Comma separated list of member ids to remove</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTeamMembersAsyncWithHttpInfo (string teamId, string id)
+        { 
+            // verify the required parameter 'teamId' is set
+            if (teamId == null)
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->DeleteTeamMembers");
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling TeamsApi->DeleteTeamMembers");
+            
+
+            var localVarPath = "/api/v2/teams/{teamId}/members";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (teamId != null) localVarPathParams.Add("teamId", this.Configuration.ApiClient.ParameterToString(teamId));
+
+            // Query params
+            if (id != null) localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(id)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteTeamMembers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteTeamMembers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get team 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -770,6 +1128,221 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Team>(localVarStatusCode,
                 localVarHeaders,
                 (Team) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Team)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get team membership 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="before">The cursor that points to the previous item in the complete list of teams (optional)</param>
+        /// <param name="after">The cursor that points to the next item in the complete list of teams (optional)</param>
+        /// <param name="expand">Expand the name on each user (optional)</param>
+        /// <returns>TeamMemberEntityListing</returns>
+        public TeamMemberEntityListing GetTeamMembers (string teamId, int? pageSize = null, string before = null, string after = null, string expand = null)
+        {
+             ApiResponse<TeamMemberEntityListing> localVarResponse = GetTeamMembersWithHttpInfo(teamId, pageSize, before, after, expand);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get team membership 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="before">The cursor that points to the previous item in the complete list of teams (optional)</param>
+        /// <param name="after">The cursor that points to the next item in the complete list of teams (optional)</param>
+        /// <param name="expand">Expand the name on each user (optional)</param>
+        /// <returns>ApiResponse of TeamMemberEntityListing</returns>
+        public ApiResponse< TeamMemberEntityListing > GetTeamMembersWithHttpInfo (string teamId, int? pageSize = null, string before = null, string after = null, string expand = null)
+        { 
+            // verify the required parameter 'teamId' is set
+            if (teamId == null)
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->GetTeamMembers");
+
+            var localVarPath = "/api/v2/teams/{teamId}/members";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (teamId != null) localVarPathParams.Add("teamId", this.Configuration.ApiClient.ParameterToString(teamId));
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTeamMembers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTeamMembers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TeamMemberEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (TeamMemberEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TeamMemberEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get team membership 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="before">The cursor that points to the previous item in the complete list of teams (optional)</param>
+        /// <param name="after">The cursor that points to the next item in the complete list of teams (optional)</param>
+        /// <param name="expand">Expand the name on each user (optional)</param>
+        /// <returns>Task of TeamMemberEntityListing</returns>
+        public async System.Threading.Tasks.Task<TeamMemberEntityListing> GetTeamMembersAsync (string teamId, int? pageSize = null, string before = null, string after = null, string expand = null)
+        {
+             ApiResponse<TeamMemberEntityListing> localVarResponse = await GetTeamMembersAsyncWithHttpInfo(teamId, pageSize, before, after, expand);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get team membership 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="before">The cursor that points to the previous item in the complete list of teams (optional)</param>
+        /// <param name="after">The cursor that points to the next item in the complete list of teams (optional)</param>
+        /// <param name="expand">Expand the name on each user (optional)</param>
+        /// <returns>Task of ApiResponse (TeamMemberEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TeamMemberEntityListing>> GetTeamMembersAsyncWithHttpInfo (string teamId, int? pageSize = null, string before = null, string after = null, string expand = null)
+        { 
+            // verify the required parameter 'teamId' is set
+            if (teamId == null)
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->GetTeamMembers");
+            
+
+            var localVarPath = "/api/v2/teams/{teamId}/members";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (teamId != null) localVarPathParams.Add("teamId", this.Configuration.ApiClient.ParameterToString(teamId));
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTeamMembers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTeamMembers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TeamMemberEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (TeamMemberEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TeamMemberEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -1192,6 +1765,220 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Team>(localVarStatusCode,
                 localVarHeaders,
                 (Team) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Team)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Add team members 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="body">TeamMembers</param>
+        /// <returns>TeamMemberAddListingResponse</returns>
+        public TeamMemberAddListingResponse PostTeamMembers (string teamId, TeamMembers body)
+        {
+             ApiResponse<TeamMemberAddListingResponse> localVarResponse = PostTeamMembersWithHttpInfo(teamId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Add team members 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="body">TeamMembers</param>
+        /// <returns>ApiResponse of TeamMemberAddListingResponse</returns>
+        public ApiResponse< TeamMemberAddListingResponse > PostTeamMembersWithHttpInfo (string teamId, TeamMembers body)
+        { 
+            // verify the required parameter 'teamId' is set
+            if (teamId == null)
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->PostTeamMembers");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TeamsApi->PostTeamMembers");
+
+            var localVarPath = "/api/v2/teams/{teamId}/members";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (teamId != null) localVarPathParams.Add("teamId", this.Configuration.ApiClient.ParameterToString(teamId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostTeamMembers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostTeamMembers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TeamMemberAddListingResponse>(localVarStatusCode,
+                localVarHeaders,
+                (TeamMemberAddListingResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TeamMemberAddListingResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Add team members 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="body">TeamMembers</param>
+        /// <returns>Task of TeamMemberAddListingResponse</returns>
+        public async System.Threading.Tasks.Task<TeamMemberAddListingResponse> PostTeamMembersAsync (string teamId, TeamMembers body)
+        {
+             ApiResponse<TeamMemberAddListingResponse> localVarResponse = await PostTeamMembersAsyncWithHttpInfo(teamId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Add team members 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="teamId">Team ID</param>
+        /// <param name="body">TeamMembers</param>
+        /// <returns>Task of ApiResponse (TeamMemberAddListingResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TeamMemberAddListingResponse>> PostTeamMembersAsyncWithHttpInfo (string teamId, TeamMembers body)
+        { 
+            // verify the required parameter 'teamId' is set
+            if (teamId == null)
+                throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->PostTeamMembers");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling TeamsApi->PostTeamMembers");
+            
+
+            var localVarPath = "/api/v2/teams/{teamId}/members";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (teamId != null) localVarPathParams.Add("teamId", this.Configuration.ApiClient.ParameterToString(teamId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostTeamMembers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostTeamMembers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TeamMemberAddListingResponse>(localVarStatusCode,
+                localVarHeaders,
+                (TeamMemberAddListingResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TeamMemberAddListingResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

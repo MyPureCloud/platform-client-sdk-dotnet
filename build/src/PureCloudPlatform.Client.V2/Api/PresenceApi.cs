@@ -89,9 +89,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deleted">Deleted query can be TRUE or FALSE (optional, default to "false")</param>
+        /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
         /// <returns>SourceEntityListing</returns>
-        SourceEntityListing GetPresenceSources (string deleted = null);
+        SourceEntityListing GetPresenceSources (string deactivated = null);
 
         /// <summary>
         /// Get a list of Presence Sources
@@ -100,9 +100,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deleted">Deleted query can be TRUE or FALSE (optional, default to "false")</param>
+        /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
         /// <returns>ApiResponse of SourceEntityListing</returns>
-        ApiResponse<SourceEntityListing> GetPresenceSourcesWithHttpInfo (string deleted = null);
+        ApiResponse<SourceEntityListing> GetPresenceSourcesWithHttpInfo (string deactivated = null);
 
         /// <summary>
         /// Get a user's Primary Presence Source
@@ -509,9 +509,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deleted">Deleted query can be TRUE or FALSE (optional, default to "false")</param>
+        /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
         /// <returns>Task of SourceEntityListing</returns>
-        System.Threading.Tasks.Task<SourceEntityListing> GetPresenceSourcesAsync (string deleted = null);
+        System.Threading.Tasks.Task<SourceEntityListing> GetPresenceSourcesAsync (string deactivated = null);
 
         /// <summary>
         /// Get a list of Presence Sources
@@ -520,9 +520,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deleted">Deleted query can be TRUE or FALSE (optional, default to "false")</param>
+        /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
         /// <returns>Task of ApiResponse (SourceEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SourceEntityListing>> GetPresenceSourcesAsyncWithHttpInfo (string deleted = null);
+        System.Threading.Tasks.Task<ApiResponse<SourceEntityListing>> GetPresenceSourcesAsyncWithHttpInfo (string deactivated = null);
 
         /// <summary>
         /// Get a user's Primary Presence Source
@@ -1517,11 +1517,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of Presence Sources 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deleted">Deleted query can be TRUE or FALSE (optional, default to "false")</param>
+        /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
         /// <returns>SourceEntityListing</returns>
-        public SourceEntityListing GetPresenceSources (string deleted = null)
+        public SourceEntityListing GetPresenceSources (string deactivated = null)
         {
-             ApiResponse<SourceEntityListing> localVarResponse = GetPresenceSourcesWithHttpInfo(deleted);
+             ApiResponse<SourceEntityListing> localVarResponse = GetPresenceSourcesWithHttpInfo(deactivated);
              return localVarResponse.Data;
         }
 
@@ -1529,9 +1529,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of Presence Sources 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deleted">Deleted query can be TRUE or FALSE (optional, default to "false")</param>
+        /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
         /// <returns>ApiResponse of SourceEntityListing</returns>
-        public ApiResponse< SourceEntityListing > GetPresenceSourcesWithHttpInfo (string deleted = null)
+        public ApiResponse< SourceEntityListing > GetPresenceSourcesWithHttpInfo (string deactivated = null)
         { 
 
             var localVarPath = "/api/v2/presence/sources";
@@ -1566,7 +1566,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", this.Configuration.ApiClient.ParameterToString(deleted)));
+            if (deactivated != null) localVarQueryParams.Add(new Tuple<string, string>("deactivated", this.Configuration.ApiClient.ParameterToString(deactivated)));
 
             // Header params
 
@@ -1608,11 +1608,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of Presence Sources 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deleted">Deleted query can be TRUE or FALSE (optional, default to "false")</param>
+        /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
         /// <returns>Task of SourceEntityListing</returns>
-        public async System.Threading.Tasks.Task<SourceEntityListing> GetPresenceSourcesAsync (string deleted = null)
+        public async System.Threading.Tasks.Task<SourceEntityListing> GetPresenceSourcesAsync (string deactivated = null)
         {
-             ApiResponse<SourceEntityListing> localVarResponse = await GetPresenceSourcesAsyncWithHttpInfo(deleted);
+             ApiResponse<SourceEntityListing> localVarResponse = await GetPresenceSourcesAsyncWithHttpInfo(deactivated);
              return localVarResponse.Data;
 
         }
@@ -1621,9 +1621,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of Presence Sources 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deleted">Deleted query can be TRUE or FALSE (optional, default to "false")</param>
+        /// <param name="deactivated">Deactivated query can be TRUE or FALSE (optional, default to "false")</param>
         /// <returns>Task of ApiResponse (SourceEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SourceEntityListing>> GetPresenceSourcesAsyncWithHttpInfo (string deleted = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SourceEntityListing>> GetPresenceSourcesAsyncWithHttpInfo (string deactivated = null)
         { 
 
             var localVarPath = "/api/v2/presence/sources";
@@ -1658,7 +1658,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", this.Configuration.ApiClient.ParameterToString(deleted)));
+            if (deactivated != null) localVarQueryParams.Add(new Tuple<string, string>("deactivated", this.Configuration.ApiClient.ParameterToString(deactivated)));
 
             // Header params
 

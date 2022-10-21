@@ -30,11 +30,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Query">Query to search content in the knowledge base. Maximum of 30 records per query can be fetched. (required).</param>
         /// <param name="PageSize">Page size of the returned results..</param>
         /// <param name="PageNumber">Page number of the returned results..</param>
-        public KnowledgeDocumentSearch(string Query = null, int? PageSize = null, int? PageNumber = null)
+        /// <param name="Application">The client application details from which search happened..</param>
+        public KnowledgeDocumentSearch(string Query = null, int? PageSize = null, int? PageNumber = null, KnowledgeSearchClientApplication Application = null)
         {
             this.Query = Query;
             this.PageSize = PageSize;
             this.PageNumber = PageNumber;
+            this.Application = Application;
             
         }
         
@@ -102,6 +104,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<KnowledgeDocumentSearchResult> Results { get; private set; }
 
 
+
+        /// <summary>
+        /// The client application details from which search happened.
+        /// </summary>
+        /// <value>The client application details from which search happened.</value>
+        [DataMember(Name="application", EmitDefaultValue=false)]
+        public KnowledgeSearchClientApplication Application { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -118,6 +129,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Total: ").Append(Total).Append("\n");
             sb.Append("  PageCount: ").Append(PageCount).Append("\n");
             sb.Append("  Results: ").Append(Results).Append("\n");
+            sb.Append("  Application: ").Append(Application).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -192,6 +204,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Results == other.Results ||
                     this.Results != null &&
                     this.Results.SequenceEqual(other.Results)
+                ) &&
+                (
+                    this.Application == other.Application ||
+                    this.Application != null &&
+                    this.Application.Equals(other.Application)
                 );
         }
 
@@ -226,6 +243,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Results != null)
                     hash = hash * 59 + this.Results.GetHashCode();
+
+                if (this.Application != null)
+                    hash = hash * 59 + this.Application.GetHashCode();
 
                 return hash;
             }

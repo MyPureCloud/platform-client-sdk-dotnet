@@ -223,7 +223,7 @@ namespace Example
 
 <a name="getpresencesources"></a>
 
-## [**SourceEntityListing**](SourceEntityListing.html) GetPresenceSources (string deleted = null)
+## [**SourceEntityListing**](SourceEntityListing.html) GetPresenceSources (string deactivated = null)
 
 
 
@@ -257,12 +257,12 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new PresenceApi();
-            var deleted = deleted_example;  // string | Deleted query can be TRUE or FALSE (optional)  (default to "false")
+            var deactivated = deactivated_example;  // string | Deactivated query can be TRUE or FALSE (optional)  (default to "false")
 
             try
             { 
                 // Get a list of Presence Sources
-                SourceEntityListing result = apiInstance.GetPresenceSources(deleted);
+                SourceEntityListing result = apiInstance.GetPresenceSources(deactivated);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -279,7 +279,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **deleted** | **string**| Deleted query can be TRUE or FALSE | [optional] [default to "false"] |
+| **deactivated** | **string**| Deactivated query can be TRUE or FALSE | [optional] [default to "false"] |
 {: class="table table-striped"}
 
 ### Return type

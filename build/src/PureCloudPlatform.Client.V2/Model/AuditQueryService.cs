@@ -82,6 +82,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Directory,
             
             /// <summary>
+            /// Enum Emails for "Emails"
+            /// </summary>
+            [EnumMember(Value = "Emails")]
+            Emails,
+            
+            /// <summary>
             /// Enum Dynamicschema for "DynamicSchema"
             /// </summary>
             [EnumMember(Value = "DynamicSchema")]
