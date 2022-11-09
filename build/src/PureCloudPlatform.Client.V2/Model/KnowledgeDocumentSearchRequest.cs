@@ -34,22 +34,16 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Asc for "ASC"
+            /// Enum Asc for "Asc"
             /// </summary>
-            [EnumMember(Value = "ASC")]
+            [EnumMember(Value = "Asc")]
             Asc,
             
             /// <summary>
-            /// Enum Desc for "DESC"
+            /// Enum Desc for "Desc"
             /// </summary>
-            [EnumMember(Value = "DESC")]
-            Desc,
-            
-            /// <summary>
-            /// Enum Score for "SCORE"
-            /// </summary>
-            [EnumMember(Value = "SCORE")]
-            Score
+            [EnumMember(Value = "Desc")]
+            Desc
         }
         /// <summary>
         /// The field in the documents that you want to sort the search results by.

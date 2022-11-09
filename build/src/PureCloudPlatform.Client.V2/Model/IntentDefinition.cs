@@ -41,6 +41,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// ID of the intent.
+        /// </summary>
+        /// <value>ID of the intent.</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; private set; }
+
+
+
+        /// <summary>
         /// The name of the intent.
         /// </summary>
         /// <value>The name of the intent.</value>
@@ -84,6 +93,7 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class IntentDefinition {\n");
 
+            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  EntityTypeBindings: ").Append(EntityTypeBindings).Append("\n");
             sb.Append("  EntityNameReferences: ").Append(EntityNameReferences).Append("\n");
@@ -129,6 +139,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) &&
+                (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
@@ -161,6 +176,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
 

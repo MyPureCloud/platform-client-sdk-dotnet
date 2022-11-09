@@ -83,6 +83,33 @@ namespace PureCloudPlatform.Client.V2.Model
             Disconnected
         }
         /// <summary>
+        /// Whether a message is inbound or outbound.
+        /// </summary>
+        /// <value>Whether a message is inbound or outbound.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum DirectionEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Outbound for "outbound"
+            /// </summary>
+            [EnumMember(Value = "outbound")]
+            Outbound,
+            
+            /// <summary>
+            /// Enum Inbound for "inbound"
+            /// </summary>
+            [EnumMember(Value = "inbound")]
+            Inbound
+        }
+        /// <summary>
         /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.
         /// </summary>
         /// <value>System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.</value>
@@ -297,6 +324,12 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="initialState", EmitDefaultValue=false)]
         public InitialStateEnum? InitialState { get; set; }
         /// <summary>
+        /// Whether a message is inbound or outbound.
+        /// </summary>
+        /// <value>Whether a message is inbound or outbound.</value>
+        [DataMember(Name="direction", EmitDefaultValue=false)]
+        public DirectionEnum? Direction { get; set; }
+        /// <summary>
         /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.
         /// </summary>
         /// <value>System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.</value>
@@ -314,6 +347,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">A globally unique identifier for this communication..</param>
         /// <param name="State">State.</param>
         /// <param name="InitialState">InitialState.</param>
+        /// <param name="Direction">Whether a message is inbound or outbound..</param>
         /// <param name="Held">True if this call is held and the person on this side hears silence..</param>
         /// <param name="ErrorInfo">Detailed information about an error response..</param>
         /// <param name="Provider">The source provider of the email..</param>
@@ -335,11 +369,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AfterCallWork">A communication's after-call work data..</param>
         /// <param name="AfterCallWorkRequired">Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
         /// <param name="AgentAssistantId">UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation..</param>
-        public QueueConversationEventTopicMessage(string Id = null, StateEnum? State = null, InitialStateEnum? InitialState = null, bool? Held = null, QueueConversationEventTopicErrorDetails ErrorInfo = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, QueueConversationEventTopicAddress ToAddress = null, QueueConversationEventTopicAddress FromAddress = null, List<QueueConversationEventTopicMessageDetails> Messages = null, string MessagesTranscriptUri = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, QueueConversationEventTopicJourneyContext JourneyContext = null, QueueConversationEventTopicWrapup Wrapup = null, QueueConversationEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null)
+        public QueueConversationEventTopicMessage(string Id = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, bool? Held = null, QueueConversationEventTopicErrorDetails ErrorInfo = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, QueueConversationEventTopicAddress ToAddress = null, QueueConversationEventTopicAddress FromAddress = null, List<QueueConversationEventTopicMessageDetails> Messages = null, string MessagesTranscriptUri = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, QueueConversationEventTopicJourneyContext JourneyContext = null, QueueConversationEventTopicWrapup Wrapup = null, QueueConversationEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null)
         {
             this.Id = Id;
             this.State = State;
             this.InitialState = InitialState;
+            this.Direction = Direction;
             this.Held = Held;
             this.ErrorInfo = ErrorInfo;
             this.Provider = Provider;
@@ -372,6 +407,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>A globally unique identifier for this communication.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+
+
 
 
 
@@ -565,6 +602,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  InitialState: ").Append(InitialState).Append("\n");
+            sb.Append("  Direction: ").Append(Direction).Append("\n");
             sb.Append("  Held: ").Append(Held).Append("\n");
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
@@ -640,6 +678,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.InitialState == other.InitialState ||
                     this.InitialState != null &&
                     this.InitialState.Equals(other.InitialState)
+                ) &&
+                (
+                    this.Direction == other.Direction ||
+                    this.Direction != null &&
+                    this.Direction.Equals(other.Direction)
                 ) &&
                 (
                     this.Held == other.Held ||
@@ -767,6 +810,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.InitialState != null)
                     hash = hash * 59 + this.InitialState.GetHashCode();
+
+                if (this.Direction != null)
+                    hash = hash * 59 + this.Direction.GetHashCode();
 
                 if (this.Held != null)
                     hash = hash * 59 + this.Held.GetHashCode();

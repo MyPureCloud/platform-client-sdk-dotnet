@@ -218,9 +218,9 @@ namespace PureCloudPlatform.Client.V2.Model
             Uncallable
         }
         /// <summary>
-        /// Whether a call is inbound or outbound.
+        /// Whether an email is inbound or outbound.
         /// </summary>
-        /// <value>Whether a call is inbound or outbound.</value>
+        /// <value>Whether an email is inbound or outbound.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum DirectionEnum
         {
@@ -261,9 +261,9 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
         /// <summary>
-        /// Whether a call is inbound or outbound.
+        /// Whether an email is inbound or outbound.
         /// </summary>
-        /// <value>Whether a call is inbound or outbound.</value>
+        /// <value>Whether an email is inbound or outbound.</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
         /// <summary>
@@ -285,7 +285,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConnectedTime">The timestamp when this communication was connected in the cloud clock..</param>
         /// <param name="DisconnectedTime">The timestamp when this communication disconnected from the conversation in the provider clock..</param>
         /// <param name="MessageId">A globally unique identifier for the stored content of this communication..</param>
-        /// <param name="Direction">Whether a call is inbound or outbound..</param>
+        /// <param name="Direction">Whether an email is inbound or outbound..</param>
         /// <param name="DraftAttachments">A list of uploaded attachments on the email draft..</param>
         /// <param name="Spam">Indicates if the inbound email was marked as spam..</param>
         /// <param name="Wrapup">Call wrap up or disposition data..</param>

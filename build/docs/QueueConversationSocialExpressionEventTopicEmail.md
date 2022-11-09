@@ -23,7 +23,7 @@ title: QueueConversationSocialExpressionEventTopicEmail
 | **ConnectedTime** | **DateTime?** | The timestamp when this communication was connected in the cloud clock. | [optional] |
 | **DisconnectedTime** | **DateTime?** | The timestamp when this communication disconnected from the conversation in the provider clock. | [optional] |
 | **MessageId** | **string** | A globally unique identifier for the stored content of this communication. | [optional] |
-| **Direction** | **string** | Whether a call is inbound or outbound. | [optional] |
+| **Direction** | **string** | Whether an email is inbound or outbound. | [optional] |
 | **DraftAttachments** | [**List&lt;QueueConversationSocialExpressionEventTopicAttachment&gt;**](QueueConversationSocialExpressionEventTopicAttachment.html) | A list of uploaded attachments on the email draft. | [optional] |
 | **Spam** | **bool?** | Indicates if the inbound email was marked as spam. | [optional] |
 | **Wrapup** | [**QueueConversationSocialExpressionEventTopicWrapup**](QueueConversationSocialExpressionEventTopicWrapup.html) | Call wrap up or disposition data. | [optional] |

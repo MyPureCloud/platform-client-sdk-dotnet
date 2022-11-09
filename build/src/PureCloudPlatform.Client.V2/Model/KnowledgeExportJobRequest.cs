@@ -18,6 +18,45 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class KnowledgeExportJobRequest :  IEquatable<KnowledgeExportJobRequest>
     {
+        /// <summary>
+        /// File type of the document
+        /// </summary>
+        /// <value>File type of the document</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum FileTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Json for "Json"
+            /// </summary>
+            [EnumMember(Value = "Json")]
+            Json,
+            
+            /// <summary>
+            /// Enum Csv for "Csv"
+            /// </summary>
+            [EnumMember(Value = "Csv")]
+            Csv,
+            
+            /// <summary>
+            /// Enum Xlsx for "Xlsx"
+            /// </summary>
+            [EnumMember(Value = "Xlsx")]
+            Xlsx
+        }
+        /// <summary>
+        /// File type of the document
+        /// </summary>
+        /// <value>File type of the document</value>
+        [DataMember(Name="fileType", EmitDefaultValue=false)]
+        public FileTypeEnum? FileType { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="KnowledgeExportJobRequest" /> class.
@@ -28,9 +67,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="KnowledgeExportJobRequest" /> class.
         /// </summary>
         /// <param name="ExportFilter">What to export. (required).</param>
-        public KnowledgeExportJobRequest(KnowledgeExportJobFilter ExportFilter = null)
+        /// <param name="FileType">File type of the document (required).</param>
+        public KnowledgeExportJobRequest(KnowledgeExportJobFilter ExportFilter = null, FileTypeEnum? FileType = null)
         {
             this.ExportFilter = ExportFilter;
+            this.FileType = FileType;
             
         }
         
@@ -44,6 +85,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public KnowledgeExportJobFilter ExportFilter { get; set; }
 
 
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,6 +97,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class KnowledgeExportJobRequest {\n");
 
             sb.Append("  ExportFilter: ").Append(ExportFilter).Append("\n");
+            sb.Append("  FileType: ").Append(FileType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -98,6 +142,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExportFilter == other.ExportFilter ||
                     this.ExportFilter != null &&
                     this.ExportFilter.Equals(other.ExportFilter)
+                ) &&
+                (
+                    this.FileType == other.FileType ||
+                    this.FileType != null &&
+                    this.FileType.Equals(other.FileType)
                 );
         }
 
@@ -114,6 +163,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.ExportFilter != null)
                     hash = hash * 59 + this.ExportFilter.GetHashCode();
+
+                if (this.FileType != null)
+                    hash = hash * 59 + this.FileType.GetHashCode();
 
                 return hash;
             }

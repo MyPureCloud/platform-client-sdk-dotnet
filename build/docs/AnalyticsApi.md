@@ -33,6 +33,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetAnalyticsUsersDetailsJobResults**](AnalyticsApi.html#getanalyticsusersdetailsjobresults) | **GET** /api/v2/analytics/users/details/jobs/{jobId}/results | Fetch a page of results for an async query |
 | [**GetAnalyticsUsersDetailsJobsAvailability**](AnalyticsApi.html#getanalyticsusersdetailsjobsavailability) | **GET** /api/v2/analytics/users/details/jobs/availability | Lookup the datalake availability date and time |
 | [**PatchAnalyticsReportingSettings**](AnalyticsApi.html#patchanalyticsreportingsettings) | **PATCH** /api/v2/analytics/reporting/settings | Patch AnalyticsReportingSettings values for an organization |
+| [**PostAnalyticsActionsAggregatesQuery**](AnalyticsApi.html#postanalyticsactionsaggregatesquery) | **POST** /api/v2/analytics/actions/aggregates/query | Query for action aggregates |
 | [**PostAnalyticsBotsAggregatesQuery**](AnalyticsApi.html#postanalyticsbotsaggregatesquery) | **POST** /api/v2/analytics/bots/aggregates/query | Query for bot aggregates |
 | [**PostAnalyticsConversationDetailsProperties**](AnalyticsApi.html#postanalyticsconversationdetailsproperties) | **POST** /api/v2/analytics/conversations/{conversationId}/details/properties | Index conversation properties |
 | [**PostAnalyticsConversationsAggregatesQuery**](AnalyticsApi.html#postanalyticsconversationsaggregatesquery) | **POST** /api/v2/analytics/conversations/aggregates/query | Query for conversation aggregates |
@@ -251,7 +252,7 @@ void (empty response body)
 
 <a name="getanalyticsbotflowreportingturns"></a>
 
-## [**ReportingTurnsResponse**](ReportingTurnsResponse.html) GetAnalyticsBotflowReportingturns (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null)
+## [**ReportingTurnsResponse**](ReportingTurnsResponse.html) GetAnalyticsBotflowReportingturns (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null, string language = null)
 
 
 
@@ -290,11 +291,12 @@ namespace Example
             var pageSize = pageSize_example;  // string | Max number of entities to return. Maximum of 250 (optional)  (default to "50")
             var actionId = actionId_example;  // string | Optional action ID to get the reporting turns associated to a particular flow action (optional) 
             var sessionId = sessionId_example;  // string | Optional session ID to get the reporting turns for a particular session (optional) 
+            var language = en-us;  // string | Optional language code to get the reporting turns for a particular language (optional) 
 
             try
             { 
                 // Get Reporting Turns.
-                ReportingTurnsResponse result = apiInstance.GetAnalyticsBotflowReportingturns(botFlowId, after, pageSize, actionId, sessionId);
+                ReportingTurnsResponse result = apiInstance.GetAnalyticsBotflowReportingturns(botFlowId, after, pageSize, actionId, sessionId, language);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -316,6 +318,7 @@ namespace Example
 | **pageSize** | **string**| Max number of entities to return. Maximum of 250 | [optional] [default to "50"] |
 | **actionId** | **string**| Optional action ID to get the reporting turns associated to a particular flow action | [optional]  |
 | **sessionId** | **string**| Optional session ID to get the reporting turns for a particular session | [optional]  |
+| **language** | **string**| Optional language code to get the reporting turns for a particular language | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1746,6 +1749,72 @@ namespace Example
 ### Return type
 
 [**AnalyticsReportingSettings**](AnalyticsReportingSettings.html)
+
+<a name="postanalyticsactionsaggregatesquery"></a>
+
+## [**ActionAggregateQueryResponse**](ActionAggregateQueryResponse.html) PostAnalyticsActionsAggregatesQuery (ActionAggregationQuery body)
+
+
+
+Query for action aggregates
+
+
+
+Requires ANY permissions: 
+
+* integrations:action:view
+* bridge:actions:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAnalyticsActionsAggregatesQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AnalyticsApi();
+            var body = new ActionAggregationQuery(); // ActionAggregationQuery | query
+
+            try
+            { 
+                // Query for action aggregates
+                ActionAggregateQueryResponse result = apiInstance.PostAnalyticsActionsAggregatesQuery(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.PostAnalyticsActionsAggregatesQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ActionAggregationQuery**](ActionAggregationQuery.html)| query |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ActionAggregateQueryResponse**](ActionAggregateQueryResponse.html)
 
 <a name="postanalyticsbotsaggregatesquery"></a>
 

@@ -261,6 +261,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Transferpurematchaction,
             
             /// <summary>
+            /// Enum Findqueueaction for "FindQueueAction"
+            /// </summary>
+            [EnumMember(Value = "FindQueueAction")]
+            Findqueueaction,
+            
+            /// <summary>
+            /// Enum Findqueuebyidaction for "FindQueueByIdAction"
+            /// </summary>
+            [EnumMember(Value = "FindQueueByIdAction")]
+            Findqueuebyidaction,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]

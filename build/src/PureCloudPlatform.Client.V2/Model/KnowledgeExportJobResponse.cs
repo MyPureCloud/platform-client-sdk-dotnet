@@ -19,6 +19,39 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class KnowledgeExportJobResponse :  IEquatable<KnowledgeExportJobResponse>
     {
         /// <summary>
+        /// File type of the document
+        /// </summary>
+        /// <value>File type of the document</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum FileTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Json for "Json"
+            /// </summary>
+            [EnumMember(Value = "Json")]
+            Json,
+            
+            /// <summary>
+            /// Enum Csv for "Csv"
+            /// </summary>
+            [EnumMember(Value = "Csv")]
+            Csv,
+            
+            /// <summary>
+            /// Enum Xlsx for "Xlsx"
+            /// </summary>
+            [EnumMember(Value = "Xlsx")]
+            Xlsx
+        }
+        /// <summary>
         /// The status of the export job.
         /// </summary>
         /// <value>The status of the export job.</value>
@@ -100,16 +133,29 @@ namespace PureCloudPlatform.Client.V2.Model
             Aborted
         }
         /// <summary>
+        /// File type of the document
+        /// </summary>
+        /// <value>File type of the document</value>
+        [DataMember(Name="fileType", EmitDefaultValue=false)]
+        public FileTypeEnum? FileType { get; set; }
+        /// <summary>
         /// The status of the export job.
         /// </summary>
         /// <value>The status of the export job.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="KnowledgeExportJobResponse" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected KnowledgeExportJobResponse() { }
         /// <summary>
         /// Initializes a new instance of the <see cref="KnowledgeExportJobResponse" /> class.
         /// </summary>
         /// <param name="Id">Id of the export job..</param>
         /// <param name="DownloadURL">The URL of the location at which the caller can download the export file, when available..</param>
+        /// <param name="FileType">File type of the document (required).</param>
         /// <param name="CountDocumentProcessed">The current count of the number of records processed..</param>
         /// <param name="ExportFilter">Filters to narrow down what to export..</param>
         /// <param name="Status">The status of the export job..</param>
@@ -117,10 +163,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateCreated">The timestamp of when the export began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DateModified">The timestamp of when the export stopped. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ErrorInformation">Any error information, or null of the processing is not in failed state..</param>
-        public KnowledgeExportJobResponse(string Id = null, string DownloadURL = null, int? CountDocumentProcessed = null, KnowledgeExportJobFilter ExportFilter = null, StatusEnum? Status = null, KnowledgeBase KnowledgeBase = null, DateTime? DateCreated = null, DateTime? DateModified = null, ErrorBody ErrorInformation = null)
+        public KnowledgeExportJobResponse(string Id = null, string DownloadURL = null, FileTypeEnum? FileType = null, int? CountDocumentProcessed = null, KnowledgeExportJobFilter ExportFilter = null, StatusEnum? Status = null, KnowledgeBase KnowledgeBase = null, DateTime? DateCreated = null, DateTime? DateModified = null, ErrorBody ErrorInformation = null)
         {
             this.Id = Id;
             this.DownloadURL = DownloadURL;
+            this.FileType = FileType;
             this.CountDocumentProcessed = CountDocumentProcessed;
             this.ExportFilter = ExportFilter;
             this.Status = Status;
@@ -148,6 +195,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The URL of the location at which the caller can download the export file, when available.</value>
         [DataMember(Name="downloadURL", EmitDefaultValue=false)]
         public string DownloadURL { get; set; }
+
+
 
 
 
@@ -226,6 +275,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  DownloadURL: ").Append(DownloadURL).Append("\n");
+            sb.Append("  FileType: ").Append(FileType).Append("\n");
             sb.Append("  CountDocumentProcessed: ").Append(CountDocumentProcessed).Append("\n");
             sb.Append("  ExportFilter: ").Append(ExportFilter).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
@@ -285,6 +335,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DownloadURL.Equals(other.DownloadURL)
                 ) &&
                 (
+                    this.FileType == other.FileType ||
+                    this.FileType != null &&
+                    this.FileType.Equals(other.FileType)
+                ) &&
+                (
                     this.CountDocumentProcessed == other.CountDocumentProcessed ||
                     this.CountDocumentProcessed != null &&
                     this.CountDocumentProcessed.Equals(other.CountDocumentProcessed)
@@ -342,6 +397,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DownloadURL != null)
                     hash = hash * 59 + this.DownloadURL.GetHashCode();
+
+                if (this.FileType != null)
+                    hash = hash * 59 + this.FileType.GetHashCode();
 
                 if (this.CountDocumentProcessed != null)
                     hash = hash * 59 + this.CountDocumentProcessed.GetHashCode();

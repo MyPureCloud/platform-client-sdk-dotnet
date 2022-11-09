@@ -23,10 +23,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Intents">Intents.</param>
         /// <param name="EngineVersion">EngineVersion.</param>
-        public NluInfo(List<Intent> Intents = null, string EngineVersion = null)
+        /// <param name="NluData">NluData.</param>
+        public NluInfo(List<Intent> Intents = null, string EngineVersion = null, NluDomainVersion NluData = null)
         {
             this.Intents = Intents;
             this.EngineVersion = EngineVersion;
+            this.NluData = NluData;
             
         }
         
@@ -63,6 +65,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public string EngineVersion { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets NluData
+        /// </summary>
+        [DataMember(Name="nluData", EmitDefaultValue=false)]
+        public NluDomainVersion NluData { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,6 +86,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  Intents: ").Append(Intents).Append("\n");
             sb.Append("  EngineVersion: ").Append(EngineVersion).Append("\n");
+            sb.Append("  NluData: ").Append(NluData).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -135,6 +146,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EngineVersion == other.EngineVersion ||
                     this.EngineVersion != null &&
                     this.EngineVersion.Equals(other.EngineVersion)
+                ) &&
+                (
+                    this.NluData == other.NluData ||
+                    this.NluData != null &&
+                    this.NluData.Equals(other.NluData)
                 );
         }
 
@@ -160,6 +176,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EngineVersion != null)
                     hash = hash * 59 + this.EngineVersion.GetHashCode();
+
+                if (this.NluData != null)
+                    hash = hash * 59 + this.NluData.GetHashCode();
 
                 return hash;
             }

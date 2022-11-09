@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class KnowledgeImportJobResponse :  IEquatable<KnowledgeImportJobResponse>
     {
         /// <summary>
-        /// file type of the document
+        /// File type of the document
         /// </summary>
-        /// <value>file type of the document</value>
+        /// <value>File type of the document</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum FileTypeEnum
         {
@@ -43,7 +43,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Csv for "Csv"
             /// </summary>
             [EnumMember(Value = "Csv")]
-            Csv
+            Csv,
+            
+            /// <summary>
+            /// Enum Xlsx for "Xlsx"
+            /// </summary>
+            [EnumMember(Value = "Xlsx")]
+            Xlsx
         }
         /// <summary>
         /// Status of the import job
@@ -127,9 +133,9 @@ namespace PureCloudPlatform.Client.V2.Model
             Aborted
         }
         /// <summary>
-        /// file type of the document
+        /// File type of the document
         /// </summary>
-        /// <value>file type of the document</value>
+        /// <value>File type of the document</value>
         [DataMember(Name="fileType", EmitDefaultValue=false)]
         public FileTypeEnum? FileType { get; set; }
         /// <summary>
@@ -148,7 +154,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="KnowledgeImportJobResponse" /> class.
         /// </summary>
         /// <param name="UploadKey">Upload key (required).</param>
-        /// <param name="FileType">file type of the document (required).</param>
+        /// <param name="FileType">File type of the document (required).</param>
         /// <param name="Settings">Additional optional settings.</param>
         public KnowledgeImportJobResponse(string UploadKey = null, FileTypeEnum? FileType = null, KnowledgeImportJobSettings Settings = null)
         {

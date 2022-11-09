@@ -11,6 +11,7 @@ title: NluInfo
 | **Version** | [**NluDomainVersion**](NluDomainVersion.html) |  | [optional] |
 | **Intents** | [**List&lt;Intent&gt;**](Intent.html) |  | [optional] |
 | **EngineVersion** | **string** |  | [optional] |
+| **NluData** | [**NluDomainVersion**](NluDomainVersion.html) |  | [optional] |
 {: class="table table-striped"}
 
 

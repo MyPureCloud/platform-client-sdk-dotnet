@@ -64,18 +64,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Enabled">Whether voicemail is enabled for the group.</param>
         /// <param name="SendEmailNotifications">Whether email notifications are sent to group members when a new voicemail is received.</param>
         /// <param name="DisableEmailPii">Removes any PII from group emails. This is overridden by the analogous organization configuration value. This is always true if HIPAA is enabled or unknown for an organization..</param>
+        /// <param name="IncludeEmailTranscriptions">Whether to include the voicemail transcription in a group notification email.</param>
         /// <param name="LanguagePreference">The language preference for the group.  Used for group voicemail transcription.</param>
         /// <param name="RotateCallsSecs">How many seconds to ring before rotating to the next member in the group.</param>
         /// <param name="StopRingingAfterRotations">How many rotations to go through.</param>
         /// <param name="OverflowGroupId">A fallback group to contact when all of the members in this group did not answer the call..</param>
         /// <param name="GroupAlertType">Specifies if the members in this group should be contacted randomly, in a specific order, or by round-robin..</param>
         /// <param name="InteractiveResponsePromptId">The prompt to use when connecting a user to a Group Ring call.</param>
-        public VoicemailGroupPolicy(string Name = null, bool? Enabled = null, bool? SendEmailNotifications = null, bool? DisableEmailPii = null, string LanguagePreference = null, int? RotateCallsSecs = null, int? StopRingingAfterRotations = null, string OverflowGroupId = null, GroupAlertTypeEnum? GroupAlertType = null, string InteractiveResponsePromptId = null)
+        public VoicemailGroupPolicy(string Name = null, bool? Enabled = null, bool? SendEmailNotifications = null, bool? DisableEmailPii = null, bool? IncludeEmailTranscriptions = null, string LanguagePreference = null, int? RotateCallsSecs = null, int? StopRingingAfterRotations = null, string OverflowGroupId = null, GroupAlertTypeEnum? GroupAlertType = null, string InteractiveResponsePromptId = null)
         {
             this.Name = Name;
             this.Enabled = Enabled;
             this.SendEmailNotifications = SendEmailNotifications;
             this.DisableEmailPii = DisableEmailPii;
+            this.IncludeEmailTranscriptions = IncludeEmailTranscriptions;
             this.LanguagePreference = LanguagePreference;
             this.RotateCallsSecs = RotateCallsSecs;
             this.StopRingingAfterRotations = StopRingingAfterRotations;
@@ -128,6 +130,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Removes any PII from group emails. This is overridden by the analogous organization configuration value. This is always true if HIPAA is enabled or unknown for an organization.</value>
         [DataMember(Name="disableEmailPii", EmitDefaultValue=false)]
         public bool? DisableEmailPii { get; set; }
+
+
+
+        /// <summary>
+        /// Whether to include the voicemail transcription in a group notification email
+        /// </summary>
+        /// <value>Whether to include the voicemail transcription in a group notification email</value>
+        [DataMember(Name="includeEmailTranscriptions", EmitDefaultValue=false)]
+        public bool? IncludeEmailTranscriptions { get; set; }
 
 
 
@@ -191,6 +202,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  SendEmailNotifications: ").Append(SendEmailNotifications).Append("\n");
             sb.Append("  DisableEmailPii: ").Append(DisableEmailPii).Append("\n");
+            sb.Append("  IncludeEmailTranscriptions: ").Append(IncludeEmailTranscriptions).Append("\n");
             sb.Append("  LanguagePreference: ").Append(LanguagePreference).Append("\n");
             sb.Append("  RotateCallsSecs: ").Append(RotateCallsSecs).Append("\n");
             sb.Append("  StopRingingAfterRotations: ").Append(StopRingingAfterRotations).Append("\n");
@@ -263,6 +275,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DisableEmailPii.Equals(other.DisableEmailPii)
                 ) &&
                 (
+                    this.IncludeEmailTranscriptions == other.IncludeEmailTranscriptions ||
+                    this.IncludeEmailTranscriptions != null &&
+                    this.IncludeEmailTranscriptions.Equals(other.IncludeEmailTranscriptions)
+                ) &&
+                (
                     this.LanguagePreference == other.LanguagePreference ||
                     this.LanguagePreference != null &&
                     this.LanguagePreference.Equals(other.LanguagePreference)
@@ -319,6 +336,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DisableEmailPii != null)
                     hash = hash * 59 + this.DisableEmailPii.GetHashCode();
+
+                if (this.IncludeEmailTranscriptions != null)
+                    hash = hash * 59 + this.IncludeEmailTranscriptions.GetHashCode();
 
                 if (this.LanguagePreference != null)
                     hash = hash * 59 + this.LanguagePreference.GetHashCode();

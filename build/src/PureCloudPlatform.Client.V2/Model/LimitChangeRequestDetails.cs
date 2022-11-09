@@ -316,6 +316,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Search,
             
             /// <summary>
+            /// Enum Secondaryautomationtesting for "secondary.automation.testing"
+            /// </summary>
+            [EnumMember(Value = "secondary.automation.testing")]
+            Secondaryautomationtesting,
+            
+            /// <summary>
             /// Enum Skills for "skills"
             /// </summary>
             [EnumMember(Value = "skills")]

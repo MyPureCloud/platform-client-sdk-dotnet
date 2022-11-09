@@ -10,6 +10,7 @@ title: QueueConversationSocialExpressionEventTopicMessage
 | **Id** | **string** | A globally unique identifier for this communication. | [optional] |
 | **State** | **string** |  | [optional] |
 | **InitialState** | **string** |  | [optional] |
+| **Direction** | **string** | Whether a message is inbound or outbound. | [optional] |
 | **Held** | **bool?** | True if this call is held and the person on this side hears silence. | [optional] |
 | **ErrorInfo** | [**QueueConversationSocialExpressionEventTopicErrorDetails**](QueueConversationSocialExpressionEventTopicErrorDetails.html) | Detailed information about an error response. | [optional] |
 | **Provider** | **string** | The source provider of the email. | [optional] |

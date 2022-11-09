@@ -9,6 +9,7 @@ title: KnowledgeExportJobResponse
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | Id of the export job. | [optional] |
 | **DownloadURL** | **string** | The URL of the location at which the caller can download the export file, when available. | [optional] |
+| **FileType** | **string** | File type of the document | |
 | **CountDocumentProcessed** | **int?** | The current count of the number of records processed. | [optional] |
 | **ExportFilter** | [**KnowledgeExportJobFilter**](KnowledgeExportJobFilter.html) | Filters to narrow down what to export. | [optional] |
 | **Status** | **string** | The status of the export job. | [optional] |

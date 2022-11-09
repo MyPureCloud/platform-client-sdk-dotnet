@@ -12,7 +12,10 @@ title: ExternalMetricDataProcessedItem
 | **MetricId** | **string** | The ID of the external metric definition | |
 | **DateOccurred** | **String** | The date of the metric data. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **Value** | **double?** | The value of the metric data. When value is null, the metric data will be deleted. | |
-| **Count** | **int?** | The number of data points. The default value is 1. | [optional] |
+| **Count** | **int?** | The number of data points. The default value is 0 when type is Cumulative and the metric data already exists, otherwise 1. When total count reaches 0, the metric data will be deleted. | [optional] |
+| **Type** | **string** | The type of the metric data. The default value is Total. | [optional] |
+| **TotalValue** | **double?** | The total value of the metric data. | [optional] |
+| **TotalCount** | **int?** | The total number of data points. | [optional] |
 {: class="table table-striped"}
 
 

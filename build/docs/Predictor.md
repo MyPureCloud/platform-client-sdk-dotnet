@@ -17,6 +17,7 @@ title: Predictor
 | **DateModified** | **DateTime?** | DateTime indicating when the predictor was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **WorkloadBalancingConfig** | [**PredictorWorkloadBalancing**](PredictorWorkloadBalancing.html) | The predictor balancing configuration to enable workload balancing. | [optional] |
 | **ErrorCode** | **string** | Predictor error code - optional details on why the predictor went into error state. | [optional] |
+| **Models** | [**List&lt;PredictorModelBrief&gt;**](PredictorModelBrief.html) | Predictor&#39;s models | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

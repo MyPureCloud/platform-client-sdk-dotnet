@@ -18,6 +18,39 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ExternalMetricDataItem :  IEquatable<ExternalMetricDataItem>
     {
+        /// <summary>
+        /// The type of the metric data. The default value is Total.
+        /// </summary>
+        /// <value>The type of the metric data. The default value is Total.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum TypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Total for "Total"
+            /// </summary>
+            [EnumMember(Value = "Total")]
+            Total,
+            
+            /// <summary>
+            /// Enum Cumulative for "Cumulative"
+            /// </summary>
+            [EnumMember(Value = "Cumulative")]
+            Cumulative
+        }
+        /// <summary>
+        /// The type of the metric data. The default value is Total.
+        /// </summary>
+        /// <value>The type of the metric data. The default value is Total.</value>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ExternalMetricDataItem" /> class.
@@ -32,8 +65,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MetricId">The ID of the external metric definition (required).</param>
         /// <param name="DateOccurred">The date of the metric data. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
         /// <param name="Value">The value of the metric data. When value is null, the metric data will be deleted. (required).</param>
-        /// <param name="Count">The number of data points. The default value is 1..</param>
-        public ExternalMetricDataItem(string UserId = null, string UserEmail = null, string MetricId = null, String DateOccurred = null, double? Value = null, int? Count = null)
+        /// <param name="Count">The number of data points. The default value is 0 when type is Cumulative and the metric data already exists, otherwise 1. When total count reaches 0, the metric data will be deleted..</param>
+        /// <param name="Type">The type of the metric data. The default value is Total..</param>
+        public ExternalMetricDataItem(string UserId = null, string UserEmail = null, string MetricId = null, String DateOccurred = null, double? Value = null, int? Count = null, TypeEnum? Type = null)
         {
             this.UserId = UserId;
             this.UserEmail = UserEmail;
@@ -41,6 +75,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DateOccurred = DateOccurred;
             this.Value = Value;
             this.Count = Count;
+            this.Type = Type;
             
         }
         
@@ -92,11 +127,13 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The number of data points. The default value is 1.
+        /// The number of data points. The default value is 0 when type is Cumulative and the metric data already exists, otherwise 1. When total count reaches 0, the metric data will be deleted.
         /// </summary>
-        /// <value>The number of data points. The default value is 1.</value>
+        /// <value>The number of data points. The default value is 0 when type is Cumulative and the metric data already exists, otherwise 1. When total count reaches 0, the metric data will be deleted.</value>
         [DataMember(Name="count", EmitDefaultValue=false)]
         public int? Count { get; set; }
+
+
 
 
         /// <summary>
@@ -114,6 +151,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateOccurred: ").Append(DateOccurred).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Count: ").Append(Count).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -183,6 +221,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Count == other.Count ||
                     this.Count != null &&
                     this.Count.Equals(other.Count)
+                ) &&
+                (
+                    this.Type == other.Type ||
+                    this.Type != null &&
+                    this.Type.Equals(other.Type)
                 );
         }
 
@@ -214,6 +257,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Count != null)
                     hash = hash * 59 + this.Count.GetHashCode();
+
+                if (this.Type != null)
+                    hash = hash * 59 + this.Type.GetHashCode();
 
                 return hash;
             }

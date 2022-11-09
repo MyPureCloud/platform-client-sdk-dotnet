@@ -270,7 +270,43 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Digitalbot for "DIGITALBOT"
             /// </summary>
             [EnumMember(Value = "DIGITALBOT")]
-            Digitalbot
+            Digitalbot,
+            
+            /// <summary>
+            /// Enum Commonmodule for "COMMONMODULE"
+            /// </summary>
+            [EnumMember(Value = "COMMONMODULE")]
+            Commonmodule,
+            
+            /// <summary>
+            /// Enum Inqueueemail for "INQUEUEEMAIL"
+            /// </summary>
+            [EnumMember(Value = "INQUEUEEMAIL")]
+            Inqueueemail,
+            
+            /// <summary>
+            /// Enum Inqueueshortmessage for "INQUEUESHORTMESSAGE"
+            /// </summary>
+            [EnumMember(Value = "INQUEUESHORTMESSAGE")]
+            Inqueueshortmessage,
+            
+            /// <summary>
+            /// Enum Voice for "VOICE"
+            /// </summary>
+            [EnumMember(Value = "VOICE")]
+            Voice,
+            
+            /// <summary>
+            /// Enum Voicemail for "VOICEMAIL"
+            /// </summary>
+            [EnumMember(Value = "VOICEMAIL")]
+            Voicemail,
+            
+            /// <summary>
+            /// Enum Workitem for "WORKITEM"
+            /// </summary>
+            [EnumMember(Value = "WORKITEM")]
+            Workitem
         }
         /// <summary>
         /// Gets or Sets MediaType

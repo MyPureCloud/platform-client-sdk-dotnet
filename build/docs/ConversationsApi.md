@@ -4159,7 +4159,7 @@ This endpoint does require any parameters.
 
 <a name="getconversationsmessagingintegrations"></a>
 
-## [**MessagingIntegrationEntityListing**](MessagingIntegrationEntityListing.html) GetConversationsMessagingIntegrations (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
+## [**MessagingIntegrationEntityListing**](MessagingIntegrationEntityListing.html) GetConversationsMessagingIntegrations (int? pageSize = null, int? pageNumber = null, List<string> expand = null, string supportedContentId = null, string messagingSettingId = null)
 
 
 
@@ -4195,13 +4195,14 @@ namespace Example
             var apiInstance = new ConversationsApi();
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-            var expand = expand_example;  // string | Expand instructions for the return value. (optional) 
+            var expand = new List<string>(); // List<string> | Expand instructions for the return value. (optional) 
             var supportedContentId = supportedContentId_example;  // string | Filter integrations returned based on the supported content ID (optional) 
+            var messagingSettingId = messagingSettingId_example;  // string | Filter integrations returned based on the setting ID (optional) 
 
             try
             { 
                 // Get a list of Integrations
-                MessagingIntegrationEntityListing result = apiInstance.GetConversationsMessagingIntegrations(pageSize, pageNumber, expand, supportedContentId);
+                MessagingIntegrationEntityListing result = apiInstance.GetConversationsMessagingIntegrations(pageSize, pageNumber, expand, supportedContentId, messagingSettingId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4220,8 +4221,9 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent |
+| **expand** | [**List<string>**](string.html)| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
 | **supportedContentId** | **string**| Filter integrations returned based on the supported content ID | [optional]  |
+| **messagingSettingId** | **string**| Filter integrations returned based on the setting ID | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -4230,7 +4232,7 @@ namespace Example
 
 <a name="getconversationsmessagingintegrationsfacebook"></a>
 
-## [**FacebookIntegrationEntityListing**](FacebookIntegrationEntityListing.html) GetConversationsMessagingIntegrationsFacebook (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
+## [**FacebookIntegrationEntityListing**](FacebookIntegrationEntityListing.html) GetConversationsMessagingIntegrationsFacebook (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
 
 
 
@@ -4268,11 +4270,12 @@ namespace Example
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var expand = expand_example;  // string | Expand instructions for the return value. (optional) 
             var supportedContentId = supportedContentId_example;  // string | Filter integrations returned based on the supported content ID (optional) 
+            var messagingSettingId = messagingSettingId_example;  // string | Filter integrations returned based on the setting ID (optional) 
 
             try
             { 
                 // Get a list of Facebook Integrations
-                FacebookIntegrationEntityListing result = apiInstance.GetConversationsMessagingIntegrationsFacebook(pageSize, pageNumber, expand, supportedContentId);
+                FacebookIntegrationEntityListing result = apiInstance.GetConversationsMessagingIntegrationsFacebook(pageSize, pageNumber, expand, supportedContentId, messagingSettingId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4291,8 +4294,9 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
 | **supportedContentId** | **string**| Filter integrations returned based on the supported content ID | [optional]  |
+| **messagingSettingId** | **string**| Filter integrations returned based on the setting ID | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -4359,7 +4363,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
-| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
 {: class="table table-striped"}
 
 ### Return type
@@ -4368,7 +4372,7 @@ namespace Example
 
 <a name="getconversationsmessagingintegrationsline"></a>
 
-## [**LineIntegrationEntityListing**](LineIntegrationEntityListing.html) GetConversationsMessagingIntegrationsLine (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
+## [**LineIntegrationEntityListing**](LineIntegrationEntityListing.html) GetConversationsMessagingIntegrationsLine (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
 
 
 
@@ -4406,11 +4410,12 @@ namespace Example
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var expand = expand_example;  // string | Expand instructions for the return value. (optional) 
             var supportedContentId = supportedContentId_example;  // string | Filter integrations returned based on the supported content ID (optional) 
+            var messagingSettingId = messagingSettingId_example;  // string | Filter integrations returned based on the setting ID (optional) 
 
             try
             { 
                 // Get a list of LINE messenger Integrations
-                LineIntegrationEntityListing result = apiInstance.GetConversationsMessagingIntegrationsLine(pageSize, pageNumber, expand, supportedContentId);
+                LineIntegrationEntityListing result = apiInstance.GetConversationsMessagingIntegrationsLine(pageSize, pageNumber, expand, supportedContentId, messagingSettingId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4429,8 +4434,9 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
 | **supportedContentId** | **string**| Filter integrations returned based on the supported content ID | [optional]  |
+| **messagingSettingId** | **string**| Filter integrations returned based on the setting ID | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -4497,7 +4503,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
-| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
 {: class="table table-striped"}
 
 ### Return type
@@ -4506,7 +4512,7 @@ namespace Example
 
 <a name="getconversationsmessagingintegrationsopen"></a>
 
-## [**OpenIntegrationEntityListing**](OpenIntegrationEntityListing.html) GetConversationsMessagingIntegrationsOpen (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
+## [**OpenIntegrationEntityListing**](OpenIntegrationEntityListing.html) GetConversationsMessagingIntegrationsOpen (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
 
 
 
@@ -4546,11 +4552,12 @@ namespace Example
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var expand = expand_example;  // string | Expand instructions for the return value. (optional) 
             var supportedContentId = supportedContentId_example;  // string | Filter integrations returned based on the supported content ID (optional) 
+            var messagingSettingId = messagingSettingId_example;  // string | Filter integrations returned based on the setting ID (optional) 
 
             try
             { 
                 // Get a list of Open messaging integrations
-                OpenIntegrationEntityListing result = apiInstance.GetConversationsMessagingIntegrationsOpen(pageSize, pageNumber, expand, supportedContentId);
+                OpenIntegrationEntityListing result = apiInstance.GetConversationsMessagingIntegrationsOpen(pageSize, pageNumber, expand, supportedContentId, messagingSettingId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4569,8 +4576,9 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
 | **supportedContentId** | **string**| Filter integrations returned based on the supported content ID | [optional]  |
+| **messagingSettingId** | **string**| Filter integrations returned based on the setting ID | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -4639,7 +4647,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
-| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
 {: class="table table-striped"}
 
 ### Return type
@@ -4648,7 +4656,7 @@ namespace Example
 
 <a name="getconversationsmessagingintegrationstwitter"></a>
 
-## [**TwitterIntegrationEntityListing**](TwitterIntegrationEntityListing.html) GetConversationsMessagingIntegrationsTwitter (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
+## [**TwitterIntegrationEntityListing**](TwitterIntegrationEntityListing.html) GetConversationsMessagingIntegrationsTwitter (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
 
 
 
@@ -4686,11 +4694,12 @@ namespace Example
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var expand = expand_example;  // string | Expand instructions for the return value. (optional) 
             var supportedContentId = supportedContentId_example;  // string | Filter integrations returned based on the supported content ID (optional) 
+            var messagingSettingId = messagingSettingId_example;  // string | Filter integrations returned based on the setting ID (optional) 
 
             try
             { 
                 // Get a list of Twitter Integrations
-                TwitterIntegrationEntityListing result = apiInstance.GetConversationsMessagingIntegrationsTwitter(pageSize, pageNumber, expand, supportedContentId);
+                TwitterIntegrationEntityListing result = apiInstance.GetConversationsMessagingIntegrationsTwitter(pageSize, pageNumber, expand, supportedContentId, messagingSettingId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4709,8 +4718,9 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
 | **supportedContentId** | **string**| Filter integrations returned based on the supported content ID | [optional]  |
+| **messagingSettingId** | **string**| Filter integrations returned based on the setting ID | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -4777,7 +4787,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
-| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
 {: class="table table-striped"}
 
 ### Return type
@@ -4786,7 +4796,7 @@ namespace Example
 
 <a name="getconversationsmessagingintegrationswhatsapp"></a>
 
-## [**WhatsAppIntegrationEntityListing**](WhatsAppIntegrationEntityListing.html) GetConversationsMessagingIntegrationsWhatsapp (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null)
+## [**WhatsAppIntegrationEntityListing**](WhatsAppIntegrationEntityListing.html) GetConversationsMessagingIntegrationsWhatsapp (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
 
 
 
@@ -4824,11 +4834,12 @@ namespace Example
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var expand = expand_example;  // string | Expand instructions for the return value. (optional) 
             var supportedContentId = supportedContentId_example;  // string | Filter integrations returned based on the supported content ID (optional) 
+            var messagingSettingId = messagingSettingId_example;  // string | Filter integrations returned based on the setting ID (optional) 
 
             try
             { 
                 // Get a list of WhatsApp Integrations
-                WhatsAppIntegrationEntityListing result = apiInstance.GetConversationsMessagingIntegrationsWhatsapp(pageSize, pageNumber, expand, supportedContentId);
+                WhatsAppIntegrationEntityListing result = apiInstance.GetConversationsMessagingIntegrationsWhatsapp(pageSize, pageNumber, expand, supportedContentId, messagingSettingId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4847,8 +4858,9 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
 | **supportedContentId** | **string**| Filter integrations returned based on the supported content ID | [optional]  |
+| **messagingSettingId** | **string**| Filter integrations returned based on the setting ID | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -4915,7 +4927,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
-| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting |
 {: class="table table-striped"}
 
 ### Return type

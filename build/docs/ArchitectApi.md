@@ -3844,7 +3844,7 @@ namespace Example
 
 <a name="getflowsdatatablerows"></a>
 
-## [**DataTableRowEntityListing**](DataTableRowEntityListing.html) GetFlowsDatatableRows (string datatableId, int? pageNumber = null, int? pageSize = null, bool? showbrief = null)
+## [**DataTableRowEntityListing**](DataTableRowEntityListing.html) GetFlowsDatatableRows (string datatableId, int? pageNumber = null, int? pageSize = null, bool? showbrief = null, string sortOrder = null)
 
 
 
@@ -3885,11 +3885,12 @@ namespace Example
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var showbrief = true;  // bool? | If true returns just the key value of the row (optional)  (default to true)
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ascending)
 
             try
             { 
                 // Returns the rows for the datatable with the given id
-                DataTableRowEntityListing result = apiInstance.GetFlowsDatatableRows(datatableId, pageNumber, pageSize, showbrief);
+                DataTableRowEntityListing result = apiInstance.GetFlowsDatatableRows(datatableId, pageNumber, pageSize, showbrief, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3910,6 +3911,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **showbrief** | **bool?**| If true returns just the key value of the row | [optional] [default to true] |
+| **sortOrder** | **string**| Sort order | [optional] [default to ascending]<br />**Values**: ascending, descending |
 {: class="table table-striped"}
 
 ### Return type
@@ -3960,7 +3962,7 @@ namespace Example
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to id)
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "ascending")
             var divisionId = new List<string>(); // List<string> | division ID(s) (optional) 
-            var name = name_example;  // string | Name to filter by (optional) 
+            var name = exactMatch, beginsWith*, *endsWith, *contains*;  // string | Filter by Name. The wildcard character * is supported within the filter. Matches are case-insensitive. (optional) 
 
             try
             { 
@@ -3988,7 +3990,7 @@ namespace Example
 | **sortBy** | **string**| Sort by | [optional] [default to id]<br />**Values**: id, name |
 | **sortOrder** | **string**| Sort order | [optional] [default to "ascending"] |
 | **divisionId** | [**List<string>**](string.html)| division ID(s) | [optional]  |
-| **name** | **string**| Name to filter by | [optional]  |
+| **name** | **string**| Filter by Name. The wildcard character * is supported within the filter. Matches are case-insensitive. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -4108,7 +4110,7 @@ namespace Example
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to id)
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "ascending")
             var divisionId = new List<string>(); // List<string> | division ID(s) (optional) 
-            var name = name_example;  // string | Name to filter by (optional) 
+            var name = exactMatch, beginsWith*, *endsWith, *contains*;  // string | Filter by Name. The wildcard character * is supported within the filter. Matches are case-insensitive. (optional) 
 
             try
             { 
@@ -4136,7 +4138,7 @@ namespace Example
 | **sortBy** | **string**| Sort by | [optional] [default to id]<br />**Values**: id, name |
 | **sortOrder** | **string**| Sort order | [optional] [default to "ascending"] |
 | **divisionId** | [**List<string>**](string.html)| division ID(s) | [optional]  |
-| **name** | **string**| Name to filter by | [optional]  |
+| **name** | **string**| Filter by Name. The wildcard character * is supported within the filter. Matches are case-insensitive. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

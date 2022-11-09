@@ -57,19 +57,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The type of contact</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; private set; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ExternalContact" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected ExternalContact() { }
         /// <summary>
         /// Initializes a new instance of the <see cref="ExternalContact" /> class.
         /// </summary>
         /// <param name="Id">The globally unique identifier for the object..</param>
-        /// <param name="FirstName">The first name of the contact. (required).</param>
+        /// <param name="FirstName">The first name of the contact..</param>
         /// <param name="MiddleName">MiddleName.</param>
-        /// <param name="LastName">The last name of the contact. (required).</param>
+        /// <param name="LastName">The last name of the contact..</param>
         /// <param name="Salutation">Salutation.</param>
         /// <param name="Title">Title.</param>
         /// <param name="WorkPhone">WorkPhone.</param>

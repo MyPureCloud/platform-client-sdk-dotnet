@@ -167,6 +167,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Predictor's models
+        /// </summary>
+        /// <value>Predictor's models</value>
+        [DataMember(Name="models", EmitDefaultValue=false)]
+        public List<PredictorModelBrief> Models { get; private set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -193,6 +202,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  WorkloadBalancingConfig: ").Append(WorkloadBalancingConfig).Append("\n");
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
+            sb.Append("  Models: ").Append(Models).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -285,6 +295,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ErrorCode.Equals(other.ErrorCode)
                 ) &&
                 (
+                    this.Models == other.Models ||
+                    this.Models != null &&
+                    this.Models.SequenceEqual(other.Models)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -331,6 +346,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ErrorCode != null)
                     hash = hash * 59 + this.ErrorCode.GetHashCode();
+
+                if (this.Models != null)
+                    hash = hash * 59 + this.Models.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

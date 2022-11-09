@@ -43,7 +43,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Csv for "Csv"
             /// </summary>
             [EnumMember(Value = "Csv")]
-            Csv
+            Csv,
+            
+            /// <summary>
+            /// Enum Xlsx for "Xlsx"
+            /// </summary>
+            [EnumMember(Value = "Xlsx")]
+            Xlsx
         }
         /// <summary>
         /// File type of the document

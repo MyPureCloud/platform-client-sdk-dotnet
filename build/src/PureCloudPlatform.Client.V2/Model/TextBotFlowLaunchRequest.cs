@@ -32,13 +32,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationId">A conversation ID to associate with the bot flow, if available..</param>
         /// <param name="InputData">Input values to the flow. Valid values are defined by the flow's input JSON schema..</param>
         /// <param name="Channel">Channel information relevant to the bot flow. (required).</param>
-        public TextBotFlowLaunchRequest(TextBotFlow Flow = null, string ExternalSessionId = null, string ConversationId = null, TextBotInputOutputData InputData = null, TextBotChannel Channel = null)
+        /// <param name="Language">The language that the bot will use in the session. Validated against list of supported languages and if the value is omitted or is invalid, the default language will be used..</param>
+        public TextBotFlowLaunchRequest(TextBotFlow Flow = null, string ExternalSessionId = null, string ConversationId = null, TextBotInputOutputData InputData = null, TextBotChannel Channel = null, string Language = null)
         {
             this.Flow = Flow;
             this.ExternalSessionId = ExternalSessionId;
             this.ConversationId = ConversationId;
             this.InputData = InputData;
             this.Channel = Channel;
+            this.Language = Language;
             
         }
         
@@ -88,6 +90,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public TextBotChannel Channel { get; set; }
 
 
+
+        /// <summary>
+        /// The language that the bot will use in the session. Validated against list of supported languages and if the value is omitted or is invalid, the default language will be used.
+        /// </summary>
+        /// <value>The language that the bot will use in the session. Validated against list of supported languages and if the value is omitted or is invalid, the default language will be used.</value>
+        [DataMember(Name="language", EmitDefaultValue=false)]
+        public string Language { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,6 +113,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
             sb.Append("  InputData: ").Append(InputData).Append("\n");
             sb.Append("  Channel: ").Append(Channel).Append("\n");
+            sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -166,6 +178,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Channel == other.Channel ||
                     this.Channel != null &&
                     this.Channel.Equals(other.Channel)
+                ) &&
+                (
+                    this.Language == other.Language ||
+                    this.Language != null &&
+                    this.Language.Equals(other.Language)
                 );
         }
 
@@ -194,6 +211,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Channel != null)
                     hash = hash * 59 + this.Channel.GetHashCode();
+
+                if (this.Language != null)
+                    hash = hash * 59 + this.Language.GetHashCode();
 
                 return hash;
             }

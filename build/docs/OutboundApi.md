@@ -7484,7 +7484,7 @@ Update a campaign.
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * outbound:campaign:edit
 

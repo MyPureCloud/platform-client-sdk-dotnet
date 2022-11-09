@@ -18,6 +18,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteRoutingQueueWrapupcode**](RoutingApi.html#deleteroutingqueuewrapupcode) | **DELETE** /api/v2/routing/queues/{queueId}/wrapupcodes/{codeId} | Delete a wrap-up code from a queue |
 | [**DeleteRoutingSettings**](RoutingApi.html#deleteroutingsettings) | **DELETE** /api/v2/routing/settings | Delete an organization&#39;s routing settings |
 | [**DeleteRoutingSkill**](RoutingApi.html#deleteroutingskill) | **DELETE** /api/v2/routing/skills/{skillId} | Delete Routing Skill |
+| [**DeleteRoutingSkillgroup**](RoutingApi.html#deleteroutingskillgroup) | **DELETE** /api/v2/routing/skillgroups/{skillGroupId} | Remove skill group definition |
 | [**DeleteRoutingSmsAddress**](RoutingApi.html#deleteroutingsmsaddress) | **DELETE** /api/v2/routing/sms/addresses/{addressId} | Delete an Address by Id for SMS |
 | [**DeleteRoutingSmsPhonenumber**](RoutingApi.html#deleteroutingsmsphonenumber) | **DELETE** /api/v2/routing/sms/phonenumbers/{addressId} | Delete a phone number provisioned for SMS. |
 | [**DeleteRoutingUserUtilization**](RoutingApi.html#deleteroutinguserutilization) | **DELETE** /api/v2/routing/users/{userId}/utilization | Delete the user&#39;s max utilization settings and revert to the organization-wide default. |
@@ -63,6 +64,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRoutingSettingsContactcenter**](RoutingApi.html#getroutingsettingscontactcenter) | **GET** /api/v2/routing/settings/contactcenter | Get Contact Center Settings |
 | [**GetRoutingSettingsTranscription**](RoutingApi.html#getroutingsettingstranscription) | **GET** /api/v2/routing/settings/transcription | Get Transcription Settings |
 | [**GetRoutingSkill**](RoutingApi.html#getroutingskill) | **GET** /api/v2/routing/skills/{skillId} | Get Routing Skill |
+| [**GetRoutingSkillgroup**](RoutingApi.html#getroutingskillgroup) | **GET** /api/v2/routing/skillgroups/{skillGroupId} | Get skill group |
+| [**GetRoutingSkillgroupMembers**](RoutingApi.html#getroutingskillgroupmembers) | **GET** /api/v2/routing/skillgroups/{skillGroupId}/members | Get skill group members |
+| [**GetRoutingSkillgroupMembersDivisions**](RoutingApi.html#getroutingskillgroupmembersdivisions) | **GET** /api/v2/routing/skillgroups/{skillGroupId}/members/divisions | Get list of member divisions for this skill group. |
+| [**GetRoutingSkillgroups**](RoutingApi.html#getroutingskillgroups) | **GET** /api/v2/routing/skillgroups | Get skill group listing |
 | [**GetRoutingSkills**](RoutingApi.html#getroutingskills) | **GET** /api/v2/routing/skills | Get the list of routing skills. |
 | [**GetRoutingSmsAddress**](RoutingApi.html#getroutingsmsaddress) | **GET** /api/v2/routing/sms/addresses/{addressId} | Get an Address by Id for SMS |
 | [**GetRoutingSmsAddresses**](RoutingApi.html#getroutingsmsaddresses) | **GET** /api/v2/routing/sms/addresses | Get a list of Addresses for SMS |
@@ -85,6 +90,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchRoutingQueueUser**](RoutingApi.html#patchroutingqueueuser) | **PATCH** /api/v2/routing/queues/{queueId}/users/{memberId} | DEPRECATED: use PATCH /routing/queues/{queueId}/members/{memberId}.  Update the ring number OR joined status for a User in a Queue. |
 | [**PatchRoutingQueueUsers**](RoutingApi.html#patchroutingqueueusers) | **PATCH** /api/v2/routing/queues/{queueId}/users | DEPRECATED: use PATCH /routing/queues/{queueId}/members.  Join or unjoin a set of users for a queue. |
 | [**PatchRoutingSettingsContactcenter**](RoutingApi.html#patchroutingsettingscontactcenter) | **PATCH** /api/v2/routing/settings/contactcenter | Update Contact Center Settings |
+| [**PatchRoutingSkillgroup**](RoutingApi.html#patchroutingskillgroup) | **PATCH** /api/v2/routing/skillgroups/{skillGroupId} | Update skill group definition |
 | [**PatchUserQueue**](RoutingApi.html#patchuserqueue) | **PATCH** /api/v2/users/{userId}/queues/{queueId} | Join or unjoin a queue for a user |
 | [**PatchUserQueues**](RoutingApi.html#patchuserqueues) | **PATCH** /api/v2/users/{userId}/queues | Join or unjoin a set of queues for a user |
 | [**PatchUserRoutinglanguage**](RoutingApi.html#patchuserroutinglanguage) | **PATCH** /api/v2/users/{userId}/routinglanguages/{languageId} | Update routing language proficiency or state. |
@@ -104,6 +110,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostRoutingQueueUsers**](RoutingApi.html#postroutingqueueusers) | **POST** /api/v2/routing/queues/{queueId}/users | DEPRECATED: use POST /routing/queues/{queueId}/members.  Bulk add or delete up to 100 queue members. |
 | [**PostRoutingQueueWrapupcodes**](RoutingApi.html#postroutingqueuewrapupcodes) | **POST** /api/v2/routing/queues/{queueId}/wrapupcodes | Add up to 100 wrap-up codes to a queue |
 | [**PostRoutingQueues**](RoutingApi.html#postroutingqueues) | **POST** /api/v2/routing/queues | Create a queue |
+| [**PostRoutingSkillgroupMembersDivisions**](RoutingApi.html#postroutingskillgroupmembersdivisions) | **POST** /api/v2/routing/skillgroups/{skillGroupId}/members/divisions | Add or remove member divisions for this skill group. |
+| [**PostRoutingSkillgroups**](RoutingApi.html#postroutingskillgroups) | **POST** /api/v2/routing/skillgroups | Create a skill group |
 | [**PostRoutingSkills**](RoutingApi.html#postroutingskills) | **POST** /api/v2/routing/skills | Create Skill |
 | [**PostRoutingSmsAddresses**](RoutingApi.html#postroutingsmsaddresses) | **POST** /api/v2/routing/sms/addresses | Provision an Address for SMS |
 | [**PostRoutingSmsPhonenumbers**](RoutingApi.html#postroutingsmsphonenumbers) | **POST** /api/v2/routing/sms/phonenumbers | Provision a phone number for SMS |
@@ -830,6 +838,70 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **skillId** | **string**| Skill ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteroutingskillgroup"></a>
+
+## void DeleteRoutingSkillgroup (string skillGroupId)
+
+
+
+Remove skill group definition
+
+
+
+Requires ANY permissions: 
+
+* routing:skillGroup:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteRoutingSkillgroupExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var skillGroupId = skillGroupId_example;  // string | Skill Group ID
+
+            try
+            { 
+                // Remove skill group definition
+                apiInstance.DeleteRoutingSkillgroup(skillGroupId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.DeleteRoutingSkillgroup: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **skillGroupId** | **string**| Skill Group ID |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3856,6 +3928,282 @@ namespace Example
 
 [**RoutingSkill**](RoutingSkill.html)
 
+<a name="getroutingskillgroup"></a>
+
+## [**SkillGroup**](SkillGroup.html) GetRoutingSkillgroup (string skillGroupId)
+
+
+
+Get skill group
+
+
+
+Requires ANY permissions: 
+
+* routing:skillGroup:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingSkillgroupExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var skillGroupId = skillGroupId_example;  // string | Skill Group ID
+
+            try
+            { 
+                // Get skill group
+                SkillGroup result = apiInstance.GetRoutingSkillgroup(skillGroupId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingSkillgroup: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **skillGroupId** | **string**| Skill Group ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SkillGroup**](SkillGroup.html)
+
+<a name="getroutingskillgroupmembers"></a>
+
+## [**SkillGroupMemberEntityListing**](SkillGroupMemberEntityListing.html) GetRoutingSkillgroupMembers (string skillGroupId, int? pageSize = null, string after = null, string before = null, string expand = null)
+
+
+
+Get skill group members
+
+
+
+Requires ANY permissions: 
+
+* routing:skillGroup:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingSkillgroupMembersExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var skillGroupId = skillGroupId_example;  // string | Skill Group ID
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var after = after_example;  // string | The cursor that points to the next item (optional) 
+            var before = before_example;  // string | The cursor that points to the previous item (optional) 
+            var expand = expand_example;  // string | Expand the name on each user (optional) 
+
+            try
+            { 
+                // Get skill group members
+                SkillGroupMemberEntityListing result = apiInstance.GetRoutingSkillgroupMembers(skillGroupId, pageSize, after, before, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingSkillgroupMembers: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **skillGroupId** | **string**| Skill Group ID |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **after** | **string**| The cursor that points to the next item | [optional]  |
+| **before** | **string**| The cursor that points to the previous item | [optional]  |
+| **expand** | **string**| Expand the name on each user | [optional] <br />**Values**: entities |
+{: class="table table-striped"}
+
+### Return type
+
+[**SkillGroupMemberEntityListing**](SkillGroupMemberEntityListing.html)
+
+<a name="getroutingskillgroupmembersdivisions"></a>
+
+## [**SkillGroupMemberDivisionList**](SkillGroupMemberDivisionList.html) GetRoutingSkillgroupMembersDivisions (string skillGroupId, string expand = null)
+
+
+
+Get list of member divisions for this skill group.
+
+
+
+Requires ANY permissions: 
+
+* routing:skillGroup:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingSkillgroupMembersDivisionsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var skillGroupId = skillGroupId_example;  // string | Skill Group ID
+            var expand = expand_example;  // string | Expand the name on each user (optional) 
+
+            try
+            { 
+                // Get list of member divisions for this skill group.
+                SkillGroupMemberDivisionList result = apiInstance.GetRoutingSkillgroupMembersDivisions(skillGroupId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingSkillgroupMembersDivisions: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **skillGroupId** | **string**| Skill Group ID |  |
+| **expand** | **string**| Expand the name on each user | [optional] <br />**Values**: entities |
+{: class="table table-striped"}
+
+### Return type
+
+[**SkillGroupMemberDivisionList**](SkillGroupMemberDivisionList.html)
+
+<a name="getroutingskillgroups"></a>
+
+## [**SkillGroupEntityListing**](SkillGroupEntityListing.html) GetRoutingSkillgroups (int? pageSize = null, string name = null, string after = null, string before = null)
+
+
+
+Get skill group listing
+
+
+
+Requires ANY permissions: 
+
+* routing:skillGroup:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingSkillgroupsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var name = name_example;  // string | Return only skill group names whose names start with this value (case-insensitive matching) (optional) 
+            var after = after_example;  // string | The cursor that points to the next item (optional) 
+            var before = before_example;  // string | The cursor that points to the previous item (optional) 
+
+            try
+            { 
+                // Get skill group listing
+                SkillGroupEntityListing result = apiInstance.GetRoutingSkillgroups(pageSize, name, after, before);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingSkillgroups: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **name** | **string**| Return only skill group names whose names start with this value (case-insensitive matching) | [optional]  |
+| **after** | **string**| The cursor that points to the next item | [optional]  |
+| **before** | **string**| The cursor that points to the previous item | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SkillGroupEntityListing**](SkillGroupEntityListing.html)
+
 <a name="getroutingskills"></a>
 
 ## [**SkillEntityListing**](SkillEntityListing.html) GetRoutingSkills (int? pageSize = null, int? pageNumber = null, string name = null, List<string> id = null)
@@ -5372,6 +5720,73 @@ namespace Example
 
 void (empty response body)
 
+<a name="patchroutingskillgroup"></a>
+
+## [**SkillGroup**](SkillGroup.html) PatchRoutingSkillgroup (string skillGroupId, SkillGroup body)
+
+
+
+Update skill group definition
+
+
+
+Requires ANY permissions: 
+
+* routing:skillGroup:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchRoutingSkillgroupExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var skillGroupId = skillGroupId_example;  // string | Skill Group ID
+            var body = new SkillGroup(); // SkillGroup | Update skill groups
+
+            try
+            { 
+                // Update skill group definition
+                SkillGroup result = apiInstance.PatchRoutingSkillgroup(skillGroupId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PatchRoutingSkillgroup: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **skillGroupId** | **string**| Skill Group ID |  |
+| **body** | [**SkillGroup**](SkillGroup.html)| Update skill groups |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SkillGroup**](SkillGroup.html)
+
 <a name="patchuserqueue"></a>
 
 ## [**UserQueue**](UserQueue.html) PatchUserQueue (string queueId, string userId, UserQueue body)
@@ -6644,6 +7059,137 @@ namespace Example
 ### Return type
 
 [**Queue**](Queue.html)
+
+<a name="postroutingskillgroupmembersdivisions"></a>
+
+## void PostRoutingSkillgroupMembersDivisions (string skillGroupId, SkillGroupMemberDivisions body = null)
+
+
+
+Add or remove member divisions for this skill group.
+
+
+
+Requires ALL permissions: 
+
+* routing:skillGroup:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostRoutingSkillgroupMembersDivisionsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var skillGroupId = skillGroupId_example;  // string | Skill Group ID
+            var body = new SkillGroupMemberDivisions(); // SkillGroupMemberDivisions |  (optional) 
+
+            try
+            { 
+                // Add or remove member divisions for this skill group.
+                apiInstance.PostRoutingSkillgroupMembersDivisions(skillGroupId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PostRoutingSkillgroupMembersDivisions: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **skillGroupId** | **string**| Skill Group ID |  |
+| **body** | [**SkillGroupMemberDivisions**](SkillGroupMemberDivisions.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="postroutingskillgroups"></a>
+
+## [**SkillGroup**](SkillGroup.html) PostRoutingSkillgroups (SkillGroup body)
+
+
+
+Create a skill group
+
+
+
+Requires ANY permissions: 
+
+* routing:skillGroup:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostRoutingSkillgroupsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var body = new SkillGroup(); // SkillGroup | Create skill group
+
+            try
+            { 
+                // Create a skill group
+                SkillGroup result = apiInstance.PostRoutingSkillgroups(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PostRoutingSkillgroups: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**SkillGroup**](SkillGroup.html)| Create skill group |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SkillGroup**](SkillGroup.html)
 
 <a name="postroutingskills"></a>
 

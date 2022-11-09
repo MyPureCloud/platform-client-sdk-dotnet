@@ -484,6 +484,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Gdprrequest,
             
             /// <summary>
+            /// Enum Group for "Group"
+            /// </summary>
+            [EnumMember(Value = "Group")]
+            Group,
+            
+            /// <summary>
             /// Enum Historicaldata for "HistoricalData"
             /// </summary>
             [EnumMember(Value = "HistoricalData")]
@@ -778,6 +784,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Promptresource,
             
             /// <summary>
+            /// Enum Public for "Public"
+            /// </summary>
+            [EnumMember(Value = "Public")]
+            Public,
+            
+            /// <summary>
             /// Enum Queue for "Queue"
             /// </summary>
             [EnumMember(Value = "Queue")]
@@ -980,6 +992,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "SurveyForm")]
             Surveyform,
+            
+            /// <summary>
+            /// Enum Tag for "Tag"
+            /// </summary>
+            [EnumMember(Value = "Tag")]
+            Tag,
             
             /// <summary>
             /// Enum Team for "Team"

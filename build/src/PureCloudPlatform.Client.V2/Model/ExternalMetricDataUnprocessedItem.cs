@@ -18,6 +18,39 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ExternalMetricDataUnprocessedItem :  IEquatable<ExternalMetricDataUnprocessedItem>
     {
+        /// <summary>
+        /// The type of the metric data. The default value is Total.
+        /// </summary>
+        /// <value>The type of the metric data. The default value is Total.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum TypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Total for "Total"
+            /// </summary>
+            [EnumMember(Value = "Total")]
+            Total,
+            
+            /// <summary>
+            /// Enum Cumulative for "Cumulative"
+            /// </summary>
+            [EnumMember(Value = "Cumulative")]
+            Cumulative
+        }
+        /// <summary>
+        /// The type of the metric data. The default value is Total.
+        /// </summary>
+        /// <value>The type of the metric data. The default value is Total.</value>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ExternalMetricDataUnprocessedItem" /> class.
@@ -32,10 +65,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MetricId">The ID of the external metric definition (required).</param>
         /// <param name="DateOccurred">The date of the metric data. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
         /// <param name="Value">The value of the metric data. When value is null, the metric data will be deleted. (required).</param>
-        /// <param name="Count">The number of data points. The default value is 1..</param>
+        /// <param name="Count">The number of data points. The default value is 0 when type is Cumulative and the metric data already exists, otherwise 1. When total count reaches 0, the metric data will be deleted..</param>
+        /// <param name="Type">The type of the metric data. The default value is Total..</param>
         /// <param name="Message">The error message.</param>
         /// <param name="Code">The error code.</param>
-        public ExternalMetricDataUnprocessedItem(string UserId = null, string UserEmail = null, string MetricId = null, String DateOccurred = null, double? Value = null, int? Count = null, string Message = null, string Code = null)
+        public ExternalMetricDataUnprocessedItem(string UserId = null, string UserEmail = null, string MetricId = null, String DateOccurred = null, double? Value = null, int? Count = null, TypeEnum? Type = null, string Message = null, string Code = null)
         {
             this.UserId = UserId;
             this.UserEmail = UserEmail;
@@ -43,6 +77,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DateOccurred = DateOccurred;
             this.Value = Value;
             this.Count = Count;
+            this.Type = Type;
             this.Message = Message;
             this.Code = Code;
             
@@ -96,11 +131,13 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The number of data points. The default value is 1.
+        /// The number of data points. The default value is 0 when type is Cumulative and the metric data already exists, otherwise 1. When total count reaches 0, the metric data will be deleted.
         /// </summary>
-        /// <value>The number of data points. The default value is 1.</value>
+        /// <value>The number of data points. The default value is 0 when type is Cumulative and the metric data already exists, otherwise 1. When total count reaches 0, the metric data will be deleted.</value>
         [DataMember(Name="count", EmitDefaultValue=false)]
         public int? Count { get; set; }
+
+
 
 
 
@@ -136,6 +173,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateOccurred: ").Append(DateOccurred).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Count: ").Append(Count).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("}\n");
@@ -209,6 +247,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Count.Equals(other.Count)
                 ) &&
                 (
+                    this.Type == other.Type ||
+                    this.Type != null &&
+                    this.Type.Equals(other.Type)
+                ) &&
+                (
                     this.Message == other.Message ||
                     this.Message != null &&
                     this.Message.Equals(other.Message)
@@ -248,6 +291,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Count != null)
                     hash = hash * 59 + this.Count.GetHashCode();
+
+                if (this.Type != null)
+                    hash = hash * 59 + this.Type.GetHashCode();
 
                 if (this.Message != null)
                     hash = hash * 59 + this.Message.GetHashCode();

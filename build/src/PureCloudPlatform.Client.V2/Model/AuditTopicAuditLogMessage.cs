@@ -33,6 +33,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Agentconfig for "AgentConfig"
+            /// </summary>
+            [EnumMember(Value = "AgentConfig")]
+            Agentconfig,
+            
+            /// <summary>
             /// Enum Analyticsreporting for "AnalyticsReporting"
             /// </summary>
             [EnumMember(Value = "AnalyticsReporting")]
@@ -73,6 +79,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Directory")]
             Directory,
+            
+            /// <summary>
+            /// Enum Emails for "Emails"
+            /// </summary>
+            [EnumMember(Value = "Emails")]
+            Emails,
             
             /// <summary>
             /// Enum Dynamicschema for "DynamicSchema"
@@ -1033,6 +1045,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Dashboardsettings,
             
             /// <summary>
+            /// Enum Defaultpanelsettings for "DefaultPanelSettings"
+            /// </summary>
+            [EnumMember(Value = "DefaultPanelSettings")]
+            Defaultpanelsettings,
+            
+            /// <summary>
             /// Enum Dependencytrackingbuild for "DependencyTrackingBuild"
             /// </summary>
             [EnumMember(Value = "DependencyTrackingBuild")]
@@ -1061,6 +1079,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "DigitalRuleSet")]
             Digitalruleset,
+            
+            /// <summary>
+            /// Enum Directorygroups for "DirectoryGroups"
+            /// </summary>
+            [EnumMember(Value = "DirectoryGroups")]
+            Directorygroups,
             
             /// <summary>
             /// Enum Dnclist for "DNCList"
@@ -1231,10 +1255,28 @@ namespace PureCloudPlatform.Client.V2.Model
             Forecast,
             
             /// <summary>
+            /// Enum Gdprrequest for "GdprRequest"
+            /// </summary>
+            [EnumMember(Value = "GdprRequest")]
+            Gdprrequest,
+            
+            /// <summary>
             /// Enum Historicaldata for "HistoricalData"
             /// </summary>
             [EnumMember(Value = "HistoricalData")]
             Historicaldata,
+            
+            /// <summary>
+            /// Enum Inbounddomain for "InboundDomain"
+            /// </summary>
+            [EnumMember(Value = "InboundDomain")]
+            Inbounddomain,
+            
+            /// <summary>
+            /// Enum Inboundroute for "InboundRoute"
+            /// </summary>
+            [EnumMember(Value = "InboundRoute")]
+            Inboundroute,
             
             /// <summary>
             /// Enum Insightsettings for "InsightSettings"
@@ -1277,6 +1319,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "KnowledgeDocumentVariation")]
             Knowledgedocumentvariation,
+            
+            /// <summary>
+            /// Enum Knowledgelabel for "KnowledgeLabel"
+            /// </summary>
+            [EnumMember(Value = "KnowledgeLabel")]
+            Knowledgelabel,
             
             /// <summary>
             /// Enum Knowledgesearchfeedback for "KnowledgeSearchFeedback"
@@ -1399,6 +1447,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Organizationintegrationsaccess,
             
             /// <summary>
+            /// Enum Organizationlimits for "OrganizationLimits"
+            /// </summary>
+            [EnumMember(Value = "OrganizationLimits")]
+            Organizationlimits,
+            
+            /// <summary>
             /// Enum Organizationsettings for "OrganizationSettings"
             /// </summary>
             [EnumMember(Value = "OrganizationSettings")]
@@ -1409,6 +1463,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "OrphanedRecording")]
             Orphanedrecording,
+            
+            /// <summary>
+            /// Enum Outbounddomain for "OutboundDomain"
+            /// </summary>
+            [EnumMember(Value = "OutboundDomain")]
+            Outbounddomain,
             
             /// <summary>
             /// Enum Outboundroute for "OutboundRoute"
@@ -1655,6 +1715,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Site")]
             Site,
+            
+            /// <summary>
+            /// Enum Skillsgroups for "SkillsGroups"
+            /// </summary>
+            [EnumMember(Value = "SkillsGroups")]
+            Skillsgroups,
             
             /// <summary>
             /// Enum Speechtextanalyticssettings for "SpeechTextAnalyticsSettings"
