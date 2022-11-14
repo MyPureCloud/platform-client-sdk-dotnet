@@ -225,7 +225,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Standard for "Standard"
             /// </summary>
             [EnumMember(Value = "Standard")]
-            Standard
+            Standard,
+            
+            /// <summary>
+            /// Enum Vip for "Vip"
+            /// </summary>
+            [EnumMember(Value = "Vip")]
+            Vip
         }
         /// <summary>
         /// Complete routing method
@@ -282,7 +288,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Standard for "Standard"
             /// </summary>
             [EnumMember(Value = "Standard")]
-            Standard
+            Standard,
+            
+            /// <summary>
+            /// Enum Vip for "Vip"
+            /// </summary>
+            [EnumMember(Value = "Vip")]
+            Vip
         }
         /// <summary>
         /// The email or SMS delivery status

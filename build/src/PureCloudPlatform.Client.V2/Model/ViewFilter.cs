@@ -546,7 +546,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Standard for "Standard"
             /// </summary>
             [EnumMember(Value = "Standard")]
-            Standard
+            Standard,
+            
+            /// <summary>
+            /// Enum Vip for "Vip"
+            /// </summary>
+            [EnumMember(Value = "Vip")]
+            Vip
         }
         /// <summary>
         /// Gets or Sets RequestedRoutingTypes
@@ -602,7 +608,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Standard for "Standard"
             /// </summary>
             [EnumMember(Value = "Standard")]
-            Standard
+            Standard,
+            
+            /// <summary>
+            /// Enum Vip for "Vip"
+            /// </summary>
+            [EnumMember(Value = "Vip")]
+            Vip
         }
         /// <summary>
         /// Gets or Sets ParticipantPurposes

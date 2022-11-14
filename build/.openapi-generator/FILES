@@ -46,6 +46,8 @@ docs/ActivityCodeContainer.md
 docs/ActivityCodeReference.md
 docs/AcwDetailEventTopicAfterCallWorkEvent.md
 docs/AcwSettings.md
+docs/AddAdherenceExplanationAdminRequest.md
+docs/AddAdherenceExplanationAgentRequest.md
 docs/AddConversationRequest.md
 docs/AddConversationResponse.md
 docs/AddShiftTradeRequest.md
@@ -55,7 +57,14 @@ docs/AdditionalMessage.md
 docs/Address.md
 docs/AddressableEntityRef.md
 docs/AddressableLicenseDefinition.md
+docs/AdherenceExplanationAsyncResponse.md
+docs/AdherenceExplanationJob.md
+docs/AdherenceExplanationJobReference.md
+docs/AdherenceExplanationListing.md
+docs/AdherenceExplanationListingAgentQueryResponse.md
+docs/AdherenceExplanationListingBuQueryResponse.md
 docs/AdherenceExplanationNotification.md
+docs/AdherenceExplanationResponse.md
 docs/AdherenceSettings.md
 docs/AdhocRecordingTopicConversationData.md
 docs/AdhocRecordingTopicLockData.md
@@ -79,6 +88,8 @@ docs/AgentMaxUtilization.md
 docs/AgentOwnedMappingPreview.md
 docs/AgentOwnedMappingPreviewListing.md
 docs/AgentOwnedRouting.md
+docs/AgentQueryAdherenceExplanationsRequest.md
+docs/AgentQueryAdherenceExplanationsResponse.md
 docs/AgentTimeOffRequestPatch.md
 docs/AgentlessEmailSendRequestDto.md
 docs/AgentlessEmailSendResponseDto.md
@@ -230,6 +241,7 @@ docs/AuditUser.md
 docs/AuthenticationSettings.md
 docs/AuthorizationApi.json
 docs/AuthorizationApi.md
+docs/AuthorizationSettings.md
 docs/AuthzDivision.md
 docs/AuthzDivisionEntityListing.md
 docs/AuthzDivisionGrantEntityListing.md
@@ -331,6 +343,8 @@ docs/BuIntradayResponse.md
 docs/BuIntradayScheduleData.md
 docs/BuManagementUnitScheduleSummary.md
 docs/BuPlanningGroupHeadcountForecast.md
+docs/BuQueryAdherenceExplanationsRequest.md
+docs/BuQueryAdherenceExplanationsResponse.md
 docs/BuQueryAgentSchedulesRequest.md
 docs/BuRescheduleAgentScheduleResult.md
 docs/BuRescheduleRequest.md
@@ -938,6 +952,8 @@ docs/DIDNumberEntityListing.md
 docs/DIDPool.md
 docs/DIDPoolEntityListing.md
 docs/DataActionConditionPredicate.md
+docs/DataActionConditionSettings.md
+docs/DataActionContactColumnFieldMapping.md
 docs/DataAvailabilityResponse.md
 docs/DataExtensionsApi.json
 docs/DataExtensionsApi.md
@@ -1265,6 +1281,7 @@ docs/DialogflowProject.md
 docs/DigitLength.md
 docs/DigitalAction.md
 docs/DigitalCondition.md
+docs/DigitalDataActionConditionPredicate.md
 docs/DigitalRule.md
 docs/DigitalRuleSet.md
 docs/DigitalRuleSetEntityListing.md
@@ -1736,6 +1753,7 @@ docs/GetAuthorizationRoleComparedefaultRightRoleId-example.txt
 docs/GetAuthorizationRoleSubjectgrants-example.txt
 docs/GetAuthorizationRoleUsers-example.txt
 docs/GetAuthorizationRoles-example.txt
+docs/GetAuthorizationSettings-example.txt
 docs/GetAuthorizationSubject-example.txt
 docs/GetAuthorizationSubject-example.txt
 docs/GetAuthorizationSubjectsMe-example.txt
@@ -2524,8 +2542,11 @@ docs/GetWebmessagingMessages-example.txt
 docs/GetWidgetsDeployment-example.txt
 docs/GetWidgetsDeployments-example.txt
 docs/GetWorkforcemanagementAdherence-example.txt
+docs/GetWorkforcemanagementAdherenceExplanation-example.txt
+docs/GetWorkforcemanagementAdherenceExplanationsJob-example.txt
 docs/GetWorkforcemanagementAdherenceHistoricalJob-example.txt
 docs/GetWorkforcemanagementAdhocmodelingjob-example.txt
+docs/GetWorkforcemanagementAgentAdherenceExplanation-example.txt
 docs/GetWorkforcemanagementAgentManagementunit-example.txt
 docs/GetWorkforcemanagementAgentsMeManagementunit-example.txt
 docs/GetWorkforcemanagementBusinessunit-example.txt
@@ -2584,6 +2605,7 @@ docs/GetWorkforcemanagementManagementunitsDivisionviews-example.txt
 docs/GetWorkforcemanagementNotifications-example.txt
 docs/GetWorkforcemanagementSchedulingjob-example.txt
 docs/GetWorkforcemanagementShifttrades-example.txt
+docs/GetWorkforcemanagementShrinkageJob-example.txt
 docs/GetWorkforcemanagementTimeoffrequest-example.txt
 docs/GetWorkforcemanagementTimeoffrequestWaitlistpositions-example.txt
 docs/GetWorkforcemanagementTimeoffrequests-example.txt
@@ -2627,6 +2649,11 @@ docs/HistoricalAdherenceQueryResult.md
 docs/HistoricalImportDeleteJobResponse.md
 docs/HistoricalImportStatus.md
 docs/HistoricalImportStatusListing.md
+docs/HistoricalShrinkageActivityCategoryResponse.md
+docs/HistoricalShrinkageActivityCodeResponse.md
+docs/HistoricalShrinkageAggregateResponse.md
+docs/HistoricalShrinkageResult.md
+docs/HistoricalShrinkageResultListing.md
 docs/HistoryEntry.md
 docs/HistoryListing.md
 docs/HoldUpdatedEvent.md
@@ -3225,6 +3252,7 @@ docs/PatchActionTarget.md
 docs/PatchActionTemplate.md
 docs/PatchAnalyticsReportingSettings-example.txt
 docs/PatchAuthorizationRole-example.txt
+docs/PatchAuthorizationSettings-example.txt
 docs/PatchBuReschedulingOptionsManagementUnitRequest.md
 docs/PatchBuReschedulingOptionsRequest.md
 docs/PatchBuScheduleRunRequest.md
@@ -3361,6 +3389,7 @@ docs/PatchVoicemailMessage-example.txt
 docs/PatchVoicemailUserpolicy-example.txt
 docs/PatchWebMessagingOfferFields.md
 docs/PatchWebchatGuestConversationMediarequest-example.txt
+docs/PatchWorkforcemanagementAgentAdherenceExplanation-example.txt
 docs/PatchWorkforcemanagementBusinessunit-example.txt
 docs/PatchWorkforcemanagementBusinessunitActivitycode-example.txt
 docs/PatchWorkforcemanagementBusinessunitPlanninggroup-example.txt
@@ -3850,9 +3879,14 @@ docs/PostWebdeploymentsConfigurationVersionsDraftPublish-example.txt
 docs/PostWebdeploymentsConfigurations-example.txt
 docs/PostWebdeploymentsDeployments-example.txt
 docs/PostWidgetsDeployments-example.txt
+docs/PostWorkforcemanagementAdherenceExplanations-example.txt
+docs/PostWorkforcemanagementAdherenceExplanationsQuery-example.txt
 docs/PostWorkforcemanagementAdherenceHistorical-example.txt
+docs/PostWorkforcemanagementAgentAdherenceExplanations-example.txt
+docs/PostWorkforcemanagementAgentAdherenceExplanationsQuery-example.txt
 docs/PostWorkforcemanagementAgentschedulesMine-example.txt
 docs/PostWorkforcemanagementBusinessunitActivitycodes-example.txt
+docs/PostWorkforcemanagementBusinessunitAdherenceExplanationsQuery-example.txt
 docs/PostWorkforcemanagementBusinessunitAgentschedulesSearch-example.txt
 docs/PostWorkforcemanagementBusinessunitIntraday-example.txt
 docs/PostWorkforcemanagementBusinessunitPlanninggroups-example.txt
@@ -3878,6 +3912,7 @@ docs/PostWorkforcemanagementManagementunitAgentschedulesSearch-example.txt
 docs/PostWorkforcemanagementManagementunitHistoricaladherencequery-example.txt
 docs/PostWorkforcemanagementManagementunitMove-example.txt
 docs/PostWorkforcemanagementManagementunitSchedulesSearch-example.txt
+docs/PostWorkforcemanagementManagementunitShrinkageJobs-example.txt
 docs/PostWorkforcemanagementManagementunitTimeofflimits-example.txt
 docs/PostWorkforcemanagementManagementunitTimeofflimitsValuesQuery-example.txt
 docs/PostWorkforcemanagementManagementunitTimeoffplans-example.txt
@@ -4152,6 +4187,7 @@ docs/QualityAuditLogMessage.md
 docs/QualityAuditQueryExecutionResultsResponse.md
 docs/QualityAuditQueryExecutionStatusResponse.md
 docs/QualityAuditQueryFilter.md
+docs/QueryAdherenceExplanationsResponse.md
 docs/QueryDivision.md
 docs/QueryFacetInfo.md
 docs/QueryRequest.md
@@ -4977,6 +5013,7 @@ docs/UnreadMetric.md
 docs/UnreadStatus.md
 docs/UpdateActionInput.md
 docs/UpdateActivityCodeRequest.md
+docs/UpdateAdherenceExplanationStatusRequest.md
 docs/UpdateAnalyticsDataRetentionRequest.md
 docs/UpdateBusinessUnitRequest.md
 docs/UpdateBusinessUnitSettingsRequest.md
@@ -5327,6 +5364,8 @@ docs/WfmHistoricalAdherenceResponse.md
 docs/WfmHistoricalAdherenceResultWrapper.md
 docs/WfmHistoricalDataUploadPurgeRequestStatusTopicHistoricalDataUploadPurgeRequestUpdate.md
 docs/WfmHistoricalDataUploadRequestStatusTopicHistoricalDataUploadRequestUpdate.md
+docs/WfmHistoricalShrinkageRequest.md
+docs/WfmHistoricalShrinkageResponse.md
 docs/WfmIntradayDataUpdateTopicIntradayDataGroup.md
 docs/WfmIntradayDataUpdateTopicIntradayDataUpdate.md
 docs/WfmIntradayDataUpdateTopicIntradayForecastData.md
@@ -5566,6 +5605,8 @@ src/PureCloudPlatform.Client.V2/Model/ActivityCodeContainer.cs
 src/PureCloudPlatform.Client.V2/Model/ActivityCodeReference.cs
 src/PureCloudPlatform.Client.V2/Model/AcwDetailEventTopicAfterCallWorkEvent.cs
 src/PureCloudPlatform.Client.V2/Model/AcwSettings.cs
+src/PureCloudPlatform.Client.V2/Model/AddAdherenceExplanationAdminRequest.cs
+src/PureCloudPlatform.Client.V2/Model/AddAdherenceExplanationAgentRequest.cs
 src/PureCloudPlatform.Client.V2/Model/AddConversationRequest.cs
 src/PureCloudPlatform.Client.V2/Model/AddConversationResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AddShiftTradeRequest.cs
@@ -5575,7 +5616,14 @@ src/PureCloudPlatform.Client.V2/Model/AdditionalMessage.cs
 src/PureCloudPlatform.Client.V2/Model/Address.cs
 src/PureCloudPlatform.Client.V2/Model/AddressableEntityRef.cs
 src/PureCloudPlatform.Client.V2/Model/AddressableLicenseDefinition.cs
+src/PureCloudPlatform.Client.V2/Model/AdherenceExplanationAsyncResponse.cs
+src/PureCloudPlatform.Client.V2/Model/AdherenceExplanationJob.cs
+src/PureCloudPlatform.Client.V2/Model/AdherenceExplanationJobReference.cs
+src/PureCloudPlatform.Client.V2/Model/AdherenceExplanationListing.cs
+src/PureCloudPlatform.Client.V2/Model/AdherenceExplanationListingAgentQueryResponse.cs
+src/PureCloudPlatform.Client.V2/Model/AdherenceExplanationListingBuQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AdherenceExplanationNotification.cs
+src/PureCloudPlatform.Client.V2/Model/AdherenceExplanationResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AdherenceSettings.cs
 src/PureCloudPlatform.Client.V2/Model/AdhocRecordingTopicConversationData.cs
 src/PureCloudPlatform.Client.V2/Model/AdhocRecordingTopicLockData.cs
@@ -5599,6 +5647,8 @@ src/PureCloudPlatform.Client.V2/Model/AgentMaxUtilization.cs
 src/PureCloudPlatform.Client.V2/Model/AgentOwnedMappingPreview.cs
 src/PureCloudPlatform.Client.V2/Model/AgentOwnedMappingPreviewListing.cs
 src/PureCloudPlatform.Client.V2/Model/AgentOwnedRouting.cs
+src/PureCloudPlatform.Client.V2/Model/AgentQueryAdherenceExplanationsRequest.cs
+src/PureCloudPlatform.Client.V2/Model/AgentQueryAdherenceExplanationsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AgentTimeOffRequestPatch.cs
 src/PureCloudPlatform.Client.V2/Model/AgentlessEmailSendRequestDto.cs
 src/PureCloudPlatform.Client.V2/Model/AgentlessEmailSendResponseDto.cs
@@ -5740,6 +5790,7 @@ src/PureCloudPlatform.Client.V2/Model/AuditTopicMessageInfo.cs
 src/PureCloudPlatform.Client.V2/Model/AuditTopicPropertyChange.cs
 src/PureCloudPlatform.Client.V2/Model/AuditUser.cs
 src/PureCloudPlatform.Client.V2/Model/AuthenticationSettings.cs
+src/PureCloudPlatform.Client.V2/Model/AuthorizationSettings.cs
 src/PureCloudPlatform.Client.V2/Model/AuthzDivision.cs
 src/PureCloudPlatform.Client.V2/Model/AuthzDivisionEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/AuthzDivisionGrantEntityListing.cs
@@ -5839,6 +5890,8 @@ src/PureCloudPlatform.Client.V2/Model/BuIntradayResponse.cs
 src/PureCloudPlatform.Client.V2/Model/BuIntradayScheduleData.cs
 src/PureCloudPlatform.Client.V2/Model/BuManagementUnitScheduleSummary.cs
 src/PureCloudPlatform.Client.V2/Model/BuPlanningGroupHeadcountForecast.cs
+src/PureCloudPlatform.Client.V2/Model/BuQueryAdherenceExplanationsRequest.cs
+src/PureCloudPlatform.Client.V2/Model/BuQueryAdherenceExplanationsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/BuQueryAgentSchedulesRequest.cs
 src/PureCloudPlatform.Client.V2/Model/BuRescheduleAgentScheduleResult.cs
 src/PureCloudPlatform.Client.V2/Model/BuRescheduleRequest.cs
@@ -6438,6 +6491,8 @@ src/PureCloudPlatform.Client.V2/Model/DIDNumberEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/DIDPool.cs
 src/PureCloudPlatform.Client.V2/Model/DIDPoolEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/DataActionConditionPredicate.cs
+src/PureCloudPlatform.Client.V2/Model/DataActionConditionSettings.cs
+src/PureCloudPlatform.Client.V2/Model/DataActionContactColumnFieldMapping.cs
 src/PureCloudPlatform.Client.V2/Model/DataAvailabilityResponse.cs
 src/PureCloudPlatform.Client.V2/Model/DataSchema.cs
 src/PureCloudPlatform.Client.V2/Model/DataSchemaListing.cs
@@ -6547,6 +6602,7 @@ src/PureCloudPlatform.Client.V2/Model/DialogflowProject.cs
 src/PureCloudPlatform.Client.V2/Model/DigitLength.cs
 src/PureCloudPlatform.Client.V2/Model/DigitalAction.cs
 src/PureCloudPlatform.Client.V2/Model/DigitalCondition.cs
+src/PureCloudPlatform.Client.V2/Model/DigitalDataActionConditionPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/DigitalRule.cs
 src/PureCloudPlatform.Client.V2/Model/DigitalRuleSet.cs
 src/PureCloudPlatform.Client.V2/Model/DigitalRuleSetEntityListing.cs
@@ -6952,6 +7008,11 @@ src/PureCloudPlatform.Client.V2/Model/HistoricalAdherenceQueryResult.cs
 src/PureCloudPlatform.Client.V2/Model/HistoricalImportDeleteJobResponse.cs
 src/PureCloudPlatform.Client.V2/Model/HistoricalImportStatus.cs
 src/PureCloudPlatform.Client.V2/Model/HistoricalImportStatusListing.cs
+src/PureCloudPlatform.Client.V2/Model/HistoricalShrinkageActivityCategoryResponse.cs
+src/PureCloudPlatform.Client.V2/Model/HistoricalShrinkageActivityCodeResponse.cs
+src/PureCloudPlatform.Client.V2/Model/HistoricalShrinkageAggregateResponse.cs
+src/PureCloudPlatform.Client.V2/Model/HistoricalShrinkageResult.cs
+src/PureCloudPlatform.Client.V2/Model/HistoricalShrinkageResultListing.cs
 src/PureCloudPlatform.Client.V2/Model/HistoryEntry.cs
 src/PureCloudPlatform.Client.V2/Model/HistoryListing.cs
 src/PureCloudPlatform.Client.V2/Model/HoldUpdatedEvent.cs
@@ -7635,6 +7696,7 @@ src/PureCloudPlatform.Client.V2/Model/QualityAuditLogMessage.cs
 src/PureCloudPlatform.Client.V2/Model/QualityAuditQueryExecutionResultsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/QualityAuditQueryExecutionStatusResponse.cs
 src/PureCloudPlatform.Client.V2/Model/QualityAuditQueryFilter.cs
+src/PureCloudPlatform.Client.V2/Model/QueryAdherenceExplanationsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/QueryDivision.cs
 src/PureCloudPlatform.Client.V2/Model/QueryFacetInfo.cs
 src/PureCloudPlatform.Client.V2/Model/QueryRequest.cs
@@ -8432,6 +8494,7 @@ src/PureCloudPlatform.Client.V2/Model/UnreadMetric.cs
 src/PureCloudPlatform.Client.V2/Model/UnreadStatus.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateActionInput.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateActivityCodeRequest.cs
+src/PureCloudPlatform.Client.V2/Model/UpdateAdherenceExplanationStatusRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateAnalyticsDataRetentionRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateBusinessUnitRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateBusinessUnitSettingsRequest.cs
@@ -8764,6 +8827,8 @@ src/PureCloudPlatform.Client.V2/Model/WfmHistoricalAdherenceResponse.cs
 src/PureCloudPlatform.Client.V2/Model/WfmHistoricalAdherenceResultWrapper.cs
 src/PureCloudPlatform.Client.V2/Model/WfmHistoricalDataUploadPurgeRequestStatusTopicHistoricalDataUploadPurgeRequestUpdate.cs
 src/PureCloudPlatform.Client.V2/Model/WfmHistoricalDataUploadRequestStatusTopicHistoricalDataUploadRequestUpdate.cs
+src/PureCloudPlatform.Client.V2/Model/WfmHistoricalShrinkageRequest.cs
+src/PureCloudPlatform.Client.V2/Model/WfmHistoricalShrinkageResponse.cs
 src/PureCloudPlatform.Client.V2/Model/WfmIntradayDataUpdateTopicIntradayDataGroup.cs
 src/PureCloudPlatform.Client.V2/Model/WfmIntradayDataUpdateTopicIntradayDataUpdate.cs
 src/PureCloudPlatform.Client.V2/Model/WfmIntradayDataUpdateTopicIntradayForecastData.cs

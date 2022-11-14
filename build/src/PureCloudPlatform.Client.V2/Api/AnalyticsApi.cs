@@ -17,7 +17,7 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Synchronous Operations
 
         /// <summary>
-        /// Delete/cancel an async request
+        /// Delete/cancel an async details job
         /// </summary>
         /// <remarks>
         /// 
@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Api
         void DeleteAnalyticsConversationsDetailsJob (string jobId);
 
         /// <summary>
-        /// Delete/cancel an async request
+        /// Delete/cancel an async details job
         /// </summary>
         /// <remarks>
         /// 
@@ -181,7 +181,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<AsyncQueryStatus> GetAnalyticsConversationsDetailsJobWithHttpInfo (string jobId);
 
         /// <summary>
-        /// Fetch a page of results for an async query
+        /// Fetch a page of results for an async details job
         /// </summary>
         /// <remarks>
         /// 
@@ -194,7 +194,7 @@ namespace PureCloudPlatform.Client.V2.Api
         AnalyticsConversationAsyncQueryResponse GetAnalyticsConversationsDetailsJobResults (string jobId, string cursor = null, int? pageSize = null);
 
         /// <summary>
-        /// Fetch a page of results for an async query
+        /// Fetch a page of results for an async details job
         /// </summary>
         /// <remarks>
         /// 
@@ -1123,7 +1123,7 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Asynchronous Operations
 
         /// <summary>
-        /// Delete/cancel an async request
+        /// Delete/cancel an async details job
         /// </summary>
         /// <remarks>
         /// 
@@ -1134,7 +1134,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task DeleteAnalyticsConversationsDetailsJobAsync (string jobId);
 
         /// <summary>
-        /// Delete/cancel an async request
+        /// Delete/cancel an async details job
         /// </summary>
         /// <remarks>
         /// 
@@ -1287,7 +1287,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<AsyncQueryStatus>> GetAnalyticsConversationsDetailsJobAsyncWithHttpInfo (string jobId);
 
         /// <summary>
-        /// Fetch a page of results for an async query
+        /// Fetch a page of results for an async details job
         /// </summary>
         /// <remarks>
         /// 
@@ -1300,7 +1300,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<AnalyticsConversationAsyncQueryResponse> GetAnalyticsConversationsDetailsJobResultsAsync (string jobId, string cursor = null, int? pageSize = null);
 
         /// <summary>
-        /// Fetch a page of results for an async query
+        /// Fetch a page of results for an async details job
         /// </summary>
         /// <remarks>
         /// 
@@ -2317,7 +2317,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete/cancel an async request 
+        /// Delete/cancel an async details job 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -2328,7 +2328,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete/cancel an async request 
+        /// Delete/cancel an async details job 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -2410,7 +2410,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete/cancel an async request 
+        /// Delete/cancel an async details job 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -2422,7 +2422,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete/cancel an async request 
+        /// Delete/cancel an async details job 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -3671,7 +3671,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Fetch a page of results for an async query 
+        /// Fetch a page of results for an async details job 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -3685,7 +3685,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Fetch a page of results for an async query 
+        /// Fetch a page of results for an async details job 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -3771,7 +3771,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Fetch a page of results for an async query 
+        /// Fetch a page of results for an async details job 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -3786,7 +3786,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Fetch a page of results for an async query 
+        /// Fetch a page of results for an async details job 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>

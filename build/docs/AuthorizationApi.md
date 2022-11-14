@@ -25,11 +25,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetAuthorizationRoleSubjectgrants**](AuthorizationApi.html#getauthorizationrolesubjectgrants) | **GET** /api/v2/authorization/roles/{roleId}/subjectgrants | Get the subjects&#39; granted divisions in the specified role. |
 | [**GetAuthorizationRoleUsers**](AuthorizationApi.html#getauthorizationroleusers) | **GET** /api/v2/authorization/roles/{roleId}/users | Get a list of the users in a specified role. |
 | [**GetAuthorizationRoles**](AuthorizationApi.html#getauthorizationroles) | **GET** /api/v2/authorization/roles | Retrieve a list of all roles defined for the organization |
+| [**GetAuthorizationSettings**](AuthorizationApi.html#getauthorizationsettings) | **GET** /api/v2/authorization/settings | Get authorization settings |
 | [**GetAuthorizationSubject**](AuthorizationApi.html#getauthorizationsubject) | **GET** /api/v2/authorization/subjects/{subjectId} | Returns a listing of roles and permissions for a user. |
 | [**GetAuthorizationSubjectsMe**](AuthorizationApi.html#getauthorizationsubjectsme) | **GET** /api/v2/authorization/subjects/me | Returns a listing of roles and permissions for the currently authenticated user. |
 | [**GetAuthorizationSubjectsRolecounts**](AuthorizationApi.html#getauthorizationsubjectsrolecounts) | **GET** /api/v2/authorization/subjects/rolecounts | Get the count of roles granted to a list of subjects |
 | [**GetUserRoles**](AuthorizationApi.html#getuserroles) | **GET** /api/v2/users/{subjectId}/roles | Returns a listing of roles and permissions for a user. |
 | [**PatchAuthorizationRole**](AuthorizationApi.html#patchauthorizationrole) | **PATCH** /api/v2/authorization/roles/{roleId} | Patch Organization Role for needsUpdate Field |
+| [**PatchAuthorizationSettings**](AuthorizationApi.html#patchauthorizationsettings) | **PATCH** /api/v2/authorization/settings | Change authorization settings |
 | [**PostAuthorizationDivisionObject**](AuthorizationApi.html#postauthorizationdivisionobject) | **POST** /api/v2/authorization/divisions/{divisionId}/objects/{objectType} | Assign a list of objects to a division |
 | [**PostAuthorizationDivisionRestore**](AuthorizationApi.html#postauthorizationdivisionrestore) | **POST** /api/v2/authorization/divisions/{divisionId}/restore | Recreate a previously deleted division. |
 | [**PostAuthorizationDivisions**](AuthorizationApi.html#postauthorizationdivisions) | **POST** /api/v2/authorization/divisions | Create a division. |
@@ -1299,6 +1301,67 @@ namespace Example
 
 [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html)
 
+<a name="getauthorizationsettings"></a>
+
+## [**AuthorizationSettings**](AuthorizationSettings.html) GetAuthorizationSettings ()
+
+
+
+Get authorization settings
+
+
+
+Requires ANY permissions: 
+
+* directory:organization:admin
+* authorization:settings:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAuthorizationSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AuthorizationApi();
+
+            try
+            { 
+                // Get authorization settings
+                AuthorizationSettings result = apiInstance.GetAuthorizationSettings();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.GetAuthorizationSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+
+### Return type
+
+[**AuthorizationSettings**](AuthorizationSettings.html)
+
 <a name="getauthorizationsubject"></a>
 
 ## [**AuthzSubject**](AuthzSubject.html) GetAuthorizationSubject (string subjectId)
@@ -1621,6 +1684,74 @@ namespace Example
 ### Return type
 
 [**DomainOrganizationRole**](DomainOrganizationRole.html)
+
+<a name="patchauthorizationsettings"></a>
+
+## [**AuthorizationSettings**](AuthorizationSettings.html) PatchAuthorizationSettings (AuthorizationSettings body)
+
+
+
+Change authorization settings
+
+Change authorization settings
+
+
+
+Requires ANY permissions: 
+
+* directory:organization:admin
+* authorization:settings:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchAuthorizationSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AuthorizationApi();
+            var body = new AuthorizationSettings(); // AuthorizationSettings | Authorization Settings
+
+            try
+            { 
+                // Change authorization settings
+                AuthorizationSettings result = apiInstance.PatchAuthorizationSettings(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.PatchAuthorizationSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**AuthorizationSettings**](AuthorizationSettings.html)| Authorization Settings |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AuthorizationSettings**](AuthorizationSettings.html)
 
 <a name="postauthorizationdivisionobject"></a>
 

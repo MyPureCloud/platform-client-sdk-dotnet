@@ -22,6 +22,7 @@ title: UserScheduleAdherence
 | **IsOutOfOffice** | **bool?** | Whether the user is marked OutOfOffice | [optional] |
 | **AdherenceState** | **string** | The user&#39;s current adherence state | [optional] |
 | **Impact** | **string** | The impact of the user&#39;s current adherenceState | [optional] |
+| **AdherenceExplanation** | [**RealTimeAdherenceExplanation**](RealTimeAdherenceExplanation.html) | Currently applicable explanation for the adherence state | [optional] |
 | **TimeOfAdherenceChange** | **DateTime?** | Time when the user entered the current adherenceState in ISO-8601 format | [optional] |
 | **PresenceUpdateTime** | **DateTime?** | Time when presence was last updated. Used to calculate time in current status. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **ActiveQueues** | [**List&lt;QueueReference&gt;**](QueueReference.html) | The list of queues to which this user is joined | [optional] |

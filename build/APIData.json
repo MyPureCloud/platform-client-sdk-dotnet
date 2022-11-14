@@ -183,7 +183,7 @@
         "required": "true"
       }
     ],
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class DeleteAnalyticsConversationsDetailsJobExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var jobId = \"jobId_example\";  // string | jobId\n\n            try\n            { \n                // Delete/cancel an async request\n                apiInstance.DeleteAnalyticsConversationsDetailsJob(jobId);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.DeleteAnalyticsConversationsDetailsJob: \" + e.Message );\n            }\n        }\n    }\n}"
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class DeleteAnalyticsConversationsDetailsJobExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var jobId = \"jobId_example\";  // string | jobId\n\n            try\n            { \n                // Delete/cancel an async details job\n                apiInstance.DeleteAnalyticsConversationsDetailsJob(jobId);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.DeleteAnalyticsConversationsDetailsJob: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "deleteanalyticsreportingschedule": {
     "operationId": "deleteanalyticsreportingschedule",
@@ -314,7 +314,7 @@
       }
     ],
     "return": "AnalyticsConversationAsyncQueryResponse",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetAnalyticsConversationsDetailsJobResultsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var jobId = \"jobId_example\";  // string | jobId\n            var cursor = \"cursor_example\";  // string | Indicates where to resume query results (not required for first page) (optional) \n            var pageSize = 56;  // int? | The desired maximum number of results (optional) \n\n            try\n            { \n                // Fetch a page of results for an async query\n                AnalyticsConversationAsyncQueryResponse result = apiInstance.GetAnalyticsConversationsDetailsJobResults(jobId, cursor, pageSize);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.GetAnalyticsConversationsDetailsJobResults: \" + e.Message );\n            }\n        }\n    }\n}"
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetAnalyticsConversationsDetailsJobResultsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var jobId = \"jobId_example\";  // string | jobId\n            var cursor = \"cursor_example\";  // string | Indicates where to resume query results (not required for first page) (optional) \n            var pageSize = 56;  // int? | The desired maximum number of results (optional) \n\n            try\n            { \n                // Fetch a page of results for an async details job\n                AnalyticsConversationAsyncQueryResponse result = apiInstance.GetAnalyticsConversationsDetailsJobResults(jobId, cursor, pageSize);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.GetAnalyticsConversationsDetailsJobResults: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "getanalyticsconversationsdetailsjobsavailability": {
     "operationId": "getanalyticsconversationsdetailsjobsavailability",
@@ -3946,6 +3946,13 @@
     "return": "OrganizationRoleEntityListing",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetAuthorizationRolesExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new AuthorizationApi();\n            var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)\n            var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)\n            var sortBy = \"sortBy_example\";  // string | variable name requested to sort by (optional) \n            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) \n            var nextPage = \"nextPage_example\";  // string | next page token (optional) \n            var previousPage = \"previousPage_example\";  // string | Previous page token (optional) \n            var name = \"name_example\";  // string |  (optional) \n            var permission = new List<string>(); // List<string> |  (optional) \n            var defaultRoleId = new List<string>(); // List<string> |  (optional) \n            var userCount = true;  // bool? |  (optional)  (default to true)\n            var id = new List<string>(); // List<string> | id (optional) \n\n            try\n            { \n                // Retrieve a list of all roles defined for the organization\n                OrganizationRoleEntityListing result = apiInstance.GetAuthorizationRoles(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, permission, defaultRoleId, userCount, id);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Authorization.GetAuthorizationRoles: \" + e.Message );\n            }\n        }\n    }\n}"
   },
+  "getauthorizationsettings": {
+    "operationId": "getauthorizationsettings",
+    "functionName": "GetAuthorizationSettings",
+    "signature": "GetAuthorizationSettings()",
+    "return": "AuthorizationSettings",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetAuthorizationSettingsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new AuthorizationApi();\n\n            try\n            { \n                // Get authorization settings\n                AuthorizationSettings result = apiInstance.GetAuthorizationSettings();\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Authorization.GetAuthorizationSettings: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
   "getauthorizationsubject": {
     "operationId": "getauthorizationsubject",
     "functionName": "GetAuthorizationSubject",
@@ -4013,6 +4020,20 @@
     ],
     "return": "DomainOrganizationRole",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PatchAuthorizationRoleExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new AuthorizationApi();\n            var roleId = \"roleId_example\";  // string | Role ID\n            var body = new DomainOrganizationRole(); // DomainOrganizationRole | Organization role\n\n            try\n            { \n                // Patch Organization Role for needsUpdate Field\n                DomainOrganizationRole result = apiInstance.PatchAuthorizationRole(roleId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Authorization.PatchAuthorizationRole: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "patchauthorizationsettings": {
+    "operationId": "patchauthorizationsettings",
+    "functionName": "PatchAuthorizationSettings",
+    "signature": "PatchAuthorizationSettings(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "AuthorizationSettings",
+        "required": "true"
+      }
+    ],
+    "return": "AuthorizationSettings",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PatchAuthorizationSettingsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new AuthorizationApi();\n            var body = new AuthorizationSettings(); // AuthorizationSettings | Authorization Settings\n\n            try\n            { \n                // Change authorization settings\n                AuthorizationSettings result = apiInstance.PatchAuthorizationSettings(body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Authorization.PatchAuthorizationSettings: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "postauthorizationdivisionobject": {
     "operationId": "postauthorizationdivisionobject",
@@ -25383,8 +25404,18 @@
   "getroutingemaildomains": {
     "operationId": "getroutingemaildomains",
     "functionName": "GetRoutingEmailDomains",
-    "signature": "GetRoutingEmailDomains(excludeStatus)",
+    "signature": "GetRoutingEmailDomains(pageSize, pageNumber, excludeStatus)",
     "parameters": [
+      {
+        "name": "pageSize",
+        "type": "int?",
+        "required": "false"
+      },
+      {
+        "name": "pageNumber",
+        "type": "int?",
+        "required": "false"
+      },
       {
         "name": "excludeStatus",
         "type": "bool?",
@@ -25392,7 +25423,7 @@
       }
     ],
     "return": "InboundDomainEntityListing",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetRoutingEmailDomainsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new RoutingApi();\n            var excludeStatus = true;  // bool? | Exclude MX record data (optional)  (default to false)\n\n            try\n            { \n                // Get domains\n                InboundDomainEntityListing result = apiInstance.GetRoutingEmailDomains(excludeStatus);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Routing.GetRoutingEmailDomains: \" + e.Message );\n            }\n        }\n    }\n}"
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetRoutingEmailDomainsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new RoutingApi();\n            var pageSize = 56;  // int? | Page size (optional)  (default to 25)\n            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)\n            var excludeStatus = true;  // bool? | Exclude MX record data (optional)  (default to false)\n\n            try\n            { \n                // Get domains\n                InboundDomainEntityListing result = apiInstance.GetRoutingEmailDomains(pageSize, pageNumber, excludeStatus);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Routing.GetRoutingEmailDomains: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "getroutingemailoutbounddomain": {
     "operationId": "getroutingemailoutbounddomain",
@@ -34468,6 +34499,34 @@
     "return": "List<UserScheduleAdherence>",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetWorkforcemanagementAdherenceExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new WorkforceManagementApi();\n            var userId = new List<string>(); // List<string> | User Id(s) for which to fetch current schedule adherence information.  Min 1, Max of 100 userIds per request\n\n            try\n            { \n                // Get a list of UserScheduleAdherence records for the requested users\n                List<UserScheduleAdherence> result = apiInstance.GetWorkforcemanagementAdherence(userId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WorkforceManagement.GetWorkforcemanagementAdherence: \" + e.Message );\n            }\n        }\n    }\n}"
   },
+  "getworkforcemanagementadherenceexplanation": {
+    "operationId": "getworkforcemanagementadherenceexplanation",
+    "functionName": "GetWorkforcemanagementAdherenceExplanation",
+    "signature": "GetWorkforcemanagementAdherenceExplanation(explanationId)",
+    "parameters": [
+      {
+        "name": "explanationId",
+        "type": "string",
+        "required": "true"
+      }
+    ],
+    "return": "AdherenceExplanationResponse",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetWorkforcemanagementAdherenceExplanationExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new WorkforceManagementApi();\n            var explanationId = \"explanationId_example\";  // string | The ID of the explanation to update\n\n            try\n            { \n                // Get an adherence explanation for the current user\n                AdherenceExplanationResponse result = apiInstance.GetWorkforcemanagementAdherenceExplanation(explanationId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WorkforceManagement.GetWorkforcemanagementAdherenceExplanation: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getworkforcemanagementadherenceexplanationsjob": {
+    "operationId": "getworkforcemanagementadherenceexplanationsjob",
+    "functionName": "GetWorkforcemanagementAdherenceExplanationsJob",
+    "signature": "GetWorkforcemanagementAdherenceExplanationsJob(jobId)",
+    "parameters": [
+      {
+        "name": "jobId",
+        "type": "string",
+        "required": "true"
+      }
+    ],
+    "return": "AdherenceExplanationJob",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetWorkforcemanagementAdherenceExplanationsJobExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new WorkforceManagementApi();\n            var jobId = \"jobId_example\";  // string | The ID of the job\n\n            try\n            { \n                // Query the status of an adherence explanation operation. Only the user who started the operation can query the status\n                AdherenceExplanationJob result = apiInstance.GetWorkforcemanagementAdherenceExplanationsJob(jobId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WorkforceManagement.GetWorkforcemanagementAdherenceExplanationsJob: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
   "getworkforcemanagementadherencehistoricaljob": {
     "operationId": "getworkforcemanagementadherencehistoricaljob",
     "functionName": "GetWorkforcemanagementAdherenceHistoricalJob",
@@ -34495,6 +34554,25 @@
     ],
     "return": "ModelingStatusResponse",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetWorkforcemanagementAdhocmodelingjobExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new WorkforceManagementApi();\n            var jobId = \"jobId_example\";  // string | The id of the modeling job\n\n            try\n            { \n                // Get status of the modeling job\n                ModelingStatusResponse result = apiInstance.GetWorkforcemanagementAdhocmodelingjob(jobId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WorkforceManagement.GetWorkforcemanagementAdhocmodelingjob: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getworkforcemanagementagentadherenceexplanation": {
+    "operationId": "getworkforcemanagementagentadherenceexplanation",
+    "functionName": "GetWorkforcemanagementAgentAdherenceExplanation",
+    "signature": "GetWorkforcemanagementAgentAdherenceExplanation(agentId, explanationId)",
+    "parameters": [
+      {
+        "name": "agentId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "explanationId",
+        "type": "string",
+        "required": "true"
+      }
+    ],
+    "return": "AdherenceExplanationResponse",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetWorkforcemanagementAgentAdherenceExplanationExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new WorkforceManagementApi();\n            var agentId = \"agentId_example\";  // string | The ID of the agent to query\n            var explanationId = \"explanationId_example\";  // string | The ID of the explanation to update\n\n            try\n            { \n                // Get an adherence explanation\n                AdherenceExplanationResponse result = apiInstance.GetWorkforcemanagementAgentAdherenceExplanation(agentId, explanationId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WorkforceManagement.GetWorkforcemanagementAgentAdherenceExplanation: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "getworkforcemanagementagentmanagementunit": {
     "operationId": "getworkforcemanagementagentmanagementunit",
@@ -35631,6 +35709,20 @@
     "return": "ShiftTradeListResponse",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetWorkforcemanagementShifttradesExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new WorkforceManagementApi();\n\n            try\n            { \n                // Gets all of my shift trades\n                ShiftTradeListResponse result = apiInstance.GetWorkforcemanagementShifttrades();\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WorkforceManagement.GetWorkforcemanagementShifttrades: \" + e.Message );\n            }\n        }\n    }\n}"
   },
+  "getworkforcemanagementshrinkagejob": {
+    "operationId": "getworkforcemanagementshrinkagejob",
+    "functionName": "GetWorkforcemanagementShrinkageJob",
+    "signature": "GetWorkforcemanagementShrinkageJob(jobId)",
+    "parameters": [
+      {
+        "name": "jobId",
+        "type": "string",
+        "required": "true"
+      }
+    ],
+    "return": "WfmHistoricalShrinkageResponse",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetWorkforcemanagementShrinkageJobExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new WorkforceManagementApi();\n            var jobId = \"jobId_example\";  // string | jobId\n\n            try\n            { \n                // Request to fetch the status of the historical shrinkage query\n                WfmHistoricalShrinkageResponse result = apiInstance.GetWorkforcemanagementShrinkageJob(jobId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WorkforceManagement.GetWorkforcemanagementShrinkageJob: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
   "getworkforcemanagementtimeoffrequest": {
     "operationId": "getworkforcemanagementtimeoffrequest",
     "functionName": "GetWorkforcemanagementTimeoffrequest",
@@ -35672,6 +35764,30 @@
     ],
     "return": "TimeOffRequestList",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetWorkforcemanagementTimeoffrequestsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new WorkforceManagementApi();\n            var recentlyReviewed = true;  // bool? | Limit results to requests that have been reviewed within the preceding 30 days (optional)  (default to false)\n\n            try\n            { \n                // Get a list of time off requests for the current user\n                TimeOffRequestList result = apiInstance.GetWorkforcemanagementTimeoffrequests(recentlyReviewed);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WorkforceManagement.GetWorkforcemanagementTimeoffrequests: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "patchworkforcemanagementagentadherenceexplanation": {
+    "operationId": "patchworkforcemanagementagentadherenceexplanation",
+    "functionName": "PatchWorkforcemanagementAgentAdherenceExplanation",
+    "signature": "PatchWorkforcemanagementAgentAdherenceExplanation(agentId, explanationId, body)",
+    "parameters": [
+      {
+        "name": "agentId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "explanationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "UpdateAdherenceExplanationStatusRequest",
+        "required": "true"
+      }
+    ],
+    "return": "AdherenceExplanationAsyncResponse",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PatchWorkforcemanagementAgentAdherenceExplanationExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new WorkforceManagementApi();\n            var agentId = \"agentId_example\";  // string | The ID of the agent to query\n            var explanationId = \"explanationId_example\";  // string | The ID of the explanation to update\n            var body = new UpdateAdherenceExplanationStatusRequest(); // UpdateAdherenceExplanationStatusRequest | The request body\n\n            try\n            { \n                // Update an adherence explanation\n                AdherenceExplanationAsyncResponse result = apiInstance.PatchWorkforcemanagementAgentAdherenceExplanation(agentId, explanationId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WorkforceManagement.PatchWorkforcemanagementAgentAdherenceExplanation: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "patchworkforcemanagementbusinessunit": {
     "operationId": "patchworkforcemanagementbusinessunit",
@@ -35984,6 +36100,44 @@
     "return": "TimeOffRequestResponse",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PatchWorkforcemanagementTimeoffrequestExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new WorkforceManagementApi();\n            var timeOffRequestId = \"timeOffRequestId_example\";  // string | The ID of the time off request\n            var body = new AgentTimeOffRequestPatch(); // AgentTimeOffRequestPatch | body (optional) \n\n            try\n            { \n                // Update a time off request for the current user\n                TimeOffRequestResponse result = apiInstance.PatchWorkforcemanagementTimeoffrequest(timeOffRequestId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WorkforceManagement.PatchWorkforcemanagementTimeoffrequest: \" + e.Message );\n            }\n        }\n    }\n}"
   },
+  "postworkforcemanagementadherenceexplanations": {
+    "operationId": "postworkforcemanagementadherenceexplanations",
+    "functionName": "PostWorkforcemanagementAdherenceExplanations",
+    "signature": "PostWorkforcemanagementAdherenceExplanations(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "AddAdherenceExplanationAgentRequest",
+        "required": "true"
+      }
+    ],
+    "return": "AdherenceExplanationAsyncResponse",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostWorkforcemanagementAdherenceExplanationsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new WorkforceManagementApi();\n            var body = new AddAdherenceExplanationAgentRequest(); // AddAdherenceExplanationAgentRequest | The request body\n\n            try\n            { \n                // Submit an adherence explanation for the current user\n                AdherenceExplanationAsyncResponse result = apiInstance.PostWorkforcemanagementAdherenceExplanations(body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WorkforceManagement.PostWorkforcemanagementAdherenceExplanations: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "postworkforcemanagementadherenceexplanationsquery": {
+    "operationId": "postworkforcemanagementadherenceexplanationsquery",
+    "functionName": "PostWorkforcemanagementAdherenceExplanationsQuery",
+    "signature": "PostWorkforcemanagementAdherenceExplanationsQuery(body, forceAsync, forceDownloadService)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "AgentQueryAdherenceExplanationsRequest",
+        "required": "true"
+      },
+      {
+        "name": "forceAsync",
+        "type": "bool?",
+        "required": "false"
+      },
+      {
+        "name": "forceDownloadService",
+        "type": "bool?",
+        "required": "false"
+      }
+    ],
+    "return": "QueryAdherenceExplanationsResponse",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostWorkforcemanagementAdherenceExplanationsQueryExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new WorkforceManagementApi();\n            var body = new AgentQueryAdherenceExplanationsRequest(); // AgentQueryAdherenceExplanationsRequest | The request body\n            var forceAsync = true;  // bool? | Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional) \n            var forceDownloadService = true;  // bool? | Force the result of this operation to be sent via download service. For testing/app development purposes (optional) \n\n            try\n            { \n                // Query adherence explanations for the current user\n                QueryAdherenceExplanationsResponse result = apiInstance.PostWorkforcemanagementAdherenceExplanationsQuery(body, forceAsync, forceDownloadService);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WorkforceManagement.PostWorkforcemanagementAdherenceExplanationsQuery: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
   "postworkforcemanagementadherencehistorical": {
     "operationId": "postworkforcemanagementadherencehistorical",
     "functionName": "PostWorkforcemanagementAdherenceHistorical",
@@ -35997,6 +36151,54 @@
     ],
     "return": "WfmHistoricalAdherenceResponse",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostWorkforcemanagementAdherenceHistoricalExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new WorkforceManagementApi();\n            var body = new WfmHistoricalAdherenceQueryForUsers(); // WfmHistoricalAdherenceQueryForUsers | body (optional) \n\n            try\n            { \n                // Request a historical adherence report for users across management units\n                WfmHistoricalAdherenceResponse result = apiInstance.PostWorkforcemanagementAdherenceHistorical(body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WorkforceManagement.PostWorkforcemanagementAdherenceHistorical: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "postworkforcemanagementagentadherenceexplanations": {
+    "operationId": "postworkforcemanagementagentadherenceexplanations",
+    "functionName": "PostWorkforcemanagementAgentAdherenceExplanations",
+    "signature": "PostWorkforcemanagementAgentAdherenceExplanations(agentId, body)",
+    "parameters": [
+      {
+        "name": "agentId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "AddAdherenceExplanationAdminRequest",
+        "required": "true"
+      }
+    ],
+    "return": "AdherenceExplanationAsyncResponse",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostWorkforcemanagementAgentAdherenceExplanationsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new WorkforceManagementApi();\n            var agentId = \"agentId_example\";  // string | The ID of the agent to query\n            var body = new AddAdherenceExplanationAdminRequest(); // AddAdherenceExplanationAdminRequest | The request body\n\n            try\n            { \n                // Add an adherence explanation for the requested user\n                AdherenceExplanationAsyncResponse result = apiInstance.PostWorkforcemanagementAgentAdherenceExplanations(agentId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WorkforceManagement.PostWorkforcemanagementAgentAdherenceExplanations: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "postworkforcemanagementagentadherenceexplanationsquery": {
+    "operationId": "postworkforcemanagementagentadherenceexplanationsquery",
+    "functionName": "PostWorkforcemanagementAgentAdherenceExplanationsQuery",
+    "signature": "PostWorkforcemanagementAgentAdherenceExplanationsQuery(agentId, body, forceAsync, forceDownloadService)",
+    "parameters": [
+      {
+        "name": "agentId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "AgentQueryAdherenceExplanationsRequest",
+        "required": "true"
+      },
+      {
+        "name": "forceAsync",
+        "type": "bool?",
+        "required": "false"
+      },
+      {
+        "name": "forceDownloadService",
+        "type": "bool?",
+        "required": "false"
+      }
+    ],
+    "return": "AgentQueryAdherenceExplanationsResponse",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostWorkforcemanagementAgentAdherenceExplanationsQueryExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new WorkforceManagementApi();\n            var agentId = \"agentId_example\";  // string | The ID of the agent to query\n            var body = new AgentQueryAdherenceExplanationsRequest(); // AgentQueryAdherenceExplanationsRequest | The request body\n            var forceAsync = true;  // bool? | Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional) \n            var forceDownloadService = true;  // bool? | Force the result of this operation to be sent via download service. For testing/app development purposes (optional) \n\n            try\n            { \n                // Query adherence explanations for the given agent across a specified range\n                AgentQueryAdherenceExplanationsResponse result = apiInstance.PostWorkforcemanagementAgentAdherenceExplanationsQuery(agentId, body, forceAsync, forceDownloadService);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WorkforceManagement.PostWorkforcemanagementAgentAdherenceExplanationsQuery: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "postworkforcemanagementagentschedulesmine": {
     "operationId": "postworkforcemanagementagentschedulesmine",
@@ -36030,6 +36232,35 @@
     ],
     "return": "BusinessUnitActivityCode",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostWorkforcemanagementBusinessunitActivitycodesExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new WorkforceManagementApi();\n            var businessUnitId = \"businessUnitId_example\";  // string | The ID of the business unit, or 'mine' for the business unit of the logged-in user.\n            var body = new CreateActivityCodeRequest(); // CreateActivityCodeRequest | body (optional) \n\n            try\n            { \n                // Create a new activity code\n                BusinessUnitActivityCode result = apiInstance.PostWorkforcemanagementBusinessunitActivitycodes(businessUnitId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WorkforceManagement.PostWorkforcemanagementBusinessunitActivitycodes: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "postworkforcemanagementbusinessunitadherenceexplanationsquery": {
+    "operationId": "postworkforcemanagementbusinessunitadherenceexplanationsquery",
+    "functionName": "PostWorkforcemanagementBusinessunitAdherenceExplanationsQuery",
+    "signature": "PostWorkforcemanagementBusinessunitAdherenceExplanationsQuery(businessUnitId, body, forceAsync, forceDownloadService)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "BuQueryAdherenceExplanationsRequest",
+        "required": "true"
+      },
+      {
+        "name": "forceAsync",
+        "type": "bool?",
+        "required": "false"
+      },
+      {
+        "name": "forceDownloadService",
+        "type": "bool?",
+        "required": "false"
+      }
+    ],
+    "return": "BuQueryAdherenceExplanationsResponse",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostWorkforcemanagementBusinessunitAdherenceExplanationsQueryExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new WorkforceManagementApi();\n            var businessUnitId = \"businessUnitId_example\";  // string | The ID of the business unit\n            var body = new BuQueryAdherenceExplanationsRequest(); // BuQueryAdherenceExplanationsRequest | The request body\n            var forceAsync = true;  // bool? | Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional) \n            var forceDownloadService = true;  // bool? | Force the result of this operation to be sent via download service. For testing/app development purposes (optional) \n\n            try\n            { \n                // Query adherence explanations across an entire business unit for the requested period\n                BuQueryAdherenceExplanationsResponse result = apiInstance.PostWorkforcemanagementBusinessunitAdherenceExplanationsQuery(businessUnitId, body, forceAsync, forceDownloadService);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WorkforceManagement.PostWorkforcemanagementBusinessunitAdherenceExplanationsQuery: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "postworkforcemanagementbusinessunitagentschedulessearch": {
     "operationId": "postworkforcemanagementbusinessunitagentschedulessearch",
@@ -36617,6 +36848,25 @@
     ],
     "return": "UserScheduleContainer",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostWorkforcemanagementManagementunitSchedulesSearchExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new WorkforceManagementApi();\n            var managementUnitId = \"managementUnitId_example\";  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.\n            var body = new UserListScheduleRequestBody(); // UserListScheduleRequestBody | body (optional) \n\n            try\n            { \n                // Query published schedules for given given time range for set of users\n                UserScheduleContainer result = apiInstance.PostWorkforcemanagementManagementunitSchedulesSearch(managementUnitId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WorkforceManagement.PostWorkforcemanagementManagementunitSchedulesSearch: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "postworkforcemanagementmanagementunitshrinkagejobs": {
+    "operationId": "postworkforcemanagementmanagementunitshrinkagejobs",
+    "functionName": "PostWorkforcemanagementManagementunitShrinkageJobs",
+    "signature": "PostWorkforcemanagementManagementunitShrinkageJobs(managementUnitId, body)",
+    "parameters": [
+      {
+        "name": "managementUnitId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "WfmHistoricalShrinkageRequest",
+        "required": "false"
+      }
+    ],
+    "return": "WfmHistoricalShrinkageResponse",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostWorkforcemanagementManagementunitShrinkageJobsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new WorkforceManagementApi();\n            var managementUnitId = \"managementUnitId_example\";  // string | The ID of the management unit\n            var body = new WfmHistoricalShrinkageRequest(); // WfmHistoricalShrinkageRequest | body (optional) \n\n            try\n            { \n                // Request a historical shrinkage report\n                WfmHistoricalShrinkageResponse result = apiInstance.PostWorkforcemanagementManagementunitShrinkageJobs(managementUnitId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WorkforceManagement.PostWorkforcemanagementManagementunitShrinkageJobs: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "postworkforcemanagementmanagementunittimeofflimits": {
     "operationId": "postworkforcemanagementmanagementunittimeofflimits",

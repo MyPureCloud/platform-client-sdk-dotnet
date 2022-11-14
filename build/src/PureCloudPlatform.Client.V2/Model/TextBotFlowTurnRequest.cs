@@ -67,7 +67,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Userdisconnect for "UserDisconnect"
             /// </summary>
             [EnumMember(Value = "UserDisconnect")]
-            Userdisconnect
+            Userdisconnect,
+            
+            /// <summary>
+            /// Enum Clientsessionexpired for "ClientSessionExpired"
+            /// </summary>
+            [EnumMember(Value = "ClientSessionExpired")]
+            Clientsessionexpired
         }
         /// <summary>
         /// Indicates the type of input event being requested. If appropriate, fill out the matching user input object details on this request.

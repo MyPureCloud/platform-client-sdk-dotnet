@@ -67,6 +67,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="HistoricalAdherenceQueryResult" /> class.
         /// </summary>
         /// <param name="UserId">The ID of the user for whom the adherence is queried.</param>
+        /// <param name="ManagementUnitId">The ID of the management unit of the user for whom the adherence is queried.</param>
         /// <param name="StartDate">Beginning of the date range that was queried, in ISO-8601 format.</param>
         /// <param name="EndDate">End of the date range that was queried, in ISO-8601 format. If it was not set, end date will be set to the queried time.</param>
         /// <param name="AdherencePercentage">Adherence percentage for this user, in the scale of 0 - 100.</param>
@@ -76,9 +77,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DayMetrics">Adherence and conformance metrics for days in query range.</param>
         /// <param name="ActualsEndDate">The end date of the actual activities in ISO-8601 format..</param>
         /// <param name="Actuals">List of actual activity with offset for this user.</param>
-        public HistoricalAdherenceQueryResult(string UserId = null, DateTime? StartDate = null, DateTime? EndDate = null, double? AdherencePercentage = null, double? ConformancePercentage = null, ImpactEnum? Impact = null, List<HistoricalAdherenceExceptionInfo> ExceptionInfo = null, List<HistoricalAdherenceDayMetrics> DayMetrics = null, DateTime? ActualsEndDate = null, List<HistoricalAdherenceActuals> Actuals = null)
+        public HistoricalAdherenceQueryResult(string UserId = null, string ManagementUnitId = null, DateTime? StartDate = null, DateTime? EndDate = null, double? AdherencePercentage = null, double? ConformancePercentage = null, ImpactEnum? Impact = null, List<HistoricalAdherenceExceptionInfo> ExceptionInfo = null, List<HistoricalAdherenceDayMetrics> DayMetrics = null, DateTime? ActualsEndDate = null, List<HistoricalAdherenceActuals> Actuals = null)
         {
             this.UserId = UserId;
+            this.ManagementUnitId = ManagementUnitId;
             this.StartDate = StartDate;
             this.EndDate = EndDate;
             this.AdherencePercentage = AdherencePercentage;
@@ -99,6 +101,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The ID of the user for whom the adherence is queried</value>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
+
+
+
+        /// <summary>
+        /// The ID of the management unit of the user for whom the adherence is queried
+        /// </summary>
+        /// <value>The ID of the management unit of the user for whom the adherence is queried</value>
+        [DataMember(Name="managementUnitId", EmitDefaultValue=false)]
+        public string ManagementUnitId { get; set; }
 
 
 
@@ -185,6 +196,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class HistoricalAdherenceQueryResult {\n");
 
             sb.Append("  UserId: ").Append(UserId).Append("\n");
+            sb.Append("  ManagementUnitId: ").Append(ManagementUnitId).Append("\n");
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
             sb.Append("  AdherencePercentage: ").Append(AdherencePercentage).Append("\n");
@@ -238,6 +250,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UserId == other.UserId ||
                     this.UserId != null &&
                     this.UserId.Equals(other.UserId)
+                ) &&
+                (
+                    this.ManagementUnitId == other.ManagementUnitId ||
+                    this.ManagementUnitId != null &&
+                    this.ManagementUnitId.Equals(other.ManagementUnitId)
                 ) &&
                 (
                     this.StartDate == other.StartDate ||
@@ -299,6 +316,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
+
+                if (this.ManagementUnitId != null)
+                    hash = hash * 59 + this.ManagementUnitId.GetHashCode();
 
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();

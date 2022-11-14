@@ -64,12 +64,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Transfer,
             
             /// <summary>
-            /// Enum Transferacd for "TransferACD"
-            /// </summary>
-            [EnumMember(Value = "TransferACD")]
-            Transferacd,
-            
-            /// <summary>
             /// Enum Transferconsult for "TransferConsult"
             /// </summary>
             [EnumMember(Value = "TransferConsult")]
@@ -79,13 +73,7 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Transferconference for "TransferConference"
             /// </summary>
             [EnumMember(Value = "TransferConference")]
-            Transferconference,
-            
-            /// <summary>
-            /// Enum Transferuser for "TransferUser"
-            /// </summary>
-            [EnumMember(Value = "TransferUser")]
-            Transferuser
+            Transferconference
         }
         /// <summary>
         /// Indicates how this communication was ended.

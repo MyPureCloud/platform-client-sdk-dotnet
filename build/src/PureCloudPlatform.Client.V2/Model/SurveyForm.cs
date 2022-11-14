@@ -28,14 +28,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="SurveyForm" /> class.
         /// </summary>
         /// <param name="Name">The survey form name (required).</param>
+        /// <param name="Published">Is this form published.</param>
         /// <param name="Disabled">Is this form disabled.</param>
         /// <param name="Language">Language for survey viewer localization. Currently localized languages: da, de, en-US, es, fi, fr, it, ja, ko, nl, no, pl, pt-BR, sv, th, tr, zh-CH, zh-TW (required).</param>
         /// <param name="Header">Markdown text for the top of the form..</param>
         /// <param name="Footer">Markdown text for the bottom of the form..</param>
-        /// <param name="QuestionGroups">A list of question groups (required).</param>
-        public SurveyForm(string Name = null, bool? Disabled = null, string Language = null, string Header = null, string Footer = null, List<SurveyQuestionGroup> QuestionGroups = null)
+        /// <param name="QuestionGroups">A list of question groups.</param>
+        public SurveyForm(string Name = null, bool? Published = null, bool? Disabled = null, string Language = null, string Header = null, string Footer = null, List<SurveyQuestionGroup> QuestionGroups = null)
         {
             this.Name = Name;
+            this.Published = Published;
             this.Disabled = Disabled;
             this.Language = Language;
             this.Header = Header;
@@ -78,7 +80,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Is this form published</value>
         [DataMember(Name="published", EmitDefaultValue=false)]
-        public bool? Published { get; private set; }
+        public bool? Published { get; set; }
 
 
 

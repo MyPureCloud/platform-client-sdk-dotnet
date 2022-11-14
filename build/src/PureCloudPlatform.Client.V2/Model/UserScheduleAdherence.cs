@@ -507,6 +507,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Currently applicable explanation for the adherence state
+        /// </summary>
+        /// <value>Currently applicable explanation for the adherence state</value>
+        [DataMember(Name="adherenceExplanation", EmitDefaultValue=false)]
+        public RealTimeAdherenceExplanation AdherenceExplanation { get; private set; }
+
+
+
+        /// <summary>
         /// Time when the user entered the current adherenceState in ISO-8601 format
         /// </summary>
         /// <value>Time when the user entered the current adherenceState in ISO-8601 format</value>
@@ -583,6 +592,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  IsOutOfOffice: ").Append(IsOutOfOffice).Append("\n");
             sb.Append("  AdherenceState: ").Append(AdherenceState).Append("\n");
             sb.Append("  Impact: ").Append(Impact).Append("\n");
+            sb.Append("  AdherenceExplanation: ").Append(AdherenceExplanation).Append("\n");
             sb.Append("  TimeOfAdherenceChange: ").Append(TimeOfAdherenceChange).Append("\n");
             sb.Append("  PresenceUpdateTime: ").Append(PresenceUpdateTime).Append("\n");
             sb.Append("  ActiveQueues: ").Append(ActiveQueues).Append("\n");
@@ -705,6 +715,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Impact.Equals(other.Impact)
                 ) &&
                 (
+                    this.AdherenceExplanation == other.AdherenceExplanation ||
+                    this.AdherenceExplanation != null &&
+                    this.AdherenceExplanation.Equals(other.AdherenceExplanation)
+                ) &&
+                (
                     this.TimeOfAdherenceChange == other.TimeOfAdherenceChange ||
                     this.TimeOfAdherenceChange != null &&
                     this.TimeOfAdherenceChange.Equals(other.TimeOfAdherenceChange)
@@ -791,6 +806,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Impact != null)
                     hash = hash * 59 + this.Impact.GetHashCode();
+
+                if (this.AdherenceExplanation != null)
+                    hash = hash * 59 + this.AdherenceExplanation.GetHashCode();
 
                 if (this.TimeOfAdherenceChange != null)
                     hash = hash * 59 + this.TimeOfAdherenceChange.GetHashCode();

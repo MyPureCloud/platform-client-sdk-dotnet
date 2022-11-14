@@ -273,6 +273,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Findqueuebyidaction,
             
             /// <summary>
+            /// Enum Setlocaleaction for "SetLocaleAction"
+            /// </summary>
+            [EnumMember(Value = "SetLocaleAction")]
+            Setlocaleaction,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]

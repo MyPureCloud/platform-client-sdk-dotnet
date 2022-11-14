@@ -641,9 +641,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="excludeStatus">Exclude MX record data (optional, default to false)</param>
         /// <returns>InboundDomainEntityListing</returns>
-        InboundDomainEntityListing GetRoutingEmailDomains (bool? excludeStatus = null);
+        InboundDomainEntityListing GetRoutingEmailDomains (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null);
 
         /// <summary>
         /// Get domains
@@ -652,9 +654,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="excludeStatus">Exclude MX record data (optional, default to false)</param>
         /// <returns>ApiResponse of InboundDomainEntityListing</returns>
-        ApiResponse<InboundDomainEntityListing> GetRoutingEmailDomainsWithHttpInfo (bool? excludeStatus = null);
+        ApiResponse<InboundDomainEntityListing> GetRoutingEmailDomainsWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null);
 
         /// <summary>
         /// Get domain
@@ -3635,9 +3639,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="excludeStatus">Exclude MX record data (optional, default to false)</param>
         /// <returns>Task of InboundDomainEntityListing</returns>
-        System.Threading.Tasks.Task<InboundDomainEntityListing> GetRoutingEmailDomainsAsync (bool? excludeStatus = null);
+        System.Threading.Tasks.Task<InboundDomainEntityListing> GetRoutingEmailDomainsAsync (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null);
 
         /// <summary>
         /// Get domains
@@ -3646,9 +3652,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="excludeStatus">Exclude MX record data (optional, default to false)</param>
         /// <returns>Task of ApiResponse (InboundDomainEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InboundDomainEntityListing>> GetRoutingEmailDomainsAsyncWithHttpInfo (bool? excludeStatus = null);
+        System.Threading.Tasks.Task<ApiResponse<InboundDomainEntityListing>> GetRoutingEmailDomainsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null);
 
         /// <summary>
         /// Get domain
@@ -11301,11 +11309,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get domains 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="excludeStatus">Exclude MX record data (optional, default to false)</param>
         /// <returns>InboundDomainEntityListing</returns>
-        public InboundDomainEntityListing GetRoutingEmailDomains (bool? excludeStatus = null)
+        public InboundDomainEntityListing GetRoutingEmailDomains (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null)
         {
-             ApiResponse<InboundDomainEntityListing> localVarResponse = GetRoutingEmailDomainsWithHttpInfo(excludeStatus);
+             ApiResponse<InboundDomainEntityListing> localVarResponse = GetRoutingEmailDomainsWithHttpInfo(pageSize, pageNumber, excludeStatus);
              return localVarResponse.Data;
         }
 
@@ -11313,9 +11323,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get domains 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="excludeStatus">Exclude MX record data (optional, default to false)</param>
         /// <returns>ApiResponse of InboundDomainEntityListing</returns>
-        public ApiResponse< InboundDomainEntityListing > GetRoutingEmailDomainsWithHttpInfo (bool? excludeStatus = null)
+        public ApiResponse< InboundDomainEntityListing > GetRoutingEmailDomainsWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null)
         { 
 
             var localVarPath = "/api/v2/routing/email/domains";
@@ -11350,6 +11362,8 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (excludeStatus != null) localVarQueryParams.Add(new Tuple<string, string>("excludeStatus", this.Configuration.ApiClient.ParameterToString(excludeStatus)));
 
             // Header params
@@ -11392,11 +11406,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get domains 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="excludeStatus">Exclude MX record data (optional, default to false)</param>
         /// <returns>Task of InboundDomainEntityListing</returns>
-        public async System.Threading.Tasks.Task<InboundDomainEntityListing> GetRoutingEmailDomainsAsync (bool? excludeStatus = null)
+        public async System.Threading.Tasks.Task<InboundDomainEntityListing> GetRoutingEmailDomainsAsync (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null)
         {
-             ApiResponse<InboundDomainEntityListing> localVarResponse = await GetRoutingEmailDomainsAsyncWithHttpInfo(excludeStatus);
+             ApiResponse<InboundDomainEntityListing> localVarResponse = await GetRoutingEmailDomainsAsyncWithHttpInfo(pageSize, pageNumber, excludeStatus);
              return localVarResponse.Data;
 
         }
@@ -11405,9 +11421,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get domains 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="excludeStatus">Exclude MX record data (optional, default to false)</param>
         /// <returns>Task of ApiResponse (InboundDomainEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InboundDomainEntityListing>> GetRoutingEmailDomainsAsyncWithHttpInfo (bool? excludeStatus = null)
+        public async System.Threading.Tasks.Task<ApiResponse<InboundDomainEntityListing>> GetRoutingEmailDomainsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null)
         { 
 
             var localVarPath = "/api/v2/routing/email/domains";
@@ -11442,6 +11460,8 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (excludeStatus != null) localVarQueryParams.Add(new Tuple<string, string>("excludeStatus", this.Configuration.ApiClient.ParameterToString(excludeStatus)));
 
             // Header params
