@@ -652,6 +652,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Oauthclientauthorization,
             
             /// <summary>
+            /// Enum Organization for "Organization"
+            /// </summary>
+            [EnumMember(Value = "Organization")]
+            Organization,
+            
+            /// <summary>
             /// Enum Organizationauthorizationtrust for "OrganizationAuthorizationTrust"
             /// </summary>
             [EnumMember(Value = "OrganizationAuthorizationTrust")]

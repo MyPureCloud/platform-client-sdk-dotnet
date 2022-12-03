@@ -657,6 +657,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The approval breakdown for this override request.
+        /// </summary>
+        /// <value>The approval breakdown for this override request.</value>
+        [DataMember(Name="approvalNamespaces", EmitDefaultValue=false)]
+        public List<ApprovalNamespace> ApprovalNamespaces { get; private set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -685,6 +694,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  StatusHistory: ").Append(StatusHistory).Append("\n");
             sb.Append("  DateCompleted: ").Append(DateCompleted).Append("\n");
             sb.Append("  RejectReason: ").Append(RejectReason).Append("\n");
+            sb.Append("  ApprovalNamespaces: ").Append(ApprovalNamespaces).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -787,6 +797,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RejectReason.Equals(other.RejectReason)
                 ) &&
                 (
+                    this.ApprovalNamespaces == other.ApprovalNamespaces ||
+                    this.ApprovalNamespaces != null &&
+                    this.ApprovalNamespaces.SequenceEqual(other.ApprovalNamespaces)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -839,6 +854,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.RejectReason != null)
                     hash = hash * 59 + this.RejectReason.GetHashCode();
+
+                if (this.ApprovalNamespaces != null)
+                    hash = hash * 59 + this.ApprovalNamespaces.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

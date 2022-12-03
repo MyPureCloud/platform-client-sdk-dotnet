@@ -23,10 +23,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Error">name of the error.</param>
         /// <param name="Details">additional information regarding the error.</param>
-        public DialerCampaignConfigChangeRestErrorDetail(string Error = null, string Details = null)
+        /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        public DialerCampaignConfigChangeRestErrorDetail(string Error = null, string Details = null, Dictionary<string, Object> AdditionalProperties = null)
         {
             this.Error = Error;
             this.Details = Details;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -49,6 +51,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Details { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets AdditionalProperties
+        /// </summary>
+        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
+        public Dictionary<string, Object> AdditionalProperties { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,6 +70,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Error: ").Append(Error).Append("\n");
             sb.Append("  Details: ").Append(Details).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,6 +120,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Details == other.Details ||
                     this.Details != null &&
                     this.Details.Equals(other.Details)
+                ) &&
+                (
+                    this.AdditionalProperties == other.AdditionalProperties ||
+                    this.AdditionalProperties != null &&
+                    this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
                 );
         }
 
@@ -128,6 +144,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Details != null)
                     hash = hash * 59 + this.Details.GetHashCode();
+
+                if (this.AdditionalProperties != null)
+                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
 
                 return hash;
             }

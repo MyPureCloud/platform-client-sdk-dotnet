@@ -24,16 +24,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Intervals">a list of start and end times.</param>
         /// <param name="TimeZone">time zone identifier to be applied to the intervals; for example Africa/Abidjan.</param>
         /// <param name="Campaign">Campaign.</param>
+        /// <param name="AdditionalProperties">AdditionalProperties.</param>
         /// <param name="Id">The globally unique identifier for the object..</param>
         /// <param name="Name">The UI-visible name of the object.</param>
         /// <param name="DateCreated">Creation time of the entity.</param>
         /// <param name="DateModified">Last modified time of the entity.</param>
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
-        public DialerCampaignScheduleConfigChangeCampaignSchedule(List<DialerCampaignScheduleConfigChangeScheduleInterval> Intervals = null, string TimeZone = null, DialerCampaignScheduleConfigChangeUriReference Campaign = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null)
+        public DialerCampaignScheduleConfigChangeCampaignSchedule(List<DialerCampaignScheduleConfigChangeScheduleInterval> Intervals = null, string TimeZone = null, DialerCampaignScheduleConfigChangeUriReference Campaign = null, Dictionary<string, Object> AdditionalProperties = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null)
         {
             this.Intervals = Intervals;
             this.TimeZone = TimeZone;
             this.Campaign = Campaign;
+            this.AdditionalProperties = AdditionalProperties;
             this.Id = Id;
             this.Name = Name;
             this.DateCreated = DateCreated;
@@ -67,6 +69,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="campaign", EmitDefaultValue=false)]
         public DialerCampaignScheduleConfigChangeUriReference Campaign { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets AdditionalProperties
+        /// </summary>
+        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
+        public Dictionary<string, Object> AdditionalProperties { get; set; }
 
 
 
@@ -126,6 +136,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Intervals: ").Append(Intervals).Append("\n");
             sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
             sb.Append("  Campaign: ").Append(Campaign).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
@@ -187,6 +198,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Campaign.Equals(other.Campaign)
                 ) &&
                 (
+                    this.AdditionalProperties == other.AdditionalProperties ||
+                    this.AdditionalProperties != null &&
+                    this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
+                ) &&
+                (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
@@ -232,6 +248,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Campaign != null)
                     hash = hash * 59 + this.Campaign.GetHashCode();
+
+                if (this.AdditionalProperties != null)
+                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();

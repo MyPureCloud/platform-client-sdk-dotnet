@@ -22,11 +22,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="DialerCampaignRuleConfigChangeCampaignRuleActionEntities" /> class.
         /// </summary>
         /// <param name="UseTriggeringEntity">Whether this action should act on the entity that triggered it.</param>
+        /// <param name="AdditionalProperties">AdditionalProperties.</param>
         /// <param name="Campaigns">A list of campaignIds to act on.</param>
         /// <param name="Sequences">A list of sequenceIds to act on.</param>
-        public DialerCampaignRuleConfigChangeCampaignRuleActionEntities(bool? UseTriggeringEntity = null, List<DialerCampaignRuleConfigChangeUriReference> Campaigns = null, List<DialerCampaignRuleConfigChangeUriReference> Sequences = null)
+        public DialerCampaignRuleConfigChangeCampaignRuleActionEntities(bool? UseTriggeringEntity = null, Dictionary<string, Object> AdditionalProperties = null, List<DialerCampaignRuleConfigChangeUriReference> Campaigns = null, List<DialerCampaignRuleConfigChangeUriReference> Sequences = null)
         {
             this.UseTriggeringEntity = UseTriggeringEntity;
+            this.AdditionalProperties = AdditionalProperties;
             this.Campaigns = Campaigns;
             this.Sequences = Sequences;
             
@@ -40,6 +42,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Whether this action should act on the entity that triggered it</value>
         [DataMember(Name="useTriggeringEntity", EmitDefaultValue=false)]
         public bool? UseTriggeringEntity { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets AdditionalProperties
+        /// </summary>
+        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
+        public Dictionary<string, Object> AdditionalProperties { get; set; }
 
 
 
@@ -70,6 +80,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class DialerCampaignRuleConfigChangeCampaignRuleActionEntities {\n");
 
             sb.Append("  UseTriggeringEntity: ").Append(UseTriggeringEntity).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("  Campaigns: ").Append(Campaigns).Append("\n");
             sb.Append("  Sequences: ").Append(Sequences).Append("\n");
             sb.Append("}\n");
@@ -118,6 +129,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UseTriggeringEntity.Equals(other.UseTriggeringEntity)
                 ) &&
                 (
+                    this.AdditionalProperties == other.AdditionalProperties ||
+                    this.AdditionalProperties != null &&
+                    this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
+                ) &&
+                (
                     this.Campaigns == other.Campaigns ||
                     this.Campaigns != null &&
                     this.Campaigns.SequenceEqual(other.Campaigns)
@@ -142,6 +158,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.UseTriggeringEntity != null)
                     hash = hash * 59 + this.UseTriggeringEntity.GetHashCode();
+
+                if (this.AdditionalProperties != null)
+                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
 
                 if (this.Campaigns != null)
                     hash = hash * 59 + this.Campaigns.GetHashCode();

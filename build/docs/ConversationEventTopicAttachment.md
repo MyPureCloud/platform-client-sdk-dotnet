@@ -12,6 +12,7 @@ title: ConversationEventTopicAttachment
 | **ContentUri** | **string** | The content uri of the attachment. If set, this is commonly a public api download location. | [optional] |
 | **ContentType** | **string** | The type of file the attachment is. | [optional] |
 | **ContentLength** | **int?** | The length of the attachment file. | [optional] |
+| **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 {: class="table table-striped"}
 
 

@@ -87,7 +87,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ModifiedBy">ModifiedBy.</param>
         /// <param name="DateModified">DateModified.</param>
         /// <param name="IsOverdue">IsOverdue.</param>
-        public LearningAssignmentTopicLearningAssignmentNotification(string Id = null, LearningAssignmentTopicUserReference User = null, LearningAssignmentTopicLearningModuleReference Module = null, int? Version = null, StateEnum? State = null, DateTime? DateRecommendedForCompletion = null, LearningAssignmentTopicUserReference CreatedBy = null, DateTime? DateCreated = null, LearningAssignmentTopicUserReference ModifiedBy = null, DateTime? DateModified = null, bool? IsOverdue = null)
+        /// <param name="LengthInMinutes">LengthInMinutes.</param>
+        public LearningAssignmentTopicLearningAssignmentNotification(string Id = null, LearningAssignmentTopicUserReference User = null, LearningAssignmentTopicLearningModuleReference Module = null, int? Version = null, StateEnum? State = null, DateTime? DateRecommendedForCompletion = null, LearningAssignmentTopicUserReference CreatedBy = null, DateTime? DateCreated = null, LearningAssignmentTopicUserReference ModifiedBy = null, DateTime? DateModified = null, bool? IsOverdue = null, int? LengthInMinutes = null)
         {
             this.Id = Id;
             this.User = User;
@@ -100,6 +101,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ModifiedBy = ModifiedBy;
             this.DateModified = DateModified;
             this.IsOverdue = IsOverdue;
+            this.LengthInMinutes = LengthInMinutes;
             
         }
         
@@ -186,6 +188,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? IsOverdue { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets LengthInMinutes
+        /// </summary>
+        [DataMember(Name="lengthInMinutes", EmitDefaultValue=false)]
+        public int? LengthInMinutes { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -206,6 +216,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  IsOverdue: ").Append(IsOverdue).Append("\n");
+            sb.Append("  LengthInMinutes: ").Append(LengthInMinutes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -300,6 +311,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.IsOverdue == other.IsOverdue ||
                     this.IsOverdue != null &&
                     this.IsOverdue.Equals(other.IsOverdue)
+                ) &&
+                (
+                    this.LengthInMinutes == other.LengthInMinutes ||
+                    this.LengthInMinutes != null &&
+                    this.LengthInMinutes.Equals(other.LengthInMinutes)
                 );
         }
 
@@ -346,6 +362,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.IsOverdue != null)
                     hash = hash * 59 + this.IsOverdue.GetHashCode();
+
+                if (this.LengthInMinutes != null)
+                    hash = hash * 59 + this.LengthInMinutes.GetHashCode();
 
                 return hash;
             }

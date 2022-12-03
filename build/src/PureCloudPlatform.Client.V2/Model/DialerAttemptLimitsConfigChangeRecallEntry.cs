@@ -23,10 +23,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="NbrAttempts">The number of recall attempts to make.</param>
         /// <param name="MinutesBetweenAttempts">How long to wait between recall attempts.</param>
-        public DialerAttemptLimitsConfigChangeRecallEntry(int? NbrAttempts = null, int? MinutesBetweenAttempts = null)
+        /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        public DialerAttemptLimitsConfigChangeRecallEntry(int? NbrAttempts = null, int? MinutesBetweenAttempts = null, Dictionary<string, Object> AdditionalProperties = null)
         {
             this.NbrAttempts = NbrAttempts;
             this.MinutesBetweenAttempts = MinutesBetweenAttempts;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -49,6 +51,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? MinutesBetweenAttempts { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets AdditionalProperties
+        /// </summary>
+        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
+        public Dictionary<string, Object> AdditionalProperties { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,6 +70,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  NbrAttempts: ").Append(NbrAttempts).Append("\n");
             sb.Append("  MinutesBetweenAttempts: ").Append(MinutesBetweenAttempts).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,6 +120,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MinutesBetweenAttempts == other.MinutesBetweenAttempts ||
                     this.MinutesBetweenAttempts != null &&
                     this.MinutesBetweenAttempts.Equals(other.MinutesBetweenAttempts)
+                ) &&
+                (
+                    this.AdditionalProperties == other.AdditionalProperties ||
+                    this.AdditionalProperties != null &&
+                    this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
                 );
         }
 
@@ -128,6 +144,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MinutesBetweenAttempts != null)
                     hash = hash * 59 + this.MinutesBetweenAttempts.GetHashCode();
+
+                if (this.AdditionalProperties != null)
+                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
 
                 return hash;
             }

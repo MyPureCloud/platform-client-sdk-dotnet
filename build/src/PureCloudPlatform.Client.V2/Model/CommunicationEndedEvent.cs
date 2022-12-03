@@ -34,10 +34,10 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Self for "Self"
+            /// Enum Error for "Error"
             /// </summary>
-            [EnumMember(Value = "Self")]
-            Self,
+            [EnumMember(Value = "Error")]
+            Error,
             
             /// <summary>
             /// Enum Peer for "Peer"
@@ -46,16 +46,16 @@ namespace PureCloudPlatform.Client.V2.Model
             Peer,
             
             /// <summary>
+            /// Enum Self for "Self"
+            /// </summary>
+            [EnumMember(Value = "Self")]
+            Self,
+            
+            /// <summary>
             /// Enum System for "System"
             /// </summary>
             [EnumMember(Value = "System")]
             System,
-            
-            /// <summary>
-            /// Enum Error for "Error"
-            /// </summary>
-            [EnumMember(Value = "Error")]
-            Error,
             
             /// <summary>
             /// Enum Transfer for "Transfer"
@@ -64,16 +64,28 @@ namespace PureCloudPlatform.Client.V2.Model
             Transfer,
             
             /// <summary>
+            /// Enum Transferacd for "TransferACD"
+            /// </summary>
+            [EnumMember(Value = "TransferACD")]
+            Transferacd,
+            
+            /// <summary>
+            /// Enum Transferconference for "TransferConference"
+            /// </summary>
+            [EnumMember(Value = "TransferConference")]
+            Transferconference,
+            
+            /// <summary>
             /// Enum Transferconsult for "TransferConsult"
             /// </summary>
             [EnumMember(Value = "TransferConsult")]
             Transferconsult,
             
             /// <summary>
-            /// Enum Transferconference for "TransferConference"
+            /// Enum Transferuser for "TransferUser"
             /// </summary>
-            [EnumMember(Value = "TransferConference")]
-            Transferconference
+            [EnumMember(Value = "TransferUser")]
+            Transferuser
         }
         /// <summary>
         /// Indicates how this communication was ended.

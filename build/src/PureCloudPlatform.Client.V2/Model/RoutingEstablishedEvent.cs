@@ -33,11 +33,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CommunicationId">A unique Id (V4 UUID) identifying this communication (required).</param>
         /// <param name="PhoneNumber">Identifies the phone number used to reach this queue if it is different from the information that would be accessed by queueId..</param>
         /// <param name="QueueId">The id (V4 UUID) of the queue that is routing this conversation. (required).</param>
+        /// <param name="Ani">The automatic number identification if it is available for this conversation..</param>
+        /// <param name="Dnis">The dialed number identification if it is available for this conversation..</param>
         /// <param name="SkillIds">The unique identifiers (V4 UUID) for the skills that should be used to determine the destination for the conversation..</param>
         /// <param name="LanguageId">The unique identifier (V4 UUID) for the language that should be used to determine the destination for the conversation..</param>
         /// <param name="InitialConfiguration">Metadata about this communication. (required).</param>
         /// <param name="SourceConfiguration">Metadata about the source of this communication's interaction. (required).</param>
-        public RoutingEstablishedEvent(string EventId = null, DateTime? EventDateTime = null, string ConversationId = null, string CommunicationId = null, string PhoneNumber = null, string QueueId = null, List<string> SkillIds = null, string LanguageId = null, InitialConfiguration InitialConfiguration = null, SourceConfiguration SourceConfiguration = null)
+        public RoutingEstablishedEvent(string EventId = null, DateTime? EventDateTime = null, string ConversationId = null, string CommunicationId = null, string PhoneNumber = null, string QueueId = null, string Ani = null, string Dnis = null, List<string> SkillIds = null, string LanguageId = null, InitialConfiguration InitialConfiguration = null, SourceConfiguration SourceConfiguration = null)
         {
             this.EventId = EventId;
             this.EventDateTime = EventDateTime;
@@ -45,6 +47,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CommunicationId = CommunicationId;
             this.PhoneNumber = PhoneNumber;
             this.QueueId = QueueId;
+            this.Ani = Ani;
+            this.Dnis = Dnis;
             this.SkillIds = SkillIds;
             this.LanguageId = LanguageId;
             this.InitialConfiguration = InitialConfiguration;
@@ -109,6 +113,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The automatic number identification if it is available for this conversation.
+        /// </summary>
+        /// <value>The automatic number identification if it is available for this conversation.</value>
+        [DataMember(Name="ani", EmitDefaultValue=false)]
+        public string Ani { get; set; }
+
+
+
+        /// <summary>
+        /// The dialed number identification if it is available for this conversation.
+        /// </summary>
+        /// <value>The dialed number identification if it is available for this conversation.</value>
+        [DataMember(Name="dnis", EmitDefaultValue=false)]
+        public string Dnis { get; set; }
+
+
+
+        /// <summary>
         /// The unique identifiers (V4 UUID) for the skills that should be used to determine the destination for the conversation.
         /// </summary>
         /// <value>The unique identifiers (V4 UUID) for the skills that should be used to determine the destination for the conversation.</value>
@@ -158,6 +180,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CommunicationId: ").Append(CommunicationId).Append("\n");
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
+            sb.Append("  Ani: ").Append(Ani).Append("\n");
+            sb.Append("  Dnis: ").Append(Dnis).Append("\n");
             sb.Append("  SkillIds: ").Append(SkillIds).Append("\n");
             sb.Append("  LanguageId: ").Append(LanguageId).Append("\n");
             sb.Append("  InitialConfiguration: ").Append(InitialConfiguration).Append("\n");
@@ -233,6 +257,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.QueueId.Equals(other.QueueId)
                 ) &&
                 (
+                    this.Ani == other.Ani ||
+                    this.Ani != null &&
+                    this.Ani.Equals(other.Ani)
+                ) &&
+                (
+                    this.Dnis == other.Dnis ||
+                    this.Dnis != null &&
+                    this.Dnis.Equals(other.Dnis)
+                ) &&
+                (
                     this.SkillIds == other.SkillIds ||
                     this.SkillIds != null &&
                     this.SkillIds.SequenceEqual(other.SkillIds)
@@ -282,6 +316,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.QueueId != null)
                     hash = hash * 59 + this.QueueId.GetHashCode();
+
+                if (this.Ani != null)
+                    hash = hash * 59 + this.Ani.GetHashCode();
+
+                if (this.Dnis != null)
+                    hash = hash * 59 + this.Dnis.GetHashCode();
 
                 if (this.SkillIds != null)
                     hash = hash * 59 + this.SkillIds.GetHashCode();

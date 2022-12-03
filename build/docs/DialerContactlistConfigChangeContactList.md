@@ -18,6 +18,7 @@ title: DialerContactlistConfigChangeContactList
 | **AutomaticTimeZoneMapping** | **bool?** | whether or not automatic time zone mapping is enabled on the list | [optional] |
 | **ZipCodeColumnName** | **string** | zip code column from the contact list to be used optionally with automatic time zone mapping | [optional] |
 | **Division** | [**DialerContactlistConfigChangeUriReference**](DialerContactlistConfigChangeUriReference.html) | A UriReference for a resource | [optional] |
+| **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** | The UI-visible name of the object | [optional] |
 | **DateCreated** | **DateTime?** | Creation time of the entity | [optional] |

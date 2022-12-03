@@ -24,11 +24,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StartTime">The start time of this time slot.</param>
         /// <param name="StopTime">The stop time of this time slot.</param>
         /// <param name="Day">The day this time slot applies.</param>
-        public DialerCallabletimesetConfigChangeTimeSlot(string StartTime = null, string StopTime = null, int? Day = null)
+        /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        public DialerCallabletimesetConfigChangeTimeSlot(string StartTime = null, string StopTime = null, int? Day = null, Dictionary<string, Object> AdditionalProperties = null)
         {
             this.StartTime = StartTime;
             this.StopTime = StopTime;
             this.Day = Day;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -60,6 +62,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? Day { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets AdditionalProperties
+        /// </summary>
+        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
+        public Dictionary<string, Object> AdditionalProperties { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -72,6 +82,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
             sb.Append("  StopTime: ").Append(StopTime).Append("\n");
             sb.Append("  Day: ").Append(Day).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -126,6 +137,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Day == other.Day ||
                     this.Day != null &&
                     this.Day.Equals(other.Day)
+                ) &&
+                (
+                    this.AdditionalProperties == other.AdditionalProperties ||
+                    this.AdditionalProperties != null &&
+                    this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
                 );
         }
 
@@ -148,6 +164,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Day != null)
                     hash = hash * 59 + this.Day.GetHashCode();
+
+                if (this.AdditionalProperties != null)
+                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
 
                 return hash;
             }

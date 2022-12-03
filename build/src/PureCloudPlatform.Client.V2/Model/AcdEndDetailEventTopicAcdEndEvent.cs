@@ -406,7 +406,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Conditional for "CONDITIONAL"
             /// </summary>
             [EnumMember(Value = "CONDITIONAL")]
-            Conditional
+            Conditional,
+            
+            /// <summary>
+            /// Enum Vip for "VIP"
+            /// </summary>
+            [EnumMember(Value = "VIP")]
+            Vip
         }
         /// <summary>
         /// Gets or Sets UsedRouting
@@ -474,7 +480,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Conditional for "CONDITIONAL"
             /// </summary>
             [EnumMember(Value = "CONDITIONAL")]
-            Conditional
+            Conditional,
+            
+            /// <summary>
+            /// Enum Vip for "VIP"
+            /// </summary>
+            [EnumMember(Value = "VIP")]
+            Vip
         }
         /// <summary>
         /// Gets or Sets DisconnectType

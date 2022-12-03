@@ -34,11 +34,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PhoneNumber">Identifies the phone number used to reach this user if it is different from the information that would be accessed by userId..</param>
         /// <param name="UserId">The userId (V4 UUID) for the user this communication belongs to. (required).</param>
         /// <param name="StationId">A Station ID (V4 UUID) that identifies the station being used if the user is using a station and the stationId is known..</param>
+        /// <param name="Ani">The automatic number identification if it is available for this conversation..</param>
+        /// <param name="Dnis">The dialed number identification if it is available for this conversation..</param>
         /// <param name="AfterCallWorkRequired">Indicates whether or not this user will be required to complete after call work..</param>
         /// <param name="QueueId">The id (V4 UUID) of the queue that the user is calling on behalf of. Applies to outbound calls only..</param>
         /// <param name="InitialConfiguration">Metadata about this communication. (required).</param>
         /// <param name="SourceConfiguration">Metadata about the source of this communication's interaction. (required).</param>
-        public UserEstablishedEvent(string EventId = null, DateTime? EventDateTime = null, string ConversationId = null, string CommunicationId = null, string PhoneNumber = null, string UserId = null, string StationId = null, bool? AfterCallWorkRequired = null, string QueueId = null, InitialConfiguration InitialConfiguration = null, SourceConfiguration SourceConfiguration = null)
+        public UserEstablishedEvent(string EventId = null, DateTime? EventDateTime = null, string ConversationId = null, string CommunicationId = null, string PhoneNumber = null, string UserId = null, string StationId = null, string Ani = null, string Dnis = null, bool? AfterCallWorkRequired = null, string QueueId = null, InitialConfiguration InitialConfiguration = null, SourceConfiguration SourceConfiguration = null)
         {
             this.EventId = EventId;
             this.EventDateTime = EventDateTime;
@@ -47,6 +49,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.PhoneNumber = PhoneNumber;
             this.UserId = UserId;
             this.StationId = StationId;
+            this.Ani = Ani;
+            this.Dnis = Dnis;
             this.AfterCallWorkRequired = AfterCallWorkRequired;
             this.QueueId = QueueId;
             this.InitialConfiguration = InitialConfiguration;
@@ -120,6 +124,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The automatic number identification if it is available for this conversation.
+        /// </summary>
+        /// <value>The automatic number identification if it is available for this conversation.</value>
+        [DataMember(Name="ani", EmitDefaultValue=false)]
+        public string Ani { get; set; }
+
+
+
+        /// <summary>
+        /// The dialed number identification if it is available for this conversation.
+        /// </summary>
+        /// <value>The dialed number identification if it is available for this conversation.</value>
+        [DataMember(Name="dnis", EmitDefaultValue=false)]
+        public string Dnis { get; set; }
+
+
+
+        /// <summary>
         /// Indicates whether or not this user will be required to complete after call work.
         /// </summary>
         /// <value>Indicates whether or not this user will be required to complete after call work.</value>
@@ -170,6 +192,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  StationId: ").Append(StationId).Append("\n");
+            sb.Append("  Ani: ").Append(Ani).Append("\n");
+            sb.Append("  Dnis: ").Append(Dnis).Append("\n");
             sb.Append("  AfterCallWorkRequired: ").Append(AfterCallWorkRequired).Append("\n");
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  InitialConfiguration: ").Append(InitialConfiguration).Append("\n");
@@ -250,6 +274,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.StationId.Equals(other.StationId)
                 ) &&
                 (
+                    this.Ani == other.Ani ||
+                    this.Ani != null &&
+                    this.Ani.Equals(other.Ani)
+                ) &&
+                (
+                    this.Dnis == other.Dnis ||
+                    this.Dnis != null &&
+                    this.Dnis.Equals(other.Dnis)
+                ) &&
+                (
                     this.AfterCallWorkRequired == other.AfterCallWorkRequired ||
                     this.AfterCallWorkRequired != null &&
                     this.AfterCallWorkRequired.Equals(other.AfterCallWorkRequired)
@@ -302,6 +336,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.StationId != null)
                     hash = hash * 59 + this.StationId.GetHashCode();
+
+                if (this.Ani != null)
+                    hash = hash * 59 + this.Ani.GetHashCode();
+
+                if (this.Dnis != null)
+                    hash = hash * 59 + this.Dnis.GetHashCode();
 
                 if (this.AfterCallWorkRequired != null)
                     hash = hash * 59 + this.AfterCallWorkRequired.GetHashCode();

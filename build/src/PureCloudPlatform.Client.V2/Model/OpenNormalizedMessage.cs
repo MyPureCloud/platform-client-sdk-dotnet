@@ -43,13 +43,7 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Receipt for "Receipt"
             /// </summary>
             [EnumMember(Value = "Receipt")]
-            Receipt,
-            
-            /// <summary>
-            /// Enum Event for "Event"
-            /// </summary>
-            [EnumMember(Value = "Event")]
-            Event
+            Receipt
         }
         /// <summary>
         /// Message receipt status, only used with type Receipt.
@@ -161,20 +155,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">Message type. (required).</param>
         /// <param name="Text">Message text..</param>
         /// <param name="Content">List of content elements..</param>
-        /// <param name="Events">List of event elements..</param>
         /// <param name="Status">Message receipt status, only used with type Receipt..</param>
         /// <param name="Reasons">List of reasons for a message receipt that indicates the message has failed. Only used with Failed status..</param>
         /// <param name="IsFinalReceipt">Indicates if this is the last message receipt for this message, or if another message receipt can be expected..</param>
         /// <param name="Direction">The direction of the message..</param>
         /// <param name="Metadata">Additional metadata about this message..</param>
-        public OpenNormalizedMessage(string Id = null, OpenMessagingChannel Channel = null, TypeEnum? Type = null, string Text = null, List<OpenMessageContent> Content = null, List<OpenMessageEvent> Events = null, StatusEnum? Status = null, List<Reason> Reasons = null, bool? IsFinalReceipt = null, DirectionEnum? Direction = null, Dictionary<string, string> Metadata = null)
+        public OpenNormalizedMessage(string Id = null, OpenMessagingChannel Channel = null, TypeEnum? Type = null, string Text = null, List<OpenMessageContent> Content = null, StatusEnum? Status = null, List<Reason> Reasons = null, bool? IsFinalReceipt = null, DirectionEnum? Direction = null, Dictionary<string, string> Metadata = null)
         {
             this.Id = Id;
             this.Channel = Channel;
             this.Type = Type;
             this.Text = Text;
             this.Content = Content;
-            this.Events = Events;
             this.Status = Status;
             this.Reasons = Reasons;
             this.IsFinalReceipt = IsFinalReceipt;
@@ -223,15 +215,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
-        /// <summary>
-        /// List of event elements.
-        /// </summary>
-        /// <value>List of event elements.</value>
-        [DataMember(Name="events", EmitDefaultValue=false)]
-        public List<OpenMessageEvent> Events { get; set; }
-
-
-
 
 
         /// <summary>
@@ -276,7 +259,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Content: ").Append(Content).Append("\n");
-            sb.Append("  Events: ").Append(Events).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Reasons: ").Append(Reasons).Append("\n");
             sb.Append("  IsFinalReceipt: ").Append(IsFinalReceipt).Append("\n");
@@ -348,11 +330,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Content.SequenceEqual(other.Content)
                 ) &&
                 (
-                    this.Events == other.Events ||
-                    this.Events != null &&
-                    this.Events.SequenceEqual(other.Events)
-                ) &&
-                (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
@@ -404,9 +381,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Content != null)
                     hash = hash * 59 + this.Content.GetHashCode();
-
-                if (this.Events != null)
-                    hash = hash * 59 + this.Events.GetHashCode();
 
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();

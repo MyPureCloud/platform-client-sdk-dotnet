@@ -19,6 +19,7 @@ title: LimitChangeRequestDetails
 | **StatusHistory** | [**List&lt;StatusChange&gt;**](StatusChange.html) | List of statuses that a limit change request has gone through | [optional] |
 | **DateCompleted** | **DateTime?** | The date of the limit change request completion (ChangeImplemented, Rejected, or RollbackImplemented. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **RejectReason** | **string** | The reason for rejecting the limit override request | [optional] |
+| **ApprovalNamespaces** | [**List&lt;ApprovalNamespace&gt;**](ApprovalNamespace.html) | The approval breakdown for this override request. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

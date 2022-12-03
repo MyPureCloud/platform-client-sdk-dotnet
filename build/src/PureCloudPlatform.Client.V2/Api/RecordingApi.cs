@@ -651,7 +651,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<RecordingEncryptionConfigurationListing> GetRecordingKeyconfigurationsWithHttpInfo ();
 
         /// <summary>
-        /// Get the local encryption settings
+        /// Get the local encryption settings. Replaced by API recording/keyconfigurations/{keyConfigurationId}
         /// </summary>
         /// <remarks>
         /// 
@@ -662,7 +662,7 @@ namespace PureCloudPlatform.Client.V2.Api
         LocalEncryptionConfiguration GetRecordingLocalkeysSetting (string settingsId);
 
         /// <summary>
-        /// Get the local encryption settings
+        /// Get the local encryption settings. Replaced by API recording/keyconfigurations/{keyConfigurationId}
         /// </summary>
         /// <remarks>
         /// 
@@ -673,7 +673,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<LocalEncryptionConfiguration> GetRecordingLocalkeysSettingWithHttpInfo (string settingsId);
 
         /// <summary>
-        /// gets a list local key settings data
+        /// gets a list local key settings data. Replaced by API recording/keyconfigurations
         /// </summary>
         /// <remarks>
         /// 
@@ -683,7 +683,7 @@ namespace PureCloudPlatform.Client.V2.Api
         LocalEncryptionConfigurationListing GetRecordingLocalkeysSettings ();
 
         /// <summary>
-        /// gets a list local key settings data
+        /// gets a list local key settings data. Replaced by API recording/keyconfigurations
         /// </summary>
         /// <remarks>
         /// 
@@ -1081,7 +1081,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<RecordingEncryptionConfiguration> PostRecordingKeyconfigurationsValidateWithHttpInfo (RecordingEncryptionConfiguration body);
 
         /// <summary>
-        /// create a local recording key
+        /// create a local key management recording key
         /// </summary>
         /// <remarks>
         /// 
@@ -1092,7 +1092,7 @@ namespace PureCloudPlatform.Client.V2.Api
         EncryptionKey PostRecordingLocalkeys (LocalEncryptionKeyRequest body);
 
         /// <summary>
-        /// create a local recording key
+        /// create a local key management recording key
         /// </summary>
         /// <remarks>
         /// 
@@ -1103,7 +1103,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<EncryptionKey> PostRecordingLocalkeysWithHttpInfo (LocalEncryptionKeyRequest body);
 
         /// <summary>
-        /// create settings for local key creation
+        /// create settings for local key creation. Replaced by API recording/keyconfigurations
         /// </summary>
         /// <remarks>
         /// 
@@ -1114,7 +1114,7 @@ namespace PureCloudPlatform.Client.V2.Api
         LocalEncryptionConfiguration PostRecordingLocalkeysSettings (LocalEncryptionConfiguration body);
 
         /// <summary>
-        /// create settings for local key creation
+        /// create settings for local key creation. Replaced by API recording/keyconfigurations
         /// </summary>
         /// <remarks>
         /// 
@@ -1385,7 +1385,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<RecordingEncryptionConfiguration> PutRecordingKeyconfigurationWithHttpInfo (string keyConfigurationId, RecordingEncryptionConfiguration body);
 
         /// <summary>
-        /// Update the local encryption settings
+        /// Update the local encryption settings. Replaced by API recording/keyconfigurations/{keyConfigurationId}
         /// </summary>
         /// <remarks>
         /// 
@@ -1397,7 +1397,7 @@ namespace PureCloudPlatform.Client.V2.Api
         LocalEncryptionConfiguration PutRecordingLocalkeysSetting (string settingsId, LocalEncryptionConfiguration body);
 
         /// <summary>
-        /// Update the local encryption settings
+        /// Update the local encryption settings. Replaced by API recording/keyconfigurations/{keyConfigurationId}
         /// </summary>
         /// <remarks>
         /// 
@@ -2139,7 +2139,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<RecordingEncryptionConfigurationListing>> GetRecordingKeyconfigurationsAsyncWithHttpInfo ();
 
         /// <summary>
-        /// Get the local encryption settings
+        /// Get the local encryption settings. Replaced by API recording/keyconfigurations/{keyConfigurationId}
         /// </summary>
         /// <remarks>
         /// 
@@ -2150,7 +2150,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<LocalEncryptionConfiguration> GetRecordingLocalkeysSettingAsync (string settingsId);
 
         /// <summary>
-        /// Get the local encryption settings
+        /// Get the local encryption settings. Replaced by API recording/keyconfigurations/{keyConfigurationId}
         /// </summary>
         /// <remarks>
         /// 
@@ -2161,7 +2161,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<LocalEncryptionConfiguration>> GetRecordingLocalkeysSettingAsyncWithHttpInfo (string settingsId);
 
         /// <summary>
-        /// gets a list local key settings data
+        /// gets a list local key settings data. Replaced by API recording/keyconfigurations
         /// </summary>
         /// <remarks>
         /// 
@@ -2171,7 +2171,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<LocalEncryptionConfigurationListing> GetRecordingLocalkeysSettingsAsync ();
 
         /// <summary>
-        /// gets a list local key settings data
+        /// gets a list local key settings data. Replaced by API recording/keyconfigurations
         /// </summary>
         /// <remarks>
         /// 
@@ -2569,7 +2569,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<RecordingEncryptionConfiguration>> PostRecordingKeyconfigurationsValidateAsyncWithHttpInfo (RecordingEncryptionConfiguration body);
 
         /// <summary>
-        /// create a local recording key
+        /// create a local key management recording key
         /// </summary>
         /// <remarks>
         /// 
@@ -2580,7 +2580,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<EncryptionKey> PostRecordingLocalkeysAsync (LocalEncryptionKeyRequest body);
 
         /// <summary>
-        /// create a local recording key
+        /// create a local key management recording key
         /// </summary>
         /// <remarks>
         /// 
@@ -2591,7 +2591,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<EncryptionKey>> PostRecordingLocalkeysAsyncWithHttpInfo (LocalEncryptionKeyRequest body);
 
         /// <summary>
-        /// create settings for local key creation
+        /// create settings for local key creation. Replaced by API recording/keyconfigurations
         /// </summary>
         /// <remarks>
         /// 
@@ -2602,7 +2602,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<LocalEncryptionConfiguration> PostRecordingLocalkeysSettingsAsync (LocalEncryptionConfiguration body);
 
         /// <summary>
-        /// create settings for local key creation
+        /// create settings for local key creation. Replaced by API recording/keyconfigurations
         /// </summary>
         /// <remarks>
         /// 
@@ -2873,7 +2873,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<RecordingEncryptionConfiguration>> PutRecordingKeyconfigurationAsyncWithHttpInfo (string keyConfigurationId, RecordingEncryptionConfiguration body);
 
         /// <summary>
-        /// Update the local encryption settings
+        /// Update the local encryption settings. Replaced by API recording/keyconfigurations/{keyConfigurationId}
         /// </summary>
         /// <remarks>
         /// 
@@ -2885,7 +2885,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<LocalEncryptionConfiguration> PutRecordingLocalkeysSettingAsync (string settingsId, LocalEncryptionConfiguration body);
 
         /// <summary>
-        /// Update the local encryption settings
+        /// Update the local encryption settings. Replaced by API recording/keyconfigurations/{keyConfigurationId}
         /// </summary>
         /// <remarks>
         /// 
@@ -7992,7 +7992,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the local encryption settings 
+        /// Get the local encryption settings. Replaced by API recording/keyconfigurations/{keyConfigurationId} 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="settingsId">Settings Id</param>
@@ -8004,7 +8004,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the local encryption settings 
+        /// Get the local encryption settings. Replaced by API recording/keyconfigurations/{keyConfigurationId} 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="settingsId">Settings Id</param>
@@ -8086,7 +8086,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get the local encryption settings 
+        /// Get the local encryption settings. Replaced by API recording/keyconfigurations/{keyConfigurationId} 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="settingsId">Settings Id</param>
@@ -8099,7 +8099,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get the local encryption settings 
+        /// Get the local encryption settings. Replaced by API recording/keyconfigurations/{keyConfigurationId} 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="settingsId">Settings Id</param>
@@ -8183,7 +8183,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// gets a list local key settings data 
+        /// gets a list local key settings data. Replaced by API recording/keyconfigurations 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>LocalEncryptionConfigurationListing</returns>
@@ -8194,7 +8194,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// gets a list local key settings data 
+        /// gets a list local key settings data. Replaced by API recording/keyconfigurations 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of LocalEncryptionConfigurationListing</returns>
@@ -8271,7 +8271,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// gets a list local key settings data 
+        /// gets a list local key settings data. Replaced by API recording/keyconfigurations 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of LocalEncryptionConfigurationListing</returns>
@@ -8283,7 +8283,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// gets a list local key settings data 
+        /// gets a list local key settings data. Replaced by API recording/keyconfigurations 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (LocalEncryptionConfigurationListing)</returns>
@@ -11606,7 +11606,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// create a local recording key 
+        /// create a local key management recording key 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Local Encryption body</param>
@@ -11618,7 +11618,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// create a local recording key 
+        /// create a local key management recording key 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Local Encryption body</param>
@@ -11705,7 +11705,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// create a local recording key 
+        /// create a local key management recording key 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Local Encryption body</param>
@@ -11718,7 +11718,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// create a local recording key 
+        /// create a local key management recording key 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Local Encryption body</param>
@@ -11807,7 +11807,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// create settings for local key creation 
+        /// create settings for local key creation. Replaced by API recording/keyconfigurations 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Local Encryption Configuration</param>
@@ -11819,7 +11819,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// create settings for local key creation 
+        /// create settings for local key creation. Replaced by API recording/keyconfigurations 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Local Encryption Configuration</param>
@@ -11906,7 +11906,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// create settings for local key creation 
+        /// create settings for local key creation. Replaced by API recording/keyconfigurations 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Local Encryption Configuration</param>
@@ -11919,7 +11919,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// create settings for local key creation 
+        /// create settings for local key creation. Replaced by API recording/keyconfigurations 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Local Encryption Configuration</param>
@@ -14308,7 +14308,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update the local encryption settings 
+        /// Update the local encryption settings. Replaced by API recording/keyconfigurations/{keyConfigurationId} 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="settingsId">Settings Id</param>
@@ -14321,7 +14321,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update the local encryption settings 
+        /// Update the local encryption settings. Replaced by API recording/keyconfigurations/{keyConfigurationId} 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="settingsId">Settings Id</param>
@@ -14413,7 +14413,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update the local encryption settings 
+        /// Update the local encryption settings. Replaced by API recording/keyconfigurations/{keyConfigurationId} 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="settingsId">Settings Id</param>
@@ -14427,7 +14427,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update the local encryption settings 
+        /// Update the local encryption settings. Replaced by API recording/keyconfigurations/{keyConfigurationId} 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="settingsId">Settings Id</param>

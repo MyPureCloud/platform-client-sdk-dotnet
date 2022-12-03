@@ -193,6 +193,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="DialerRulesetConfigChangeCondition" /> class.
         /// </summary>
         /// <param name="DataAction">A UriReference for a resource.</param>
+        /// <param name="AdditionalProperties">AdditionalProperties.</param>
         /// <param name="Type">The type of the condition.</param>
         /// <param name="Inverted">Indicates whether to evaluate for the opposite of the stated condition; default is false.</param>
         /// <param name="AttributeName">An attribute name associated with the condition (applies only to certain rule conditions).</param>
@@ -208,9 +209,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AgentWrapupField">The input field from the data action that the agentWrapup will be passed to for this condition. Valid for a wrapup dataActionCondition..</param>
         /// <param name="ContactColumnToDataActionFieldMappings">A list of mappings defining which contact data fields will be passed to which data action input fields for this condition. Valid for a dataActionCondition..</param>
         /// <param name="Predicates">A list of predicates defining the comparisons to use for this condition. Required for a dataActionCondition..</param>
-        public DialerRulesetConfigChangeCondition(DialerRulesetConfigChangeUriReference DataAction = null, string Type = null, bool? Inverted = null, string AttributeName = null, string Value = null, ValueTypeEnum? ValueType = null, OperatorEnum? Operator = null, List<string> Codes = null, PropertyTypeEnum? PropertyType = null, string Property = null, bool? DataNotFoundResolution = null, string ContactIdField = null, string CallAnalysisResultField = null, string AgentWrapupField = null, List<DialerRulesetConfigChangeContactColumnToDataActionFieldMapping> ContactColumnToDataActionFieldMappings = null, List<DialerRulesetConfigChangeDataActionConditionPredicate> Predicates = null)
+        public DialerRulesetConfigChangeCondition(DialerRulesetConfigChangeUriReference DataAction = null, Dictionary<string, Object> AdditionalProperties = null, string Type = null, bool? Inverted = null, string AttributeName = null, string Value = null, ValueTypeEnum? ValueType = null, OperatorEnum? Operator = null, List<string> Codes = null, PropertyTypeEnum? PropertyType = null, string Property = null, bool? DataNotFoundResolution = null, string ContactIdField = null, string CallAnalysisResultField = null, string AgentWrapupField = null, List<DialerRulesetConfigChangeContactColumnToDataActionFieldMapping> ContactColumnToDataActionFieldMappings = null, List<DialerRulesetConfigChangeDataActionConditionPredicate> Predicates = null)
         {
             this.DataAction = DataAction;
+            this.AdditionalProperties = AdditionalProperties;
             this.Type = Type;
             this.Inverted = Inverted;
             this.AttributeName = AttributeName;
@@ -237,6 +239,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>A UriReference for a resource</value>
         [DataMember(Name="dataAction", EmitDefaultValue=false)]
         public DialerRulesetConfigChangeUriReference DataAction { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets AdditionalProperties
+        /// </summary>
+        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
+        public Dictionary<string, Object> AdditionalProperties { get; set; }
 
 
 
@@ -363,6 +373,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class DialerRulesetConfigChangeCondition {\n");
 
             sb.Append("  DataAction: ").Append(DataAction).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Inverted: ").Append(Inverted).Append("\n");
             sb.Append("  AttributeName: ").Append(AttributeName).Append("\n");
@@ -422,6 +433,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DataAction == other.DataAction ||
                     this.DataAction != null &&
                     this.DataAction.Equals(other.DataAction)
+                ) &&
+                (
+                    this.AdditionalProperties == other.AdditionalProperties ||
+                    this.AdditionalProperties != null &&
+                    this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
                 ) &&
                 (
                     this.Type == other.Type ||
@@ -513,6 +529,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.DataAction != null)
                     hash = hash * 59 + this.DataAction.GetHashCode();
+
+                if (this.AdditionalProperties != null)
+                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
 
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();

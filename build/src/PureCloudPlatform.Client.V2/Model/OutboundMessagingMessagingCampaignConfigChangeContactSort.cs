@@ -55,11 +55,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FieldName">FieldName.</param>
         /// <param name="Direction">Direction.</param>
         /// <param name="Numeric">Whether that column contains numeric data.</param>
-        public OutboundMessagingMessagingCampaignConfigChangeContactSort(string FieldName = null, DirectionEnum? Direction = null, bool? Numeric = null)
+        /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        public OutboundMessagingMessagingCampaignConfigChangeContactSort(string FieldName = null, DirectionEnum? Direction = null, bool? Numeric = null, Dictionary<string, Object> AdditionalProperties = null)
         {
             this.FieldName = FieldName;
             this.Direction = Direction;
             this.Numeric = Numeric;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -83,6 +85,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? Numeric { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets AdditionalProperties
+        /// </summary>
+        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
+        public Dictionary<string, Object> AdditionalProperties { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -95,6 +105,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FieldName: ").Append(FieldName).Append("\n");
             sb.Append("  Direction: ").Append(Direction).Append("\n");
             sb.Append("  Numeric: ").Append(Numeric).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -149,6 +160,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Numeric == other.Numeric ||
                     this.Numeric != null &&
                     this.Numeric.Equals(other.Numeric)
+                ) &&
+                (
+                    this.AdditionalProperties == other.AdditionalProperties ||
+                    this.AdditionalProperties != null &&
+                    this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
                 );
         }
 
@@ -171,6 +187,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Numeric != null)
                     hash = hash * 59 + this.Numeric.GetHashCode();
+
+                if (this.AdditionalProperties != null)
+                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
 
                 return hash;
             }

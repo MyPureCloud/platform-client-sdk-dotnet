@@ -32,12 +32,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AutomaticTimeZoneMapping">whether or not automatic time zone mapping is enabled on the list.</param>
         /// <param name="ZipCodeColumnName">zip code column from the contact list to be used optionally with automatic time zone mapping.</param>
         /// <param name="Division">A UriReference for a resource.</param>
+        /// <param name="AdditionalProperties">AdditionalProperties.</param>
         /// <param name="Id">The globally unique identifier for the object..</param>
         /// <param name="Name">The UI-visible name of the object.</param>
         /// <param name="DateCreated">Creation time of the entity.</param>
         /// <param name="DateModified">Last modified time of the entity.</param>
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
-        public DialerContactlistConfigChangeContactList(List<string> ColumnNames = null, List<DialerContactlistConfigChangeContactPhoneNumberColumn> PhoneColumns = null, List<DialerContactlistConfigChangeEmailColumn> EmailColumns = null, DialerContactlistConfigChangeImportStatus ImportStatus = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, int? Size = null, DialerContactlistConfigChangeUriReference AttemptLimits = null, bool? AutomaticTimeZoneMapping = null, string ZipCodeColumnName = null, DialerContactlistConfigChangeUriReference Division = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null)
+        public DialerContactlistConfigChangeContactList(List<string> ColumnNames = null, List<DialerContactlistConfigChangeContactPhoneNumberColumn> PhoneColumns = null, List<DialerContactlistConfigChangeEmailColumn> EmailColumns = null, DialerContactlistConfigChangeImportStatus ImportStatus = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, int? Size = null, DialerContactlistConfigChangeUriReference AttemptLimits = null, bool? AutomaticTimeZoneMapping = null, string ZipCodeColumnName = null, DialerContactlistConfigChangeUriReference Division = null, Dictionary<string, Object> AdditionalProperties = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null)
         {
             this.ColumnNames = ColumnNames;
             this.PhoneColumns = PhoneColumns;
@@ -50,6 +51,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AutomaticTimeZoneMapping = AutomaticTimeZoneMapping;
             this.ZipCodeColumnName = ZipCodeColumnName;
             this.Division = Division;
+            this.AdditionalProperties = AdditionalProperties;
             this.Id = Id;
             this.Name = Name;
             this.DateCreated = DateCreated;
@@ -158,6 +160,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets AdditionalProperties
+        /// </summary>
+        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
+        public Dictionary<string, Object> AdditionalProperties { get; set; }
+
+
+
+        /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
@@ -221,6 +231,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AutomaticTimeZoneMapping: ").Append(AutomaticTimeZoneMapping).Append("\n");
             sb.Append("  ZipCodeColumnName: ").Append(ZipCodeColumnName).Append("\n");
             sb.Append("  Division: ").Append(Division).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
@@ -322,6 +333,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Division.Equals(other.Division)
                 ) &&
                 (
+                    this.AdditionalProperties == other.AdditionalProperties ||
+                    this.AdditionalProperties != null &&
+                    this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
+                ) &&
+                (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
@@ -391,6 +407,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Division != null)
                     hash = hash * 59 + this.Division.GetHashCode();
+
+                if (this.AdditionalProperties != null)
+                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();

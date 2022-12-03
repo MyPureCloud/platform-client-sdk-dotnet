@@ -94,56 +94,11 @@ namespace PureCloudPlatform.Client.V2.Model
             After
         }
         /// <summary>
-        /// The data type the value should be treated as.
-        /// </summary>
-        /// <value>The data type the value should be treated as.</value>
-        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
-        public enum ValueTypeEnum
-        {
-            /// <summary>
-            /// Your SDK version is out of date and an unknown enum value was encountered. 
-            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
-            /// in the Package Manager Console
-            /// </summary>
-            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
-            OutdatedSdkVersion,
-            
-            /// <summary>
-            /// Enum Datetime for "DateTime"
-            /// </summary>
-            [EnumMember(Value = "DateTime")]
-            Datetime,
-            
-            /// <summary>
-            /// Enum Numeric for "Numeric"
-            /// </summary>
-            [EnumMember(Value = "Numeric")]
-            Numeric,
-            
-            /// <summary>
-            /// Enum Period for "Period"
-            /// </summary>
-            [EnumMember(Value = "Period")]
-            Period,
-            
-            /// <summary>
-            /// Enum String for "String"
-            /// </summary>
-            [EnumMember(Value = "String")]
-            String
-        }
-        /// <summary>
         /// The operation with which to evaluate this condition
         /// </summary>
         /// <value>The operation with which to evaluate this condition</value>
         [DataMember(Name="outputOperator", EmitDefaultValue=false)]
         public OutputOperatorEnum? OutputOperator { get; set; }
-        /// <summary>
-        /// The data type the value should be treated as.
-        /// </summary>
-        /// <value>The data type the value should be treated as.</value>
-        [DataMember(Name="valueType", EmitDefaultValue=false)]
-        public ValueTypeEnum? ValueType { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DigitalDataActionConditionPredicate" /> class.
@@ -158,15 +113,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ComparisonValue">The value to compare against for this condition (required).</param>
         /// <param name="Inverted">If true, inverts the result of evaluating this Predicate. Default is false. (required).</param>
         /// <param name="OutputFieldMissingResolution">The result of this predicate if the requested output field is missing from the data action's result (required).</param>
-        /// <param name="ValueType">The data type the value should be treated as. (required).</param>
-        public DigitalDataActionConditionPredicate(string OutputField = null, OutputOperatorEnum? OutputOperator = null, string ComparisonValue = null, bool? Inverted = null, bool? OutputFieldMissingResolution = null, ValueTypeEnum? ValueType = null)
+        public DigitalDataActionConditionPredicate(string OutputField = null, OutputOperatorEnum? OutputOperator = null, string ComparisonValue = null, bool? Inverted = null, bool? OutputFieldMissingResolution = null)
         {
             this.OutputField = OutputField;
             this.OutputOperator = OutputOperator;
             this.ComparisonValue = ComparisonValue;
             this.Inverted = Inverted;
             this.OutputFieldMissingResolution = OutputFieldMissingResolution;
-            this.ValueType = ValueType;
             
         }
         
@@ -209,8 +162,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? OutputFieldMissingResolution { get; set; }
 
 
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -225,7 +176,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ComparisonValue: ").Append(ComparisonValue).Append("\n");
             sb.Append("  Inverted: ").Append(Inverted).Append("\n");
             sb.Append("  OutputFieldMissingResolution: ").Append(OutputFieldMissingResolution).Append("\n");
-            sb.Append("  ValueType: ").Append(ValueType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -290,11 +240,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.OutputFieldMissingResolution == other.OutputFieldMissingResolution ||
                     this.OutputFieldMissingResolution != null &&
                     this.OutputFieldMissingResolution.Equals(other.OutputFieldMissingResolution)
-                ) &&
-                (
-                    this.ValueType == other.ValueType ||
-                    this.ValueType != null &&
-                    this.ValueType.Equals(other.ValueType)
                 );
         }
 
@@ -323,9 +268,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.OutputFieldMissingResolution != null)
                     hash = hash * 59 + this.OutputFieldMissingResolution.GetHashCode();
-
-                if (this.ValueType != null)
-                    hash = hash * 59 + this.ValueType.GetHashCode();
 
                 return hash;
             }

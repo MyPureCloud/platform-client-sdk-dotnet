@@ -9,6 +9,7 @@ title: ContactlistDownloadReadyExportUri
 |------------ | ------------- | ------------- | -------------|
 | **Uri** | **string** |  | [optional] |
 | **ExportTimestamp** | **string** |  | [optional] |
+| **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 {: class="table table-striped"}
 
 

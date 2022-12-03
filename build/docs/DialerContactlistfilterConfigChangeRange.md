@@ -12,6 +12,7 @@ title: DialerContactlistfilterConfigChangeRange
 | **MinInclusive** | **bool?** | Whether or not to include the minimum in the range | [optional] |
 | **MaxInclusive** | **bool?** | Whether or not to include the maximum in the range | [optional] |
 | **InSet** | **List&lt;string&gt;** | Elements that apply to the IN operator | [optional] |
+| **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 {: class="table table-striped"}
 
 

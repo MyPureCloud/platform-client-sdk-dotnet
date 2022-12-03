@@ -689,7 +689,7 @@ namespace Example
 
 <a name="getlearningmodules"></a>
 
-## [**LearningModulesDomainEntityListing**](LearningModulesDomainEntityListing.html) GetLearningModules (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null)
+## [**LearningModulesDomainEntityListing**](LearningModulesDomainEntityListing.html) GetLearningModules (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null)
 
 
 
@@ -732,11 +732,12 @@ namespace Example
             var searchTerm = searchTerm_example;  // string | Search Term (searchable by name) (optional) 
             var expand = new List<string>(); // List<string> | Fields to expand in response(case insensitive) (optional) 
             var isPublished = isPublished_example;  // string | Specifies if only the Unpublished (isPublished is \"False\") or Published (isPublished is \"True\") modules are returned. If isPublished is \"Any\" or omitted, both types are returned (optional)  (default to Any)
+            var statuses = new List<string>(); // List<string> | Specifies the module statuses to filter by (optional) 
 
             try
             { 
                 // Get all learning modules of an organization
-                LearningModulesDomainEntityListing result = apiInstance.GetLearningModules(isArchived, types, pageSize, pageNumber, sortOrder, sortBy, searchTerm, expand, isPublished);
+                LearningModulesDomainEntityListing result = apiInstance.GetLearningModules(isArchived, types, pageSize, pageNumber, sortOrder, sortBy, searchTerm, expand, isPublished, statuses);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -762,6 +763,7 @@ namespace Example
 | **searchTerm** | **string**| Search Term (searchable by name) | [optional]  |
 | **expand** | [**List<string>**](string.html)| Fields to expand in response(case insensitive) | [optional] <br />**Values**: rule, summaryData |
 | **isPublished** | **string**| Specifies if only the Unpublished (isPublished is \&quot;False\&quot;) or Published (isPublished is \&quot;True\&quot;) modules are returned. If isPublished is \&quot;Any\&quot; or omitted, both types are returned | [optional] [default to Any]<br />**Values**: True, False, Any |
+| **statuses** | [**List<string>**](string.html)| Specifies the module statuses to filter by | [optional] <br />**Values**: Unpublished, Published, Archived |
 {: class="table table-striped"}
 
 ### Return type

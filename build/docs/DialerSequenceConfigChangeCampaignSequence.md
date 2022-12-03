@@ -12,6 +12,7 @@ title: DialerSequenceConfigChangeCampaignSequence
 | **Status** | **string** |  | [optional] |
 | **StopMessage** | **string** | if a sequence has unexpectedly stopped, this message provides the reason | [optional] |
 | **Repeat** | **bool?** | indicates if a sequence is to repeat from the beginning after the last campaign completes; default is false | [optional] |
+| **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** | The UI-visible name of the object | [optional] |
 | **DateCreated** | **DateTime?** | Creation time of the entity | [optional] |

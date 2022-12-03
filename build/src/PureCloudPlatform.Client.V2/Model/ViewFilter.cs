@@ -1041,6 +1041,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Googledialogflowcxresell,
             
             /// <summary>
+            /// Enum Googlesttbotflow for "GoogleSttBotFlow"
+            /// </summary>
+            [EnumMember(Value = "GoogleSttBotFlow")]
+            Googlesttbotflow,
+            
+            /// <summary>
             /// Enum Microsoftsttbotflow for "MicrosoftSttBotFlow"
             /// </summary>
             [EnumMember(Value = "MicrosoftSttBotFlow")]
@@ -1469,7 +1475,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IsAcdInteraction">Filter to indicate if interaction was ACD or non-ACD.</param>
         /// <param name="HasFax">Filters to indicate if interaction has FAX.</param>
         /// <param name="DataActionIds">The list of Data Action IDs .</param>
-        /// <param name="ActionCategoryName">Action Category Name.</param>
+        /// <param name="ActionCategoryName">Deprecated - Please use integrationIds instead.</param>
         /// <param name="IntegrationIds">The list of integration IDs for Data Action.</param>
         /// <param name="ResponseStatuses">The list of Response codes for Data Action.</param>
         /// <param name="AvailableDashboard">Filter to indicate the availability of the dashboard is public or private..</param>
@@ -2939,9 +2945,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Action Category Name
+        /// Deprecated - Please use integrationIds instead
         /// </summary>
-        /// <value>Action Category Name</value>
+        /// <value>Deprecated - Please use integrationIds instead</value>
         [DataMember(Name="actionCategoryName", EmitDefaultValue=false)]
         public string ActionCategoryName { get; set; }
 

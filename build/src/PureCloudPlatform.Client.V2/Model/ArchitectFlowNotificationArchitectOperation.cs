@@ -167,9 +167,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ActionStatus">The action status.</param>
         /// <param name="ErrorMessage">The error message, if the action failed.</param>
         /// <param name="ErrorCode">The error code, if the action failed.</param>
-        /// <param name="ErrorMessageParams">The error message params, if the action failed.</param>
+        /// <param name="ErrorMessageParams">ErrorMessageParams.</param>
         /// <param name="ErrorDetails">The error details, if the action failed.</param>
-        public ArchitectFlowNotificationArchitectOperation(string Id = null, bool? Complete = null, ArchitectFlowNotificationUser User = null, ArchitectFlowNotificationClient Client = null, ActionNameEnum? ActionName = null, ActionStatusEnum? ActionStatus = null, string ErrorMessage = null, string ErrorCode = null, Object ErrorMessageParams = null, List<ArchitectFlowNotificationErrorDetail> ErrorDetails = null)
+        public ArchitectFlowNotificationArchitectOperation(string Id = null, bool? Complete = null, ArchitectFlowNotificationUser User = null, ArchitectFlowNotificationClient Client = null, ActionNameEnum? ActionName = null, ActionStatusEnum? ActionStatus = null, string ErrorMessage = null, string ErrorCode = null, ArchitectFlowNotificationErrorMessageParams ErrorMessageParams = null, List<ArchitectFlowNotificationErrorDetail> ErrorDetails = null)
         {
             this.Id = Id;
             this.Complete = Complete;
@@ -243,11 +243,10 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The error message params, if the action failed
+        /// Gets or Sets ErrorMessageParams
         /// </summary>
-        /// <value>The error message params, if the action failed</value>
         [DataMember(Name="errorMessageParams", EmitDefaultValue=false)]
-        public Object ErrorMessageParams { get; set; }
+        public ArchitectFlowNotificationErrorMessageParams ErrorMessageParams { get; set; }
 
 
 

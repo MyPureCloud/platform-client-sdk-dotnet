@@ -33,9 +33,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CommunicationId">A unique Id (V4 UUID) identifying this communication (required).</param>
         /// <param name="IvrPhoneNumber">The phone number for this IVR, if any is known.</param>
         /// <param name="IvrName">A displayable name for this IVR, if any is known..</param>
+        /// <param name="Ani">The automatic number identification if it is available for this conversation..</param>
+        /// <param name="Dnis">The dialed number identification if it is available for this conversation..</param>
         /// <param name="InitialConfiguration">Metadata about this communication. (required).</param>
         /// <param name="SourceConfiguration">Metadata about the source of this communication's interaction. (required).</param>
-        public IvrEstablishedEvent(string EventId = null, DateTime? EventDateTime = null, string ConversationId = null, string CommunicationId = null, string IvrPhoneNumber = null, string IvrName = null, InitialConfiguration InitialConfiguration = null, SourceConfiguration SourceConfiguration = null)
+        public IvrEstablishedEvent(string EventId = null, DateTime? EventDateTime = null, string ConversationId = null, string CommunicationId = null, string IvrPhoneNumber = null, string IvrName = null, string Ani = null, string Dnis = null, InitialConfiguration InitialConfiguration = null, SourceConfiguration SourceConfiguration = null)
         {
             this.EventId = EventId;
             this.EventDateTime = EventDateTime;
@@ -43,6 +45,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CommunicationId = CommunicationId;
             this.IvrPhoneNumber = IvrPhoneNumber;
             this.IvrName = IvrName;
+            this.Ani = Ani;
+            this.Dnis = Dnis;
             this.InitialConfiguration = InitialConfiguration;
             this.SourceConfiguration = SourceConfiguration;
             
@@ -105,6 +109,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The automatic number identification if it is available for this conversation.
+        /// </summary>
+        /// <value>The automatic number identification if it is available for this conversation.</value>
+        [DataMember(Name="ani", EmitDefaultValue=false)]
+        public string Ani { get; set; }
+
+
+
+        /// <summary>
+        /// The dialed number identification if it is available for this conversation.
+        /// </summary>
+        /// <value>The dialed number identification if it is available for this conversation.</value>
+        [DataMember(Name="dnis", EmitDefaultValue=false)]
+        public string Dnis { get; set; }
+
+
+
+        /// <summary>
         /// Metadata about this communication.
         /// </summary>
         /// <value>Metadata about this communication.</value>
@@ -136,6 +158,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CommunicationId: ").Append(CommunicationId).Append("\n");
             sb.Append("  IvrPhoneNumber: ").Append(IvrPhoneNumber).Append("\n");
             sb.Append("  IvrName: ").Append(IvrName).Append("\n");
+            sb.Append("  Ani: ").Append(Ani).Append("\n");
+            sb.Append("  Dnis: ").Append(Dnis).Append("\n");
             sb.Append("  InitialConfiguration: ").Append(InitialConfiguration).Append("\n");
             sb.Append("  SourceConfiguration: ").Append(SourceConfiguration).Append("\n");
             sb.Append("}\n");
@@ -209,6 +233,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.IvrName.Equals(other.IvrName)
                 ) &&
                 (
+                    this.Ani == other.Ani ||
+                    this.Ani != null &&
+                    this.Ani.Equals(other.Ani)
+                ) &&
+                (
+                    this.Dnis == other.Dnis ||
+                    this.Dnis != null &&
+                    this.Dnis.Equals(other.Dnis)
+                ) &&
+                (
                     this.InitialConfiguration == other.InitialConfiguration ||
                     this.InitialConfiguration != null &&
                     this.InitialConfiguration.Equals(other.InitialConfiguration)
@@ -248,6 +282,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.IvrName != null)
                     hash = hash * 59 + this.IvrName.GetHashCode();
+
+                if (this.Ani != null)
+                    hash = hash * 59 + this.Ani.GetHashCode();
+
+                if (this.Dnis != null)
+                    hash = hash * 59 + this.Dnis.GetHashCode();
 
                 if (this.InitialConfiguration != null)
                     hash = hash * 59 + this.InitialConfiguration.GetHashCode();

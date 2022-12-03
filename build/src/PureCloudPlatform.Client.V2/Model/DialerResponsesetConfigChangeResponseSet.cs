@@ -23,15 +23,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Responses">Map of disposition identifiers to reactions. For example: {\"disposition.classification.callable.person\": {\"reactionType\": \"transfer\"}}.</param>
         /// <param name="BeepDetectionEnabled">When beep detection is enabled, answering machine detection will wait for the beep before transferring the call.</param>
+        /// <param name="AdditionalProperties">AdditionalProperties.</param>
         /// <param name="Id">The globally unique identifier for the object..</param>
         /// <param name="Name">The UI-visible name of the object.</param>
         /// <param name="DateCreated">Creation time of the entity.</param>
         /// <param name="DateModified">Last modified time of the entity.</param>
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
-        public DialerResponsesetConfigChangeResponseSet(Dictionary<string, DialerResponsesetConfigChangeReaction> Responses = null, bool? BeepDetectionEnabled = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null)
+        public DialerResponsesetConfigChangeResponseSet(Dictionary<string, DialerResponsesetConfigChangeReaction> Responses = null, bool? BeepDetectionEnabled = null, Dictionary<string, Object> AdditionalProperties = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null)
         {
             this.Responses = Responses;
             this.BeepDetectionEnabled = BeepDetectionEnabled;
+            this.AdditionalProperties = AdditionalProperties;
             this.Id = Id;
             this.Name = Name;
             this.DateCreated = DateCreated;
@@ -57,6 +59,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>When beep detection is enabled, answering machine detection will wait for the beep before transferring the call</value>
         [DataMember(Name="beepDetectionEnabled", EmitDefaultValue=false)]
         public bool? BeepDetectionEnabled { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets AdditionalProperties
+        /// </summary>
+        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
+        public Dictionary<string, Object> AdditionalProperties { get; set; }
 
 
 
@@ -115,6 +125,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Responses: ").Append(Responses).Append("\n");
             sb.Append("  BeepDetectionEnabled: ").Append(BeepDetectionEnabled).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
@@ -171,6 +182,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.BeepDetectionEnabled.Equals(other.BeepDetectionEnabled)
                 ) &&
                 (
+                    this.AdditionalProperties == other.AdditionalProperties ||
+                    this.AdditionalProperties != null &&
+                    this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
+                ) &&
+                (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
@@ -213,6 +229,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.BeepDetectionEnabled != null)
                     hash = hash * 59 + this.BeepDetectionEnabled.GetHashCode();
+
+                if (this.AdditionalProperties != null)
+                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();

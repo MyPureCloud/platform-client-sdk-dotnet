@@ -34,6 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Nbotsessionturns for "nBotSessionTurns"
+            /// </summary>
+            [EnumMember(Value = "nBotSessionTurns")]
+            Nbotsessionturns,
+            
+            /// <summary>
             /// Enum Nbotsessions for "nBotSessions"
             /// </summary>
             [EnumMember(Value = "nBotSessions")]

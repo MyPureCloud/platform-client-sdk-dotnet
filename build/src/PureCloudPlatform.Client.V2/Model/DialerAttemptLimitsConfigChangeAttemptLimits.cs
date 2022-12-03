@@ -60,12 +60,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ResetPeriod">After how long the number of attempts will be set back to 0.</param>
         /// <param name="RecallEntries">Configuration for recall attempts.</param>
         /// <param name="BreadthFirstRecalls">Whether recalls are performed before considering other numbers (true) or after (false).</param>
+        /// <param name="AdditionalProperties">AdditionalProperties.</param>
         /// <param name="Id">The globally unique identifier for the object..</param>
         /// <param name="Name">The UI-visible name of the object.</param>
         /// <param name="DateCreated">Creation time of the entity.</param>
         /// <param name="DateModified">Last modified time of the entity.</param>
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
-        public DialerAttemptLimitsConfigChangeAttemptLimits(int? MaxAttemptsPerContact = null, int? MaxAttemptsPerNumber = null, string TimeZoneId = null, ResetPeriodEnum? ResetPeriod = null, Dictionary<string, DialerAttemptLimitsConfigChangeRecallEntry> RecallEntries = null, bool? BreadthFirstRecalls = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null)
+        public DialerAttemptLimitsConfigChangeAttemptLimits(int? MaxAttemptsPerContact = null, int? MaxAttemptsPerNumber = null, string TimeZoneId = null, ResetPeriodEnum? ResetPeriod = null, Dictionary<string, DialerAttemptLimitsConfigChangeRecallEntry> RecallEntries = null, bool? BreadthFirstRecalls = null, Dictionary<string, Object> AdditionalProperties = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null)
         {
             this.MaxAttemptsPerContact = MaxAttemptsPerContact;
             this.MaxAttemptsPerNumber = MaxAttemptsPerNumber;
@@ -73,6 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ResetPeriod = ResetPeriod;
             this.RecallEntries = RecallEntries;
             this.BreadthFirstRecalls = BreadthFirstRecalls;
+            this.AdditionalProperties = AdditionalProperties;
             this.Id = Id;
             this.Name = Name;
             this.DateCreated = DateCreated;
@@ -125,6 +127,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Whether recalls are performed before considering other numbers (true) or after (false)</value>
         [DataMember(Name="breadthFirstRecalls", EmitDefaultValue=false)]
         public bool? BreadthFirstRecalls { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets AdditionalProperties
+        /// </summary>
+        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
+        public Dictionary<string, Object> AdditionalProperties { get; set; }
 
 
 
@@ -187,6 +197,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ResetPeriod: ").Append(ResetPeriod).Append("\n");
             sb.Append("  RecallEntries: ").Append(RecallEntries).Append("\n");
             sb.Append("  BreadthFirstRecalls: ").Append(BreadthFirstRecalls).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
@@ -263,6 +274,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.BreadthFirstRecalls.Equals(other.BreadthFirstRecalls)
                 ) &&
                 (
+                    this.AdditionalProperties == other.AdditionalProperties ||
+                    this.AdditionalProperties != null &&
+                    this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
+                ) &&
+                (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
@@ -317,6 +333,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.BreadthFirstRecalls != null)
                     hash = hash * 59 + this.BreadthFirstRecalls.GetHashCode();
+
+                if (this.AdditionalProperties != null)
+                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();

@@ -24,11 +24,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ColumnName">name of the phone column.</param>
         /// <param name="Type">type of the phone column, for example, 'cell' or 'home'.</param>
         /// <param name="CallableTimeColumn">name of the column indicating the timezone to be considered for determining callable times.</param>
-        public DialerContactlistConfigChangeContactPhoneNumberColumn(string ColumnName = null, string Type = null, string CallableTimeColumn = null)
+        /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        public DialerContactlistConfigChangeContactPhoneNumberColumn(string ColumnName = null, string Type = null, string CallableTimeColumn = null, Dictionary<string, Object> AdditionalProperties = null)
         {
             this.ColumnName = ColumnName;
             this.Type = Type;
             this.CallableTimeColumn = CallableTimeColumn;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -60,6 +62,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public string CallableTimeColumn { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets AdditionalProperties
+        /// </summary>
+        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
+        public Dictionary<string, Object> AdditionalProperties { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -72,6 +82,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ColumnName: ").Append(ColumnName).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  CallableTimeColumn: ").Append(CallableTimeColumn).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -126,6 +137,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CallableTimeColumn == other.CallableTimeColumn ||
                     this.CallableTimeColumn != null &&
                     this.CallableTimeColumn.Equals(other.CallableTimeColumn)
+                ) &&
+                (
+                    this.AdditionalProperties == other.AdditionalProperties ||
+                    this.AdditionalProperties != null &&
+                    this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
                 );
         }
 
@@ -148,6 +164,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.CallableTimeColumn != null)
                     hash = hash * 59 + this.CallableTimeColumn.GetHashCode();
+
+                if (this.AdditionalProperties != null)
+                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
 
                 return hash;
             }

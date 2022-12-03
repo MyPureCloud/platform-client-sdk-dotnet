@@ -40,6 +40,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Rds,
             
             /// <summary>
+            /// Enum RdsCustom for "rds_custom"
+            /// </summary>
+            [EnumMember(Value = "rds_custom")]
+            RdsCustom,
+            
+            /// <summary>
             /// Enum Dnccom for "dnc.com"
             /// </summary>
             [EnumMember(Value = "dnc.com")]
@@ -76,7 +82,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Phone for "Phone"
             /// </summary>
             [EnumMember(Value = "Phone")]
-            Phone
+            Phone,
+            
+            /// <summary>
+            /// Enum Any for "Any"
+            /// </summary>
+            [EnumMember(Value = "Any")]
+            Any
         }
         /// <summary>
         /// The type of the DncList.

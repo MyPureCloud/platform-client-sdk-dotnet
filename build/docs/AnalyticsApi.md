@@ -252,7 +252,7 @@ void (empty response body)
 
 <a name="getanalyticsbotflowreportingturns"></a>
 
-## [**ReportingTurnsResponse**](ReportingTurnsResponse.html) GetAnalyticsBotflowReportingturns (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null, string language = null)
+## [**ReportingTurnsResponse**](ReportingTurnsResponse.html) GetAnalyticsBotflowReportingturns (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null)
 
 
 
@@ -292,11 +292,12 @@ namespace Example
             var actionId = actionId_example;  // string | Optional action ID to get the reporting turns associated to a particular flow action (optional) 
             var sessionId = sessionId_example;  // string | Optional session ID to get the reporting turns for a particular session (optional) 
             var language = en-us;  // string | Optional language code to get the reporting turns for a particular language (optional) 
+            var askActionResults = askActionResults_example;  // string | Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional) 
 
             try
             { 
                 // Get Reporting Turns.
-                ReportingTurnsResponse result = apiInstance.GetAnalyticsBotflowReportingturns(botFlowId, after, pageSize, actionId, sessionId, language);
+                ReportingTurnsResponse result = apiInstance.GetAnalyticsBotflowReportingturns(botFlowId, after, pageSize, actionId, sessionId, language, askActionResults);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -319,6 +320,7 @@ namespace Example
 | **actionId** | **string**| Optional action ID to get the reporting turns associated to a particular flow action | [optional]  |
 | **sessionId** | **string**| Optional session ID to get the reporting turns for a particular session | [optional]  |
 | **language** | **string**| Optional language code to get the reporting turns for a particular language | [optional]  |
+| **askActionResults** | **string**| Optional case-insensitive comma separated list of ask action results to filter the reporting turns. | [optional] <br />**Values**: AgentRequestedByUser, ConfirmationRequired, DisambiguationRequired, Error, ExpressionError, NoInputCollection, NoInputConfirmation, NoInputDisambiguation, NoMatchCollection, NoMatchConfirmation, NoMatchDisambiguation, SuccessCollection, SuccessConfirmationNo, SuccessConfirmationYes, SuccessDisambiguation, SuccessDisambiguationNone |
 {: class="table table-striped"}
 
 ### Return type

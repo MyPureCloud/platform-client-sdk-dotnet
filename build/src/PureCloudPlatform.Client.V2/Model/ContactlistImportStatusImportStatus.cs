@@ -59,13 +59,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CompletedRecords">number of records finished importing.</param>
         /// <param name="PercentageComplete">percentage of records finished importing.</param>
         /// <param name="FailureReason">if the import has failed, the reason for the failure.</param>
-        public ContactlistImportStatusImportStatus(ImportStateEnum? ImportState = null, int? TotalRecords = null, int? CompletedRecords = null, int? PercentageComplete = null, string FailureReason = null)
+        /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        public ContactlistImportStatusImportStatus(ImportStateEnum? ImportState = null, int? TotalRecords = null, int? CompletedRecords = null, int? PercentageComplete = null, string FailureReason = null, Dictionary<string, Object> AdditionalProperties = null)
         {
             this.ImportState = ImportState;
             this.TotalRecords = TotalRecords;
             this.CompletedRecords = CompletedRecords;
             this.PercentageComplete = PercentageComplete;
             this.FailureReason = FailureReason;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -108,6 +110,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public string FailureReason { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets AdditionalProperties
+        /// </summary>
+        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
+        public Dictionary<string, Object> AdditionalProperties { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -122,6 +132,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CompletedRecords: ").Append(CompletedRecords).Append("\n");
             sb.Append("  PercentageComplete: ").Append(PercentageComplete).Append("\n");
             sb.Append("  FailureReason: ").Append(FailureReason).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -186,6 +197,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FailureReason == other.FailureReason ||
                     this.FailureReason != null &&
                     this.FailureReason.Equals(other.FailureReason)
+                ) &&
+                (
+                    this.AdditionalProperties == other.AdditionalProperties ||
+                    this.AdditionalProperties != null &&
+                    this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
                 );
         }
 
@@ -214,6 +230,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.FailureReason != null)
                     hash = hash * 59 + this.FailureReason.GetHashCode();
+
+                if (this.AdditionalProperties != null)
+                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
 
                 return hash;
             }

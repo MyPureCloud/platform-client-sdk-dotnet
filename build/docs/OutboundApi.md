@@ -105,6 +105,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostOutboundContactlists**](OutboundApi.html#postoutboundcontactlists) | **POST** /api/v2/outbound/contactlists | Create a contact List. |
 | [**PostOutboundConversationDnc**](OutboundApi.html#postoutboundconversationdnc) | **POST** /api/v2/outbound/conversations/{conversationId}/dnc | Add phone numbers to a Dialer DNC list. |
 | [**PostOutboundDigitalrulesets**](OutboundApi.html#postoutbounddigitalrulesets) | **POST** /api/v2/outbound/digitalrulesets | Create an Outbound Digital Rule Set |
+| [**PostOutboundDnclistEmailaddresses**](OutboundApi.html#postoutbounddnclistemailaddresses) | **POST** /api/v2/outbound/dnclists/{dncListId}/emailaddresses | Add email addresses to a DNC list. |
 | [**PostOutboundDnclistExport**](OutboundApi.html#postoutbounddnclistexport) | **POST** /api/v2/outbound/dnclists/{dncListId}/export | Initiate the export of a dnc list. |
 | [**PostOutboundDnclistPhonenumbers**](OutboundApi.html#postoutbounddnclistphonenumbers) | **POST** /api/v2/outbound/dnclists/{dncListId}/phonenumbers | Add phone numbers to a DNC list. |
 | [**PostOutboundDnclists**](OutboundApi.html#postoutbounddnclists) | **POST** /api/v2/outbound/dnclists | Create dialer DNC list |
@@ -3972,7 +3973,7 @@ namespace Example
 | **allowEmptyResult** | **bool?**| Whether to return an empty page when there are no results for that page | [optional] [default to false] |
 | **filterType** | **string**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
 | **name** | **string**| Name | [optional]  |
-| **dncSourceType** | **string**| DncSourceType | [optional] <br />**Values**: rds, dnc.com, gryphon |
+| **dncSourceType** | **string**| DncSourceType | [optional] <br />**Values**: rds, rds_custom, dnc.com, gryphon |
 | **divisionId** | [**List<string>**](string.html)| Division ID(s) | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] <br />**Values**: ascending, descending |
@@ -4128,7 +4129,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **filterType** | **string**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
 | **name** | **string**| Name | [optional]  |
-| **dncSourceType** | **string**| DncSourceType | [optional] <br />**Values**: rds, dnc.com, gryphon |
+| **dncSourceType** | **string**| DncSourceType | [optional] <br />**Values**: rds, rds_custom, dnc.com, gryphon |
 | **id** | [**List<string>**](string.html)| id | [optional]  |
 | **sortBy** | **string**| Sort by | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
@@ -6807,6 +6808,74 @@ namespace Example
 ### Return type
 
 [**DigitalRuleSet**](DigitalRuleSet.html)
+
+<a name="postoutbounddnclistemailaddresses"></a>
+
+## void PostOutboundDnclistEmailaddresses (string dncListId, List<string> body)
+
+
+
+Add email addresses to a DNC list.
+
+Only Internal DNC lists may be appended to
+
+
+
+Requires ANY permissions: 
+
+* outbound:dnc:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostOutboundDnclistEmailaddressesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var dncListId = dncListId_example;  // string | DncList ID
+            var body = new List<string>(); // List<string> | DNC email addresses
+
+            try
+            { 
+                // Add email addresses to a DNC list.
+                apiInstance.PostOutboundDnclistEmailaddresses(dncListId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostOutboundDnclistEmailaddresses: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **dncListId** | **string**| DncList ID |  |
+| **body** | [**List<string>**](string.html)| DNC email addresses |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="postoutbounddnclistexport"></a>
 

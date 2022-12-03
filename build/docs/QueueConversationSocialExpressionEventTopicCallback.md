@@ -33,6 +33,7 @@ title: QueueConversationSocialExpressionEventTopicCallback
 | **AfterCallWorkRequired** | **bool?** | Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested. | [optional] |
 | **CallerId** | **string** | The phone number displayed to recipients of the phone call. The value should conform to the E164 format. | [optional] |
 | **CallerIdName** | **string** | The name displayed to recipients of the phone call. | [optional] |
+| **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 {: class="table table-striped"}
 
 

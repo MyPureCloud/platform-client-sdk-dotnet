@@ -10,6 +10,7 @@ title: DialerCallabletimesetConfigChangeTimeSlot
 | **StartTime** | **string** | The start time of this time slot | [optional] |
 | **StopTime** | **string** | The stop time of this time slot | [optional] |
 | **Day** | **int?** | The day this time slot applies | [optional] |
+| **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 {: class="table table-striped"}
 
 

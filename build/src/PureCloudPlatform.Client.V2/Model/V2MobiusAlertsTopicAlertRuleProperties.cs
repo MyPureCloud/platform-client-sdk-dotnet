@@ -13,17 +13,16 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Message event element.
+    /// V2MobiusAlertsTopicAlertRuleProperties
     /// </summary>
     [DataContract]
-    public partial class OpenMessageEvent :  IEquatable<OpenMessageEvent>
+    public partial class V2MobiusAlertsTopicAlertRuleProperties :  IEquatable<V2MobiusAlertsTopicAlertRuleProperties>
     {
         /// <summary>
-        /// Type of this event element
+        /// Gets or Sets Type
         /// </summary>
-        /// <value>Type of this event element</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
-        public enum EventTypeEnum
+        public enum TypeEnum
         {
             /// <summary>
             /// Your SDK version is out of date and an unknown enum value was encountered. 
@@ -34,45 +33,59 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Typing for "Typing"
+            /// Enum Conversationmetrics for "ConversationMetrics"
             /// </summary>
-            [EnumMember(Value = "Typing")]
-            Typing
+            [EnumMember(Value = "ConversationMetrics")]
+            Conversationmetrics,
+            
+            /// <summary>
+            /// Enum Userpresence for "UserPresence"
+            /// </summary>
+            [EnumMember(Value = "UserPresence")]
+            Userpresence,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown
         }
         /// <summary>
-        /// Type of this event element
+        /// Gets or Sets Type
         /// </summary>
-        /// <value>Type of this event element</value>
-        [DataMember(Name="eventType", EmitDefaultValue=false)]
-        public EventTypeEnum? EventType { get; set; }
-
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="OpenMessageEvent" /> class.
+        /// Initializes a new instance of the <see cref="V2MobiusAlertsTopicAlertRuleProperties" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected OpenMessageEvent() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="OpenMessageEvent" /> class.
-        /// </summary>
-        /// <param name="EventType">Type of this event element (required).</param>
-        /// <param name="Typing">Typing event..</param>
-        public OpenMessageEvent(EventTypeEnum? EventType = null, EventTyping Typing = null)
+        /// <param name="Id">Id.</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="Type">Type.</param>
+        public V2MobiusAlertsTopicAlertRuleProperties(Guid? Id = null, string Name = null, TypeEnum? Type = null)
         {
-            this.EventType = EventType;
-            this.Typing = Typing;
+            this.Id = Id;
+            this.Name = Name;
+            this.Type = Type;
             
         }
         
 
 
+        /// <summary>
+        /// Gets or Sets Id
+        /// </summary>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public Guid? Id { get; set; }
+
 
 
         /// <summary>
-        /// Typing event.
+        /// Gets or Sets Name
         /// </summary>
-        /// <value>Typing event.</value>
-        [DataMember(Name="typing", EmitDefaultValue=false)]
-        public EventTyping Typing { get; set; }
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
+
+
 
 
         /// <summary>
@@ -82,10 +95,11 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class OpenMessageEvent {\n");
+            sb.Append("class V2MobiusAlertsTopicAlertRuleProperties {\n");
 
-            sb.Append("  EventType: ").Append(EventType).Append("\n");
-            sb.Append("  Typing: ").Append(Typing).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -111,15 +125,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as OpenMessageEvent);
+            return this.Equals(obj as V2MobiusAlertsTopicAlertRuleProperties);
         }
 
         /// <summary>
-        /// Returns true if OpenMessageEvent instances are equal
+        /// Returns true if V2MobiusAlertsTopicAlertRuleProperties instances are equal
         /// </summary>
-        /// <param name="other">Instance of OpenMessageEvent to be compared</param>
+        /// <param name="other">Instance of V2MobiusAlertsTopicAlertRuleProperties to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(OpenMessageEvent other)
+        public bool Equals(V2MobiusAlertsTopicAlertRuleProperties other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -127,14 +141,19 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.EventType == other.EventType ||
-                    this.EventType != null &&
-                    this.EventType.Equals(other.EventType)
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
                 ) &&
                 (
-                    this.Typing == other.Typing ||
-                    this.Typing != null &&
-                    this.Typing.Equals(other.Typing)
+                    this.Name == other.Name ||
+                    this.Name != null &&
+                    this.Name.Equals(other.Name)
+                ) &&
+                (
+                    this.Type == other.Type ||
+                    this.Type != null &&
+                    this.Type.Equals(other.Type)
                 );
         }
 
@@ -149,11 +168,14 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.EventType != null)
-                    hash = hash * 59 + this.EventType.GetHashCode();
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
 
-                if (this.Typing != null)
-                    hash = hash * 59 + this.Typing.GetHashCode();
+                if (this.Name != null)
+                    hash = hash * 59 + this.Name.GetHashCode();
+
+                if (this.Type != null)
+                    hash = hash * 59 + this.Type.GetHashCode();
 
                 return hash;
             }

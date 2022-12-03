@@ -12,6 +12,7 @@ title: ContactlistImportStatusImportStatus
 | **CompletedRecords** | **int?** | number of records finished importing | [optional] |
 | **PercentageComplete** | **int?** | percentage of records finished importing | [optional] |
 | **FailureReason** | **string** | if the import has failed, the reason for the failure | [optional] |
+| **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 {: class="table table-striped"}
 
 

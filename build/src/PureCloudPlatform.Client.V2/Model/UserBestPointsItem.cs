@@ -34,10 +34,10 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Monthly for "Monthly"
+            /// Enum Daily for "Daily"
             /// </summary>
-            [EnumMember(Value = "Monthly")]
-            Monthly,
+            [EnumMember(Value = "Daily")]
+            Daily,
             
             /// <summary>
             /// Enum Weekly for "Weekly"
@@ -46,10 +46,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Weekly,
             
             /// <summary>
-            /// Enum Daily for "Daily"
+            /// Enum Monthly for "Monthly"
             /// </summary>
-            [EnumMember(Value = "Daily")]
-            Daily
+            [EnumMember(Value = "Monthly")]
+            Monthly
         }
         /// <summary>
         /// Best points aggregation interval granularity

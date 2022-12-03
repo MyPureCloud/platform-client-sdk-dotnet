@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="DataActionConditionSettings" /> class.
         /// </summary>
         /// <param name="DataActionId">The Data Action Id to use for this condition. (required).</param>
-        /// <param name="ContactIdField">The input field from the data action that the contactId will be passed into. (required).</param>
+        /// <param name="ContactIdField">The input field from the data action that the contactId will be passed into..</param>
         /// <param name="DataNotFoundResolution">The result of this condition if the data action returns a result indicating there was no data. (required).</param>
         /// <param name="Predicates">A list of predicates defining the comparisons to use for this condition..</param>
         /// <param name="ContactColumnToDataActionFieldMappings">A list of mappings defining which contact data fields will be passed to which data action input fields..</param>

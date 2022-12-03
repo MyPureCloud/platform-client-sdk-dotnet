@@ -52,11 +52,56 @@ namespace PureCloudPlatform.Client.V2.Model
             Message
         }
         /// <summary>
+        /// The state of the model
+        /// </summary>
+        /// <value>The state of the model</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum StateEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Trained for "Trained"
+            /// </summary>
+            [EnumMember(Value = "Trained")]
+            Trained,
+            
+            /// <summary>
+            /// Enum Error for "Error"
+            /// </summary>
+            [EnumMember(Value = "Error")]
+            Error,
+            
+            /// <summary>
+            /// Enum Invaliddataset for "InvalidDataset"
+            /// </summary>
+            [EnumMember(Value = "InvalidDataset")]
+            Invaliddataset,
+            
+            /// <summary>
+            /// Enum Inactive for "Inactive"
+            /// </summary>
+            [EnumMember(Value = "Inactive")]
+            Inactive
+        }
+        /// <summary>
         /// The media type of the model.
         /// </summary>
         /// <value>The media type of the model.</value>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; private set; }
+        /// <summary>
+        /// The state of the model
+        /// </summary>
+        /// <value>The state of the model</value>
+        [DataMember(Name="state", EmitDefaultValue=false)]
+        public StateEnum? State { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="PredictorModelBrief" /> class.
         /// </summary>
@@ -86,6 +131,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<PredictorModelRetrainingError> RetrainingErrors { get; private set; }
 
 
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -98,6 +145,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  RetrainingErrors: ").Append(RetrainingErrors).Append("\n");
+            sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -152,6 +200,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RetrainingErrors == other.RetrainingErrors ||
                     this.RetrainingErrors != null &&
                     this.RetrainingErrors.SequenceEqual(other.RetrainingErrors)
+                ) &&
+                (
+                    this.State == other.State ||
+                    this.State != null &&
+                    this.State.Equals(other.State)
                 );
         }
 
@@ -174,6 +227,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.RetrainingErrors != null)
                     hash = hash * 59 + this.RetrainingErrors.GetHashCode();
+
+                if (this.State != null)
+                    hash = hash * 59 + this.State.GetHashCode();
 
                 return hash;
             }

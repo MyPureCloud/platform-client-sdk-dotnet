@@ -117,6 +117,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DevelopmentActivity" /> class.
         /// </summary>
+        /// <param name="IsLatest">True if this is the latest version of assignment assigned to the user.</param>
         /// <param name="Name">The name of the activity.</param>
         /// <param name="Type">The type of activity.</param>
         /// <param name="Status">The status of the activity.</param>
@@ -124,8 +125,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Facilitator">Facilitator of the activity.</param>
         /// <param name="Attendees">List of users attending the activity.</param>
         /// <param name="IsOverdue">Indicates if the activity is overdue.</param>
-        public DevelopmentActivity(string Name = null, TypeEnum? Type = null, StatusEnum? Status = null, DateTime? DateDue = null, UserReference Facilitator = null, List<UserReference> Attendees = null, bool? IsOverdue = null)
+        public DevelopmentActivity(bool? IsLatest = null, string Name = null, TypeEnum? Type = null, StatusEnum? Status = null, DateTime? DateDue = null, UserReference Facilitator = null, List<UserReference> Attendees = null, bool? IsOverdue = null)
         {
+            this.IsLatest = IsLatest;
             this.Name = Name;
             this.Type = Type;
             this.Status = Status;
@@ -189,6 +191,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>True if the activity was passed</value>
         [DataMember(Name="isPassed", EmitDefaultValue=false)]
         public bool? IsPassed { get; private set; }
+
+
+
+        /// <summary>
+        /// True if this is the latest version of assignment assigned to the user
+        /// </summary>
+        /// <value>True if this is the latest version of assignment assigned to the user</value>
+        [DataMember(Name="isLatest", EmitDefaultValue=false)]
+        public bool? IsLatest { get; set; }
 
 
 
@@ -264,6 +275,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  PercentageScore: ").Append(PercentageScore).Append("\n");
             sb.Append("  IsPassed: ").Append(IsPassed).Append("\n");
+            sb.Append("  IsLatest: ").Append(IsLatest).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
@@ -343,6 +355,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.IsPassed.Equals(other.IsPassed)
                 ) &&
                 (
+                    this.IsLatest == other.IsLatest ||
+                    this.IsLatest != null &&
+                    this.IsLatest.Equals(other.IsLatest)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -412,6 +429,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.IsPassed != null)
                     hash = hash * 59 + this.IsPassed.GetHashCode();
+
+                if (this.IsLatest != null)
+                    hash = hash * 59 + this.IsLatest.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

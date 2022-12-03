@@ -27,6 +27,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AudioRecordingSizeBytes">AudioRecordingSizeBytes.</param>
         /// <param name="CreatedDate">CreatedDate.</param>
         /// <param name="ModifiedDate">ModifiedDate.</param>
+        /// <param name="CreatedDateString">CreatedDateString.</param>
         /// <param name="CallerAddress">CallerAddress.</param>
         /// <param name="CallerName">CallerName.</param>
         /// <param name="Action">Action.</param>
@@ -35,7 +36,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ModifiedByUserId">ModifiedByUserId.</param>
         /// <param name="CopiedTo">CopiedTo.</param>
         /// <param name="CopiedFrom">CopiedFrom.</param>
-        public VoicemailMessagesTopicVoicemailMessage(string Id = null, bool? Read = null, int? AudioRecordingDurationSeconds = null, int? AudioRecordingSizeBytes = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, string CallerAddress = null, string CallerName = null, string Action = null, string Note = null, bool? Deleted = null, string ModifiedByUserId = null, List<VoicemailMessagesTopicVoicemailCopyRecord> CopiedTo = null, VoicemailMessagesTopicVoicemailCopyRecord CopiedFrom = null)
+        /// <param name="ModifiedDateString">ModifiedDateString.</param>
+        public VoicemailMessagesTopicVoicemailMessage(string Id = null, bool? Read = null, int? AudioRecordingDurationSeconds = null, int? AudioRecordingSizeBytes = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, string CreatedDateString = null, string CallerAddress = null, string CallerName = null, string Action = null, string Note = null, bool? Deleted = null, string ModifiedByUserId = null, List<VoicemailMessagesTopicVoicemailCopyRecord> CopiedTo = null, VoicemailMessagesTopicVoicemailCopyRecord CopiedFrom = null, string ModifiedDateString = null)
         {
             this.Id = Id;
             this.Read = Read;
@@ -43,6 +45,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AudioRecordingSizeBytes = AudioRecordingSizeBytes;
             this.CreatedDate = CreatedDate;
             this.ModifiedDate = ModifiedDate;
+            this.CreatedDateString = CreatedDateString;
             this.CallerAddress = CallerAddress;
             this.CallerName = CallerName;
             this.Action = Action;
@@ -51,6 +54,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ModifiedByUserId = ModifiedByUserId;
             this.CopiedTo = CopiedTo;
             this.CopiedFrom = CopiedFrom;
+            this.ModifiedDateString = ModifiedDateString;
             
         }
         
@@ -101,6 +105,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
         public DateTime? ModifiedDate { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets CreatedDateString
+        /// </summary>
+        [DataMember(Name="createdDateString", EmitDefaultValue=false)]
+        public string CreatedDateString { get; set; }
 
 
 
@@ -167,6 +179,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public VoicemailMessagesTopicVoicemailCopyRecord CopiedFrom { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets ModifiedDateString
+        /// </summary>
+        [DataMember(Name="modifiedDateString", EmitDefaultValue=false)]
+        public string ModifiedDateString { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -182,6 +202,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AudioRecordingSizeBytes: ").Append(AudioRecordingSizeBytes).Append("\n");
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
+            sb.Append("  CreatedDateString: ").Append(CreatedDateString).Append("\n");
             sb.Append("  CallerAddress: ").Append(CallerAddress).Append("\n");
             sb.Append("  CallerName: ").Append(CallerName).Append("\n");
             sb.Append("  Action: ").Append(Action).Append("\n");
@@ -190,6 +211,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ModifiedByUserId: ").Append(ModifiedByUserId).Append("\n");
             sb.Append("  CopiedTo: ").Append(CopiedTo).Append("\n");
             sb.Append("  CopiedFrom: ").Append(CopiedFrom).Append("\n");
+            sb.Append("  ModifiedDateString: ").Append(ModifiedDateString).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -261,6 +283,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ModifiedDate.Equals(other.ModifiedDate)
                 ) &&
                 (
+                    this.CreatedDateString == other.CreatedDateString ||
+                    this.CreatedDateString != null &&
+                    this.CreatedDateString.Equals(other.CreatedDateString)
+                ) &&
+                (
                     this.CallerAddress == other.CallerAddress ||
                     this.CallerAddress != null &&
                     this.CallerAddress.Equals(other.CallerAddress)
@@ -299,6 +326,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CopiedFrom == other.CopiedFrom ||
                     this.CopiedFrom != null &&
                     this.CopiedFrom.Equals(other.CopiedFrom)
+                ) &&
+                (
+                    this.ModifiedDateString == other.ModifiedDateString ||
+                    this.ModifiedDateString != null &&
+                    this.ModifiedDateString.Equals(other.ModifiedDateString)
                 );
         }
 
@@ -331,6 +363,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();
 
+                if (this.CreatedDateString != null)
+                    hash = hash * 59 + this.CreatedDateString.GetHashCode();
+
                 if (this.CallerAddress != null)
                     hash = hash * 59 + this.CallerAddress.GetHashCode();
 
@@ -354,6 +389,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.CopiedFrom != null)
                     hash = hash * 59 + this.CopiedFrom.GetHashCode();
+
+                if (this.ModifiedDateString != null)
+                    hash = hash * 59 + this.ModifiedDateString.GetHashCode();
 
                 return hash;
             }

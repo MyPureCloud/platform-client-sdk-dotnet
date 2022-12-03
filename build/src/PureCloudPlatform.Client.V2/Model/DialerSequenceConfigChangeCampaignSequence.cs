@@ -63,18 +63,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Status">Status.</param>
         /// <param name="StopMessage">if a sequence has unexpectedly stopped, this message provides the reason.</param>
         /// <param name="Repeat">indicates if a sequence is to repeat from the beginning after the last campaign completes; default is false.</param>
+        /// <param name="AdditionalProperties">AdditionalProperties.</param>
         /// <param name="Id">The globally unique identifier for the object..</param>
         /// <param name="Name">The UI-visible name of the object.</param>
         /// <param name="DateCreated">Creation time of the entity.</param>
         /// <param name="DateModified">Last modified time of the entity.</param>
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
-        public DialerSequenceConfigChangeCampaignSequence(List<DialerSequenceConfigChangeUriReference> Campaigns = null, int? CurrentCampaign = null, StatusEnum? Status = null, string StopMessage = null, bool? Repeat = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null)
+        public DialerSequenceConfigChangeCampaignSequence(List<DialerSequenceConfigChangeUriReference> Campaigns = null, int? CurrentCampaign = null, StatusEnum? Status = null, string StopMessage = null, bool? Repeat = null, Dictionary<string, Object> AdditionalProperties = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null)
         {
             this.Campaigns = Campaigns;
             this.CurrentCampaign = CurrentCampaign;
             this.Status = Status;
             this.StopMessage = StopMessage;
             this.Repeat = Repeat;
+            this.AdditionalProperties = AdditionalProperties;
             this.Id = Id;
             this.Name = Name;
             this.DateCreated = DateCreated;
@@ -120,6 +122,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>indicates if a sequence is to repeat from the beginning after the last campaign completes; default is false</value>
         [DataMember(Name="repeat", EmitDefaultValue=false)]
         public bool? Repeat { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets AdditionalProperties
+        /// </summary>
+        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
+        public Dictionary<string, Object> AdditionalProperties { get; set; }
 
 
 
@@ -181,6 +191,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  StopMessage: ").Append(StopMessage).Append("\n");
             sb.Append("  Repeat: ").Append(Repeat).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
@@ -252,6 +263,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Repeat.Equals(other.Repeat)
                 ) &&
                 (
+                    this.AdditionalProperties == other.AdditionalProperties ||
+                    this.AdditionalProperties != null &&
+                    this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
+                ) &&
+                (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
@@ -303,6 +319,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Repeat != null)
                     hash = hash * 59 + this.Repeat.GetHashCode();
+
+                if (this.AdditionalProperties != null)
+                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();

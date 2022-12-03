@@ -28,7 +28,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MessageParams">Used in conjunction with messageWithParams. These are the template parameters. For instance: UserParam.key = 'username', UserParam.value = 'john.doe'.</param>
         /// <param name="ContextId">The correlation Id or context Id for this message. If left blank the Public API will look at the HTTP response header 'ININ-Correlation-Id' instead..</param>
         /// <param name="Uri">Uri.</param>
-        public ConversationEventTopicErrorDetails(int? Status = null, string Code = null, string Message = null, string MessageWithParams = null, Dictionary<string, string> MessageParams = null, string ContextId = null, string Uri = null)
+        /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        public ConversationEventTopicErrorDetails(int? Status = null, string Code = null, string Message = null, string MessageWithParams = null, Dictionary<string, string> MessageParams = null, string ContextId = null, string Uri = null, Dictionary<string, Object> AdditionalProperties = null)
         {
             this.Status = Status;
             this.Code = Code;
@@ -37,6 +38,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MessageParams = MessageParams;
             this.ContextId = ContextId;
             this.Uri = Uri;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -103,6 +105,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Uri { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets AdditionalProperties
+        /// </summary>
+        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
+        public Dictionary<string, Object> AdditionalProperties { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -119,6 +129,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MessageParams: ").Append(MessageParams).Append("\n");
             sb.Append("  ContextId: ").Append(ContextId).Append("\n");
             sb.Append("  Uri: ").Append(Uri).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -193,6 +204,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Uri == other.Uri ||
                     this.Uri != null &&
                     this.Uri.Equals(other.Uri)
+                ) &&
+                (
+                    this.AdditionalProperties == other.AdditionalProperties ||
+                    this.AdditionalProperties != null &&
+                    this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
                 );
         }
 
@@ -227,6 +243,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Uri != null)
                     hash = hash * 59 + this.Uri.GetHashCode();
+
+                if (this.AdditionalProperties != null)
+                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
 
                 return hash;
             }

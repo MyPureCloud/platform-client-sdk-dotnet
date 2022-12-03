@@ -11,6 +11,7 @@ title: DialerContactlistfilterConfigChangeContactListFilter
 | **ContactListColumns** | **List&lt;string&gt;** | The list of contact list columns | [optional] |
 | **Clauses** | [**List&lt;DialerContactlistfilterConfigChangeFilterClause&gt;**](DialerContactlistfilterConfigChangeFilterClause.html) |  | [optional] |
 | **FilterType** | **string** | Contact list filter type | [optional] |
+| **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** | The UI-visible name of the object | [optional] |
 | **DateCreated** | **DateTime?** | Creation time of the entity | [optional] |

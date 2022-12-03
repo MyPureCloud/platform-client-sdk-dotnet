@@ -8,6 +8,7 @@ title: DialerRulesetConfigChangeCondition
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **DataAction** | [**DialerRulesetConfigChangeUriReference**](DialerRulesetConfigChangeUriReference.html) | A UriReference for a resource | [optional] |
+| **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 | **Type** | **string** | The type of the condition | [optional] |
 | **Inverted** | **bool?** | Indicates whether to evaluate for the opposite of the stated condition; default is false | [optional] |
 | **AttributeName** | **string** | An attribute name associated with the condition (applies only to certain rule conditions) | [optional] |

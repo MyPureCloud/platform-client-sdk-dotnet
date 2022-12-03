@@ -26,13 +26,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MinInclusive">Whether or not to include the minimum in the range.</param>
         /// <param name="MaxInclusive">Whether or not to include the maximum in the range.</param>
         /// <param name="InSet">Elements that apply to the IN operator.</param>
-        public DialerContactlistfilterConfigChangeRange(string Min = null, string Max = null, bool? MinInclusive = null, bool? MaxInclusive = null, List<string> InSet = null)
+        /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        public DialerContactlistfilterConfigChangeRange(string Min = null, string Max = null, bool? MinInclusive = null, bool? MaxInclusive = null, List<string> InSet = null, Dictionary<string, Object> AdditionalProperties = null)
         {
             this.Min = Min;
             this.Max = Max;
             this.MinInclusive = MinInclusive;
             this.MaxInclusive = MaxInclusive;
             this.InSet = InSet;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -82,6 +84,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> InSet { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets AdditionalProperties
+        /// </summary>
+        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
+        public Dictionary<string, Object> AdditionalProperties { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -96,6 +106,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MinInclusive: ").Append(MinInclusive).Append("\n");
             sb.Append("  MaxInclusive: ").Append(MaxInclusive).Append("\n");
             sb.Append("  InSet: ").Append(InSet).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -160,6 +171,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.InSet == other.InSet ||
                     this.InSet != null &&
                     this.InSet.SequenceEqual(other.InSet)
+                ) &&
+                (
+                    this.AdditionalProperties == other.AdditionalProperties ||
+                    this.AdditionalProperties != null &&
+                    this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
                 );
         }
 
@@ -188,6 +204,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.InSet != null)
                     hash = hash * 59 + this.InSet.GetHashCode();
+
+                if (this.AdditionalProperties != null)
+                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
 
                 return hash;
             }

@@ -26,13 +26,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="NumberOfContactsMessaged">The number of contacts that have been messaged so far.</param>
         /// <param name="TotalNumberOfContacts">The total number of contacts in the contact list.</param>
         /// <param name="Percentage">numberOfContactsContacted/totalNumberOfContacts*100.</param>
-        public DialerCampaignProgressEventCampaignProgress(DialerCampaignProgressEventUriReference Campaign = null, double? NumberOfContactsCalled = null, double? NumberOfContactsMessaged = null, double? TotalNumberOfContacts = null, int? Percentage = null)
+        /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        public DialerCampaignProgressEventCampaignProgress(DialerCampaignProgressEventUriReference Campaign = null, double? NumberOfContactsCalled = null, double? NumberOfContactsMessaged = null, double? TotalNumberOfContacts = null, int? Percentage = null, Dictionary<string, Object> AdditionalProperties = null)
         {
             this.Campaign = Campaign;
             this.NumberOfContactsCalled = NumberOfContactsCalled;
             this.NumberOfContactsMessaged = NumberOfContactsMessaged;
             this.TotalNumberOfContacts = TotalNumberOfContacts;
             this.Percentage = Percentage;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -81,6 +83,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? Percentage { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets AdditionalProperties
+        /// </summary>
+        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
+        public Dictionary<string, Object> AdditionalProperties { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -95,6 +105,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  NumberOfContactsMessaged: ").Append(NumberOfContactsMessaged).Append("\n");
             sb.Append("  TotalNumberOfContacts: ").Append(TotalNumberOfContacts).Append("\n");
             sb.Append("  Percentage: ").Append(Percentage).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -159,6 +170,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Percentage == other.Percentage ||
                     this.Percentage != null &&
                     this.Percentage.Equals(other.Percentage)
+                ) &&
+                (
+                    this.AdditionalProperties == other.AdditionalProperties ||
+                    this.AdditionalProperties != null &&
+                    this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
                 );
         }
 
@@ -187,6 +203,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Percentage != null)
                     hash = hash * 59 + this.Percentage.GetHashCode();
+
+                if (this.AdditionalProperties != null)
+                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
 
                 return hash;
             }

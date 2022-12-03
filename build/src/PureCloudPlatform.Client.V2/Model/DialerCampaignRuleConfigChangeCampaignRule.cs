@@ -26,18 +26,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CampaignRuleActions">The list of actions that will be taken when this Campaign Rule's conditions are met.</param>
         /// <param name="MatchAnyConditions">Whether this Campaign Rule should match any conditions (inclusive OR) or match all conditions (ALL).</param>
         /// <param name="Enabled">Whether this campaign rule is enabled.</param>
+        /// <param name="AdditionalProperties">AdditionalProperties.</param>
         /// <param name="Id">The globally unique identifier for the object..</param>
         /// <param name="Name">The UI-visible name of the object.</param>
         /// <param name="DateCreated">Creation time of the entity.</param>
         /// <param name="DateModified">Last modified time of the entity.</param>
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
-        public DialerCampaignRuleConfigChangeCampaignRule(DialerCampaignRuleConfigChangeCampaignRuleEntities CampaignRuleEntities = null, List<DialerCampaignRuleConfigChangeCampaignRuleCondition> CampaignRuleConditions = null, List<DialerCampaignRuleConfigChangeCampaignRuleAction> CampaignRuleActions = null, bool? MatchAnyConditions = null, bool? Enabled = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null)
+        public DialerCampaignRuleConfigChangeCampaignRule(DialerCampaignRuleConfigChangeCampaignRuleEntities CampaignRuleEntities = null, List<DialerCampaignRuleConfigChangeCampaignRuleCondition> CampaignRuleConditions = null, List<DialerCampaignRuleConfigChangeCampaignRuleAction> CampaignRuleActions = null, bool? MatchAnyConditions = null, bool? Enabled = null, Dictionary<string, Object> AdditionalProperties = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null)
         {
             this.CampaignRuleEntities = CampaignRuleEntities;
             this.CampaignRuleConditions = CampaignRuleConditions;
             this.CampaignRuleActions = CampaignRuleActions;
             this.MatchAnyConditions = MatchAnyConditions;
             this.Enabled = Enabled;
+            this.AdditionalProperties = AdditionalProperties;
             this.Id = Id;
             this.Name = Name;
             this.DateCreated = DateCreated;
@@ -89,6 +91,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Whether this campaign rule is enabled</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets AdditionalProperties
+        /// </summary>
+        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
+        public Dictionary<string, Object> AdditionalProperties { get; set; }
 
 
 
@@ -150,6 +160,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CampaignRuleActions: ").Append(CampaignRuleActions).Append("\n");
             sb.Append("  MatchAnyConditions: ").Append(MatchAnyConditions).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
@@ -221,6 +232,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Enabled.Equals(other.Enabled)
                 ) &&
                 (
+                    this.AdditionalProperties == other.AdditionalProperties ||
+                    this.AdditionalProperties != null &&
+                    this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
+                ) &&
+                (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
@@ -272,6 +288,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
+
+                if (this.AdditionalProperties != null)
+                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();

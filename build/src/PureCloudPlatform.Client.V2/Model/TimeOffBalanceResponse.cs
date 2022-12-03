@@ -29,12 +29,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="ActivityCodeId">The ID for activity code associated with time off balance (required).</param>
         /// <param name="HrisTimeOffTypeId">The ID of the time off type configured in HRIS integration (required).</param>
+        /// <param name="HrisTimeOffTypeSecondaryId">The secondary ID of the time off type configured in HRIS integration.</param>
         /// <param name="StartDate">The Start date of the requested date range. The end date is determined by the size of interval list. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
         /// <param name="BalanceMinutesPerDay">The list of available time off balance values in minutes for each day.</param>
-        public TimeOffBalanceResponse(string ActivityCodeId = null, string HrisTimeOffTypeId = null, String StartDate = null, List<int?> BalanceMinutesPerDay = null)
+        public TimeOffBalanceResponse(string ActivityCodeId = null, string HrisTimeOffTypeId = null, string HrisTimeOffTypeSecondaryId = null, String StartDate = null, List<int?> BalanceMinutesPerDay = null)
         {
             this.ActivityCodeId = ActivityCodeId;
             this.HrisTimeOffTypeId = HrisTimeOffTypeId;
+            this.HrisTimeOffTypeSecondaryId = HrisTimeOffTypeSecondaryId;
             this.StartDate = StartDate;
             this.BalanceMinutesPerDay = BalanceMinutesPerDay;
             
@@ -57,6 +59,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The ID of the time off type configured in HRIS integration</value>
         [DataMember(Name="hrisTimeOffTypeId", EmitDefaultValue=false)]
         public string HrisTimeOffTypeId { get; set; }
+
+
+
+        /// <summary>
+        /// The secondary ID of the time off type configured in HRIS integration
+        /// </summary>
+        /// <value>The secondary ID of the time off type configured in HRIS integration</value>
+        [DataMember(Name="hrisTimeOffTypeSecondaryId", EmitDefaultValue=false)]
+        public string HrisTimeOffTypeSecondaryId { get; set; }
 
 
 
@@ -88,6 +99,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  ActivityCodeId: ").Append(ActivityCodeId).Append("\n");
             sb.Append("  HrisTimeOffTypeId: ").Append(HrisTimeOffTypeId).Append("\n");
+            sb.Append("  HrisTimeOffTypeSecondaryId: ").Append(HrisTimeOffTypeSecondaryId).Append("\n");
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  BalanceMinutesPerDay: ").Append(BalanceMinutesPerDay).Append("\n");
             sb.Append("}\n");
@@ -141,6 +153,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.HrisTimeOffTypeId.Equals(other.HrisTimeOffTypeId)
                 ) &&
                 (
+                    this.HrisTimeOffTypeSecondaryId == other.HrisTimeOffTypeSecondaryId ||
+                    this.HrisTimeOffTypeSecondaryId != null &&
+                    this.HrisTimeOffTypeSecondaryId.Equals(other.HrisTimeOffTypeSecondaryId)
+                ) &&
+                (
                     this.StartDate == other.StartDate ||
                     this.StartDate != null &&
                     this.StartDate.Equals(other.StartDate)
@@ -168,6 +185,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.HrisTimeOffTypeId != null)
                     hash = hash * 59 + this.HrisTimeOffTypeId.GetHashCode();
+
+                if (this.HrisTimeOffTypeSecondaryId != null)
+                    hash = hash * 59 + this.HrisTimeOffTypeSecondaryId.GetHashCode();
 
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();

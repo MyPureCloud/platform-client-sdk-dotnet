@@ -107,13 +107,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ComparisonValue">The value to compare against for this condition.</param>
         /// <param name="OutputFieldMissingResolution">The result of this predicate if the requested output field is missing from the data action's result.</param>
         /// <param name="Inverted">If true, inverts the result of evaluating this Predicate. Default is false..</param>
-        public DialerRulesetConfigChangeDataActionConditionPredicate(string OutputField = null, OutputOperatorEnum? OutputOperator = null, string ComparisonValue = null, bool? OutputFieldMissingResolution = null, bool? Inverted = null)
+        /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        public DialerRulesetConfigChangeDataActionConditionPredicate(string OutputField = null, OutputOperatorEnum? OutputOperator = null, string ComparisonValue = null, bool? OutputFieldMissingResolution = null, bool? Inverted = null, Dictionary<string, Object> AdditionalProperties = null)
         {
             this.OutputField = OutputField;
             this.OutputOperator = OutputOperator;
             this.ComparisonValue = ComparisonValue;
             this.OutputFieldMissingResolution = OutputFieldMissingResolution;
             this.Inverted = Inverted;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -156,6 +158,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? Inverted { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets AdditionalProperties
+        /// </summary>
+        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
+        public Dictionary<string, Object> AdditionalProperties { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -170,6 +180,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ComparisonValue: ").Append(ComparisonValue).Append("\n");
             sb.Append("  OutputFieldMissingResolution: ").Append(OutputFieldMissingResolution).Append("\n");
             sb.Append("  Inverted: ").Append(Inverted).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -234,6 +245,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Inverted == other.Inverted ||
                     this.Inverted != null &&
                     this.Inverted.Equals(other.Inverted)
+                ) &&
+                (
+                    this.AdditionalProperties == other.AdditionalProperties ||
+                    this.AdditionalProperties != null &&
+                    this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
                 );
         }
 
@@ -262,6 +278,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Inverted != null)
                     hash = hash * 59 + this.Inverted.GetHashCode();
+
+                if (this.AdditionalProperties != null)
+                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
 
                 return hash;
             }

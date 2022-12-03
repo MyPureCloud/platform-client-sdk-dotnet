@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// The number of peer participants from the perspective of the participant in the conference.
+    /// QueueConversationSocialExpressionEventTopicObject
     /// </summary>
     [DataContract]
     public partial class QueueConversationSocialExpressionEventTopicObject :  IEquatable<QueueConversationSocialExpressionEventTopicObject>

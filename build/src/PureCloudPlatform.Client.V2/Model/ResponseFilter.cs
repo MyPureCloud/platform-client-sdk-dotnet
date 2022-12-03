@@ -66,9 +66,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseFilter" /> class.
         /// </summary>
-        /// <param name="Name">Field to filter on. Allowed values are 'name' and 'libraryId. (required).</param>
+        /// <param name="Name">Field to filter on. Allowed values are 'name', 'libraryId', 'text.contentType', 'messagingTemplate' and 'responseType' (required).</param>
         /// <param name="Operator">Filter operation: IN, EQUALS, NOTEQUALS. (required).</param>
-        /// <param name="Values">Values to filter on. (required).</param>
+        /// <param name="Values">Values to filter on. If name is 'responseType' then allowed values are 'CampaignSmsTemplate', 'CampaignEmailTemplate', 'Footer' and 'Signature' (required).</param>
         public ResponseFilter(string Name = null, OperatorEnum? Operator = null, List<string> Values = null)
         {
             this.Name = Name;
@@ -80,9 +80,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Field to filter on. Allowed values are 'name' and 'libraryId.
+        /// Field to filter on. Allowed values are 'name', 'libraryId', 'text.contentType', 'messagingTemplate' and 'responseType'
         /// </summary>
-        /// <value>Field to filter on. Allowed values are 'name' and 'libraryId.</value>
+        /// <value>Field to filter on. Allowed values are 'name', 'libraryId', 'text.contentType', 'messagingTemplate' and 'responseType'</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
@@ -91,9 +91,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Values to filter on.
+        /// Values to filter on. If name is 'responseType' then allowed values are 'CampaignSmsTemplate', 'CampaignEmailTemplate', 'Footer' and 'Signature'
         /// </summary>
-        /// <value>Values to filter on.</value>
+        /// <value>Values to filter on. If name is 'responseType' then allowed values are 'CampaignSmsTemplate', 'CampaignEmailTemplate', 'Footer' and 'Signature'</value>
         [DataMember(Name="values", EmitDefaultValue=false)]
         public List<string> Values { get; set; }
 

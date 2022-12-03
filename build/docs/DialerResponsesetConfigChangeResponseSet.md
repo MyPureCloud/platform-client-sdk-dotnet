@@ -9,6 +9,7 @@ title: DialerResponsesetConfigChangeResponseSet
 |------------ | ------------- | ------------- | -------------|
 | **Responses** | [**Dictionary&lt;string, DialerResponsesetConfigChangeReaction&gt;**](DialerResponsesetConfigChangeReaction.html) | Map of disposition identifiers to reactions. For example: {\&quot;disposition.classification.callable.person\&quot;: {\&quot;reactionType\&quot;: \&quot;transfer\&quot;}} | [optional] |
 | **BeepDetectionEnabled** | **bool?** | When beep detection is enabled, answering machine detection will wait for the beep before transferring the call | [optional] |
+| **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** | The UI-visible name of the object | [optional] |
 | **DateCreated** | **DateTime?** | Creation time of the entity | [optional] |

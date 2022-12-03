@@ -201,12 +201,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Telephony,
             
             /// <summary>
-            /// Enum Topicsdefinitions for "TopicsDefinitions"
-            /// </summary>
-            [EnumMember(Value = "TopicsDefinitions")]
-            Topicsdefinitions,
-            
-            /// <summary>
             /// Enum Triggers for "Triggers"
             /// </summary>
             [EnumMember(Value = "Triggers")]

@@ -82,12 +82,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Parameters">The parameters to match this action.</param>
         /// <param name="ActionType">The type of this action.</param>
         /// <param name="CampaignRuleActionEntities">CampaignRuleActionEntities.</param>
-        public DialerCampaignRuleConfigChangeCampaignRuleAction(string Id = null, Dictionary<string, string> Parameters = null, ActionTypeEnum? ActionType = null, DialerCampaignRuleConfigChangeCampaignRuleActionEntities CampaignRuleActionEntities = null)
+        /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        public DialerCampaignRuleConfigChangeCampaignRuleAction(string Id = null, Dictionary<string, string> Parameters = null, ActionTypeEnum? ActionType = null, DialerCampaignRuleConfigChangeCampaignRuleActionEntities CampaignRuleActionEntities = null, Dictionary<string, Object> AdditionalProperties = null)
         {
             this.Id = Id;
             this.Parameters = Parameters;
             this.ActionType = ActionType;
             this.CampaignRuleActionEntities = CampaignRuleActionEntities;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -120,6 +122,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public DialerCampaignRuleConfigChangeCampaignRuleActionEntities CampaignRuleActionEntities { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets AdditionalProperties
+        /// </summary>
+        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
+        public Dictionary<string, Object> AdditionalProperties { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -133,6 +143,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Parameters: ").Append(Parameters).Append("\n");
             sb.Append("  ActionType: ").Append(ActionType).Append("\n");
             sb.Append("  CampaignRuleActionEntities: ").Append(CampaignRuleActionEntities).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -192,6 +203,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CampaignRuleActionEntities == other.CampaignRuleActionEntities ||
                     this.CampaignRuleActionEntities != null &&
                     this.CampaignRuleActionEntities.Equals(other.CampaignRuleActionEntities)
+                ) &&
+                (
+                    this.AdditionalProperties == other.AdditionalProperties ||
+                    this.AdditionalProperties != null &&
+                    this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
                 );
         }
 
@@ -217,6 +233,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.CampaignRuleActionEntities != null)
                     hash = hash * 59 + this.CampaignRuleActionEntities.GetHashCode();
+
+                if (this.AdditionalProperties != null)
+                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
 
                 return hash;
             }

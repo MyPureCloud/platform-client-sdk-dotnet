@@ -55,14 +55,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="DialerRulesetConfigChangeRule" /> class.
         /// </summary>
         /// <param name="Conditions">The list of rule conditions; all must evaluate to true to trigger the rule actions.</param>
+        /// <param name="AdditionalProperties">AdditionalProperties.</param>
         /// <param name="Id">The identifier of the rule.</param>
         /// <param name="Name">The name of the rule.</param>
         /// <param name="Order">The ranked order of the rule; rules are processed from lowest number to highest.</param>
         /// <param name="Category">The category of the rule.</param>
         /// <param name="Actions">The list of rule actions to be taken if the conditions are true.</param>
-        public DialerRulesetConfigChangeRule(List<DialerRulesetConfigChangeCondition> Conditions = null, string Id = null, string Name = null, int? Order = null, CategoryEnum? Category = null, List<DialerRulesetConfigChangeAction> Actions = null)
+        public DialerRulesetConfigChangeRule(List<DialerRulesetConfigChangeCondition> Conditions = null, Dictionary<string, Object> AdditionalProperties = null, string Id = null, string Name = null, int? Order = null, CategoryEnum? Category = null, List<DialerRulesetConfigChangeAction> Actions = null)
         {
             this.Conditions = Conditions;
+            this.AdditionalProperties = AdditionalProperties;
             this.Id = Id;
             this.Name = Name;
             this.Order = Order;
@@ -79,6 +81,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The list of rule conditions; all must evaluate to true to trigger the rule actions</value>
         [DataMember(Name="conditions", EmitDefaultValue=false)]
         public List<DialerRulesetConfigChangeCondition> Conditions { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets AdditionalProperties
+        /// </summary>
+        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
+        public Dictionary<string, Object> AdditionalProperties { get; set; }
 
 
 
@@ -129,6 +139,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class DialerRulesetConfigChangeRule {\n");
 
             sb.Append("  Conditions: ").Append(Conditions).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Order: ").Append(Order).Append("\n");
@@ -180,6 +191,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Conditions.SequenceEqual(other.Conditions)
                 ) &&
                 (
+                    this.AdditionalProperties == other.AdditionalProperties ||
+                    this.AdditionalProperties != null &&
+                    this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
+                ) &&
+                (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
@@ -219,6 +235,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Conditions != null)
                     hash = hash * 59 + this.Conditions.GetHashCode();
+
+                if (this.AdditionalProperties != null)
+                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();

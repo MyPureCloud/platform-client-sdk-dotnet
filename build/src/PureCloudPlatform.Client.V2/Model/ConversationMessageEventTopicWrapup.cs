@@ -26,13 +26,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Tags">List of tags selected by the agent to describe the call or disposition..</param>
         /// <param name="DurationSeconds">The length of time in seconds that the agent spent doing after call work., Note, the format of utc-millisec should be ignored, our code generator needs it to generate a Long for us internally.</param>
         /// <param name="EndTime">The timestamp when the wrapup was finished..</param>
-        public ConversationMessageEventTopicWrapup(string Code = null, string Notes = null, List<string> Tags = null, int? DurationSeconds = null, DateTime? EndTime = null)
+        /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        public ConversationMessageEventTopicWrapup(string Code = null, string Notes = null, List<string> Tags = null, int? DurationSeconds = null, DateTime? EndTime = null, Dictionary<string, Object> AdditionalProperties = null)
         {
             this.Code = Code;
             this.Notes = Notes;
             this.Tags = Tags;
             this.DurationSeconds = DurationSeconds;
             this.EndTime = EndTime;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -82,6 +84,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public DateTime? EndTime { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets AdditionalProperties
+        /// </summary>
+        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
+        public Dictionary<string, Object> AdditionalProperties { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -96,6 +106,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Tags: ").Append(Tags).Append("\n");
             sb.Append("  DurationSeconds: ").Append(DurationSeconds).Append("\n");
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -160,6 +171,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EndTime == other.EndTime ||
                     this.EndTime != null &&
                     this.EndTime.Equals(other.EndTime)
+                ) &&
+                (
+                    this.AdditionalProperties == other.AdditionalProperties ||
+                    this.AdditionalProperties != null &&
+                    this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
                 );
         }
 
@@ -188,6 +204,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EndTime != null)
                     hash = hash * 59 + this.EndTime.GetHashCode();
+
+                if (this.AdditionalProperties != null)
+                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
 
                 return hash;
             }

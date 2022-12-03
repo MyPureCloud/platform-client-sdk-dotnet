@@ -95,8 +95,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
         /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session (optional)</param>
         /// <param name="language">Optional language code to get the reporting turns for a particular language (optional)</param>
+        /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
         /// <returns>ReportingTurnsResponse</returns>
-        ReportingTurnsResponse GetAnalyticsBotflowReportingturns (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null, string language = null);
+        ReportingTurnsResponse GetAnalyticsBotflowReportingturns (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null);
 
         /// <summary>
         /// Get Reporting Turns.
@@ -111,8 +112,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
         /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session (optional)</param>
         /// <param name="language">Optional language code to get the reporting turns for a particular language (optional)</param>
+        /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
         /// <returns>ApiResponse of ReportingTurnsResponse</returns>
-        ApiResponse<ReportingTurnsResponse> GetAnalyticsBotflowReportingturnsWithHttpInfo (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null, string language = null);
+        ApiResponse<ReportingTurnsResponse> GetAnalyticsBotflowReportingturnsWithHttpInfo (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null);
 
         /// <summary>
         /// Get a conversation by id
@@ -1201,8 +1203,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
         /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session (optional)</param>
         /// <param name="language">Optional language code to get the reporting turns for a particular language (optional)</param>
+        /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
         /// <returns>Task of ReportingTurnsResponse</returns>
-        System.Threading.Tasks.Task<ReportingTurnsResponse> GetAnalyticsBotflowReportingturnsAsync (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null, string language = null);
+        System.Threading.Tasks.Task<ReportingTurnsResponse> GetAnalyticsBotflowReportingturnsAsync (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null);
 
         /// <summary>
         /// Get Reporting Turns.
@@ -1217,8 +1220,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
         /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session (optional)</param>
         /// <param name="language">Optional language code to get the reporting turns for a particular language (optional)</param>
+        /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
         /// <returns>Task of ApiResponse (ReportingTurnsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ReportingTurnsResponse>> GetAnalyticsBotflowReportingturnsAsyncWithHttpInfo (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null, string language = null);
+        System.Threading.Tasks.Task<ApiResponse<ReportingTurnsResponse>> GetAnalyticsBotflowReportingturnsAsyncWithHttpInfo (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null);
 
         /// <summary>
         /// Get a conversation by id
@@ -2893,10 +2897,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
         /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session (optional)</param>
         /// <param name="language">Optional language code to get the reporting turns for a particular language (optional)</param>
+        /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
         /// <returns>ReportingTurnsResponse</returns>
-        public ReportingTurnsResponse GetAnalyticsBotflowReportingturns (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null, string language = null)
+        public ReportingTurnsResponse GetAnalyticsBotflowReportingturns (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null)
         {
-             ApiResponse<ReportingTurnsResponse> localVarResponse = GetAnalyticsBotflowReportingturnsWithHttpInfo(botFlowId, after, pageSize, actionId, sessionId, language);
+             ApiResponse<ReportingTurnsResponse> localVarResponse = GetAnalyticsBotflowReportingturnsWithHttpInfo(botFlowId, after, pageSize, actionId, sessionId, language, askActionResults);
              return localVarResponse.Data;
         }
 
@@ -2910,8 +2915,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
         /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session (optional)</param>
         /// <param name="language">Optional language code to get the reporting turns for a particular language (optional)</param>
+        /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
         /// <returns>ApiResponse of ReportingTurnsResponse</returns>
-        public ApiResponse< ReportingTurnsResponse > GetAnalyticsBotflowReportingturnsWithHttpInfo (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null, string language = null)
+        public ApiResponse< ReportingTurnsResponse > GetAnalyticsBotflowReportingturnsWithHttpInfo (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null)
         { 
             // verify the required parameter 'botFlowId' is set
             if (botFlowId == null)
@@ -2955,6 +2961,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (actionId != null) localVarQueryParams.Add(new Tuple<string, string>("actionId", this.Configuration.ApiClient.ParameterToString(actionId)));
             if (sessionId != null) localVarQueryParams.Add(new Tuple<string, string>("sessionId", this.Configuration.ApiClient.ParameterToString(sessionId)));
             if (language != null) localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(language)));
+            if (askActionResults != null) localVarQueryParams.Add(new Tuple<string, string>("askActionResults", this.Configuration.ApiClient.ParameterToString(askActionResults)));
 
             // Header params
 
@@ -3002,10 +3009,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
         /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session (optional)</param>
         /// <param name="language">Optional language code to get the reporting turns for a particular language (optional)</param>
+        /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
         /// <returns>Task of ReportingTurnsResponse</returns>
-        public async System.Threading.Tasks.Task<ReportingTurnsResponse> GetAnalyticsBotflowReportingturnsAsync (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null, string language = null)
+        public async System.Threading.Tasks.Task<ReportingTurnsResponse> GetAnalyticsBotflowReportingturnsAsync (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null)
         {
-             ApiResponse<ReportingTurnsResponse> localVarResponse = await GetAnalyticsBotflowReportingturnsAsyncWithHttpInfo(botFlowId, after, pageSize, actionId, sessionId, language);
+             ApiResponse<ReportingTurnsResponse> localVarResponse = await GetAnalyticsBotflowReportingturnsAsyncWithHttpInfo(botFlowId, after, pageSize, actionId, sessionId, language, askActionResults);
              return localVarResponse.Data;
 
         }
@@ -3020,8 +3028,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="actionId">Optional action ID to get the reporting turns associated to a particular flow action (optional)</param>
         /// <param name="sessionId">Optional session ID to get the reporting turns for a particular session (optional)</param>
         /// <param name="language">Optional language code to get the reporting turns for a particular language (optional)</param>
+        /// <param name="askActionResults">Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)</param>
         /// <returns>Task of ApiResponse (ReportingTurnsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ReportingTurnsResponse>> GetAnalyticsBotflowReportingturnsAsyncWithHttpInfo (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null, string language = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ReportingTurnsResponse>> GetAnalyticsBotflowReportingturnsAsyncWithHttpInfo (string botFlowId, string after = null, string pageSize = null, string actionId = null, string sessionId = null, string language = null, string askActionResults = null)
         { 
             // verify the required parameter 'botFlowId' is set
             if (botFlowId == null)
@@ -3066,6 +3075,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (actionId != null) localVarQueryParams.Add(new Tuple<string, string>("actionId", this.Configuration.ApiClient.ParameterToString(actionId)));
             if (sessionId != null) localVarQueryParams.Add(new Tuple<string, string>("sessionId", this.Configuration.ApiClient.ParameterToString(sessionId)));
             if (language != null) localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(language)));
+            if (askActionResults != null) localVarQueryParams.Add(new Tuple<string, string>("askActionResults", this.Configuration.ApiClient.ParameterToString(askActionResults)));
 
             // Header params
 

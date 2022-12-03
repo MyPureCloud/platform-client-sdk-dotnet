@@ -31,12 +31,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="ColumnNames">The names of the contact data columns. (required).</param>
         /// <param name="PhoneColumns">Indicates which columns are phone numbers..</param>
-        public ContactListDivisionView(string Name = null, Division Division = null, List<string> ColumnNames = null, List<ContactPhoneNumberColumn> PhoneColumns = null)
+        /// <param name="EmailColumns">Indicates which columns are email addresses..</param>
+        public ContactListDivisionView(string Name = null, Division Division = null, List<string> ColumnNames = null, List<ContactPhoneNumberColumn> PhoneColumns = null, List<EmailColumn> EmailColumns = null)
         {
             this.Name = Name;
             this.Division = Division;
             this.ColumnNames = ColumnNames;
             this.PhoneColumns = PhoneColumns;
+            this.EmailColumns = EmailColumns;
             
         }
         
@@ -87,6 +89,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Indicates which columns are email addresses.
+        /// </summary>
+        /// <value>Indicates which columns are email addresses.</value>
+        [DataMember(Name="emailColumns", EmitDefaultValue=false)]
+        public List<EmailColumn> EmailColumns { get; set; }
+
+
+
+        /// <summary>
         /// The status of the import process.
         /// </summary>
         /// <value>The status of the import process.</value>
@@ -126,6 +137,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  ColumnNames: ").Append(ColumnNames).Append("\n");
             sb.Append("  PhoneColumns: ").Append(PhoneColumns).Append("\n");
+            sb.Append("  EmailColumns: ").Append(EmailColumns).Append("\n");
             sb.Append("  ImportStatus: ").Append(ImportStatus).Append("\n");
             sb.Append("  Size: ").Append(Size).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -195,6 +207,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PhoneColumns.SequenceEqual(other.PhoneColumns)
                 ) &&
                 (
+                    this.EmailColumns == other.EmailColumns ||
+                    this.EmailColumns != null &&
+                    this.EmailColumns.SequenceEqual(other.EmailColumns)
+                ) &&
+                (
                     this.ImportStatus == other.ImportStatus ||
                     this.ImportStatus != null &&
                     this.ImportStatus.Equals(other.ImportStatus)
@@ -236,6 +253,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.PhoneColumns != null)
                     hash = hash * 59 + this.PhoneColumns.GetHashCode();
+
+                if (this.EmailColumns != null)
+                    hash = hash * 59 + this.EmailColumns.GetHashCode();
 
                 if (this.ImportStatus != null)
                     hash = hash * 59 + this.ImportStatus.GetHashCode();

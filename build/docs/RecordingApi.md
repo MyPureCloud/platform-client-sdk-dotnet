@@ -31,8 +31,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRecordingJobs**](RecordingApi.html#getrecordingjobs) | **GET** /api/v2/recording/jobs | Get the status of all jobs within the user&#39;s organization |
 | [**GetRecordingKeyconfiguration**](RecordingApi.html#getrecordingkeyconfiguration) | **GET** /api/v2/recording/keyconfigurations/{keyConfigurationId} | Get the encryption key configurations |
 | [**GetRecordingKeyconfigurations**](RecordingApi.html#getrecordingkeyconfigurations) | **GET** /api/v2/recording/keyconfigurations | Get a list of key configurations data |
-| [**GetRecordingLocalkeysSetting**](RecordingApi.html#getrecordinglocalkeyssetting) | **GET** /api/v2/recording/localkeys/settings/{settingsId} | Get the local encryption settings |
-| [**GetRecordingLocalkeysSettings**](RecordingApi.html#getrecordinglocalkeyssettings) | **GET** /api/v2/recording/localkeys/settings | gets a list local key settings data |
+| [**GetRecordingLocalkeysSetting**](RecordingApi.html#getrecordinglocalkeyssetting) | **GET** /api/v2/recording/localkeys/settings/{settingsId} | Get the local encryption settings. Replaced by API recording/keyconfigurations/{keyConfigurationId} |
+| [**GetRecordingLocalkeysSettings**](RecordingApi.html#getrecordinglocalkeyssettings) | **GET** /api/v2/recording/localkeys/settings | gets a list local key settings data. Replaced by API recording/keyconfigurations |
 | [**GetRecordingMediaretentionpolicies**](RecordingApi.html#getrecordingmediaretentionpolicies) | **GET** /api/v2/recording/mediaretentionpolicies | Gets media retention policy list with query options to filter on name and enabled. |
 | [**GetRecordingMediaretentionpolicy**](RecordingApi.html#getrecordingmediaretentionpolicy) | **GET** /api/v2/recording/mediaretentionpolicies/{policyId} | Get a media retention policy |
 | [**GetRecordingRecordingkeys**](RecordingApi.html#getrecordingrecordingkeys) | **GET** /api/v2/recording/recordingkeys | Get encryption key list |
@@ -49,8 +49,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostRecordingJobs**](RecordingApi.html#postrecordingjobs) | **POST** /api/v2/recording/jobs | Create a recording bulk job. |
 | [**PostRecordingKeyconfigurations**](RecordingApi.html#postrecordingkeyconfigurations) | **POST** /api/v2/recording/keyconfigurations | Setup configurations for encryption key creation |
 | [**PostRecordingKeyconfigurationsValidate**](RecordingApi.html#postrecordingkeyconfigurationsvalidate) | **POST** /api/v2/recording/keyconfigurations/validate | Validate encryption key configurations without saving it |
-| [**PostRecordingLocalkeys**](RecordingApi.html#postrecordinglocalkeys) | **POST** /api/v2/recording/localkeys | create a local recording key |
-| [**PostRecordingLocalkeysSettings**](RecordingApi.html#postrecordinglocalkeyssettings) | **POST** /api/v2/recording/localkeys/settings | create settings for local key creation |
+| [**PostRecordingLocalkeys**](RecordingApi.html#postrecordinglocalkeys) | **POST** /api/v2/recording/localkeys | create a local key management recording key |
+| [**PostRecordingLocalkeysSettings**](RecordingApi.html#postrecordinglocalkeyssettings) | **POST** /api/v2/recording/localkeys/settings | create settings for local key creation. Replaced by API recording/keyconfigurations |
 | [**PostRecordingMediaretentionpolicies**](RecordingApi.html#postrecordingmediaretentionpolicies) | **POST** /api/v2/recording/mediaretentionpolicies | Create media retention policy |
 | [**PostRecordingRecordingkeys**](RecordingApi.html#postrecordingrecordingkeys) | **POST** /api/v2/recording/recordingkeys | Create encryption key |
 | [**PostRecordingsDeletionprotection**](RecordingApi.html#postrecordingsdeletionprotection) | **POST** /api/v2/recordings/deletionprotection | Get a list of conversations with protected recordings |
@@ -62,7 +62,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutRecordingCrossplatformMediaretentionpolicy**](RecordingApi.html#putrecordingcrossplatformmediaretentionpolicy) | **PUT** /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId} | Update a media retention policy |
 | [**PutRecordingJob**](RecordingApi.html#putrecordingjob) | **PUT** /api/v2/recording/jobs/{jobId} | Execute the recording bulk job. |
 | [**PutRecordingKeyconfiguration**](RecordingApi.html#putrecordingkeyconfiguration) | **PUT** /api/v2/recording/keyconfigurations/{keyConfigurationId} | Update the encryption key configurations |
-| [**PutRecordingLocalkeysSetting**](RecordingApi.html#putrecordinglocalkeyssetting) | **PUT** /api/v2/recording/localkeys/settings/{settingsId} | Update the local encryption settings |
+| [**PutRecordingLocalkeysSetting**](RecordingApi.html#putrecordinglocalkeyssetting) | **PUT** /api/v2/recording/localkeys/settings/{settingsId} | Update the local encryption settings. Replaced by API recording/keyconfigurations/{keyConfigurationId} |
 | [**PutRecordingMediaretentionpolicy**](RecordingApi.html#putrecordingmediaretentionpolicy) | **PUT** /api/v2/recording/mediaretentionpolicies/{policyId} | Update a media retention policy |
 | [**PutRecordingRecordingkeysRotationschedule**](RecordingApi.html#putrecordingrecordingkeysrotationschedule) | **PUT** /api/v2/recording/recordingkeys/rotationschedule | Update key rotation schedule |
 | [**PutRecordingSettings**](RecordingApi.html#putrecordingsettings) | **PUT** /api/v2/recording/settings | Update the Recording Settings for the Organization |
@@ -1741,9 +1741,9 @@ This endpoint does require any parameters.
 
 ## [**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html) GetRecordingLocalkeysSetting (string settingsId)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-
-Get the local encryption settings
+Get the local encryption settings. Replaced by API recording/keyconfigurations/{keyConfigurationId}
 
 
 
@@ -1777,7 +1777,7 @@ namespace Example
 
             try
             { 
-                // Get the local encryption settings
+                // Get the local encryption settings. Replaced by API recording/keyconfigurations/{keyConfigurationId}
                 LocalEncryptionConfiguration result = apiInstance.GetRecordingLocalkeysSetting(settingsId);
                 Debug.WriteLine(result);
             }
@@ -1806,9 +1806,9 @@ namespace Example
 
 ## [**LocalEncryptionConfigurationListing**](LocalEncryptionConfigurationListing.html) GetRecordingLocalkeysSettings ()
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-
-gets a list local key settings data
+gets a list local key settings data. Replaced by API recording/keyconfigurations
 
 
 
@@ -1841,7 +1841,7 @@ namespace Example
 
             try
             { 
-                // gets a list local key settings data
+                // gets a list local key settings data. Replaced by API recording/keyconfigurations
                 LocalEncryptionConfigurationListing result = apiInstance.GetRecordingLocalkeysSettings();
                 Debug.WriteLine(result);
             }
@@ -2948,7 +2948,7 @@ namespace Example
 
 
 
-create a local recording key
+create a local key management recording key
 
 
 
@@ -2982,7 +2982,7 @@ namespace Example
 
             try
             { 
-                // create a local recording key
+                // create a local key management recording key
                 EncryptionKey result = apiInstance.PostRecordingLocalkeys(body);
                 Debug.WriteLine(result);
             }
@@ -3011,9 +3011,9 @@ namespace Example
 
 ## [**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html) PostRecordingLocalkeysSettings (LocalEncryptionConfiguration body)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-
-create settings for local key creation
+create settings for local key creation. Replaced by API recording/keyconfigurations
 
 
 
@@ -3047,7 +3047,7 @@ namespace Example
 
             try
             { 
-                // create settings for local key creation
+                // create settings for local key creation. Replaced by API recording/keyconfigurations
                 LocalEncryptionConfiguration result = apiInstance.PostRecordingLocalkeysSettings(body);
                 Debug.WriteLine(result);
             }
@@ -3817,9 +3817,9 @@ namespace Example
 
 ## [**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html) PutRecordingLocalkeysSetting (string settingsId, LocalEncryptionConfiguration body)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-
-Update the local encryption settings
+Update the local encryption settings. Replaced by API recording/keyconfigurations/{keyConfigurationId}
 
 
 
@@ -3854,7 +3854,7 @@ namespace Example
 
             try
             { 
-                // Update the local encryption settings
+                // Update the local encryption settings. Replaced by API recording/keyconfigurations/{keyConfigurationId}
                 LocalEncryptionConfiguration result = apiInstance.PutRecordingLocalkeysSetting(settingsId, body);
                 Debug.WriteLine(result);
             }

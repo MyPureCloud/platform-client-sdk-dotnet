@@ -28,9 +28,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="DocumentBodyImage" /> class.
         /// </summary>
         /// <param name="Url">The URL for the image. (required).</param>
-        public DocumentBodyImage(string Url = null)
+        /// <param name="Hyperlink">The URL of the page that the hyperlink goes to..</param>
+        public DocumentBodyImage(string Url = null, string Hyperlink = null)
         {
             this.Url = Url;
+            this.Hyperlink = Hyperlink;
             
         }
         
@@ -44,6 +46,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Url { get; set; }
 
 
+
+        /// <summary>
+        /// The URL of the page that the hyperlink goes to.
+        /// </summary>
+        /// <value>The URL of the page that the hyperlink goes to.</value>
+        [DataMember(Name="hyperlink", EmitDefaultValue=false)]
+        public string Hyperlink { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,6 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class DocumentBodyImage {\n");
 
             sb.Append("  Url: ").Append(Url).Append("\n");
+            sb.Append("  Hyperlink: ").Append(Hyperlink).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -98,6 +110,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Url == other.Url ||
                     this.Url != null &&
                     this.Url.Equals(other.Url)
+                ) &&
+                (
+                    this.Hyperlink == other.Hyperlink ||
+                    this.Hyperlink != null &&
+                    this.Hyperlink.Equals(other.Hyperlink)
                 );
         }
 
@@ -114,6 +131,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Url != null)
                     hash = hash * 59 + this.Url.GetHashCode();
+
+                if (this.Hyperlink != null)
+                    hash = hash * 59 + this.Hyperlink.GetHashCode();
 
                 return hash;
             }

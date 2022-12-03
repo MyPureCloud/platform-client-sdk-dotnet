@@ -15,7 +15,7 @@ title: ArchitectPromptNotificationArchitectOperation
 | **ActionStatus** | **string** | The action status | [optional] |
 | **ErrorMessage** | **string** | The error message, if the action failed | [optional] |
 | **ErrorCode** | **string** | The error code, if the action failed | [optional] |
-| **ErrorMessageParams** | **Object** | The error message params, if the action failed | [optional] |
+| **ErrorMessageParams** | [**ArchitectPromptNotificationErrorMessageParams**](ArchitectPromptNotificationErrorMessageParams.html) |  | [optional] |
 | **ErrorDetails** | [**List&lt;ArchitectPromptNotificationErrorDetail&gt;**](ArchitectPromptNotificationErrorDetail.html) | The error details, if the action failed | [optional] |
 {: class="table table-striped"}
 

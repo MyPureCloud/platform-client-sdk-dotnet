@@ -571,10 +571,28 @@ namespace PureCloudPlatform.Client.V2.Model
             Surveyinvite,
             
             /// <summary>
+            /// Enum Voice for "voice"
+            /// </summary>
+            [EnumMember(Value = "voice")]
+            Voice,
+            
+            /// <summary>
+            /// Enum Voicemail for "voicemail"
+            /// </summary>
+            [EnumMember(Value = "voicemail")]
+            Voicemail,
+            
+            /// <summary>
             /// Enum Workflow for "workflow"
             /// </summary>
             [EnumMember(Value = "workflow")]
-            Workflow
+            Workflow,
+            
+            /// <summary>
+            /// Enum Workitem for "workitem"
+            /// </summary>
+            [EnumMember(Value = "workitem")]
+            Workitem
         }
         /// <summary>
         /// The session media type
@@ -849,7 +867,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Standard for "Standard"
             /// </summary>
             [EnumMember(Value = "Standard")]
-            Standard
+            Standard,
+            
+            /// <summary>
+            /// Enum Vip for "Vip"
+            /// </summary>
+            [EnumMember(Value = "Vip")]
+            Vip
         }
         /// <summary>
         /// Complete routing method
@@ -906,7 +930,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Standard for "Standard"
             /// </summary>
             [EnumMember(Value = "Standard")]
-            Standard
+            Standard,
+            
+            /// <summary>
+            /// Enum Vip for "Vip"
+            /// </summary>
+            [EnumMember(Value = "Vip")]
+            Vip
         }
         /// <summary>
         /// Metric name

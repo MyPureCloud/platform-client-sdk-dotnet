@@ -33,6 +33,18 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Askactionid for "askActionId"
+            /// </summary>
+            [EnumMember(Value = "askActionId")]
+            Askactionid,
+            
+            /// <summary>
+            /// Enum Askactionresult for "askActionResult"
+            /// </summary>
+            [EnumMember(Value = "askActionResult")]
+            Askactionresult,
+            
+            /// <summary>
             /// Enum Botfinalintent for "botFinalIntent"
             /// </summary>
             [EnumMember(Value = "botFinalIntent")]
@@ -153,6 +165,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "OUTDATED_SDK_VERSION")]
             OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Nbotsessionturns for "nBotSessionTurns"
+            /// </summary>
+            [EnumMember(Value = "nBotSessionTurns")]
+            Nbotsessionturns,
             
             /// <summary>
             /// Enum Nbotsessions for "nBotSessions"

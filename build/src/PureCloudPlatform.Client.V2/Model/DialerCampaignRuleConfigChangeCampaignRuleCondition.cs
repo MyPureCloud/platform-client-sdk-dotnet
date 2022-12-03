@@ -57,11 +57,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">The globally unique identifier for the condition.</param>
         /// <param name="Parameters">The parameters to match this condition.</param>
         /// <param name="ConditionType">The type of this condition.</param>
-        public DialerCampaignRuleConfigChangeCampaignRuleCondition(string Id = null, Dictionary<string, string> Parameters = null, ConditionTypeEnum? ConditionType = null)
+        /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        public DialerCampaignRuleConfigChangeCampaignRuleCondition(string Id = null, Dictionary<string, string> Parameters = null, ConditionTypeEnum? ConditionType = null, Dictionary<string, Object> AdditionalProperties = null)
         {
             this.Id = Id;
             this.Parameters = Parameters;
             this.ConditionType = ConditionType;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -86,6 +88,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+        /// <summary>
+        /// Gets or Sets AdditionalProperties
+        /// </summary>
+        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
+        public Dictionary<string, Object> AdditionalProperties { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -98,6 +108,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Parameters: ").Append(Parameters).Append("\n");
             sb.Append("  ConditionType: ").Append(ConditionType).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -152,6 +163,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ConditionType == other.ConditionType ||
                     this.ConditionType != null &&
                     this.ConditionType.Equals(other.ConditionType)
+                ) &&
+                (
+                    this.AdditionalProperties == other.AdditionalProperties ||
+                    this.AdditionalProperties != null &&
+                    this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
                 );
         }
 
@@ -174,6 +190,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ConditionType != null)
                     hash = hash * 59 + this.ConditionType.GetHashCode();
+
+                if (this.AdditionalProperties != null)
+                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
 
                 return hash;
             }

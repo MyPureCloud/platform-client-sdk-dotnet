@@ -56,10 +56,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="FilterType">Contact list filter type.</param>
         /// <param name="Predicates">The list of predicates in that clause.</param>
-        public DialerContactlistfilterConfigChangeFilterClause(FilterTypeEnum? FilterType = null, List<DialerContactlistfilterConfigChangeFilterPredicate> Predicates = null)
+        /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        public DialerContactlistfilterConfigChangeFilterClause(FilterTypeEnum? FilterType = null, List<DialerContactlistfilterConfigChangeFilterPredicate> Predicates = null, Dictionary<string, Object> AdditionalProperties = null)
         {
             this.FilterType = FilterType;
             this.Predicates = Predicates;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -75,6 +77,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<DialerContactlistfilterConfigChangeFilterPredicate> Predicates { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets AdditionalProperties
+        /// </summary>
+        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
+        public Dictionary<string, Object> AdditionalProperties { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,6 +96,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  FilterType: ").Append(FilterType).Append("\n");
             sb.Append("  Predicates: ").Append(Predicates).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -135,6 +146,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Predicates == other.Predicates ||
                     this.Predicates != null &&
                     this.Predicates.SequenceEqual(other.Predicates)
+                ) &&
+                (
+                    this.AdditionalProperties == other.AdditionalProperties ||
+                    this.AdditionalProperties != null &&
+                    this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
                 );
         }
 
@@ -154,6 +170,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Predicates != null)
                     hash = hash * 59 + this.Predicates.GetHashCode();
+
+                if (this.AdditionalProperties != null)
+                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
 
                 return hash;
             }

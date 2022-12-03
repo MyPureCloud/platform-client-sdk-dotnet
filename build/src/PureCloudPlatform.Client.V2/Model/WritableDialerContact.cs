@@ -83,6 +83,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// A map of email records for the contact email columns.
+        /// </summary>
+        /// <value>A map of email records for the contact email columns.</value>
+        [DataMember(Name="latestEmailEvaluations", EmitDefaultValue=false)]
+        public Dictionary<string, MessageEvaluation> LatestEmailEvaluations { get; private set; }
+
+
+
+        /// <summary>
         /// Indicates whether or not the contact can be called.
         /// </summary>
         /// <value>Indicates whether or not the contact can be called.</value>
@@ -121,6 +130,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ContactListId: ").Append(ContactListId).Append("\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("  LatestSmsEvaluations: ").Append(LatestSmsEvaluations).Append("\n");
+            sb.Append("  LatestEmailEvaluations: ").Append(LatestEmailEvaluations).Append("\n");
             sb.Append("  Callable: ").Append(Callable).Append("\n");
             sb.Append("  PhoneNumberStatus: ").Append(PhoneNumberStatus).Append("\n");
             sb.Append("  ContactableStatus: ").Append(ContactableStatus).Append("\n");
@@ -185,6 +195,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LatestSmsEvaluations.SequenceEqual(other.LatestSmsEvaluations)
                 ) &&
                 (
+                    this.LatestEmailEvaluations == other.LatestEmailEvaluations ||
+                    this.LatestEmailEvaluations != null &&
+                    this.LatestEmailEvaluations.SequenceEqual(other.LatestEmailEvaluations)
+                ) &&
+                (
                     this.Callable == other.Callable ||
                     this.Callable != null &&
                     this.Callable.Equals(other.Callable)
@@ -223,6 +238,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.LatestSmsEvaluations != null)
                     hash = hash * 59 + this.LatestSmsEvaluations.GetHashCode();
+
+                if (this.LatestEmailEvaluations != null)
+                    hash = hash * 59 + this.LatestEmailEvaluations.GetHashCode();
 
                 if (this.Callable != null)
                     hash = hash * 59 + this.Callable.GetHashCode();

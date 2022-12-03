@@ -26,13 +26,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AddressNormalized">The normalized address. This field is acquired from the Address Normalization Table.  The addressRaw could have gone through some transformations, such as only using the numeric portion, before being run through the Address Normalization Table..</param>
         /// <param name="AddressRaw">The address as close to the bits on the wire as possible..</param>
         /// <param name="AddressDisplayable">The displayable address. This field is acquired from the Address Normalization Table.  The addressRaw could have gone through some transformations, such as only using the numeric portion, before being run through the Address Normalization Table..</param>
-        public QueueConversationSocialExpressionEventTopicAddress(string Name = null, string NameRaw = null, string AddressNormalized = null, string AddressRaw = null, string AddressDisplayable = null)
+        /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        public QueueConversationSocialExpressionEventTopicAddress(string Name = null, string NameRaw = null, string AddressNormalized = null, string AddressRaw = null, string AddressDisplayable = null, Dictionary<string, Object> AdditionalProperties = null)
         {
             this.Name = Name;
             this.NameRaw = NameRaw;
             this.AddressNormalized = AddressNormalized;
             this.AddressRaw = AddressRaw;
             this.AddressDisplayable = AddressDisplayable;
+            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -82,6 +84,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public string AddressDisplayable { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets AdditionalProperties
+        /// </summary>
+        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
+        public Dictionary<string, Object> AdditionalProperties { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -96,6 +106,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AddressNormalized: ").Append(AddressNormalized).Append("\n");
             sb.Append("  AddressRaw: ").Append(AddressRaw).Append("\n");
             sb.Append("  AddressDisplayable: ").Append(AddressDisplayable).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -160,6 +171,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AddressDisplayable == other.AddressDisplayable ||
                     this.AddressDisplayable != null &&
                     this.AddressDisplayable.Equals(other.AddressDisplayable)
+                ) &&
+                (
+                    this.AdditionalProperties == other.AdditionalProperties ||
+                    this.AdditionalProperties != null &&
+                    this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
                 );
         }
 
@@ -188,6 +204,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AddressDisplayable != null)
                     hash = hash * 59 + this.AddressDisplayable.GetHashCode();
+
+                if (this.AdditionalProperties != null)
+                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
 
                 return hash;
             }

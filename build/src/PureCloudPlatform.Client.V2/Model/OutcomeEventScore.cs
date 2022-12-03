@@ -24,11 +24,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Outcome">The outcome that the score was calculated for..</param>
         /// <param name="SessionMaxProbability">Represents the max probability reached in the session..</param>
         /// <param name="Probability">Represents the likelihood of a customer reaching or achieving a given outcome..</param>
-        public OutcomeEventScore(AddressableEntityRef Outcome = null, float? SessionMaxProbability = null, float? Probability = null)
+        /// <param name="Percentile">Represents the predicted probability's percentile score when compared with all other generated probabilities for a given outcome..</param>
+        /// <param name="SessionMaxPercentile">Represents the maximum likelihood percentile score reached for a given outcome by the current session..</param>
+        public OutcomeEventScore(AddressableEntityRef Outcome = null, float? SessionMaxProbability = null, float? Probability = null, int? Percentile = null, int? SessionMaxPercentile = null)
         {
             this.Outcome = Outcome;
             this.SessionMaxProbability = SessionMaxProbability;
             this.Probability = Probability;
+            this.Percentile = Percentile;
+            this.SessionMaxPercentile = SessionMaxPercentile;
             
         }
         
@@ -60,6 +64,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public float? Probability { get; set; }
 
 
+
+        /// <summary>
+        /// Represents the predicted probability's percentile score when compared with all other generated probabilities for a given outcome.
+        /// </summary>
+        /// <value>Represents the predicted probability's percentile score when compared with all other generated probabilities for a given outcome.</value>
+        [DataMember(Name="percentile", EmitDefaultValue=false)]
+        public int? Percentile { get; set; }
+
+
+
+        /// <summary>
+        /// Represents the maximum likelihood percentile score reached for a given outcome by the current session.
+        /// </summary>
+        /// <value>Represents the maximum likelihood percentile score reached for a given outcome by the current session.</value>
+        [DataMember(Name="sessionMaxPercentile", EmitDefaultValue=false)]
+        public int? SessionMaxPercentile { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -72,6 +94,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Outcome: ").Append(Outcome).Append("\n");
             sb.Append("  SessionMaxProbability: ").Append(SessionMaxProbability).Append("\n");
             sb.Append("  Probability: ").Append(Probability).Append("\n");
+            sb.Append("  Percentile: ").Append(Percentile).Append("\n");
+            sb.Append("  SessionMaxPercentile: ").Append(SessionMaxPercentile).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -126,6 +150,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Probability == other.Probability ||
                     this.Probability != null &&
                     this.Probability.Equals(other.Probability)
+                ) &&
+                (
+                    this.Percentile == other.Percentile ||
+                    this.Percentile != null &&
+                    this.Percentile.Equals(other.Percentile)
+                ) &&
+                (
+                    this.SessionMaxPercentile == other.SessionMaxPercentile ||
+                    this.SessionMaxPercentile != null &&
+                    this.SessionMaxPercentile.Equals(other.SessionMaxPercentile)
                 );
         }
 
@@ -148,6 +182,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Probability != null)
                     hash = hash * 59 + this.Probability.GetHashCode();
+
+                if (this.Percentile != null)
+                    hash = hash * 59 + this.Percentile.GetHashCode();
+
+                if (this.SessionMaxPercentile != null)
+                    hash = hash * 59 + this.SessionMaxPercentile.GetHashCode();
 
                 return hash;
             }

@@ -188,7 +188,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Unarchive for "unarchive"
             /// </summary>
             [EnumMember(Value = "unarchive")]
-            Unarchive
+            Unarchive,
+            
+            /// <summary>
+            /// Enum Reschedule for "reschedule"
+            /// </summary>
+            [EnumMember(Value = "reschedule")]
+            Reschedule
         }
         /// <summary>
         /// Gets or Sets AssignmentState
@@ -268,7 +274,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Acdcancelled for "AcdCancelled"
             /// </summary>
             [EnumMember(Value = "AcdCancelled")]
-            Acdcancelled
+            Acdcancelled,
+            
+            /// <summary>
+            /// Enum Terminated for "Terminated"
+            /// </summary>
+            [EnumMember(Value = "Terminated")]
+            Terminated
         }
         /// <summary>
         /// Gets or Sets StatusCategory
