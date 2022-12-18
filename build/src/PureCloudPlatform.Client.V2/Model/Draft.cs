@@ -73,6 +73,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Draft topic object.
+        /// </summary>
+        /// <value>Draft topic object.</value>
+        [DataMember(Name="topics", EmitDefaultValue=false)]
+        public List<DraftTopics> Topics { get; private set; }
+
+
+
+        /// <summary>
         /// Date when the draft was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>Date when the draft was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
@@ -111,6 +120,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Miner: ").Append(Miner).Append("\n");
             sb.Append("  Intents: ").Append(Intents).Append("\n");
+            sb.Append("  Topics: ").Append(Topics).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -175,6 +185,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Intents.SequenceEqual(other.Intents)
                 ) &&
                 (
+                    this.Topics == other.Topics ||
+                    this.Topics != null &&
+                    this.Topics.SequenceEqual(other.Topics)
+                ) &&
+                (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
@@ -213,6 +228,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Intents != null)
                     hash = hash * 59 + this.Intents.GetHashCode();
+
+                if (this.Topics != null)
+                    hash = hash * 59 + this.Topics.GetHashCode();
 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();

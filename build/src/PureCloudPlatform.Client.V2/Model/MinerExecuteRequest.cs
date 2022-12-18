@@ -52,11 +52,50 @@ namespace PureCloudPlatform.Client.V2.Model
             Message
         }
         /// <summary>
+        /// Type of the participant, either agent, customer or both.
+        /// </summary>
+        /// <value>Type of the participant, either agent, customer or both.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ParticipantTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Customer for "Customer"
+            /// </summary>
+            [EnumMember(Value = "Customer")]
+            Customer,
+            
+            /// <summary>
+            /// Enum Agent for "Agent"
+            /// </summary>
+            [EnumMember(Value = "Agent")]
+            Agent,
+            
+            /// <summary>
+            /// Enum Both for "Both"
+            /// </summary>
+            [EnumMember(Value = "Both")]
+            Both
+        }
+        /// <summary>
         /// Media type for filtering conversations.
         /// </summary>
         /// <value>Media type for filtering conversations.</value>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; set; }
+        /// <summary>
+        /// Type of the participant, either agent, customer or both.
+        /// </summary>
+        /// <value>Type of the participant, either agent, customer or both.</value>
+        [DataMember(Name="participantType", EmitDefaultValue=false)]
+        public ParticipantTypeEnum? ParticipantType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="MinerExecuteRequest" /> class.
         /// </summary>
@@ -64,13 +103,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateEnd">End date for the date range to mine. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
         /// <param name="UploadKey">Location of input conversations..</param>
         /// <param name="MediaType">Media type for filtering conversations..</param>
+        /// <param name="ParticipantType">Type of the participant, either agent, customer or both..</param>
         /// <param name="QueueIds">List of queue IDs for filtering conversations..</param>
-        public MinerExecuteRequest(String DateStart = null, String DateEnd = null, string UploadKey = null, MediaTypeEnum? MediaType = null, List<string> QueueIds = null)
+        public MinerExecuteRequest(String DateStart = null, String DateEnd = null, string UploadKey = null, MediaTypeEnum? MediaType = null, ParticipantTypeEnum? ParticipantType = null, List<string> QueueIds = null)
         {
             this.DateStart = DateStart;
             this.DateEnd = DateEnd;
             this.UploadKey = UploadKey;
             this.MediaType = MediaType;
+            this.ParticipantType = ParticipantType;
             this.QueueIds = QueueIds;
             
         }
@@ -106,6 +147,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
         /// <summary>
         /// List of queue IDs for filtering conversations.
         /// </summary>
@@ -127,6 +170,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateEnd: ").Append(DateEnd).Append("\n");
             sb.Append("  UploadKey: ").Append(UploadKey).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
+            sb.Append("  ParticipantType: ").Append(ParticipantType).Append("\n");
             sb.Append("  QueueIds: ").Append(QueueIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -189,6 +233,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MediaType.Equals(other.MediaType)
                 ) &&
                 (
+                    this.ParticipantType == other.ParticipantType ||
+                    this.ParticipantType != null &&
+                    this.ParticipantType.Equals(other.ParticipantType)
+                ) &&
+                (
                     this.QueueIds == other.QueueIds ||
                     this.QueueIds != null &&
                     this.QueueIds.SequenceEqual(other.QueueIds)
@@ -217,6 +266,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
+
+                if (this.ParticipantType != null)
+                    hash = hash * 59 + this.ParticipantType.GetHashCode();
 
                 if (this.QueueIds != null)
                     hash = hash * 59 + this.QueueIds.GetHashCode();

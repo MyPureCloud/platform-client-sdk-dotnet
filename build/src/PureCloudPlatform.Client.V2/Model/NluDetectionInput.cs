@@ -28,9 +28,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="NluDetectionInput" /> class.
         /// </summary>
         /// <param name="Text">The text to perform NLU detection on. (required).</param>
-        public NluDetectionInput(string Text = null)
+        /// <param name="Language">Language of the version for multilingual detection, e.g. `en-us`, `de-de`.</param>
+        public NluDetectionInput(string Text = null, string Language = null)
         {
             this.Text = Text;
+            this.Language = Language;
             
         }
         
@@ -44,6 +46,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Text { get; set; }
 
 
+
+        /// <summary>
+        /// Language of the version for multilingual detection, e.g. `en-us`, `de-de`
+        /// </summary>
+        /// <value>Language of the version for multilingual detection, e.g. `en-us`, `de-de`</value>
+        [DataMember(Name="language", EmitDefaultValue=false)]
+        public string Language { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,6 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class NluDetectionInput {\n");
 
             sb.Append("  Text: ").Append(Text).Append("\n");
+            sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -98,6 +110,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Text == other.Text ||
                     this.Text != null &&
                     this.Text.Equals(other.Text)
+                ) &&
+                (
+                    this.Language == other.Language ||
+                    this.Language != null &&
+                    this.Language.Equals(other.Language)
                 );
         }
 
@@ -114,6 +131,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Text != null)
                     hash = hash * 59 + this.Text.GetHashCode();
+
+                if (this.Language != null)
+                    hash = hash * 59 + this.Language.GetHashCode();
 
                 return hash;
             }

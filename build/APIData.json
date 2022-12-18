@@ -16339,7 +16339,7 @@
   "getlanguageunderstandingdomainfeedback": {
     "operationId": "getlanguageunderstandingdomainfeedback",
     "functionName": "GetLanguageunderstandingDomainFeedback",
-    "signature": "GetLanguageunderstandingDomainFeedback(domainId, intentName, assessment, dateStart, dateEnd, includeDeleted, pageNumber, pageSize, enableCursorPagination, after, fields)",
+    "signature": "GetLanguageunderstandingDomainFeedback(domainId, intentName, assessment, dateStart, dateEnd, includeDeleted, language, pageNumber, pageSize, enableCursorPagination, after, fields)",
     "parameters": [
       {
         "name": "domainId",
@@ -16372,6 +16372,11 @@
         "required": "false"
       },
       {
+        "name": "language",
+        "type": "string",
+        "required": "false"
+      },
+      {
         "name": "pageNumber",
         "type": "int?",
         "required": "false"
@@ -16398,7 +16403,7 @@
       }
     ],
     "return": "NluFeedbackListing",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetLanguageunderstandingDomainFeedbackExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new LanguageUnderstandingApi();\n            var domainId = \"domainId_example\";  // string | ID of the NLU domain.\n            var intentName = \"intentName_example\";  // string | The top intent name to retrieve feedback for. (optional) \n            var assessment = \"assessment_example\";  // string | The top assessment to retrieve feedback for. (optional) \n            var dateStart = new Date();  // String | Begin of time window as ISO-8601 date. (optional) \n            var dateEnd = new Date();  // String | End of time window as ISO-8601 date. (optional) \n            var includeDeleted = true;  // bool? | Whether to include soft-deleted items in the result. (optional) \n            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)\n            var pageSize = 56;  // int? | Page size (optional)  (default to 25)\n            var enableCursorPagination = true;  // bool? | Enable Cursor Pagination (optional)  (default to false)\n            var after = \"after_example\";  // string | The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination=true (optional) \n            var fields = new List<string>(); // List<string> | Fields and properties to get, comma-separated (optional) \n\n            try\n            { \n                // Get all feedback in the given NLU Domain Version.\n                NluFeedbackListing result = apiInstance.GetLanguageunderstandingDomainFeedback(domainId, intentName, assessment, dateStart, dateEnd, includeDeleted, pageNumber, pageSize, enableCursorPagination, after, fields);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling LanguageUnderstanding.GetLanguageunderstandingDomainFeedback: \" + e.Message );\n            }\n        }\n    }\n}"
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetLanguageunderstandingDomainFeedbackExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new LanguageUnderstandingApi();\n            var domainId = \"domainId_example\";  // string | ID of the NLU domain.\n            var intentName = \"intentName_example\";  // string | The top intent name to retrieve feedback for. (optional) \n            var assessment = \"assessment_example\";  // string | The top assessment to retrieve feedback for. (optional) \n            var dateStart = new Date();  // String | Begin of time window as ISO-8601 date. (optional) \n            var dateEnd = new Date();  // String | End of time window as ISO-8601 date. (optional) \n            var includeDeleted = true;  // bool? | Whether to include soft-deleted items in the result. (optional) \n            var language = \"language_example\";  // string | Whether to filter response based on the language, e.g. en-us, pt-br. (optional) \n            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)\n            var pageSize = 56;  // int? | Page size (optional)  (default to 25)\n            var enableCursorPagination = true;  // bool? | Enable Cursor Pagination (optional)  (default to false)\n            var after = \"after_example\";  // string | The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination=true (optional) \n            var fields = new List<string>(); // List<string> | Fields and properties to get, comma-separated (optional) \n\n            try\n            { \n                // Get all feedback in the given NLU Domain Version.\n                NluFeedbackListing result = apiInstance.GetLanguageunderstandingDomainFeedback(domainId, intentName, assessment, dateStart, dateEnd, includeDeleted, language, pageNumber, pageSize, enableCursorPagination, after, fields);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling LanguageUnderstanding.GetLanguageunderstandingDomainFeedback: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "getlanguageunderstandingdomainfeedbackfeedbackid": {
     "operationId": "getlanguageunderstandingdomainfeedbackfeedbackid",
@@ -16532,7 +16537,7 @@
   "getlanguageunderstandingminerdraft": {
     "operationId": "getlanguageunderstandingminerdraft",
     "functionName": "GetLanguageunderstandingMinerDraft",
-    "signature": "GetLanguageunderstandingMinerDraft(minerId, draftId)",
+    "signature": "GetLanguageunderstandingMinerDraft(minerId, draftId, draftIntentId, draftTopicId)",
     "parameters": [
       {
         "name": "minerId",
@@ -16543,10 +16548,20 @@
         "name": "draftId",
         "type": "string",
         "required": "true"
+      },
+      {
+        "name": "draftIntentId",
+        "type": "string",
+        "required": "false"
+      },
+      {
+        "name": "draftTopicId",
+        "type": "string",
+        "required": "false"
       }
     ],
     "return": "Draft",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetLanguageunderstandingMinerDraftExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new LanguageUnderstandingApi();\n            var minerId = \"minerId_example\";  // string | Miner ID\n            var draftId = \"draftId_example\";  // string | Draft ID\n\n            try\n            { \n                // Get information about a draft.\n                Draft result = apiInstance.GetLanguageunderstandingMinerDraft(minerId, draftId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling LanguageUnderstanding.GetLanguageunderstandingMinerDraft: \" + e.Message );\n            }\n        }\n    }\n}"
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetLanguageunderstandingMinerDraftExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new LanguageUnderstandingApi();\n            var minerId = \"minerId_example\";  // string | Miner ID\n            var draftId = \"draftId_example\";  // string | Draft ID\n            var draftIntentId = \"draftIntentId_example\";  // string | Parameter to filter a specific intent. (optional) \n            var draftTopicId = \"draftTopicId_example\";  // string | Parameter to filter a specific topic. (optional) \n\n            try\n            { \n                // Get information about a draft.\n                Draft result = apiInstance.GetLanguageunderstandingMinerDraft(minerId, draftId, draftIntentId, draftTopicId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling LanguageUnderstanding.GetLanguageunderstandingMinerDraft: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "getlanguageunderstandingminerdrafts": {
     "operationId": "getlanguageunderstandingminerdrafts",
@@ -16605,12 +16620,81 @@
     "return": "MinedIntentsListing",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetLanguageunderstandingMinerIntentsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new LanguageUnderstandingApi();\n            var minerId = \"minerId_example\";  // string | Miner ID\n            var expand = \"expand_example\";  // string | Option to fetch utterances. (optional) \n\n            try\n            { \n                // Retrieve a list of mined intents.\n                MinedIntentsListing result = apiInstance.GetLanguageunderstandingMinerIntents(minerId, expand);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling LanguageUnderstanding.GetLanguageunderstandingMinerIntents: \" + e.Message );\n            }\n        }\n    }\n}"
   },
+  "getlanguageunderstandingminertopic": {
+    "operationId": "getlanguageunderstandingminertopic",
+    "functionName": "GetLanguageunderstandingMinerTopic",
+    "signature": "GetLanguageunderstandingMinerTopic(minerId, topicId, expand)",
+    "parameters": [
+      {
+        "name": "minerId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "topicId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "expand",
+        "type": "string",
+        "required": "false"
+      }
+    ],
+    "return": "MinerTopic",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetLanguageunderstandingMinerTopicExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new LanguageUnderstandingApi();\n            var minerId = \"minerId_example\";  // string | Miner ID\n            var topicId = \"topicId_example\";  // string | The ID of the topic to be retrieved.\n            var expand = \"expand_example\";  // string | Option to fetch phrases (optional) \n\n            try\n            { \n                // Retrieves details of a particular topic.\n                MinerTopic result = apiInstance.GetLanguageunderstandingMinerTopic(minerId, topicId, expand);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling LanguageUnderstanding.GetLanguageunderstandingMinerTopic: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getlanguageunderstandingminertopicphrase": {
+    "operationId": "getlanguageunderstandingminertopicphrase",
+    "functionName": "GetLanguageunderstandingMinerTopicPhrase",
+    "signature": "GetLanguageunderstandingMinerTopicPhrase(minerId, topicId, phraseId)",
+    "parameters": [
+      {
+        "name": "minerId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "topicId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "phraseId",
+        "type": "string",
+        "required": "true"
+      }
+    ],
+    "return": "MinerTopicPhrase",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetLanguageunderstandingMinerTopicPhraseExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new LanguageUnderstandingApi();\n            var minerId = \"minerId_example\";  // string | Miner ID\n            var topicId = \"topicId_example\";  // string | The ID of the topic to be retrieved.\n            var phraseId = \"phraseId_example\";  // string | The ID of the phrase to be retrieved.\n\n            try\n            { \n                // Retrieves utterances related to a phrase in a topic.\n                MinerTopicPhrase result = apiInstance.GetLanguageunderstandingMinerTopicPhrase(minerId, topicId, phraseId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling LanguageUnderstanding.GetLanguageunderstandingMinerTopicPhrase: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getlanguageunderstandingminertopics": {
+    "operationId": "getlanguageunderstandingminertopics",
+    "functionName": "GetLanguageunderstandingMinerTopics",
+    "signature": "GetLanguageunderstandingMinerTopics(minerId)",
+    "parameters": [
+      {
+        "name": "minerId",
+        "type": "string",
+        "required": "true"
+      }
+    ],
+    "return": "MinerTopicsListing",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetLanguageunderstandingMinerTopicsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new LanguageUnderstandingApi();\n            var minerId = \"minerId_example\";  // string | Miner ID\n\n            try\n            { \n                // Retrieve a list of mined topics.\n                MinerTopicsListing result = apiInstance.GetLanguageunderstandingMinerTopics(minerId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling LanguageUnderstanding.GetLanguageunderstandingMinerTopics: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
   "getlanguageunderstandingminers": {
     "operationId": "getlanguageunderstandingminers",
     "functionName": "GetLanguageunderstandingMiners",
-    "signature": "GetLanguageunderstandingMiners()",
+    "signature": "GetLanguageunderstandingMiners(minerType)",
+    "parameters": [
+      {
+        "name": "minerType",
+        "type": "string",
+        "required": "false"
+      }
+    ],
     "return": "MinerListing",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetLanguageunderstandingMinersExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new LanguageUnderstandingApi();\n\n            try\n            { \n                // Retrieve the list of miners created.\n                MinerListing result = apiInstance.GetLanguageunderstandingMiners();\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling LanguageUnderstanding.GetLanguageunderstandingMiners: \" + e.Message );\n            }\n        }\n    }\n}"
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetLanguageunderstandingMinersExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new LanguageUnderstandingApi();\n            var minerType = \"minerType_example\";  // string | Type of miner, either intent or topic (optional) \n\n            try\n            { \n                // Retrieve the list of miners created.\n                MinerListing result = apiInstance.GetLanguageunderstandingMiners(minerType);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling LanguageUnderstanding.GetLanguageunderstandingMiners: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "patchlanguageunderstandingdomain": {
     "operationId": "patchlanguageunderstandingdomain",
@@ -16739,7 +16823,7 @@
   "postlanguageunderstandingdomainversions": {
     "operationId": "postlanguageunderstandingdomainversions",
     "functionName": "PostLanguageunderstandingDomainVersions",
-    "signature": "PostLanguageunderstandingDomainVersions(domainId, body)",
+    "signature": "PostLanguageunderstandingDomainVersions(domainId, body, includeUtterances)",
     "parameters": [
       {
         "name": "domainId",
@@ -16750,10 +16834,15 @@
         "name": "body",
         "type": "NluDomainVersion",
         "required": "true"
+      },
+      {
+        "name": "includeUtterances",
+        "type": "bool?",
+        "required": "false"
       }
     ],
     "return": "NluDomainVersion",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostLanguageunderstandingDomainVersionsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new LanguageUnderstandingApi();\n            var domainId = \"domainId_example\";  // string | ID of the NLU domain.\n            var body = new NluDomainVersion(); // NluDomainVersion | The NLU Domain Version to create.\n\n            try\n            { \n                // Create an NLU Domain Version.\n                NluDomainVersion result = apiInstance.PostLanguageunderstandingDomainVersions(domainId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling LanguageUnderstanding.PostLanguageunderstandingDomainVersions: \" + e.Message );\n            }\n        }\n    }\n}"
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostLanguageunderstandingDomainVersionsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new LanguageUnderstandingApi();\n            var domainId = \"domainId_example\";  // string | ID of the NLU domain.\n            var body = new NluDomainVersion(); // NluDomainVersion | The NLU Domain Version to create.\n            var includeUtterances = true;  // bool? | Whether utterances for intent definition should be included when marshalling response. (optional) \n\n            try\n            { \n                // Create an NLU Domain Version.\n                NluDomainVersion result = apiInstance.PostLanguageunderstandingDomainVersions(domainId, body, includeUtterances);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling LanguageUnderstanding.PostLanguageunderstandingDomainVersions: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "postlanguageunderstandingdomains": {
     "operationId": "postlanguageunderstandingdomains",
@@ -19347,6 +19436,42 @@
     ],
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class DeleteOutboundDnclistExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OutboundApi();\n            var dncListId = \"dncListId_example\";  // string | DncList ID\n\n            try\n            { \n                // Delete dialer DNC list\n                apiInstance.DeleteOutboundDnclist(dncListId);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Outbound.DeleteOutboundDnclist: \" + e.Message );\n            }\n        }\n    }\n}"
   },
+  "deleteoutbounddnclistemailaddresses": {
+    "operationId": "deleteoutbounddnclistemailaddresses",
+    "functionName": "DeleteOutboundDnclistEmailaddresses",
+    "signature": "DeleteOutboundDnclistEmailaddresses(dncListId, expiredOnly)",
+    "parameters": [
+      {
+        "name": "dncListId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "expiredOnly",
+        "type": "bool?",
+        "required": "false"
+      }
+    ],
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class DeleteOutboundDnclistEmailaddressesExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OutboundApi();\n            var dncListId = \"dncListId_example\";  // string | DncList ID\n            var expiredOnly = true;  // bool? | Set to true to only remove DNC entries that are expired (optional)  (default to false)\n\n            try\n            { \n                // Deletes all or expired email addresses from a DNC list.\n                apiInstance.DeleteOutboundDnclistEmailaddresses(dncListId, expiredOnly);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Outbound.DeleteOutboundDnclistEmailaddresses: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "deleteoutbounddnclistphonenumbers": {
+    "operationId": "deleteoutbounddnclistphonenumbers",
+    "functionName": "DeleteOutboundDnclistPhonenumbers",
+    "signature": "DeleteOutboundDnclistPhonenumbers(dncListId, expiredOnly)",
+    "parameters": [
+      {
+        "name": "dncListId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "expiredOnly",
+        "type": "bool?",
+        "required": "false"
+      }
+    ],
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class DeleteOutboundDnclistPhonenumbersExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OutboundApi();\n            var dncListId = \"dncListId_example\";  // string | DncList ID\n            var expiredOnly = true;  // bool? | Set to true to only remove DNC entries that are expired (optional)  (default to false)\n\n            try\n            { \n                // Deletes all or expired phone numbers from a DNC list.\n                apiInstance.DeleteOutboundDnclistPhonenumbers(dncListId, expiredOnly);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Outbound.DeleteOutboundDnclistPhonenumbers: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
   "deleteoutboundmessagingcampaign": {
     "operationId": "deleteoutboundmessagingcampaign",
     "functionName": "DeleteOutboundMessagingcampaign",
@@ -20956,6 +21081,42 @@
     "signature": "GetOutboundWrapupcodemappings()",
     "return": "WrapUpCodeMapping",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetOutboundWrapupcodemappingsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OutboundApi();\n\n            try\n            { \n                // Get the Dialer wrap up code mapping.\n                WrapUpCodeMapping result = apiInstance.GetOutboundWrapupcodemappings();\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Outbound.GetOutboundWrapupcodemappings: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "patchoutbounddnclistemailaddresses": {
+    "operationId": "patchoutbounddnclistemailaddresses",
+    "functionName": "PatchOutboundDnclistEmailaddresses",
+    "signature": "PatchOutboundDnclistEmailaddresses(dncListId, body)",
+    "parameters": [
+      {
+        "name": "dncListId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "DncPatchEmailsRequest",
+        "required": "true"
+      }
+    ],
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PatchOutboundDnclistEmailaddressesExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OutboundApi();\n            var dncListId = \"dncListId_example\";  // string | DncList ID\n            var body = new DncPatchEmailsRequest(); // DncPatchEmailsRequest | DNC Emails\n\n            try\n            { \n                // Add emails to or Delete emails from a DNC list.\n                apiInstance.PatchOutboundDnclistEmailaddresses(dncListId, body);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Outbound.PatchOutboundDnclistEmailaddresses: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "patchoutbounddnclistphonenumbers": {
+    "operationId": "patchoutbounddnclistphonenumbers",
+    "functionName": "PatchOutboundDnclistPhonenumbers",
+    "signature": "PatchOutboundDnclistPhonenumbers(dncListId, body)",
+    "parameters": [
+      {
+        "name": "dncListId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "DncPatchPhoneNumbersRequest",
+        "required": "true"
+      }
+    ],
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PatchOutboundDnclistPhonenumbersExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OutboundApi();\n            var dncListId = \"dncListId_example\";  // string | DncList ID\n            var body = new DncPatchPhoneNumbersRequest(); // DncPatchPhoneNumbersRequest | DNC Phone Numbers\n\n            try\n            { \n                // Add numbers to or delete numbers from a DNC list.\n                apiInstance.PatchOutboundDnclistPhonenumbers(dncListId, body);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Outbound.PatchOutboundDnclistPhonenumbers: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "patchoutboundsettings": {
     "operationId": "patchoutboundsettings",
@@ -29456,6 +29617,13 @@
     ],
     "return": "Team",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostTeamsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new TeamsApi();\n            var body = new Team(); // Team | Team\n\n            try\n            { \n                // Create a team\n                Team result = apiInstance.PostTeams(body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Teams.PostTeams: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "gettelephonymediaregions": {
+    "operationId": "gettelephonymediaregions",
+    "functionName": "GetTelephonyMediaregions",
+    "signature": "GetTelephonyMediaregions()",
+    "return": "MediaRegions",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetTelephonyMediaregionsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new TelephonyApi();\n\n            try\n            { \n                // Retrieve the list of AWS regions media can stream through.\n                MediaRegions result = apiInstance.GetTelephonyMediaregions();\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Telephony.GetTelephonyMediaregions: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "gettelephonysiptraces": {
     "operationId": "gettelephonysiptraces",

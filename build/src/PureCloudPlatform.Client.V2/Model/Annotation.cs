@@ -25,7 +25,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">Type.</param>
         /// <param name="Location">Offset of annotation in milliseconds..</param>
         /// <param name="DurationMs">Duration of annotation in milliseconds..</param>
-        /// <param name="AbsoluteLocation">Offset of annotation (milliseconds) from start of recording..</param>
+        /// <param name="AbsoluteLocation">Offset of annotation (milliseconds) from start of recording (after removing the cumulative duration of all pauses)..</param>
         /// <param name="AbsoluteDurationMs">Duration of annotation (milliseconds)..</param>
         /// <param name="RecordingLocation">Offset of annotation (milliseconds) from start of recording, adjusted for any recording cuts.</param>
         /// <param name="RecordingDurationMs">Duration of annotation (milliseconds), adjusted for any recording cuts..</param>
@@ -92,9 +92,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Offset of annotation (milliseconds) from start of recording.
+        /// Offset of annotation (milliseconds) from start of recording (after removing the cumulative duration of all pauses).
         /// </summary>
-        /// <value>Offset of annotation (milliseconds) from start of recording.</value>
+        /// <value>Offset of annotation (milliseconds) from start of recording (after removing the cumulative duration of all pauses).</value>
         [DataMember(Name="absoluteLocation", EmitDefaultValue=false)]
         public long? AbsoluteLocation { get; set; }
 

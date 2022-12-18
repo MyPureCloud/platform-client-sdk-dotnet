@@ -13,66 +13,38 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// VipBackup
+    /// AdditionalLanguagesIntent
     /// </summary>
     [DataContract]
-    public partial class VipBackup :  IEquatable<VipBackup>
+    public partial class AdditionalLanguagesIntent :  IEquatable<AdditionalLanguagesIntent>
     {
         /// <summary>
-        /// The type of VIP Backup to use.
+        /// Initializes a new instance of the <see cref="AdditionalLanguagesIntent" /> class.
         /// </summary>
-        /// <value>The type of VIP Backup to use.</value>
-        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
-        public enum TypeEnum
+        /// <param name="Utterances">Utterances list for additional language.</param>
+        public AdditionalLanguagesIntent(List<NluUtterance> Utterances = null)
         {
-            /// <summary>
-            /// Your SDK version is out of date and an unknown enum value was encountered. 
-            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
-            /// in the Package Manager Console
-            /// </summary>
-            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
-            OutdatedSdkVersion,
-            
-            /// <summary>
-            /// Enum User for "USER"
-            /// </summary>
-            [EnumMember(Value = "USER")]
-            User,
-            
-            /// <summary>
-            /// Enum Queue for "QUEUE"
-            /// </summary>
-            [EnumMember(Value = "QUEUE")]
-            Queue
-        }
-        /// <summary>
-        /// The type of VIP Backup to use.
-        /// </summary>
-        /// <value>The type of VIP Backup to use.</value>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public TypeEnum? Type { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="VipBackup" /> class.
-        /// </summary>
-        /// <param name="Id">Unique ID for the selected VIP Backup option. For QUEUE this is the queueId and for USER this is the userId..</param>
-        /// <param name="Type">The type of VIP Backup to use..</param>
-        public VipBackup(string Id = null, TypeEnum? Type = null)
-        {
-            this.Id = Id;
-            this.Type = Type;
+            this.Utterances = Utterances;
             
         }
         
 
 
         /// <summary>
-        /// Unique ID for the selected VIP Backup option. For QUEUE this is the queueId and for USER this is the userId.
+        /// ID of the intent for respective additional language
         /// </summary>
-        /// <value>Unique ID for the selected VIP Backup option. For QUEUE this is the queueId and for USER this is the userId.</value>
+        /// <value>ID of the intent for respective additional language</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
+        public string Id { get; private set; }
 
 
+
+        /// <summary>
+        /// Utterances list for additional language
+        /// </summary>
+        /// <value>Utterances list for additional language</value>
+        [DataMember(Name="utterances", EmitDefaultValue=false)]
+        public List<NluUtterance> Utterances { get; set; }
 
 
         /// <summary>
@@ -82,10 +54,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class VipBackup {\n");
+            sb.Append("class AdditionalLanguagesIntent {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  Utterances: ").Append(Utterances).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -111,15 +83,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as VipBackup);
+            return this.Equals(obj as AdditionalLanguagesIntent);
         }
 
         /// <summary>
-        /// Returns true if VipBackup instances are equal
+        /// Returns true if AdditionalLanguagesIntent instances are equal
         /// </summary>
-        /// <param name="other">Instance of VipBackup to be compared</param>
+        /// <param name="other">Instance of AdditionalLanguagesIntent to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(VipBackup other)
+        public bool Equals(AdditionalLanguagesIntent other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -132,9 +104,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
-                    this.Type == other.Type ||
-                    this.Type != null &&
-                    this.Type.Equals(other.Type)
+                    this.Utterances == other.Utterances ||
+                    this.Utterances != null &&
+                    this.Utterances.SequenceEqual(other.Utterances)
                 );
         }
 
@@ -152,8 +124,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
 
-                if (this.Type != null)
-                    hash = hash * 59 + this.Type.GetHashCode();
+                if (this.Utterances != null)
+                    hash = hash * 59 + this.Utterances.GetHashCode();
 
                 return hash;
             }

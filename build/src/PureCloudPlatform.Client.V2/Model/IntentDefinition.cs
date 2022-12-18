@@ -30,11 +30,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">The name of the intent. (required).</param>
         /// <param name="EntityTypeBindings">The bindings for the named entity types used in this intent.This field is mutually exclusive with entityNameReferences and entities.</param>
         /// <param name="Utterances">The utterances that act as training phrases for the intent. (required).</param>
-        public IntentDefinition(string Name = null, List<NamedEntityTypeBinding> EntityTypeBindings = null, List<NluUtterance> Utterances = null)
+        /// <param name="AdditionalLanguages">Additional languages for intents.</param>
+        public IntentDefinition(string Name = null, List<NamedEntityTypeBinding> EntityTypeBindings = null, List<NluUtterance> Utterances = null, Dictionary<string, AdditionalLanguagesIntent> AdditionalLanguages = null)
         {
             this.Name = Name;
             this.EntityTypeBindings = EntityTypeBindings;
             this.Utterances = Utterances;
+            this.AdditionalLanguages = AdditionalLanguages;
             
         }
         
@@ -84,6 +86,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<NluUtterance> Utterances { get; set; }
 
 
+
+        /// <summary>
+        /// Additional languages for intents
+        /// </summary>
+        /// <value>Additional languages for intents</value>
+        [DataMember(Name="additionalLanguages", EmitDefaultValue=false)]
+        public Dictionary<string, AdditionalLanguagesIntent> AdditionalLanguages { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -98,6 +109,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EntityTypeBindings: ").Append(EntityTypeBindings).Append("\n");
             sb.Append("  EntityNameReferences: ").Append(EntityNameReferences).Append("\n");
             sb.Append("  Utterances: ").Append(Utterances).Append("\n");
+            sb.Append("  AdditionalLanguages: ").Append(AdditionalLanguages).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -162,6 +174,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Utterances == other.Utterances ||
                     this.Utterances != null &&
                     this.Utterances.SequenceEqual(other.Utterances)
+                ) &&
+                (
+                    this.AdditionalLanguages == other.AdditionalLanguages ||
+                    this.AdditionalLanguages != null &&
+                    this.AdditionalLanguages.SequenceEqual(other.AdditionalLanguages)
                 );
         }
 
@@ -190,6 +207,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Utterances != null)
                     hash = hash * 59 + this.Utterances.GetHashCode();
+
+                if (this.AdditionalLanguages != null)
+                    hash = hash * 59 + this.AdditionalLanguages.GetHashCode();
 
                 return hash;
             }

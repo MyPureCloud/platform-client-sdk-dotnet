@@ -82,7 +82,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="OpenMessagingChannel" /> class.
         /// </summary>
         /// <param name="Type">Specifies if this message is part of a private or public conversation..</param>
-        /// <param name="MessageId">Unique provider ID of the message such as a Facebook message ID. (required).</param>
+        /// <param name="MessageId">Unique provider ID of the message such as a Facebook message ID..</param>
         /// <param name="To">Information about the recipient the message is sent to. (required).</param>
         /// <param name="From">Information about the recipient the message is received from. (required).</param>
         /// <param name="Time">Original time of the event. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>

@@ -136,7 +136,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Conversation for "Conversation"
             /// </summary>
             [EnumMember(Value = "Conversation")]
-            Conversation
+            Conversation,
+            
+            /// <summary>
+            /// Enum App for "App"
+            /// </summary>
+            [EnumMember(Value = "App")]
+            App
         }
         /// <summary>
         /// The comparison operator.

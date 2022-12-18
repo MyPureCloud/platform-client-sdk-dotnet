@@ -400,6 +400,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Processed,
             
             /// <summary>
+            /// Enum Remove for "Remove"
+            /// </summary>
+            [EnumMember(Value = "Remove")]
+            Remove,
+            
+            /// <summary>
             /// Enum Replace for "Replace"
             /// </summary>
             [EnumMember(Value = "Replace")]

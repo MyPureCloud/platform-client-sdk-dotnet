@@ -81,7 +81,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EnableTranscription">Indicates whether voice transcription is enabled for this queue..</param>
         /// <param name="EnableManualAssignment">Indicates whether manual assignment is enabled for this queue..</param>
         /// <param name="AgentOwnedRouting">The Agent Owned Routing settings for the queue.</param>
-        /// <param name="VipRouting">The VIP Routing settings for the queue.</param>
+        /// <param name="DirectRouting">The Direct Routing settings for the queue.</param>
         /// <param name="CallingPartyName">The name to use for caller identification for outbound calls from this queue..</param>
         /// <param name="CallingPartyNumber">The phone number to use for caller identification for outbound calls from this queue..</param>
         /// <param name="DefaultScripts">The default script Ids for the communication types..</param>
@@ -89,7 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OutboundEmailAddress">OutboundEmailAddress.</param>
         /// <param name="PeerId">The ID of an associated external queue..</param>
         /// <param name="Joined">Joined.</param>
-        public UserQueue(string Name = null, Division Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, Dictionary<string, MediaSetting> MediaSettings = null, List<RoutingRule> RoutingRules = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, List<MemberGroup> MemberGroups = null, DomainEntityRef QueueFlow = null, DomainEntityRef EmailInQueueFlow = null, DomainEntityRef MessageInQueueFlow = null, DomainEntityRef WhisperPrompt = null, DomainEntityRef OnHoldPrompt = null, bool? EnableTranscription = null, bool? EnableManualAssignment = null, AgentOwnedRouting AgentOwnedRouting = null, VipRouting VipRouting = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null, string PeerId = null, bool? Joined = null)
+        public UserQueue(string Name = null, Division Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, Dictionary<string, MediaSetting> MediaSettings = null, List<RoutingRule> RoutingRules = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, List<MemberGroup> MemberGroups = null, DomainEntityRef QueueFlow = null, DomainEntityRef EmailInQueueFlow = null, DomainEntityRef MessageInQueueFlow = null, DomainEntityRef WhisperPrompt = null, DomainEntityRef OnHoldPrompt = null, bool? EnableTranscription = null, bool? EnableManualAssignment = null, AgentOwnedRouting AgentOwnedRouting = null, DirectRouting DirectRouting = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null, string PeerId = null, bool? Joined = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -112,7 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.EnableTranscription = EnableTranscription;
             this.EnableManualAssignment = EnableManualAssignment;
             this.AgentOwnedRouting = AgentOwnedRouting;
-            this.VipRouting = VipRouting;
+            this.DirectRouting = DirectRouting;
             this.CallingPartyName = CallingPartyName;
             this.CallingPartyNumber = CallingPartyNumber;
             this.DefaultScripts = DefaultScripts;
@@ -343,11 +343,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The VIP Routing settings for the queue
+        /// The Direct Routing settings for the queue
         /// </summary>
-        /// <value>The VIP Routing settings for the queue</value>
-        [DataMember(Name="vipRouting", EmitDefaultValue=false)]
-        public VipRouting VipRouting { get; set; }
+        /// <value>The Direct Routing settings for the queue</value>
+        [DataMember(Name="directRouting", EmitDefaultValue=false)]
+        public DirectRouting DirectRouting { get; set; }
 
 
 
@@ -454,7 +454,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EnableTranscription: ").Append(EnableTranscription).Append("\n");
             sb.Append("  EnableManualAssignment: ").Append(EnableManualAssignment).Append("\n");
             sb.Append("  AgentOwnedRouting: ").Append(AgentOwnedRouting).Append("\n");
-            sb.Append("  VipRouting: ").Append(VipRouting).Append("\n");
+            sb.Append("  DirectRouting: ").Append(DirectRouting).Append("\n");
             sb.Append("  CallingPartyName: ").Append(CallingPartyName).Append("\n");
             sb.Append("  CallingPartyNumber: ").Append(CallingPartyNumber).Append("\n");
             sb.Append("  DefaultScripts: ").Append(DefaultScripts).Append("\n");
@@ -629,9 +629,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AgentOwnedRouting.Equals(other.AgentOwnedRouting)
                 ) &&
                 (
-                    this.VipRouting == other.VipRouting ||
-                    this.VipRouting != null &&
-                    this.VipRouting.Equals(other.VipRouting)
+                    this.DirectRouting == other.DirectRouting ||
+                    this.DirectRouting != null &&
+                    this.DirectRouting.Equals(other.DirectRouting)
                 ) &&
                 (
                     this.CallingPartyName == other.CallingPartyName ||
@@ -761,8 +761,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.AgentOwnedRouting != null)
                     hash = hash * 59 + this.AgentOwnedRouting.GetHashCode();
 
-                if (this.VipRouting != null)
-                    hash = hash * 59 + this.VipRouting.GetHashCode();
+                if (this.DirectRouting != null)
+                    hash = hash * 59 + this.DirectRouting.GetHashCode();
 
                 if (this.CallingPartyName != null)
                     hash = hash * 59 + this.CallingPartyName.GetHashCode();

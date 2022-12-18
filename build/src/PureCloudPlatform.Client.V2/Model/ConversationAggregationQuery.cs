@@ -177,6 +177,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Eligibleagentcount,
             
             /// <summary>
+            /// Enum Errorcode for "errorCode"
+            /// </summary>
+            [EnumMember(Value = "errorCode")]
+            Errorcode,
+            
+            /// <summary>
             /// Enum Extendeddeliverystatus for "extendedDeliveryStatus"
             /// </summary>
             [EnumMember(Value = "extendedDeliveryStatus")]

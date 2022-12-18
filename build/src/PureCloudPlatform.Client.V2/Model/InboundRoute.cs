@@ -18,6 +18,45 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class InboundRoute :  IEquatable<InboundRoute>
     {
+        /// <summary>
+        /// The configuration to indicate how the history of a conversation has to be included in a draft
+        /// </summary>
+        /// <value>The configuration to indicate how the history of a conversation has to be included in a draft</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum HistoryInclusionEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Include for "Include"
+            /// </summary>
+            [EnumMember(Value = "Include")]
+            Include,
+            
+            /// <summary>
+            /// Enum Exclude for "Exclude"
+            /// </summary>
+            [EnumMember(Value = "Exclude")]
+            Exclude,
+            
+            /// <summary>
+            /// Enum Optional for "Optional"
+            /// </summary>
+            [EnumMember(Value = "Optional")]
+            Optional
+        }
+        /// <summary>
+        /// The configuration to indicate how the history of a conversation has to be included in a draft
+        /// </summary>
+        /// <value>The configuration to indicate how the history of a conversation has to be included in a draft</value>
+        [DataMember(Name="historyInclusion", EmitDefaultValue=false)]
+        public HistoryInclusionEnum? HistoryInclusion { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="InboundRoute" /> class.
@@ -40,7 +79,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AutoBcc">The recipients that should be automatically blind copied on outbound emails associated with this InboundRoute..</param>
         /// <param name="SpamFlow">The flow to use for processing inbound emails that have been marked as spam..</param>
         /// <param name="Signature">The configuration for the canned response signature that will be appended to outbound emails sent via this route.</param>
-        public InboundRoute(string Name = null, string Pattern = null, DomainEntityRef Queue = null, int? Priority = null, List<DomainEntityRef> Skills = null, DomainEntityRef Language = null, string FromName = null, string FromEmail = null, DomainEntityRef Flow = null, QueueEmailAddress ReplyEmailAddress = null, List<EmailAddress> AutoBcc = null, DomainEntityRef SpamFlow = null, Signature Signature = null)
+        /// <param name="HistoryInclusion">The configuration to indicate how the history of a conversation has to be included in a draft.</param>
+        public InboundRoute(string Name = null, string Pattern = null, DomainEntityRef Queue = null, int? Priority = null, List<DomainEntityRef> Skills = null, DomainEntityRef Language = null, string FromName = null, string FromEmail = null, DomainEntityRef Flow = null, QueueEmailAddress ReplyEmailAddress = null, List<EmailAddress> AutoBcc = null, DomainEntityRef SpamFlow = null, Signature Signature = null, HistoryInclusionEnum? HistoryInclusion = null)
         {
             this.Name = Name;
             this.Pattern = Pattern;
@@ -55,6 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AutoBcc = AutoBcc;
             this.SpamFlow = SpamFlow;
             this.Signature = Signature;
+            this.HistoryInclusion = HistoryInclusion;
             
         }
         
@@ -185,6 +226,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -216,6 +259,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AutoBcc: ").Append(AutoBcc).Append("\n");
             sb.Append("  SpamFlow: ").Append(SpamFlow).Append("\n");
             sb.Append("  Signature: ").Append(Signature).Append("\n");
+            sb.Append("  HistoryInclusion: ").Append(HistoryInclusion).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -328,6 +372,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Signature.Equals(other.Signature)
                 ) &&
                 (
+                    this.HistoryInclusion == other.HistoryInclusion ||
+                    this.HistoryInclusion != null &&
+                    this.HistoryInclusion.Equals(other.HistoryInclusion)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -386,6 +435,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Signature != null)
                     hash = hash * 59 + this.Signature.GetHashCode();
+
+                if (this.HistoryInclusion != null)
+                    hash = hash * 59 + this.HistoryInclusion.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -13,40 +13,27 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// VipMediaSettings
+    /// AdditionalLanguagesSynonyms
     /// </summary>
     [DataContract]
-    public partial class VipMediaSettings :  IEquatable<VipMediaSettings>
+    public partial class AdditionalLanguagesSynonyms :  IEquatable<AdditionalLanguagesSynonyms>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="VipMediaSettings" /> class.
+        /// Initializes a new instance of the <see cref="AdditionalLanguagesSynonyms" /> class.
         /// </summary>
-        /// <param name="Enabled">Toggle that enables VIP experience for this feature..</param>
-        /// <param name="SkipOwnershipTime">Toggle that enables this media type to fallback immediately to the configured VIP Backup..</param>
-        public VipMediaSettings(bool? Enabled = null, bool? SkipOwnershipTime = null)
+        public AdditionalLanguagesSynonyms()
         {
-            this.Enabled = Enabled;
-            this.SkipOwnershipTime = SkipOwnershipTime;
             
         }
         
 
 
         /// <summary>
-        /// Toggle that enables VIP experience for this feature.
+        /// Synonyms for additional language
         /// </summary>
-        /// <value>Toggle that enables VIP experience for this feature.</value>
-        [DataMember(Name="enabled", EmitDefaultValue=false)]
-        public bool? Enabled { get; set; }
-
-
-
-        /// <summary>
-        /// Toggle that enables this media type to fallback immediately to the configured VIP Backup.
-        /// </summary>
-        /// <value>Toggle that enables this media type to fallback immediately to the configured VIP Backup.</value>
-        [DataMember(Name="skipOwnershipTime", EmitDefaultValue=false)]
-        public bool? SkipOwnershipTime { get; set; }
+        /// <value>Synonyms for additional language</value>
+        [DataMember(Name="synonyms", EmitDefaultValue=false)]
+        public List<string> Synonyms { get; private set; }
 
 
         /// <summary>
@@ -56,10 +43,9 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class VipMediaSettings {\n");
+            sb.Append("class AdditionalLanguagesSynonyms {\n");
 
-            sb.Append("  Enabled: ").Append(Enabled).Append("\n");
-            sb.Append("  SkipOwnershipTime: ").Append(SkipOwnershipTime).Append("\n");
+            sb.Append("  Synonyms: ").Append(Synonyms).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -85,15 +71,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as VipMediaSettings);
+            return this.Equals(obj as AdditionalLanguagesSynonyms);
         }
 
         /// <summary>
-        /// Returns true if VipMediaSettings instances are equal
+        /// Returns true if AdditionalLanguagesSynonyms instances are equal
         /// </summary>
-        /// <param name="other">Instance of VipMediaSettings to be compared</param>
+        /// <param name="other">Instance of AdditionalLanguagesSynonyms to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(VipMediaSettings other)
+        public bool Equals(AdditionalLanguagesSynonyms other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -101,14 +87,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Enabled == other.Enabled ||
-                    this.Enabled != null &&
-                    this.Enabled.Equals(other.Enabled)
-                ) &&
-                (
-                    this.SkipOwnershipTime == other.SkipOwnershipTime ||
-                    this.SkipOwnershipTime != null &&
-                    this.SkipOwnershipTime.Equals(other.SkipOwnershipTime)
+                    this.Synonyms == other.Synonyms ||
+                    this.Synonyms != null &&
+                    this.Synonyms.SequenceEqual(other.Synonyms)
                 );
         }
 
@@ -123,11 +104,8 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Enabled != null)
-                    hash = hash * 59 + this.Enabled.GetHashCode();
-
-                if (this.SkipOwnershipTime != null)
-                    hash = hash * 59 + this.SkipOwnershipTime.GetHashCode();
+                if (this.Synonyms != null)
+                    hash = hash * 59 + this.Synonyms.GetHashCode();
 
                 return hash;
             }

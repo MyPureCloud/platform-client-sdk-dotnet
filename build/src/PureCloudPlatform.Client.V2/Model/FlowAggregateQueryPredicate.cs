@@ -229,6 +229,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Entrytype,
             
             /// <summary>
+            /// Enum Errorcode for "errorCode"
+            /// </summary>
+            [EnumMember(Value = "errorCode")]
+            Errorcode,
+            
+            /// <summary>
             /// Enum Exitreason for "exitReason"
             /// </summary>
             [EnumMember(Value = "exitReason")]

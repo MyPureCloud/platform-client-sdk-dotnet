@@ -23,10 +23,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Text">The feedback text..</param>
         /// <param name="Intents">Detected intent of the utterance.</param>
-        public NluFeedbackResponse(string Text = null, List<IntentFeedback> Intents = null)
+        /// <param name="Language">The language of the version to which feedback is linked, e.g. en-us, de-de.</param>
+        public NluFeedbackResponse(string Text = null, List<IntentFeedback> Intents = null, string Language = null)
         {
             this.Text = Text;
             this.Intents = Intents;
+            this.Language = Language;
             
         }
         
@@ -78,6 +80,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The language of the version to which feedback is linked, e.g. en-us, de-de
+        /// </summary>
+        /// <value>The language of the version to which feedback is linked, e.g. en-us, de-de</value>
+        [DataMember(Name="language", EmitDefaultValue=false)]
+        public string Language { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -99,6 +110,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Intents: ").Append(Intents).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -166,6 +178,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateCreated.Equals(other.DateCreated)
                 ) &&
                 (
+                    this.Language == other.Language ||
+                    this.Language != null &&
+                    this.Language.Equals(other.Language)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -197,6 +214,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
+
+                if (this.Language != null)
+                    hash = hash * 59 + this.Language.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

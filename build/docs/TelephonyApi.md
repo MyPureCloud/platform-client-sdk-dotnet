@@ -7,10 +7,71 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**GetTelephonyMediaregions**](TelephonyApi.html#gettelephonymediaregions) | **GET** /api/v2/telephony/mediaregions | Retrieve the list of AWS regions media can stream through. |
 | [**GetTelephonySiptraces**](TelephonyApi.html#gettelephonysiptraces) | **GET** /api/v2/telephony/siptraces | Fetch SIP metadata |
 | [**GetTelephonySiptracesDownloadDownloadId**](TelephonyApi.html#gettelephonysiptracesdownloaddownloadid) | **GET** /api/v2/telephony/siptraces/download/{downloadId} | Get signed S3 URL for a pcap download |
 | [**PostTelephonySiptracesDownload**](TelephonyApi.html#posttelephonysiptracesdownload) | **POST** /api/v2/telephony/siptraces/download | Request a download of a pcap file to S3 |
 {: class="table table-striped"}
+
+<a name="gettelephonymediaregions"></a>
+
+## [**MediaRegions**](MediaRegions.html) GetTelephonyMediaregions ()
+
+
+
+Retrieve the list of AWS regions media can stream through.
+
+
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTelephonyMediaregionsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyApi();
+
+            try
+            { 
+                // Retrieve the list of AWS regions media can stream through.
+                MediaRegions result = apiInstance.GetTelephonyMediaregions();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyApi.GetTelephonyMediaregions: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+
+### Return type
+
+[**MediaRegions**](MediaRegions.html)
 
 <a name="gettelephonysiptraces"></a>
 

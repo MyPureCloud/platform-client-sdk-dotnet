@@ -688,6 +688,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Processed,
             
             /// <summary>
+            /// Enum Remove for "Remove"
+            /// </summary>
+            [EnumMember(Value = "Remove")]
+            Remove,
+            
+            /// <summary>
             /// Enum Replace for "Replace"
             /// </summary>
             [EnumMember(Value = "Replace")]
@@ -1867,10 +1873,22 @@ namespace PureCloudPlatform.Client.V2.Model
             User,
             
             /// <summary>
+            /// Enum Userlanguage for "UserLanguage"
+            /// </summary>
+            [EnumMember(Value = "UserLanguage")]
+            Userlanguage,
+            
+            /// <summary>
             /// Enum Userpresence for "UserPresence"
             /// </summary>
             [EnumMember(Value = "UserPresence")]
             Userpresence,
+            
+            /// <summary>
+            /// Enum Userskill for "UserSkill"
+            /// </summary>
+            [EnumMember(Value = "UserSkill")]
+            Userskill,
             
             /// <summary>
             /// Enum Voicemailpolicy for "VoicemailPolicy"

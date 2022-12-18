@@ -94,6 +94,33 @@ namespace PureCloudPlatform.Client.V2.Model
             Dede
         }
         /// <summary>
+        /// Type of the miner, intent or topic.
+        /// </summary>
+        /// <value>Type of the miner, intent or topic.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum MinerTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Intent for "Intent"
+            /// </summary>
+            [EnumMember(Value = "Intent")]
+            Intent,
+            
+            /// <summary>
+            /// Enum Topic for "Topic"
+            /// </summary>
+            [EnumMember(Value = "Topic")]
+            Topic
+        }
+        /// <summary>
         /// Status of the miner.
         /// </summary>
         /// <value>Status of the miner.</value>
@@ -250,11 +277,50 @@ namespace PureCloudPlatform.Client.V2.Model
             Message
         }
         /// <summary>
+        /// Type of the participant, either agent, customer or both.
+        /// </summary>
+        /// <value>Type of the participant, either agent, customer or both.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ParticipantTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Customer for "Customer"
+            /// </summary>
+            [EnumMember(Value = "Customer")]
+            Customer,
+            
+            /// <summary>
+            /// Enum Agent for "Agent"
+            /// </summary>
+            [EnumMember(Value = "Agent")]
+            Agent,
+            
+            /// <summary>
+            /// Enum Both for "Both"
+            /// </summary>
+            [EnumMember(Value = "Both")]
+            Both
+        }
+        /// <summary>
         /// Language Localization code.
         /// </summary>
         /// <value>Language Localization code.</value>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public LanguageEnum? Language { get; set; }
+        /// <summary>
+        /// Type of the miner, intent or topic.
+        /// </summary>
+        /// <value>Type of the miner, intent or topic.</value>
+        [DataMember(Name="minerType", EmitDefaultValue=false)]
+        public MinerTypeEnum? MinerType { get; set; }
         /// <summary>
         /// Status of the miner.
         /// </summary>
@@ -267,6 +333,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Media type for filtering conversations.</value>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; private set; }
+        /// <summary>
+        /// Type of the participant, either agent, customer or both.
+        /// </summary>
+        /// <value>Type of the participant, either agent, customer or both.</value>
+        [DataMember(Name="participantType", EmitDefaultValue=false)]
+        public ParticipantTypeEnum? ParticipantType { get; private set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Miner" /> class.
@@ -278,10 +350,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">Chat Corpus Name. (required).</param>
         /// <param name="Language">Language Localization code..</param>
-        public Miner(string Name = null, LanguageEnum? Language = null)
+        /// <param name="MinerType">Type of the miner, intent or topic..</param>
+        public Miner(string Name = null, LanguageEnum? Language = null, MinerTypeEnum? MinerType = null)
         {
             this.Name = Name;
             this.Language = Language;
+            this.MinerType = MinerType;
             
         }
         
@@ -302,6 +376,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Chat Corpus Name.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
+
 
 
 
@@ -355,11 +431,31 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Error Information
+        /// </summary>
+        /// <value>Error Information</value>
+        [DataMember(Name="errorInfo", EmitDefaultValue=false)]
+        public ErrorInfo ErrorInfo { get; private set; }
+
+
+
+        /// <summary>
+        /// Warning Information
+        /// </summary>
+        /// <value>Warning Information</value>
+        [DataMember(Name="warningInfo", EmitDefaultValue=false)]
+        public ErrorInfo WarningInfo { get; private set; }
+
+
+
+        /// <summary>
         /// Flag to indicate whether data file to be mined was uploaded.
         /// </summary>
         /// <value>Flag to indicate whether data file to be mined was uploaded.</value>
         [DataMember(Name="conversationDataUploaded", EmitDefaultValue=false)]
         public bool? ConversationDataUploaded { get; private set; }
+
+
 
 
 
@@ -402,6 +498,33 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Number of conversations/transcripts fetched.
+        /// </summary>
+        /// <value>Number of conversations/transcripts fetched.</value>
+        [DataMember(Name="conversationsFetchedCount", EmitDefaultValue=false)]
+        public int? ConversationsFetchedCount { get; private set; }
+
+
+
+        /// <summary>
+        /// Number of conversations/recordings/transcripts that were found valid for mining purposes.
+        /// </summary>
+        /// <value>Number of conversations/recordings/transcripts that were found valid for mining purposes.</value>
+        [DataMember(Name="conversationsValidCount", EmitDefaultValue=false)]
+        public int? ConversationsValidCount { get; private set; }
+
+
+
+        /// <summary>
+        /// Number of intents or topics based on the miner type.
+        /// </summary>
+        /// <value>Number of intents or topics based on the miner type.</value>
+        [DataMember(Name="getminedItemCount", EmitDefaultValue=false)]
+        public int? GetminedItemCount { get; private set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -421,18 +544,25 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Language: ").Append(Language).Append("\n");
+            sb.Append("  MinerType: ").Append(MinerType).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  ConversationsDateRangeStart: ").Append(ConversationsDateRangeStart).Append("\n");
             sb.Append("  ConversationsDateRangeEnd: ").Append(ConversationsDateRangeEnd).Append("\n");
             sb.Append("  DateCompleted: ").Append(DateCompleted).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
+            sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
+            sb.Append("  WarningInfo: ").Append(WarningInfo).Append("\n");
             sb.Append("  ConversationDataUploaded: ").Append(ConversationDataUploaded).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
+            sb.Append("  ParticipantType: ").Append(ParticipantType).Append("\n");
             sb.Append("  QueueIds: ").Append(QueueIds).Append("\n");
             sb.Append("  DateTriggered: ").Append(DateTriggered).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  LatestDraftVersion: ").Append(LatestDraftVersion).Append("\n");
+            sb.Append("  ConversationsFetchedCount: ").Append(ConversationsFetchedCount).Append("\n");
+            sb.Append("  ConversationsValidCount: ").Append(ConversationsValidCount).Append("\n");
+            sb.Append("  GetminedItemCount: ").Append(GetminedItemCount).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -490,6 +620,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Language.Equals(other.Language)
                 ) &&
                 (
+                    this.MinerType == other.MinerType ||
+                    this.MinerType != null &&
+                    this.MinerType.Equals(other.MinerType)
+                ) &&
+                (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
@@ -520,6 +655,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Message.Equals(other.Message)
                 ) &&
                 (
+                    this.ErrorInfo == other.ErrorInfo ||
+                    this.ErrorInfo != null &&
+                    this.ErrorInfo.Equals(other.ErrorInfo)
+                ) &&
+                (
+                    this.WarningInfo == other.WarningInfo ||
+                    this.WarningInfo != null &&
+                    this.WarningInfo.Equals(other.WarningInfo)
+                ) &&
+                (
                     this.ConversationDataUploaded == other.ConversationDataUploaded ||
                     this.ConversationDataUploaded != null &&
                     this.ConversationDataUploaded.Equals(other.ConversationDataUploaded)
@@ -528,6 +673,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MediaType == other.MediaType ||
                     this.MediaType != null &&
                     this.MediaType.Equals(other.MediaType)
+                ) &&
+                (
+                    this.ParticipantType == other.ParticipantType ||
+                    this.ParticipantType != null &&
+                    this.ParticipantType.Equals(other.ParticipantType)
                 ) &&
                 (
                     this.QueueIds == other.QueueIds ||
@@ -548,6 +698,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LatestDraftVersion == other.LatestDraftVersion ||
                     this.LatestDraftVersion != null &&
                     this.LatestDraftVersion.Equals(other.LatestDraftVersion)
+                ) &&
+                (
+                    this.ConversationsFetchedCount == other.ConversationsFetchedCount ||
+                    this.ConversationsFetchedCount != null &&
+                    this.ConversationsFetchedCount.Equals(other.ConversationsFetchedCount)
+                ) &&
+                (
+                    this.ConversationsValidCount == other.ConversationsValidCount ||
+                    this.ConversationsValidCount != null &&
+                    this.ConversationsValidCount.Equals(other.ConversationsValidCount)
+                ) &&
+                (
+                    this.GetminedItemCount == other.GetminedItemCount ||
+                    this.GetminedItemCount != null &&
+                    this.GetminedItemCount.Equals(other.GetminedItemCount)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -576,6 +741,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Language != null)
                     hash = hash * 59 + this.Language.GetHashCode();
 
+                if (this.MinerType != null)
+                    hash = hash * 59 + this.MinerType.GetHashCode();
+
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
 
@@ -594,11 +762,20 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Message != null)
                     hash = hash * 59 + this.Message.GetHashCode();
 
+                if (this.ErrorInfo != null)
+                    hash = hash * 59 + this.ErrorInfo.GetHashCode();
+
+                if (this.WarningInfo != null)
+                    hash = hash * 59 + this.WarningInfo.GetHashCode();
+
                 if (this.ConversationDataUploaded != null)
                     hash = hash * 59 + this.ConversationDataUploaded.GetHashCode();
 
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
+
+                if (this.ParticipantType != null)
+                    hash = hash * 59 + this.ParticipantType.GetHashCode();
 
                 if (this.QueueIds != null)
                     hash = hash * 59 + this.QueueIds.GetHashCode();
@@ -611,6 +788,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.LatestDraftVersion != null)
                     hash = hash * 59 + this.LatestDraftVersion.GetHashCode();
+
+                if (this.ConversationsFetchedCount != null)
+                    hash = hash * 59 + this.ConversationsFetchedCount.GetHashCode();
+
+                if (this.ConversationsValidCount != null)
+                    hash = hash * 59 + this.ConversationsValidCount.GetHashCode();
+
+                if (this.GetminedItemCount != null)
+                    hash = hash * 59 + this.GetminedItemCount.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

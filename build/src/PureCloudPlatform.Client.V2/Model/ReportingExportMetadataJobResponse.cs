@@ -565,7 +565,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum KnowledgePerformanceView for "KNOWLEDGE_PERFORMANCE_VIEW"
             /// </summary>
             [EnumMember(Value = "KNOWLEDGE_PERFORMANCE_VIEW")]
-            KnowledgePerformanceView
+            KnowledgePerformanceView,
+            
+            /// <summary>
+            /// Enum AgentScorecardInsightsSummaryView for "AGENT_SCORECARD_INSIGHTS_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_SCORECARD_INSIGHTS_SUMMARY_VIEW")]
+            AgentScorecardInsightsSummaryView,
+            
+            /// <summary>
+            /// Enum AgentScorecardInsightsDetailView for "AGENT_SCORECARD_INSIGHTS_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_SCORECARD_INSIGHTS_DETAIL_VIEW")]
+            AgentScorecardInsightsDetailView
         }
         /// <summary>
         /// The view type of the export metadata

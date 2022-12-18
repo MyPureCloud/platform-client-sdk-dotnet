@@ -38,7 +38,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AttemptLimits">AttemptLimits for this ContactList..</param>
         /// <param name="AutomaticTimeZoneMapping">Indicates if automatic time zone mapping is to be used for this ContactList..</param>
         /// <param name="ZipCodeColumnName">The name of contact list column containing the zip code for use with automatic time zone mapping. Only allowed if 'automaticTimeZoneMapping' is set to true..</param>
-        public ContactList(string Name = null, int? Version = null, DomainEntityRef Division = null, List<string> ColumnNames = null, List<ContactPhoneNumberColumn> PhoneColumns = null, List<EmailColumn> EmailColumns = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, DomainEntityRef AttemptLimits = null, bool? AutomaticTimeZoneMapping = null, string ZipCodeColumnName = null)
+        /// <param name="ColumnDataTypeSpecifications">The settings of the columns selected for dynamic queueing.</param>
+        public ContactList(string Name = null, int? Version = null, DomainEntityRef Division = null, List<string> ColumnNames = null, List<ContactPhoneNumberColumn> PhoneColumns = null, List<EmailColumn> EmailColumns = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, DomainEntityRef AttemptLimits = null, bool? AutomaticTimeZoneMapping = null, string ZipCodeColumnName = null, List<ColumnDataTypeSpecification> ColumnDataTypeSpecifications = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -51,6 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AttemptLimits = AttemptLimits;
             this.AutomaticTimeZoneMapping = AutomaticTimeZoneMapping;
             this.ZipCodeColumnName = ZipCodeColumnName;
+            this.ColumnDataTypeSpecifications = ColumnDataTypeSpecifications;
             
         }
         
@@ -200,6 +202,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The settings of the columns selected for dynamic queueing
+        /// </summary>
+        /// <value>The settings of the columns selected for dynamic queueing</value>
+        [DataMember(Name="columnDataTypeSpecifications", EmitDefaultValue=false)]
+        public List<ColumnDataTypeSpecification> ColumnDataTypeSpecifications { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -232,6 +243,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AttemptLimits: ").Append(AttemptLimits).Append("\n");
             sb.Append("  AutomaticTimeZoneMapping: ").Append(AutomaticTimeZoneMapping).Append("\n");
             sb.Append("  ZipCodeColumnName: ").Append(ZipCodeColumnName).Append("\n");
+            sb.Append("  ColumnDataTypeSpecifications: ").Append(ColumnDataTypeSpecifications).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -354,6 +366,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ZipCodeColumnName.Equals(other.ZipCodeColumnName)
                 ) &&
                 (
+                    this.ColumnDataTypeSpecifications == other.ColumnDataTypeSpecifications ||
+                    this.ColumnDataTypeSpecifications != null &&
+                    this.ColumnDataTypeSpecifications.SequenceEqual(other.ColumnDataTypeSpecifications)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -418,6 +435,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ZipCodeColumnName != null)
                     hash = hash * 59 + this.ZipCodeColumnName.GetHashCode();
+
+                if (this.ColumnDataTypeSpecifications != null)
+                    hash = hash * 59 + this.ColumnDataTypeSpecifications.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

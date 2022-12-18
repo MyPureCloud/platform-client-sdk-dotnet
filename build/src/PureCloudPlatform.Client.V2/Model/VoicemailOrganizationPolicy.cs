@@ -29,7 +29,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SendEmailNotifications">Whether email notifications are sent for new voicemails in the organization. If false, new voicemail email notifications are not be sent for the organization overriding any user or group setting..</param>
         /// <param name="IncludeEmailTranscriptions">Whether to include the voicemail transcription in the notification email.</param>
         /// <param name="DisableEmailPii">Removes any PII from emails. This overrides any analogous group configuration value. This is always true if HIPAA is enabled or unknown for an organization..</param>
-        public VoicemailOrganizationPolicy(int? AlertTimeoutSeconds = null, PINConfiguration PinConfiguration = null, string VoicemailExtension = null, bool? PinRequired = null, bool? InteractiveResponseRequired = null, bool? SendEmailNotifications = null, bool? IncludeEmailTranscriptions = null, bool? DisableEmailPii = null)
+        /// <param name="MaximumRecordingTimeSeconds">Default value for the maximum length of time in seconds of a recorded voicemail.</param>
+        public VoicemailOrganizationPolicy(int? AlertTimeoutSeconds = null, PINConfiguration PinConfiguration = null, string VoicemailExtension = null, bool? PinRequired = null, bool? InteractiveResponseRequired = null, bool? SendEmailNotifications = null, bool? IncludeEmailTranscriptions = null, bool? DisableEmailPii = null, int? MaximumRecordingTimeSeconds = null)
         {
             this.AlertTimeoutSeconds = AlertTimeoutSeconds;
             this.PinConfiguration = PinConfiguration;
@@ -39,6 +40,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SendEmailNotifications = SendEmailNotifications;
             this.IncludeEmailTranscriptions = IncludeEmailTranscriptions;
             this.DisableEmailPii = DisableEmailPii;
+            this.MaximumRecordingTimeSeconds = MaximumRecordingTimeSeconds;
             
         }
         
@@ -126,6 +128,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Default value for the maximum length of time in seconds of a recorded voicemail
+        /// </summary>
+        /// <value>Default value for the maximum length of time in seconds of a recorded voicemail</value>
+        [DataMember(Name="maximumRecordingTimeSeconds", EmitDefaultValue=false)]
+        public int? MaximumRecordingTimeSeconds { get; set; }
+
+
+
+        /// <summary>
         /// The date the policy was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The date the policy was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
@@ -151,6 +162,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SendEmailNotifications: ").Append(SendEmailNotifications).Append("\n");
             sb.Append("  IncludeEmailTranscriptions: ").Append(IncludeEmailTranscriptions).Append("\n");
             sb.Append("  DisableEmailPii: ").Append(DisableEmailPii).Append("\n");
+            sb.Append("  MaximumRecordingTimeSeconds: ").Append(MaximumRecordingTimeSeconds).Append("\n");
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -238,6 +250,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DisableEmailPii.Equals(other.DisableEmailPii)
                 ) &&
                 (
+                    this.MaximumRecordingTimeSeconds == other.MaximumRecordingTimeSeconds ||
+                    this.MaximumRecordingTimeSeconds != null &&
+                    this.MaximumRecordingTimeSeconds.Equals(other.MaximumRecordingTimeSeconds)
+                ) &&
+                (
                     this.ModifiedDate == other.ModifiedDate ||
                     this.ModifiedDate != null &&
                     this.ModifiedDate.Equals(other.ModifiedDate)
@@ -281,6 +298,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DisableEmailPii != null)
                     hash = hash * 59 + this.DisableEmailPii.GetHashCode();
+
+                if (this.MaximumRecordingTimeSeconds != null)
+                    hash = hash * 59 + this.MaximumRecordingTimeSeconds.GetHashCode();
 
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();

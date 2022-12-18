@@ -91,9 +91,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RuleSets">Rule Sets to be applied while this campaign is sending messages.</param>
         /// <param name="ContactListFilters">The contact list filter to check before sending a message for this messaging campaign..</param>
         /// <param name="Errors">A list of current error conditions associated with this messaging campaign..</param>
+        /// <param name="DynamicContactQueueingSettings">Indicates (when true) that the campaign supports dynamic queueing of the contact list at the time of a request for contacts..</param>
         /// <param name="EmailConfig">Configuration for this messaging campaign to send Email messages..</param>
         /// <param name="SmsConfig">Configuration for this messaging campaign to send SMS messages..</param>
-        public MessagingCampaign(string Name = null, int? Version = null, DomainEntityRef Division = null, CampaignStatusEnum? CampaignStatus = null, DomainEntityRef CallableTimeSet = null, DomainEntityRef ContactList = null, List<DomainEntityRef> DncLists = null, bool? AlwaysRunning = null, List<ContactSort> ContactSorts = null, int? MessagesPerMinute = null, List<DomainEntityRef> RuleSets = null, List<DomainEntityRef> ContactListFilters = null, List<RestErrorDetail> Errors = null, EmailConfig EmailConfig = null, SmsConfig SmsConfig = null)
+        public MessagingCampaign(string Name = null, int? Version = null, DomainEntityRef Division = null, CampaignStatusEnum? CampaignStatus = null, DomainEntityRef CallableTimeSet = null, DomainEntityRef ContactList = null, List<DomainEntityRef> DncLists = null, bool? AlwaysRunning = null, List<ContactSort> ContactSorts = null, int? MessagesPerMinute = null, List<DomainEntityRef> RuleSets = null, List<DomainEntityRef> ContactListFilters = null, List<RestErrorDetail> Errors = null, DynamicContactQueueingSettings DynamicContactQueueingSettings = null, EmailConfig EmailConfig = null, SmsConfig SmsConfig = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -108,6 +109,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.RuleSets = RuleSets;
             this.ContactListFilters = ContactListFilters;
             this.Errors = Errors;
+            this.DynamicContactQueueingSettings = DynamicContactQueueingSettings;
             this.EmailConfig = EmailConfig;
             this.SmsConfig = SmsConfig;
             
@@ -252,6 +254,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Indicates (when true) that the campaign supports dynamic queueing of the contact list at the time of a request for contacts.
+        /// </summary>
+        /// <value>Indicates (when true) that the campaign supports dynamic queueing of the contact list at the time of a request for contacts.</value>
+        [DataMember(Name="dynamicContactQueueingSettings", EmitDefaultValue=false)]
+        public DynamicContactQueueingSettings DynamicContactQueueingSettings { get; set; }
+
+
+
+        /// <summary>
         /// Configuration for this messaging campaign to send Email messages.
         /// </summary>
         /// <value>Configuration for this messaging campaign to send Email messages.</value>
@@ -302,6 +313,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RuleSets: ").Append(RuleSets).Append("\n");
             sb.Append("  ContactListFilters: ").Append(ContactListFilters).Append("\n");
             sb.Append("  Errors: ").Append(Errors).Append("\n");
+            sb.Append("  DynamicContactQueueingSettings: ").Append(DynamicContactQueueingSettings).Append("\n");
             sb.Append("  EmailConfig: ").Append(EmailConfig).Append("\n");
             sb.Append("  SmsConfig: ").Append(SmsConfig).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -426,6 +438,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Errors.SequenceEqual(other.Errors)
                 ) &&
                 (
+                    this.DynamicContactQueueingSettings == other.DynamicContactQueueingSettings ||
+                    this.DynamicContactQueueingSettings != null &&
+                    this.DynamicContactQueueingSettings.Equals(other.DynamicContactQueueingSettings)
+                ) &&
+                (
                     this.EmailConfig == other.EmailConfig ||
                     this.EmailConfig != null &&
                     this.EmailConfig.Equals(other.EmailConfig)
@@ -500,6 +517,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Errors != null)
                     hash = hash * 59 + this.Errors.GetHashCode();
+
+                if (this.DynamicContactQueueingSettings != null)
+                    hash = hash * 59 + this.DynamicContactQueueingSettings.GetHashCode();
 
                 if (this.EmailConfig != null)
                     hash = hash * 59 + this.EmailConfig.GetHashCode();

@@ -30,11 +30,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Text">The feedback text. (required).</param>
         /// <param name="Intents">Detected intent of the utterance (required).</param>
         /// <param name="VersionId">The domain version ID of the feedback. (required).</param>
-        public NluFeedbackRequest(string Text = null, List<IntentFeedback> Intents = null, string VersionId = null)
+        /// <param name="Language">The language of the version to which feedback is linked, e.g. en-us, de-de.</param>
+        public NluFeedbackRequest(string Text = null, List<IntentFeedback> Intents = null, string VersionId = null, string Language = null)
         {
             this.Text = Text;
             this.Intents = Intents;
             this.VersionId = VersionId;
+            this.Language = Language;
             
         }
         
@@ -66,6 +68,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string VersionId { get; set; }
 
 
+
+        /// <summary>
+        /// The language of the version to which feedback is linked, e.g. en-us, de-de
+        /// </summary>
+        /// <value>The language of the version to which feedback is linked, e.g. en-us, de-de</value>
+        [DataMember(Name="language", EmitDefaultValue=false)]
+        public string Language { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -78,6 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Intents: ").Append(Intents).Append("\n");
             sb.Append("  VersionId: ").Append(VersionId).Append("\n");
+            sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -132,6 +144,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.VersionId == other.VersionId ||
                     this.VersionId != null &&
                     this.VersionId.Equals(other.VersionId)
+                ) &&
+                (
+                    this.Language == other.Language ||
+                    this.Language != null &&
+                    this.Language.Equals(other.Language)
                 );
         }
 
@@ -154,6 +171,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.VersionId != null)
                     hash = hash * 59 + this.VersionId.GetHashCode();
+
+                if (this.Language != null)
+                    hash = hash * 59 + this.Language.GetHashCode();
 
                 return hash;
             }

@@ -33,6 +33,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Addflowmilestoneaction for "AddFlowMilestoneAction"
+            /// </summary>
+            [EnumMember(Value = "AddFlowMilestoneAction")]
+            Addflowmilestoneaction,
+            
+            /// <summary>
             /// Enum Askfornluintentaction for "AskForNLUIntentAction"
             /// </summary>
             [EnumMember(Value = "AskForNLUIntentAction")]
@@ -63,28 +69,34 @@ namespace PureCloudPlatform.Client.V2.Model
             Botstate,
             
             /// <summary>
-            /// Enum Disconnectaction for "DisconnectAction"
-            /// </summary>
-            [EnumMember(Value = "DisconnectAction")]
-            Disconnectaction,
-            
-            /// <summary>
-            /// Enum Exitbotflowaction for "ExitBotFlowAction"
-            /// </summary>
-            [EnumMember(Value = "ExitBotFlowAction")]
-            Exitbotflowaction,
-            
-            /// <summary>
             /// Enum Calltaskaction for "CallTaskAction"
             /// </summary>
             [EnumMember(Value = "CallTaskAction")]
             Calltaskaction,
             
             /// <summary>
+            /// Enum Clearslotaction for "ClearSlotAction"
+            /// </summary>
+            [EnumMember(Value = "ClearSlotAction")]
+            Clearslotaction,
+            
+            /// <summary>
+            /// Enum Disconnectaction for "DisconnectAction"
+            /// </summary>
+            [EnumMember(Value = "DisconnectAction")]
+            Disconnectaction,
+            
+            /// <summary>
             /// Enum Endtaskaction for "EndTaskAction"
             /// </summary>
             [EnumMember(Value = "EndTaskAction")]
             Endtaskaction,
+            
+            /// <summary>
+            /// Enum Exitbotflowaction for "ExitBotFlowAction"
+            /// </summary>
+            [EnumMember(Value = "ExitBotFlowAction")]
+            Exitbotflowaction,
             
             /// <summary>
             /// Enum Updatevariableaction for "UpdateVariableAction"
@@ -103,6 +115,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "DecisionAction")]
             Decisionaction,
+            
+            /// <summary>
+            /// Enum Findgroupaction for "FindGroupAction"
+            /// </summary>
+            [EnumMember(Value = "FindGroupAction")]
+            Findgroupaction,
             
             /// <summary>
             /// Enum Switchaction for "SwitchAction"
@@ -165,12 +183,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Setactiveintentaction,
             
             /// <summary>
-            /// Enum Clearslotaction for "ClearSlotAction"
-            /// </summary>
-            [EnumMember(Value = "ClearSlotAction")]
-            Clearslotaction,
-            
-            /// <summary>
             /// Enum Setflowoutcomeaction for "SetFlowOutcomeAction"
             /// </summary>
             [EnumMember(Value = "SetFlowOutcomeAction")]
@@ -181,12 +193,6 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "InitializeFlowOutcomeAction")]
             Initializeflowoutcomeaction,
-            
-            /// <summary>
-            /// Enum Addflowmilestoneaction for "AddFlowMilestoneAction"
-            /// </summary>
-            [EnumMember(Value = "AddFlowMilestoneAction")]
-            Addflowmilestoneaction,
             
             /// <summary>
             /// Enum Askforstringaction for "AskForStringAction"

@@ -24,6 +24,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetLanguageunderstandingMinerDrafts**](LanguageUnderstandingApi.html#getlanguageunderstandingminerdrafts) | **GET** /api/v2/languageunderstanding/miners/{minerId}/drafts | Retrieve the list of drafts created. |
 | [**GetLanguageunderstandingMinerIntent**](LanguageUnderstandingApi.html#getlanguageunderstandingminerintent) | **GET** /api/v2/languageunderstanding/miners/{minerId}/intents/{intentId} | Get information about a mined intent |
 | [**GetLanguageunderstandingMinerIntents**](LanguageUnderstandingApi.html#getlanguageunderstandingminerintents) | **GET** /api/v2/languageunderstanding/miners/{minerId}/intents | Retrieve a list of mined intents. |
+| [**GetLanguageunderstandingMinerTopic**](LanguageUnderstandingApi.html#getlanguageunderstandingminertopic) | **GET** /api/v2/languageunderstanding/miners/{minerId}/topics/{topicId} | Retrieves details of a particular topic. |
+| [**GetLanguageunderstandingMinerTopicPhrase**](LanguageUnderstandingApi.html#getlanguageunderstandingminertopicphrase) | **GET** /api/v2/languageunderstanding/miners/{minerId}/topics/{topicId}/phrases/{phraseId} | Retrieves utterances related to a phrase in a topic. |
+| [**GetLanguageunderstandingMinerTopics**](LanguageUnderstandingApi.html#getlanguageunderstandingminertopics) | **GET** /api/v2/languageunderstanding/miners/{minerId}/topics | Retrieve a list of mined topics. |
 | [**GetLanguageunderstandingMiners**](LanguageUnderstandingApi.html#getlanguageunderstandingminers) | **GET** /api/v2/languageunderstanding/miners | Retrieve the list of miners created. |
 | [**PatchLanguageunderstandingDomain**](LanguageUnderstandingApi.html#patchlanguageunderstandingdomain) | **PATCH** /api/v2/languageunderstanding/domains/{domainId} | Update an NLU Domain. |
 | [**PatchLanguageunderstandingMinerDraft**](LanguageUnderstandingApi.html#patchlanguageunderstandingminerdraft) | **PATCH** /api/v2/languageunderstanding/miners/{minerId}/drafts/{draftId} | Save information for the draft. Either topic draft or intent draft should be sent. |
@@ -436,7 +439,7 @@ namespace Example
 
 <a name="getlanguageunderstandingdomainfeedback"></a>
 
-## [**NluFeedbackListing**](NluFeedbackListing.html) GetLanguageunderstandingDomainFeedback (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, int? pageNumber = null, int? pageSize = null, bool? enableCursorPagination = null, string after = null, List<string> fields = null)
+## [**NluFeedbackListing**](NluFeedbackListing.html) GetLanguageunderstandingDomainFeedback (string domainId, string intentName = null, string assessment = null, String dateStart = null, String dateEnd = null, bool? includeDeleted = null, string language = null, int? pageNumber = null, int? pageSize = null, bool? enableCursorPagination = null, string after = null, List<string> fields = null)
 
 
 
@@ -477,6 +480,7 @@ namespace Example
             var dateStart = 2013-10-20;  // String | Begin of time window as ISO-8601 date. (optional) 
             var dateEnd = 2013-10-20;  // String | End of time window as ISO-8601 date. (optional) 
             var includeDeleted = true;  // bool? | Whether to include soft-deleted items in the result. (optional) 
+            var language = language_example;  // string | Whether to filter response based on the language, e.g. en-us, pt-br. (optional) 
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var enableCursorPagination = true;  // bool? | Enable Cursor Pagination (optional)  (default to false)
@@ -486,7 +490,7 @@ namespace Example
             try
             { 
                 // Get all feedback in the given NLU Domain Version.
-                NluFeedbackListing result = apiInstance.GetLanguageunderstandingDomainFeedback(domainId, intentName, assessment, dateStart, dateEnd, includeDeleted, pageNumber, pageSize, enableCursorPagination, after, fields);
+                NluFeedbackListing result = apiInstance.GetLanguageunderstandingDomainFeedback(domainId, intentName, assessment, dateStart, dateEnd, includeDeleted, language, pageNumber, pageSize, enableCursorPagination, after, fields);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -509,6 +513,7 @@ namespace Example
 | **dateStart** | **String**| Begin of time window as ISO-8601 date. | [optional]  |
 | **dateEnd** | **String**| End of time window as ISO-8601 date. | [optional]  |
 | **includeDeleted** | **bool?**| Whether to include soft-deleted items in the result. | [optional]  |
+| **language** | **string**| Whether to filter response based on the language, e.g. en-us, pt-br. | [optional]  |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **enableCursorPagination** | **bool?**| Enable Cursor Pagination | [optional] [default to false] |
@@ -935,7 +940,7 @@ namespace Example
 
 <a name="getlanguageunderstandingminerdraft"></a>
 
-## [**Draft**](Draft.html) GetLanguageunderstandingMinerDraft (string minerId, string draftId)
+## [**Draft**](Draft.html) GetLanguageunderstandingMinerDraft (string minerId, string draftId, string draftIntentId = null, string draftTopicId = null)
 
 
 
@@ -971,11 +976,13 @@ namespace Example
             var apiInstance = new LanguageUnderstandingApi();
             var minerId = minerId_example;  // string | Miner ID
             var draftId = draftId_example;  // string | Draft ID
+            var draftIntentId = draftIntentId_example;  // string | Parameter to filter a specific intent. (optional) 
+            var draftTopicId = draftTopicId_example;  // string | Parameter to filter a specific topic. (optional) 
 
             try
             { 
                 // Get information about a draft.
-                Draft result = apiInstance.GetLanguageunderstandingMinerDraft(minerId, draftId);
+                Draft result = apiInstance.GetLanguageunderstandingMinerDraft(minerId, draftId, draftIntentId, draftTopicId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -994,6 +1001,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **minerId** | **string**| Miner ID |  |
 | **draftId** | **string**| Draft ID |  |
+| **draftIntentId** | **string**| Parameter to filter a specific intent. | [optional]  |
+| **draftTopicId** | **string**| Parameter to filter a specific topic. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1201,9 +1210,212 @@ namespace Example
 
 [**MinedIntentsListing**](MinedIntentsListing.html)
 
+<a name="getlanguageunderstandingminertopic"></a>
+
+## [**MinerTopic**](MinerTopic.html) GetLanguageunderstandingMinerTopic (string minerId, string topicId, string expand = null)
+
+
+
+Retrieves details of a particular topic.
+
+
+
+Requires ALL permissions: 
+
+* languageUnderstanding:miner:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetLanguageunderstandingMinerTopicExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LanguageUnderstandingApi();
+            var minerId = minerId_example;  // string | Miner ID
+            var topicId = topicId_example;  // string | The ID of the topic to be retrieved.
+            var expand = expand_example;  // string | Option to fetch phrases (optional) 
+
+            try
+            { 
+                // Retrieves details of a particular topic.
+                MinerTopic result = apiInstance.GetLanguageunderstandingMinerTopic(minerId, topicId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LanguageUnderstandingApi.GetLanguageunderstandingMinerTopic: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **minerId** | **string**| Miner ID |  |
+| **topicId** | **string**| The ID of the topic to be retrieved. |  |
+| **expand** | **string**| Option to fetch phrases | [optional] <br />**Values**: phrases, utterances |
+{: class="table table-striped"}
+
+### Return type
+
+[**MinerTopic**](MinerTopic.html)
+
+<a name="getlanguageunderstandingminertopicphrase"></a>
+
+## [**MinerTopicPhrase**](MinerTopicPhrase.html) GetLanguageunderstandingMinerTopicPhrase (string minerId, string topicId, string phraseId)
+
+
+
+Retrieves utterances related to a phrase in a topic.
+
+
+
+Requires ALL permissions: 
+
+* languageUnderstanding:miner:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetLanguageunderstandingMinerTopicPhraseExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LanguageUnderstandingApi();
+            var minerId = minerId_example;  // string | Miner ID
+            var topicId = topicId_example;  // string | The ID of the topic to be retrieved.
+            var phraseId = phraseId_example;  // string | The ID of the phrase to be retrieved.
+
+            try
+            { 
+                // Retrieves utterances related to a phrase in a topic.
+                MinerTopicPhrase result = apiInstance.GetLanguageunderstandingMinerTopicPhrase(minerId, topicId, phraseId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LanguageUnderstandingApi.GetLanguageunderstandingMinerTopicPhrase: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **minerId** | **string**| Miner ID |  |
+| **topicId** | **string**| The ID of the topic to be retrieved. |  |
+| **phraseId** | **string**| The ID of the phrase to be retrieved. |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**MinerTopicPhrase**](MinerTopicPhrase.html)
+
+<a name="getlanguageunderstandingminertopics"></a>
+
+## [**MinerTopicsListing**](MinerTopicsListing.html) GetLanguageunderstandingMinerTopics (string minerId)
+
+
+
+Retrieve a list of mined topics.
+
+
+
+Requires ALL permissions: 
+
+* languageUnderstanding:miner:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetLanguageunderstandingMinerTopicsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LanguageUnderstandingApi();
+            var minerId = minerId_example;  // string | Miner ID
+
+            try
+            { 
+                // Retrieve a list of mined topics.
+                MinerTopicsListing result = apiInstance.GetLanguageunderstandingMinerTopics(minerId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LanguageUnderstandingApi.GetLanguageunderstandingMinerTopics: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **minerId** | **string**| Miner ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**MinerTopicsListing**](MinerTopicsListing.html)
+
 <a name="getlanguageunderstandingminers"></a>
 
-## [**MinerListing**](MinerListing.html) GetLanguageunderstandingMiners ()
+## [**MinerListing**](MinerListing.html) GetLanguageunderstandingMiners (string minerType = null)
 
 
 
@@ -1237,11 +1449,12 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new LanguageUnderstandingApi();
+            var minerType = minerType_example;  // string | Type of miner, either intent or topic (optional) 
 
             try
             { 
                 // Retrieve the list of miners created.
-                MinerListing result = apiInstance.GetLanguageunderstandingMiners();
+                MinerListing result = apiInstance.GetLanguageunderstandingMiners(minerType);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1254,8 +1467,12 @@ namespace Example
 ```
 
 ### Parameters
-This endpoint does require any parameters.
 
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **minerType** | **string**| Type of miner, either intent or topic | [optional]  |
+{: class="table table-striped"}
 
 ### Return type
 
@@ -1674,7 +1891,7 @@ namespace Example
 
 <a name="postlanguageunderstandingdomainversions"></a>
 
-## [**NluDomainVersion**](NluDomainVersion.html) PostLanguageunderstandingDomainVersions (string domainId, NluDomainVersion body)
+## [**NluDomainVersion**](NluDomainVersion.html) PostLanguageunderstandingDomainVersions (string domainId, NluDomainVersion body, bool? includeUtterances = null)
 
 
 
@@ -1711,11 +1928,12 @@ namespace Example
             var apiInstance = new LanguageUnderstandingApi();
             var domainId = domainId_example;  // string | ID of the NLU domain.
             var body = new NluDomainVersion(); // NluDomainVersion | The NLU Domain Version to create.
+            var includeUtterances = true;  // bool? | Whether utterances for intent definition should be included when marshalling response. (optional) 
 
             try
             { 
                 // Create an NLU Domain Version.
-                NluDomainVersion result = apiInstance.PostLanguageunderstandingDomainVersions(domainId, body);
+                NluDomainVersion result = apiInstance.PostLanguageunderstandingDomainVersions(domainId, body, includeUtterances);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1734,6 +1952,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **domainId** | **string**| ID of the NLU domain. |  |
 | **body** | [**NluDomainVersion**](NluDomainVersion.html)| The NLU Domain Version to create. |  |
+| **includeUtterances** | **bool?**| Whether utterances for intent definition should be included when marshalling response. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

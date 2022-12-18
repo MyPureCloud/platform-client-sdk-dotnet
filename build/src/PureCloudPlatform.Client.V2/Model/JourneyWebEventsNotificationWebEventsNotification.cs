@@ -48,7 +48,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Outcomeachievedevent for "OutcomeAchievedEvent"
             /// </summary>
             [EnumMember(Value = "OutcomeAchievedEvent")]
-            Outcomeachievedevent
+            Outcomeachievedevent,
+            
+            /// <summary>
+            /// Enum Segmentassignmentevent for "SegmentAssignmentEvent"
+            /// </summary>
+            [EnumMember(Value = "SegmentAssignmentEvent")]
+            Segmentassignmentevent
         }
         /// <summary>
         /// Gets or Sets EventType

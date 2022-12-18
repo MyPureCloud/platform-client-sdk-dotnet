@@ -29,10 +29,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Value">A value for an named entity type definition. (required).</param>
         /// <param name="Synonyms">Synonyms for the given named entity value..</param>
-        public NamedEntityTypeItem(string Value = null, List<string> Synonyms = null)
+        /// <param name="AdditionalLanguages">Additional Language Synonyms for the given named entity value..</param>
+        public NamedEntityTypeItem(string Value = null, List<string> Synonyms = null, Dictionary<string, AdditionalLanguagesSynonyms> AdditionalLanguages = null)
         {
             this.Value = Value;
             this.Synonyms = Synonyms;
+            this.AdditionalLanguages = AdditionalLanguages;
             
         }
         
@@ -55,6 +57,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> Synonyms { get; set; }
 
 
+
+        /// <summary>
+        /// Additional Language Synonyms for the given named entity value.
+        /// </summary>
+        /// <value>Additional Language Synonyms for the given named entity value.</value>
+        [DataMember(Name="additionalLanguages", EmitDefaultValue=false)]
+        public Dictionary<string, AdditionalLanguagesSynonyms> AdditionalLanguages { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -66,6 +77,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Synonyms: ").Append(Synonyms).Append("\n");
+            sb.Append("  AdditionalLanguages: ").Append(AdditionalLanguages).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -115,6 +127,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Synonyms == other.Synonyms ||
                     this.Synonyms != null &&
                     this.Synonyms.SequenceEqual(other.Synonyms)
+                ) &&
+                (
+                    this.AdditionalLanguages == other.AdditionalLanguages ||
+                    this.AdditionalLanguages != null &&
+                    this.AdditionalLanguages.SequenceEqual(other.AdditionalLanguages)
                 );
         }
 
@@ -134,6 +151,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Synonyms != null)
                     hash = hash * 59 + this.Synonyms.GetHashCode();
+
+                if (this.AdditionalLanguages != null)
+                    hash = hash * 59 + this.AdditionalLanguages.GetHashCode();
 
                 return hash;
             }

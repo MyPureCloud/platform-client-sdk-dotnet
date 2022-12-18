@@ -46,6 +46,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Checkin,
             
             /// <summary>
+            /// Enum Checkout for "CHECKOUT"
+            /// </summary>
+            [EnumMember(Value = "CHECKOUT")]
+            Checkout,
+            
+            /// <summary>
             /// Enum Debug for "DEBUG"
             /// </summary>
             [EnumMember(Value = "DEBUG")]
@@ -68,6 +74,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "PUBLISH")]
             Publish,
+            
+            /// <summary>
+            /// Enum Revert for "REVERT"
+            /// </summary>
+            [EnumMember(Value = "REVERT")]
+            Revert,
+            
+            /// <summary>
+            /// Enum Save for "SAVE"
+            /// </summary>
+            [EnumMember(Value = "SAVE")]
+            Save,
             
             /// <summary>
             /// Enum StateChange for "STATE_CHANGE"

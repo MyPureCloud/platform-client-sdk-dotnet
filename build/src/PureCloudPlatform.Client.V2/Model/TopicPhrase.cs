@@ -13,40 +13,48 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// VipCallMediaSettings
+    /// TopicPhrase
     /// </summary>
     [DataContract]
-    public partial class VipCallMediaSettings :  IEquatable<VipCallMediaSettings>
+    public partial class TopicPhrase :  IEquatable<TopicPhrase>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="VipCallMediaSettings" /> class.
+        /// Initializes a new instance of the <see cref="TopicPhrase" /> class.
         /// </summary>
-        /// <param name="Enabled">Toggle that enables VIP experience for this feature..</param>
-        /// <param name="SkipOwnershipTime">Toggle that enables this media type to fallback immediately to the configured VIP Backup..</param>
-        public VipCallMediaSettings(bool? Enabled = null, bool? SkipOwnershipTime = null)
+        /// <param name="Id">Id.</param>
+        /// <param name="Text">Text.</param>
+        /// <param name="UtteranceCount">UtteranceCount.</param>
+        public TopicPhrase(string Id = null, string Text = null, int? UtteranceCount = null)
         {
-            this.Enabled = Enabled;
-            this.SkipOwnershipTime = SkipOwnershipTime;
+            this.Id = Id;
+            this.Text = Text;
+            this.UtteranceCount = UtteranceCount;
             
         }
         
 
 
         /// <summary>
-        /// Toggle that enables VIP experience for this feature.
+        /// Gets or Sets Id
         /// </summary>
-        /// <value>Toggle that enables VIP experience for this feature.</value>
-        [DataMember(Name="enabled", EmitDefaultValue=false)]
-        public bool? Enabled { get; set; }
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; set; }
 
 
 
         /// <summary>
-        /// Toggle that enables this media type to fallback immediately to the configured VIP Backup.
+        /// Gets or Sets Text
         /// </summary>
-        /// <value>Toggle that enables this media type to fallback immediately to the configured VIP Backup.</value>
-        [DataMember(Name="skipOwnershipTime", EmitDefaultValue=false)]
-        public bool? SkipOwnershipTime { get; set; }
+        [DataMember(Name="text", EmitDefaultValue=false)]
+        public string Text { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets UtteranceCount
+        /// </summary>
+        [DataMember(Name="utteranceCount", EmitDefaultValue=false)]
+        public int? UtteranceCount { get; set; }
 
 
         /// <summary>
@@ -56,10 +64,11 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class VipCallMediaSettings {\n");
+            sb.Append("class TopicPhrase {\n");
 
-            sb.Append("  Enabled: ").Append(Enabled).Append("\n");
-            sb.Append("  SkipOwnershipTime: ").Append(SkipOwnershipTime).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Text: ").Append(Text).Append("\n");
+            sb.Append("  UtteranceCount: ").Append(UtteranceCount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -85,15 +94,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as VipCallMediaSettings);
+            return this.Equals(obj as TopicPhrase);
         }
 
         /// <summary>
-        /// Returns true if VipCallMediaSettings instances are equal
+        /// Returns true if TopicPhrase instances are equal
         /// </summary>
-        /// <param name="other">Instance of VipCallMediaSettings to be compared</param>
+        /// <param name="other">Instance of TopicPhrase to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(VipCallMediaSettings other)
+        public bool Equals(TopicPhrase other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -101,14 +110,19 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Enabled == other.Enabled ||
-                    this.Enabled != null &&
-                    this.Enabled.Equals(other.Enabled)
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
                 ) &&
                 (
-                    this.SkipOwnershipTime == other.SkipOwnershipTime ||
-                    this.SkipOwnershipTime != null &&
-                    this.SkipOwnershipTime.Equals(other.SkipOwnershipTime)
+                    this.Text == other.Text ||
+                    this.Text != null &&
+                    this.Text.Equals(other.Text)
+                ) &&
+                (
+                    this.UtteranceCount == other.UtteranceCount ||
+                    this.UtteranceCount != null &&
+                    this.UtteranceCount.Equals(other.UtteranceCount)
                 );
         }
 
@@ -123,11 +137,14 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Enabled != null)
-                    hash = hash * 59 + this.Enabled.GetHashCode();
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
 
-                if (this.SkipOwnershipTime != null)
-                    hash = hash * 59 + this.SkipOwnershipTime.GetHashCode();
+                if (this.Text != null)
+                    hash = hash * 59 + this.Text.GetHashCode();
+
+                if (this.UtteranceCount != null)
+                    hash = hash * 59 + this.UtteranceCount.GetHashCode();
 
                 return hash;
             }

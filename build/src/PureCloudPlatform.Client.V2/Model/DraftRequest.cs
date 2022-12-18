@@ -22,9 +22,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="DraftRequest" /> class.
         /// </summary>
         /// <param name="Intents">Draft intent object..</param>
-        public DraftRequest(List<DraftIntents> Intents = null)
+        /// <param name="Topics">Draft topic object..</param>
+        public DraftRequest(List<DraftIntents> Intents = null, List<DraftTopicRequest> Topics = null)
         {
             this.Intents = Intents;
+            this.Topics = Topics;
             
         }
         
@@ -38,6 +40,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<DraftIntents> Intents { get; set; }
 
 
+
+        /// <summary>
+        /// Draft topic object.
+        /// </summary>
+        /// <value>Draft topic object.</value>
+        [DataMember(Name="topics", EmitDefaultValue=false)]
+        public List<DraftTopicRequest> Topics { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -48,6 +59,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class DraftRequest {\n");
 
             sb.Append("  Intents: ").Append(Intents).Append("\n");
+            sb.Append("  Topics: ").Append(Topics).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -92,6 +104,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Intents == other.Intents ||
                     this.Intents != null &&
                     this.Intents.SequenceEqual(other.Intents)
+                ) &&
+                (
+                    this.Topics == other.Topics ||
+                    this.Topics != null &&
+                    this.Topics.SequenceEqual(other.Topics)
                 );
         }
 
@@ -108,6 +125,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Intents != null)
                     hash = hash * 59 + this.Intents.GetHashCode();
+
+                if (this.Topics != null)
+                    hash = hash * 59 + this.Topics.GetHashCode();
 
                 return hash;
             }

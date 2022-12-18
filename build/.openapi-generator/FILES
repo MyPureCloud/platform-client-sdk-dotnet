@@ -53,6 +53,8 @@ docs/AddConversationResponse.md
 docs/AddShiftTradeRequest.md
 docs/AddWorkPlanRotationAgentRequest.md
 docs/AddWorkPlanRotationRequest.md
+docs/AdditionalLanguagesIntent.md
+docs/AdditionalLanguagesSynonyms.md
 docs/AdditionalMessage.md
 docs/Address.md
 docs/AddressableEntityRef.md
@@ -1102,6 +1104,8 @@ docs/DeleteOutboundContactlistfilter-example.txt
 docs/DeleteOutboundContactlists-example.txt
 docs/DeleteOutboundDigitalruleset-example.txt
 docs/DeleteOutboundDnclist-example.txt
+docs/DeleteOutboundDnclistEmailaddresses-example.txt
+docs/DeleteOutboundDnclistPhonenumbers-example.txt
 docs/DeleteOutboundMessagingcampaign-example.txt
 docs/DeleteOutboundMessagingcampaignProgress-example.txt
 docs/DeleteOutboundRuleset-example.txt
@@ -1311,6 +1315,9 @@ docs/DigitalRule.md
 docs/DigitalRuleSet.md
 docs/DigitalRuleSetEntityListing.md
 docs/Digits.md
+docs/DirectRouting.md
+docs/DirectRoutingCallMediaSettings.md
+docs/DirectRoutingMediaSettings.md
 docs/DirectoryUserDevicesListing.md
 docs/DisallowedEntityLearningAssignmentItem.md
 docs/DisallowedEntityLearningAssignmentReference.md
@@ -1323,6 +1330,8 @@ docs/DncListCreate.md
 docs/DncListDivisionView.md
 docs/DncListDivisionViewListing.md
 docs/DncListEntityListing.md
+docs/DncPatchEmailsRequest.md
+docs/DncPatchPhoneNumbersRequest.md
 docs/DnclistDownloadReadyExportUri.md
 docs/DnclistDownloadReadyObject.md
 docs/DnclistImportStatusImportStatus.md
@@ -2121,6 +2130,9 @@ docs/GetLanguageunderstandingMinerDraft-example.txt
 docs/GetLanguageunderstandingMinerDrafts-example.txt
 docs/GetLanguageunderstandingMinerIntent-example.txt
 docs/GetLanguageunderstandingMinerIntents-example.txt
+docs/GetLanguageunderstandingMinerTopic-example.txt
+docs/GetLanguageunderstandingMinerTopicPhrase-example.txt
+docs/GetLanguageunderstandingMinerTopics-example.txt
 docs/GetLanguageunderstandingMiners-example.txt
 docs/GetLearningAssignment-example.txt
 docs/GetLearningAssignments-example.txt
@@ -2420,6 +2432,7 @@ docs/GetSystempresences-example.txt
 docs/GetTeam-example.txt
 docs/GetTeamMembers-example.txt
 docs/GetTeams-example.txt
+docs/GetTelephonyMediaregions-example.txt
 docs/GetTelephonyProvidersEdge-example.txt
 docs/GetTelephonyProvidersEdgeDiagnosticNslookup-example.txt
 docs/GetTelephonyProvidersEdgeDiagnosticPing-example.txt
@@ -2754,6 +2767,7 @@ docs/JourneyAggregationQuery.md
 docs/JourneyAggregationView.md
 docs/JourneyApi.json
 docs/JourneyApi.md
+docs/JourneyApp.md
 docs/JourneyCampaign.md
 docs/JourneyContext.md
 docs/JourneyCustomer.md
@@ -3059,6 +3073,7 @@ docs/MaxLength.md
 docs/MaxParticipants.md
 docs/MediaParticipantRequest.md
 docs/MediaPolicies.md
+docs/MediaRegions.md
 docs/MediaResult.md
 docs/MediaSetting.md
 docs/MediaSummary.md
@@ -3127,6 +3142,9 @@ docs/Miner.md
 docs/MinerExecuteRequest.md
 docs/MinerIntent.md
 docs/MinerListing.md
+docs/MinerTopic.md
+docs/MinerTopicPhrase.md
+docs/MinerTopicsListing.md
 docs/MobileDevicesApi.json
 docs/MobileDevicesApi.md
 docs/ModelingProcessingError.md
@@ -3142,6 +3160,7 @@ docs/NamedEntityTypeBinding.md
 docs/NamedEntityTypeDefinition.md
 docs/NamedEntityTypeItem.md
 docs/NamedEntityTypeMechanism.md
+docs/NetworkConnectivity.md
 docs/NluConfusionMatrixColumn.md
 docs/NluConfusionMatrixRow.md
 docs/NluDetectionContext.md
@@ -3365,6 +3384,8 @@ docs/PatchLearningAssignment-example.txt
 docs/PatchLocation-example.txt
 docs/PatchMessagingSupportedcontentSupportedContentId-example.txt
 docs/PatchOrganizationsFeature-example.txt
+docs/PatchOutboundDnclistEmailaddresses-example.txt
+docs/PatchOutboundDnclistPhonenumbers-example.txt
 docs/PatchOutboundSettings-example.txt
 docs/PatchOutcome.md
 docs/PatchPredictorRequest.md
@@ -4482,6 +4503,8 @@ docs/RecipientAdditionalIdentifier.md
 docs/RecipientListing.md
 docs/Record.md
 docs/Recording.md
+docs/RecordingAnnotationFlow.md
+docs/RecordingAnnotationQueue.md
 docs/RecordingApi.json
 docs/RecordingApi.md
 docs/RecordingArchiveRestoreTopicMediaResult.md
@@ -4669,6 +4692,7 @@ docs/ScriptEntityListing.md
 docs/ScriptsApi.json
 docs/ScriptsApi.md
 docs/ScrollPercentageEventTrigger.md
+docs/SdkLibrary.md
 docs/SearchAggregation.md
 docs/SearchApi.json
 docs/SearchApi.md
@@ -4951,6 +4975,7 @@ docs/TopicDuration.md
 docs/TopicJob.md
 docs/TopicJobRequest.md
 docs/TopicOffset.md
+docs/TopicPhrase.md
 docs/TopicRequest.md
 docs/TopicsEntityListing.md
 docs/TrainingListing.md
@@ -5254,10 +5279,6 @@ docs/ValueWrapperString.md
 docs/VerificationResult.md
 docs/Video.md
 docs/ViewFilter.md
-docs/VipBackup.md
-docs/VipCallMediaSettings.md
-docs/VipMediaSettings.md
-docs/VipRouting.md
 docs/VisibilityCondition.md
 docs/VmPairingInfo.md
 docs/Voicemail.md
@@ -5415,6 +5436,9 @@ docs/WfmHistoricalDataUploadRequestStatusTopicHistoricalDataUploadRequestUpdate.
 docs/WfmHistoricalShrinkageCalculationsCompleteTopicHistoricalShrinkageCalculationsCompleteNotification.md
 docs/WfmHistoricalShrinkageRequest.md
 docs/WfmHistoricalShrinkageResponse.md
+docs/WfmIntegrationsHrisTimeOffTypesJobTopicErrorBody.md
+docs/WfmIntegrationsHrisTimeOffTypesJobTopicHrisTimeOffType.md
+docs/WfmIntegrationsHrisTimeOffTypesJobTopicHrisTimeOffTypesJobNotification.md
 docs/WfmIntradayDataUpdateTopicIntradayDataGroup.md
 docs/WfmIntradayDataUpdateTopicIntradayDataUpdate.md
 docs/WfmIntradayDataUpdateTopicIntradayForecastData.md
@@ -5435,6 +5459,9 @@ docs/WfmProcessUploadRequest.md
 docs/WfmScheduleActivity.md
 docs/WfmScheduleReference.md
 docs/WfmScheduleTopicWfmScheduleNotification.md
+docs/WfmTimeOffBalanceJobTopicErrorBody.md
+docs/WfmTimeOffBalanceJobTopicTimeOffBalance.md
+docs/WfmTimeOffBalanceJobTopicTimeOffBalanceJobNotification.md
 docs/WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate.md
 docs/WfmTimeOffRequestUpdateTopicUserReference.md
 docs/WfmUpdateAgentDetailsTopicWfmUpdateAgentDetailsComplete.md
@@ -5661,6 +5688,8 @@ src/PureCloudPlatform.Client.V2/Model/AddConversationResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AddShiftTradeRequest.cs
 src/PureCloudPlatform.Client.V2/Model/AddWorkPlanRotationAgentRequest.cs
 src/PureCloudPlatform.Client.V2/Model/AddWorkPlanRotationRequest.cs
+src/PureCloudPlatform.Client.V2/Model/AdditionalLanguagesIntent.cs
+src/PureCloudPlatform.Client.V2/Model/AdditionalLanguagesSynonyms.cs
 src/PureCloudPlatform.Client.V2/Model/AdditionalMessage.cs
 src/PureCloudPlatform.Client.V2/Model/Address.cs
 src/PureCloudPlatform.Client.V2/Model/AddressableEntityRef.cs
@@ -6681,6 +6710,9 @@ src/PureCloudPlatform.Client.V2/Model/DigitalRule.cs
 src/PureCloudPlatform.Client.V2/Model/DigitalRuleSet.cs
 src/PureCloudPlatform.Client.V2/Model/DigitalRuleSetEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/Digits.cs
+src/PureCloudPlatform.Client.V2/Model/DirectRouting.cs
+src/PureCloudPlatform.Client.V2/Model/DirectRoutingCallMediaSettings.cs
+src/PureCloudPlatform.Client.V2/Model/DirectRoutingMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/DirectoryUserDevicesListing.cs
 src/PureCloudPlatform.Client.V2/Model/DisallowedEntityLearningAssignmentItem.cs
 src/PureCloudPlatform.Client.V2/Model/DisallowedEntityLearningAssignmentReference.cs
@@ -6693,6 +6725,8 @@ src/PureCloudPlatform.Client.V2/Model/DncListCreate.cs
 src/PureCloudPlatform.Client.V2/Model/DncListDivisionView.cs
 src/PureCloudPlatform.Client.V2/Model/DncListDivisionViewListing.cs
 src/PureCloudPlatform.Client.V2/Model/DncListEntityListing.cs
+src/PureCloudPlatform.Client.V2/Model/DncPatchEmailsRequest.cs
+src/PureCloudPlatform.Client.V2/Model/DncPatchPhoneNumbersRequest.cs
 src/PureCloudPlatform.Client.V2/Model/DnclistDownloadReadyExportUri.cs
 src/PureCloudPlatform.Client.V2/Model/DnclistDownloadReadyObject.cs
 src/PureCloudPlatform.Client.V2/Model/DnclistImportStatusImportStatus.cs
@@ -7156,6 +7190,7 @@ src/PureCloudPlatform.Client.V2/Model/JourneyAggregateQueryPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyAggregateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyAggregationQuery.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyAggregationView.cs
+src/PureCloudPlatform.Client.V2/Model/JourneyApp.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyCampaign.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyContext.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyCustomer.cs
@@ -7449,6 +7484,7 @@ src/PureCloudPlatform.Client.V2/Model/MaxLength.cs
 src/PureCloudPlatform.Client.V2/Model/MaxParticipants.cs
 src/PureCloudPlatform.Client.V2/Model/MediaParticipantRequest.cs
 src/PureCloudPlatform.Client.V2/Model/MediaPolicies.cs
+src/PureCloudPlatform.Client.V2/Model/MediaRegions.cs
 src/PureCloudPlatform.Client.V2/Model/MediaResult.cs
 src/PureCloudPlatform.Client.V2/Model/MediaSetting.cs
 src/PureCloudPlatform.Client.V2/Model/MediaSummary.cs
@@ -7515,6 +7551,9 @@ src/PureCloudPlatform.Client.V2/Model/Miner.cs
 src/PureCloudPlatform.Client.V2/Model/MinerExecuteRequest.cs
 src/PureCloudPlatform.Client.V2/Model/MinerIntent.cs
 src/PureCloudPlatform.Client.V2/Model/MinerListing.cs
+src/PureCloudPlatform.Client.V2/Model/MinerTopic.cs
+src/PureCloudPlatform.Client.V2/Model/MinerTopicPhrase.cs
+src/PureCloudPlatform.Client.V2/Model/MinerTopicsListing.cs
 src/PureCloudPlatform.Client.V2/Model/ModelingProcessingError.cs
 src/PureCloudPlatform.Client.V2/Model/ModelingStatusResponse.cs
 src/PureCloudPlatform.Client.V2/Model/MoveManagementUnitRequest.cs
@@ -7528,6 +7567,7 @@ src/PureCloudPlatform.Client.V2/Model/NamedEntityTypeBinding.cs
 src/PureCloudPlatform.Client.V2/Model/NamedEntityTypeDefinition.cs
 src/PureCloudPlatform.Client.V2/Model/NamedEntityTypeItem.cs
 src/PureCloudPlatform.Client.V2/Model/NamedEntityTypeMechanism.cs
+src/PureCloudPlatform.Client.V2/Model/NetworkConnectivity.cs
 src/PureCloudPlatform.Client.V2/Model/NluConfusionMatrixColumn.cs
 src/PureCloudPlatform.Client.V2/Model/NluConfusionMatrixRow.cs
 src/PureCloudPlatform.Client.V2/Model/NluDetectionContext.cs
@@ -8039,6 +8079,8 @@ src/PureCloudPlatform.Client.V2/Model/RecipientAdditionalIdentifier.cs
 src/PureCloudPlatform.Client.V2/Model/RecipientListing.cs
 src/PureCloudPlatform.Client.V2/Model/Record.cs
 src/PureCloudPlatform.Client.V2/Model/Recording.cs
+src/PureCloudPlatform.Client.V2/Model/RecordingAnnotationFlow.cs
+src/PureCloudPlatform.Client.V2/Model/RecordingAnnotationQueue.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingArchiveRestoreTopicMediaResult.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingArchiveRestoreTopicRecording.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingButtonComponent.cs
@@ -8216,6 +8258,7 @@ src/PureCloudPlatform.Client.V2/Model/Screenshare.cs
 src/PureCloudPlatform.Client.V2/Model/Script.cs
 src/PureCloudPlatform.Client.V2/Model/ScriptEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/ScrollPercentageEventTrigger.cs
+src/PureCloudPlatform.Client.V2/Model/SdkLibrary.cs
 src/PureCloudPlatform.Client.V2/Model/SearchAggregation.cs
 src/PureCloudPlatform.Client.V2/Model/SearchCriteria.cs
 src/PureCloudPlatform.Client.V2/Model/SearchRequest.cs
@@ -8480,6 +8523,7 @@ src/PureCloudPlatform.Client.V2/Model/TopicDuration.cs
 src/PureCloudPlatform.Client.V2/Model/TopicJob.cs
 src/PureCloudPlatform.Client.V2/Model/TopicJobRequest.cs
 src/PureCloudPlatform.Client.V2/Model/TopicOffset.cs
+src/PureCloudPlatform.Client.V2/Model/TopicPhrase.cs
 src/PureCloudPlatform.Client.V2/Model/TopicRequest.cs
 src/PureCloudPlatform.Client.V2/Model/TopicsEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/TrainingListing.cs
@@ -8773,10 +8817,6 @@ src/PureCloudPlatform.Client.V2/Model/ValueWrapperString.cs
 src/PureCloudPlatform.Client.V2/Model/VerificationResult.cs
 src/PureCloudPlatform.Client.V2/Model/Video.cs
 src/PureCloudPlatform.Client.V2/Model/ViewFilter.cs
-src/PureCloudPlatform.Client.V2/Model/VipBackup.cs
-src/PureCloudPlatform.Client.V2/Model/VipCallMediaSettings.cs
-src/PureCloudPlatform.Client.V2/Model/VipMediaSettings.cs
-src/PureCloudPlatform.Client.V2/Model/VipRouting.cs
 src/PureCloudPlatform.Client.V2/Model/VisibilityCondition.cs
 src/PureCloudPlatform.Client.V2/Model/VmPairingInfo.cs
 src/PureCloudPlatform.Client.V2/Model/Voicemail.cs
@@ -8926,6 +8966,9 @@ src/PureCloudPlatform.Client.V2/Model/WfmHistoricalDataUploadRequestStatusTopicH
 src/PureCloudPlatform.Client.V2/Model/WfmHistoricalShrinkageCalculationsCompleteTopicHistoricalShrinkageCalculationsCompleteNotification.cs
 src/PureCloudPlatform.Client.V2/Model/WfmHistoricalShrinkageRequest.cs
 src/PureCloudPlatform.Client.V2/Model/WfmHistoricalShrinkageResponse.cs
+src/PureCloudPlatform.Client.V2/Model/WfmIntegrationsHrisTimeOffTypesJobTopicErrorBody.cs
+src/PureCloudPlatform.Client.V2/Model/WfmIntegrationsHrisTimeOffTypesJobTopicHrisTimeOffType.cs
+src/PureCloudPlatform.Client.V2/Model/WfmIntegrationsHrisTimeOffTypesJobTopicHrisTimeOffTypesJobNotification.cs
 src/PureCloudPlatform.Client.V2/Model/WfmIntradayDataUpdateTopicIntradayDataGroup.cs
 src/PureCloudPlatform.Client.V2/Model/WfmIntradayDataUpdateTopicIntradayDataUpdate.cs
 src/PureCloudPlatform.Client.V2/Model/WfmIntradayDataUpdateTopicIntradayForecastData.cs
@@ -8946,6 +8989,9 @@ src/PureCloudPlatform.Client.V2/Model/WfmProcessUploadRequest.cs
 src/PureCloudPlatform.Client.V2/Model/WfmScheduleActivity.cs
 src/PureCloudPlatform.Client.V2/Model/WfmScheduleReference.cs
 src/PureCloudPlatform.Client.V2/Model/WfmScheduleTopicWfmScheduleNotification.cs
+src/PureCloudPlatform.Client.V2/Model/WfmTimeOffBalanceJobTopicErrorBody.cs
+src/PureCloudPlatform.Client.V2/Model/WfmTimeOffBalanceJobTopicTimeOffBalance.cs
+src/PureCloudPlatform.Client.V2/Model/WfmTimeOffBalanceJobTopicTimeOffBalanceJobNotification.cs
 src/PureCloudPlatform.Client.V2/Model/WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate.cs
 src/PureCloudPlatform.Client.V2/Model/WfmTimeOffRequestUpdateTopicUserReference.cs
 src/PureCloudPlatform.Client.V2/Model/WfmUpdateAgentDetailsTopicWfmUpdateAgentDetailsComplete.cs
