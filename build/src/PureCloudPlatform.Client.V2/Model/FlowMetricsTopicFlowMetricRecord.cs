@@ -1042,6 +1042,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EndingLanguage">Flow ending language, e.g. en-us.</param>
         /// <param name="EntryReason">The particular entry reason for this flow, e.g. an address, userId, or flowId.</param>
         /// <param name="EntryType">The entry type for this flow, e.g. dnis, dialer, agent, flow, or direct.</param>
+        /// <param name="ErrorCode">A code corresponding to the error that occurred.</param>
         /// <param name="ExitReason">The exit reason for this flow, e.g. DISCONNECT.</param>
         /// <param name="ExtendedDeliveryStatus">Extended delivery status.</param>
         /// <param name="ExternalContactId">External contact identifier.</param>
@@ -1107,7 +1108,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ProposedAgents">Proposed agents.</param>
         /// <param name="Outcomes">Flow outcomes.</param>
         /// <param name="ScoredAgents">Scored agents.</param>
-        public FlowMetricsTopicFlowMetricRecord(MetricEnum? Metric = null, DateTime? MetricDate = null, int? Value = null, string RecordId = null, List<string> ActiveSkillIds = null, string AddressFrom = null, string AddressTo = null, string AgentAssistantId = null, int? AgentBullseyeRing = null, bool? AgentOwned = null, string Ani = null, string AssignerId = null, bool? Authenticated = null, string ConversationId = null, ConversationInitiatorEnum? ConversationInitiator = null, string ConvertedFrom = null, string ConvertedTo = null, bool? CustomerParticipation = null, DeliveryStatusEnum? DeliveryStatus = null, List<string> DestinationAddresses = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, List<string> DivisionIds = null, string Dnis = null, string EdgeId = null, List<int?> EligibleAgentCounts = null, string EndingLanguage = null, string EntryReason = null, EntryTypeEnum? EntryType = null, string ExitReason = null, string ExtendedDeliveryStatus = null, string ExternalContactId = null, int? ExternalMediaCount = null, string ExternalOrganizationId = null, string ExternalTag = null, bool? FirstQueue = null, FlaggedReasonEnum? FlaggedReason = null, string FlowId = null, string FlowInType = null, List<string> FlowMilestoneIds = null, string FlowName = null, string FlowOutType = null, FlowTypeEnum? FlowType = null, string FlowVersion = null, string GroupId = null, string InteractionType = null, string JourneyActionId = null, string JourneyActionMapId = null, int? JourneyActionMapVersion = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string KnowledgeBaseId = null, int? MediaCount = null, MediaTypeEnum? MediaType = null, string MessageType = null, OriginatingDirectionEnum? OriginatingDirection = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string ParticipantName = null, string PeerId = null, string Provider = null, PurposeEnum? Purpose = null, string QueueId = null, string RecognitionFailureReason = null, string Remote = null, List<string> RemovedSkillIds = null, bool? Reoffered = null, string RequestedLanguageId = null, List<string> RequestedRoutingSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, string RoomId = null, int? RoutingPriority = null, int? RoutingRing = null, string SelectedAgentId = null, int? SelectedAgentRank = null, bool? SelfServed = null, string SessionDnis = null, string SessionId = null, string StartingLanguage = null, string StationId = null, string TeamId = null, string TransferTargetAddress = null, string TransferTargetName = null, string TransferType = null, UsedRoutingEnum? UsedRouting = null, string UserId = null, List<int?> WaitingInteractionCounts = null, string WrapUpCode = null, List<FlowMetricsTopicFlowProposedAgent> ProposedAgents = null, List<FlowMetricsTopicFlowOutcome> Outcomes = null, List<FlowMetricsTopicFlowScoredAgent> ScoredAgents = null)
+        public FlowMetricsTopicFlowMetricRecord(MetricEnum? Metric = null, DateTime? MetricDate = null, int? Value = null, string RecordId = null, List<string> ActiveSkillIds = null, string AddressFrom = null, string AddressTo = null, string AgentAssistantId = null, int? AgentBullseyeRing = null, bool? AgentOwned = null, string Ani = null, string AssignerId = null, bool? Authenticated = null, string ConversationId = null, ConversationInitiatorEnum? ConversationInitiator = null, string ConvertedFrom = null, string ConvertedTo = null, bool? CustomerParticipation = null, DeliveryStatusEnum? DeliveryStatus = null, List<string> DestinationAddresses = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, List<string> DivisionIds = null, string Dnis = null, string EdgeId = null, List<int?> EligibleAgentCounts = null, string EndingLanguage = null, string EntryReason = null, EntryTypeEnum? EntryType = null, string ErrorCode = null, string ExitReason = null, string ExtendedDeliveryStatus = null, string ExternalContactId = null, int? ExternalMediaCount = null, string ExternalOrganizationId = null, string ExternalTag = null, bool? FirstQueue = null, FlaggedReasonEnum? FlaggedReason = null, string FlowId = null, string FlowInType = null, List<string> FlowMilestoneIds = null, string FlowName = null, string FlowOutType = null, FlowTypeEnum? FlowType = null, string FlowVersion = null, string GroupId = null, string InteractionType = null, string JourneyActionId = null, string JourneyActionMapId = null, int? JourneyActionMapVersion = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string KnowledgeBaseId = null, int? MediaCount = null, MediaTypeEnum? MediaType = null, string MessageType = null, OriginatingDirectionEnum? OriginatingDirection = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string ParticipantName = null, string PeerId = null, string Provider = null, PurposeEnum? Purpose = null, string QueueId = null, string RecognitionFailureReason = null, string Remote = null, List<string> RemovedSkillIds = null, bool? Reoffered = null, string RequestedLanguageId = null, List<string> RequestedRoutingSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, string RoomId = null, int? RoutingPriority = null, int? RoutingRing = null, string SelectedAgentId = null, int? SelectedAgentRank = null, bool? SelfServed = null, string SessionDnis = null, string SessionId = null, string StartingLanguage = null, string StationId = null, string TeamId = null, string TransferTargetAddress = null, string TransferTargetName = null, string TransferType = null, UsedRoutingEnum? UsedRouting = null, string UserId = null, List<int?> WaitingInteractionCounts = null, string WrapUpCode = null, List<FlowMetricsTopicFlowProposedAgent> ProposedAgents = null, List<FlowMetricsTopicFlowOutcome> Outcomes = null, List<FlowMetricsTopicFlowScoredAgent> ScoredAgents = null)
         {
             this.Metric = Metric;
             this.MetricDate = MetricDate;
@@ -1138,6 +1139,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.EndingLanguage = EndingLanguage;
             this.EntryReason = EntryReason;
             this.EntryType = EntryType;
+            this.ErrorCode = ErrorCode;
             this.ExitReason = ExitReason;
             this.ExtendedDeliveryStatus = ExtendedDeliveryStatus;
             this.ExternalContactId = ExternalContactId;
@@ -1424,6 +1426,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string EntryReason { get; set; }
 
 
+
+
+
+        /// <summary>
+        /// A code corresponding to the error that occurred
+        /// </summary>
+        /// <value>A code corresponding to the error that occurred</value>
+        [DataMember(Name="errorCode", EmitDefaultValue=false)]
+        public string ErrorCode { get; set; }
 
 
 
@@ -2007,6 +2018,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EndingLanguage: ").Append(EndingLanguage).Append("\n");
             sb.Append("  EntryReason: ").Append(EntryReason).Append("\n");
             sb.Append("  EntryType: ").Append(EntryType).Append("\n");
+            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
             sb.Append("  ExitReason: ").Append(ExitReason).Append("\n");
             sb.Append("  ExtendedDeliveryStatus: ").Append(ExtendedDeliveryStatus).Append("\n");
             sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
@@ -2256,6 +2268,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EntryType == other.EntryType ||
                     this.EntryType != null &&
                     this.EntryType.Equals(other.EntryType)
+                ) &&
+                (
+                    this.ErrorCode == other.ErrorCode ||
+                    this.ErrorCode != null &&
+                    this.ErrorCode.Equals(other.ErrorCode)
                 ) &&
                 (
                     this.ExitReason == other.ExitReason ||
@@ -2681,6 +2698,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EntryType != null)
                     hash = hash * 59 + this.EntryType.GetHashCode();
+
+                if (this.ErrorCode != null)
+                    hash = hash * 59 + this.ErrorCode.GetHashCode();
 
                 if (this.ExitReason != null)
                     hash = hash * 59 + this.ExitReason.GetHashCode();

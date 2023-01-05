@@ -36,6 +36,7 @@ title: FlowMetricsTopicFlowMetricRecord
 | **EndingLanguage** | **string** | Flow ending language, e.g. en-us | [optional] |
 | **EntryReason** | **string** | The particular entry reason for this flow, e.g. an address, userId, or flowId | [optional] |
 | **EntryType** | **string** | The entry type for this flow, e.g. dnis, dialer, agent, flow, or direct | [optional] |
+| **ErrorCode** | **string** | A code corresponding to the error that occurred | [optional] |
 | **ExitReason** | **string** | The exit reason for this flow, e.g. DISCONNECT | [optional] |
 | **ExtendedDeliveryStatus** | **string** | Extended delivery status | [optional] |
 | **ExternalContactId** | **string** | External contact identifier | [optional] |

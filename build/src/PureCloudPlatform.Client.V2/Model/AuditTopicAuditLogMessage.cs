@@ -311,6 +311,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Update,
             
             /// <summary>
+            /// Enum Delete for "Delete"
+            /// </summary>
+            [EnumMember(Value = "Delete")]
+            Delete,
+            
+            /// <summary>
             /// Enum Move for "Move"
             /// </summary>
             [EnumMember(Value = "Move")]
@@ -371,10 +377,16 @@ namespace PureCloudPlatform.Client.V2.Model
             Tagupdate,
             
             /// <summary>
-            /// Enum Delete for "Delete"
+            /// Enum Add for "Add"
             /// </summary>
-            [EnumMember(Value = "Delete")]
-            Delete,
+            [EnumMember(Value = "Add")]
+            Add,
+            
+            /// <summary>
+            /// Enum Remove for "Remove"
+            /// </summary>
+            [EnumMember(Value = "Remove")]
+            Remove,
             
             /// <summary>
             /// Enum Memberadd for "MemberAdd"
@@ -729,12 +741,6 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "IpAllowlistClear")]
             Ipallowlistclear,
-            
-            /// <summary>
-            /// Enum Add for "Add"
-            /// </summary>
-            [EnumMember(Value = "Add")]
-            Add,
             
             /// <summary>
             /// Enum Addpairingrole for "AddPairingRole"
@@ -1285,16 +1291,16 @@ namespace PureCloudPlatform.Client.V2.Model
             Responseasset,
             
             /// <summary>
-            /// Enum Skill for "Skill"
+            /// Enum Skillsgroup for "SkillsGroup"
             /// </summary>
-            [EnumMember(Value = "Skill")]
-            Skill,
+            [EnumMember(Value = "SkillsGroup")]
+            Skillsgroup,
             
             /// <summary>
-            /// Enum Directory for "Directory"
+            /// Enum Directorygroup for "DirectoryGroup"
             /// </summary>
-            [EnumMember(Value = "Directory")]
-            Directory,
+            [EnumMember(Value = "DirectoryGroup")]
+            Directorygroup,
             
             /// <summary>
             /// Enum Team for "Team"
@@ -1870,7 +1876,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Organizationlimits for "OrganizationLimits"
             /// </summary>
             [EnumMember(Value = "OrganizationLimits")]
-            Organizationlimits
+            Organizationlimits,
+            
+            /// <summary>
+            /// Enum Userskill for "UserSkill"
+            /// </summary>
+            [EnumMember(Value = "UserSkill")]
+            Userskill,
+            
+            /// <summary>
+            /// Enum Userlanguage for "UserLanguage"
+            /// </summary>
+            [EnumMember(Value = "UserLanguage")]
+            Userlanguage
         }
         /// <summary>
         /// Gets or Sets ServiceName
