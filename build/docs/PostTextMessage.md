@@ -9,7 +9,7 @@ title: PostTextMessage
 |------------ | ------------- | ------------- | -------------|
 | **Type** | **string** | Message type | |
 | **Text** | **string** | Message text. If type is structured, used as fallback for clients that do not support particular structured content | [optional] |
-| **Content** | [**List&lt;MessageContent&gt;**](MessageContent.html) | A list of content elements in message | [optional] |
+| **Content** | [**List&lt;ConversationMessageContent&gt;**](ConversationMessageContent.html) | A list of content elements in message | [optional] |
 {: class="table table-striped"}
 
 

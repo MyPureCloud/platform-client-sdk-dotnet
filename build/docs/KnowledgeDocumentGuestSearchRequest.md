@@ -13,6 +13,7 @@ title: KnowledgeDocumentGuestSearchRequest
 | **SearchId** | **string** | The globally unique identifier for the search. | [optional] |
 | **Total** | **int?** | The total number of documents matching the query. | [optional] |
 | **PageCount** | **int?** | Number of pages returned in the result calculated according to the pageSize and the total | [optional] |
+| **QueryType** | **string** | The type of the query that initiates the search. | [optional] |
 | **SessionId** | **string** | Session ID of the search. | [optional] |
 | **IncludeDraftDocuments** | **bool?** | Indicates whether the search results would also include draft documents. | [optional] |
 | **App** | [**KnowledgeGuestSessionApp**](KnowledgeGuestSessionApp.html) | The app where the session is started. | [optional] |

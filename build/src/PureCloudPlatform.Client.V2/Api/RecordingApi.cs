@@ -823,6 +823,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<RecordingSettings> GetRecordingSettingsWithHttpInfo (bool? createDefault = null);
 
         /// <summary>
+        /// Get the status of a recording upload status report
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reportId">reportId</param>
+        /// <returns>RecordingUploadReport</returns>
+        RecordingUploadReport GetRecordingUploadsReport (string reportId);
+
+        /// <summary>
+        /// Get the status of a recording upload status report
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reportId">reportId</param>
+        /// <returns>ApiResponse of RecordingUploadReport</returns>
+        ApiResponse<RecordingUploadReport> GetRecordingUploadsReportWithHttpInfo (string reportId);
+
+        /// <summary>
         /// Query for recording retention data
         /// </summary>
         /// <remarks>
@@ -1165,6 +1187,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of EncryptionKey</returns>
         ApiResponse<EncryptionKey> PostRecordingRecordingkeysWithHttpInfo ();
+
+        /// <summary>
+        /// Creates a recording upload status report
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Report parameters</param>
+        /// <returns>RecordingUploadReport</returns>
+        RecordingUploadReport PostRecordingUploadsReports (RecordingUploadReportRequest body);
+
+        /// <summary>
+        /// Creates a recording upload status report
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Report parameters</param>
+        /// <returns>ApiResponse of RecordingUploadReport</returns>
+        ApiResponse<RecordingUploadReport> PostRecordingUploadsReportsWithHttpInfo (RecordingUploadReportRequest body);
 
         /// <summary>
         /// Get a list of conversations with protected recordings
@@ -2311,6 +2355,28 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<RecordingSettings>> GetRecordingSettingsAsyncWithHttpInfo (bool? createDefault = null);
 
         /// <summary>
+        /// Get the status of a recording upload status report
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reportId">reportId</param>
+        /// <returns>Task of RecordingUploadReport</returns>
+        System.Threading.Tasks.Task<RecordingUploadReport> GetRecordingUploadsReportAsync (string reportId);
+
+        /// <summary>
+        /// Get the status of a recording upload status report
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reportId">reportId</param>
+        /// <returns>Task of ApiResponse (RecordingUploadReport)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RecordingUploadReport>> GetRecordingUploadsReportAsyncWithHttpInfo (string reportId);
+
+        /// <summary>
         /// Query for recording retention data
         /// </summary>
         /// <remarks>
@@ -2653,6 +2719,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (EncryptionKey)</returns>
         System.Threading.Tasks.Task<ApiResponse<EncryptionKey>> PostRecordingRecordingkeysAsyncWithHttpInfo ();
+
+        /// <summary>
+        /// Creates a recording upload status report
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Report parameters</param>
+        /// <returns>Task of RecordingUploadReport</returns>
+        System.Threading.Tasks.Task<RecordingUploadReport> PostRecordingUploadsReportsAsync (RecordingUploadReportRequest body);
+
+        /// <summary>
+        /// Creates a recording upload status report
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Report parameters</param>
+        /// <returns>Task of ApiResponse (RecordingUploadReport)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RecordingUploadReport>> PostRecordingUploadsReportsAsyncWithHttpInfo (RecordingUploadReportRequest body);
 
         /// <summary>
         /// Get a list of conversations with protected recordings
@@ -9348,6 +9436,197 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get the status of a recording upload status report 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reportId">reportId</param>
+        /// <returns>RecordingUploadReport</returns>
+        public RecordingUploadReport GetRecordingUploadsReport (string reportId)
+        {
+             ApiResponse<RecordingUploadReport> localVarResponse = GetRecordingUploadsReportWithHttpInfo(reportId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the status of a recording upload status report 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reportId">reportId</param>
+        /// <returns>ApiResponse of RecordingUploadReport</returns>
+        public ApiResponse< RecordingUploadReport > GetRecordingUploadsReportWithHttpInfo (string reportId)
+        { 
+            // verify the required parameter 'reportId' is set
+            if (reportId == null)
+                throw new ApiException(400, "Missing required parameter 'reportId' when calling RecordingApi->GetRecordingUploadsReport");
+
+            var localVarPath = "/api/v2/recording/uploads/reports/{reportId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (reportId != null) localVarPathParams.Add("reportId", this.Configuration.ApiClient.ParameterToString(reportId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingUploadsReport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingUploadsReport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RecordingUploadReport>(localVarStatusCode,
+                localVarHeaders,
+                (RecordingUploadReport) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecordingUploadReport)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the status of a recording upload status report 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reportId">reportId</param>
+        /// <returns>Task of RecordingUploadReport</returns>
+        public async System.Threading.Tasks.Task<RecordingUploadReport> GetRecordingUploadsReportAsync (string reportId)
+        {
+             ApiResponse<RecordingUploadReport> localVarResponse = await GetRecordingUploadsReportAsyncWithHttpInfo(reportId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the status of a recording upload status report 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="reportId">reportId</param>
+        /// <returns>Task of ApiResponse (RecordingUploadReport)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RecordingUploadReport>> GetRecordingUploadsReportAsyncWithHttpInfo (string reportId)
+        { 
+            // verify the required parameter 'reportId' is set
+            if (reportId == null)
+                throw new ApiException(400, "Missing required parameter 'reportId' when calling RecordingApi->GetRecordingUploadsReport");
+            
+
+            var localVarPath = "/api/v2/recording/uploads/reports/{reportId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (reportId != null) localVarPathParams.Add("reportId", this.Configuration.ApiClient.ParameterToString(reportId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingUploadsReport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRecordingUploadsReport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RecordingUploadReport>(localVarStatusCode,
+                localVarHeaders,
+                (RecordingUploadReport) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecordingUploadReport)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Query for recording retention data 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12380,6 +12659,207 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<EncryptionKey>(localVarStatusCode,
                 localVarHeaders,
                 (EncryptionKey) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EncryptionKey)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Creates a recording upload status report 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Report parameters</param>
+        /// <returns>RecordingUploadReport</returns>
+        public RecordingUploadReport PostRecordingUploadsReports (RecordingUploadReportRequest body)
+        {
+             ApiResponse<RecordingUploadReport> localVarResponse = PostRecordingUploadsReportsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Creates a recording upload status report 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Report parameters</param>
+        /// <returns>ApiResponse of RecordingUploadReport</returns>
+        public ApiResponse< RecordingUploadReport > PostRecordingUploadsReportsWithHttpInfo (RecordingUploadReportRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PostRecordingUploadsReports");
+
+            var localVarPath = "/api/v2/recording/uploads/reports";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRecordingUploadsReports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRecordingUploadsReports: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RecordingUploadReport>(localVarStatusCode,
+                localVarHeaders,
+                (RecordingUploadReport) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecordingUploadReport)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Creates a recording upload status report 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Report parameters</param>
+        /// <returns>Task of RecordingUploadReport</returns>
+        public async System.Threading.Tasks.Task<RecordingUploadReport> PostRecordingUploadsReportsAsync (RecordingUploadReportRequest body)
+        {
+             ApiResponse<RecordingUploadReport> localVarResponse = await PostRecordingUploadsReportsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Creates a recording upload status report 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Report parameters</param>
+        /// <returns>Task of ApiResponse (RecordingUploadReport)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RecordingUploadReport>> PostRecordingUploadsReportsAsyncWithHttpInfo (RecordingUploadReportRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PostRecordingUploadsReports");
+            
+
+            var localVarPath = "/api/v2/recording/uploads/reports";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRecordingUploadsReports: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRecordingUploadsReports: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RecordingUploadReport>(localVarStatusCode,
+                localVarHeaders,
+                (RecordingUploadReport) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecordingUploadReport)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

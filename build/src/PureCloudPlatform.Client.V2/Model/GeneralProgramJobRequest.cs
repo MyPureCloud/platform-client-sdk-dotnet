@@ -127,7 +127,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Kokr for "ko-KR"
             /// </summary>
             [EnumMember(Value = "ko-KR")]
-            Kokr
+            Kokr,
+            
+            /// <summary>
+            /// Enum Jajp for "ja-JP"
+            /// </summary>
+            [EnumMember(Value = "ja-JP")]
+            Jajp
         }
         /// <summary>
         /// The mode to use for the general program job, default value is Skip

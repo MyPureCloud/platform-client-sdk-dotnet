@@ -11,6 +11,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteRoutingEmailDomain**](RoutingApi.html#deleteroutingemaildomain) | **DELETE** /api/v2/routing/email/domains/{domainId} | Delete a domain |
 | [**DeleteRoutingEmailDomainRoute**](RoutingApi.html#deleteroutingemaildomainroute) | **DELETE** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Delete a route |
 | [**DeleteRoutingEmailOutboundDomain**](RoutingApi.html#deleteroutingemailoutbounddomain) | **DELETE** /api/v2/routing/email/outbound/domains/{domainId} | Delete an outbound domain |
+| [**DeleteRoutingLanguage**](RoutingApi.html#deleteroutinglanguage) | **DELETE** /api/v2/routing/languages/{languageId} | Delete a routing language |
 | [**DeleteRoutingPredictor**](RoutingApi.html#deleteroutingpredictor) | **DELETE** /api/v2/routing/predictors/{predictorId} | Delete single predictor. |
 | [**DeleteRoutingQueue**](RoutingApi.html#deleteroutingqueue) | **DELETE** /api/v2/routing/queues/{queueId} | Delete a queue |
 | [**DeleteRoutingQueueMember**](RoutingApi.html#deleteroutingqueuemember) | **DELETE** /api/v2/routing/queues/{queueId}/members/{memberId} | Delete a queue member. |
@@ -40,6 +41,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRoutingEmailOutboundDomainSearch**](RoutingApi.html#getroutingemailoutbounddomainsearch) | **GET** /api/v2/routing/email/outbound/domains/{domainId}/search | Search a domain across organizations |
 | [**GetRoutingEmailOutboundDomains**](RoutingApi.html#getroutingemailoutbounddomains) | **GET** /api/v2/routing/email/outbound/domains | Get outbound domains |
 | [**GetRoutingEmailSetup**](RoutingApi.html#getroutingemailsetup) | **GET** /api/v2/routing/email/setup | Get email setup |
+| [**GetRoutingLanguage**](RoutingApi.html#getroutinglanguage) | **GET** /api/v2/routing/languages/{languageId} | Get a routing language |
 | [**GetRoutingLanguages**](RoutingApi.html#getroutinglanguages) | **GET** /api/v2/routing/languages | Get the list of supported languages. |
 | [**GetRoutingMessageRecipient**](RoutingApi.html#getroutingmessagerecipient) | **GET** /api/v2/routing/message/recipients/{recipientId} | Get a recipient |
 | [**GetRoutingMessageRecipients**](RoutingApi.html#getroutingmessagerecipients) | **GET** /api/v2/routing/message/recipients | Get recipients |
@@ -384,6 +386,70 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **domainId** | **string**| domain ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteroutinglanguage"></a>
+
+## void DeleteRoutingLanguage (string languageId)
+
+
+
+Delete a routing language
+
+
+
+Requires ANY permissions: 
+
+* routing:skill:manage
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteRoutingLanguageExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var languageId = languageId_example;  // string | Language ID
+
+            try
+            { 
+                // Delete a routing language
+                apiInstance.DeleteRoutingLanguage(languageId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.DeleteRoutingLanguage: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **languageId** | **string**| Language ID |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2270,6 +2336,70 @@ This endpoint does require any parameters.
 ### Return type
 
 [**EmailSetup**](EmailSetup.html)
+
+<a name="getroutinglanguage"></a>
+
+## [**Language**](Language.html) GetRoutingLanguage (string languageId)
+
+
+
+Get a routing language
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingLanguageExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var languageId = languageId_example;  // string | Language ID
+
+            try
+            { 
+                // Get a routing language
+                Language result = apiInstance.GetRoutingLanguage(languageId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingLanguage: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **languageId** | **string**| Language ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Language**](Language.html)
 
 <a name="getroutinglanguages"></a>
 

@@ -171,6 +171,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Flowoutcome,
             
             /// <summary>
+            /// Enum Grammar for "GRAMMAR"
+            /// </summary>
+            [EnumMember(Value = "GRAMMAR")]
+            Grammar,
+            
+            /// <summary>
             /// Enum Group for "GROUP"
             /// </summary>
             [EnumMember(Value = "GROUP")]

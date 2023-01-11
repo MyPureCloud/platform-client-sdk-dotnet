@@ -27,7 +27,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TotalLoggedInDurationSeconds">Total duration in seconds for which agents in the management unit are actually logged-in.</param>
         /// <param name="AggregatedShrinkage">Aggregated shrinkage data for all the activity categories.</param>
         /// <param name="ShrinkageForActivityCategories">Shrinkage for activity categories.</param>
-        public HistoricalShrinkageResult(DateTime? StartDate = null, DateTime? EndDate = null, int? TotalScheduledDurationSeconds = null, int? TotalLoggedInDurationSeconds = null, HistoricalShrinkageAggregateResponse AggregatedShrinkage = null, List<HistoricalShrinkageActivityCategoryResponse> ShrinkageForActivityCategories = null)
+        /// <param name="BusinessUnitIds">List of all business units of all the agents in response.</param>
+        public HistoricalShrinkageResult(DateTime? StartDate = null, DateTime? EndDate = null, int? TotalScheduledDurationSeconds = null, int? TotalLoggedInDurationSeconds = null, HistoricalShrinkageAggregateResponse AggregatedShrinkage = null, List<HistoricalShrinkageActivityCategoryResponse> ShrinkageForActivityCategories = null, List<string> BusinessUnitIds = null)
         {
             this.StartDate = StartDate;
             this.EndDate = EndDate;
@@ -35,6 +36,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.TotalLoggedInDurationSeconds = TotalLoggedInDurationSeconds;
             this.AggregatedShrinkage = AggregatedShrinkage;
             this.ShrinkageForActivityCategories = ShrinkageForActivityCategories;
+            this.BusinessUnitIds = BusinessUnitIds;
             
         }
         
@@ -93,6 +95,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<HistoricalShrinkageActivityCategoryResponse> ShrinkageForActivityCategories { get; set; }
 
 
+
+        /// <summary>
+        /// List of all business units of all the agents in response
+        /// </summary>
+        /// <value>List of all business units of all the agents in response</value>
+        [DataMember(Name="businessUnitIds", EmitDefaultValue=false)]
+        public List<string> BusinessUnitIds { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -108,6 +119,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  TotalLoggedInDurationSeconds: ").Append(TotalLoggedInDurationSeconds).Append("\n");
             sb.Append("  AggregatedShrinkage: ").Append(AggregatedShrinkage).Append("\n");
             sb.Append("  ShrinkageForActivityCategories: ").Append(ShrinkageForActivityCategories).Append("\n");
+            sb.Append("  BusinessUnitIds: ").Append(BusinessUnitIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -177,6 +189,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ShrinkageForActivityCategories == other.ShrinkageForActivityCategories ||
                     this.ShrinkageForActivityCategories != null &&
                     this.ShrinkageForActivityCategories.SequenceEqual(other.ShrinkageForActivityCategories)
+                ) &&
+                (
+                    this.BusinessUnitIds == other.BusinessUnitIds ||
+                    this.BusinessUnitIds != null &&
+                    this.BusinessUnitIds.SequenceEqual(other.BusinessUnitIds)
                 );
         }
 
@@ -208,6 +225,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ShrinkageForActivityCategories != null)
                     hash = hash * 59 + this.ShrinkageForActivityCategories.GetHashCode();
+
+                if (this.BusinessUnitIds != null)
+                    hash = hash * 59 + this.BusinessUnitIds.GetHashCode();
 
                 return hash;
             }

@@ -117,10 +117,70 @@ namespace PureCloudPlatform.Client.V2.Model
             Decisionaction,
             
             /// <summary>
+            /// Enum Findgrammaraction for "FindGrammarAction"
+            /// </summary>
+            [EnumMember(Value = "FindGrammarAction")]
+            Findgrammaraction,
+            
+            /// <summary>
             /// Enum Findgroupaction for "FindGroupAction"
             /// </summary>
             [EnumMember(Value = "FindGroupAction")]
             Findgroupaction,
+            
+            /// <summary>
+            /// Enum Findlanguageskillaction for "FindLanguageSkillAction"
+            /// </summary>
+            [EnumMember(Value = "FindLanguageSkillAction")]
+            Findlanguageskillaction,
+            
+            /// <summary>
+            /// Enum Findqueueaction for "FindQueueAction"
+            /// </summary>
+            [EnumMember(Value = "FindQueueAction")]
+            Findqueueaction,
+            
+            /// <summary>
+            /// Enum Findqueuebyidaction for "FindQueueByIdAction"
+            /// </summary>
+            [EnumMember(Value = "FindQueueByIdAction")]
+            Findqueuebyidaction,
+            
+            /// <summary>
+            /// Enum Findskillaction for "FindSkillAction"
+            /// </summary>
+            [EnumMember(Value = "FindSkillAction")]
+            Findskillaction,
+            
+            /// <summary>
+            /// Enum Findsystempromptaction for "FindSystemPromptAction"
+            /// </summary>
+            [EnumMember(Value = "FindSystemPromptAction")]
+            Findsystempromptaction,
+            
+            /// <summary>
+            /// Enum Finduseraction for "FindUserAction"
+            /// </summary>
+            [EnumMember(Value = "FindUserAction")]
+            Finduseraction,
+            
+            /// <summary>
+            /// Enum Finduserbyidaction for "FindUserByIdAction"
+            /// </summary>
+            [EnumMember(Value = "FindUserByIdAction")]
+            Finduserbyidaction,
+            
+            /// <summary>
+            /// Enum Findusersbyidaction for "FindUsersByIdAction"
+            /// </summary>
+            [EnumMember(Value = "FindUsersByIdAction")]
+            Findusersbyidaction,
+            
+            /// <summary>
+            /// Enum Finduserpromptaction for "FindUserPromptAction"
+            /// </summary>
+            [EnumMember(Value = "FindUserPromptAction")]
+            Finduserpromptaction,
             
             /// <summary>
             /// Enum Switchaction for "SwitchAction"
@@ -249,40 +309,16 @@ namespace PureCloudPlatform.Client.V2.Model
             Showknowledgearticleaction,
             
             /// <summary>
-            /// Enum Findsystempromptaction for "FindSystemPromptAction"
+            /// Enum Setlocaleaction for "SetLocaleAction"
             /// </summary>
-            [EnumMember(Value = "FindSystemPromptAction")]
-            Findsystempromptaction,
-            
-            /// <summary>
-            /// Enum Finduserpromptaction for "FindUserPromptAction"
-            /// </summary>
-            [EnumMember(Value = "FindUserPromptAction")]
-            Finduserpromptaction,
+            [EnumMember(Value = "SetLocaleAction")]
+            Setlocaleaction,
             
             /// <summary>
             /// Enum Transferpurematchaction for "TransferPureMatchAction"
             /// </summary>
             [EnumMember(Value = "TransferPureMatchAction")]
             Transferpurematchaction,
-            
-            /// <summary>
-            /// Enum Findqueueaction for "FindQueueAction"
-            /// </summary>
-            [EnumMember(Value = "FindQueueAction")]
-            Findqueueaction,
-            
-            /// <summary>
-            /// Enum Findqueuebyidaction for "FindQueueByIdAction"
-            /// </summary>
-            [EnumMember(Value = "FindQueueByIdAction")]
-            Findqueuebyidaction,
-            
-            /// <summary>
-            /// Enum Setlocaleaction for "SetLocaleAction"
-            /// </summary>
-            [EnumMember(Value = "SetLocaleAction")]
-            Setlocaleaction,
             
             /// <summary>
             /// Enum Unknown for "Unknown"

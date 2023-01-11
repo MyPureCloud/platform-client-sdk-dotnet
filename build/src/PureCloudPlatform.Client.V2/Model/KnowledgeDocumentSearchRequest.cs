@@ -19,6 +19,39 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class KnowledgeDocumentSearchRequest :  IEquatable<KnowledgeDocumentSearchRequest>
     {
         /// <summary>
+        /// The type of the query that initiates the search.
+        /// </summary>
+        /// <value>The type of the query that initiates the search.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum QueryTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Autosearch for "AutoSearch"
+            /// </summary>
+            [EnumMember(Value = "AutoSearch")]
+            Autosearch,
+            
+            /// <summary>
+            /// Enum Manualsearch for "ManualSearch"
+            /// </summary>
+            [EnumMember(Value = "ManualSearch")]
+            Manualsearch,
+            
+            /// <summary>
+            /// Enum Suggestion for "Suggestion"
+            /// </summary>
+            [EnumMember(Value = "Suggestion")]
+            Suggestion
+        }
+        /// <summary>
         /// The sort order for search results.
         /// </summary>
         /// <value>The sort order for search results.</value>
@@ -127,6 +160,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Labelname
         }
         /// <summary>
+        /// The type of the query that initiates the search.
+        /// </summary>
+        /// <value>The type of the query that initiates the search.</value>
+        [DataMember(Name="queryType", EmitDefaultValue=false)]
+        public QueryTypeEnum? QueryType { get; set; }
+        /// <summary>
         /// The sort order for search results.
         /// </summary>
         /// <value>The sort order for search results.</value>
@@ -150,23 +189,27 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Query">Query to search content in the knowledge base. Maximum of 30 records per query can be fetched. (required).</param>
         /// <param name="PageSize">Page size of the returned results..</param>
         /// <param name="PageNumber">Page number of the returned results..</param>
+        /// <param name="QueryType">The type of the query that initiates the search..</param>
         /// <param name="IncludeDraftDocuments">Indicates whether the search results would also include draft documents..</param>
         /// <param name="Interval">Retrieves the documents created/modified/published in specified date and time range..</param>
         /// <param name="Filter">Filter for the document search..</param>
         /// <param name="SortOrder">The sort order for search results..</param>
         /// <param name="SortBy">The field in the documents that you want to sort the search results by..</param>
         /// <param name="Application">The client application details from which search request was sent..</param>
-        public KnowledgeDocumentSearchRequest(string Query = null, int? PageSize = null, int? PageNumber = null, bool? IncludeDraftDocuments = null, DocumentQueryInterval Interval = null, DocumentQuery Filter = null, SortOrderEnum? SortOrder = null, SortByEnum? SortBy = null, KnowledgeSearchClientApplication Application = null)
+        /// <param name="ConversationContext">Conversation context information if the search is initiated in the context of a conversation..</param>
+        public KnowledgeDocumentSearchRequest(string Query = null, int? PageSize = null, int? PageNumber = null, QueryTypeEnum? QueryType = null, bool? IncludeDraftDocuments = null, DocumentQueryInterval Interval = null, DocumentQuery Filter = null, SortOrderEnum? SortOrder = null, SortByEnum? SortBy = null, KnowledgeSearchClientApplication Application = null, KnowledgeConversationContext ConversationContext = null)
         {
             this.Query = Query;
             this.PageSize = PageSize;
             this.PageNumber = PageNumber;
+            this.QueryType = QueryType;
             this.IncludeDraftDocuments = IncludeDraftDocuments;
             this.Interval = Interval;
             this.Filter = Filter;
             this.SortOrder = SortOrder;
             this.SortBy = SortBy;
             this.Application = Application;
+            this.ConversationContext = ConversationContext;
             
         }
         
@@ -226,6 +269,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
         /// <summary>
         /// Indicates whether the search results would also include draft documents.
         /// </summary>
@@ -265,6 +310,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public KnowledgeSearchClientApplication Application { get; set; }
 
 
+
+        /// <summary>
+        /// Conversation context information if the search is initiated in the context of a conversation.
+        /// </summary>
+        /// <value>Conversation context information if the search is initiated in the context of a conversation.</value>
+        [DataMember(Name="conversationContext", EmitDefaultValue=false)]
+        public KnowledgeConversationContext ConversationContext { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -280,12 +334,14 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SearchId: ").Append(SearchId).Append("\n");
             sb.Append("  Total: ").Append(Total).Append("\n");
             sb.Append("  PageCount: ").Append(PageCount).Append("\n");
+            sb.Append("  QueryType: ").Append(QueryType).Append("\n");
             sb.Append("  IncludeDraftDocuments: ").Append(IncludeDraftDocuments).Append("\n");
             sb.Append("  Interval: ").Append(Interval).Append("\n");
             sb.Append("  Filter: ").Append(Filter).Append("\n");
             sb.Append("  SortOrder: ").Append(SortOrder).Append("\n");
             sb.Append("  SortBy: ").Append(SortBy).Append("\n");
             sb.Append("  Application: ").Append(Application).Append("\n");
+            sb.Append("  ConversationContext: ").Append(ConversationContext).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -357,6 +413,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PageCount.Equals(other.PageCount)
                 ) &&
                 (
+                    this.QueryType == other.QueryType ||
+                    this.QueryType != null &&
+                    this.QueryType.Equals(other.QueryType)
+                ) &&
+                (
                     this.IncludeDraftDocuments == other.IncludeDraftDocuments ||
                     this.IncludeDraftDocuments != null &&
                     this.IncludeDraftDocuments.Equals(other.IncludeDraftDocuments)
@@ -385,6 +446,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Application == other.Application ||
                     this.Application != null &&
                     this.Application.Equals(other.Application)
+                ) &&
+                (
+                    this.ConversationContext == other.ConversationContext ||
+                    this.ConversationContext != null &&
+                    this.ConversationContext.Equals(other.ConversationContext)
                 );
         }
 
@@ -417,6 +483,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.PageCount != null)
                     hash = hash * 59 + this.PageCount.GetHashCode();
 
+                if (this.QueryType != null)
+                    hash = hash * 59 + this.QueryType.GetHashCode();
+
                 if (this.IncludeDraftDocuments != null)
                     hash = hash * 59 + this.IncludeDraftDocuments.GetHashCode();
 
@@ -434,6 +503,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Application != null)
                     hash = hash * 59 + this.Application.GetHashCode();
+
+                if (this.ConversationContext != null)
+                    hash = hash * 59 + this.ConversationContext.GetHashCode();
 
                 return hash;
             }

@@ -2312,6 +2312,7 @@ docs/GetRecordingMediaretentionpolicy-example.txt
 docs/GetRecordingRecordingkeys-example.txt
 docs/GetRecordingRecordingkeysRotationschedule-example.txt
 docs/GetRecordingSettings-example.txt
+docs/GetRecordingUploadsReport-example.txt
 docs/GetRecordingsRetentionQuery-example.txt
 docs/GetRecordingsScreensessions-example.txt
 docs/GetResponsemanagementLibraries-example.txt
@@ -2874,6 +2875,8 @@ docs/KnowledgeCategory.md
 docs/KnowledgeCategoryRequest.md
 docs/KnowledgeContextReference.md
 docs/KnowledgeContextValueReference.md
+docs/KnowledgeConversationContext.md
+docs/KnowledgeConversationContextResponse.md
 docs/KnowledgeDocument.md
 docs/KnowledgeDocumentAlternative.md
 docs/KnowledgeDocumentBulkRequest.md
@@ -3819,6 +3822,7 @@ docs/PostRecordingLocalkeys-example.txt
 docs/PostRecordingLocalkeysSettings-example.txt
 docs/PostRecordingMediaretentionpolicies-example.txt
 docs/PostRecordingRecordingkeys-example.txt
+docs/PostRecordingUploadsReports-example.txt
 docs/PostRecordingsDeletionprotection-example.txt
 docs/PostRecordingsScreensessionsAcknowledge-example.txt
 docs/PostRecordingsScreensessionsMetadata-example.txt
@@ -4528,6 +4532,8 @@ docs/RecordingRetentionCursorEntityListing.md
 docs/RecordingSettings.md
 docs/RecordingTranscodeCompleteTopicMediaResult.md
 docs/RecordingTranscodeCompleteTopicRecording.md
+docs/RecordingUploadReport.md
+docs/RecordingUploadReportRequest.md
 docs/Referrer.md
 docs/RegionTimeZone.md
 docs/RegisterArchitectJobResponse.md
@@ -5274,6 +5280,7 @@ docs/ValidateWorkPlanResponse.md
 docs/ValidationLimits.md
 docs/ValidationServiceRequest.md
 docs/ValueWrapperDate.md
+docs/ValueWrapperHrisTimeOffType.md
 docs/ValueWrapperPlanningPeriodSettings.md
 docs/ValueWrapperString.md
 docs/VerificationResult.md
@@ -7295,6 +7302,8 @@ src/PureCloudPlatform.Client.V2/Model/KnowledgeCategory.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeCategoryRequest.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeContextReference.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeContextValueReference.cs
+src/PureCloudPlatform.Client.V2/Model/KnowledgeConversationContext.cs
+src/PureCloudPlatform.Client.V2/Model/KnowledgeConversationContextResponse.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeDocument.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentAlternative.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentBulkRequest.cs
@@ -8102,6 +8111,8 @@ src/PureCloudPlatform.Client.V2/Model/RecordingRetentionCursorEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingSettings.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingTranscodeCompleteTopicMediaResult.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingTranscodeCompleteTopicRecording.cs
+src/PureCloudPlatform.Client.V2/Model/RecordingUploadReport.cs
+src/PureCloudPlatform.Client.V2/Model/RecordingUploadReportRequest.cs
 src/PureCloudPlatform.Client.V2/Model/Referrer.cs
 src/PureCloudPlatform.Client.V2/Model/RegionTimeZone.cs
 src/PureCloudPlatform.Client.V2/Model/RegisterArchitectJobResponse.cs
@@ -8812,6 +8823,7 @@ src/PureCloudPlatform.Client.V2/Model/ValidateWorkPlanResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ValidationLimits.cs
 src/PureCloudPlatform.Client.V2/Model/ValidationServiceRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ValueWrapperDate.cs
+src/PureCloudPlatform.Client.V2/Model/ValueWrapperHrisTimeOffType.cs
 src/PureCloudPlatform.Client.V2/Model/ValueWrapperPlanningPeriodSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ValueWrapperString.cs
 src/PureCloudPlatform.Client.V2/Model/VerificationResult.cs

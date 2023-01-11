@@ -19,6 +19,7 @@ title: VoicemailGroupPolicy
 | **OverflowGroupId** | **string** | A fallback group to contact when all of the members in this group did not answer the call. | [optional] |
 | **GroupAlertType** | **string** | Specifies if the members in this group should be contacted randomly, in a specific order, or by round-robin. | [optional] |
 | **InteractiveResponsePromptId** | **string** | The prompt to use when connecting a user to a Group Ring call | [optional] |
+| **InteractiveResponseRequired** | **bool?** | Whether user should be prompted with a confirmation prompt when connecting to a Group Ring call | [optional] |
 {: class="table table-striped"}
 
 

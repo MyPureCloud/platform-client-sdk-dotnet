@@ -159,6 +159,7 @@ title: ViewFilter
 | **FavouriteDashboard** | **bool?** | Filter to indicate whether the dashboard is favorite or unfavorite. | [optional] |
 | **MyDashboard** | **bool?** | Filter to indicate the dashboard owned by the user. | [optional] |
 | **StationErrors** | **List&lt;string&gt;** | The list of agent errors that are related to station | [optional] |
+| **CanonicalContactIds** | **List&lt;string&gt;** | The canonical contact ids are used to filter the view | [optional] |
 {: class="table table-striped"}
 
 

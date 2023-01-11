@@ -117,7 +117,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MediaModel">Media model for the site.</param>
         /// <param name="CoreSite">Is this site a core site.</param>
         /// <param name="SiteConnections">The site connections.</param>
-        public Site(string Name = null, Division Division = null, string Description = null, int? Version = null, List<DomainEntityRef> PrimarySites = null, List<DomainEntityRef> SecondarySites = null, List<Edge> PrimaryEdges = null, List<Edge> SecondaryEdges = null, List<Contact> Addresses = null, List<Edge> Edges = null, EdgeAutoUpdateConfig EdgeAutoUpdateConfig = null, bool? MediaRegionsUseLatencyBased = null, LocationDefinition Location = null, bool? Managed = null, NTPSettings NtpSettings = null, MediaModelEnum? MediaModel = null, bool? CoreSite = null, List<SiteConnection> SiteConnections = null)
+        /// <param name="MediaRegions">The ordered list of AWS regions through which media can stream..</param>
+        /// <param name="CallerId">The caller ID value for the site..</param>
+        /// <param name="CallerName">The caller name for the site..</param>
+        /// <param name="CloudProxyForceTurn">Enables premises Edge Force Turn .</param>
+        public Site(string Name = null, Division Division = null, string Description = null, int? Version = null, List<DomainEntityRef> PrimarySites = null, List<DomainEntityRef> SecondarySites = null, List<Edge> PrimaryEdges = null, List<Edge> SecondaryEdges = null, List<Contact> Addresses = null, List<Edge> Edges = null, EdgeAutoUpdateConfig EdgeAutoUpdateConfig = null, bool? MediaRegionsUseLatencyBased = null, LocationDefinition Location = null, bool? Managed = null, NTPSettings NtpSettings = null, MediaModelEnum? MediaModel = null, bool? CoreSite = null, List<SiteConnection> SiteConnections = null, List<string> MediaRegions = null, string CallerId = null, string CallerName = null, bool? CloudProxyForceTurn = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -137,6 +141,10 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MediaModel = MediaModel;
             this.CoreSite = CoreSite;
             this.SiteConnections = SiteConnections;
+            this.MediaRegions = MediaRegions;
+            this.CallerId = CallerId;
+            this.CallerName = CallerName;
+            this.CloudProxyForceTurn = CloudProxyForceTurn;
             
         }
         
@@ -355,6 +363,42 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The ordered list of AWS regions through which media can stream.
+        /// </summary>
+        /// <value>The ordered list of AWS regions through which media can stream.</value>
+        [DataMember(Name="mediaRegions", EmitDefaultValue=false)]
+        public List<string> MediaRegions { get; set; }
+
+
+
+        /// <summary>
+        /// The caller ID value for the site.
+        /// </summary>
+        /// <value>The caller ID value for the site.</value>
+        [DataMember(Name="callerId", EmitDefaultValue=false)]
+        public string CallerId { get; set; }
+
+
+
+        /// <summary>
+        /// The caller name for the site.
+        /// </summary>
+        /// <value>The caller name for the site.</value>
+        [DataMember(Name="callerName", EmitDefaultValue=false)]
+        public string CallerName { get; set; }
+
+
+
+        /// <summary>
+        /// Enables premises Edge Force Turn 
+        /// </summary>
+        /// <value>Enables premises Edge Force Turn </value>
+        [DataMember(Name="cloudProxyForceTurn", EmitDefaultValue=false)]
+        public bool? CloudProxyForceTurn { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -397,6 +441,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MediaModel: ").Append(MediaModel).Append("\n");
             sb.Append("  CoreSite: ").Append(CoreSite).Append("\n");
             sb.Append("  SiteConnections: ").Append(SiteConnections).Append("\n");
+            sb.Append("  MediaRegions: ").Append(MediaRegions).Append("\n");
+            sb.Append("  CallerId: ").Append(CallerId).Append("\n");
+            sb.Append("  CallerName: ").Append(CallerName).Append("\n");
+            sb.Append("  CloudProxyForceTurn: ").Append(CloudProxyForceTurn).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -569,6 +617,26 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SiteConnections.SequenceEqual(other.SiteConnections)
                 ) &&
                 (
+                    this.MediaRegions == other.MediaRegions ||
+                    this.MediaRegions != null &&
+                    this.MediaRegions.SequenceEqual(other.MediaRegions)
+                ) &&
+                (
+                    this.CallerId == other.CallerId ||
+                    this.CallerId != null &&
+                    this.CallerId.Equals(other.CallerId)
+                ) &&
+                (
+                    this.CallerName == other.CallerName ||
+                    this.CallerName != null &&
+                    this.CallerName.Equals(other.CallerName)
+                ) &&
+                (
+                    this.CloudProxyForceTurn == other.CloudProxyForceTurn ||
+                    this.CloudProxyForceTurn != null &&
+                    this.CloudProxyForceTurn.Equals(other.CloudProxyForceTurn)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -663,6 +731,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SiteConnections != null)
                     hash = hash * 59 + this.SiteConnections.GetHashCode();
+
+                if (this.MediaRegions != null)
+                    hash = hash * 59 + this.MediaRegions.GetHashCode();
+
+                if (this.CallerId != null)
+                    hash = hash * 59 + this.CallerId.GetHashCode();
+
+                if (this.CallerName != null)
+                    hash = hash * 59 + this.CallerName.GetHashCode();
+
+                if (this.CloudProxyForceTurn != null)
+                    hash = hash * 59 + this.CloudProxyForceTurn.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -38,6 +38,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRecordingRecordingkeys**](RecordingApi.html#getrecordingrecordingkeys) | **GET** /api/v2/recording/recordingkeys | Get encryption key list |
 | [**GetRecordingRecordingkeysRotationschedule**](RecordingApi.html#getrecordingrecordingkeysrotationschedule) | **GET** /api/v2/recording/recordingkeys/rotationschedule | Get key rotation schedule |
 | [**GetRecordingSettings**](RecordingApi.html#getrecordingsettings) | **GET** /api/v2/recording/settings | Get the Recording Settings for the Organization |
+| [**GetRecordingUploadsReport**](RecordingApi.html#getrecordinguploadsreport) | **GET** /api/v2/recording/uploads/reports/{reportId} | Get the status of a recording upload status report |
 | [**GetRecordingsRetentionQuery**](RecordingApi.html#getrecordingsretentionquery) | **GET** /api/v2/recordings/retention/query | Query for recording retention data |
 | [**GetRecordingsScreensessions**](RecordingApi.html#getrecordingsscreensessions) | **GET** /api/v2/recordings/screensessions | Retrieves a paged listing of screen recording sessions |
 | [**PatchRecordingCrossplatformMediaretentionpolicy**](RecordingApi.html#patchrecordingcrossplatformmediaretentionpolicy) | **PATCH** /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId} | Patch a media retention policy |
@@ -53,6 +54,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostRecordingLocalkeysSettings**](RecordingApi.html#postrecordinglocalkeyssettings) | **POST** /api/v2/recording/localkeys/settings | create settings for local key creation. Replaced by API recording/keyconfigurations |
 | [**PostRecordingMediaretentionpolicies**](RecordingApi.html#postrecordingmediaretentionpolicies) | **POST** /api/v2/recording/mediaretentionpolicies | Create media retention policy |
 | [**PostRecordingRecordingkeys**](RecordingApi.html#postrecordingrecordingkeys) | **POST** /api/v2/recording/recordingkeys | Create encryption key |
+| [**PostRecordingUploadsReports**](RecordingApi.html#postrecordinguploadsreports) | **POST** /api/v2/recording/uploads/reports | Creates a recording upload status report |
 | [**PostRecordingsDeletionprotection**](RecordingApi.html#postrecordingsdeletionprotection) | **POST** /api/v2/recordings/deletionprotection | Get a list of conversations with protected recordings |
 | [**PostRecordingsScreensessionsAcknowledge**](RecordingApi.html#postrecordingsscreensessionsacknowledge) | **POST** /api/v2/recordings/screensessions/acknowledge | Acknowledge a screen recording. |
 | [**PostRecordingsScreensessionsMetadata**](RecordingApi.html#postrecordingsscreensessionsmetadata) | **POST** /api/v2/recordings/screensessions/metadata | Provide meta-data a screen recording. |
@@ -2207,6 +2209,71 @@ namespace Example
 
 [**RecordingSettings**](RecordingSettings.html)
 
+<a name="getrecordinguploadsreport"></a>
+
+## [**RecordingUploadReport**](RecordingUploadReport.html) GetRecordingUploadsReport (string reportId)
+
+
+
+Get the status of a recording upload status report
+
+
+
+Requires ALL permissions: 
+
+* recording:uploadReport:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRecordingUploadsReportExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RecordingApi();
+            var reportId = reportId_example;  // string | reportId
+
+            try
+            { 
+                // Get the status of a recording upload status report
+                RecordingUploadReport result = apiInstance.GetRecordingUploadsReport(reportId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.GetRecordingUploadsReport: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reportId** | **string**| reportId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**RecordingUploadReport**](RecordingUploadReport.html)
+
 <a name="getrecordingsretentionquery"></a>
 
 ## [**RecordingRetentionCursorEntityListing**](RecordingRetentionCursorEntityListing.html) GetRecordingsRetentionQuery (int? retentionThresholdDays, string cursor = null, int? pageSize = null)
@@ -3198,6 +3265,71 @@ This endpoint does require any parameters.
 ### Return type
 
 [**EncryptionKey**](EncryptionKey.html)
+
+<a name="postrecordinguploadsreports"></a>
+
+## [**RecordingUploadReport**](RecordingUploadReport.html) PostRecordingUploadsReports (RecordingUploadReportRequest body)
+
+
+
+Creates a recording upload status report
+
+
+
+Requires ALL permissions: 
+
+* recording:uploadReport:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostRecordingUploadsReportsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RecordingApi();
+            var body = new RecordingUploadReportRequest(); // RecordingUploadReportRequest | Report parameters
+
+            try
+            { 
+                // Creates a recording upload status report
+                RecordingUploadReport result = apiInstance.PostRecordingUploadsReports(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.PostRecordingUploadsReports: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**RecordingUploadReportRequest**](RecordingUploadReportRequest.html)| Report parameters |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**RecordingUploadReport**](RecordingUploadReport.html)
 
 <a name="postrecordingsdeletionprotection"></a>
 

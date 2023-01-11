@@ -18,6 +18,45 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class KnowledgeDocumentSearch :  IEquatable<KnowledgeDocumentSearch>
     {
+        /// <summary>
+        /// The type of the query that initiates the search.
+        /// </summary>
+        /// <value>The type of the query that initiates the search.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum QueryTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Autosearch for "AutoSearch"
+            /// </summary>
+            [EnumMember(Value = "AutoSearch")]
+            Autosearch,
+            
+            /// <summary>
+            /// Enum Manualsearch for "ManualSearch"
+            /// </summary>
+            [EnumMember(Value = "ManualSearch")]
+            Manualsearch,
+            
+            /// <summary>
+            /// Enum Suggestion for "Suggestion"
+            /// </summary>
+            [EnumMember(Value = "Suggestion")]
+            Suggestion
+        }
+        /// <summary>
+        /// The type of the query that initiates the search.
+        /// </summary>
+        /// <value>The type of the query that initiates the search.</value>
+        [DataMember(Name="queryType", EmitDefaultValue=false)]
+        public QueryTypeEnum? QueryType { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="KnowledgeDocumentSearch" /> class.
@@ -30,13 +69,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Query">Query to search content in the knowledge base. Maximum of 30 records per query can be fetched. (required).</param>
         /// <param name="PageSize">Page size of the returned results..</param>
         /// <param name="PageNumber">Page number of the returned results..</param>
+        /// <param name="QueryType">The type of the query that initiates the search..</param>
         /// <param name="Application">The client application details from which search happened..</param>
-        public KnowledgeDocumentSearch(string Query = null, int? PageSize = null, int? PageNumber = null, KnowledgeSearchClientApplication Application = null)
+        /// <param name="ConversationContext">Conversation context information if the search is initiated in the context of a conversation..</param>
+        public KnowledgeDocumentSearch(string Query = null, int? PageSize = null, int? PageNumber = null, QueryTypeEnum? QueryType = null, KnowledgeSearchClientApplication Application = null, KnowledgeConversationContextResponse ConversationContext = null)
         {
             this.Query = Query;
             this.PageSize = PageSize;
             this.PageNumber = PageNumber;
+            this.QueryType = QueryType;
             this.Application = Application;
+            this.ConversationContext = ConversationContext;
             
         }
         
@@ -96,6 +139,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
         /// <summary>
         /// Documents matching the search query.
         /// </summary>
@@ -113,6 +158,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public KnowledgeSearchClientApplication Application { get; set; }
 
 
+
+        /// <summary>
+        /// Conversation context information if the search is initiated in the context of a conversation.
+        /// </summary>
+        /// <value>Conversation context information if the search is initiated in the context of a conversation.</value>
+        [DataMember(Name="conversationContext", EmitDefaultValue=false)]
+        public KnowledgeConversationContextResponse ConversationContext { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -128,8 +182,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SearchId: ").Append(SearchId).Append("\n");
             sb.Append("  Total: ").Append(Total).Append("\n");
             sb.Append("  PageCount: ").Append(PageCount).Append("\n");
+            sb.Append("  QueryType: ").Append(QueryType).Append("\n");
             sb.Append("  Results: ").Append(Results).Append("\n");
             sb.Append("  Application: ").Append(Application).Append("\n");
+            sb.Append("  ConversationContext: ").Append(ConversationContext).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -201,6 +257,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PageCount.Equals(other.PageCount)
                 ) &&
                 (
+                    this.QueryType == other.QueryType ||
+                    this.QueryType != null &&
+                    this.QueryType.Equals(other.QueryType)
+                ) &&
+                (
                     this.Results == other.Results ||
                     this.Results != null &&
                     this.Results.SequenceEqual(other.Results)
@@ -209,6 +270,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Application == other.Application ||
                     this.Application != null &&
                     this.Application.Equals(other.Application)
+                ) &&
+                (
+                    this.ConversationContext == other.ConversationContext ||
+                    this.ConversationContext != null &&
+                    this.ConversationContext.Equals(other.ConversationContext)
                 );
         }
 
@@ -241,11 +307,17 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.PageCount != null)
                     hash = hash * 59 + this.PageCount.GetHashCode();
 
+                if (this.QueryType != null)
+                    hash = hash * 59 + this.QueryType.GetHashCode();
+
                 if (this.Results != null)
                     hash = hash * 59 + this.Results.GetHashCode();
 
                 if (this.Application != null)
                     hash = hash * 59 + this.Application.GetHashCode();
+
+                if (this.ConversationContext != null)
+                    hash = hash * 59 + this.ConversationContext.GetHashCode();
 
                 return hash;
             }

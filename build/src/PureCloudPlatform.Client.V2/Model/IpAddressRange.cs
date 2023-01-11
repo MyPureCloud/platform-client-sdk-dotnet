@@ -48,7 +48,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Audiohook for "audiohook"
             /// </summary>
             [EnumMember(Value = "audiohook")]
-            Audiohook
+            Audiohook,
+            
+            /// <summary>
+            /// Enum Api for "api"
+            /// </summary>
+            [EnumMember(Value = "api")]
+            Api
         }
         /// <summary>
         /// Gets or Sets Service

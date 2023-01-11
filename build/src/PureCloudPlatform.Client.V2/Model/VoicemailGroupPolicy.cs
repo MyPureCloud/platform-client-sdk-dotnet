@@ -71,7 +71,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OverflowGroupId">A fallback group to contact when all of the members in this group did not answer the call..</param>
         /// <param name="GroupAlertType">Specifies if the members in this group should be contacted randomly, in a specific order, or by round-robin..</param>
         /// <param name="InteractiveResponsePromptId">The prompt to use when connecting a user to a Group Ring call.</param>
-        public VoicemailGroupPolicy(string Name = null, bool? Enabled = null, bool? SendEmailNotifications = null, bool? DisableEmailPii = null, bool? IncludeEmailTranscriptions = null, string LanguagePreference = null, int? RotateCallsSecs = null, int? StopRingingAfterRotations = null, string OverflowGroupId = null, GroupAlertTypeEnum? GroupAlertType = null, string InteractiveResponsePromptId = null)
+        /// <param name="InteractiveResponseRequired">Whether user should be prompted with a confirmation prompt when connecting to a Group Ring call.</param>
+        public VoicemailGroupPolicy(string Name = null, bool? Enabled = null, bool? SendEmailNotifications = null, bool? DisableEmailPii = null, bool? IncludeEmailTranscriptions = null, string LanguagePreference = null, int? RotateCallsSecs = null, int? StopRingingAfterRotations = null, string OverflowGroupId = null, GroupAlertTypeEnum? GroupAlertType = null, string InteractiveResponsePromptId = null, bool? InteractiveResponseRequired = null)
         {
             this.Name = Name;
             this.Enabled = Enabled;
@@ -84,6 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.OverflowGroupId = OverflowGroupId;
             this.GroupAlertType = GroupAlertType;
             this.InteractiveResponsePromptId = InteractiveResponsePromptId;
+            this.InteractiveResponseRequired = InteractiveResponseRequired;
             
         }
         
@@ -188,6 +190,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string InteractiveResponsePromptId { get; set; }
 
 
+
+        /// <summary>
+        /// Whether user should be prompted with a confirmation prompt when connecting to a Group Ring call
+        /// </summary>
+        /// <value>Whether user should be prompted with a confirmation prompt when connecting to a Group Ring call</value>
+        [DataMember(Name="interactiveResponseRequired", EmitDefaultValue=false)]
+        public bool? InteractiveResponseRequired { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -209,6 +220,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  OverflowGroupId: ").Append(OverflowGroupId).Append("\n");
             sb.Append("  GroupAlertType: ").Append(GroupAlertType).Append("\n");
             sb.Append("  InteractiveResponsePromptId: ").Append(InteractiveResponsePromptId).Append("\n");
+            sb.Append("  InteractiveResponseRequired: ").Append(InteractiveResponseRequired).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -308,6 +320,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.InteractiveResponsePromptId == other.InteractiveResponsePromptId ||
                     this.InteractiveResponsePromptId != null &&
                     this.InteractiveResponsePromptId.Equals(other.InteractiveResponsePromptId)
+                ) &&
+                (
+                    this.InteractiveResponseRequired == other.InteractiveResponseRequired ||
+                    this.InteractiveResponseRequired != null &&
+                    this.InteractiveResponseRequired.Equals(other.InteractiveResponseRequired)
                 );
         }
 
@@ -357,6 +374,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.InteractiveResponsePromptId != null)
                     hash = hash * 59 + this.InteractiveResponsePromptId.GetHashCode();
+
+                if (this.InteractiveResponseRequired != null)
+                    hash = hash * 59 + this.InteractiveResponseRequired.GetHashCode();
 
                 return hash;
             }

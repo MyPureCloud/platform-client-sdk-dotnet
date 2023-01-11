@@ -18,6 +18,45 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class KnowledgeDocumentGuestSearch :  IEquatable<KnowledgeDocumentGuestSearch>
     {
+        /// <summary>
+        /// The type of the query that initiates the search.
+        /// </summary>
+        /// <value>The type of the query that initiates the search.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum QueryTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Autosearch for "AutoSearch"
+            /// </summary>
+            [EnumMember(Value = "AutoSearch")]
+            Autosearch,
+            
+            /// <summary>
+            /// Enum Manualsearch for "ManualSearch"
+            /// </summary>
+            [EnumMember(Value = "ManualSearch")]
+            Manualsearch,
+            
+            /// <summary>
+            /// Enum Suggestion for "Suggestion"
+            /// </summary>
+            [EnumMember(Value = "Suggestion")]
+            Suggestion
+        }
+        /// <summary>
+        /// The type of the query that initiates the search.
+        /// </summary>
+        /// <value>The type of the query that initiates the search.</value>
+        [DataMember(Name="queryType", EmitDefaultValue=false)]
+        public QueryTypeEnum? QueryType { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="KnowledgeDocumentGuestSearch" /> class.
@@ -30,11 +69,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Query">Query to search content in the knowledge base. Maximum of 30 records per query can be fetched. (required).</param>
         /// <param name="PageSize">Page size of the returned results..</param>
         /// <param name="PageNumber">Page number of the returned results..</param>
-        public KnowledgeDocumentGuestSearch(string Query = null, int? PageSize = null, int? PageNumber = null)
+        /// <param name="QueryType">The type of the query that initiates the search..</param>
+        public KnowledgeDocumentGuestSearch(string Query = null, int? PageSize = null, int? PageNumber = null, QueryTypeEnum? QueryType = null)
         {
             this.Query = Query;
             this.PageSize = PageSize;
             this.PageNumber = PageNumber;
+            this.QueryType = QueryType;
             
         }
         
@@ -94,6 +135,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
         /// <summary>
         /// Session ID of the search.
         /// </summary>
@@ -126,6 +169,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SearchId: ").Append(SearchId).Append("\n");
             sb.Append("  Total: ").Append(Total).Append("\n");
             sb.Append("  PageCount: ").Append(PageCount).Append("\n");
+            sb.Append("  QueryType: ").Append(QueryType).Append("\n");
             sb.Append("  SessionId: ").Append(SessionId).Append("\n");
             sb.Append("  Results: ").Append(Results).Append("\n");
             sb.Append("}\n");
@@ -199,6 +243,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PageCount.Equals(other.PageCount)
                 ) &&
                 (
+                    this.QueryType == other.QueryType ||
+                    this.QueryType != null &&
+                    this.QueryType.Equals(other.QueryType)
+                ) &&
+                (
                     this.SessionId == other.SessionId ||
                     this.SessionId != null &&
                     this.SessionId.Equals(other.SessionId)
@@ -238,6 +287,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.PageCount != null)
                     hash = hash * 59 + this.PageCount.GetHashCode();
+
+                if (this.QueryType != null)
+                    hash = hash * 59 + this.QueryType.GetHashCode();
 
                 if (this.SessionId != null)
                     hash = hash * 59 + this.SessionId.GetHashCode();

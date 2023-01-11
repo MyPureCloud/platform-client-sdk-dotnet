@@ -27,9 +27,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Version">Version of this trigger.</param>
         /// <param name="Enabled">Whether or not the trigger is enabled.</param>
         /// <param name="MatchCriteria">The configuration for when a trigger is considered to be a match for an event.</param>
-        /// <param name="EventTTLSeconds">How long each event is meaningful after origination, in seconds. Events older than this threshold may be dropped if the platform is delayed in processing events. Unset means events are valid indefinitely..</param>
+        /// <param name="EventTTLSeconds">Optional length of time that events are meaningful after origination. Events older than this threshold may be dropped if the platform is delayed in processing events. Unset means events are valid indefinitely, otherwise must be set to at least 10 seconds. Only one of eventTTLSeconds or delayBySeconds can be set..</param>
+        /// <param name="DelayBySeconds">Optional delay invoking target after trigger fires. Must be in the range of 60 to 900 seconds. Only one of eventTTLSeconds or delayBySeconds can be set. Until delayed triggers are released supplying this attribute will cause a failure..</param>
         /// <param name="Description">Description of the trigger. Can be up to 512 characters in length..</param>
-        public Trigger(string Name = null, string TopicName = null, TriggerTarget Target = null, long? Version = null, bool? Enabled = null, List<MatchCriteria> MatchCriteria = null, int? EventTTLSeconds = null, string Description = null)
+        public Trigger(string Name = null, string TopicName = null, TriggerTarget Target = null, long? Version = null, bool? Enabled = null, List<MatchCriteria> MatchCriteria = null, int? EventTTLSeconds = null, int? DelayBySeconds = null, string Description = null)
         {
             this.Name = Name;
             this.TopicName = TopicName;
@@ -38,6 +39,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Enabled = Enabled;
             this.MatchCriteria = MatchCriteria;
             this.EventTTLSeconds = EventTTLSeconds;
+            this.DelayBySeconds = DelayBySeconds;
             this.Description = Description;
             
         }
@@ -108,11 +110,20 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// How long each event is meaningful after origination, in seconds. Events older than this threshold may be dropped if the platform is delayed in processing events. Unset means events are valid indefinitely.
+        /// Optional length of time that events are meaningful after origination. Events older than this threshold may be dropped if the platform is delayed in processing events. Unset means events are valid indefinitely, otherwise must be set to at least 10 seconds. Only one of eventTTLSeconds or delayBySeconds can be set.
         /// </summary>
-        /// <value>How long each event is meaningful after origination, in seconds. Events older than this threshold may be dropped if the platform is delayed in processing events. Unset means events are valid indefinitely.</value>
+        /// <value>Optional length of time that events are meaningful after origination. Events older than this threshold may be dropped if the platform is delayed in processing events. Unset means events are valid indefinitely, otherwise must be set to at least 10 seconds. Only one of eventTTLSeconds or delayBySeconds can be set.</value>
         [DataMember(Name="eventTTLSeconds", EmitDefaultValue=false)]
         public int? EventTTLSeconds { get; set; }
+
+
+
+        /// <summary>
+        /// Optional delay invoking target after trigger fires. Must be in the range of 60 to 900 seconds. Only one of eventTTLSeconds or delayBySeconds can be set. Until delayed triggers are released supplying this attribute will cause a failure.
+        /// </summary>
+        /// <value>Optional delay invoking target after trigger fires. Must be in the range of 60 to 900 seconds. Only one of eventTTLSeconds or delayBySeconds can be set. Until delayed triggers are released supplying this attribute will cause a failure.</value>
+        [DataMember(Name="delayBySeconds", EmitDefaultValue=false)]
+        public int? DelayBySeconds { get; set; }
 
 
 
@@ -150,6 +161,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  MatchCriteria: ").Append(MatchCriteria).Append("\n");
             sb.Append("  EventTTLSeconds: ").Append(EventTTLSeconds).Append("\n");
+            sb.Append("  DelayBySeconds: ").Append(DelayBySeconds).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -233,6 +245,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EventTTLSeconds.Equals(other.EventTTLSeconds)
                 ) &&
                 (
+                    this.DelayBySeconds == other.DelayBySeconds ||
+                    this.DelayBySeconds != null &&
+                    this.DelayBySeconds.Equals(other.DelayBySeconds)
+                ) &&
+                (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
@@ -278,6 +295,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EventTTLSeconds != null)
                     hash = hash * 59 + this.EventTTLSeconds.GetHashCode();
+
+                if (this.DelayBySeconds != null)
+                    hash = hash * 59 + this.DelayBySeconds.GetHashCode();
 
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();

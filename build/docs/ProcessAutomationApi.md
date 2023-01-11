@@ -149,7 +149,7 @@ namespace Example
 
 <a name="getprocessautomationtriggers"></a>
 
-## [**TriggerEntityListing**](TriggerEntityListing.html) GetProcessautomationTriggers (string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null)
+## [**TriggerEntityListing**](TriggerEntityListing.html) GetProcessautomationTriggers (string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null, bool? hasDelayBy = null)
 
 
 
@@ -189,11 +189,12 @@ namespace Example
             var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
             var topicName = topicName_example;  // string | Topic name(s). Separated by commas (optional) 
             var enabled = true;  // bool? | Boolean indicating desired enabled state of triggers (optional) 
+            var hasDelayBy = true;  // bool? | Boolean to filter based on delayBySeconds being set in triggers. Default returns all, true returns only those with delayBySeconds set, false returns those without delayBySeconds set. (optional) 
 
             try
             { 
                 // Retrieves all triggers, optionally filtered by query parameters.
-                TriggerEntityListing result = apiInstance.GetProcessautomationTriggers(before, after, pageSize, topicName, enabled);
+                TriggerEntityListing result = apiInstance.GetProcessautomationTriggers(before, after, pageSize, topicName, enabled, hasDelayBy);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -215,6 +216,7 @@ namespace Example
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
 | **topicName** | **string**| Topic name(s). Separated by commas | [optional]  |
 | **enabled** | **bool?**| Boolean indicating desired enabled state of triggers | [optional]  |
+| **hasDelayBy** | **bool?**| Boolean to filter based on delayBySeconds being set in triggers. Default returns all, true returns only those with delayBySeconds set, false returns those without delayBySeconds set. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

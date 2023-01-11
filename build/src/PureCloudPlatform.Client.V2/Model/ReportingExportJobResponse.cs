@@ -661,7 +661,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum AgentScorecardInsightsDetailView for "AGENT_SCORECARD_INSIGHTS_DETAIL_VIEW"
             /// </summary>
             [EnumMember(Value = "AGENT_SCORECARD_INSIGHTS_DETAIL_VIEW")]
-            AgentScorecardInsightsDetailView
+            AgentScorecardInsightsDetailView,
+            
+            /// <summary>
+            /// Enum QueueWrapupDetailView for "QUEUE_WRAPUP_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "QUEUE_WRAPUP_DETAIL_VIEW")]
+            QueueWrapupDetailView
         }
         /// <summary>
         /// The error message in case the export request failed

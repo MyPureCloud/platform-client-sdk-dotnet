@@ -8,14 +8,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**DeleteLanguage**](LanguagesApi.html#deletelanguage) | **DELETE** /api/v2/languages/{languageId} | Delete Language (Deprecated) |
-| [**DeleteRoutingLanguage**](LanguagesApi.html#deleteroutinglanguage) | **DELETE** /api/v2/routing/languages/{languageId} | Delete Language |
-| [**GetLanguage**](LanguagesApi.html#getlanguage) | **GET** /api/v2/languages/{languageId} | Get language (Deprecated) |
+| [**GetLanguage**](LanguagesApi.html#getlanguage) | **GET** /api/v2/languages/{languageId} | Get Language (Deprecated) |
 | [**GetLanguages**](LanguagesApi.html#getlanguages) | **GET** /api/v2/languages | Get the list of supported languages. (Deprecated) |
 | [**GetLanguagesTranslations**](LanguagesApi.html#getlanguagestranslations) | **GET** /api/v2/languages/translations | Get all available languages for translation |
 | [**GetLanguagesTranslationsBuiltin**](LanguagesApi.html#getlanguagestranslationsbuiltin) | **GET** /api/v2/languages/translations/builtin | Get the builtin translation for a language |
 | [**GetLanguagesTranslationsOrganization**](LanguagesApi.html#getlanguagestranslationsorganization) | **GET** /api/v2/languages/translations/organization | Get effective translation for an organization by language |
 | [**GetLanguagesTranslationsUser**](LanguagesApi.html#getlanguagestranslationsuser) | **GET** /api/v2/languages/translations/users/{userId} | Get effective language translation for a user |
-| [**GetRoutingLanguage**](LanguagesApi.html#getroutinglanguage) | **GET** /api/v2/routing/languages/{languageId} | Get language |
 | [**PostLanguages**](LanguagesApi.html#postlanguages) | **POST** /api/v2/languages | Create Language (Deprecated) |
 {: class="table table-striped"}
 
@@ -27,7 +25,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete Language (Deprecated)
 
-This endpoint is deprecated. It has been moved to /routing/languages/{languageId}
+This endpoint is deprecated. Please see the Routing API (DELETE /api/v2/routing/languages/{languageId})
 
 
 
@@ -85,79 +83,15 @@ namespace Example
 
 void (empty response body)
 
-<a name="deleteroutinglanguage"></a>
-
-## void DeleteRoutingLanguage (string languageId)
-
-
-
-Delete Language
-
-
-
-Requires ANY permissions: 
-
-* routing:skill:manage
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class DeleteRoutingLanguageExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new LanguagesApi();
-            var languageId = languageId_example;  // string | Language ID
-
-            try
-            { 
-                // Delete Language
-                apiInstance.DeleteRoutingLanguage(languageId);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling LanguagesApi.DeleteRoutingLanguage: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **languageId** | **string**| Language ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-void (empty response body)
-
 <a name="getlanguage"></a>
 
 ## [**Language**](Language.html) GetLanguage (string languageId)
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Get language (Deprecated)
+Get Language (Deprecated)
 
-This endpoint is deprecated. It has been moved to /routing/languages/{languageId}
+This endpoint is deprecated. Please see the Routing API (GET /api/v2/routing/languages/{languageId})
 
 
 
@@ -191,7 +125,7 @@ namespace Example
 
             try
             { 
-                // Get language (Deprecated)
+                // Get Language (Deprecated)
                 Language result = apiInstance.GetLanguage(languageId);
                 Debug.WriteLine(result);
             }
@@ -224,7 +158,7 @@ namespace Example
 
 Get the list of supported languages. (Deprecated)
 
-This endpoint is deprecated. It has been moved to /routing/languages
+This endpoint is deprecated. Please see the Routing API (GET /api/v2/routing/languages)
 
 
 
@@ -540,70 +474,6 @@ namespace Example
 
 **Dictionary<string, Object>**
 
-<a name="getroutinglanguage"></a>
-
-## [**Language**](Language.html) GetRoutingLanguage (string languageId)
-
-
-
-Get language
-
-
-
-Requires NO permissions: 
-
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetRoutingLanguageExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new LanguagesApi();
-            var languageId = languageId_example;  // string | Language ID
-
-            try
-            { 
-                // Get language
-                Language result = apiInstance.GetRoutingLanguage(languageId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling LanguagesApi.GetRoutingLanguage: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **languageId** | **string**| Language ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**Language**](Language.html)
-
 <a name="postlanguages"></a>
 
 ## [**Language**](Language.html) PostLanguages (Language body)
@@ -612,7 +482,7 @@ namespace Example
 
 Create Language (Deprecated)
 
-This endpoint is deprecated. It has been moved to /routing/languages
+This endpoint is deprecated. Please see the Routing API. (POST /api/v2/routing/languages
 
 
 

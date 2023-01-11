@@ -52,10 +52,22 @@ namespace PureCloudPlatform.Client.V2.Model
             Receipt,
             
             /// <summary>
+            /// Enum Event for "Event"
+            /// </summary>
+            [EnumMember(Value = "Event")]
+            Event,
+            
+            /// <summary>
             /// Enum Message for "Message"
             /// </summary>
             [EnumMember(Value = "Message")]
-            Message
+            Message,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown
         }
         /// <summary>
         /// Message type
@@ -75,7 +87,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">Message type (required).</param>
         /// <param name="Text">Message text. If type is structured, used as fallback for clients that do not support particular structured content.</param>
         /// <param name="Content">A list of content elements in message.</param>
-        public PostTextMessage(TypeEnum? Type = null, string Text = null, List<MessageContent> Content = null)
+        public PostTextMessage(TypeEnum? Type = null, string Text = null, List<ConversationMessageContent> Content = null)
         {
             this.Type = Type;
             this.Text = Text;
@@ -101,7 +113,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>A list of content elements in message</value>
         [DataMember(Name="content", EmitDefaultValue=false)]
-        public List<MessageContent> Content { get; set; }
+        public List<ConversationMessageContent> Content { get; set; }
 
 
         /// <summary>

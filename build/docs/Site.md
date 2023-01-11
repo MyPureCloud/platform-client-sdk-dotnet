@@ -33,6 +33,10 @@ title: Site
 | **MediaModel** | **string** | Media model for the site | [optional] |
 | **CoreSite** | **bool?** | Is this site a core site | [optional] |
 | **SiteConnections** | [**List&lt;SiteConnection&gt;**](SiteConnection.html) | The site connections | [optional] |
+| **MediaRegions** | **List&lt;string&gt;** | The ordered list of AWS regions through which media can stream. | [optional] |
+| **CallerId** | **string** | The caller ID value for the site. | [optional] |
+| **CallerName** | **string** | The caller name for the site. | [optional] |
+| **CloudProxyForceTurn** | **bool?** | Enables premises Edge Force Turn  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

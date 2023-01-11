@@ -72,8 +72,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="topicName">Topic name(s). Separated by commas (optional)</param>
         /// <param name="enabled">Boolean indicating desired enabled state of triggers (optional)</param>
+        /// <param name="hasDelayBy">Boolean to filter based on delayBySeconds being set in triggers. Default returns all, true returns only those with delayBySeconds set, false returns those without delayBySeconds set. (optional)</param>
         /// <returns>TriggerEntityListing</returns>
-        TriggerEntityListing GetProcessautomationTriggers (string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null);
+        TriggerEntityListing GetProcessautomationTriggers (string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null, bool? hasDelayBy = null);
 
         /// <summary>
         /// Retrieves all triggers, optionally filtered by query parameters.
@@ -87,8 +88,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="topicName">Topic name(s). Separated by commas (optional)</param>
         /// <param name="enabled">Boolean indicating desired enabled state of triggers (optional)</param>
+        /// <param name="hasDelayBy">Boolean to filter based on delayBySeconds being set in triggers. Default returns all, true returns only those with delayBySeconds set, false returns those without delayBySeconds set. (optional)</param>
         /// <returns>ApiResponse of TriggerEntityListing</returns>
-        ApiResponse<TriggerEntityListing> GetProcessautomationTriggersWithHttpInfo (string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null);
+        ApiResponse<TriggerEntityListing> GetProcessautomationTriggersWithHttpInfo (string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null, bool? hasDelayBy = null);
 
         /// <summary>
         /// Get topics available for organization
@@ -270,8 +272,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="topicName">Topic name(s). Separated by commas (optional)</param>
         /// <param name="enabled">Boolean indicating desired enabled state of triggers (optional)</param>
+        /// <param name="hasDelayBy">Boolean to filter based on delayBySeconds being set in triggers. Default returns all, true returns only those with delayBySeconds set, false returns those without delayBySeconds set. (optional)</param>
         /// <returns>Task of TriggerEntityListing</returns>
-        System.Threading.Tasks.Task<TriggerEntityListing> GetProcessautomationTriggersAsync (string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null);
+        System.Threading.Tasks.Task<TriggerEntityListing> GetProcessautomationTriggersAsync (string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null, bool? hasDelayBy = null);
 
         /// <summary>
         /// Retrieves all triggers, optionally filtered by query parameters.
@@ -285,8 +288,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="topicName">Topic name(s). Separated by commas (optional)</param>
         /// <param name="enabled">Boolean indicating desired enabled state of triggers (optional)</param>
+        /// <param name="hasDelayBy">Boolean to filter based on delayBySeconds being set in triggers. Default returns all, true returns only those with delayBySeconds set, false returns those without delayBySeconds set. (optional)</param>
         /// <returns>Task of ApiResponse (TriggerEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TriggerEntityListing>> GetProcessautomationTriggersAsyncWithHttpInfo (string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null);
+        System.Threading.Tasks.Task<ApiResponse<TriggerEntityListing>> GetProcessautomationTriggersAsyncWithHttpInfo (string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null, bool? hasDelayBy = null);
 
         /// <summary>
         /// Get topics available for organization
@@ -889,10 +893,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="topicName">Topic name(s). Separated by commas (optional)</param>
         /// <param name="enabled">Boolean indicating desired enabled state of triggers (optional)</param>
+        /// <param name="hasDelayBy">Boolean to filter based on delayBySeconds being set in triggers. Default returns all, true returns only those with delayBySeconds set, false returns those without delayBySeconds set. (optional)</param>
         /// <returns>TriggerEntityListing</returns>
-        public TriggerEntityListing GetProcessautomationTriggers (string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null)
+        public TriggerEntityListing GetProcessautomationTriggers (string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null, bool? hasDelayBy = null)
         {
-             ApiResponse<TriggerEntityListing> localVarResponse = GetProcessautomationTriggersWithHttpInfo(before, after, pageSize, topicName, enabled);
+             ApiResponse<TriggerEntityListing> localVarResponse = GetProcessautomationTriggersWithHttpInfo(before, after, pageSize, topicName, enabled, hasDelayBy);
              return localVarResponse.Data;
         }
 
@@ -905,8 +910,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="topicName">Topic name(s). Separated by commas (optional)</param>
         /// <param name="enabled">Boolean indicating desired enabled state of triggers (optional)</param>
+        /// <param name="hasDelayBy">Boolean to filter based on delayBySeconds being set in triggers. Default returns all, true returns only those with delayBySeconds set, false returns those without delayBySeconds set. (optional)</param>
         /// <returns>ApiResponse of TriggerEntityListing</returns>
-        public ApiResponse< TriggerEntityListing > GetProcessautomationTriggersWithHttpInfo (string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null)
+        public ApiResponse< TriggerEntityListing > GetProcessautomationTriggersWithHttpInfo (string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null, bool? hasDelayBy = null)
         { 
 
             var localVarPath = "/api/v2/processautomation/triggers";
@@ -946,6 +952,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (topicName != null) localVarQueryParams.Add(new Tuple<string, string>("topicName", this.Configuration.ApiClient.ParameterToString(topicName)));
             if (enabled != null) localVarQueryParams.Add(new Tuple<string, string>("enabled", this.Configuration.ApiClient.ParameterToString(enabled)));
+            if (hasDelayBy != null) localVarQueryParams.Add(new Tuple<string, string>("hasDelayBy", this.Configuration.ApiClient.ParameterToString(hasDelayBy)));
 
             // Header params
 
@@ -992,10 +999,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="topicName">Topic name(s). Separated by commas (optional)</param>
         /// <param name="enabled">Boolean indicating desired enabled state of triggers (optional)</param>
+        /// <param name="hasDelayBy">Boolean to filter based on delayBySeconds being set in triggers. Default returns all, true returns only those with delayBySeconds set, false returns those without delayBySeconds set. (optional)</param>
         /// <returns>Task of TriggerEntityListing</returns>
-        public async System.Threading.Tasks.Task<TriggerEntityListing> GetProcessautomationTriggersAsync (string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null)
+        public async System.Threading.Tasks.Task<TriggerEntityListing> GetProcessautomationTriggersAsync (string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null, bool? hasDelayBy = null)
         {
-             ApiResponse<TriggerEntityListing> localVarResponse = await GetProcessautomationTriggersAsyncWithHttpInfo(before, after, pageSize, topicName, enabled);
+             ApiResponse<TriggerEntityListing> localVarResponse = await GetProcessautomationTriggersAsyncWithHttpInfo(before, after, pageSize, topicName, enabled, hasDelayBy);
              return localVarResponse.Data;
 
         }
@@ -1009,8 +1017,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="topicName">Topic name(s). Separated by commas (optional)</param>
         /// <param name="enabled">Boolean indicating desired enabled state of triggers (optional)</param>
+        /// <param name="hasDelayBy">Boolean to filter based on delayBySeconds being set in triggers. Default returns all, true returns only those with delayBySeconds set, false returns those without delayBySeconds set. (optional)</param>
         /// <returns>Task of ApiResponse (TriggerEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TriggerEntityListing>> GetProcessautomationTriggersAsyncWithHttpInfo (string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TriggerEntityListing>> GetProcessautomationTriggersAsyncWithHttpInfo (string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null, bool? hasDelayBy = null)
         { 
 
             var localVarPath = "/api/v2/processautomation/triggers";
@@ -1050,6 +1059,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (topicName != null) localVarQueryParams.Add(new Tuple<string, string>("topicName", this.Configuration.ApiClient.ParameterToString(topicName)));
             if (enabled != null) localVarQueryParams.Add(new Tuple<string, string>("enabled", this.Configuration.ApiClient.ParameterToString(enabled)));
+            if (hasDelayBy != null) localVarQueryParams.Add(new Tuple<string, string>("hasDelayBy", this.Configuration.ApiClient.ParameterToString(hasDelayBy)));
 
             // Header params
 
