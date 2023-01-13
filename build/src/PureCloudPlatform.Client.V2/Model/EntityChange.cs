@@ -850,6 +850,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Role,
             
             /// <summary>
+            /// Enum Rolesettings for "RoleSettings"
+            /// </summary>
+            [EnumMember(Value = "RoleSettings")]
+            Rolesettings,
+            
+            /// <summary>
             /// Enum Row for "Row"
             /// </summary>
             [EnumMember(Value = "Row")]

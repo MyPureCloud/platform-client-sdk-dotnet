@@ -556,7 +556,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum CampaignPerformanceDetailView for "CAMPAIGN_PERFORMANCE_DETAIL_VIEW"
             /// </summary>
             [EnumMember(Value = "CAMPAIGN_PERFORMANCE_DETAIL_VIEW")]
-            CampaignPerformanceDetailView
+            CampaignPerformanceDetailView,
+            
+            /// <summary>
+            /// Enum QueueWrapupDetailView for "QUEUE_WRAPUP_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "QUEUE_WRAPUP_DETAIL_VIEW")]
+            QueueWrapupDetailView
         }
         /// <summary>
         /// Gets or Sets ExportErrorMessagesType
@@ -714,7 +720,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EmailStatuses">EmailStatuses.</param>
         /// <param name="EmailErrorDescription">EmailErrorDescription.</param>
         /// <param name="ScheduleExpression">ScheduleExpression.</param>
-        public ReportingDataExportTopicDataExportNotification(string Id = null, string RunId = null, string Name = null, StatusEnum? Status = null, ExportFormatEnum? ExportFormat = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, double? PercentageComplete = null, Dictionary<string, string> EmailStatuses = null, string EmailErrorDescription = null, string ScheduleExpression = null)
+        /// <param name="ScheduleStaticLinkUrl">ScheduleStaticLinkUrl.</param>
+        public ReportingDataExportTopicDataExportNotification(string Id = null, string RunId = null, string Name = null, StatusEnum? Status = null, ExportFormatEnum? ExportFormat = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, double? PercentageComplete = null, Dictionary<string, string> EmailStatuses = null, string EmailErrorDescription = null, string ScheduleExpression = null, string ScheduleStaticLinkUrl = null)
         {
             this.Id = Id;
             this.RunId = RunId;
@@ -731,6 +738,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.EmailStatuses = EmailStatuses;
             this.EmailErrorDescription = EmailErrorDescription;
             this.ScheduleExpression = ScheduleExpression;
+            this.ScheduleStaticLinkUrl = ScheduleStaticLinkUrl;
             
         }
         
@@ -831,6 +839,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public string ScheduleExpression { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets ScheduleStaticLinkUrl
+        /// </summary>
+        [DataMember(Name="scheduleStaticLinkUrl", EmitDefaultValue=false)]
+        public string ScheduleStaticLinkUrl { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -855,6 +871,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EmailStatuses: ").Append(EmailStatuses).Append("\n");
             sb.Append("  EmailErrorDescription: ").Append(EmailErrorDescription).Append("\n");
             sb.Append("  ScheduleExpression: ").Append(ScheduleExpression).Append("\n");
+            sb.Append("  ScheduleStaticLinkUrl: ").Append(ScheduleStaticLinkUrl).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -969,6 +986,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ScheduleExpression == other.ScheduleExpression ||
                     this.ScheduleExpression != null &&
                     this.ScheduleExpression.Equals(other.ScheduleExpression)
+                ) &&
+                (
+                    this.ScheduleStaticLinkUrl == other.ScheduleStaticLinkUrl ||
+                    this.ScheduleStaticLinkUrl != null &&
+                    this.ScheduleStaticLinkUrl.Equals(other.ScheduleStaticLinkUrl)
                 );
         }
 
@@ -1027,6 +1049,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ScheduleExpression != null)
                     hash = hash * 59 + this.ScheduleExpression.GetHashCode();
+
+                if (this.ScheduleStaticLinkUrl != null)
+                    hash = hash * 59 + this.ScheduleStaticLinkUrl.GetHashCode();
 
                 return hash;
             }

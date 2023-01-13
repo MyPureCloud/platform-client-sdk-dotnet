@@ -9,6 +9,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- | ------------- |
 | [**DeleteWebdeploymentsConfiguration**](WebDeploymentsApi.html#deletewebdeploymentsconfiguration) | **DELETE** /api/v2/webdeployments/configurations/{configurationId} | Delete all versions of a configuration |
 | [**DeleteWebdeploymentsDeployment**](WebDeploymentsApi.html#deletewebdeploymentsdeployment) | **DELETE** /api/v2/webdeployments/deployments/{deploymentId} | Delete a deployment |
+| [**DeleteWebdeploymentsTokenRevoke**](WebDeploymentsApi.html#deletewebdeploymentstokenrevoke) | **DELETE** /api/v2/webdeployments/token/revoke | Invalidate JWT |
 | [**GetWebdeploymentsConfigurationVersion**](WebDeploymentsApi.html#getwebdeploymentsconfigurationversion) | **GET** /api/v2/webdeployments/configurations/{configurationId}/versions/{versionId} | Get a configuration version |
 | [**GetWebdeploymentsConfigurationVersions**](WebDeploymentsApi.html#getwebdeploymentsconfigurationversions) | **GET** /api/v2/webdeployments/configurations/{configurationId}/versions | Get the versions of a configuration |
 | [**GetWebdeploymentsConfigurationVersionsDraft**](WebDeploymentsApi.html#getwebdeploymentsconfigurationversionsdraft) | **GET** /api/v2/webdeployments/configurations/{configurationId}/versions/draft | Get the configuration draft |
@@ -19,6 +20,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWebdeploymentsConfigurationVersionsDraftPublish**](WebDeploymentsApi.html#postwebdeploymentsconfigurationversionsdraftpublish) | **POST** /api/v2/webdeployments/configurations/{configurationId}/versions/draft/publish | Publish the configuration draft and create a new version |
 | [**PostWebdeploymentsConfigurations**](WebDeploymentsApi.html#postwebdeploymentsconfigurations) | **POST** /api/v2/webdeployments/configurations | Create a configuration draft |
 | [**PostWebdeploymentsDeployments**](WebDeploymentsApi.html#postwebdeploymentsdeployments) | **POST** /api/v2/webdeployments/deployments | Create a deployment |
+| [**PostWebdeploymentsTokenOauthcodegrantjwtexchange**](WebDeploymentsApi.html#postwebdeploymentstokenoauthcodegrantjwtexchange) | **POST** /api/v2/webdeployments/token/oauthcodegrantjwtexchange | Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments. |
+| [**PostWebdeploymentsTokenRefresh**](WebDeploymentsApi.html#postwebdeploymentstokenrefresh) | **POST** /api/v2/webdeployments/token/refresh | Refresh a JWT. |
 | [**PutWebdeploymentsConfigurationVersionsDraft**](WebDeploymentsApi.html#putwebdeploymentsconfigurationversionsdraft) | **PUT** /api/v2/webdeployments/configurations/{configurationId}/versions/draft | Update the configuration draft |
 | [**PutWebdeploymentsDeployment**](WebDeploymentsApi.html#putwebdeploymentsdeployment) | **PUT** /api/v2/webdeployments/deployments/{deploymentId} | Update a deployment |
 {: class="table table-striped"}
@@ -145,6 +148,65 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **deploymentId** | **string**| The deployment ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deletewebdeploymentstokenrevoke"></a>
+
+## void DeleteWebdeploymentsTokenRevoke (string xJourneySessionId = null, string xJourneySessionType = null)
+
+
+
+Invalidate JWT
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteWebdeploymentsTokenRevokeExample
+    {
+        public void main()
+        { 
+
+            var apiInstance = new WebDeploymentsApi();
+            var xJourneySessionId = xJourneySessionId_example;  // string | The Customer's journey sessionId. (optional) 
+            var xJourneySessionType = xJourneySessionType_example;  // string | The Customer's journey session type. (optional) 
+
+            try
+            { 
+                // Invalidate JWT
+                apiInstance.DeleteWebdeploymentsTokenRevoke(xJourneySessionId, xJourneySessionType);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WebDeploymentsApi.DeleteWebdeploymentsTokenRevoke: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **xJourneySessionId** | **string**| The Customer&#39;s journey sessionId. | [optional]  |
+| **xJourneySessionType** | **string**| The Customer&#39;s journey session type. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -806,6 +868,122 @@ namespace Example
 ### Return type
 
 [**WebDeployment**](WebDeployment.html)
+
+<a name="postwebdeploymentstokenoauthcodegrantjwtexchange"></a>
+
+## [**WebDeploymentsAuthorizationResponse**](WebDeploymentsAuthorizationResponse.html) PostWebdeploymentsTokenOauthcodegrantjwtexchange (WebDeploymentsOAuthExchangeRequest body)
+
+
+
+Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments.
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWebdeploymentsTokenOauthcodegrantjwtexchangeExample
+    {
+        public void main()
+        { 
+
+            var apiInstance = new WebDeploymentsApi();
+            var body = new WebDeploymentsOAuthExchangeRequest(); // WebDeploymentsOAuthExchangeRequest | webDeploymentsOAuthExchangeRequest
+
+            try
+            { 
+                // Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments.
+                WebDeploymentsAuthorizationResponse result = apiInstance.PostWebdeploymentsTokenOauthcodegrantjwtexchange(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WebDeploymentsApi.PostWebdeploymentsTokenOauthcodegrantjwtexchange: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**WebDeploymentsOAuthExchangeRequest**](WebDeploymentsOAuthExchangeRequest.html)| webDeploymentsOAuthExchangeRequest |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**WebDeploymentsAuthorizationResponse**](WebDeploymentsAuthorizationResponse.html)
+
+<a name="postwebdeploymentstokenrefresh"></a>
+
+## [**SignedData**](SignedData.html) PostWebdeploymentsTokenRefresh (WebDeploymentsRefreshJWTRequest body = null)
+
+
+
+Refresh a JWT.
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWebdeploymentsTokenRefreshExample
+    {
+        public void main()
+        { 
+
+            var apiInstance = new WebDeploymentsApi();
+            var body = new WebDeploymentsRefreshJWTRequest(); // WebDeploymentsRefreshJWTRequest |  (optional) 
+
+            try
+            { 
+                // Refresh a JWT.
+                SignedData result = apiInstance.PostWebdeploymentsTokenRefresh(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WebDeploymentsApi.PostWebdeploymentsTokenRefresh: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**WebDeploymentsRefreshJWTRequest**](WebDeploymentsRefreshJWTRequest.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SignedData**](SignedData.html)
 
 <a name="putwebdeploymentsconfigurationversionsdraft"></a>
 

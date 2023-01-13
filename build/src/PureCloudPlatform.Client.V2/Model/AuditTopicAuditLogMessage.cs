@@ -767,6 +767,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Harddelete,
             
             /// <summary>
+            /// Enum Softdelete for "SoftDelete"
+            /// </summary>
+            [EnumMember(Value = "SoftDelete")]
+            Softdelete,
+            
+            /// <summary>
             /// Enum Enablecapture for "EnableCapture"
             /// </summary>
             [EnumMember(Value = "EnableCapture")]

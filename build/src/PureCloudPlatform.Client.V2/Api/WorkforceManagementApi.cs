@@ -391,6 +391,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<AdherenceExplanationJob> GetWorkforcemanagementAdherenceExplanationsJobWithHttpInfo (string jobId);
 
         /// <summary>
+        /// Request to fetch the status of the historical adherence bulk job. Only the user who started the operation can query the status
+        /// </summary>
+        /// <remarks>
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">ID of the job to get</param>
+        /// <returns>WfmHistoricalAdherenceBulkResponse</returns>
+        WfmHistoricalAdherenceBulkResponse GetWorkforcemanagementAdherenceHistoricalBulkJob (string jobId);
+
+        /// <summary>
+        /// Request to fetch the status of the historical adherence bulk job. Only the user who started the operation can query the status
+        /// </summary>
+        /// <remarks>
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">ID of the job to get</param>
+        /// <returns>ApiResponse of WfmHistoricalAdherenceBulkResponse</returns>
+        ApiResponse<WfmHistoricalAdherenceBulkResponse> GetWorkforcemanagementAdherenceHistoricalBulkJobWithHttpInfo (string jobId);
+
+        /// <summary>
         /// Query the status of a historical adherence request operation. Only the user who started the operation can query the status
         /// </summary>
         /// <remarks>
@@ -2391,6 +2413,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<WfmHistoricalAdherenceResponse> PostWorkforcemanagementAdherenceHistoricalWithHttpInfo (WfmHistoricalAdherenceQueryForUsers body = null);
 
         /// <summary>
+        /// Request a historical adherence report in bulk
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body (optional)</param>
+        /// <returns>WfmHistoricalAdherenceBulkResponse</returns>
+        WfmHistoricalAdherenceBulkResponse PostWorkforcemanagementAdherenceHistoricalBulk (WfmHistoricalAdherenceBulkQuery body = null);
+
+        /// <summary>
+        /// Request a historical adherence report in bulk
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of WfmHistoricalAdherenceBulkResponse</returns>
+        ApiResponse<WfmHistoricalAdherenceBulkResponse> PostWorkforcemanagementAdherenceHistoricalBulkWithHttpInfo (WfmHistoricalAdherenceBulkQuery body = null);
+
+        /// <summary>
         /// Add an adherence explanation for the requested user
         /// </summary>
         /// <remarks>
@@ -4133,6 +4177,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">The ID of the job</param>
         /// <returns>Task of ApiResponse (AdherenceExplanationJob)</returns>
         System.Threading.Tasks.Task<ApiResponse<AdherenceExplanationJob>> GetWorkforcemanagementAdherenceExplanationsJobAsyncWithHttpInfo (string jobId);
+
+        /// <summary>
+        /// Request to fetch the status of the historical adherence bulk job. Only the user who started the operation can query the status
+        /// </summary>
+        /// <remarks>
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">ID of the job to get</param>
+        /// <returns>Task of WfmHistoricalAdherenceBulkResponse</returns>
+        System.Threading.Tasks.Task<WfmHistoricalAdherenceBulkResponse> GetWorkforcemanagementAdherenceHistoricalBulkJobAsync (string jobId);
+
+        /// <summary>
+        /// Request to fetch the status of the historical adherence bulk job. Only the user who started the operation can query the status
+        /// </summary>
+        /// <remarks>
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">ID of the job to get</param>
+        /// <returns>Task of ApiResponse (WfmHistoricalAdherenceBulkResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WfmHistoricalAdherenceBulkResponse>> GetWorkforcemanagementAdherenceHistoricalBulkJobAsyncWithHttpInfo (string jobId);
 
         /// <summary>
         /// Query the status of a historical adherence request operation. Only the user who started the operation can query the status
@@ -6133,6 +6199,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WfmHistoricalAdherenceResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<WfmHistoricalAdherenceResponse>> PostWorkforcemanagementAdherenceHistoricalAsyncWithHttpInfo (WfmHistoricalAdherenceQueryForUsers body = null);
+
+        /// <summary>
+        /// Request a historical adherence report in bulk
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of WfmHistoricalAdherenceBulkResponse</returns>
+        System.Threading.Tasks.Task<WfmHistoricalAdherenceBulkResponse> PostWorkforcemanagementAdherenceHistoricalBulkAsync (WfmHistoricalAdherenceBulkQuery body = null);
+
+        /// <summary>
+        /// Request a historical adherence report in bulk
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (WfmHistoricalAdherenceBulkResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WfmHistoricalAdherenceBulkResponse>> PostWorkforcemanagementAdherenceHistoricalBulkAsyncWithHttpInfo (WfmHistoricalAdherenceBulkQuery body = null);
 
         /// <summary>
         /// Add an adherence explanation for the requested user
@@ -10761,6 +10849,197 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<AdherenceExplanationJob>(localVarStatusCode,
                 localVarHeaders,
                 (AdherenceExplanationJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdherenceExplanationJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Request to fetch the status of the historical adherence bulk job. Only the user who started the operation can query the status Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">ID of the job to get</param>
+        /// <returns>WfmHistoricalAdherenceBulkResponse</returns>
+        public WfmHistoricalAdherenceBulkResponse GetWorkforcemanagementAdherenceHistoricalBulkJob (string jobId)
+        {
+             ApiResponse<WfmHistoricalAdherenceBulkResponse> localVarResponse = GetWorkforcemanagementAdherenceHistoricalBulkJobWithHttpInfo(jobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Request to fetch the status of the historical adherence bulk job. Only the user who started the operation can query the status Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">ID of the job to get</param>
+        /// <returns>ApiResponse of WfmHistoricalAdherenceBulkResponse</returns>
+        public ApiResponse< WfmHistoricalAdherenceBulkResponse > GetWorkforcemanagementAdherenceHistoricalBulkJobWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementAdherenceHistoricalBulkJob");
+
+            var localVarPath = "/api/v2/workforcemanagement/adherence/historical/bulk/jobs/{jobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementAdherenceHistoricalBulkJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementAdherenceHistoricalBulkJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WfmHistoricalAdherenceBulkResponse>(localVarStatusCode,
+                localVarHeaders,
+                (WfmHistoricalAdherenceBulkResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WfmHistoricalAdherenceBulkResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Request to fetch the status of the historical adherence bulk job. Only the user who started the operation can query the status Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">ID of the job to get</param>
+        /// <returns>Task of WfmHistoricalAdherenceBulkResponse</returns>
+        public async System.Threading.Tasks.Task<WfmHistoricalAdherenceBulkResponse> GetWorkforcemanagementAdherenceHistoricalBulkJobAsync (string jobId)
+        {
+             ApiResponse<WfmHistoricalAdherenceBulkResponse> localVarResponse = await GetWorkforcemanagementAdherenceHistoricalBulkJobAsyncWithHttpInfo(jobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Request to fetch the status of the historical adherence bulk job. Only the user who started the operation can query the status Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">ID of the job to get</param>
+        /// <returns>Task of ApiResponse (WfmHistoricalAdherenceBulkResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WfmHistoricalAdherenceBulkResponse>> GetWorkforcemanagementAdherenceHistoricalBulkJobAsyncWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementAdherenceHistoricalBulkJob");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/adherence/historical/bulk/jobs/{jobId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementAdherenceHistoricalBulkJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementAdherenceHistoricalBulkJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WfmHistoricalAdherenceBulkResponse>(localVarStatusCode,
+                localVarHeaders,
+                (WfmHistoricalAdherenceBulkResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WfmHistoricalAdherenceBulkResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -27501,6 +27780,200 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<WfmHistoricalAdherenceResponse>(localVarStatusCode,
                 localVarHeaders,
                 (WfmHistoricalAdherenceResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WfmHistoricalAdherenceResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Request a historical adherence report in bulk 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body (optional)</param>
+        /// <returns>WfmHistoricalAdherenceBulkResponse</returns>
+        public WfmHistoricalAdherenceBulkResponse PostWorkforcemanagementAdherenceHistoricalBulk (WfmHistoricalAdherenceBulkQuery body = null)
+        {
+             ApiResponse<WfmHistoricalAdherenceBulkResponse> localVarResponse = PostWorkforcemanagementAdherenceHistoricalBulkWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Request a historical adherence report in bulk 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of WfmHistoricalAdherenceBulkResponse</returns>
+        public ApiResponse< WfmHistoricalAdherenceBulkResponse > PostWorkforcemanagementAdherenceHistoricalBulkWithHttpInfo (WfmHistoricalAdherenceBulkQuery body = null)
+        { 
+
+            var localVarPath = "/api/v2/workforcemanagement/adherence/historical/bulk";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementAdherenceHistoricalBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementAdherenceHistoricalBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WfmHistoricalAdherenceBulkResponse>(localVarStatusCode,
+                localVarHeaders,
+                (WfmHistoricalAdherenceBulkResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WfmHistoricalAdherenceBulkResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Request a historical adherence report in bulk 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of WfmHistoricalAdherenceBulkResponse</returns>
+        public async System.Threading.Tasks.Task<WfmHistoricalAdherenceBulkResponse> PostWorkforcemanagementAdherenceHistoricalBulkAsync (WfmHistoricalAdherenceBulkQuery body = null)
+        {
+             ApiResponse<WfmHistoricalAdherenceBulkResponse> localVarResponse = await PostWorkforcemanagementAdherenceHistoricalBulkAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Request a historical adherence report in bulk 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (WfmHistoricalAdherenceBulkResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WfmHistoricalAdherenceBulkResponse>> PostWorkforcemanagementAdherenceHistoricalBulkAsyncWithHttpInfo (WfmHistoricalAdherenceBulkQuery body = null)
+        { 
+
+            var localVarPath = "/api/v2/workforcemanagement/adherence/historical/bulk";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementAdherenceHistoricalBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementAdherenceHistoricalBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WfmHistoricalAdherenceBulkResponse>(localVarStatusCode,
+                localVarHeaders,
+                (WfmHistoricalAdherenceBulkResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WfmHistoricalAdherenceBulkResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

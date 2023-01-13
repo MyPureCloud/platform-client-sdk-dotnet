@@ -61,16 +61,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="RecordingJobsQuery" /> class.
         /// </summary>
         /// <param name="Action">Operation to perform bulk task. If the operation will cause the delete date of a recording to be older than the export date, the export date will be adjusted to the delete date. (required).</param>
-        /// <param name="ActionDate">The date when the action will be performed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="ActionDate">The date when the action will be performed. If screenRecordingActionDate is also provided, this value is only used for non-screen recordings. Otherwise this value is used for all recordings. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="ActionAge">The number of days after each recording's creation date when the action will be performed. If screenRecordingActionAge is also provided, this value is only used for non-screen recordings. Otherwise this value is used for all recordings..</param>
+        /// <param name="ScreenRecordingActionDate">The date when the action will be performed for screen recordings. If this is provided then includeScreenRecordings must be true. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="ScreenRecordingActionAge">The number of days after each screen recording's creation date when the action will be performed. If this is provided then includeScreenRecordings must be true..</param>
         /// <param name="IntegrationId">IntegrationId to Access AWS S3 bucket for bulk recording exports. This field is required and used only for EXPORT action..</param>
         /// <param name="IncludeRecordingsWithSensitiveData">Whether to include recordings with PCI DSS and/or PII data, default value = false .</param>
         /// <param name="IncludeScreenRecordings">Whether to include Screen recordings for the action, default value = true .</param>
         /// <param name="ClearExport">For DELETE action, setting this to true will clear any pending exports for recordings. This field is not used for EXPORT action. Default value = false.</param>
         /// <param name="ConversationQuery">Conversation Query. Note: After the recording is created, it might take up to 48 hours for the recording to be included in the submitted job query.  This result depends on the analytics data lake job completion. See also: https://developer.genesys.cloud/analyticsdatamanagement/analytics/jobs/conversation-details-job#data-availability (required).</param>
-        public RecordingJobsQuery(ActionEnum? Action = null, DateTime? ActionDate = null, string IntegrationId = null, bool? IncludeRecordingsWithSensitiveData = null, bool? IncludeScreenRecordings = null, bool? ClearExport = null, AsyncConversationQuery ConversationQuery = null)
+        public RecordingJobsQuery(ActionEnum? Action = null, DateTime? ActionDate = null, int? ActionAge = null, DateTime? ScreenRecordingActionDate = null, int? ScreenRecordingActionAge = null, string IntegrationId = null, bool? IncludeRecordingsWithSensitiveData = null, bool? IncludeScreenRecordings = null, bool? ClearExport = null, AsyncConversationQuery ConversationQuery = null)
         {
             this.Action = Action;
             this.ActionDate = ActionDate;
+            this.ActionAge = ActionAge;
+            this.ScreenRecordingActionDate = ScreenRecordingActionDate;
+            this.ScreenRecordingActionAge = ScreenRecordingActionAge;
             this.IntegrationId = IntegrationId;
             this.IncludeRecordingsWithSensitiveData = IncludeRecordingsWithSensitiveData;
             this.IncludeScreenRecordings = IncludeScreenRecordings;
@@ -84,11 +90,38 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The date when the action will be performed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// The date when the action will be performed. If screenRecordingActionDate is also provided, this value is only used for non-screen recordings. Otherwise this value is used for all recordings. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>The date when the action will be performed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        /// <value>The date when the action will be performed. If screenRecordingActionDate is also provided, this value is only used for non-screen recordings. Otherwise this value is used for all recordings. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="actionDate", EmitDefaultValue=false)]
         public DateTime? ActionDate { get; set; }
+
+
+
+        /// <summary>
+        /// The number of days after each recording's creation date when the action will be performed. If screenRecordingActionAge is also provided, this value is only used for non-screen recordings. Otherwise this value is used for all recordings.
+        /// </summary>
+        /// <value>The number of days after each recording's creation date when the action will be performed. If screenRecordingActionAge is also provided, this value is only used for non-screen recordings. Otherwise this value is used for all recordings.</value>
+        [DataMember(Name="actionAge", EmitDefaultValue=false)]
+        public int? ActionAge { get; set; }
+
+
+
+        /// <summary>
+        /// The date when the action will be performed for screen recordings. If this is provided then includeScreenRecordings must be true. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The date when the action will be performed for screen recordings. If this is provided then includeScreenRecordings must be true. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="screenRecordingActionDate", EmitDefaultValue=false)]
+        public DateTime? ScreenRecordingActionDate { get; set; }
+
+
+
+        /// <summary>
+        /// The number of days after each screen recording's creation date when the action will be performed. If this is provided then includeScreenRecordings must be true.
+        /// </summary>
+        /// <value>The number of days after each screen recording's creation date when the action will be performed. If this is provided then includeScreenRecordings must be true.</value>
+        [DataMember(Name="screenRecordingActionAge", EmitDefaultValue=false)]
+        public int? ScreenRecordingActionAge { get; set; }
 
 
 
@@ -147,6 +180,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("  ActionDate: ").Append(ActionDate).Append("\n");
+            sb.Append("  ActionAge: ").Append(ActionAge).Append("\n");
+            sb.Append("  ScreenRecordingActionDate: ").Append(ScreenRecordingActionDate).Append("\n");
+            sb.Append("  ScreenRecordingActionAge: ").Append(ScreenRecordingActionAge).Append("\n");
             sb.Append("  IntegrationId: ").Append(IntegrationId).Append("\n");
             sb.Append("  IncludeRecordingsWithSensitiveData: ").Append(IncludeRecordingsWithSensitiveData).Append("\n");
             sb.Append("  IncludeScreenRecordings: ").Append(IncludeScreenRecordings).Append("\n");
@@ -203,6 +239,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ActionDate.Equals(other.ActionDate)
                 ) &&
                 (
+                    this.ActionAge == other.ActionAge ||
+                    this.ActionAge != null &&
+                    this.ActionAge.Equals(other.ActionAge)
+                ) &&
+                (
+                    this.ScreenRecordingActionDate == other.ScreenRecordingActionDate ||
+                    this.ScreenRecordingActionDate != null &&
+                    this.ScreenRecordingActionDate.Equals(other.ScreenRecordingActionDate)
+                ) &&
+                (
+                    this.ScreenRecordingActionAge == other.ScreenRecordingActionAge ||
+                    this.ScreenRecordingActionAge != null &&
+                    this.ScreenRecordingActionAge.Equals(other.ScreenRecordingActionAge)
+                ) &&
+                (
                     this.IntegrationId == other.IntegrationId ||
                     this.IntegrationId != null &&
                     this.IntegrationId.Equals(other.IntegrationId)
@@ -245,6 +296,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ActionDate != null)
                     hash = hash * 59 + this.ActionDate.GetHashCode();
+
+                if (this.ActionAge != null)
+                    hash = hash * 59 + this.ActionAge.GetHashCode();
+
+                if (this.ScreenRecordingActionDate != null)
+                    hash = hash * 59 + this.ScreenRecordingActionDate.GetHashCode();
+
+                if (this.ScreenRecordingActionAge != null)
+                    hash = hash * 59 + this.ScreenRecordingActionAge.GetHashCode();
 
                 if (this.IntegrationId != null)
                     hash = hash * 59 + this.IntegrationId.GetHashCode();

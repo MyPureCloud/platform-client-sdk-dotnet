@@ -61,6 +61,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteWebdeploymentsDeploymentWithHttpInfo (string deploymentId);
 
         /// <summary>
+        /// Invalidate JWT
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="xJourneySessionId">The Customer&#39;s journey sessionId. (optional)</param>
+        /// <param name="xJourneySessionType">The Customer&#39;s journey session type. (optional)</param>
+        /// <returns></returns>
+        void DeleteWebdeploymentsTokenRevoke (string xJourneySessionId = null, string xJourneySessionType = null);
+
+        /// <summary>
+        /// Invalidate JWT
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="xJourneySessionId">The Customer&#39;s journey sessionId. (optional)</param>
+        /// <param name="xJourneySessionType">The Customer&#39;s journey session type. (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteWebdeploymentsTokenRevokeWithHttpInfo (string xJourneySessionId = null, string xJourneySessionType = null);
+
+        /// <summary>
         /// Get a configuration version
         /// </summary>
         /// <remarks>
@@ -285,6 +309,50 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<WebDeployment> PostWebdeploymentsDeploymentsWithHttpInfo (WebDeployment deployment);
 
         /// <summary>
+        /// Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">webDeploymentsOAuthExchangeRequest</param>
+        /// <returns>WebDeploymentsAuthorizationResponse</returns>
+        WebDeploymentsAuthorizationResponse PostWebdeploymentsTokenOauthcodegrantjwtexchange (WebDeploymentsOAuthExchangeRequest body);
+
+        /// <summary>
+        /// Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">webDeploymentsOAuthExchangeRequest</param>
+        /// <returns>ApiResponse of WebDeploymentsAuthorizationResponse</returns>
+        ApiResponse<WebDeploymentsAuthorizationResponse> PostWebdeploymentsTokenOauthcodegrantjwtexchangeWithHttpInfo (WebDeploymentsOAuthExchangeRequest body);
+
+        /// <summary>
+        /// Refresh a JWT.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>SignedData</returns>
+        SignedData PostWebdeploymentsTokenRefresh (WebDeploymentsRefreshJWTRequest body = null);
+
+        /// <summary>
+        /// Refresh a JWT.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of SignedData</returns>
+        ApiResponse<SignedData> PostWebdeploymentsTokenRefreshWithHttpInfo (WebDeploymentsRefreshJWTRequest body = null);
+
+        /// <summary>
         /// Update the configuration draft
         /// </summary>
         /// <remarks>
@@ -379,6 +447,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">The deployment ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebdeploymentsDeploymentAsyncWithHttpInfo (string deploymentId);
+
+        /// <summary>
+        /// Invalidate JWT
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="xJourneySessionId">The Customer&#39;s journey sessionId. (optional)</param>
+        /// <param name="xJourneySessionType">The Customer&#39;s journey session type. (optional)</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteWebdeploymentsTokenRevokeAsync (string xJourneySessionId = null, string xJourneySessionType = null);
+
+        /// <summary>
+        /// Invalidate JWT
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="xJourneySessionId">The Customer&#39;s journey sessionId. (optional)</param>
+        /// <param name="xJourneySessionType">The Customer&#39;s journey session type. (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebdeploymentsTokenRevokeAsyncWithHttpInfo (string xJourneySessionId = null, string xJourneySessionType = null);
 
         /// <summary>
         /// Get a configuration version
@@ -603,6 +695,50 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deployment"></param>
         /// <returns>Task of ApiResponse (WebDeployment)</returns>
         System.Threading.Tasks.Task<ApiResponse<WebDeployment>> PostWebdeploymentsDeploymentsAsyncWithHttpInfo (WebDeployment deployment);
+
+        /// <summary>
+        /// Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">webDeploymentsOAuthExchangeRequest</param>
+        /// <returns>Task of WebDeploymentsAuthorizationResponse</returns>
+        System.Threading.Tasks.Task<WebDeploymentsAuthorizationResponse> PostWebdeploymentsTokenOauthcodegrantjwtexchangeAsync (WebDeploymentsOAuthExchangeRequest body);
+
+        /// <summary>
+        /// Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">webDeploymentsOAuthExchangeRequest</param>
+        /// <returns>Task of ApiResponse (WebDeploymentsAuthorizationResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WebDeploymentsAuthorizationResponse>> PostWebdeploymentsTokenOauthcodegrantjwtexchangeAsyncWithHttpInfo (WebDeploymentsOAuthExchangeRequest body);
+
+        /// <summary>
+        /// Refresh a JWT.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of SignedData</returns>
+        System.Threading.Tasks.Task<SignedData> PostWebdeploymentsTokenRefreshAsync (WebDeploymentsRefreshJWTRequest body = null);
+
+        /// <summary>
+        /// Refresh a JWT.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (SignedData)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SignedData>> PostWebdeploymentsTokenRefreshAsyncWithHttpInfo (WebDeploymentsRefreshJWTRequest body = null);
 
         /// <summary>
         /// Update the configuration draft
@@ -1112,6 +1248,180 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteWebdeploymentsDeployment: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteWebdeploymentsDeployment: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Invalidate JWT 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="xJourneySessionId">The Customer&#39;s journey sessionId. (optional)</param>
+        /// <param name="xJourneySessionType">The Customer&#39;s journey session type. (optional)</param>
+        /// <returns></returns>
+        public void DeleteWebdeploymentsTokenRevoke (string xJourneySessionId = null, string xJourneySessionType = null)
+        {
+             DeleteWebdeploymentsTokenRevokeWithHttpInfo(xJourneySessionId, xJourneySessionType);
+        }
+
+        /// <summary>
+        /// Invalidate JWT 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="xJourneySessionId">The Customer&#39;s journey sessionId. (optional)</param>
+        /// <param name="xJourneySessionType">The Customer&#39;s journey session type. (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteWebdeploymentsTokenRevokeWithHttpInfo (string xJourneySessionId = null, string xJourneySessionType = null)
+        { 
+
+            var localVarPath = "/api/v2/webdeployments/token/revoke";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+            if (xJourneySessionId != null) localVarHeaderParams.Add("X-Journey-Session-Id", this.Configuration.ApiClient.ParameterToString(xJourneySessionId)); // header parameter
+            if (xJourneySessionType != null) localVarHeaderParams.Add("X-Journey-Session-Type", this.Configuration.ApiClient.ParameterToString(xJourneySessionType)); // header parameter
+
+            // Form params
+            
+            // Body param
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWebdeploymentsTokenRevoke: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWebdeploymentsTokenRevoke: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Invalidate JWT 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="xJourneySessionId">The Customer&#39;s journey sessionId. (optional)</param>
+        /// <param name="xJourneySessionType">The Customer&#39;s journey session type. (optional)</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteWebdeploymentsTokenRevokeAsync (string xJourneySessionId = null, string xJourneySessionType = null)
+        {
+             await DeleteWebdeploymentsTokenRevokeAsyncWithHttpInfo(xJourneySessionId, xJourneySessionType);
+
+        }
+
+        /// <summary>
+        /// Invalidate JWT 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="xJourneySessionId">The Customer&#39;s journey sessionId. (optional)</param>
+        /// <param name="xJourneySessionType">The Customer&#39;s journey session type. (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebdeploymentsTokenRevokeAsyncWithHttpInfo (string xJourneySessionId = null, string xJourneySessionType = null)
+        { 
+
+            var localVarPath = "/api/v2/webdeployments/token/revoke";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+            if (xJourneySessionId != null) localVarHeaderParams.Add("X-Journey-Session-Id", this.Configuration.ApiClient.ParameterToString(xJourneySessionId)); // header parameter
+            if (xJourneySessionType != null) localVarHeaderParams.Add("X-Journey-Session-Type", this.Configuration.ApiClient.ParameterToString(xJourneySessionType)); // header parameter
+
+            // Form params
+            
+            // Body param
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWebdeploymentsTokenRevoke: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWebdeploymentsTokenRevoke: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -3051,6 +3361,373 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<WebDeployment>(localVarStatusCode,
                 localVarHeaders,
                 (WebDeployment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebDeployment)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">webDeploymentsOAuthExchangeRequest</param>
+        /// <returns>WebDeploymentsAuthorizationResponse</returns>
+        public WebDeploymentsAuthorizationResponse PostWebdeploymentsTokenOauthcodegrantjwtexchange (WebDeploymentsOAuthExchangeRequest body)
+        {
+             ApiResponse<WebDeploymentsAuthorizationResponse> localVarResponse = PostWebdeploymentsTokenOauthcodegrantjwtexchangeWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">webDeploymentsOAuthExchangeRequest</param>
+        /// <returns>ApiResponse of WebDeploymentsAuthorizationResponse</returns>
+        public ApiResponse< WebDeploymentsAuthorizationResponse > PostWebdeploymentsTokenOauthcodegrantjwtexchangeWithHttpInfo (WebDeploymentsOAuthExchangeRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WebDeploymentsApi->PostWebdeploymentsTokenOauthcodegrantjwtexchange");
+
+            var localVarPath = "/api/v2/webdeployments/token/oauthcodegrantjwtexchange";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWebdeploymentsTokenOauthcodegrantjwtexchange: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWebdeploymentsTokenOauthcodegrantjwtexchange: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WebDeploymentsAuthorizationResponse>(localVarStatusCode,
+                localVarHeaders,
+                (WebDeploymentsAuthorizationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebDeploymentsAuthorizationResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">webDeploymentsOAuthExchangeRequest</param>
+        /// <returns>Task of WebDeploymentsAuthorizationResponse</returns>
+        public async System.Threading.Tasks.Task<WebDeploymentsAuthorizationResponse> PostWebdeploymentsTokenOauthcodegrantjwtexchangeAsync (WebDeploymentsOAuthExchangeRequest body)
+        {
+             ApiResponse<WebDeploymentsAuthorizationResponse> localVarResponse = await PostWebdeploymentsTokenOauthcodegrantjwtexchangeAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">webDeploymentsOAuthExchangeRequest</param>
+        /// <returns>Task of ApiResponse (WebDeploymentsAuthorizationResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WebDeploymentsAuthorizationResponse>> PostWebdeploymentsTokenOauthcodegrantjwtexchangeAsyncWithHttpInfo (WebDeploymentsOAuthExchangeRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WebDeploymentsApi->PostWebdeploymentsTokenOauthcodegrantjwtexchange");
+            
+
+            var localVarPath = "/api/v2/webdeployments/token/oauthcodegrantjwtexchange";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWebdeploymentsTokenOauthcodegrantjwtexchange: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWebdeploymentsTokenOauthcodegrantjwtexchange: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WebDeploymentsAuthorizationResponse>(localVarStatusCode,
+                localVarHeaders,
+                (WebDeploymentsAuthorizationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebDeploymentsAuthorizationResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Refresh a JWT. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>SignedData</returns>
+        public SignedData PostWebdeploymentsTokenRefresh (WebDeploymentsRefreshJWTRequest body = null)
+        {
+             ApiResponse<SignedData> localVarResponse = PostWebdeploymentsTokenRefreshWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Refresh a JWT. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of SignedData</returns>
+        public ApiResponse< SignedData > PostWebdeploymentsTokenRefreshWithHttpInfo (WebDeploymentsRefreshJWTRequest body = null)
+        { 
+
+            var localVarPath = "/api/v2/webdeployments/token/refresh";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWebdeploymentsTokenRefresh: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWebdeploymentsTokenRefresh: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SignedData>(localVarStatusCode,
+                localVarHeaders,
+                (SignedData) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SignedData)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Refresh a JWT. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of SignedData</returns>
+        public async System.Threading.Tasks.Task<SignedData> PostWebdeploymentsTokenRefreshAsync (WebDeploymentsRefreshJWTRequest body = null)
+        {
+             ApiResponse<SignedData> localVarResponse = await PostWebdeploymentsTokenRefreshAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Refresh a JWT. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (SignedData)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SignedData>> PostWebdeploymentsTokenRefreshAsyncWithHttpInfo (WebDeploymentsRefreshJWTRequest body = null)
+        { 
+
+            var localVarPath = "/api/v2/webdeployments/token/refresh";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWebdeploymentsTokenRefresh: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWebdeploymentsTokenRefresh: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SignedData>(localVarStatusCode,
+                localVarHeaders,
+                (SignedData) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SignedData)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

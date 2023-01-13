@@ -34222,6 +34222,24 @@
     ],
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class DeleteWebdeploymentsDeploymentExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new WebDeploymentsApi();\n            var deploymentId = \"deploymentId_example\";  // string | The deployment ID\n\n            try\n            { \n                // Delete a deployment\n                apiInstance.DeleteWebdeploymentsDeployment(deploymentId);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WebDeployments.DeleteWebdeploymentsDeployment: \" + e.Message );\n            }\n        }\n    }\n}"
   },
+  "deletewebdeploymentstokenrevoke": {
+    "operationId": "deletewebdeploymentstokenrevoke",
+    "functionName": "DeleteWebdeploymentsTokenRevoke",
+    "signature": "DeleteWebdeploymentsTokenRevoke(xJourneySessionId, xJourneySessionType)",
+    "parameters": [
+      {
+        "name": "xJourneySessionId",
+        "type": "string",
+        "required": "false"
+      },
+      {
+        "name": "xJourneySessionType",
+        "type": "string",
+        "required": "false"
+      }
+    ],
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class DeleteWebdeploymentsTokenRevokeExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n\n            var apiInstance = new WebDeploymentsApi();\n            var xJourneySessionId = \"xJourneySessionId_example\";  // string | The Customer's journey sessionId. (optional) \n            var xJourneySessionType = \"xJourneySessionType_example\";  // string | The Customer's journey session type. (optional) \n\n            try\n            { \n                // Invalidate JWT\n                apiInstance.DeleteWebdeploymentsTokenRevoke(xJourneySessionId, xJourneySessionType);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WebDeployments.DeleteWebdeploymentsTokenRevoke: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
   "getwebdeploymentsconfigurationversion": {
     "operationId": "getwebdeploymentsconfigurationversion",
     "functionName": "GetWebdeploymentsConfigurationVersion",
@@ -34371,6 +34389,34 @@
     ],
     "return": "WebDeployment",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostWebdeploymentsDeploymentsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new WebDeploymentsApi();\n            var deployment = new WebDeployment(); // WebDeployment | \n\n            try\n            { \n                // Create a deployment\n                WebDeployment result = apiInstance.PostWebdeploymentsDeployments(deployment);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WebDeployments.PostWebdeploymentsDeployments: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "postwebdeploymentstokenoauthcodegrantjwtexchange": {
+    "operationId": "postwebdeploymentstokenoauthcodegrantjwtexchange",
+    "functionName": "PostWebdeploymentsTokenOauthcodegrantjwtexchange",
+    "signature": "PostWebdeploymentsTokenOauthcodegrantjwtexchange(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "WebDeploymentsOAuthExchangeRequest",
+        "required": "true"
+      }
+    ],
+    "return": "WebDeploymentsAuthorizationResponse",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostWebdeploymentsTokenOauthcodegrantjwtexchangeExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n\n            var apiInstance = new WebDeploymentsApi();\n            var body = new WebDeploymentsOAuthExchangeRequest(); // WebDeploymentsOAuthExchangeRequest | webDeploymentsOAuthExchangeRequest\n\n            try\n            { \n                // Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments.\n                WebDeploymentsAuthorizationResponse result = apiInstance.PostWebdeploymentsTokenOauthcodegrantjwtexchange(body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WebDeployments.PostWebdeploymentsTokenOauthcodegrantjwtexchange: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "postwebdeploymentstokenrefresh": {
+    "operationId": "postwebdeploymentstokenrefresh",
+    "functionName": "PostWebdeploymentsTokenRefresh",
+    "signature": "PostWebdeploymentsTokenRefresh(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "WebDeploymentsRefreshJWTRequest",
+        "required": "false"
+      }
+    ],
+    "return": "SignedData",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostWebdeploymentsTokenRefreshExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n\n            var apiInstance = new WebDeploymentsApi();\n            var body = new WebDeploymentsRefreshJWTRequest(); // WebDeploymentsRefreshJWTRequest |  (optional) \n\n            try\n            { \n                // Refresh a JWT.\n                SignedData result = apiInstance.PostWebdeploymentsTokenRefresh(body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WebDeployments.PostWebdeploymentsTokenRefresh: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "putwebdeploymentsconfigurationversionsdraft": {
     "operationId": "putwebdeploymentsconfigurationversionsdraft",
@@ -34760,6 +34806,20 @@
     ],
     "return": "AdherenceExplanationJob",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetWorkforcemanagementAdherenceExplanationsJobExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new WorkforceManagementApi();\n            var jobId = \"jobId_example\";  // string | The ID of the job\n\n            try\n            { \n                // Query the status of an adherence explanation operation. Only the user who started the operation can query the status\n                AdherenceExplanationJob result = apiInstance.GetWorkforcemanagementAdherenceExplanationsJob(jobId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WorkforceManagement.GetWorkforcemanagementAdherenceExplanationsJob: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getworkforcemanagementadherencehistoricalbulkjob": {
+    "operationId": "getworkforcemanagementadherencehistoricalbulkjob",
+    "functionName": "GetWorkforcemanagementAdherenceHistoricalBulkJob",
+    "signature": "GetWorkforcemanagementAdherenceHistoricalBulkJob(jobId)",
+    "parameters": [
+      {
+        "name": "jobId",
+        "type": "string",
+        "required": "true"
+      }
+    ],
+    "return": "WfmHistoricalAdherenceBulkResponse",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetWorkforcemanagementAdherenceHistoricalBulkJobExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new WorkforceManagementApi();\n            var jobId = \"jobId_example\";  // string | ID of the job to get\n\n            try\n            { \n                // Request to fetch the status of the historical adherence bulk job. Only the user who started the operation can query the status\n                WfmHistoricalAdherenceBulkResponse result = apiInstance.GetWorkforcemanagementAdherenceHistoricalBulkJob(jobId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WorkforceManagement.GetWorkforcemanagementAdherenceHistoricalBulkJob: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "getworkforcemanagementadherencehistoricaljob": {
     "operationId": "getworkforcemanagementadherencehistoricaljob",
@@ -36385,6 +36445,20 @@
     ],
     "return": "WfmHistoricalAdherenceResponse",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostWorkforcemanagementAdherenceHistoricalExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new WorkforceManagementApi();\n            var body = new WfmHistoricalAdherenceQueryForUsers(); // WfmHistoricalAdherenceQueryForUsers | body (optional) \n\n            try\n            { \n                // Request a historical adherence report for users across management units\n                WfmHistoricalAdherenceResponse result = apiInstance.PostWorkforcemanagementAdherenceHistorical(body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WorkforceManagement.PostWorkforcemanagementAdherenceHistorical: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "postworkforcemanagementadherencehistoricalbulk": {
+    "operationId": "postworkforcemanagementadherencehistoricalbulk",
+    "functionName": "PostWorkforcemanagementAdherenceHistoricalBulk",
+    "signature": "PostWorkforcemanagementAdherenceHistoricalBulk(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "WfmHistoricalAdherenceBulkQuery",
+        "required": "false"
+      }
+    ],
+    "return": "WfmHistoricalAdherenceBulkResponse",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostWorkforcemanagementAdherenceHistoricalBulkExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new WorkforceManagementApi();\n            var body = new WfmHistoricalAdherenceBulkQuery(); // WfmHistoricalAdherenceBulkQuery | body (optional) \n\n            try\n            { \n                // Request a historical adherence report in bulk\n                WfmHistoricalAdherenceBulkResponse result = apiInstance.PostWorkforcemanagementAdherenceHistoricalBulk(body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WorkforceManagement.PostWorkforcemanagementAdherenceHistoricalBulk: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "postworkforcemanagementagentadherenceexplanations": {
     "operationId": "postworkforcemanagementagentadherenceexplanations",

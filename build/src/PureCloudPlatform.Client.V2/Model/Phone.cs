@@ -82,7 +82,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WebRtcUser">This is the user associated with a WebRTC type phone.  It is required for all WebRTC phones..</param>
         /// <param name="PrimaryEdge">PrimaryEdge.</param>
         /// <param name="SecondaryEdge">SecondaryEdge.</param>
-        public Phone(string Name = null, Division Division = null, string Description = null, int? Version = null, DomainEntityRef Site = null, DomainEntityRef PhoneBaseSettings = null, DomainEntityRef LineBaseSettings = null, DomainEntityRef PhoneMetaBase = null, List<Line> Lines = null, PhoneStatus Status = null, PhoneStatus SecondaryStatus = null, Dictionary<string, Object> Properties = null, PhoneCapabilities Capabilities = null, DomainEntityRef WebRtcUser = null, Edge PrimaryEdge = null, Edge SecondaryEdge = null)
+        public Phone(string Name = null, Division Division = null, string Description = null, int? Version = null, DomainEntityRef Site = null, PhoneBaseSettings PhoneBaseSettings = null, DomainEntityRef LineBaseSettings = null, DomainEntityRef PhoneMetaBase = null, List<Line> Lines = null, PhoneStatus Status = null, PhoneStatus SecondaryStatus = null, Dictionary<string, Object> Properties = null, PhoneCapabilities Capabilities = null, DomainEntityRef WebRtcUser = null, Edge PrimaryEdge = null, Edge SecondaryEdge = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -220,7 +220,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Phone Base Settings</value>
         [DataMember(Name="phoneBaseSettings", EmitDefaultValue=false)]
-        public DomainEntityRef PhoneBaseSettings { get; set; }
+        public PhoneBaseSettings PhoneBaseSettings { get; set; }
 
 
 

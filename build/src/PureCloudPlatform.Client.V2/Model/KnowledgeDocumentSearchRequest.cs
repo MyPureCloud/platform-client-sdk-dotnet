@@ -112,46 +112,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Datemodified,
             
             /// <summary>
-            /// Enum Categoryid for "CategoryId"
-            /// </summary>
-            [EnumMember(Value = "CategoryId")]
-            Categoryid,
-            
-            /// <summary>
             /// Enum Categoryname for "CategoryName"
             /// </summary>
             [EnumMember(Value = "CategoryName")]
             Categoryname,
-            
-            /// <summary>
-            /// Enum Contextid for "ContextId"
-            /// </summary>
-            [EnumMember(Value = "ContextId")]
-            Contextid,
-            
-            /// <summary>
-            /// Enum Contextname for "ContextName"
-            /// </summary>
-            [EnumMember(Value = "ContextName")]
-            Contextname,
-            
-            /// <summary>
-            /// Enum Contextvalueid for "ContextValueId"
-            /// </summary>
-            [EnumMember(Value = "ContextValueId")]
-            Contextvalueid,
-            
-            /// <summary>
-            /// Enum Contextvaluename for "ContextValueName"
-            /// </summary>
-            [EnumMember(Value = "ContextValueName")]
-            Contextvaluename,
-            
-            /// <summary>
-            /// Enum Labelid for "LabelId"
-            /// </summary>
-            [EnumMember(Value = "LabelId")]
-            Labelid,
             
             /// <summary>
             /// Enum Labelname for "LabelName"

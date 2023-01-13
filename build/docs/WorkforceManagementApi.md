@@ -23,6 +23,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementAdherence**](WorkforceManagementApi.html#getworkforcemanagementadherence) | **GET** /api/v2/workforcemanagement/adherence | Get a list of UserScheduleAdherence records for the requested users |
 | [**GetWorkforcemanagementAdherenceExplanation**](WorkforceManagementApi.html#getworkforcemanagementadherenceexplanation) | **GET** /api/v2/workforcemanagement/adherence/explanations/{explanationId} | Get an adherence explanation for the current user |
 | [**GetWorkforcemanagementAdherenceExplanationsJob**](WorkforceManagementApi.html#getworkforcemanagementadherenceexplanationsjob) | **GET** /api/v2/workforcemanagement/adherence/explanations/jobs/{jobId} | Query the status of an adherence explanation operation. Only the user who started the operation can query the status |
+| [**GetWorkforcemanagementAdherenceHistoricalBulkJob**](WorkforceManagementApi.html#getworkforcemanagementadherencehistoricalbulkjob) | **GET** /api/v2/workforcemanagement/adherence/historical/bulk/jobs/{jobId} | Request to fetch the status of the historical adherence bulk job. Only the user who started the operation can query the status |
 | [**GetWorkforcemanagementAdherenceHistoricalJob**](WorkforceManagementApi.html#getworkforcemanagementadherencehistoricaljob) | **GET** /api/v2/workforcemanagement/adherence/historical/jobs/{jobId} | Query the status of a historical adherence request operation. Only the user who started the operation can query the status |
 | [**GetWorkforcemanagementAdhocmodelingjob**](WorkforceManagementApi.html#getworkforcemanagementadhocmodelingjob) | **GET** /api/v2/workforcemanagement/adhocmodelingjobs/{jobId} | Get status of the modeling job |
 | [**GetWorkforcemanagementAgentAdherenceExplanation**](WorkforceManagementApi.html#getworkforcemanagementagentadherenceexplanation) | **GET** /api/v2/workforcemanagement/agents/{agentId}/adherence/explanations/{explanationId} | Get an adherence explanation |
@@ -105,6 +106,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementAdherenceExplanations**](WorkforceManagementApi.html#postworkforcemanagementadherenceexplanations) | **POST** /api/v2/workforcemanagement/adherence/explanations | Submit an adherence explanation for the current user |
 | [**PostWorkforcemanagementAdherenceExplanationsQuery**](WorkforceManagementApi.html#postworkforcemanagementadherenceexplanationsquery) | **POST** /api/v2/workforcemanagement/adherence/explanations/query | Query adherence explanations for the current user |
 | [**PostWorkforcemanagementAdherenceHistorical**](WorkforceManagementApi.html#postworkforcemanagementadherencehistorical) | **POST** /api/v2/workforcemanagement/adherence/historical | Request a historical adherence report for users across management units |
+| [**PostWorkforcemanagementAdherenceHistoricalBulk**](WorkforceManagementApi.html#postworkforcemanagementadherencehistoricalbulk) | **POST** /api/v2/workforcemanagement/adherence/historical/bulk | Request a historical adherence report in bulk |
 | [**PostWorkforcemanagementAgentAdherenceExplanations**](WorkforceManagementApi.html#postworkforcemanagementagentadherenceexplanations) | **POST** /api/v2/workforcemanagement/agents/{agentId}/adherence/explanations | Add an adherence explanation for the requested user |
 | [**PostWorkforcemanagementAgentAdherenceExplanationsQuery**](WorkforceManagementApi.html#postworkforcemanagementagentadherenceexplanationsquery) | **POST** /api/v2/workforcemanagement/agents/{agentId}/adherence/explanations/query | Query adherence explanations for the given agent across a specified range |
 | [**PostWorkforcemanagementAgentschedulesMine**](WorkforceManagementApi.html#postworkforcemanagementagentschedulesmine) | **POST** /api/v2/workforcemanagement/agentschedules/mine | Get published schedule for the current user |
@@ -1212,6 +1214,72 @@ namespace Example
 ### Return type
 
 [**AdherenceExplanationJob**](AdherenceExplanationJob.html)
+
+<a name="getworkforcemanagementadherencehistoricalbulkjob"></a>
+
+## [**WfmHistoricalAdherenceBulkResponse**](WfmHistoricalAdherenceBulkResponse.html) GetWorkforcemanagementAdherenceHistoricalBulkJob (string jobId)
+
+
+
+Request to fetch the status of the historical adherence bulk job. Only the user who started the operation can query the status
+
+Job details are only retained if the initial request returned a 202 ACCEPTED response
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementAdherenceHistoricalBulkJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var jobId = jobId_example;  // string | ID of the job to get
+
+            try
+            { 
+                // Request to fetch the status of the historical adherence bulk job. Only the user who started the operation can query the status
+                WfmHistoricalAdherenceBulkResponse result = apiInstance.GetWorkforcemanagementAdherenceHistoricalBulkJob(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementAdherenceHistoricalBulkJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| ID of the job to get |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**WfmHistoricalAdherenceBulkResponse**](WfmHistoricalAdherenceBulkResponse.html)
 
 <a name="getworkforcemanagementadherencehistoricaljob"></a>
 
@@ -7057,6 +7125,71 @@ namespace Example
 ### Return type
 
 [**WfmHistoricalAdherenceResponse**](WfmHistoricalAdherenceResponse.html)
+
+<a name="postworkforcemanagementadherencehistoricalbulk"></a>
+
+## [**WfmHistoricalAdherenceBulkResponse**](WfmHistoricalAdherenceBulkResponse.html) PostWorkforcemanagementAdherenceHistoricalBulk (WfmHistoricalAdherenceBulkQuery body = null)
+
+
+
+Request a historical adherence report in bulk
+
+
+
+Requires ANY permissions: 
+
+* wfm:historicalAdherence:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementAdherenceHistoricalBulkExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var body = new WfmHistoricalAdherenceBulkQuery(); // WfmHistoricalAdherenceBulkQuery | body (optional) 
+
+            try
+            { 
+                // Request a historical adherence report in bulk
+                WfmHistoricalAdherenceBulkResponse result = apiInstance.PostWorkforcemanagementAdherenceHistoricalBulk(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementAdherenceHistoricalBulk: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**WfmHistoricalAdherenceBulkQuery**](WfmHistoricalAdherenceBulkQuery.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**WfmHistoricalAdherenceBulkResponse**](WfmHistoricalAdherenceBulkResponse.html)
 
 <a name="postworkforcemanagementagentadherenceexplanations"></a>
 
