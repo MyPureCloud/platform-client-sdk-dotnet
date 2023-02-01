@@ -18,6 +18,37 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EmailMessage :  IEquatable<EmailMessage>
     {
+        /// <summary>
+        /// Gets or Sets State
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum StateEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Created for "Created"
+            /// </summary>
+            [EnumMember(Value = "Created")]
+            Created,
+            
+            /// <summary>
+            /// Enum Ready for "Ready"
+            /// </summary>
+            [EnumMember(Value = "Ready")]
+            Ready
+        }
+        /// <summary>
+        /// Gets or Sets State
+        /// </summary>
+        [DataMember(Name="state", EmitDefaultValue=false)]
+        public StateEnum? State { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailMessage" /> class.
@@ -39,7 +70,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="HtmlBody">The html body of the email message..</param>
         /// <param name="Time">The time when the message was received or sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="HistoryIncluded">Indicates whether the history of previous emails of the conversation is included within the email bodies of this message..</param>
-        public EmailMessage(string Name = null, List<EmailAddress> To = null, List<EmailAddress> Cc = null, List<EmailAddress> Bcc = null, EmailAddress From = null, EmailAddress ReplyTo = null, string Subject = null, List<Attachment> Attachments = null, string TextBody = null, string HtmlBody = null, DateTime? Time = null, bool? HistoryIncluded = null)
+        /// <param name="State">State.</param>
+        public EmailMessage(string Name = null, List<EmailAddress> To = null, List<EmailAddress> Cc = null, List<EmailAddress> Bcc = null, EmailAddress From = null, EmailAddress ReplyTo = null, string Subject = null, List<Attachment> Attachments = null, string TextBody = null, string HtmlBody = null, DateTime? Time = null, bool? HistoryIncluded = null, StateEnum? State = null)
         {
             this.Name = Name;
             this.To = To;
@@ -53,6 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.HtmlBody = HtmlBody;
             this.Time = Time;
             this.HistoryIncluded = HistoryIncluded;
+            this.State = State;
             
         }
         
@@ -174,6 +207,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
         /// <summary>
         /// Indicates an estimation of the size of the current email as a whole, in its final, ready to be sent form.
         /// </summary>
@@ -222,6 +257,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  HtmlBody: ").Append(HtmlBody).Append("\n");
             sb.Append("  Time: ").Append(Time).Append("\n");
             sb.Append("  HistoryIncluded: ").Append(HistoryIncluded).Append("\n");
+            sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  EmailSizeBytes: ").Append(EmailSizeBytes).Append("\n");
             sb.Append("  MaxEmailSizeBytes: ").Append(MaxEmailSizeBytes).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -331,6 +367,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.HistoryIncluded.Equals(other.HistoryIncluded)
                 ) &&
                 (
+                    this.State == other.State ||
+                    this.State != null &&
+                    this.State.Equals(other.State)
+                ) &&
+                (
                     this.EmailSizeBytes == other.EmailSizeBytes ||
                     this.EmailSizeBytes != null &&
                     this.EmailSizeBytes.Equals(other.EmailSizeBytes)
@@ -396,6 +437,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.HistoryIncluded != null)
                     hash = hash * 59 + this.HistoryIncluded.GetHashCode();
+
+                if (this.State != null)
+                    hash = hash * 59 + this.State.GetHashCode();
 
                 if (this.EmailSizeBytes != null)
                     hash = hash * 59 + this.EmailSizeBytes.GetHashCode();

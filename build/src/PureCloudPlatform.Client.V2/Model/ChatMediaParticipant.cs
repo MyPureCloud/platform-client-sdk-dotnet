@@ -287,6 +287,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Held">Value is true when the participant is on hold..</param>
         /// <param name="WrapupRequired">Value is true when the participant requires wrap-up..</param>
         /// <param name="WrapupPrompt">The wrap-up prompt indicating the type of wrap-up to be performed..</param>
+        /// <param name="MediaRoles">List of roles this participant's media has had on the conversation, ie monitor, coach, etc.</param>
         /// <param name="User">The PureCloud user for this participant..</param>
         /// <param name="Queue">The PureCloud queue for this participant..</param>
         /// <param name="Team">The PureCloud team for this participant..</param>
@@ -308,7 +309,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EndAcwTime">The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="RoomId">The ID of the chat room..</param>
         /// <param name="AvatarImageUrl">If available, the URI to the avatar image of this communication..</param>
-        public ChatMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DomainEntityRef User = null, DomainEntityRef Queue = null, DomainEntityRef Team = null, Dictionary<string, string> Attributes = null, ErrorInfo ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, string RoomId = null, string AvatarImageUrl = null)
+        public ChatMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, List<string> MediaRoles = null, DomainEntityRef User = null, DomainEntityRef Queue = null, DomainEntityRef Team = null, Dictionary<string, string> Attributes = null, ErrorInfo ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, string RoomId = null, string AvatarImageUrl = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -324,6 +325,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Held = Held;
             this.WrapupRequired = WrapupRequired;
             this.WrapupPrompt = WrapupPrompt;
+            this.MediaRoles = MediaRoles;
             this.User = User;
             this.Queue = Queue;
             this.Team = Team;
@@ -452,6 +454,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The wrap-up prompt indicating the type of wrap-up to be performed.</value>
         [DataMember(Name="wrapupPrompt", EmitDefaultValue=false)]
         public string WrapupPrompt { get; set; }
+
+
+
+        /// <summary>
+        /// List of roles this participant's media has had on the conversation, ie monitor, coach, etc
+        /// </summary>
+        /// <value>List of roles this participant's media has had on the conversation, ie monitor, coach, etc</value>
+        [DataMember(Name="mediaRoles", EmitDefaultValue=false)]
+        public List<string> MediaRoles { get; set; }
 
 
 
@@ -659,6 +670,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Held: ").Append(Held).Append("\n");
             sb.Append("  WrapupRequired: ").Append(WrapupRequired).Append("\n");
             sb.Append("  WrapupPrompt: ").Append(WrapupPrompt).Append("\n");
+            sb.Append("  MediaRoles: ").Append(MediaRoles).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  Queue: ").Append(Queue).Append("\n");
             sb.Append("  Team: ").Append(Team).Append("\n");
@@ -789,6 +801,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.WrapupPrompt == other.WrapupPrompt ||
                     this.WrapupPrompt != null &&
                     this.WrapupPrompt.Equals(other.WrapupPrompt)
+                ) &&
+                (
+                    this.MediaRoles == other.MediaRoles ||
+                    this.MediaRoles != null &&
+                    this.MediaRoles.SequenceEqual(other.MediaRoles)
                 ) &&
                 (
                     this.User == other.User ||
@@ -949,6 +966,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.WrapupPrompt != null)
                     hash = hash * 59 + this.WrapupPrompt.GetHashCode();
+
+                if (this.MediaRoles != null)
+                    hash = hash * 59 + this.MediaRoles.GetHashCode();
 
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();

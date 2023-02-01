@@ -610,7 +610,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum QueueWrapupDetailView for "QUEUE_WRAPUP_DETAIL_VIEW"
             /// </summary>
             [EnumMember(Value = "QUEUE_WRAPUP_DETAIL_VIEW")]
-            QueueWrapupDetailView
+            QueueWrapupDetailView,
+            
+            /// <summary>
+            /// Enum InteractionDetailView for "INTERACTION_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "INTERACTION_DETAIL_VIEW")]
+            InteractionDetailView
         }
         /// <summary>
         /// The user supplied csv delimiter string value either of type 'comma' or 'semicolon' permitted for the export request
@@ -674,7 +680,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ViewType">The type of view export job to be created (required).</param>
         /// <param name="Filter">Filters to apply to create the view (required).</param>
         /// <param name="Read">Indicates if the request has been marked as read.</param>
-        /// <param name="Locale">The locale use for localization of the exported data, i.e. en-us, es-mx   (required).</param>
+        /// <param name="Locale">The locale used for localization of the exported data, i.e. en-US, es (required).</param>
         /// <param name="HasFormatDurations">Indicates if durations are formatted in hh:mm:ss format instead of ms.</param>
         /// <param name="HasSplitFilters">Indicates if filters will be split in aggregate detail exports.</param>
         /// <param name="ExcludeEmptyRows">Excludes empty rows from the exports.</param>
@@ -768,9 +774,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The locale use for localization of the exported data, i.e. en-us, es-mx  
+        /// The locale used for localization of the exported data, i.e. en-US, es
         /// </summary>
-        /// <value>The locale use for localization of the exported data, i.e. en-us, es-mx  </value>
+        /// <value>The locale used for localization of the exported data, i.e. en-US, es</value>
         [DataMember(Name="locale", EmitDefaultValue=false)]
         public string Locale { get; set; }
 

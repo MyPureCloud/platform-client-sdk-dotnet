@@ -190,6 +190,30 @@ namespace PureCloudPlatform.Client.V2.Model
             Clickstreamsettings,
             
             /// <summary>
+            /// Enum Composerpage for "ComposerPage"
+            /// </summary>
+            [EnumMember(Value = "ComposerPage")]
+            Composerpage,
+            
+            /// <summary>
+            /// Enum Composerscript for "ComposerScript"
+            /// </summary>
+            [EnumMember(Value = "ComposerScript")]
+            Composerscript,
+            
+            /// <summary>
+            /// Enum Composerpublishedscript for "ComposerPublishedScript"
+            /// </summary>
+            [EnumMember(Value = "ComposerPublishedScript")]
+            Composerpublishedscript,
+            
+            /// <summary>
+            /// Enum Composertemplate for "ComposerTemplate"
+            /// </summary>
+            [EnumMember(Value = "ComposerTemplate")]
+            Composertemplate,
+            
+            /// <summary>
             /// Enum Configuration for "Configuration"
             /// </summary>
             [EnumMember(Value = "Configuration")]
@@ -518,6 +542,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Integration")]
             Integration,
+            
+            /// <summary>
+            /// Enum Intentminer for "IntentMiner"
+            /// </summary>
+            [EnumMember(Value = "IntentMiner")]
+            Intentminer,
             
             /// <summary>
             /// Enum Ivr for "IVR"
@@ -1040,6 +1070,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Topic")]
             Topic,
+            
+            /// <summary>
+            /// Enum Topicminer for "TopicMiner"
+            /// </summary>
+            [EnumMember(Value = "TopicMiner")]
+            Topicminer,
             
             /// <summary>
             /// Enum Transcriptionsettings for "TranscriptionSettings"

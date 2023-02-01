@@ -61,6 +61,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteWebdeploymentsDeploymentWithHttpInfo (string deploymentId);
 
         /// <summary>
+        /// Deletes a cobrowse session
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="deploymentId">WebMessaging deployment ID</param>
+        /// <param name="sessionId">Cobrowse session id or join code</param>
+        /// <returns>Object</returns>
+        Object DeleteWebdeploymentsDeploymentCobrowseSessionId (string deploymentId, string sessionId);
+
+        /// <summary>
+        /// Deletes a cobrowse session
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="deploymentId">WebMessaging deployment ID</param>
+        /// <param name="sessionId">Cobrowse session id or join code</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> DeleteWebdeploymentsDeploymentCobrowseSessionIdWithHttpInfo (string deploymentId, string sessionId);
+
+        /// <summary>
         /// Invalidate JWT
         /// </summary>
         /// <remarks>
@@ -195,6 +219,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">The deployment ID</param>
         /// <returns>ApiResponse of WebDeployment</returns>
         ApiResponse<WebDeployment> GetWebdeploymentsDeploymentWithHttpInfo (string deploymentId);
+
+        /// <summary>
+        /// Retrieves a cobrowse session
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="deploymentId">WebMessaging deployment ID</param>
+        /// <param name="sessionId">Cobrowse session id or join code</param>
+        /// <returns>CobrowseWebMessagingSession</returns>
+        CobrowseWebMessagingSession GetWebdeploymentsDeploymentCobrowseSessionId (string deploymentId, string sessionId);
+
+        /// <summary>
+        /// Retrieves a cobrowse session
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="deploymentId">WebMessaging deployment ID</param>
+        /// <param name="sessionId">Cobrowse session id or join code</param>
+        /// <returns>ApiResponse of CobrowseWebMessagingSession</returns>
+        ApiResponse<CobrowseWebMessagingSession> GetWebdeploymentsDeploymentCobrowseSessionIdWithHttpInfo (string deploymentId, string sessionId);
 
         /// <summary>
         /// Get active configuration for a given deployment
@@ -449,6 +497,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebdeploymentsDeploymentAsyncWithHttpInfo (string deploymentId);
 
         /// <summary>
+        /// Deletes a cobrowse session
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="deploymentId">WebMessaging deployment ID</param>
+        /// <param name="sessionId">Cobrowse session id or join code</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> DeleteWebdeploymentsDeploymentCobrowseSessionIdAsync (string deploymentId, string sessionId);
+
+        /// <summary>
+        /// Deletes a cobrowse session
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="deploymentId">WebMessaging deployment ID</param>
+        /// <param name="sessionId">Cobrowse session id or join code</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebdeploymentsDeploymentCobrowseSessionIdAsyncWithHttpInfo (string deploymentId, string sessionId);
+
+        /// <summary>
         /// Invalidate JWT
         /// </summary>
         /// <remarks>
@@ -583,6 +655,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deploymentId">The deployment ID</param>
         /// <returns>Task of ApiResponse (WebDeployment)</returns>
         System.Threading.Tasks.Task<ApiResponse<WebDeployment>> GetWebdeploymentsDeploymentAsyncWithHttpInfo (string deploymentId);
+
+        /// <summary>
+        /// Retrieves a cobrowse session
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="deploymentId">WebMessaging deployment ID</param>
+        /// <param name="sessionId">Cobrowse session id or join code</param>
+        /// <returns>Task of CobrowseWebMessagingSession</returns>
+        System.Threading.Tasks.Task<CobrowseWebMessagingSession> GetWebdeploymentsDeploymentCobrowseSessionIdAsync (string deploymentId, string sessionId);
+
+        /// <summary>
+        /// Retrieves a cobrowse session
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="deploymentId">WebMessaging deployment ID</param>
+        /// <param name="sessionId">Cobrowse session id or join code</param>
+        /// <returns>Task of ApiResponse (CobrowseWebMessagingSession)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CobrowseWebMessagingSession>> GetWebdeploymentsDeploymentCobrowseSessionIdAsyncWithHttpInfo (string deploymentId, string sessionId);
 
         /// <summary>
         /// Get active configuration for a given deployment
@@ -1252,6 +1348,196 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
                 null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Deletes a cobrowse session 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="deploymentId">WebMessaging deployment ID</param>
+        /// <param name="sessionId">Cobrowse session id or join code</param>
+        /// <returns>Object</returns>
+        public Object DeleteWebdeploymentsDeploymentCobrowseSessionId (string deploymentId, string sessionId)
+        {
+             ApiResponse<Object> localVarResponse = DeleteWebdeploymentsDeploymentCobrowseSessionIdWithHttpInfo(deploymentId, sessionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Deletes a cobrowse session 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="deploymentId">WebMessaging deployment ID</param>
+        /// <param name="sessionId">Cobrowse session id or join code</param>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > DeleteWebdeploymentsDeploymentCobrowseSessionIdWithHttpInfo (string deploymentId, string sessionId)
+        { 
+            // verify the required parameter 'deploymentId' is set
+            if (deploymentId == null)
+                throw new ApiException(400, "Missing required parameter 'deploymentId' when calling WebDeploymentsApi->DeleteWebdeploymentsDeploymentCobrowseSessionId");
+            // verify the required parameter 'sessionId' is set
+            if (sessionId == null)
+                throw new ApiException(400, "Missing required parameter 'sessionId' when calling WebDeploymentsApi->DeleteWebdeploymentsDeploymentCobrowseSessionId");
+
+            var localVarPath = "/api/v2/webdeployments/deployments/{deploymentId}/cobrowse/{sessionId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (deploymentId != null) localVarPathParams.Add("deploymentId", this.Configuration.ApiClient.ParameterToString(deploymentId));
+            if (sessionId != null) localVarPathParams.Add("sessionId", this.Configuration.ApiClient.ParameterToString(sessionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWebdeploymentsDeploymentCobrowseSessionId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWebdeploymentsDeploymentCobrowseSessionId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Deletes a cobrowse session 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="deploymentId">WebMessaging deployment ID</param>
+        /// <param name="sessionId">Cobrowse session id or join code</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> DeleteWebdeploymentsDeploymentCobrowseSessionIdAsync (string deploymentId, string sessionId)
+        {
+             ApiResponse<Object> localVarResponse = await DeleteWebdeploymentsDeploymentCobrowseSessionIdAsyncWithHttpInfo(deploymentId, sessionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Deletes a cobrowse session 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="deploymentId">WebMessaging deployment ID</param>
+        /// <param name="sessionId">Cobrowse session id or join code</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebdeploymentsDeploymentCobrowseSessionIdAsyncWithHttpInfo (string deploymentId, string sessionId)
+        { 
+            // verify the required parameter 'deploymentId' is set
+            if (deploymentId == null)
+                throw new ApiException(400, "Missing required parameter 'deploymentId' when calling WebDeploymentsApi->DeleteWebdeploymentsDeploymentCobrowseSessionId");
+            
+            // verify the required parameter 'sessionId' is set
+            if (sessionId == null)
+                throw new ApiException(400, "Missing required parameter 'sessionId' when calling WebDeploymentsApi->DeleteWebdeploymentsDeploymentCobrowseSessionId");
+            
+
+            var localVarPath = "/api/v2/webdeployments/deployments/{deploymentId}/cobrowse/{sessionId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (deploymentId != null) localVarPathParams.Add("deploymentId", this.Configuration.ApiClient.ParameterToString(deploymentId));
+            if (sessionId != null) localVarPathParams.Add("sessionId", this.Configuration.ApiClient.ParameterToString(sessionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWebdeploymentsDeploymentCobrowseSessionId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteWebdeploymentsDeploymentCobrowseSessionId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -2387,6 +2673,196 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<WebDeployment>(localVarStatusCode,
                 localVarHeaders,
                 (WebDeployment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WebDeployment)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Retrieves a cobrowse session 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="deploymentId">WebMessaging deployment ID</param>
+        /// <param name="sessionId">Cobrowse session id or join code</param>
+        /// <returns>CobrowseWebMessagingSession</returns>
+        public CobrowseWebMessagingSession GetWebdeploymentsDeploymentCobrowseSessionId (string deploymentId, string sessionId)
+        {
+             ApiResponse<CobrowseWebMessagingSession> localVarResponse = GetWebdeploymentsDeploymentCobrowseSessionIdWithHttpInfo(deploymentId, sessionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieves a cobrowse session 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="deploymentId">WebMessaging deployment ID</param>
+        /// <param name="sessionId">Cobrowse session id or join code</param>
+        /// <returns>ApiResponse of CobrowseWebMessagingSession</returns>
+        public ApiResponse< CobrowseWebMessagingSession > GetWebdeploymentsDeploymentCobrowseSessionIdWithHttpInfo (string deploymentId, string sessionId)
+        { 
+            // verify the required parameter 'deploymentId' is set
+            if (deploymentId == null)
+                throw new ApiException(400, "Missing required parameter 'deploymentId' when calling WebDeploymentsApi->GetWebdeploymentsDeploymentCobrowseSessionId");
+            // verify the required parameter 'sessionId' is set
+            if (sessionId == null)
+                throw new ApiException(400, "Missing required parameter 'sessionId' when calling WebDeploymentsApi->GetWebdeploymentsDeploymentCobrowseSessionId");
+
+            var localVarPath = "/api/v2/webdeployments/deployments/{deploymentId}/cobrowse/{sessionId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (deploymentId != null) localVarPathParams.Add("deploymentId", this.Configuration.ApiClient.ParameterToString(deploymentId));
+            if (sessionId != null) localVarPathParams.Add("sessionId", this.Configuration.ApiClient.ParameterToString(sessionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWebdeploymentsDeploymentCobrowseSessionId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWebdeploymentsDeploymentCobrowseSessionId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CobrowseWebMessagingSession>(localVarStatusCode,
+                localVarHeaders,
+                (CobrowseWebMessagingSession) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CobrowseWebMessagingSession)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Retrieves a cobrowse session 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="deploymentId">WebMessaging deployment ID</param>
+        /// <param name="sessionId">Cobrowse session id or join code</param>
+        /// <returns>Task of CobrowseWebMessagingSession</returns>
+        public async System.Threading.Tasks.Task<CobrowseWebMessagingSession> GetWebdeploymentsDeploymentCobrowseSessionIdAsync (string deploymentId, string sessionId)
+        {
+             ApiResponse<CobrowseWebMessagingSession> localVarResponse = await GetWebdeploymentsDeploymentCobrowseSessionIdAsyncWithHttpInfo(deploymentId, sessionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieves a cobrowse session 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="deploymentId">WebMessaging deployment ID</param>
+        /// <param name="sessionId">Cobrowse session id or join code</param>
+        /// <returns>Task of ApiResponse (CobrowseWebMessagingSession)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CobrowseWebMessagingSession>> GetWebdeploymentsDeploymentCobrowseSessionIdAsyncWithHttpInfo (string deploymentId, string sessionId)
+        { 
+            // verify the required parameter 'deploymentId' is set
+            if (deploymentId == null)
+                throw new ApiException(400, "Missing required parameter 'deploymentId' when calling WebDeploymentsApi->GetWebdeploymentsDeploymentCobrowseSessionId");
+            
+            // verify the required parameter 'sessionId' is set
+            if (sessionId == null)
+                throw new ApiException(400, "Missing required parameter 'sessionId' when calling WebDeploymentsApi->GetWebdeploymentsDeploymentCobrowseSessionId");
+            
+
+            var localVarPath = "/api/v2/webdeployments/deployments/{deploymentId}/cobrowse/{sessionId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (deploymentId != null) localVarPathParams.Add("deploymentId", this.Configuration.ApiClient.ParameterToString(deploymentId));
+            if (sessionId != null) localVarPathParams.Add("sessionId", this.Configuration.ApiClient.ParameterToString(sessionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWebdeploymentsDeploymentCobrowseSessionId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWebdeploymentsDeploymentCobrowseSessionId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CobrowseWebMessagingSession>(localVarStatusCode,
+                localVarHeaders,
+                (CobrowseWebMessagingSession) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CobrowseWebMessagingSession)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

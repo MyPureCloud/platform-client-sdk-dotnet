@@ -97,6 +97,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Architect,
             
             /// <summary>
+            /// Enum Callback for "Callback"
+            /// </summary>
+            [EnumMember(Value = "Callback")]
+            Callback,
+            
+            /// <summary>
             /// Enum Coaching for "Coaching"
             /// </summary>
             [EnumMember(Value = "Coaching")]
@@ -127,16 +133,22 @@ namespace PureCloudPlatform.Client.V2.Model
             Directory,
             
             /// <summary>
+            /// Enum Dynamicschema for "DynamicSchema"
+            /// </summary>
+            [EnumMember(Value = "DynamicSchema")]
+            Dynamicschema,
+            
+            /// <summary>
             /// Enum Emails for "Emails"
             /// </summary>
             [EnumMember(Value = "Emails")]
             Emails,
             
             /// <summary>
-            /// Enum Dynamicschema for "DynamicSchema"
+            /// Enum Employeeperformance for "EmployeePerformance"
             /// </summary>
-            [EnumMember(Value = "DynamicSchema")]
-            Dynamicschema,
+            [EnumMember(Value = "EmployeePerformance")]
+            Employeeperformance,
             
             /// <summary>
             /// Enum Gamification for "Gamification"
@@ -187,6 +199,24 @@ namespace PureCloudPlatform.Client.V2.Model
             Logcapture,
             
             /// <summary>
+            /// Enum Marketplace for "Marketplace"
+            /// </summary>
+            [EnumMember(Value = "Marketplace")]
+            Marketplace,
+            
+            /// <summary>
+            /// Enum Messaging for "Messaging"
+            /// </summary>
+            [EnumMember(Value = "Messaging")]
+            Messaging,
+            
+            /// <summary>
+            /// Enum Numberpurchasing for "NumberPurchasing"
+            /// </summary>
+            [EnumMember(Value = "NumberPurchasing")]
+            Numberpurchasing,
+            
+            /// <summary>
             /// Enum Outbound for "Outbound"
             /// </summary>
             [EnumMember(Value = "Outbound")]
@@ -199,12 +229,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Peoplepermissions,
             
             /// <summary>
-            /// Enum Employeeperformance for "EmployeePerformance"
-            /// </summary>
-            [EnumMember(Value = "EmployeePerformance")]
-            Employeeperformance,
-            
-            /// <summary>
             /// Enum Predictiveengagement for "PredictiveEngagement"
             /// </summary>
             [EnumMember(Value = "PredictiveEngagement")]
@@ -215,6 +239,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Presence")]
             Presence,
+            
+            /// <summary>
+            /// Enum Processautomation for "ProcessAutomation"
+            /// </summary>
+            [EnumMember(Value = "ProcessAutomation")]
+            Processautomation,
             
             /// <summary>
             /// Enum Quality for "Quality"
@@ -235,10 +265,28 @@ namespace PureCloudPlatform.Client.V2.Model
             Routing,
             
             /// <summary>
+            /// Enum Scim for "SCIM"
+            /// </summary>
+            [EnumMember(Value = "SCIM")]
+            Scim,
+            
+            /// <summary>
+            /// Enum Scripter for "Scripter"
+            /// </summary>
+            [EnumMember(Value = "Scripter")]
+            Scripter,
+            
+            /// <summary>
             /// Enum Speechandtextanalytics for "SpeechAndTextAnalytics"
             /// </summary>
             [EnumMember(Value = "SpeechAndTextAnalytics")]
             Speechandtextanalytics,
+            
+            /// <summary>
+            /// Enum Supportability for "Supportability"
+            /// </summary>
+            [EnumMember(Value = "Supportability")]
+            Supportability,
             
             /// <summary>
             /// Enum Telephony for "Telephony"
@@ -251,12 +299,6 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Triggers")]
             Triggers,
-            
-            /// <summary>
-            /// Enum Processautomation for "ProcessAutomation"
-            /// </summary>
-            [EnumMember(Value = "ProcessAutomation")]
-            Processautomation,
             
             /// <summary>
             /// Enum Voicemail for "Voicemail"
@@ -283,46 +325,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Workforcemanagement,
             
             /// <summary>
-            /// Enum Messaging for "Messaging"
-            /// </summary>
-            [EnumMember(Value = "Messaging")]
-            Messaging,
-            
-            /// <summary>
-            /// Enum Supportability for "Supportability"
-            /// </summary>
-            [EnumMember(Value = "Supportability")]
-            Supportability,
-            
-            /// <summary>
-            /// Enum Callback for "Callback"
-            /// </summary>
-            [EnumMember(Value = "Callback")]
-            Callback,
-            
-            /// <summary>
             /// Enum Workitems for "Workitems"
             /// </summary>
             [EnumMember(Value = "Workitems")]
-            Workitems,
-            
-            /// <summary>
-            /// Enum Scim for "SCIM"
-            /// </summary>
-            [EnumMember(Value = "SCIM")]
-            Scim,
-            
-            /// <summary>
-            /// Enum Numberpurchasing for "NumberPurchasing"
-            /// </summary>
-            [EnumMember(Value = "NumberPurchasing")]
-            Numberpurchasing,
-            
-            /// <summary>
-            /// Enum Marketplace for "Marketplace"
-            /// </summary>
-            [EnumMember(Value = "Marketplace")]
-            Marketplace
+            Workitems
         }
         /// <summary>
         /// Status of the audit query execution request.

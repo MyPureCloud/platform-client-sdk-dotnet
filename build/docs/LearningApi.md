@@ -284,7 +284,7 @@ namespace Example
             var sortOrder = sortOrder_example;  // string | Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional)  (default to Desc)
             var sortBy = sortBy_example;  // string | Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional) 
             var userId = new List<string>(); // List<string> | Specifies the list of user IDs to be queried, up to 100 user IDs. (optional) 
-            var types = new List<string>(); // List<string> | Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned (optional) 
+            var types = new List<string>(); // List<string> | Specifies the module types to filter by (optional) 
             var states = new List<string>(); // List<string> | Specifies the assignment states to filter by (optional) 
             var expand = new List<string>(); // List<string> | Specifies the expand option for returning additional information (optional) 
 
@@ -320,7 +320,7 @@ namespace Example
 | **sortOrder** | **string**| Specifies result set sort order; if not specified, default sort order is descending (Desc) | [optional] [default to Desc]<br />**Values**: Asc, Desc |
 | **sortBy** | **string**| Specifies which field to sort the results by, default sort is by recommendedCompletionDate | [optional] <br />**Values**: RecommendedCompletionDate, DateModified |
 | **userId** | [**List<string>**](string.html)| Specifies the list of user IDs to be queried, up to 100 user IDs. | [optional]  |
-| **types** | [**List<string>**](string.html)| Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned | [optional] <br />**Values**: Informational, AssessedContent, Assessment |
+| **types** | [**List<string>**](string.html)| Specifies the module types to filter by | [optional] <br />**Values**: Informational, AssessedContent, Assessment |
 | **states** | [**List<string>**](string.html)| Specifies the assignment states to filter by | [optional] <br />**Values**: Assigned, InProgress, Completed, NotCompleted |
 | **expand** | [**List<string>**](string.html)| Specifies the expand option for returning additional information | [optional] <br />**Values**: ModuleSummary |
 {: class="table table-striped"}
@@ -375,7 +375,7 @@ namespace Example
             var maxPercentageScore = 3.4F;  // float? | The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional) 
             var sortOrder = sortOrder_example;  // string | Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional)  (default to Desc)
             var sortBy = sortBy_example;  // string | Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional) 
-            var types = new List<string>(); // List<string> | Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned (optional) 
+            var types = new List<string>(); // List<string> | Specifies the module types to filter by (optional) 
             var states = new List<string>(); // List<string> | Specifies the assignment states to filter by (optional) 
             var expand = new List<string>(); // List<string> | Specifies the expand option for returning additional information (optional) 
 
@@ -410,7 +410,7 @@ namespace Example
 | **maxPercentageScore** | **float?**| The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) | [optional]  |
 | **sortOrder** | **string**| Specifies result set sort order; if not specified, default sort order is descending (Desc) | [optional] [default to Desc]<br />**Values**: Asc, Desc |
 | **sortBy** | **string**| Specifies which field to sort the results by, default sort is by recommendedCompletionDate | [optional] <br />**Values**: RecommendedCompletionDate, DateModified |
-| **types** | [**List<string>**](string.html)| Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned | [optional] <br />**Values**: Informational, AssessedContent, Assessment |
+| **types** | [**List<string>**](string.html)| Specifies the module types to filter by | [optional] <br />**Values**: Informational, AssessedContent, Assessment |
 | **states** | [**List<string>**](string.html)| Specifies the assignment states to filter by | [optional] <br />**Values**: Assigned, InProgress, Completed, NotCompleted |
 | **expand** | [**List<string>**](string.html)| Specifies the expand option for returning additional information | [optional] <br />**Values**: ModuleSummary |
 {: class="table table-striped"}

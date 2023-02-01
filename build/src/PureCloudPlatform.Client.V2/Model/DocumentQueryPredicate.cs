@@ -75,6 +75,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Contextvaluename,
             
             /// <summary>
+            /// Enum Documentid for "documentId"
+            /// </summary>
+            [EnumMember(Value = "documentId")]
+            Documentid,
+            
+            /// <summary>
             /// Enum Labelid for "labelId"
             /// </summary>
             [EnumMember(Value = "labelId")]

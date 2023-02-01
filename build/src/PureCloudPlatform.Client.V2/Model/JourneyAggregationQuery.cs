@@ -147,6 +147,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Journeyfrequencycapreason,
             
             /// <summary>
+            /// Enum Journeyipgeolocationcountry for "journeyIpGeolocationCountry"
+            /// </summary>
+            [EnumMember(Value = "journeyIpGeolocationCountry")]
+            Journeyipgeolocationcountry,
+            
+            /// <summary>
             /// Enum Journeyoutcomeid for "journeyOutcomeId"
             /// </summary>
             [EnumMember(Value = "journeyOutcomeId")]
@@ -210,7 +216,61 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Touchpointactionmapid for "touchpointActionMapId"
             /// </summary>
             [EnumMember(Value = "touchpointActionMapId")]
-            Touchpointactionmapid
+            Touchpointactionmapid,
+            
+            /// <summary>
+            /// Enum Touchpointagentid for "touchpointAgentId"
+            /// </summary>
+            [EnumMember(Value = "touchpointAgentId")]
+            Touchpointagentid,
+            
+            /// <summary>
+            /// Enum Touchpointattributionscope for "touchpointAttributionScope"
+            /// </summary>
+            [EnumMember(Value = "touchpointAttributionScope")]
+            Touchpointattributionscope,
+            
+            /// <summary>
+            /// Enum Touchpointchannelmessagetype for "touchpointChannelMessageType"
+            /// </summary>
+            [EnumMember(Value = "touchpointChannelMessageType")]
+            Touchpointchannelmessagetype,
+            
+            /// <summary>
+            /// Enum Touchpointchannelplatform for "touchpointChannelPlatform"
+            /// </summary>
+            [EnumMember(Value = "touchpointChannelPlatform")]
+            Touchpointchannelplatform,
+            
+            /// <summary>
+            /// Enum Touchpointchanneltype for "touchpointChannelType"
+            /// </summary>
+            [EnumMember(Value = "touchpointChannelType")]
+            Touchpointchanneltype,
+            
+            /// <summary>
+            /// Enum Touchpointconversationid for "touchpointConversationId"
+            /// </summary>
+            [EnumMember(Value = "touchpointConversationId")]
+            Touchpointconversationid,
+            
+            /// <summary>
+            /// Enum Touchpointinteractiontype for "touchpointInteractionType"
+            /// </summary>
+            [EnumMember(Value = "touchpointInteractionType")]
+            Touchpointinteractiontype,
+            
+            /// <summary>
+            /// Enum Touchpointqueueid for "touchpointQueueId"
+            /// </summary>
+            [EnumMember(Value = "touchpointQueueId")]
+            Touchpointqueueid,
+            
+            /// <summary>
+            /// Enum Touchpointwrapupcode for "touchpointWrapupCode"
+            /// </summary>
+            [EnumMember(Value = "touchpointWrapupCode")]
+            Touchpointwrapupcode
         }
         /// <summary>
         /// Gets or Sets Metrics
@@ -345,6 +405,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "nWebActionsTimedout")]
             Nwebactionstimedout,
+            
+            /// <summary>
+            /// Enum Ojourneyoutcometouchpointvalue for "oJourneyOutcomeTouchpointValue"
+            /// </summary>
+            [EnumMember(Value = "oJourneyOutcomeTouchpointValue")]
+            Ojourneyoutcometouchpointvalue,
             
             /// <summary>
             /// Enum Ojourneyoutcomevalue for "oJourneyOutcomeValue"

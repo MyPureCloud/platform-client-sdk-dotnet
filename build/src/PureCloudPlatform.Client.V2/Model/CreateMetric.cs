@@ -18,6 +18,51 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CreateMetric :  IEquatable<CreateMetric>
     {
+        /// <summary>
+        /// The time unit in which the metric should be displayed - - this parameter is ignored when displaying non-time values
+        /// </summary>
+        /// <value>The time unit in which the metric should be displayed - - this parameter is ignored when displaying non-time values</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum TimeDisplayUnitEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            [EnumMember(Value = "None")]
+            None,
+            
+            /// <summary>
+            /// Enum Seconds for "Seconds"
+            /// </summary>
+            [EnumMember(Value = "Seconds")]
+            Seconds,
+            
+            /// <summary>
+            /// Enum Minutes for "Minutes"
+            /// </summary>
+            [EnumMember(Value = "Minutes")]
+            Minutes,
+            
+            /// <summary>
+            /// Enum Hours for "Hours"
+            /// </summary>
+            [EnumMember(Value = "Hours")]
+            Hours
+        }
+        /// <summary>
+        /// The time unit in which the metric should be displayed - - this parameter is ignored when displaying non-time values
+        /// </summary>
+        /// <value>The time unit in which the metric should be displayed - - this parameter is ignored when displaying non-time values</value>
+        [DataMember(Name="timeDisplayUnit", EmitDefaultValue=false)]
+        public TimeDisplayUnitEnum? TimeDisplayUnit { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateMetric" /> class.
@@ -32,13 +77,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Objective">Associated objective for this metric.</param>
         /// <param name="PerformanceProfileId">Performance profile id of this metric.</param>
         /// <param name="Name">The name of this metric (required).</param>
-        public CreateMetric(string MetricDefinitionId = null, string ExternalMetricDefinitionId = null, CreateObjective Objective = null, string PerformanceProfileId = null, string Name = null)
+        /// <param name="Precision">The precision of the metric, must be between 0 and 5.</param>
+        /// <param name="TimeDisplayUnit">The time unit in which the metric should be displayed - - this parameter is ignored when displaying non-time values.</param>
+        public CreateMetric(string MetricDefinitionId = null, string ExternalMetricDefinitionId = null, CreateObjective Objective = null, string PerformanceProfileId = null, string Name = null, int? Precision = null, TimeDisplayUnitEnum? TimeDisplayUnit = null)
         {
             this.MetricDefinitionId = MetricDefinitionId;
             this.ExternalMetricDefinitionId = ExternalMetricDefinitionId;
             this.Objective = Objective;
             this.PerformanceProfileId = PerformanceProfileId;
             this.Name = Name;
+            this.Precision = Precision;
+            this.TimeDisplayUnit = TimeDisplayUnit;
             
         }
         
@@ -88,6 +137,17 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Name { get; set; }
 
 
+
+        /// <summary>
+        /// The precision of the metric, must be between 0 and 5
+        /// </summary>
+        /// <value>The precision of the metric, must be between 0 and 5</value>
+        [DataMember(Name="precision", EmitDefaultValue=false)]
+        public int? Precision { get; set; }
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,6 +162,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Objective: ").Append(Objective).Append("\n");
             sb.Append("  PerformanceProfileId: ").Append(PerformanceProfileId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Precision: ").Append(Precision).Append("\n");
+            sb.Append("  TimeDisplayUnit: ").Append(TimeDisplayUnit).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -166,6 +228,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
+                ) &&
+                (
+                    this.Precision == other.Precision ||
+                    this.Precision != null &&
+                    this.Precision.Equals(other.Precision)
+                ) &&
+                (
+                    this.TimeDisplayUnit == other.TimeDisplayUnit ||
+                    this.TimeDisplayUnit != null &&
+                    this.TimeDisplayUnit.Equals(other.TimeDisplayUnit)
                 );
         }
 
@@ -194,6 +266,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+
+                if (this.Precision != null)
+                    hash = hash * 59 + this.Precision.GetHashCode();
+
+                if (this.TimeDisplayUnit != null)
+                    hash = hash * 59 + this.TimeDisplayUnit.GetHashCode();
 
                 return hash;
             }

@@ -506,11 +506,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="JourneyContext">JourneyContext.</param>
         /// <param name="StartAcwTime">StartAcwTime.</param>
         /// <param name="EndAcwTime">EndAcwTime.</param>
+        /// <param name="MediaRoles">MediaRoles.</param>
         /// <param name="Messages">Messages.</param>
         /// <param name="Type">Type.</param>
         /// <param name="RecipientCountry">RecipientCountry.</param>
         /// <param name="RecipientType">RecipientType.</param>
-        public ConversationMessageEventTopicMessageMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, ConversationMessageEventTopicUriReference User = null, ConversationMessageEventTopicUriReference Queue = null, ConversationMessageEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, ConversationMessageEventTopicErrorBody ErrorInfo = null, ConversationMessageEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, ConversationMessageEventTopicUriReference ExternalContact = null, ConversationMessageEventTopicUriReference ExternalOrganization = null, ConversationMessageEventTopicWrapup Wrapup = null, ConversationMessageEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, ConversationMessageEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, List<ConversationMessageEventTopicMessageDetails> Messages = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null)
+        public ConversationMessageEventTopicMessageMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, ConversationMessageEventTopicUriReference User = null, ConversationMessageEventTopicUriReference Queue = null, ConversationMessageEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, ConversationMessageEventTopicErrorBody ErrorInfo = null, ConversationMessageEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, ConversationMessageEventTopicUriReference ExternalContact = null, ConversationMessageEventTopicUriReference ExternalOrganization = null, ConversationMessageEventTopicWrapup Wrapup = null, ConversationMessageEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, ConversationMessageEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, List<string> MediaRoles = null, List<ConversationMessageEventTopicMessageDetails> Messages = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -547,6 +548,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.JourneyContext = JourneyContext;
             this.StartAcwTime = StartAcwTime;
             this.EndAcwTime = EndAcwTime;
+            this.MediaRoles = MediaRoles;
             this.Messages = Messages;
             this.Type = Type;
             this.RecipientCountry = RecipientCountry;
@@ -807,6 +809,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets MediaRoles
+        /// </summary>
+        [DataMember(Name="mediaRoles", EmitDefaultValue=false)]
+        public List<string> MediaRoles { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets Messages
         /// </summary>
         [DataMember(Name="messages", EmitDefaultValue=false)]
@@ -875,6 +885,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  JourneyContext: ").Append(JourneyContext).Append("\n");
             sb.Append("  StartAcwTime: ").Append(StartAcwTime).Append("\n");
             sb.Append("  EndAcwTime: ").Append(EndAcwTime).Append("\n");
+            sb.Append("  MediaRoles: ").Append(MediaRoles).Append("\n");
             sb.Append("  Messages: ").Append(Messages).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  RecipientCountry: ").Append(RecipientCountry).Append("\n");
@@ -1095,6 +1106,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EndAcwTime.Equals(other.EndAcwTime)
                 ) &&
                 (
+                    this.MediaRoles == other.MediaRoles ||
+                    this.MediaRoles != null &&
+                    this.MediaRoles.SequenceEqual(other.MediaRoles)
+                ) &&
+                (
                     this.Messages == other.Messages ||
                     this.Messages != null &&
                     this.Messages.SequenceEqual(other.Messages)
@@ -1231,6 +1247,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EndAcwTime != null)
                     hash = hash * 59 + this.EndAcwTime.GetHashCode();
+
+                if (this.MediaRoles != null)
+                    hash = hash * 59 + this.MediaRoles.GetHashCode();
 
                 if (this.Messages != null)
                     hash = hash * 59 + this.Messages.GetHashCode();

@@ -667,7 +667,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum QueueWrapupDetailView for "QUEUE_WRAPUP_DETAIL_VIEW"
             /// </summary>
             [EnumMember(Value = "QUEUE_WRAPUP_DETAIL_VIEW")]
-            QueueWrapupDetailView
+            QueueWrapupDetailView,
+            
+            /// <summary>
+            /// Enum InteractionDetailView for "INTERACTION_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "INTERACTION_DETAIL_VIEW")]
+            InteractionDetailView
         }
         /// <summary>
         /// The error message in case the export request failed

@@ -18,6 +18,51 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Metric :  IEquatable<Metric>
     {
+        /// <summary>
+        /// The time unit in which the metric should be displayed - - this parameter is ignored when displaying non-time values
+        /// </summary>
+        /// <value>The time unit in which the metric should be displayed - - this parameter is ignored when displaying non-time values</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum TimeDisplayUnitEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            [EnumMember(Value = "None")]
+            None,
+            
+            /// <summary>
+            /// Enum Seconds for "Seconds"
+            /// </summary>
+            [EnumMember(Value = "Seconds")]
+            Seconds,
+            
+            /// <summary>
+            /// Enum Minutes for "Minutes"
+            /// </summary>
+            [EnumMember(Value = "Minutes")]
+            Minutes,
+            
+            /// <summary>
+            /// Enum Hours for "Hours"
+            /// </summary>
+            [EnumMember(Value = "Hours")]
+            Hours
+        }
+        /// <summary>
+        /// The time unit in which the metric should be displayed - - this parameter is ignored when displaying non-time values
+        /// </summary>
+        /// <value>The time unit in which the metric should be displayed - - this parameter is ignored when displaying non-time values</value>
+        [DataMember(Name="timeDisplayUnit", EmitDefaultValue=false)]
+        public TimeDisplayUnitEnum? TimeDisplayUnit { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Metric" /> class.
@@ -32,13 +77,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExternalMetricDefinitionId">The id of associated external metric definition.</param>
         /// <param name="Objective">Associated objective for this metric.</param>
         /// <param name="PerformanceProfileId">Performance profile id of this metric.</param>
-        public Metric(string Name = null, string MetricDefinitionId = null, string ExternalMetricDefinitionId = null, Objective Objective = null, string PerformanceProfileId = null)
+        /// <param name="TimeDisplayUnit">The time unit in which the metric should be displayed - - this parameter is ignored when displaying non-time values.</param>
+        public Metric(string Name = null, string MetricDefinitionId = null, string ExternalMetricDefinitionId = null, Objective Objective = null, string PerformanceProfileId = null, TimeDisplayUnitEnum? TimeDisplayUnit = null)
         {
             this.Name = Name;
             this.MetricDefinitionId = MetricDefinitionId;
             this.ExternalMetricDefinitionId = ExternalMetricDefinitionId;
             this.Objective = Objective;
             this.PerformanceProfileId = PerformanceProfileId;
+            this.TimeDisplayUnit = TimeDisplayUnit;
             
         }
         
@@ -126,6 +173,17 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The precision of the metric, must be between 0 and 5
+        /// </summary>
+        /// <value>The precision of the metric, must be between 0 and 5</value>
+        [DataMember(Name="precision", EmitDefaultValue=false)]
+        public int? Precision { get; private set; }
+
+
+
+
+
+        /// <summary>
         /// The source performance profile when this metric is linked
         /// </summary>
         /// <value>The source performance profile when this metric is linked</value>
@@ -160,6 +218,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  LinkedMetric: ").Append(LinkedMetric).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateUnlinked: ").Append(DateUnlinked).Append("\n");
+            sb.Append("  Precision: ").Append(Precision).Append("\n");
+            sb.Append("  TimeDisplayUnit: ").Append(TimeDisplayUnit).Append("\n");
             sb.Append("  SourcePerformanceProfile: ").Append(SourcePerformanceProfile).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -248,6 +308,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateUnlinked.Equals(other.DateUnlinked)
                 ) &&
                 (
+                    this.Precision == other.Precision ||
+                    this.Precision != null &&
+                    this.Precision.Equals(other.Precision)
+                ) &&
+                (
+                    this.TimeDisplayUnit == other.TimeDisplayUnit ||
+                    this.TimeDisplayUnit != null &&
+                    this.TimeDisplayUnit.Equals(other.TimeDisplayUnit)
+                ) &&
+                (
                     this.SourcePerformanceProfile == other.SourcePerformanceProfile ||
                     this.SourcePerformanceProfile != null &&
                     this.SourcePerformanceProfile.Equals(other.SourcePerformanceProfile)
@@ -296,6 +366,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DateUnlinked != null)
                     hash = hash * 59 + this.DateUnlinked.GetHashCode();
+
+                if (this.Precision != null)
+                    hash = hash * 59 + this.Precision.GetHashCode();
+
+                if (this.TimeDisplayUnit != null)
+                    hash = hash * 59 + this.TimeDisplayUnit.GetHashCode();
 
                 if (this.SourcePerformanceProfile != null)
                     hash = hash * 59 + this.SourcePerformanceProfile.GetHashCode();

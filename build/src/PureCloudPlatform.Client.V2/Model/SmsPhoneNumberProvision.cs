@@ -72,17 +72,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SmsPhoneNumberProvision" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
         /// <param name="PhoneNumber">A phone number to be used for SMS communications. E.g. +13175555555 or +34234234234 (required).</param>
         /// <param name="PhoneNumberType">Type of the phone number provisioned. (required).</param>
         /// <param name="CountryCode">The ISO 3166-1 alpha-2 country code of the country this phone number is associated with. (required).</param>
+        /// <param name="Name">Name.</param>
         /// <param name="AddressId">The id of an address added on your account. Due to regulatory requirements in some countries, an address may be required when provisioning a sms number. In those cases you should provide the provisioned sms address id here.</param>
-        public SmsPhoneNumberProvision(string Name = null, string PhoneNumber = null, PhoneNumberTypeEnum? PhoneNumberType = null, string CountryCode = null, string AddressId = null)
+        public SmsPhoneNumberProvision(string PhoneNumber = null, PhoneNumberTypeEnum? PhoneNumberType = null, string CountryCode = null, string Name = null, string AddressId = null)
         {
-            this.Name = Name;
             this.PhoneNumber = PhoneNumber;
             this.PhoneNumberType = PhoneNumberType;
             this.CountryCode = CountryCode;
+            this.Name = Name;
             this.AddressId = AddressId;
             
         }
@@ -95,14 +95,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-
-
-
-        /// <summary>
-        /// Gets or Sets Name
-        /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
 
 
 
@@ -123,6 +115,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The ISO 3166-1 alpha-2 country code of the country this phone number is associated with.</value>
         [DataMember(Name="countryCode", EmitDefaultValue=false)]
         public string CountryCode { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets Name
+        /// </summary>
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
 
 
 
@@ -153,10 +153,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class SmsPhoneNumberProvision {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             sb.Append("  PhoneNumberType: ").Append(PhoneNumberType).Append("\n");
             sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  AddressId: ").Append(AddressId).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -205,11 +205,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
-                ) &&
-                (
                     this.PhoneNumber == other.PhoneNumber ||
                     this.PhoneNumber != null &&
                     this.PhoneNumber.Equals(other.PhoneNumber)
@@ -223,6 +218,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CountryCode == other.CountryCode ||
                     this.CountryCode != null &&
                     this.CountryCode.Equals(other.CountryCode)
+                ) &&
+                (
+                    this.Name == other.Name ||
+                    this.Name != null &&
+                    this.Name.Equals(other.Name)
                 ) &&
                 (
                     this.AddressId == other.AddressId ||
@@ -250,9 +250,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
 
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
-
                 if (this.PhoneNumber != null)
                     hash = hash * 59 + this.PhoneNumber.GetHashCode();
 
@@ -261,6 +258,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.CountryCode != null)
                     hash = hash * 59 + this.CountryCode.GetHashCode();
+
+                if (this.Name != null)
+                    hash = hash * 59 + this.Name.GetHashCode();
 
                 if (this.AddressId != null)
                     hash = hash * 59 + this.AddressId.GetHashCode();

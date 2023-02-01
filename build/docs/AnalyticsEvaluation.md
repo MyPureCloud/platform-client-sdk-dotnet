@@ -11,6 +11,7 @@ title: AnalyticsEvaluation
 | **ContextId** | **string** | A unique identifier for an evaluation form, regardless of version | [optional] |
 | **Deleted** | **bool?** | Whether the evaluation has been deleted | [optional] |
 | **EvaluationId** | **string** | Unique identifier for the evaluation | [optional] |
+| **EvaluationStatus** | **string** | Status of evaluation | [optional] |
 | **EvaluatorId** | **string** | A unique identifier of the user who evaluated the interaction | [optional] |
 | **EventTime** | **DateTime?** | Specifies when an evaluation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **FormId** | **string** | ID of the evaluation form used | [optional] |

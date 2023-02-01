@@ -9,12 +9,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- | ------------- |
 | [**DeleteWebdeploymentsConfiguration**](WebDeploymentsApi.html#deletewebdeploymentsconfiguration) | **DELETE** /api/v2/webdeployments/configurations/{configurationId} | Delete all versions of a configuration |
 | [**DeleteWebdeploymentsDeployment**](WebDeploymentsApi.html#deletewebdeploymentsdeployment) | **DELETE** /api/v2/webdeployments/deployments/{deploymentId} | Delete a deployment |
+| [**DeleteWebdeploymentsDeploymentCobrowseSessionId**](WebDeploymentsApi.html#deletewebdeploymentsdeploymentcobrowsesessionid) | **DELETE** /api/v2/webdeployments/deployments/{deploymentId}/cobrowse/{sessionId} | Deletes a cobrowse session |
 | [**DeleteWebdeploymentsTokenRevoke**](WebDeploymentsApi.html#deletewebdeploymentstokenrevoke) | **DELETE** /api/v2/webdeployments/token/revoke | Invalidate JWT |
 | [**GetWebdeploymentsConfigurationVersion**](WebDeploymentsApi.html#getwebdeploymentsconfigurationversion) | **GET** /api/v2/webdeployments/configurations/{configurationId}/versions/{versionId} | Get a configuration version |
 | [**GetWebdeploymentsConfigurationVersions**](WebDeploymentsApi.html#getwebdeploymentsconfigurationversions) | **GET** /api/v2/webdeployments/configurations/{configurationId}/versions | Get the versions of a configuration |
 | [**GetWebdeploymentsConfigurationVersionsDraft**](WebDeploymentsApi.html#getwebdeploymentsconfigurationversionsdraft) | **GET** /api/v2/webdeployments/configurations/{configurationId}/versions/draft | Get the configuration draft |
 | [**GetWebdeploymentsConfigurations**](WebDeploymentsApi.html#getwebdeploymentsconfigurations) | **GET** /api/v2/webdeployments/configurations | View configuration drafts |
 | [**GetWebdeploymentsDeployment**](WebDeploymentsApi.html#getwebdeploymentsdeployment) | **GET** /api/v2/webdeployments/deployments/{deploymentId} | Get a deployment |
+| [**GetWebdeploymentsDeploymentCobrowseSessionId**](WebDeploymentsApi.html#getwebdeploymentsdeploymentcobrowsesessionid) | **GET** /api/v2/webdeployments/deployments/{deploymentId}/cobrowse/{sessionId} | Retrieves a cobrowse session |
 | [**GetWebdeploymentsDeploymentConfigurations**](WebDeploymentsApi.html#getwebdeploymentsdeploymentconfigurations) | **GET** /api/v2/webdeployments/deployments/{deploymentId}/configurations | Get active configuration for a given deployment |
 | [**GetWebdeploymentsDeployments**](WebDeploymentsApi.html#getwebdeploymentsdeployments) | **GET** /api/v2/webdeployments/deployments | Get deployments |
 | [**PostWebdeploymentsConfigurationVersionsDraftPublish**](WebDeploymentsApi.html#postwebdeploymentsconfigurationversionsdraftpublish) | **POST** /api/v2/webdeployments/configurations/{configurationId}/versions/draft/publish | Publish the configuration draft and create a new version |
@@ -153,6 +155,66 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+<a name="deletewebdeploymentsdeploymentcobrowsesessionid"></a>
+
+## **Object** DeleteWebdeploymentsDeploymentCobrowseSessionId (string deploymentId, string sessionId)
+
+
+
+Deletes a cobrowse session
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteWebdeploymentsDeploymentCobrowseSessionIdExample
+    {
+        public void main()
+        { 
+
+            var apiInstance = new WebDeploymentsApi();
+            var deploymentId = deploymentId_example;  // string | WebMessaging deployment ID
+            var sessionId = sessionId_example;  // string | Cobrowse session id or join code
+
+            try
+            { 
+                // Deletes a cobrowse session
+                Object result = apiInstance.DeleteWebdeploymentsDeploymentCobrowseSessionId(deploymentId, sessionId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WebDeploymentsApi.DeleteWebdeploymentsDeploymentCobrowseSessionId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **deploymentId** | **string**| WebMessaging deployment ID |  |
+| **sessionId** | **string**| Cobrowse session id or join code |  |
+{: class="table table-striped"}
+
+### Return type
+
+**Object**
 
 <a name="deletewebdeploymentstokenrevoke"></a>
 
@@ -541,6 +603,66 @@ namespace Example
 ### Return type
 
 [**WebDeployment**](WebDeployment.html)
+
+<a name="getwebdeploymentsdeploymentcobrowsesessionid"></a>
+
+## [**CobrowseWebMessagingSession**](CobrowseWebMessagingSession.html) GetWebdeploymentsDeploymentCobrowseSessionId (string deploymentId, string sessionId)
+
+
+
+Retrieves a cobrowse session
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWebdeploymentsDeploymentCobrowseSessionIdExample
+    {
+        public void main()
+        { 
+
+            var apiInstance = new WebDeploymentsApi();
+            var deploymentId = deploymentId_example;  // string | WebMessaging deployment ID
+            var sessionId = sessionId_example;  // string | Cobrowse session id or join code
+
+            try
+            { 
+                // Retrieves a cobrowse session
+                CobrowseWebMessagingSession result = apiInstance.GetWebdeploymentsDeploymentCobrowseSessionId(deploymentId, sessionId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WebDeploymentsApi.GetWebdeploymentsDeploymentCobrowseSessionId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **deploymentId** | **string**| WebMessaging deployment ID |  |
+| **sessionId** | **string**| Cobrowse session id or join code |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CobrowseWebMessagingSession**](CobrowseWebMessagingSession.html)
 
 <a name="getwebdeploymentsdeploymentconfigurations"></a>
 

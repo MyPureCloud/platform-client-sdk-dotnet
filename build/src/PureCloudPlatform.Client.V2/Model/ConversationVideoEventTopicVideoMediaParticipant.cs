@@ -409,13 +409,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="JourneyContext">JourneyContext.</param>
         /// <param name="StartAcwTime">StartAcwTime.</param>
         /// <param name="EndAcwTime">EndAcwTime.</param>
+        /// <param name="MediaRoles">MediaRoles.</param>
         /// <param name="AudioMuted">AudioMuted.</param>
         /// <param name="VideoMuted">VideoMuted.</param>
         /// <param name="SharingScreen">SharingScreen.</param>
         /// <param name="PeerCount">PeerCount.</param>
         /// <param name="Context">Context.</param>
         /// <param name="Msids">Msids.</param>
-        public ConversationVideoEventTopicVideoMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, ConversationVideoEventTopicUriReference User = null, ConversationVideoEventTopicUriReference Queue = null, ConversationVideoEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, ConversationVideoEventTopicErrorBody ErrorInfo = null, ConversationVideoEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, ConversationVideoEventTopicUriReference ExternalContact = null, ConversationVideoEventTopicUriReference ExternalOrganization = null, ConversationVideoEventTopicWrapup Wrapup = null, ConversationVideoEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, ConversationVideoEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, bool? AudioMuted = null, bool? VideoMuted = null, bool? SharingScreen = null, int? PeerCount = null, string Context = null, List<string> Msids = null)
+        public ConversationVideoEventTopicVideoMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, ConversationVideoEventTopicUriReference User = null, ConversationVideoEventTopicUriReference Queue = null, ConversationVideoEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, ConversationVideoEventTopicErrorBody ErrorInfo = null, ConversationVideoEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, ConversationVideoEventTopicUriReference ExternalContact = null, ConversationVideoEventTopicUriReference ExternalOrganization = null, ConversationVideoEventTopicWrapup Wrapup = null, ConversationVideoEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, ConversationVideoEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, List<string> MediaRoles = null, bool? AudioMuted = null, bool? VideoMuted = null, bool? SharingScreen = null, int? PeerCount = null, string Context = null, List<string> Msids = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -452,6 +453,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.JourneyContext = JourneyContext;
             this.StartAcwTime = StartAcwTime;
             this.EndAcwTime = EndAcwTime;
+            this.MediaRoles = MediaRoles;
             this.AudioMuted = AudioMuted;
             this.VideoMuted = VideoMuted;
             this.SharingScreen = SharingScreen;
@@ -714,6 +716,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets MediaRoles
+        /// </summary>
+        [DataMember(Name="mediaRoles", EmitDefaultValue=false)]
+        public List<string> MediaRoles { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets AudioMuted
         /// </summary>
         [DataMember(Name="audioMuted", EmitDefaultValue=false)]
@@ -804,6 +814,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  JourneyContext: ").Append(JourneyContext).Append("\n");
             sb.Append("  StartAcwTime: ").Append(StartAcwTime).Append("\n");
             sb.Append("  EndAcwTime: ").Append(EndAcwTime).Append("\n");
+            sb.Append("  MediaRoles: ").Append(MediaRoles).Append("\n");
             sb.Append("  AudioMuted: ").Append(AudioMuted).Append("\n");
             sb.Append("  VideoMuted: ").Append(VideoMuted).Append("\n");
             sb.Append("  SharingScreen: ").Append(SharingScreen).Append("\n");
@@ -1026,6 +1037,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EndAcwTime.Equals(other.EndAcwTime)
                 ) &&
                 (
+                    this.MediaRoles == other.MediaRoles ||
+                    this.MediaRoles != null &&
+                    this.MediaRoles.SequenceEqual(other.MediaRoles)
+                ) &&
+                (
                     this.AudioMuted == other.AudioMuted ||
                     this.AudioMuted != null &&
                     this.AudioMuted.Equals(other.AudioMuted)
@@ -1172,6 +1188,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EndAcwTime != null)
                     hash = hash * 59 + this.EndAcwTime.GetHashCode();
+
+                if (this.MediaRoles != null)
+                    hash = hash * 59 + this.MediaRoles.GetHashCode();
 
                 if (this.AudioMuted != null)
                     hash = hash * 59 + this.AudioMuted.GetHashCode();

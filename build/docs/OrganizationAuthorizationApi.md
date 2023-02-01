@@ -9,14 +9,20 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- | ------------- |
 | [**DeleteOrgauthorizationTrustee**](OrganizationAuthorizationApi.html#deleteorgauthorizationtrustee) | **DELETE** /api/v2/orgauthorization/trustees/{trusteeOrgId} | Delete Org Trust |
 | [**DeleteOrgauthorizationTrusteeCloneduser**](OrganizationAuthorizationApi.html#deleteorgauthorizationtrusteecloneduser) | **DELETE** /api/v2/orgauthorization/trustees/{trusteeOrgId}/clonedusers/{trusteeUserId} | Deletes cloned user |
+| [**DeleteOrgauthorizationTrusteeGroup**](OrganizationAuthorizationApi.html#deleteorgauthorizationtrusteegroup) | **DELETE** /api/v2/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId} | Delete Trustee Group |
+| [**DeleteOrgauthorizationTrusteeGroupRoles**](OrganizationAuthorizationApi.html#deleteorgauthorizationtrusteegrouproles) | **DELETE** /api/v2/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}/roles | Delete Trustee Group Roles |
 | [**DeleteOrgauthorizationTrusteeUser**](OrganizationAuthorizationApi.html#deleteorgauthorizationtrusteeuser) | **DELETE** /api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId} | Delete Trustee User |
 | [**DeleteOrgauthorizationTrusteeUserRoles**](OrganizationAuthorizationApi.html#deleteorgauthorizationtrusteeuserroles) | **DELETE** /api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}/roles | Delete Trustee User Roles |
 | [**DeleteOrgauthorizationTrustor**](OrganizationAuthorizationApi.html#deleteorgauthorizationtrustor) | **DELETE** /api/v2/orgauthorization/trustors/{trustorOrgId} | Delete Org Trust |
 | [**DeleteOrgauthorizationTrustorCloneduser**](OrganizationAuthorizationApi.html#deleteorgauthorizationtrustorcloneduser) | **DELETE** /api/v2/orgauthorization/trustors/{trustorOrgId}/clonedusers/{trusteeUserId} | Delete Cloned User |
+| [**DeleteOrgauthorizationTrustorGroup**](OrganizationAuthorizationApi.html#deleteorgauthorizationtrustorgroup) | **DELETE** /api/v2/orgauthorization/trustors/{trustorOrgId}/groups/{trustorGroupId} | Delete Trustee Group |
 | [**DeleteOrgauthorizationTrustorUser**](OrganizationAuthorizationApi.html#deleteorgauthorizationtrustoruser) | **DELETE** /api/v2/orgauthorization/trustors/{trustorOrgId}/users/{trusteeUserId} | Delete Trustee User |
 | [**GetOrgauthorizationPairing**](OrganizationAuthorizationApi.html#getorgauthorizationpairing) | **GET** /api/v2/orgauthorization/pairings/{pairingId} | Get Pairing Info |
 | [**GetOrgauthorizationTrustee**](OrganizationAuthorizationApi.html#getorgauthorizationtrustee) | **GET** /api/v2/orgauthorization/trustees/{trusteeOrgId} | Get Org Trust |
 | [**GetOrgauthorizationTrusteeClonedusers**](OrganizationAuthorizationApi.html#getorgauthorizationtrusteeclonedusers) | **GET** /api/v2/orgauthorization/trustees/{trusteeOrgId}/clonedusers | The list of cloned users from the trustee organization (i.e. users with a native user record). |
+| [**GetOrgauthorizationTrusteeGroup**](OrganizationAuthorizationApi.html#getorgauthorizationtrusteegroup) | **GET** /api/v2/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId} | Get Trustee Group |
+| [**GetOrgauthorizationTrusteeGroupRoles**](OrganizationAuthorizationApi.html#getorgauthorizationtrusteegrouproles) | **GET** /api/v2/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}/roles | Get Trustee Group Roles |
+| [**GetOrgauthorizationTrusteeGroups**](OrganizationAuthorizationApi.html#getorgauthorizationtrusteegroups) | **GET** /api/v2/orgauthorization/trustees/{trusteeOrgId}/groups | The list of trustee groups for this organization (i.e. groups granted access to this organization). |
 | [**GetOrgauthorizationTrusteeUser**](OrganizationAuthorizationApi.html#getorgauthorizationtrusteeuser) | **GET** /api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId} | Get Trustee User |
 | [**GetOrgauthorizationTrusteeUserRoles**](OrganizationAuthorizationApi.html#getorgauthorizationtrusteeuserroles) | **GET** /api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}/roles | Get Trustee User Roles |
 | [**GetOrgauthorizationTrusteeUsers**](OrganizationAuthorizationApi.html#getorgauthorizationtrusteeusers) | **GET** /api/v2/orgauthorization/trustees/{trusteeOrgId}/users | The list of trustee users for this organization (i.e. users granted access to this organization). |
@@ -25,19 +31,25 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOrgauthorizationTrustor**](OrganizationAuthorizationApi.html#getorgauthorizationtrustor) | **GET** /api/v2/orgauthorization/trustors/{trustorOrgId} | Get Org Trust |
 | [**GetOrgauthorizationTrustorCloneduser**](OrganizationAuthorizationApi.html#getorgauthorizationtrustorcloneduser) | **GET** /api/v2/orgauthorization/trustors/{trustorOrgId}/clonedusers/{trusteeUserId} | Get Cloned User |
 | [**GetOrgauthorizationTrustorClonedusers**](OrganizationAuthorizationApi.html#getorgauthorizationtrustorclonedusers) | **GET** /api/v2/orgauthorization/trustors/{trustorOrgId}/clonedusers | The list of cloned users in the trustor organization (i.e. users with a native user record). |
+| [**GetOrgauthorizationTrustorGroup**](OrganizationAuthorizationApi.html#getorgauthorizationtrustorgroup) | **GET** /api/v2/orgauthorization/trustors/{trustorOrgId}/groups/{trustorGroupId} | Get Trustee Group |
+| [**GetOrgauthorizationTrustorGroups**](OrganizationAuthorizationApi.html#getorgauthorizationtrustorgroups) | **GET** /api/v2/orgauthorization/trustors/{trustorOrgId}/groups | The list of groups in the trustor organization (i.e. groups granted access). |
 | [**GetOrgauthorizationTrustorUser**](OrganizationAuthorizationApi.html#getorgauthorizationtrustoruser) | **GET** /api/v2/orgauthorization/trustors/{trustorOrgId}/users/{trusteeUserId} | Get Trustee User |
 | [**GetOrgauthorizationTrustorUsers**](OrganizationAuthorizationApi.html#getorgauthorizationtrustorusers) | **GET** /api/v2/orgauthorization/trustors/{trustorOrgId}/users | The list of users in the trustor organization (i.e. users granted access). |
 | [**GetOrgauthorizationTrustors**](OrganizationAuthorizationApi.html#getorgauthorizationtrustors) | **GET** /api/v2/orgauthorization/trustors | The list of organizations that have authorized/trusted your organization. |
 | [**PostOrgauthorizationPairings**](OrganizationAuthorizationApi.html#postorgauthorizationpairings) | **POST** /api/v2/orgauthorization/pairings | A pairing id is created by the trustee and given to the trustor to create a trust. |
+| [**PostOrgauthorizationTrusteeGroups**](OrganizationAuthorizationApi.html#postorgauthorizationtrusteegroups) | **POST** /api/v2/orgauthorization/trustees/{trusteeOrgId}/groups | Add a group to the trust. |
 | [**PostOrgauthorizationTrusteeUsers**](OrganizationAuthorizationApi.html#postorgauthorizationtrusteeusers) | **POST** /api/v2/orgauthorization/trustees/{trusteeOrgId}/users | Add a user to the trust. |
 | [**PostOrgauthorizationTrustees**](OrganizationAuthorizationApi.html#postorgauthorizationtrustees) | **POST** /api/v2/orgauthorization/trustees | Create a new organization authorization trust. This is required to grant other organizations access to your organization. |
 | [**PostOrgauthorizationTrusteesAudits**](OrganizationAuthorizationApi.html#postorgauthorizationtrusteesaudits) | **POST** /api/v2/orgauthorization/trustees/audits | Get Org Trustee Audits |
 | [**PostOrgauthorizationTrusteesDefault**](OrganizationAuthorizationApi.html#postorgauthorizationtrusteesdefault) | **POST** /api/v2/orgauthorization/trustees/default | Create a new organization authorization trust with Customer Care. This is required to grant your regional Customer Care organization access to your organization. |
 | [**PostOrgauthorizationTrustorAudits**](OrganizationAuthorizationApi.html#postorgauthorizationtrustoraudits) | **POST** /api/v2/orgauthorization/trustor/audits | Get Org Trustor Audits |
 | [**PutOrgauthorizationTrustee**](OrganizationAuthorizationApi.html#putorgauthorizationtrustee) | **PUT** /api/v2/orgauthorization/trustees/{trusteeOrgId} | Update Org Trust |
+| [**PutOrgauthorizationTrusteeGroupRoledivisions**](OrganizationAuthorizationApi.html#putorgauthorizationtrusteegrouproledivisions) | **PUT** /api/v2/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}/roledivisions | Update Trustee Group Roles |
+| [**PutOrgauthorizationTrusteeGroupRoles**](OrganizationAuthorizationApi.html#putorgauthorizationtrusteegrouproles) | **PUT** /api/v2/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}/roles | Update Trustee Group Roles |
 | [**PutOrgauthorizationTrusteeUserRoledivisions**](OrganizationAuthorizationApi.html#putorgauthorizationtrusteeuserroledivisions) | **PUT** /api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}/roledivisions | Update Trustee User Roles |
 | [**PutOrgauthorizationTrusteeUserRoles**](OrganizationAuthorizationApi.html#putorgauthorizationtrusteeuserroles) | **PUT** /api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}/roles | Update Trustee User Roles |
 | [**PutOrgauthorizationTrustorCloneduser**](OrganizationAuthorizationApi.html#putorgauthorizationtrustorcloneduser) | **PUT** /api/v2/orgauthorization/trustors/{trustorOrgId}/clonedusers/{trusteeUserId} | Creates a clone of the trustee user in the trustor org. |
+| [**PutOrgauthorizationTrustorGroup**](OrganizationAuthorizationApi.html#putorgauthorizationtrustorgroup) | **PUT** /api/v2/orgauthorization/trustors/{trustorOrgId}/groups/{trustorGroupId} | Add a Trustee Group to the trust. |
 | [**PutOrgauthorizationTrustorUser**](OrganizationAuthorizationApi.html#putorgauthorizationtrustoruser) | **PUT** /api/v2/orgauthorization/trustors/{trustorOrgId}/users/{trusteeUserId} | Add a Trustee user to the trust. |
 {: class="table table-striped"}
 
@@ -165,6 +177,138 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **trusteeOrgId** | **string**| Trustee Organization Id |  |
 | **trusteeUserId** | **string**| Id of the cloned user to delete |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteorgauthorizationtrusteegroup"></a>
+
+## void DeleteOrgauthorizationTrusteeGroup (string trusteeOrgId, string trusteeGroupId)
+
+
+
+Delete Trustee Group
+
+
+
+Requires ANY permissions: 
+
+* authorization:orgTrusteeGroup:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteOrgauthorizationTrusteeGroupExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OrganizationAuthorizationApi();
+            var trusteeOrgId = trusteeOrgId_example;  // string | Trustee Organization Id
+            var trusteeGroupId = trusteeGroupId_example;  // string | Trustee Group Id
+
+            try
+            { 
+                // Delete Trustee Group
+                apiInstance.DeleteOrgauthorizationTrusteeGroup(trusteeOrgId, trusteeGroupId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationAuthorizationApi.DeleteOrgauthorizationTrusteeGroup: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **trusteeOrgId** | **string**| Trustee Organization Id |  |
+| **trusteeGroupId** | **string**| Trustee Group Id |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteorgauthorizationtrusteegrouproles"></a>
+
+## void DeleteOrgauthorizationTrusteeGroupRoles (string trusteeOrgId, string trusteeGroupId)
+
+
+
+Delete Trustee Group Roles
+
+
+
+Requires ANY permissions: 
+
+* authorization:orgTrusteeGroup:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteOrgauthorizationTrusteeGroupRolesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OrganizationAuthorizationApi();
+            var trusteeOrgId = trusteeOrgId_example;  // string | Trustee Organization Id
+            var trusteeGroupId = trusteeGroupId_example;  // string | Trustee Group Id
+
+            try
+            { 
+                // Delete Trustee Group Roles
+                apiInstance.DeleteOrgauthorizationTrusteeGroupRoles(trusteeOrgId, trusteeGroupId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationAuthorizationApi.DeleteOrgauthorizationTrusteeGroupRoles: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **trusteeOrgId** | **string**| Trustee Organization Id |  |
+| **trusteeGroupId** | **string**| Trustee Group Id |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -427,6 +571,72 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **trustorOrgId** | **string**| Trustor Organization Id |  |
 | **trusteeUserId** | **string**| Trustee User Id |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteorgauthorizationtrustorgroup"></a>
+
+## void DeleteOrgauthorizationTrustorGroup (string trustorOrgId, string trustorGroupId)
+
+
+
+Delete Trustee Group
+
+
+
+Requires ANY permissions: 
+
+* authorization:orgTrusteeGroup:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteOrgauthorizationTrustorGroupExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OrganizationAuthorizationApi();
+            var trustorOrgId = trustorOrgId_example;  // string | Trustor Organization Id
+            var trustorGroupId = trustorGroupId_example;  // string | Trustor Group Id
+
+            try
+            { 
+                // Delete Trustee Group
+                apiInstance.DeleteOrgauthorizationTrustorGroup(trustorOrgId, trustorGroupId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationAuthorizationApi.DeleteOrgauthorizationTrustorGroup: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **trustorOrgId** | **string**| Trustor Organization Id |  |
+| **trustorGroupId** | **string**| Trustor Group Id |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -696,6 +906,209 @@ namespace Example
 ### Return type
 
 [**ClonedUserEntityListing**](ClonedUserEntityListing.html)
+
+<a name="getorgauthorizationtrusteegroup"></a>
+
+## [**TrustGroup**](TrustGroup.html) GetOrgauthorizationTrusteeGroup (string trusteeOrgId, string trusteeGroupId)
+
+
+
+Get Trustee Group
+
+
+
+Requires ANY permissions: 
+
+* authorization:orgTrusteeGroup:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOrgauthorizationTrusteeGroupExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OrganizationAuthorizationApi();
+            var trusteeOrgId = trusteeOrgId_example;  // string | Trustee Organization Id
+            var trusteeGroupId = trusteeGroupId_example;  // string | Trustee Group Id
+
+            try
+            { 
+                // Get Trustee Group
+                TrustGroup result = apiInstance.GetOrgauthorizationTrusteeGroup(trusteeOrgId, trusteeGroupId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationAuthorizationApi.GetOrgauthorizationTrusteeGroup: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **trusteeOrgId** | **string**| Trustee Organization Id |  |
+| **trusteeGroupId** | **string**| Trustee Group Id |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**TrustGroup**](TrustGroup.html)
+
+<a name="getorgauthorizationtrusteegrouproles"></a>
+
+## [**UserAuthorization**](UserAuthorization.html) GetOrgauthorizationTrusteeGroupRoles (string trusteeOrgId, string trusteeGroupId)
+
+
+
+Get Trustee Group Roles
+
+
+
+Requires ANY permissions: 
+
+* authorization:orgTrusteeGroup:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOrgauthorizationTrusteeGroupRolesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OrganizationAuthorizationApi();
+            var trusteeOrgId = trusteeOrgId_example;  // string | Trustee Organization Id
+            var trusteeGroupId = trusteeGroupId_example;  // string | Trustee Group Id
+
+            try
+            { 
+                // Get Trustee Group Roles
+                UserAuthorization result = apiInstance.GetOrgauthorizationTrusteeGroupRoles(trusteeOrgId, trusteeGroupId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationAuthorizationApi.GetOrgauthorizationTrusteeGroupRoles: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **trusteeOrgId** | **string**| Trustee Organization Id |  |
+| **trusteeGroupId** | **string**| Trustee Group Id |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserAuthorization**](UserAuthorization.html)
+
+<a name="getorgauthorizationtrusteegroups"></a>
+
+## [**TrustGroupEntityListing**](TrustGroupEntityListing.html) GetOrgauthorizationTrusteeGroups (string trusteeOrgId, int? pageSize = null, int? pageNumber = null)
+
+
+
+The list of trustee groups for this organization (i.e. groups granted access to this organization).
+
+
+
+Requires ANY permissions: 
+
+* authorization:orgTrusteeGroup:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOrgauthorizationTrusteeGroupsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OrganizationAuthorizationApi();
+            var trusteeOrgId = trusteeOrgId_example;  // string | Trustee Organization Id
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            { 
+                // The list of trustee groups for this organization (i.e. groups granted access to this organization).
+                TrustGroupEntityListing result = apiInstance.GetOrgauthorizationTrusteeGroups(trusteeOrgId, pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationAuthorizationApi.GetOrgauthorizationTrusteeGroups: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **trusteeOrgId** | **string**| Trustee Organization Id |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**TrustGroupEntityListing**](TrustGroupEntityListing.html)
 
 <a name="getorgauthorizationtrusteeuser"></a>
 
@@ -1225,6 +1638,142 @@ namespace Example
 
 [**ClonedUserEntityListing**](ClonedUserEntityListing.html)
 
+<a name="getorgauthorizationtrustorgroup"></a>
+
+## [**TrustGroup**](TrustGroup.html) GetOrgauthorizationTrustorGroup (string trustorOrgId, string trustorGroupId)
+
+
+
+Get Trustee Group
+
+
+
+Requires ANY permissions: 
+
+* authorization:orgTrusteeGroup:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOrgauthorizationTrustorGroupExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OrganizationAuthorizationApi();
+            var trustorOrgId = trustorOrgId_example;  // string | Trustor Organization Id
+            var trustorGroupId = trustorGroupId_example;  // string | Trustor Group Id
+
+            try
+            { 
+                // Get Trustee Group
+                TrustGroup result = apiInstance.GetOrgauthorizationTrustorGroup(trustorOrgId, trustorGroupId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationAuthorizationApi.GetOrgauthorizationTrustorGroup: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **trustorOrgId** | **string**| Trustor Organization Id |  |
+| **trustorGroupId** | **string**| Trustor Group Id |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**TrustGroup**](TrustGroup.html)
+
+<a name="getorgauthorizationtrustorgroups"></a>
+
+## [**TrustGroupEntityListing**](TrustGroupEntityListing.html) GetOrgauthorizationTrustorGroups (string trustorOrgId, int? pageSize = null, int? pageNumber = null)
+
+
+
+The list of groups in the trustor organization (i.e. groups granted access).
+
+
+
+Requires ANY permissions: 
+
+* authorization:orgTrusteeGroup:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOrgauthorizationTrustorGroupsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OrganizationAuthorizationApi();
+            var trustorOrgId = trustorOrgId_example;  // string | Trustee Organization Id
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            { 
+                // The list of groups in the trustor organization (i.e. groups granted access).
+                TrustGroupEntityListing result = apiInstance.GetOrgauthorizationTrustorGroups(trustorOrgId, pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationAuthorizationApi.GetOrgauthorizationTrustorGroups: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **trustorOrgId** | **string**| Trustee Organization Id |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**TrustGroupEntityListing**](TrustGroupEntityListing.html)
+
 <a name="getorgauthorizationtrustoruser"></a>
 
 ## [**TrustUser**](TrustUser.html) GetOrgauthorizationTrustorUser (string trustorOrgId, string trusteeUserId)
@@ -1492,6 +2041,73 @@ namespace Example
 ### Return type
 
 [**TrustRequest**](TrustRequest.html)
+
+<a name="postorgauthorizationtrusteegroups"></a>
+
+## [**TrustGroup**](TrustGroup.html) PostOrgauthorizationTrusteeGroups (string trusteeOrgId, TrustMemberCreate body)
+
+
+
+Add a group to the trust.
+
+
+
+Requires ANY permissions: 
+
+* authorization:orgTrusteeGroup:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostOrgauthorizationTrusteeGroupsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OrganizationAuthorizationApi();
+            var trusteeOrgId = trusteeOrgId_example;  // string | Trustee Organization Id
+            var body = new TrustMemberCreate(); // TrustMemberCreate | Trust
+
+            try
+            { 
+                // Add a group to the trust.
+                TrustGroup result = apiInstance.PostOrgauthorizationTrusteeGroups(trusteeOrgId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationAuthorizationApi.PostOrgauthorizationTrusteeGroups: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **trusteeOrgId** | **string**| Trustee Organization Id |  |
+| **body** | [**TrustMemberCreate**](TrustMemberCreate.html)| Trust |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**TrustGroup**](TrustGroup.html)
 
 <a name="postorgauthorizationtrusteeusers"></a>
 
@@ -1907,6 +2523,144 @@ namespace Example
 
 [**Trustee**](Trustee.html)
 
+<a name="putorgauthorizationtrusteegrouproledivisions"></a>
+
+## [**UserAuthorization**](UserAuthorization.html) PutOrgauthorizationTrusteeGroupRoledivisions (string trusteeOrgId, string trusteeGroupId, RoleDivisionGrants body)
+
+
+
+Update Trustee Group Roles
+
+
+
+Requires ANY permissions: 
+
+* authorization:orgTrusteeGroup:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutOrgauthorizationTrusteeGroupRoledivisionsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OrganizationAuthorizationApi();
+            var trusteeOrgId = trusteeOrgId_example;  // string | Trustee Organization Id
+            var trusteeGroupId = trusteeGroupId_example;  // string | Trustee Group Id
+            var body = new RoleDivisionGrants(); // RoleDivisionGrants | Set of roles with corresponding divisions to apply
+
+            try
+            { 
+                // Update Trustee Group Roles
+                UserAuthorization result = apiInstance.PutOrgauthorizationTrusteeGroupRoledivisions(trusteeOrgId, trusteeGroupId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationAuthorizationApi.PutOrgauthorizationTrusteeGroupRoledivisions: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **trusteeOrgId** | **string**| Trustee Organization Id |  |
+| **trusteeGroupId** | **string**| Trustee Group Id |  |
+| **body** | [**RoleDivisionGrants**](RoleDivisionGrants.html)| Set of roles with corresponding divisions to apply |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserAuthorization**](UserAuthorization.html)
+
+<a name="putorgauthorizationtrusteegrouproles"></a>
+
+## [**UserAuthorization**](UserAuthorization.html) PutOrgauthorizationTrusteeGroupRoles (string trusteeOrgId, string trusteeGroupId, List<string> body)
+
+
+
+Update Trustee Group Roles
+
+
+
+Requires ANY permissions: 
+
+* authorization:orgTrusteeGroup:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutOrgauthorizationTrusteeGroupRolesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OrganizationAuthorizationApi();
+            var trusteeOrgId = trusteeOrgId_example;  // string | Trustee Organization Id
+            var trusteeGroupId = trusteeGroupId_example;  // string | Trustee Group Id
+            var body = new List<string>(); // List<string> | List of roles
+
+            try
+            { 
+                // Update Trustee Group Roles
+                UserAuthorization result = apiInstance.PutOrgauthorizationTrusteeGroupRoles(trusteeOrgId, trusteeGroupId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationAuthorizationApi.PutOrgauthorizationTrusteeGroupRoles: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **trusteeOrgId** | **string**| Trustee Organization Id |  |
+| **trusteeGroupId** | **string**| Trustee Group Id |  |
+| **body** | [**List<string>**](string.html)| List of roles |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserAuthorization**](UserAuthorization.html)
+
 <a name="putorgauthorizationtrusteeuserroledivisions"></a>
 
 ## [**UserAuthorization**](UserAuthorization.html) PutOrgauthorizationTrusteeUserRoledivisions (string trusteeOrgId, string trusteeUserId, RoleDivisionGrants body)
@@ -2111,6 +2865,73 @@ namespace Example
 ### Return type
 
 [**ClonedUser**](ClonedUser.html)
+
+<a name="putorgauthorizationtrustorgroup"></a>
+
+## [**TrustGroup**](TrustGroup.html) PutOrgauthorizationTrustorGroup (string trustorOrgId, string trustorGroupId)
+
+
+
+Add a Trustee Group to the trust.
+
+
+
+Requires ALL permissions: 
+
+* authorization:orgTrusteeGroup:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutOrgauthorizationTrustorGroupExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OrganizationAuthorizationApi();
+            var trustorOrgId = trustorOrgId_example;  // string | Trustor Organization Id
+            var trustorGroupId = trustorGroupId_example;  // string | Trustor Group Id
+
+            try
+            { 
+                // Add a Trustee Group to the trust.
+                TrustGroup result = apiInstance.PutOrgauthorizationTrustorGroup(trustorOrgId, trustorGroupId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationAuthorizationApi.PutOrgauthorizationTrustorGroup: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **trustorOrgId** | **string**| Trustor Organization Id |  |
+| **trustorGroupId** | **string**| Trustor Group Id |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**TrustGroup**](TrustGroup.html)
 
 <a name="putorgauthorizationtrustoruser"></a>
 

@@ -42,6 +42,7 @@ title: QueueConversationChatEventTopicChatMediaParticipant
 | **JourneyContext** | [**QueueConversationChatEventTopicJourneyContext**](QueueConversationChatEventTopicJourneyContext.html) |  | [optional] |
 | **StartAcwTime** | **DateTime?** |  | [optional] |
 | **EndAcwTime** | **DateTime?** |  | [optional] |
+| **MediaRoles** | **List&lt;string&gt;** |  | [optional] |
 | **RoomId** | **string** |  | [optional] |
 | **AvatarImageUrl** | **string** |  | [optional] |
 {: class="table table-striped"}

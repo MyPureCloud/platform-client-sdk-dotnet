@@ -12,6 +12,8 @@ title: CreateMetric
 | **Objective** | [**CreateObjective**](CreateObjective.html) | Associated objective for this metric | [optional] |
 | **PerformanceProfileId** | **string** | Performance profile id of this metric | [optional] |
 | **Name** | **string** | The name of this metric | |
+| **Precision** | **int?** | The precision of the metric, must be between 0 and 5 | [optional] |
+| **TimeDisplayUnit** | **string** | The time unit in which the metric should be displayed - - this parameter is ignored when displaying non-time values | [optional] |
 {: class="table table-striped"}
 
 

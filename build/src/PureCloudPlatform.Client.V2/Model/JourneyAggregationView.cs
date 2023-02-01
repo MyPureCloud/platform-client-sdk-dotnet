@@ -154,6 +154,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Nwebactionstimedout,
             
             /// <summary>
+            /// Enum Ojourneyoutcometouchpointvalue for "oJourneyOutcomeTouchpointValue"
+            /// </summary>
+            [EnumMember(Value = "oJourneyOutcomeTouchpointValue")]
+            Ojourneyoutcometouchpointvalue,
+            
+            /// <summary>
             /// Enum Ojourneyoutcomevalue for "oJourneyOutcomeValue"
             /// </summary>
             [EnumMember(Value = "oJourneyOutcomeValue")]

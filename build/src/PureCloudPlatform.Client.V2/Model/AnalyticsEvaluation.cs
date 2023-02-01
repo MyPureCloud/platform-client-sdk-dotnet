@@ -19,12 +19,64 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class AnalyticsEvaluation :  IEquatable<AnalyticsEvaluation>
     {
         /// <summary>
+        /// Status of evaluation
+        /// </summary>
+        /// <value>Status of evaluation</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum EvaluationStatusEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Finished for "Finished"
+            /// </summary>
+            [EnumMember(Value = "Finished")]
+            Finished,
+            
+            /// <summary>
+            /// Enum Inprogress for "InProgress"
+            /// </summary>
+            [EnumMember(Value = "InProgress")]
+            Inprogress,
+            
+            /// <summary>
+            /// Enum Inreview for "InReview"
+            /// </summary>
+            [EnumMember(Value = "InReview")]
+            Inreview,
+            
+            /// <summary>
+            /// Enum Pending for "Pending"
+            /// </summary>
+            [EnumMember(Value = "Pending")]
+            Pending,
+            
+            /// <summary>
+            /// Enum Retracted for "Retracted"
+            /// </summary>
+            [EnumMember(Value = "Retracted")]
+            Retracted
+        }
+        /// <summary>
+        /// Status of evaluation
+        /// </summary>
+        /// <value>Status of evaluation</value>
+        [DataMember(Name="evaluationStatus", EmitDefaultValue=false)]
+        public EvaluationStatusEnum? EvaluationStatus { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsEvaluation" /> class.
         /// </summary>
         /// <param name="CalibrationId">The calibration ID used for the purpose of training evaluators.</param>
         /// <param name="ContextId">A unique identifier for an evaluation form, regardless of version.</param>
         /// <param name="Deleted">Whether the evaluation has been deleted.</param>
         /// <param name="EvaluationId">Unique identifier for the evaluation.</param>
+        /// <param name="EvaluationStatus">Status of evaluation.</param>
         /// <param name="EvaluatorId">A unique identifier of the user who evaluated the interaction.</param>
         /// <param name="EventTime">Specifies when an evaluation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="FormId">ID of the evaluation form used.</param>
@@ -35,12 +87,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UserId">ID of the agent the evaluation was performed against.</param>
         /// <param name="OTotalCriticalScore">OTotalCriticalScore.</param>
         /// <param name="OTotalScore">OTotalScore.</param>
-        public AnalyticsEvaluation(string CalibrationId = null, string ContextId = null, bool? Deleted = null, string EvaluationId = null, string EvaluatorId = null, DateTime? EventTime = null, string FormId = null, string FormName = null, string QueueId = null, bool? Released = null, bool? Rescored = null, string UserId = null, long? OTotalCriticalScore = null, long? OTotalScore = null)
+        public AnalyticsEvaluation(string CalibrationId = null, string ContextId = null, bool? Deleted = null, string EvaluationId = null, EvaluationStatusEnum? EvaluationStatus = null, string EvaluatorId = null, DateTime? EventTime = null, string FormId = null, string FormName = null, string QueueId = null, bool? Released = null, bool? Rescored = null, string UserId = null, long? OTotalCriticalScore = null, long? OTotalScore = null)
         {
             this.CalibrationId = CalibrationId;
             this.ContextId = ContextId;
             this.Deleted = Deleted;
             this.EvaluationId = EvaluationId;
+            this.EvaluationStatus = EvaluationStatus;
             this.EvaluatorId = EvaluatorId;
             this.EventTime = EventTime;
             this.FormId = FormId;
@@ -89,6 +142,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Unique identifier for the evaluation</value>
         [DataMember(Name="evaluationId", EmitDefaultValue=false)]
         public string EvaluationId { get; set; }
+
+
 
 
 
@@ -192,6 +247,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ContextId: ").Append(ContextId).Append("\n");
             sb.Append("  Deleted: ").Append(Deleted).Append("\n");
             sb.Append("  EvaluationId: ").Append(EvaluationId).Append("\n");
+            sb.Append("  EvaluationStatus: ").Append(EvaluationStatus).Append("\n");
             sb.Append("  EvaluatorId: ").Append(EvaluatorId).Append("\n");
             sb.Append("  EventTime: ").Append(EventTime).Append("\n");
             sb.Append("  FormId: ").Append(FormId).Append("\n");
@@ -261,6 +317,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EvaluationId == other.EvaluationId ||
                     this.EvaluationId != null &&
                     this.EvaluationId.Equals(other.EvaluationId)
+                ) &&
+                (
+                    this.EvaluationStatus == other.EvaluationStatus ||
+                    this.EvaluationStatus != null &&
+                    this.EvaluationStatus.Equals(other.EvaluationStatus)
                 ) &&
                 (
                     this.EvaluatorId == other.EvaluatorId ||
@@ -336,6 +397,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EvaluationId != null)
                     hash = hash * 59 + this.EvaluationId.GetHashCode();
+
+                if (this.EvaluationStatus != null)
+                    hash = hash * 59 + this.EvaluationStatus.GetHashCode();
 
                 if (this.EvaluatorId != null)
                     hash = hash * 59 + this.EvaluatorId.GetHashCode();

@@ -123,6 +123,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostAnalyticsConversationsDetailsJobs**](ConversationsApi.html#postanalyticsconversationsdetailsjobs) | **POST** /api/v2/analytics/conversations/details/jobs | Query for conversation details asynchronously |
 | [**PostAnalyticsConversationsDetailsQuery**](ConversationsApi.html#postanalyticsconversationsdetailsquery) | **POST** /api/v2/analytics/conversations/details/query | Query for conversation details |
 | [**PostConversationAssign**](ConversationsApi.html#postconversationassign) | **POST** /api/v2/conversations/{conversationId}/assign | Attempts to manually assign a specified conversation to a specified user.  Ignores bullseye ring, PAR score, skills, and languages. |
+| [**PostConversationCobrowse**](ConversationsApi.html#postconversationcobrowse) | **POST** /api/v2/conversations/{conversationId}/cobrowse | Creates a cobrowse session |
 | [**PostConversationDisconnect**](ConversationsApi.html#postconversationdisconnect) | **POST** /api/v2/conversations/{conversationId}/disconnect | Performs a full conversation teardown. Issues disconnect requests for any connected media. Applies a system wrap-up code to any participants that are pending wrap-up. This is not intended to be the normal way of ending interactions but is available in the event of problems with the application to allow a resynchronization of state across all components. It is recommended that users submit a support case if they are relying on this endpoint systematically as there is likely something that needs investigation. |
 | [**PostConversationParticipantCallbacks**](ConversationsApi.html#postconversationparticipantcallbacks) | **POST** /api/v2/conversations/{conversationId}/participants/{participantId}/callbacks | Create a new callback for the specified participant on the conversation. |
 | [**PostConversationParticipantDigits**](ConversationsApi.html#postconversationparticipantdigits) | **POST** /api/v2/conversations/{conversationId}/participants/{participantId}/digits | Sends DTMF to the participant |
@@ -7907,6 +7908,71 @@ namespace Example
 
 **string**
 
+<a name="postconversationcobrowse"></a>
+
+## [**CobrowseWebMessagingSession**](CobrowseWebMessagingSession.html) PostConversationCobrowse (string conversationId)
+
+
+
+Creates a cobrowse session
+
+
+
+Requires ANY permissions: 
+
+* conversation:cobrowse:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationCobrowseExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | Conversation ID
+
+            try
+            { 
+                // Creates a cobrowse session
+                CobrowseWebMessagingSession result = apiInstance.PostConversationCobrowse(conversationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationCobrowse: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| Conversation ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CobrowseWebMessagingSession**](CobrowseWebMessagingSession.html)
+
 <a name="postconversationdisconnect"></a>
 
 ## **string** PostConversationDisconnect (string conversationId)
@@ -9368,7 +9434,7 @@ namespace Example
 
 <a name="postconversationsemailmessages"></a>
 
-## [**EmailMessage**](EmailMessage.html) PostConversationsEmailMessages (string conversationId, EmailMessage body)
+## [**EmailMessageReply**](EmailMessageReply.html) PostConversationsEmailMessages (string conversationId, EmailMessage body)
 
 
 
@@ -9407,7 +9473,7 @@ namespace Example
             try
             { 
                 // Send an email reply
-                EmailMessage result = apiInstance.PostConversationsEmailMessages(conversationId, body);
+                EmailMessageReply result = apiInstance.PostConversationsEmailMessages(conversationId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -9430,7 +9496,7 @@ namespace Example
 
 ### Return type
 
-[**EmailMessage**](EmailMessage.html)
+[**EmailMessageReply**](EmailMessageReply.html)
 
 <a name="postconversationsemailmessagesdraftattachmentscopy"></a>
 

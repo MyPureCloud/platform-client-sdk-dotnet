@@ -75,7 +75,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WebEvent">WebEvent.</param>
         /// <param name="WebActionEvent">WebActionEvent.</param>
         /// <param name="OutcomeAchievedEvent">OutcomeAchievedEvent.</param>
-        public JourneyWebEventsNotificationWebEventsNotification(string Id = null, string CorrelationId = null, JourneyWebEventsNotificationExternalContact ExternalContact = null, DateTime? CreatedDate = null, string CustomerId = null, string CustomerIdType = null, JourneyWebEventsNotificationSession Session = null, EventTypeEnum? EventType = null, JourneyWebEventsNotificationWebMessage WebEvent = null, JourneyWebEventsNotificationWebActionMessage WebActionEvent = null, JourneyWebEventsNotificationOutcomeAchievedMessage OutcomeAchievedEvent = null)
+        /// <param name="SegmentAssignmentEvent">SegmentAssignmentEvent.</param>
+        public JourneyWebEventsNotificationWebEventsNotification(string Id = null, string CorrelationId = null, JourneyWebEventsNotificationExternalContact ExternalContact = null, DateTime? CreatedDate = null, string CustomerId = null, string CustomerIdType = null, JourneyWebEventsNotificationSession Session = null, EventTypeEnum? EventType = null, JourneyWebEventsNotificationWebMessage WebEvent = null, JourneyWebEventsNotificationWebActionMessage WebActionEvent = null, JourneyWebEventsNotificationOutcomeAchievedMessage OutcomeAchievedEvent = null, JourneyWebEventsNotificationSegmentAssignmentMessage SegmentAssignmentEvent = null)
         {
             this.Id = Id;
             this.CorrelationId = CorrelationId;
@@ -88,6 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.WebEvent = WebEvent;
             this.WebActionEvent = WebActionEvent;
             this.OutcomeAchievedEvent = OutcomeAchievedEvent;
+            this.SegmentAssignmentEvent = SegmentAssignmentEvent;
             
         }
         
@@ -174,6 +176,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public JourneyWebEventsNotificationOutcomeAchievedMessage OutcomeAchievedEvent { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets SegmentAssignmentEvent
+        /// </summary>
+        [DataMember(Name="segmentAssignmentEvent", EmitDefaultValue=false)]
+        public JourneyWebEventsNotificationSegmentAssignmentMessage SegmentAssignmentEvent { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -194,6 +204,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  WebEvent: ").Append(WebEvent).Append("\n");
             sb.Append("  WebActionEvent: ").Append(WebActionEvent).Append("\n");
             sb.Append("  OutcomeAchievedEvent: ").Append(OutcomeAchievedEvent).Append("\n");
+            sb.Append("  SegmentAssignmentEvent: ").Append(SegmentAssignmentEvent).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -288,6 +299,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.OutcomeAchievedEvent == other.OutcomeAchievedEvent ||
                     this.OutcomeAchievedEvent != null &&
                     this.OutcomeAchievedEvent.Equals(other.OutcomeAchievedEvent)
+                ) &&
+                (
+                    this.SegmentAssignmentEvent == other.SegmentAssignmentEvent ||
+                    this.SegmentAssignmentEvent != null &&
+                    this.SegmentAssignmentEvent.Equals(other.SegmentAssignmentEvent)
                 );
         }
 
@@ -334,6 +350,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.OutcomeAchievedEvent != null)
                     hash = hash * 59 + this.OutcomeAchievedEvent.GetHashCode();
+
+                if (this.SegmentAssignmentEvent != null)
+                    hash = hash * 59 + this.SegmentAssignmentEvent.GetHashCode();
 
                 return hash;
             }

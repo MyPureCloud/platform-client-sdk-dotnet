@@ -79,6 +79,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Retention,
             
             /// <summary>
+            /// Enum Salesvalue for "SalesValue"
+            /// </summary>
+            [EnumMember(Value = "SalesValue")]
+            Salesvalue,
+            
+            /// <summary>
             /// Enum Handletime for "HandleTime"
             /// </summary>
             [EnumMember(Value = "HandleTime")]
@@ -109,7 +115,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Wrapupcode for "WrapUpCode"
             /// </summary>
             [EnumMember(Value = "WrapUpCode")]
-            Wrapupcode
+            Wrapupcode,
+            
+            /// <summary>
+            /// Enum Outcome for "Outcome"
+            /// </summary>
+            [EnumMember(Value = "Outcome")]
+            Outcome,
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            [EnumMember(Value = "None")]
+            None
         }
         /// <summary>
         /// The status of the Key Performance Indicator.
@@ -265,6 +283,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+        /// <summary>
+        /// Defines what outcome ids are mapped to Key Performance Indicator.
+        /// </summary>
+        /// <value>Defines what outcome ids are mapped to Key Performance Indicator.</value>
+        [DataMember(Name="outcomeConfig", EmitDefaultValue=false)]
+        public OutcomeConfig OutcomeConfig { get; private set; }
+
+
+
 
 
 
@@ -295,6 +322,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  KpiType: ").Append(KpiType).Append("\n");
             sb.Append("  Source: ").Append(Source).Append("\n");
             sb.Append("  WrapUpCodeConfig: ").Append(WrapUpCodeConfig).Append("\n");
+            sb.Append("  OutcomeConfig: ").Append(OutcomeConfig).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  KpiGroup: ").Append(KpiGroup).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -384,6 +412,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.WrapUpCodeConfig.Equals(other.WrapUpCodeConfig)
                 ) &&
                 (
+                    this.OutcomeConfig == other.OutcomeConfig ||
+                    this.OutcomeConfig != null &&
+                    this.OutcomeConfig.Equals(other.OutcomeConfig)
+                ) &&
+                (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
@@ -437,6 +470,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.WrapUpCodeConfig != null)
                     hash = hash * 59 + this.WrapUpCodeConfig.GetHashCode();
+
+                if (this.OutcomeConfig != null)
+                    hash = hash * 59 + this.OutcomeConfig.GetHashCode();
 
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();

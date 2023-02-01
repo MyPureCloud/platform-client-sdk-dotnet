@@ -100,7 +100,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get an organization's StationSettings
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated as the FreeSeatingConfiguration feature it references has been removed
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>StationSettings</returns>
@@ -110,7 +110,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get an organization's StationSettings
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated as the FreeSeatingConfiguration feature it references has been removed
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of StationSettings</returns>
@@ -120,7 +120,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Patch an organization's StationSettings
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated as the FreeSeatingConfiguration feature it references has been removed
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Station settings</param>
@@ -131,7 +131,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Patch an organization's StationSettings
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated as the FreeSeatingConfiguration feature it references has been removed
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Station settings</param>
@@ -226,7 +226,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get an organization's StationSettings
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated as the FreeSeatingConfiguration feature it references has been removed
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of StationSettings</returns>
@@ -236,7 +236,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get an organization's StationSettings
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated as the FreeSeatingConfiguration feature it references has been removed
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (StationSettings)</returns>
@@ -246,7 +246,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Patch an organization's StationSettings
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated as the FreeSeatingConfiguration feature it references has been removed
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Station settings</param>
@@ -257,7 +257,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Patch an organization's StationSettings
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated as the FreeSeatingConfiguration feature it references has been removed
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Station settings</param>
@@ -963,7 +963,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get an organization's StationSettings 
+        /// Get an organization's StationSettings This route is deprecated as the FreeSeatingConfiguration feature it references has been removed
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>StationSettings</returns>
@@ -974,7 +974,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get an organization's StationSettings 
+        /// Get an organization's StationSettings This route is deprecated as the FreeSeatingConfiguration feature it references has been removed
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of StationSettings</returns>
@@ -1051,7 +1051,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get an organization's StationSettings 
+        /// Get an organization's StationSettings This route is deprecated as the FreeSeatingConfiguration feature it references has been removed
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of StationSettings</returns>
@@ -1063,7 +1063,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get an organization's StationSettings 
+        /// Get an organization's StationSettings This route is deprecated as the FreeSeatingConfiguration feature it references has been removed
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (StationSettings)</returns>
@@ -1141,7 +1141,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Patch an organization's StationSettings 
+        /// Patch an organization's StationSettings This route is deprecated as the FreeSeatingConfiguration feature it references has been removed
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Station settings</param>
@@ -1153,7 +1153,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Patch an organization's StationSettings 
+        /// Patch an organization's StationSettings This route is deprecated as the FreeSeatingConfiguration feature it references has been removed
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Station settings</param>
@@ -1240,7 +1240,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Patch an organization's StationSettings 
+        /// Patch an organization's StationSettings This route is deprecated as the FreeSeatingConfiguration feature it references has been removed
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Station settings</param>
@@ -1253,7 +1253,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Patch an organization's StationSettings 
+        /// Patch an organization's StationSettings This route is deprecated as the FreeSeatingConfiguration feature it references has been removed
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Station settings</param>

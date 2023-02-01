@@ -182,6 +182,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WrapupTimeoutMs">Specifies how long a timed ACW session will last..</param>
         /// <param name="WrapupSkipped">The UI sets this field when the agent chooses to skip entering a wrapup for this participant..</param>
         /// <param name="Wrapup">Call wrap up or disposition data..</param>
+        /// <param name="MediaRoles">List of roles this participant's media has had on the conversation, ie monitor, coach, etc..</param>
         /// <param name="ConversationRoutingData">Information on how a communication should be routed to an agent..</param>
         /// <param name="AlertingTimeoutMs">Specifies how long the agent has to answer an interaction before being marked as not responding..</param>
         /// <param name="MonitoredParticipantId">If this participant is a monitor, then this will be the id of the participant that is being monitored..</param>
@@ -202,7 +203,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StartAcwTime">The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="EndAcwTime">The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="BargedParticipantId">If this participant barged in a participant's call, then this will be the id of the targeted participant..</param>
-        public Participant(string Id = null, DateTime? StartTime = null, DateTime? EndTime = null, DateTime? ConnectedTime = null, string Name = null, string UserUri = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string QueueId = null, string GroupId = null, string TeamId = null, string QueueName = null, string Purpose = null, string ParticipantType = null, string ConsultParticipantId = null, string Address = null, string Ani = null, string AniName = null, string Dnis = null, string Locale = null, bool? WrapupRequired = null, WrapupPromptEnum? WrapupPrompt = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, Wrapup Wrapup = null, ConversationRoutingData ConversationRoutingData = null, int? AlertingTimeoutMs = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, Dictionary<string, string> Attributes = null, List<Call> Calls = null, List<Callback> Callbacks = null, List<ConversationChat> Chats = null, List<Cobrowsesession> Cobrowsesessions = null, List<Email> Emails = null, List<Message> Messages = null, List<Screenshare> Screenshares = null, List<SocialExpression> SocialExpressions = null, List<Video> Videos = null, List<Evaluation> Evaluations = null, ScreenRecordingStateEnum? ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, string BargedParticipantId = null)
+        public Participant(string Id = null, DateTime? StartTime = null, DateTime? EndTime = null, DateTime? ConnectedTime = null, string Name = null, string UserUri = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string QueueId = null, string GroupId = null, string TeamId = null, string QueueName = null, string Purpose = null, string ParticipantType = null, string ConsultParticipantId = null, string Address = null, string Ani = null, string AniName = null, string Dnis = null, string Locale = null, bool? WrapupRequired = null, WrapupPromptEnum? WrapupPrompt = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, Wrapup Wrapup = null, List<string> MediaRoles = null, ConversationRoutingData ConversationRoutingData = null, int? AlertingTimeoutMs = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, Dictionary<string, string> Attributes = null, List<Call> Calls = null, List<Callback> Callbacks = null, List<ConversationChat> Chats = null, List<Cobrowsesession> Cobrowsesessions = null, List<Email> Emails = null, List<Message> Messages = null, List<Screenshare> Screenshares = null, List<SocialExpression> SocialExpressions = null, List<Video> Videos = null, List<Evaluation> Evaluations = null, ScreenRecordingStateEnum? ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, string BargedParticipantId = null)
         {
             this.Id = Id;
             this.StartTime = StartTime;
@@ -230,6 +231,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.WrapupTimeoutMs = WrapupTimeoutMs;
             this.WrapupSkipped = WrapupSkipped;
             this.Wrapup = Wrapup;
+            this.MediaRoles = MediaRoles;
             this.ConversationRoutingData = ConversationRoutingData;
             this.AlertingTimeoutMs = AlertingTimeoutMs;
             this.MonitoredParticipantId = MonitoredParticipantId;
@@ -483,6 +485,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// List of roles this participant's media has had on the conversation, ie monitor, coach, etc.
+        /// </summary>
+        /// <value>List of roles this participant's media has had on the conversation, ie monitor, coach, etc.</value>
+        [DataMember(Name="mediaRoles", EmitDefaultValue=false)]
+        public List<string> MediaRoles { get; set; }
+
+
+
+        /// <summary>
         /// Information on how a communication should be routed to an agent.
         /// </summary>
         /// <value>Information on how a communication should be routed to an agent.</value>
@@ -672,6 +683,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  WrapupTimeoutMs: ").Append(WrapupTimeoutMs).Append("\n");
             sb.Append("  WrapupSkipped: ").Append(WrapupSkipped).Append("\n");
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
+            sb.Append("  MediaRoles: ").Append(MediaRoles).Append("\n");
             sb.Append("  ConversationRoutingData: ").Append(ConversationRoutingData).Append("\n");
             sb.Append("  AlertingTimeoutMs: ").Append(AlertingTimeoutMs).Append("\n");
             sb.Append("  MonitoredParticipantId: ").Append(MonitoredParticipantId).Append("\n");
@@ -863,6 +875,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Wrapup.Equals(other.Wrapup)
                 ) &&
                 (
+                    this.MediaRoles == other.MediaRoles ||
+                    this.MediaRoles != null &&
+                    this.MediaRoles.SequenceEqual(other.MediaRoles)
+                ) &&
+                (
                     this.ConversationRoutingData == other.ConversationRoutingData ||
                     this.ConversationRoutingData != null &&
                     this.ConversationRoutingData.Equals(other.ConversationRoutingData)
@@ -1052,6 +1069,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Wrapup != null)
                     hash = hash * 59 + this.Wrapup.GetHashCode();
+
+                if (this.MediaRoles != null)
+                    hash = hash * 59 + this.MediaRoles.GetHashCode();
 
                 if (this.ConversationRoutingData != null)
                     hash = hash * 59 + this.ConversationRoutingData.GetHashCode();

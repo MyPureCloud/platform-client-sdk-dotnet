@@ -21,6 +21,7 @@ title: EmailMediaParticipant
 | **Held** | **bool?** | Value is true when the participant is on hold. | [optional] |
 | **WrapupRequired** | **bool?** | Value is true when the participant requires wrap-up. | [optional] |
 | **WrapupPrompt** | **string** | The wrap-up prompt indicating the type of wrap-up to be performed. | [optional] |
+| **MediaRoles** | **List&lt;string&gt;** | List of roles this participant&#39;s media has had on the conversation, ie monitor, coach, etc | [optional] |
 | **User** | [**DomainEntityRef**](DomainEntityRef.html) | The PureCloud user for this participant. | [optional] |
 | **Queue** | [**DomainEntityRef**](DomainEntityRef.html) | The PureCloud queue for this participant. | [optional] |
 | **Team** | [**DomainEntityRef**](DomainEntityRef.html) | The PureCloud team for this participant. | [optional] |

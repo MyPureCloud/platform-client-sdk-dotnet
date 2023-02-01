@@ -242,7 +242,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SupportsSms">Set to true if this phone number has the capability to support SMS.</param>
         /// <param name="SupportsMms">Set to true if this phone number has the capability to support MMS.</param>
         /// <param name="SupportsVoice">Set to true if this phone number has the capability to support voice.</param>
-        public SmsPhoneNumber(string Name = null, string PhoneNumber = null, bool? ProvisionedThroughPureCloud = null, PhoneNumberStatusEnum? PhoneNumberStatus = null, string CountryCode = null, DateTime? DateCreated = null, DateTime? DateModified = null, User CreatedBy = null, User ModifiedBy = null, int? Version = null, DateTime? PurchaseDate = null, DateTime? CancellationDate = null, DateTime? RenewalDate = null, AutoRenewableEnum? AutoRenewable = null, SmsAddress AddressId = null, ShortCodeBillingTypeEnum? ShortCodeBillingType = null, SmsProvisioningStatus ProvisioningStatus = null, string Country = null, bool? SupportsSms = null, bool? SupportsMms = null, bool? SupportsVoice = null)
+        /// <param name="Integration">The Genesys Cloud integration this phone number belongs to..</param>
+        /// <param name="Compliance">Compliance configuration for short codes, including help, stop and opt in..</param>
+        public SmsPhoneNumber(string Name = null, string PhoneNumber = null, bool? ProvisionedThroughPureCloud = null, PhoneNumberStatusEnum? PhoneNumberStatus = null, string CountryCode = null, DateTime? DateCreated = null, DateTime? DateModified = null, User CreatedBy = null, User ModifiedBy = null, int? Version = null, DateTime? PurchaseDate = null, DateTime? CancellationDate = null, DateTime? RenewalDate = null, AutoRenewableEnum? AutoRenewable = null, SmsAddress AddressId = null, ShortCodeBillingTypeEnum? ShortCodeBillingType = null, SmsProvisioningStatus ProvisioningStatus = null, string Country = null, bool? SupportsSms = null, bool? SupportsMms = null, bool? SupportsVoice = null, DomainEntityRef Integration = null, Compliance Compliance = null)
         {
             this.Name = Name;
             this.PhoneNumber = PhoneNumber;
@@ -265,6 +267,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SupportsSms = SupportsSms;
             this.SupportsMms = SupportsMms;
             this.SupportsVoice = SupportsVoice;
+            this.Integration = Integration;
+            this.Compliance = Compliance;
             
         }
         
@@ -458,6 +462,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The Genesys Cloud integration this phone number belongs to.
+        /// </summary>
+        /// <value>The Genesys Cloud integration this phone number belongs to.</value>
+        [DataMember(Name="integration", EmitDefaultValue=false)]
+        public DomainEntityRef Integration { get; set; }
+
+
+
+        /// <summary>
+        /// Compliance configuration for short codes, including help, stop and opt in.
+        /// </summary>
+        /// <value>Compliance configuration for short codes, including help, stop and opt in.</value>
+        [DataMember(Name="compliance", EmitDefaultValue=false)]
+        public Compliance Compliance { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -498,6 +520,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SupportsSms: ").Append(SupportsSms).Append("\n");
             sb.Append("  SupportsMms: ").Append(SupportsMms).Append("\n");
             sb.Append("  SupportsVoice: ").Append(SupportsVoice).Append("\n");
+            sb.Append("  Integration: ").Append(Integration).Append("\n");
+            sb.Append("  Compliance: ").Append(Compliance).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -660,6 +684,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SupportsVoice.Equals(other.SupportsVoice)
                 ) &&
                 (
+                    this.Integration == other.Integration ||
+                    this.Integration != null &&
+                    this.Integration.Equals(other.Integration)
+                ) &&
+                (
+                    this.Compliance == other.Compliance ||
+                    this.Compliance != null &&
+                    this.Compliance.Equals(other.Compliance)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -748,6 +782,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SupportsVoice != null)
                     hash = hash * 59 + this.SupportsVoice.GetHashCode();
+
+                if (this.Integration != null)
+                    hash = hash * 59 + this.Integration.GetHashCode();
+
+                if (this.Compliance != null)
+                    hash = hash * 59 + this.Compliance.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

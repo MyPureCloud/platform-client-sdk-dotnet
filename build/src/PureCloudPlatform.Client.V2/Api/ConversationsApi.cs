@@ -2823,6 +2823,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<string> PostConversationAssignWithHttpInfo (string conversationId, ConversationUser body);
 
         /// <summary>
+        /// Creates a cobrowse session
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <returns>CobrowseWebMessagingSession</returns>
+        CobrowseWebMessagingSession PostConversationCobrowse (string conversationId);
+
+        /// <summary>
+        /// Creates a cobrowse session
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <returns>ApiResponse of CobrowseWebMessagingSession</returns>
+        ApiResponse<CobrowseWebMessagingSession> PostConversationCobrowseWithHttpInfo (string conversationId);
+
+        /// <summary>
         /// Performs a full conversation teardown. Issues disconnect requests for any connected media. Applies a system wrap-up code to any participants that are pending wrap-up. This is not intended to be the normal way of ending interactions but is available in the event of problems with the application to allow a resynchronization of state across all components. It is recommended that users submit a support case if they are relying on this endpoint systematically as there is likely something that needs investigation.
         /// </summary>
         /// <remarks>
@@ -3367,8 +3389,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">Reply</param>
-        /// <returns>EmailMessage</returns>
-        EmailMessage PostConversationsEmailMessages (string conversationId, EmailMessage body);
+        /// <returns>EmailMessageReply</returns>
+        EmailMessageReply PostConversationsEmailMessages (string conversationId, EmailMessage body);
 
         /// <summary>
         /// Send an email reply
@@ -3379,8 +3401,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">Reply</param>
-        /// <returns>ApiResponse of EmailMessage</returns>
-        ApiResponse<EmailMessage> PostConversationsEmailMessagesWithHttpInfo (string conversationId, EmailMessage body);
+        /// <returns>ApiResponse of EmailMessageReply</returns>
+        ApiResponse<EmailMessageReply> PostConversationsEmailMessagesWithHttpInfo (string conversationId, EmailMessage body);
 
         /// <summary>
         /// Copy attachments from an email message to the current draft.
@@ -7113,6 +7135,28 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<string>> PostConversationAssignAsyncWithHttpInfo (string conversationId, ConversationUser body);
 
         /// <summary>
+        /// Creates a cobrowse session
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <returns>Task of CobrowseWebMessagingSession</returns>
+        System.Threading.Tasks.Task<CobrowseWebMessagingSession> PostConversationCobrowseAsync (string conversationId);
+
+        /// <summary>
+        /// Creates a cobrowse session
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <returns>Task of ApiResponse (CobrowseWebMessagingSession)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CobrowseWebMessagingSession>> PostConversationCobrowseAsyncWithHttpInfo (string conversationId);
+
+        /// <summary>
         /// Performs a full conversation teardown. Issues disconnect requests for any connected media. Applies a system wrap-up code to any participants that are pending wrap-up. This is not intended to be the normal way of ending interactions but is available in the event of problems with the application to allow a resynchronization of state across all components. It is recommended that users submit a support case if they are relying on this endpoint systematically as there is likely something that needs investigation.
         /// </summary>
         /// <remarks>
@@ -7657,8 +7701,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">Reply</param>
-        /// <returns>Task of EmailMessage</returns>
-        System.Threading.Tasks.Task<EmailMessage> PostConversationsEmailMessagesAsync (string conversationId, EmailMessage body);
+        /// <returns>Task of EmailMessageReply</returns>
+        System.Threading.Tasks.Task<EmailMessageReply> PostConversationsEmailMessagesAsync (string conversationId, EmailMessage body);
 
         /// <summary>
         /// Send an email reply
@@ -7669,8 +7713,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">Reply</param>
-        /// <returns>Task of ApiResponse (EmailMessage)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EmailMessage>> PostConversationsEmailMessagesAsyncWithHttpInfo (string conversationId, EmailMessage body);
+        /// <returns>Task of ApiResponse (EmailMessageReply)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EmailMessageReply>> PostConversationsEmailMessagesAsyncWithHttpInfo (string conversationId, EmailMessage body);
 
         /// <summary>
         /// Copy attachments from an email message to the current draft.
@@ -32386,6 +32430,197 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Creates a cobrowse session 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <returns>CobrowseWebMessagingSession</returns>
+        public CobrowseWebMessagingSession PostConversationCobrowse (string conversationId)
+        {
+             ApiResponse<CobrowseWebMessagingSession> localVarResponse = PostConversationCobrowseWithHttpInfo(conversationId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Creates a cobrowse session 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <returns>ApiResponse of CobrowseWebMessagingSession</returns>
+        public ApiResponse< CobrowseWebMessagingSession > PostConversationCobrowseWithHttpInfo (string conversationId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationCobrowse");
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/cobrowse";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationCobrowse: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationCobrowse: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CobrowseWebMessagingSession>(localVarStatusCode,
+                localVarHeaders,
+                (CobrowseWebMessagingSession) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CobrowseWebMessagingSession)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Creates a cobrowse session 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <returns>Task of CobrowseWebMessagingSession</returns>
+        public async System.Threading.Tasks.Task<CobrowseWebMessagingSession> PostConversationCobrowseAsync (string conversationId)
+        {
+             ApiResponse<CobrowseWebMessagingSession> localVarResponse = await PostConversationCobrowseAsyncWithHttpInfo(conversationId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Creates a cobrowse session 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <returns>Task of ApiResponse (CobrowseWebMessagingSession)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CobrowseWebMessagingSession>> PostConversationCobrowseAsyncWithHttpInfo (string conversationId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationCobrowse");
+            
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/cobrowse";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationCobrowse: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationCobrowse: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CobrowseWebMessagingSession>(localVarStatusCode,
+                localVarHeaders,
+                (CobrowseWebMessagingSession) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CobrowseWebMessagingSession)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Performs a full conversation teardown. Issues disconnect requests for any connected media. Applies a system wrap-up code to any participants that are pending wrap-up. This is not intended to be the normal way of ending interactions but is available in the event of problems with the application to allow a resynchronization of state across all components. It is recommended that users submit a support case if they are relying on this endpoint systematically as there is likely something that needs investigation. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -37063,10 +37298,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">Reply</param>
-        /// <returns>EmailMessage</returns>
-        public EmailMessage PostConversationsEmailMessages (string conversationId, EmailMessage body)
+        /// <returns>EmailMessageReply</returns>
+        public EmailMessageReply PostConversationsEmailMessages (string conversationId, EmailMessage body)
         {
-             ApiResponse<EmailMessage> localVarResponse = PostConversationsEmailMessagesWithHttpInfo(conversationId, body);
+             ApiResponse<EmailMessageReply> localVarResponse = PostConversationsEmailMessagesWithHttpInfo(conversationId, body);
              return localVarResponse.Data;
         }
 
@@ -37076,8 +37311,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">Reply</param>
-        /// <returns>ApiResponse of EmailMessage</returns>
-        public ApiResponse< EmailMessage > PostConversationsEmailMessagesWithHttpInfo (string conversationId, EmailMessage body)
+        /// <returns>ApiResponse of EmailMessageReply</returns>
+        public ApiResponse< EmailMessageReply > PostConversationsEmailMessagesWithHttpInfo (string conversationId, EmailMessage body)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -37154,9 +37389,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmailMessages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EmailMessage>(localVarStatusCode,
+            return new ApiResponse<EmailMessageReply>(localVarStatusCode,
                 localVarHeaders,
-                (EmailMessage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailMessage)),
+                (EmailMessageReply) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailMessageReply)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -37168,10 +37403,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">Reply</param>
-        /// <returns>Task of EmailMessage</returns>
-        public async System.Threading.Tasks.Task<EmailMessage> PostConversationsEmailMessagesAsync (string conversationId, EmailMessage body)
+        /// <returns>Task of EmailMessageReply</returns>
+        public async System.Threading.Tasks.Task<EmailMessageReply> PostConversationsEmailMessagesAsync (string conversationId, EmailMessage body)
         {
-             ApiResponse<EmailMessage> localVarResponse = await PostConversationsEmailMessagesAsyncWithHttpInfo(conversationId, body);
+             ApiResponse<EmailMessageReply> localVarResponse = await PostConversationsEmailMessagesAsyncWithHttpInfo(conversationId, body);
              return localVarResponse.Data;
 
         }
@@ -37182,8 +37417,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">Reply</param>
-        /// <returns>Task of ApiResponse (EmailMessage)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EmailMessage>> PostConversationsEmailMessagesAsyncWithHttpInfo (string conversationId, EmailMessage body)
+        /// <returns>Task of ApiResponse (EmailMessageReply)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EmailMessageReply>> PostConversationsEmailMessagesAsyncWithHttpInfo (string conversationId, EmailMessage body)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -37262,9 +37497,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmailMessages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<EmailMessage>(localVarStatusCode,
+            return new ApiResponse<EmailMessageReply>(localVarStatusCode,
                 localVarHeaders,
-                (EmailMessage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailMessage)),
+                (EmailMessageReply) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailMessageReply)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

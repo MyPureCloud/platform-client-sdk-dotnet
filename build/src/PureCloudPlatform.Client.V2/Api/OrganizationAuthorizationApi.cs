@@ -63,6 +63,54 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteOrgauthorizationTrusteeCloneduserWithHttpInfo (string trusteeOrgId, string trusteeUserId);
 
         /// <summary>
+        /// Delete Trustee Group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <returns></returns>
+        void DeleteOrgauthorizationTrusteeGroup (string trusteeOrgId, string trusteeGroupId);
+
+        /// <summary>
+        /// Delete Trustee Group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteOrgauthorizationTrusteeGroupWithHttpInfo (string trusteeOrgId, string trusteeGroupId);
+
+        /// <summary>
+        /// Delete Trustee Group Roles
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <returns></returns>
+        void DeleteOrgauthorizationTrusteeGroupRoles (string trusteeOrgId, string trusteeGroupId);
+
+        /// <summary>
+        /// Delete Trustee Group Roles
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteOrgauthorizationTrusteeGroupRolesWithHttpInfo (string trusteeOrgId, string trusteeGroupId);
+
+        /// <summary>
         /// Delete Trustee User
         /// </summary>
         /// <remarks>
@@ -157,6 +205,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteOrgauthorizationTrustorCloneduserWithHttpInfo (string trustorOrgId, string trusteeUserId);
 
         /// <summary>
+        /// Delete Trustee Group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">Trustor Organization Id</param>
+        /// <param name="trustorGroupId">Trustor Group Id</param>
+        /// <returns></returns>
+        void DeleteOrgauthorizationTrustorGroup (string trustorOrgId, string trustorGroupId);
+
+        /// <summary>
+        /// Delete Trustee Group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">Trustor Organization Id</param>
+        /// <param name="trustorGroupId">Trustor Group Id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteOrgauthorizationTrustorGroupWithHttpInfo (string trustorOrgId, string trustorGroupId);
+
+        /// <summary>
         /// Delete Trustee User
         /// </summary>
         /// <remarks>
@@ -245,6 +317,80 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <returns>ApiResponse of ClonedUserEntityListing</returns>
         ApiResponse<ClonedUserEntityListing> GetOrgauthorizationTrusteeClonedusersWithHttpInfo (string trusteeOrgId);
+
+        /// <summary>
+        /// Get Trustee Group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <returns>TrustGroup</returns>
+        TrustGroup GetOrgauthorizationTrusteeGroup (string trusteeOrgId, string trusteeGroupId);
+
+        /// <summary>
+        /// Get Trustee Group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <returns>ApiResponse of TrustGroup</returns>
+        ApiResponse<TrustGroup> GetOrgauthorizationTrusteeGroupWithHttpInfo (string trusteeOrgId, string trusteeGroupId);
+
+        /// <summary>
+        /// Get Trustee Group Roles
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <returns>UserAuthorization</returns>
+        UserAuthorization GetOrgauthorizationTrusteeGroupRoles (string trusteeOrgId, string trusteeGroupId);
+
+        /// <summary>
+        /// Get Trustee Group Roles
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <returns>ApiResponse of UserAuthorization</returns>
+        ApiResponse<UserAuthorization> GetOrgauthorizationTrusteeGroupRolesWithHttpInfo (string trusteeOrgId, string trusteeGroupId);
+
+        /// <summary>
+        /// The list of trustee groups for this organization (i.e. groups granted access to this organization).
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>TrustGroupEntityListing</returns>
+        TrustGroupEntityListing GetOrgauthorizationTrusteeGroups (string trusteeOrgId, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// The list of trustee groups for this organization (i.e. groups granted access to this organization).
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of TrustGroupEntityListing</returns>
+        ApiResponse<TrustGroupEntityListing> GetOrgauthorizationTrusteeGroupsWithHttpInfo (string trusteeOrgId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get Trustee User
@@ -433,6 +579,56 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ClonedUserEntityListing> GetOrgauthorizationTrustorClonedusersWithHttpInfo (string trustorOrgId);
 
         /// <summary>
+        /// Get Trustee Group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">Trustor Organization Id</param>
+        /// <param name="trustorGroupId">Trustor Group Id</param>
+        /// <returns>TrustGroup</returns>
+        TrustGroup GetOrgauthorizationTrustorGroup (string trustorOrgId, string trustorGroupId);
+
+        /// <summary>
+        /// Get Trustee Group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">Trustor Organization Id</param>
+        /// <param name="trustorGroupId">Trustor Group Id</param>
+        /// <returns>ApiResponse of TrustGroup</returns>
+        ApiResponse<TrustGroup> GetOrgauthorizationTrustorGroupWithHttpInfo (string trustorOrgId, string trustorGroupId);
+
+        /// <summary>
+        /// The list of groups in the trustor organization (i.e. groups granted access).
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">Trustee Organization Id</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>TrustGroupEntityListing</returns>
+        TrustGroupEntityListing GetOrgauthorizationTrustorGroups (string trustorOrgId, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// The list of groups in the trustor organization (i.e. groups granted access).
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">Trustee Organization Id</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of TrustGroupEntityListing</returns>
+        ApiResponse<TrustGroupEntityListing> GetOrgauthorizationTrustorGroupsWithHttpInfo (string trustorOrgId, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
         /// Get Trustee User
         /// </summary>
         /// <remarks>
@@ -527,6 +723,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Pairing Info</param>
         /// <returns>ApiResponse of TrustRequest</returns>
         ApiResponse<TrustRequest> PostOrgauthorizationPairingsWithHttpInfo (TrustRequestCreate body);
+
+        /// <summary>
+        /// Add a group to the trust.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="body">Trust</param>
+        /// <returns>TrustGroup</returns>
+        TrustGroup PostOrgauthorizationTrusteeGroups (string trusteeOrgId, TrustMemberCreate body);
+
+        /// <summary>
+        /// Add a group to the trust.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="body">Trust</param>
+        /// <returns>ApiResponse of TrustGroup</returns>
+        ApiResponse<TrustGroup> PostOrgauthorizationTrusteeGroupsWithHttpInfo (string trusteeOrgId, TrustMemberCreate body);
 
         /// <summary>
         /// Add a user to the trust.
@@ -683,6 +903,58 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Trustee> PutOrgauthorizationTrusteeWithHttpInfo (string trusteeOrgId, TrustUpdate body);
 
         /// <summary>
+        /// Update Trustee Group Roles
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <param name="body">Set of roles with corresponding divisions to apply</param>
+        /// <returns>UserAuthorization</returns>
+        UserAuthorization PutOrgauthorizationTrusteeGroupRoledivisions (string trusteeOrgId, string trusteeGroupId, RoleDivisionGrants body);
+
+        /// <summary>
+        /// Update Trustee Group Roles
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <param name="body">Set of roles with corresponding divisions to apply</param>
+        /// <returns>ApiResponse of UserAuthorization</returns>
+        ApiResponse<UserAuthorization> PutOrgauthorizationTrusteeGroupRoledivisionsWithHttpInfo (string trusteeOrgId, string trusteeGroupId, RoleDivisionGrants body);
+
+        /// <summary>
+        /// Update Trustee Group Roles
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <param name="body">List of roles</param>
+        /// <returns>UserAuthorization</returns>
+        UserAuthorization PutOrgauthorizationTrusteeGroupRoles (string trusteeOrgId, string trusteeGroupId, List<string> body);
+
+        /// <summary>
+        /// Update Trustee Group Roles
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <param name="body">List of roles</param>
+        /// <returns>ApiResponse of UserAuthorization</returns>
+        ApiResponse<UserAuthorization> PutOrgauthorizationTrusteeGroupRolesWithHttpInfo (string trusteeOrgId, string trusteeGroupId, List<string> body);
+
+        /// <summary>
         /// Update Trustee User Roles
         /// </summary>
         /// <remarks>
@@ -759,6 +1031,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ClonedUser> PutOrgauthorizationTrustorCloneduserWithHttpInfo (string trustorOrgId, string trusteeUserId);
 
         /// <summary>
+        /// Add a Trustee Group to the trust.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">Trustor Organization Id</param>
+        /// <param name="trustorGroupId">Trustor Group Id</param>
+        /// <returns>TrustGroup</returns>
+        TrustGroup PutOrgauthorizationTrustorGroup (string trustorOrgId, string trustorGroupId);
+
+        /// <summary>
+        /// Add a Trustee Group to the trust.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">Trustor Organization Id</param>
+        /// <param name="trustorGroupId">Trustor Group Id</param>
+        /// <returns>ApiResponse of TrustGroup</returns>
+        ApiResponse<TrustGroup> PutOrgauthorizationTrustorGroupWithHttpInfo (string trustorOrgId, string trustorGroupId);
+
+        /// <summary>
         /// Add a Trustee user to the trust.
         /// </summary>
         /// <remarks>
@@ -831,6 +1127,54 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Id of the cloned user to delete</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrgauthorizationTrusteeCloneduserAsyncWithHttpInfo (string trusteeOrgId, string trusteeUserId);
+
+        /// <summary>
+        /// Delete Trustee Group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteOrgauthorizationTrusteeGroupAsync (string trusteeOrgId, string trusteeGroupId);
+
+        /// <summary>
+        /// Delete Trustee Group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrgauthorizationTrusteeGroupAsyncWithHttpInfo (string trusteeOrgId, string trusteeGroupId);
+
+        /// <summary>
+        /// Delete Trustee Group Roles
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteOrgauthorizationTrusteeGroupRolesAsync (string trusteeOrgId, string trusteeGroupId);
+
+        /// <summary>
+        /// Delete Trustee Group Roles
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrgauthorizationTrusteeGroupRolesAsyncWithHttpInfo (string trusteeOrgId, string trusteeGroupId);
 
         /// <summary>
         /// Delete Trustee User
@@ -927,6 +1271,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrgauthorizationTrustorCloneduserAsyncWithHttpInfo (string trustorOrgId, string trusteeUserId);
 
         /// <summary>
+        /// Delete Trustee Group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">Trustor Organization Id</param>
+        /// <param name="trustorGroupId">Trustor Group Id</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteOrgauthorizationTrustorGroupAsync (string trustorOrgId, string trustorGroupId);
+
+        /// <summary>
+        /// Delete Trustee Group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">Trustor Organization Id</param>
+        /// <param name="trustorGroupId">Trustor Group Id</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrgauthorizationTrustorGroupAsyncWithHttpInfo (string trustorOrgId, string trustorGroupId);
+
+        /// <summary>
         /// Delete Trustee User
         /// </summary>
         /// <remarks>
@@ -1015,6 +1383,80 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <returns>Task of ApiResponse (ClonedUserEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ClonedUserEntityListing>> GetOrgauthorizationTrusteeClonedusersAsyncWithHttpInfo (string trusteeOrgId);
+
+        /// <summary>
+        /// Get Trustee Group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <returns>Task of TrustGroup</returns>
+        System.Threading.Tasks.Task<TrustGroup> GetOrgauthorizationTrusteeGroupAsync (string trusteeOrgId, string trusteeGroupId);
+
+        /// <summary>
+        /// Get Trustee Group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <returns>Task of ApiResponse (TrustGroup)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TrustGroup>> GetOrgauthorizationTrusteeGroupAsyncWithHttpInfo (string trusteeOrgId, string trusteeGroupId);
+
+        /// <summary>
+        /// Get Trustee Group Roles
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <returns>Task of UserAuthorization</returns>
+        System.Threading.Tasks.Task<UserAuthorization> GetOrgauthorizationTrusteeGroupRolesAsync (string trusteeOrgId, string trusteeGroupId);
+
+        /// <summary>
+        /// Get Trustee Group Roles
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <returns>Task of ApiResponse (UserAuthorization)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> GetOrgauthorizationTrusteeGroupRolesAsyncWithHttpInfo (string trusteeOrgId, string trusteeGroupId);
+
+        /// <summary>
+        /// The list of trustee groups for this organization (i.e. groups granted access to this organization).
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of TrustGroupEntityListing</returns>
+        System.Threading.Tasks.Task<TrustGroupEntityListing> GetOrgauthorizationTrusteeGroupsAsync (string trusteeOrgId, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// The list of trustee groups for this organization (i.e. groups granted access to this organization).
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (TrustGroupEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TrustGroupEntityListing>> GetOrgauthorizationTrusteeGroupsAsyncWithHttpInfo (string trusteeOrgId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get Trustee User
@@ -1203,6 +1645,56 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ClonedUserEntityListing>> GetOrgauthorizationTrustorClonedusersAsyncWithHttpInfo (string trustorOrgId);
 
         /// <summary>
+        /// Get Trustee Group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">Trustor Organization Id</param>
+        /// <param name="trustorGroupId">Trustor Group Id</param>
+        /// <returns>Task of TrustGroup</returns>
+        System.Threading.Tasks.Task<TrustGroup> GetOrgauthorizationTrustorGroupAsync (string trustorOrgId, string trustorGroupId);
+
+        /// <summary>
+        /// Get Trustee Group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">Trustor Organization Id</param>
+        /// <param name="trustorGroupId">Trustor Group Id</param>
+        /// <returns>Task of ApiResponse (TrustGroup)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TrustGroup>> GetOrgauthorizationTrustorGroupAsyncWithHttpInfo (string trustorOrgId, string trustorGroupId);
+
+        /// <summary>
+        /// The list of groups in the trustor organization (i.e. groups granted access).
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">Trustee Organization Id</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of TrustGroupEntityListing</returns>
+        System.Threading.Tasks.Task<TrustGroupEntityListing> GetOrgauthorizationTrustorGroupsAsync (string trustorOrgId, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// The list of groups in the trustor organization (i.e. groups granted access).
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">Trustee Organization Id</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (TrustGroupEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TrustGroupEntityListing>> GetOrgauthorizationTrustorGroupsAsyncWithHttpInfo (string trustorOrgId, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
         /// Get Trustee User
         /// </summary>
         /// <remarks>
@@ -1297,6 +1789,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Pairing Info</param>
         /// <returns>Task of ApiResponse (TrustRequest)</returns>
         System.Threading.Tasks.Task<ApiResponse<TrustRequest>> PostOrgauthorizationPairingsAsyncWithHttpInfo (TrustRequestCreate body);
+
+        /// <summary>
+        /// Add a group to the trust.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="body">Trust</param>
+        /// <returns>Task of TrustGroup</returns>
+        System.Threading.Tasks.Task<TrustGroup> PostOrgauthorizationTrusteeGroupsAsync (string trusteeOrgId, TrustMemberCreate body);
+
+        /// <summary>
+        /// Add a group to the trust.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="body">Trust</param>
+        /// <returns>Task of ApiResponse (TrustGroup)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TrustGroup>> PostOrgauthorizationTrusteeGroupsAsyncWithHttpInfo (string trusteeOrgId, TrustMemberCreate body);
 
         /// <summary>
         /// Add a user to the trust.
@@ -1453,6 +1969,58 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Trustee>> PutOrgauthorizationTrusteeAsyncWithHttpInfo (string trusteeOrgId, TrustUpdate body);
 
         /// <summary>
+        /// Update Trustee Group Roles
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <param name="body">Set of roles with corresponding divisions to apply</param>
+        /// <returns>Task of UserAuthorization</returns>
+        System.Threading.Tasks.Task<UserAuthorization> PutOrgauthorizationTrusteeGroupRoledivisionsAsync (string trusteeOrgId, string trusteeGroupId, RoleDivisionGrants body);
+
+        /// <summary>
+        /// Update Trustee Group Roles
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <param name="body">Set of roles with corresponding divisions to apply</param>
+        /// <returns>Task of ApiResponse (UserAuthorization)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutOrgauthorizationTrusteeGroupRoledivisionsAsyncWithHttpInfo (string trusteeOrgId, string trusteeGroupId, RoleDivisionGrants body);
+
+        /// <summary>
+        /// Update Trustee Group Roles
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <param name="body">List of roles</param>
+        /// <returns>Task of UserAuthorization</returns>
+        System.Threading.Tasks.Task<UserAuthorization> PutOrgauthorizationTrusteeGroupRolesAsync (string trusteeOrgId, string trusteeGroupId, List<string> body);
+
+        /// <summary>
+        /// Update Trustee Group Roles
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <param name="body">List of roles</param>
+        /// <returns>Task of ApiResponse (UserAuthorization)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutOrgauthorizationTrusteeGroupRolesAsyncWithHttpInfo (string trusteeOrgId, string trusteeGroupId, List<string> body);
+
+        /// <summary>
         /// Update Trustee User Roles
         /// </summary>
         /// <remarks>
@@ -1527,6 +2095,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of ApiResponse (ClonedUser)</returns>
         System.Threading.Tasks.Task<ApiResponse<ClonedUser>> PutOrgauthorizationTrustorCloneduserAsyncWithHttpInfo (string trustorOrgId, string trusteeUserId);
+
+        /// <summary>
+        /// Add a Trustee Group to the trust.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">Trustor Organization Id</param>
+        /// <param name="trustorGroupId">Trustor Group Id</param>
+        /// <returns>Task of TrustGroup</returns>
+        System.Threading.Tasks.Task<TrustGroup> PutOrgauthorizationTrustorGroupAsync (string trustorOrgId, string trustorGroupId);
+
+        /// <summary>
+        /// Add a Trustee Group to the trust.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">Trustor Organization Id</param>
+        /// <param name="trustorGroupId">Trustor Group Id</param>
+        /// <returns>Task of ApiResponse (TrustGroup)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TrustGroup>> PutOrgauthorizationTrustorGroupAsyncWithHttpInfo (string trustorOrgId, string trustorGroupId);
 
         /// <summary>
         /// Add a Trustee user to the trust.
@@ -2025,6 +2617,410 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOrgauthorizationTrusteeCloneduser: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOrgauthorizationTrusteeCloneduser: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete Trustee Group 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <returns></returns>
+        public void DeleteOrgauthorizationTrusteeGroup (string trusteeOrgId, string trusteeGroupId)
+        {
+             DeleteOrgauthorizationTrusteeGroupWithHttpInfo(trusteeOrgId, trusteeGroupId);
+        }
+
+        /// <summary>
+        /// Delete Trustee Group 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteOrgauthorizationTrusteeGroupWithHttpInfo (string trusteeOrgId, string trusteeGroupId)
+        { 
+            // verify the required parameter 'trusteeOrgId' is set
+            if (trusteeOrgId == null)
+                throw new ApiException(400, "Missing required parameter 'trusteeOrgId' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrusteeGroup");
+            // verify the required parameter 'trusteeGroupId' is set
+            if (trusteeGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'trusteeGroupId' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrusteeGroup");
+
+            var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (trusteeOrgId != null) localVarPathParams.Add("trusteeOrgId", this.Configuration.ApiClient.ParameterToString(trusteeOrgId));
+            if (trusteeGroupId != null) localVarPathParams.Add("trusteeGroupId", this.Configuration.ApiClient.ParameterToString(trusteeGroupId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOrgauthorizationTrusteeGroup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOrgauthorizationTrusteeGroup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete Trustee Group 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteOrgauthorizationTrusteeGroupAsync (string trusteeOrgId, string trusteeGroupId)
+        {
+             await DeleteOrgauthorizationTrusteeGroupAsyncWithHttpInfo(trusteeOrgId, trusteeGroupId);
+
+        }
+
+        /// <summary>
+        /// Delete Trustee Group 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrgauthorizationTrusteeGroupAsyncWithHttpInfo (string trusteeOrgId, string trusteeGroupId)
+        { 
+            // verify the required parameter 'trusteeOrgId' is set
+            if (trusteeOrgId == null)
+                throw new ApiException(400, "Missing required parameter 'trusteeOrgId' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrusteeGroup");
+            
+            // verify the required parameter 'trusteeGroupId' is set
+            if (trusteeGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'trusteeGroupId' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrusteeGroup");
+            
+
+            var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (trusteeOrgId != null) localVarPathParams.Add("trusteeOrgId", this.Configuration.ApiClient.ParameterToString(trusteeOrgId));
+            if (trusteeGroupId != null) localVarPathParams.Add("trusteeGroupId", this.Configuration.ApiClient.ParameterToString(trusteeGroupId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOrgauthorizationTrusteeGroup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOrgauthorizationTrusteeGroup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete Trustee Group Roles 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <returns></returns>
+        public void DeleteOrgauthorizationTrusteeGroupRoles (string trusteeOrgId, string trusteeGroupId)
+        {
+             DeleteOrgauthorizationTrusteeGroupRolesWithHttpInfo(trusteeOrgId, trusteeGroupId);
+        }
+
+        /// <summary>
+        /// Delete Trustee Group Roles 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteOrgauthorizationTrusteeGroupRolesWithHttpInfo (string trusteeOrgId, string trusteeGroupId)
+        { 
+            // verify the required parameter 'trusteeOrgId' is set
+            if (trusteeOrgId == null)
+                throw new ApiException(400, "Missing required parameter 'trusteeOrgId' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrusteeGroupRoles");
+            // verify the required parameter 'trusteeGroupId' is set
+            if (trusteeGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'trusteeGroupId' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrusteeGroupRoles");
+
+            var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}/roles";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (trusteeOrgId != null) localVarPathParams.Add("trusteeOrgId", this.Configuration.ApiClient.ParameterToString(trusteeOrgId));
+            if (trusteeGroupId != null) localVarPathParams.Add("trusteeGroupId", this.Configuration.ApiClient.ParameterToString(trusteeGroupId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOrgauthorizationTrusteeGroupRoles: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOrgauthorizationTrusteeGroupRoles: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete Trustee Group Roles 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteOrgauthorizationTrusteeGroupRolesAsync (string trusteeOrgId, string trusteeGroupId)
+        {
+             await DeleteOrgauthorizationTrusteeGroupRolesAsyncWithHttpInfo(trusteeOrgId, trusteeGroupId);
+
+        }
+
+        /// <summary>
+        /// Delete Trustee Group Roles 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrgauthorizationTrusteeGroupRolesAsyncWithHttpInfo (string trusteeOrgId, string trusteeGroupId)
+        { 
+            // verify the required parameter 'trusteeOrgId' is set
+            if (trusteeOrgId == null)
+                throw new ApiException(400, "Missing required parameter 'trusteeOrgId' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrusteeGroupRoles");
+            
+            // verify the required parameter 'trusteeGroupId' is set
+            if (trusteeGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'trusteeGroupId' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrusteeGroupRoles");
+            
+
+            var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}/roles";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (trusteeOrgId != null) localVarPathParams.Add("trusteeOrgId", this.Configuration.ApiClient.ParameterToString(trusteeOrgId));
+            if (trusteeGroupId != null) localVarPathParams.Add("trusteeGroupId", this.Configuration.ApiClient.ParameterToString(trusteeGroupId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOrgauthorizationTrusteeGroupRoles: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOrgauthorizationTrusteeGroupRoles: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -2831,6 +3827,208 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Delete Trustee Group 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">Trustor Organization Id</param>
+        /// <param name="trustorGroupId">Trustor Group Id</param>
+        /// <returns></returns>
+        public void DeleteOrgauthorizationTrustorGroup (string trustorOrgId, string trustorGroupId)
+        {
+             DeleteOrgauthorizationTrustorGroupWithHttpInfo(trustorOrgId, trustorGroupId);
+        }
+
+        /// <summary>
+        /// Delete Trustee Group 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">Trustor Organization Id</param>
+        /// <param name="trustorGroupId">Trustor Group Id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteOrgauthorizationTrustorGroupWithHttpInfo (string trustorOrgId, string trustorGroupId)
+        { 
+            // verify the required parameter 'trustorOrgId' is set
+            if (trustorOrgId == null)
+                throw new ApiException(400, "Missing required parameter 'trustorOrgId' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrustorGroup");
+            // verify the required parameter 'trustorGroupId' is set
+            if (trustorGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'trustorGroupId' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrustorGroup");
+
+            var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}/groups/{trustorGroupId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (trustorOrgId != null) localVarPathParams.Add("trustorOrgId", this.Configuration.ApiClient.ParameterToString(trustorOrgId));
+            if (trustorGroupId != null) localVarPathParams.Add("trustorGroupId", this.Configuration.ApiClient.ParameterToString(trustorGroupId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOrgauthorizationTrustorGroup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOrgauthorizationTrustorGroup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete Trustee Group 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">Trustor Organization Id</param>
+        /// <param name="trustorGroupId">Trustor Group Id</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteOrgauthorizationTrustorGroupAsync (string trustorOrgId, string trustorGroupId)
+        {
+             await DeleteOrgauthorizationTrustorGroupAsyncWithHttpInfo(trustorOrgId, trustorGroupId);
+
+        }
+
+        /// <summary>
+        /// Delete Trustee Group 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">Trustor Organization Id</param>
+        /// <param name="trustorGroupId">Trustor Group Id</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrgauthorizationTrustorGroupAsyncWithHttpInfo (string trustorOrgId, string trustorGroupId)
+        { 
+            // verify the required parameter 'trustorOrgId' is set
+            if (trustorOrgId == null)
+                throw new ApiException(400, "Missing required parameter 'trustorOrgId' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrustorGroup");
+            
+            // verify the required parameter 'trustorGroupId' is set
+            if (trustorGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'trustorGroupId' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrustorGroup");
+            
+
+            var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}/groups/{trustorGroupId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (trustorOrgId != null) localVarPathParams.Add("trustorOrgId", this.Configuration.ApiClient.ParameterToString(trustorOrgId));
+            if (trustorGroupId != null) localVarPathParams.Add("trustorGroupId", this.Configuration.ApiClient.ParameterToString(trustorGroupId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOrgauthorizationTrustorGroup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOrgauthorizationTrustorGroup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Delete Trustee User 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3599,6 +4797,617 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ClonedUserEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (ClonedUserEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ClonedUserEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get Trustee Group 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <returns>TrustGroup</returns>
+        public TrustGroup GetOrgauthorizationTrusteeGroup (string trusteeOrgId, string trusteeGroupId)
+        {
+             ApiResponse<TrustGroup> localVarResponse = GetOrgauthorizationTrusteeGroupWithHttpInfo(trusteeOrgId, trusteeGroupId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Trustee Group 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <returns>ApiResponse of TrustGroup</returns>
+        public ApiResponse< TrustGroup > GetOrgauthorizationTrusteeGroupWithHttpInfo (string trusteeOrgId, string trusteeGroupId)
+        { 
+            // verify the required parameter 'trusteeOrgId' is set
+            if (trusteeOrgId == null)
+                throw new ApiException(400, "Missing required parameter 'trusteeOrgId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrusteeGroup");
+            // verify the required parameter 'trusteeGroupId' is set
+            if (trusteeGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'trusteeGroupId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrusteeGroup");
+
+            var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (trusteeOrgId != null) localVarPathParams.Add("trusteeOrgId", this.Configuration.ApiClient.ParameterToString(trusteeOrgId));
+            if (trusteeGroupId != null) localVarPathParams.Add("trusteeGroupId", this.Configuration.ApiClient.ParameterToString(trusteeGroupId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrgauthorizationTrusteeGroup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrgauthorizationTrusteeGroup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrustGroup>(localVarStatusCode,
+                localVarHeaders,
+                (TrustGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrustGroup)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get Trustee Group 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <returns>Task of TrustGroup</returns>
+        public async System.Threading.Tasks.Task<TrustGroup> GetOrgauthorizationTrusteeGroupAsync (string trusteeOrgId, string trusteeGroupId)
+        {
+             ApiResponse<TrustGroup> localVarResponse = await GetOrgauthorizationTrusteeGroupAsyncWithHttpInfo(trusteeOrgId, trusteeGroupId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get Trustee Group 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <returns>Task of ApiResponse (TrustGroup)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TrustGroup>> GetOrgauthorizationTrusteeGroupAsyncWithHttpInfo (string trusteeOrgId, string trusteeGroupId)
+        { 
+            // verify the required parameter 'trusteeOrgId' is set
+            if (trusteeOrgId == null)
+                throw new ApiException(400, "Missing required parameter 'trusteeOrgId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrusteeGroup");
+            
+            // verify the required parameter 'trusteeGroupId' is set
+            if (trusteeGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'trusteeGroupId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrusteeGroup");
+            
+
+            var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (trusteeOrgId != null) localVarPathParams.Add("trusteeOrgId", this.Configuration.ApiClient.ParameterToString(trusteeOrgId));
+            if (trusteeGroupId != null) localVarPathParams.Add("trusteeGroupId", this.Configuration.ApiClient.ParameterToString(trusteeGroupId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrgauthorizationTrusteeGroup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrgauthorizationTrusteeGroup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrustGroup>(localVarStatusCode,
+                localVarHeaders,
+                (TrustGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrustGroup)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get Trustee Group Roles 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <returns>UserAuthorization</returns>
+        public UserAuthorization GetOrgauthorizationTrusteeGroupRoles (string trusteeOrgId, string trusteeGroupId)
+        {
+             ApiResponse<UserAuthorization> localVarResponse = GetOrgauthorizationTrusteeGroupRolesWithHttpInfo(trusteeOrgId, trusteeGroupId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Trustee Group Roles 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <returns>ApiResponse of UserAuthorization</returns>
+        public ApiResponse< UserAuthorization > GetOrgauthorizationTrusteeGroupRolesWithHttpInfo (string trusteeOrgId, string trusteeGroupId)
+        { 
+            // verify the required parameter 'trusteeOrgId' is set
+            if (trusteeOrgId == null)
+                throw new ApiException(400, "Missing required parameter 'trusteeOrgId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrusteeGroupRoles");
+            // verify the required parameter 'trusteeGroupId' is set
+            if (trusteeGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'trusteeGroupId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrusteeGroupRoles");
+
+            var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}/roles";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (trusteeOrgId != null) localVarPathParams.Add("trusteeOrgId", this.Configuration.ApiClient.ParameterToString(trusteeOrgId));
+            if (trusteeGroupId != null) localVarPathParams.Add("trusteeGroupId", this.Configuration.ApiClient.ParameterToString(trusteeGroupId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrgauthorizationTrusteeGroupRoles: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrgauthorizationTrusteeGroupRoles: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserAuthorization>(localVarStatusCode,
+                localVarHeaders,
+                (UserAuthorization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserAuthorization)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get Trustee Group Roles 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <returns>Task of UserAuthorization</returns>
+        public async System.Threading.Tasks.Task<UserAuthorization> GetOrgauthorizationTrusteeGroupRolesAsync (string trusteeOrgId, string trusteeGroupId)
+        {
+             ApiResponse<UserAuthorization> localVarResponse = await GetOrgauthorizationTrusteeGroupRolesAsyncWithHttpInfo(trusteeOrgId, trusteeGroupId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get Trustee Group Roles 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <returns>Task of ApiResponse (UserAuthorization)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> GetOrgauthorizationTrusteeGroupRolesAsyncWithHttpInfo (string trusteeOrgId, string trusteeGroupId)
+        { 
+            // verify the required parameter 'trusteeOrgId' is set
+            if (trusteeOrgId == null)
+                throw new ApiException(400, "Missing required parameter 'trusteeOrgId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrusteeGroupRoles");
+            
+            // verify the required parameter 'trusteeGroupId' is set
+            if (trusteeGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'trusteeGroupId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrusteeGroupRoles");
+            
+
+            var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}/roles";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (trusteeOrgId != null) localVarPathParams.Add("trusteeOrgId", this.Configuration.ApiClient.ParameterToString(trusteeOrgId));
+            if (trusteeGroupId != null) localVarPathParams.Add("trusteeGroupId", this.Configuration.ApiClient.ParameterToString(trusteeGroupId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrgauthorizationTrusteeGroupRoles: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrgauthorizationTrusteeGroupRoles: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserAuthorization>(localVarStatusCode,
+                localVarHeaders,
+                (UserAuthorization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserAuthorization)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// The list of trustee groups for this organization (i.e. groups granted access to this organization). 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>TrustGroupEntityListing</returns>
+        public TrustGroupEntityListing GetOrgauthorizationTrusteeGroups (string trusteeOrgId, int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<TrustGroupEntityListing> localVarResponse = GetOrgauthorizationTrusteeGroupsWithHttpInfo(trusteeOrgId, pageSize, pageNumber);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// The list of trustee groups for this organization (i.e. groups granted access to this organization). 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of TrustGroupEntityListing</returns>
+        public ApiResponse< TrustGroupEntityListing > GetOrgauthorizationTrusteeGroupsWithHttpInfo (string trusteeOrgId, int? pageSize = null, int? pageNumber = null)
+        { 
+            // verify the required parameter 'trusteeOrgId' is set
+            if (trusteeOrgId == null)
+                throw new ApiException(400, "Missing required parameter 'trusteeOrgId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrusteeGroups");
+
+            var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/groups";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (trusteeOrgId != null) localVarPathParams.Add("trusteeOrgId", this.Configuration.ApiClient.ParameterToString(trusteeOrgId));
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrgauthorizationTrusteeGroups: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrgauthorizationTrusteeGroups: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrustGroupEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (TrustGroupEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrustGroupEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// The list of trustee groups for this organization (i.e. groups granted access to this organization). 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of TrustGroupEntityListing</returns>
+        public async System.Threading.Tasks.Task<TrustGroupEntityListing> GetOrgauthorizationTrusteeGroupsAsync (string trusteeOrgId, int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<TrustGroupEntityListing> localVarResponse = await GetOrgauthorizationTrusteeGroupsAsyncWithHttpInfo(trusteeOrgId, pageSize, pageNumber);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// The list of trustee groups for this organization (i.e. groups granted access to this organization). 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (TrustGroupEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TrustGroupEntityListing>> GetOrgauthorizationTrusteeGroupsAsyncWithHttpInfo (string trusteeOrgId, int? pageSize = null, int? pageNumber = null)
+        { 
+            // verify the required parameter 'trusteeOrgId' is set
+            if (trusteeOrgId == null)
+                throw new ApiException(400, "Missing required parameter 'trusteeOrgId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrusteeGroups");
+            
+
+            var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/groups";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (trusteeOrgId != null) localVarPathParams.Add("trusteeOrgId", this.Configuration.ApiClient.ParameterToString(trusteeOrgId));
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrgauthorizationTrusteeGroups: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrgauthorizationTrusteeGroups: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrustGroupEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (TrustGroupEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrustGroupEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -5171,6 +6980,413 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get Trustee Group 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">Trustor Organization Id</param>
+        /// <param name="trustorGroupId">Trustor Group Id</param>
+        /// <returns>TrustGroup</returns>
+        public TrustGroup GetOrgauthorizationTrustorGroup (string trustorOrgId, string trustorGroupId)
+        {
+             ApiResponse<TrustGroup> localVarResponse = GetOrgauthorizationTrustorGroupWithHttpInfo(trustorOrgId, trustorGroupId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Trustee Group 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">Trustor Organization Id</param>
+        /// <param name="trustorGroupId">Trustor Group Id</param>
+        /// <returns>ApiResponse of TrustGroup</returns>
+        public ApiResponse< TrustGroup > GetOrgauthorizationTrustorGroupWithHttpInfo (string trustorOrgId, string trustorGroupId)
+        { 
+            // verify the required parameter 'trustorOrgId' is set
+            if (trustorOrgId == null)
+                throw new ApiException(400, "Missing required parameter 'trustorOrgId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrustorGroup");
+            // verify the required parameter 'trustorGroupId' is set
+            if (trustorGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'trustorGroupId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrustorGroup");
+
+            var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}/groups/{trustorGroupId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (trustorOrgId != null) localVarPathParams.Add("trustorOrgId", this.Configuration.ApiClient.ParameterToString(trustorOrgId));
+            if (trustorGroupId != null) localVarPathParams.Add("trustorGroupId", this.Configuration.ApiClient.ParameterToString(trustorGroupId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrgauthorizationTrustorGroup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrgauthorizationTrustorGroup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrustGroup>(localVarStatusCode,
+                localVarHeaders,
+                (TrustGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrustGroup)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get Trustee Group 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">Trustor Organization Id</param>
+        /// <param name="trustorGroupId">Trustor Group Id</param>
+        /// <returns>Task of TrustGroup</returns>
+        public async System.Threading.Tasks.Task<TrustGroup> GetOrgauthorizationTrustorGroupAsync (string trustorOrgId, string trustorGroupId)
+        {
+             ApiResponse<TrustGroup> localVarResponse = await GetOrgauthorizationTrustorGroupAsyncWithHttpInfo(trustorOrgId, trustorGroupId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get Trustee Group 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">Trustor Organization Id</param>
+        /// <param name="trustorGroupId">Trustor Group Id</param>
+        /// <returns>Task of ApiResponse (TrustGroup)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TrustGroup>> GetOrgauthorizationTrustorGroupAsyncWithHttpInfo (string trustorOrgId, string trustorGroupId)
+        { 
+            // verify the required parameter 'trustorOrgId' is set
+            if (trustorOrgId == null)
+                throw new ApiException(400, "Missing required parameter 'trustorOrgId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrustorGroup");
+            
+            // verify the required parameter 'trustorGroupId' is set
+            if (trustorGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'trustorGroupId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrustorGroup");
+            
+
+            var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}/groups/{trustorGroupId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (trustorOrgId != null) localVarPathParams.Add("trustorOrgId", this.Configuration.ApiClient.ParameterToString(trustorOrgId));
+            if (trustorGroupId != null) localVarPathParams.Add("trustorGroupId", this.Configuration.ApiClient.ParameterToString(trustorGroupId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrgauthorizationTrustorGroup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrgauthorizationTrustorGroup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrustGroup>(localVarStatusCode,
+                localVarHeaders,
+                (TrustGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrustGroup)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// The list of groups in the trustor organization (i.e. groups granted access). 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">Trustee Organization Id</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>TrustGroupEntityListing</returns>
+        public TrustGroupEntityListing GetOrgauthorizationTrustorGroups (string trustorOrgId, int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<TrustGroupEntityListing> localVarResponse = GetOrgauthorizationTrustorGroupsWithHttpInfo(trustorOrgId, pageSize, pageNumber);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// The list of groups in the trustor organization (i.e. groups granted access). 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">Trustee Organization Id</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of TrustGroupEntityListing</returns>
+        public ApiResponse< TrustGroupEntityListing > GetOrgauthorizationTrustorGroupsWithHttpInfo (string trustorOrgId, int? pageSize = null, int? pageNumber = null)
+        { 
+            // verify the required parameter 'trustorOrgId' is set
+            if (trustorOrgId == null)
+                throw new ApiException(400, "Missing required parameter 'trustorOrgId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrustorGroups");
+
+            var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}/groups";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (trustorOrgId != null) localVarPathParams.Add("trustorOrgId", this.Configuration.ApiClient.ParameterToString(trustorOrgId));
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrgauthorizationTrustorGroups: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrgauthorizationTrustorGroups: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrustGroupEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (TrustGroupEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrustGroupEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// The list of groups in the trustor organization (i.e. groups granted access). 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">Trustee Organization Id</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of TrustGroupEntityListing</returns>
+        public async System.Threading.Tasks.Task<TrustGroupEntityListing> GetOrgauthorizationTrustorGroupsAsync (string trustorOrgId, int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<TrustGroupEntityListing> localVarResponse = await GetOrgauthorizationTrustorGroupsAsyncWithHttpInfo(trustorOrgId, pageSize, pageNumber);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// The list of groups in the trustor organization (i.e. groups granted access). 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">Trustee Organization Id</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (TrustGroupEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TrustGroupEntityListing>> GetOrgauthorizationTrustorGroupsAsyncWithHttpInfo (string trustorOrgId, int? pageSize = null, int? pageNumber = null)
+        { 
+            // verify the required parameter 'trustorOrgId' is set
+            if (trustorOrgId == null)
+                throw new ApiException(400, "Missing required parameter 'trustorOrgId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrustorGroups");
+            
+
+            var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}/groups";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (trustorOrgId != null) localVarPathParams.Add("trustorOrgId", this.Configuration.ApiClient.ParameterToString(trustorOrgId));
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrgauthorizationTrustorGroups: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOrgauthorizationTrustorGroups: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrustGroupEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (TrustGroupEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrustGroupEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get Trustee User 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5962,6 +8178,220 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<TrustRequest>(localVarStatusCode,
                 localVarHeaders,
                 (TrustRequest) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrustRequest)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Add a group to the trust. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="body">Trust</param>
+        /// <returns>TrustGroup</returns>
+        public TrustGroup PostOrgauthorizationTrusteeGroups (string trusteeOrgId, TrustMemberCreate body)
+        {
+             ApiResponse<TrustGroup> localVarResponse = PostOrgauthorizationTrusteeGroupsWithHttpInfo(trusteeOrgId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Add a group to the trust. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="body">Trust</param>
+        /// <returns>ApiResponse of TrustGroup</returns>
+        public ApiResponse< TrustGroup > PostOrgauthorizationTrusteeGroupsWithHttpInfo (string trusteeOrgId, TrustMemberCreate body)
+        { 
+            // verify the required parameter 'trusteeOrgId' is set
+            if (trusteeOrgId == null)
+                throw new ApiException(400, "Missing required parameter 'trusteeOrgId' when calling OrganizationAuthorizationApi->PostOrgauthorizationTrusteeGroups");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationAuthorizationApi->PostOrgauthorizationTrusteeGroups");
+
+            var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/groups";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (trusteeOrgId != null) localVarPathParams.Add("trusteeOrgId", this.Configuration.ApiClient.ParameterToString(trusteeOrgId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostOrgauthorizationTrusteeGroups: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostOrgauthorizationTrusteeGroups: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrustGroup>(localVarStatusCode,
+                localVarHeaders,
+                (TrustGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrustGroup)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Add a group to the trust. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="body">Trust</param>
+        /// <returns>Task of TrustGroup</returns>
+        public async System.Threading.Tasks.Task<TrustGroup> PostOrgauthorizationTrusteeGroupsAsync (string trusteeOrgId, TrustMemberCreate body)
+        {
+             ApiResponse<TrustGroup> localVarResponse = await PostOrgauthorizationTrusteeGroupsAsyncWithHttpInfo(trusteeOrgId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Add a group to the trust. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="body">Trust</param>
+        /// <returns>Task of ApiResponse (TrustGroup)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TrustGroup>> PostOrgauthorizationTrusteeGroupsAsyncWithHttpInfo (string trusteeOrgId, TrustMemberCreate body)
+        { 
+            // verify the required parameter 'trusteeOrgId' is set
+            if (trusteeOrgId == null)
+                throw new ApiException(400, "Missing required parameter 'trusteeOrgId' when calling OrganizationAuthorizationApi->PostOrgauthorizationTrusteeGroups");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationAuthorizationApi->PostOrgauthorizationTrusteeGroups");
+            
+
+            var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/groups";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (trusteeOrgId != null) localVarPathParams.Add("trusteeOrgId", this.Configuration.ApiClient.ParameterToString(trusteeOrgId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostOrgauthorizationTrusteeGroups: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostOrgauthorizationTrusteeGroups: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrustGroup>(localVarStatusCode,
+                localVarHeaders,
+                (TrustGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrustGroup)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -7238,6 +9668,460 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Update Trustee Group Roles 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <param name="body">Set of roles with corresponding divisions to apply</param>
+        /// <returns>UserAuthorization</returns>
+        public UserAuthorization PutOrgauthorizationTrusteeGroupRoledivisions (string trusteeOrgId, string trusteeGroupId, RoleDivisionGrants body)
+        {
+             ApiResponse<UserAuthorization> localVarResponse = PutOrgauthorizationTrusteeGroupRoledivisionsWithHttpInfo(trusteeOrgId, trusteeGroupId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update Trustee Group Roles 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <param name="body">Set of roles with corresponding divisions to apply</param>
+        /// <returns>ApiResponse of UserAuthorization</returns>
+        public ApiResponse< UserAuthorization > PutOrgauthorizationTrusteeGroupRoledivisionsWithHttpInfo (string trusteeOrgId, string trusteeGroupId, RoleDivisionGrants body)
+        { 
+            // verify the required parameter 'trusteeOrgId' is set
+            if (trusteeOrgId == null)
+                throw new ApiException(400, "Missing required parameter 'trusteeOrgId' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrusteeGroupRoledivisions");
+            // verify the required parameter 'trusteeGroupId' is set
+            if (trusteeGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'trusteeGroupId' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrusteeGroupRoledivisions");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrusteeGroupRoledivisions");
+
+            var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}/roledivisions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (trusteeOrgId != null) localVarPathParams.Add("trusteeOrgId", this.Configuration.ApiClient.ParameterToString(trusteeOrgId));
+            if (trusteeGroupId != null) localVarPathParams.Add("trusteeGroupId", this.Configuration.ApiClient.ParameterToString(trusteeGroupId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutOrgauthorizationTrusteeGroupRoledivisions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutOrgauthorizationTrusteeGroupRoledivisions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserAuthorization>(localVarStatusCode,
+                localVarHeaders,
+                (UserAuthorization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserAuthorization)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update Trustee Group Roles 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <param name="body">Set of roles with corresponding divisions to apply</param>
+        /// <returns>Task of UserAuthorization</returns>
+        public async System.Threading.Tasks.Task<UserAuthorization> PutOrgauthorizationTrusteeGroupRoledivisionsAsync (string trusteeOrgId, string trusteeGroupId, RoleDivisionGrants body)
+        {
+             ApiResponse<UserAuthorization> localVarResponse = await PutOrgauthorizationTrusteeGroupRoledivisionsAsyncWithHttpInfo(trusteeOrgId, trusteeGroupId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update Trustee Group Roles 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <param name="body">Set of roles with corresponding divisions to apply</param>
+        /// <returns>Task of ApiResponse (UserAuthorization)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutOrgauthorizationTrusteeGroupRoledivisionsAsyncWithHttpInfo (string trusteeOrgId, string trusteeGroupId, RoleDivisionGrants body)
+        { 
+            // verify the required parameter 'trusteeOrgId' is set
+            if (trusteeOrgId == null)
+                throw new ApiException(400, "Missing required parameter 'trusteeOrgId' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrusteeGroupRoledivisions");
+            
+            // verify the required parameter 'trusteeGroupId' is set
+            if (trusteeGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'trusteeGroupId' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrusteeGroupRoledivisions");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrusteeGroupRoledivisions");
+            
+
+            var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}/roledivisions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (trusteeOrgId != null) localVarPathParams.Add("trusteeOrgId", this.Configuration.ApiClient.ParameterToString(trusteeOrgId));
+            if (trusteeGroupId != null) localVarPathParams.Add("trusteeGroupId", this.Configuration.ApiClient.ParameterToString(trusteeGroupId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutOrgauthorizationTrusteeGroupRoledivisions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutOrgauthorizationTrusteeGroupRoledivisions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserAuthorization>(localVarStatusCode,
+                localVarHeaders,
+                (UserAuthorization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserAuthorization)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update Trustee Group Roles 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <param name="body">List of roles</param>
+        /// <returns>UserAuthorization</returns>
+        public UserAuthorization PutOrgauthorizationTrusteeGroupRoles (string trusteeOrgId, string trusteeGroupId, List<string> body)
+        {
+             ApiResponse<UserAuthorization> localVarResponse = PutOrgauthorizationTrusteeGroupRolesWithHttpInfo(trusteeOrgId, trusteeGroupId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update Trustee Group Roles 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <param name="body">List of roles</param>
+        /// <returns>ApiResponse of UserAuthorization</returns>
+        public ApiResponse< UserAuthorization > PutOrgauthorizationTrusteeGroupRolesWithHttpInfo (string trusteeOrgId, string trusteeGroupId, List<string> body)
+        { 
+            // verify the required parameter 'trusteeOrgId' is set
+            if (trusteeOrgId == null)
+                throw new ApiException(400, "Missing required parameter 'trusteeOrgId' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrusteeGroupRoles");
+            // verify the required parameter 'trusteeGroupId' is set
+            if (trusteeGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'trusteeGroupId' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrusteeGroupRoles");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrusteeGroupRoles");
+
+            var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}/roles";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (trusteeOrgId != null) localVarPathParams.Add("trusteeOrgId", this.Configuration.ApiClient.ParameterToString(trusteeOrgId));
+            if (trusteeGroupId != null) localVarPathParams.Add("trusteeGroupId", this.Configuration.ApiClient.ParameterToString(trusteeGroupId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutOrgauthorizationTrusteeGroupRoles: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutOrgauthorizationTrusteeGroupRoles: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserAuthorization>(localVarStatusCode,
+                localVarHeaders,
+                (UserAuthorization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserAuthorization)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update Trustee Group Roles 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <param name="body">List of roles</param>
+        /// <returns>Task of UserAuthorization</returns>
+        public async System.Threading.Tasks.Task<UserAuthorization> PutOrgauthorizationTrusteeGroupRolesAsync (string trusteeOrgId, string trusteeGroupId, List<string> body)
+        {
+             ApiResponse<UserAuthorization> localVarResponse = await PutOrgauthorizationTrusteeGroupRolesAsyncWithHttpInfo(trusteeOrgId, trusteeGroupId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update Trustee Group Roles 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trusteeOrgId">Trustee Organization Id</param>
+        /// <param name="trusteeGroupId">Trustee Group Id</param>
+        /// <param name="body">List of roles</param>
+        /// <returns>Task of ApiResponse (UserAuthorization)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutOrgauthorizationTrusteeGroupRolesAsyncWithHttpInfo (string trusteeOrgId, string trusteeGroupId, List<string> body)
+        { 
+            // verify the required parameter 'trusteeOrgId' is set
+            if (trusteeOrgId == null)
+                throw new ApiException(400, "Missing required parameter 'trusteeOrgId' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrusteeGroupRoles");
+            
+            // verify the required parameter 'trusteeGroupId' is set
+            if (trusteeGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'trusteeGroupId' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrusteeGroupRoles");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrusteeGroupRoles");
+            
+
+            var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}/roles";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (trusteeOrgId != null) localVarPathParams.Add("trusteeOrgId", this.Configuration.ApiClient.ParameterToString(trusteeOrgId));
+            if (trusteeGroupId != null) localVarPathParams.Add("trusteeGroupId", this.Configuration.ApiClient.ParameterToString(trusteeGroupId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutOrgauthorizationTrusteeGroupRoles: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutOrgauthorizationTrusteeGroupRoles: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserAuthorization>(localVarStatusCode,
+                localVarHeaders,
+                (UserAuthorization) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserAuthorization)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Update Trustee User Roles 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7889,6 +10773,210 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ClonedUser>(localVarStatusCode,
                 localVarHeaders,
                 (ClonedUser) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ClonedUser)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Add a Trustee Group to the trust. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">Trustor Organization Id</param>
+        /// <param name="trustorGroupId">Trustor Group Id</param>
+        /// <returns>TrustGroup</returns>
+        public TrustGroup PutOrgauthorizationTrustorGroup (string trustorOrgId, string trustorGroupId)
+        {
+             ApiResponse<TrustGroup> localVarResponse = PutOrgauthorizationTrustorGroupWithHttpInfo(trustorOrgId, trustorGroupId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Add a Trustee Group to the trust. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">Trustor Organization Id</param>
+        /// <param name="trustorGroupId">Trustor Group Id</param>
+        /// <returns>ApiResponse of TrustGroup</returns>
+        public ApiResponse< TrustGroup > PutOrgauthorizationTrustorGroupWithHttpInfo (string trustorOrgId, string trustorGroupId)
+        { 
+            // verify the required parameter 'trustorOrgId' is set
+            if (trustorOrgId == null)
+                throw new ApiException(400, "Missing required parameter 'trustorOrgId' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrustorGroup");
+            // verify the required parameter 'trustorGroupId' is set
+            if (trustorGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'trustorGroupId' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrustorGroup");
+
+            var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}/groups/{trustorGroupId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (trustorOrgId != null) localVarPathParams.Add("trustorOrgId", this.Configuration.ApiClient.ParameterToString(trustorOrgId));
+            if (trustorGroupId != null) localVarPathParams.Add("trustorGroupId", this.Configuration.ApiClient.ParameterToString(trustorGroupId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutOrgauthorizationTrustorGroup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutOrgauthorizationTrustorGroup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrustGroup>(localVarStatusCode,
+                localVarHeaders,
+                (TrustGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrustGroup)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Add a Trustee Group to the trust. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">Trustor Organization Id</param>
+        /// <param name="trustorGroupId">Trustor Group Id</param>
+        /// <returns>Task of TrustGroup</returns>
+        public async System.Threading.Tasks.Task<TrustGroup> PutOrgauthorizationTrustorGroupAsync (string trustorOrgId, string trustorGroupId)
+        {
+             ApiResponse<TrustGroup> localVarResponse = await PutOrgauthorizationTrustorGroupAsyncWithHttpInfo(trustorOrgId, trustorGroupId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Add a Trustee Group to the trust. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="trustorOrgId">Trustor Organization Id</param>
+        /// <param name="trustorGroupId">Trustor Group Id</param>
+        /// <returns>Task of ApiResponse (TrustGroup)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TrustGroup>> PutOrgauthorizationTrustorGroupAsyncWithHttpInfo (string trustorOrgId, string trustorGroupId)
+        { 
+            // verify the required parameter 'trustorOrgId' is set
+            if (trustorOrgId == null)
+                throw new ApiException(400, "Missing required parameter 'trustorOrgId' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrustorGroup");
+            
+            // verify the required parameter 'trustorGroupId' is set
+            if (trustorGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'trustorGroupId' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrustorGroup");
+            
+
+            var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}/groups/{trustorGroupId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (trustorOrgId != null) localVarPathParams.Add("trustorOrgId", this.Configuration.ApiClient.ParameterToString(trustorOrgId));
+            if (trustorGroupId != null) localVarPathParams.Add("trustorGroupId", this.Configuration.ApiClient.ParameterToString(trustorGroupId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutOrgauthorizationTrustorGroup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutOrgauthorizationTrustorGroup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrustGroup>(localVarStatusCode,
+                localVarHeaders,
+                (TrustGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrustGroup)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

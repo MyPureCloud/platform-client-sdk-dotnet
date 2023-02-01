@@ -7816,6 +7816,20 @@
     "return": "string",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostConversationAssignExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var conversationId = \"conversationId_example\";  // string | conversation ID\n            var body = new ConversationUser(); // ConversationUser | Targeted user\n\n            try\n            { \n                // Attempts to manually assign a specified conversation to a specified user.  Ignores bullseye ring, PAR score, skills, and languages.\n                string result = apiInstance.PostConversationAssign(conversationId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.PostConversationAssign: \" + e.Message );\n            }\n        }\n    }\n}"
   },
+  "postconversationcobrowse": {
+    "operationId": "postconversationcobrowse",
+    "functionName": "PostConversationCobrowse",
+    "signature": "PostConversationCobrowse(conversationId)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "string",
+        "required": "true"
+      }
+    ],
+    "return": "CobrowseWebMessagingSession",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostConversationCobrowseExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var conversationId = \"conversationId_example\";  // string | Conversation ID\n\n            try\n            { \n                // Creates a cobrowse session\n                CobrowseWebMessagingSession result = apiInstance.PostConversationCobrowse(conversationId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.PostConversationCobrowse: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
   "postconversationdisconnect": {
     "operationId": "postconversationdisconnect",
     "functionName": "PostConversationDisconnect",
@@ -8260,8 +8274,8 @@
         "required": "true"
       }
     ],
-    "return": "EmailMessage",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostConversationsEmailMessagesExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var conversationId = \"conversationId_example\";  // string | conversationId\n            var body = new EmailMessage(); // EmailMessage | Reply\n\n            try\n            { \n                // Send an email reply\n                EmailMessage result = apiInstance.PostConversationsEmailMessages(conversationId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.PostConversationsEmailMessages: \" + e.Message );\n            }\n        }\n    }\n}"
+    "return": "EmailMessageReply",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostConversationsEmailMessagesExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var conversationId = \"conversationId_example\";  // string | conversationId\n            var body = new EmailMessage(); // EmailMessage | Reply\n\n            try\n            { \n                // Send an email reply\n                EmailMessageReply result = apiInstance.PostConversationsEmailMessages(conversationId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.PostConversationsEmailMessages: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "postconversationsemailmessagesdraftattachmentscopy": {
     "operationId": "postconversationsemailmessagesdraftattachmentscopy",
@@ -16339,7 +16353,7 @@
   "getlanguageunderstandingdomainfeedback": {
     "operationId": "getlanguageunderstandingdomainfeedback",
     "functionName": "GetLanguageunderstandingDomainFeedback",
-    "signature": "GetLanguageunderstandingDomainFeedback(domainId, intentName, assessment, dateStart, dateEnd, includeDeleted, language, pageNumber, pageSize, enableCursorPagination, after, fields)",
+    "signature": "GetLanguageunderstandingDomainFeedback(domainId, intentName, assessment, dateStart, dateEnd, includeDeleted, language, pageNumber, pageSize, enableCursorPagination, includeTrainingUtterances, after, fields)",
     "parameters": [
       {
         "name": "domainId",
@@ -16392,6 +16406,11 @@
         "required": "false"
       },
       {
+        "name": "includeTrainingUtterances",
+        "type": "bool?",
+        "required": "false"
+      },
+      {
         "name": "after",
         "type": "string",
         "required": "false"
@@ -16403,7 +16422,7 @@
       }
     ],
     "return": "NluFeedbackListing",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetLanguageunderstandingDomainFeedbackExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new LanguageUnderstandingApi();\n            var domainId = \"domainId_example\";  // string | ID of the NLU domain.\n            var intentName = \"intentName_example\";  // string | The top intent name to retrieve feedback for. (optional) \n            var assessment = \"assessment_example\";  // string | The top assessment to retrieve feedback for. (optional) \n            var dateStart = new Date();  // String | Begin of time window as ISO-8601 date. (optional) \n            var dateEnd = new Date();  // String | End of time window as ISO-8601 date. (optional) \n            var includeDeleted = true;  // bool? | Whether to include soft-deleted items in the result. (optional) \n            var language = \"language_example\";  // string | Whether to filter response based on the language, e.g. en-us, pt-br. (optional) \n            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)\n            var pageSize = 56;  // int? | Page size (optional)  (default to 25)\n            var enableCursorPagination = true;  // bool? | Enable Cursor Pagination (optional)  (default to false)\n            var after = \"after_example\";  // string | The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination=true (optional) \n            var fields = new List<string>(); // List<string> | Fields and properties to get, comma-separated (optional) \n\n            try\n            { \n                // Get all feedback in the given NLU Domain Version.\n                NluFeedbackListing result = apiInstance.GetLanguageunderstandingDomainFeedback(domainId, intentName, assessment, dateStart, dateEnd, includeDeleted, language, pageNumber, pageSize, enableCursorPagination, after, fields);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling LanguageUnderstanding.GetLanguageunderstandingDomainFeedback: \" + e.Message );\n            }\n        }\n    }\n}"
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetLanguageunderstandingDomainFeedbackExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new LanguageUnderstandingApi();\n            var domainId = \"domainId_example\";  // string | ID of the NLU domain.\n            var intentName = \"intentName_example\";  // string | The top intent name to retrieve feedback for. (optional) \n            var assessment = \"assessment_example\";  // string | The top assessment to retrieve feedback for. (optional) \n            var dateStart = new Date();  // String | Begin of time window as ISO-8601 date. (optional) \n            var dateEnd = new Date();  // String | End of time window as ISO-8601 date. (optional) \n            var includeDeleted = true;  // bool? | Whether to include soft-deleted items in the result. (optional) \n            var language = \"language_example\";  // string | Whether to filter response based on the language, e.g. en-us, pt-br. (optional) \n            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)\n            var pageSize = 56;  // int? | Page size (optional)  (default to 25)\n            var enableCursorPagination = true;  // bool? | Enable Cursor Pagination (optional)  (default to false)\n            var includeTrainingUtterances = true;  // bool? | Include Training Utterances. By default they're included. (optional)  (default to true)\n            var after = \"after_example\";  // string | The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination=true (optional) \n            var fields = new List<string>(); // List<string> | Fields and properties to get, comma-separated (optional) \n\n            try\n            { \n                // Get all feedback in the given NLU Domain Version.\n                NluFeedbackListing result = apiInstance.GetLanguageunderstandingDomainFeedback(domainId, intentName, assessment, dateStart, dateEnd, includeDeleted, language, pageNumber, pageSize, enableCursorPagination, includeTrainingUtterances, after, fields);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling LanguageUnderstanding.GetLanguageunderstandingDomainFeedback: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "getlanguageunderstandingdomainfeedbackfeedbackid": {
     "operationId": "getlanguageunderstandingdomainfeedbackfeedbackid",
@@ -17180,7 +17199,7 @@
       }
     ],
     "return": "LearningAssignmentsDomainEntity",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetLearningAssignmentsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new LearningApi();\n            var moduleId = \"moduleId_example\";  // string | Specifies the ID of the learning module. Fetch assignments for learning module ID (optional) \n            var interval = \"interval_example\";  // string | Specifies the range of dueDates to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional) \n            var completionInterval = \"completionInterval_example\";  // string | Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional) \n            var overdue = \"overdue_example\";  // string | Specifies if only the non-overdue (overdue is \\\"False\\\") or overdue (overdue is \\\"True\\\") assignments are returned. If overdue is \\\"Any\\\" or if the overdue parameter is not supplied, all assignments are returned (optional)  (default to Any)\n            var pageSize = 56;  // int? | Page size (optional)  (default to 25)\n            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)\n            var pass = \"pass_example\";  // string | Specifies if only the failed (pass is \\\"False\\\") or passed (pass is \\\"True\\\") assignments (completed with assessment)are returned. If pass is \\\"Any\\\" or if the pass parameter is not supplied, all assignments are returned (optional)  (default to Any)\n            var minPercentageScore = 3.4F;  // float? | The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional) \n            var maxPercentageScore = 3.4F;  // float? | The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional) \n            var sortOrder = \"sortOrder_example\";  // string | Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional)  (default to Desc)\n            var sortBy = \"sortBy_example\";  // string | Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional) \n            var userId = new List<string>(); // List<string> | Specifies the list of user IDs to be queried, up to 100 user IDs. (optional) \n            var types = new List<string>(); // List<string> | Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned (optional) \n            var states = new List<string>(); // List<string> | Specifies the assignment states to filter by (optional) \n            var expand = new List<string>(); // List<string> | Specifies the expand option for returning additional information (optional) \n\n            try\n            { \n                // List of Learning module Assignments\n                LearningAssignmentsDomainEntity result = apiInstance.GetLearningAssignments(moduleId, interval, completionInterval, overdue, pageSize, pageNumber, pass, minPercentageScore, maxPercentageScore, sortOrder, sortBy, userId, types, states, expand);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Learning.GetLearningAssignments: \" + e.Message );\n            }\n        }\n    }\n}"
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetLearningAssignmentsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new LearningApi();\n            var moduleId = \"moduleId_example\";  // string | Specifies the ID of the learning module. Fetch assignments for learning module ID (optional) \n            var interval = \"interval_example\";  // string | Specifies the range of dueDates to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional) \n            var completionInterval = \"completionInterval_example\";  // string | Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional) \n            var overdue = \"overdue_example\";  // string | Specifies if only the non-overdue (overdue is \\\"False\\\") or overdue (overdue is \\\"True\\\") assignments are returned. If overdue is \\\"Any\\\" or if the overdue parameter is not supplied, all assignments are returned (optional)  (default to Any)\n            var pageSize = 56;  // int? | Page size (optional)  (default to 25)\n            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)\n            var pass = \"pass_example\";  // string | Specifies if only the failed (pass is \\\"False\\\") or passed (pass is \\\"True\\\") assignments (completed with assessment)are returned. If pass is \\\"Any\\\" or if the pass parameter is not supplied, all assignments are returned (optional)  (default to Any)\n            var minPercentageScore = 3.4F;  // float? | The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional) \n            var maxPercentageScore = 3.4F;  // float? | The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional) \n            var sortOrder = \"sortOrder_example\";  // string | Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional)  (default to Desc)\n            var sortBy = \"sortBy_example\";  // string | Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional) \n            var userId = new List<string>(); // List<string> | Specifies the list of user IDs to be queried, up to 100 user IDs. (optional) \n            var types = new List<string>(); // List<string> | Specifies the module types to filter by (optional) \n            var states = new List<string>(); // List<string> | Specifies the assignment states to filter by (optional) \n            var expand = new List<string>(); // List<string> | Specifies the expand option for returning additional information (optional) \n\n            try\n            { \n                // List of Learning module Assignments\n                LearningAssignmentsDomainEntity result = apiInstance.GetLearningAssignments(moduleId, interval, completionInterval, overdue, pageSize, pageNumber, pass, minPercentageScore, maxPercentageScore, sortOrder, sortBy, userId, types, states, expand);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Learning.GetLearningAssignments: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "getlearningassignmentsme": {
     "operationId": "getlearningassignmentsme",
@@ -17259,7 +17278,7 @@
       }
     ],
     "return": "LearningAssignmentsDomainEntity",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetLearningAssignmentsMeExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new LearningApi();\n            var moduleId = \"moduleId_example\";  // string | Specifies the ID of the learning module. Fetch assignments for learning module ID (optional) \n            var interval = \"interval_example\";  // string | Specifies the range of dueDates to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional) \n            var completionInterval = \"completionInterval_example\";  // string | Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional) \n            var overdue = \"overdue_example\";  // string | Specifies if only the non-overdue (overdue is \\\"False\\\") or overdue (overdue is \\\"True\\\") assignments are returned. If overdue is \\\"Any\\\" or if the overdue parameter is not supplied, all assignments are returned (optional)  (default to Any)\n            var pageSize = 56;  // int? | Page size (optional)  (default to 25)\n            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)\n            var pass = \"pass_example\";  // string | Specifies if only the failed (pass is \\\"False\\\") or passed (pass is \\\"True\\\") assignments (completed with assessment)are returned. If pass is \\\"Any\\\" or if the pass parameter is not supplied, all assignments are returned (optional)  (default to Any)\n            var minPercentageScore = 3.4F;  // float? | The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional) \n            var maxPercentageScore = 3.4F;  // float? | The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional) \n            var sortOrder = \"sortOrder_example\";  // string | Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional)  (default to Desc)\n            var sortBy = \"sortBy_example\";  // string | Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional) \n            var types = new List<string>(); // List<string> | Specifies the assignment types, currently not supported and will be ignored. For now, all learning assignments regardless of types will be returned (optional) \n            var states = new List<string>(); // List<string> | Specifies the assignment states to filter by (optional) \n            var expand = new List<string>(); // List<string> | Specifies the expand option for returning additional information (optional) \n\n            try\n            { \n                // List of Learning Assignments assigned to current user\n                LearningAssignmentsDomainEntity result = apiInstance.GetLearningAssignmentsMe(moduleId, interval, completionInterval, overdue, pageSize, pageNumber, pass, minPercentageScore, maxPercentageScore, sortOrder, sortBy, types, states, expand);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Learning.GetLearningAssignmentsMe: \" + e.Message );\n            }\n        }\n    }\n}"
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetLearningAssignmentsMeExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new LearningApi();\n            var moduleId = \"moduleId_example\";  // string | Specifies the ID of the learning module. Fetch assignments for learning module ID (optional) \n            var interval = \"interval_example\";  // string | Specifies the range of dueDates to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional) \n            var completionInterval = \"completionInterval_example\";  // string | Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional) \n            var overdue = \"overdue_example\";  // string | Specifies if only the non-overdue (overdue is \\\"False\\\") or overdue (overdue is \\\"True\\\") assignments are returned. If overdue is \\\"Any\\\" or if the overdue parameter is not supplied, all assignments are returned (optional)  (default to Any)\n            var pageSize = 56;  // int? | Page size (optional)  (default to 25)\n            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)\n            var pass = \"pass_example\";  // string | Specifies if only the failed (pass is \\\"False\\\") or passed (pass is \\\"True\\\") assignments (completed with assessment)are returned. If pass is \\\"Any\\\" or if the pass parameter is not supplied, all assignments are returned (optional)  (default to Any)\n            var minPercentageScore = 3.4F;  // float? | The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional) \n            var maxPercentageScore = 3.4F;  // float? | The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional) \n            var sortOrder = \"sortOrder_example\";  // string | Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional)  (default to Desc)\n            var sortBy = \"sortBy_example\";  // string | Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional) \n            var types = new List<string>(); // List<string> | Specifies the module types to filter by (optional) \n            var states = new List<string>(); // List<string> | Specifies the assignment states to filter by (optional) \n            var expand = new List<string>(); // List<string> | Specifies the expand option for returning additional information (optional) \n\n            try\n            { \n                // List of Learning Assignments assigned to current user\n                LearningAssignmentsDomainEntity result = apiInstance.GetLearningAssignmentsMe(moduleId, interval, completionInterval, overdue, pageSize, pageNumber, pass, minPercentageScore, maxPercentageScore, sortOrder, sortBy, types, states, expand);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Learning.GetLearningAssignmentsMe: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "getlearningmodule": {
     "operationId": "getlearningmodule",
@@ -18666,6 +18685,42 @@
     ],
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class DeleteOrgauthorizationTrusteeCloneduserExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OrganizationAuthorizationApi();\n            var trusteeOrgId = \"trusteeOrgId_example\";  // string | Trustee Organization Id\n            var trusteeUserId = \"trusteeUserId_example\";  // string | Id of the cloned user to delete\n\n            try\n            { \n                // Deletes cloned user\n                apiInstance.DeleteOrgauthorizationTrusteeCloneduser(trusteeOrgId, trusteeUserId);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling OrganizationAuthorization.DeleteOrgauthorizationTrusteeCloneduser: \" + e.Message );\n            }\n        }\n    }\n}"
   },
+  "deleteorgauthorizationtrusteegroup": {
+    "operationId": "deleteorgauthorizationtrusteegroup",
+    "functionName": "DeleteOrgauthorizationTrusteeGroup",
+    "signature": "DeleteOrgauthorizationTrusteeGroup(trusteeOrgId, trusteeGroupId)",
+    "parameters": [
+      {
+        "name": "trusteeOrgId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "trusteeGroupId",
+        "type": "string",
+        "required": "true"
+      }
+    ],
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class DeleteOrgauthorizationTrusteeGroupExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OrganizationAuthorizationApi();\n            var trusteeOrgId = \"trusteeOrgId_example\";  // string | Trustee Organization Id\n            var trusteeGroupId = \"trusteeGroupId_example\";  // string | Trustee Group Id\n\n            try\n            { \n                // Delete Trustee Group\n                apiInstance.DeleteOrgauthorizationTrusteeGroup(trusteeOrgId, trusteeGroupId);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling OrganizationAuthorization.DeleteOrgauthorizationTrusteeGroup: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "deleteorgauthorizationtrusteegrouproles": {
+    "operationId": "deleteorgauthorizationtrusteegrouproles",
+    "functionName": "DeleteOrgauthorizationTrusteeGroupRoles",
+    "signature": "DeleteOrgauthorizationTrusteeGroupRoles(trusteeOrgId, trusteeGroupId)",
+    "parameters": [
+      {
+        "name": "trusteeOrgId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "trusteeGroupId",
+        "type": "string",
+        "required": "true"
+      }
+    ],
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class DeleteOrgauthorizationTrusteeGroupRolesExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OrganizationAuthorizationApi();\n            var trusteeOrgId = \"trusteeOrgId_example\";  // string | Trustee Organization Id\n            var trusteeGroupId = \"trusteeGroupId_example\";  // string | Trustee Group Id\n\n            try\n            { \n                // Delete Trustee Group Roles\n                apiInstance.DeleteOrgauthorizationTrusteeGroupRoles(trusteeOrgId, trusteeGroupId);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling OrganizationAuthorization.DeleteOrgauthorizationTrusteeGroupRoles: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
   "deleteorgauthorizationtrusteeuser": {
     "operationId": "deleteorgauthorizationtrusteeuser",
     "functionName": "DeleteOrgauthorizationTrusteeUser",
@@ -18733,6 +18788,24 @@
     ],
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class DeleteOrgauthorizationTrustorCloneduserExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OrganizationAuthorizationApi();\n            var trustorOrgId = \"trustorOrgId_example\";  // string | Trustor Organization Id\n            var trusteeUserId = \"trusteeUserId_example\";  // string | Trustee User Id\n\n            try\n            { \n                // Delete Cloned User\n                apiInstance.DeleteOrgauthorizationTrustorCloneduser(trustorOrgId, trusteeUserId);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling OrganizationAuthorization.DeleteOrgauthorizationTrustorCloneduser: \" + e.Message );\n            }\n        }\n    }\n}"
   },
+  "deleteorgauthorizationtrustorgroup": {
+    "operationId": "deleteorgauthorizationtrustorgroup",
+    "functionName": "DeleteOrgauthorizationTrustorGroup",
+    "signature": "DeleteOrgauthorizationTrustorGroup(trustorOrgId, trustorGroupId)",
+    "parameters": [
+      {
+        "name": "trustorOrgId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "trustorGroupId",
+        "type": "string",
+        "required": "true"
+      }
+    ],
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class DeleteOrgauthorizationTrustorGroupExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OrganizationAuthorizationApi();\n            var trustorOrgId = \"trustorOrgId_example\";  // string | Trustor Organization Id\n            var trustorGroupId = \"trustorGroupId_example\";  // string | Trustor Group Id\n\n            try\n            { \n                // Delete Trustee Group\n                apiInstance.DeleteOrgauthorizationTrustorGroup(trustorOrgId, trustorGroupId);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling OrganizationAuthorization.DeleteOrgauthorizationTrustorGroup: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
   "deleteorgauthorizationtrustoruser": {
     "operationId": "deleteorgauthorizationtrustoruser",
     "functionName": "DeleteOrgauthorizationTrustorUser",
@@ -18792,6 +18865,68 @@
     ],
     "return": "ClonedUserEntityListing",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetOrgauthorizationTrusteeClonedusersExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OrganizationAuthorizationApi();\n            var trusteeOrgId = \"trusteeOrgId_example\";  // string | Trustee Organization Id\n\n            try\n            { \n                // The list of cloned users from the trustee organization (i.e. users with a native user record).\n                ClonedUserEntityListing result = apiInstance.GetOrgauthorizationTrusteeClonedusers(trusteeOrgId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling OrganizationAuthorization.GetOrgauthorizationTrusteeClonedusers: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getorgauthorizationtrusteegroup": {
+    "operationId": "getorgauthorizationtrusteegroup",
+    "functionName": "GetOrgauthorizationTrusteeGroup",
+    "signature": "GetOrgauthorizationTrusteeGroup(trusteeOrgId, trusteeGroupId)",
+    "parameters": [
+      {
+        "name": "trusteeOrgId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "trusteeGroupId",
+        "type": "string",
+        "required": "true"
+      }
+    ],
+    "return": "TrustGroup",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetOrgauthorizationTrusteeGroupExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OrganizationAuthorizationApi();\n            var trusteeOrgId = \"trusteeOrgId_example\";  // string | Trustee Organization Id\n            var trusteeGroupId = \"trusteeGroupId_example\";  // string | Trustee Group Id\n\n            try\n            { \n                // Get Trustee Group\n                TrustGroup result = apiInstance.GetOrgauthorizationTrusteeGroup(trusteeOrgId, trusteeGroupId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling OrganizationAuthorization.GetOrgauthorizationTrusteeGroup: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getorgauthorizationtrusteegrouproles": {
+    "operationId": "getorgauthorizationtrusteegrouproles",
+    "functionName": "GetOrgauthorizationTrusteeGroupRoles",
+    "signature": "GetOrgauthorizationTrusteeGroupRoles(trusteeOrgId, trusteeGroupId)",
+    "parameters": [
+      {
+        "name": "trusteeOrgId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "trusteeGroupId",
+        "type": "string",
+        "required": "true"
+      }
+    ],
+    "return": "UserAuthorization",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetOrgauthorizationTrusteeGroupRolesExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OrganizationAuthorizationApi();\n            var trusteeOrgId = \"trusteeOrgId_example\";  // string | Trustee Organization Id\n            var trusteeGroupId = \"trusteeGroupId_example\";  // string | Trustee Group Id\n\n            try\n            { \n                // Get Trustee Group Roles\n                UserAuthorization result = apiInstance.GetOrgauthorizationTrusteeGroupRoles(trusteeOrgId, trusteeGroupId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling OrganizationAuthorization.GetOrgauthorizationTrusteeGroupRoles: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getorgauthorizationtrusteegroups": {
+    "operationId": "getorgauthorizationtrusteegroups",
+    "functionName": "GetOrgauthorizationTrusteeGroups",
+    "signature": "GetOrgauthorizationTrusteeGroups(trusteeOrgId, pageSize, pageNumber)",
+    "parameters": [
+      {
+        "name": "trusteeOrgId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "pageSize",
+        "type": "int?",
+        "required": "false"
+      },
+      {
+        "name": "pageNumber",
+        "type": "int?",
+        "required": "false"
+      }
+    ],
+    "return": "TrustGroupEntityListing",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetOrgauthorizationTrusteeGroupsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OrganizationAuthorizationApi();\n            var trusteeOrgId = \"trusteeOrgId_example\";  // string | Trustee Organization Id\n            var pageSize = 56;  // int? | Page size (optional)  (default to 25)\n            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)\n\n            try\n            { \n                // The list of trustee groups for this organization (i.e. groups granted access to this organization).\n                TrustGroupEntityListing result = apiInstance.GetOrgauthorizationTrusteeGroups(trusteeOrgId, pageSize, pageNumber);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling OrganizationAuthorization.GetOrgauthorizationTrusteeGroups: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "getorgauthorizationtrusteeuser": {
     "operationId": "getorgauthorizationtrusteeuser",
@@ -18928,6 +19063,49 @@
     "return": "ClonedUserEntityListing",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetOrgauthorizationTrustorClonedusersExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OrganizationAuthorizationApi();\n            var trustorOrgId = \"trustorOrgId_example\";  // string | Trustor Organization Id\n\n            try\n            { \n                // The list of cloned users in the trustor organization (i.e. users with a native user record).\n                ClonedUserEntityListing result = apiInstance.GetOrgauthorizationTrustorClonedusers(trustorOrgId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling OrganizationAuthorization.GetOrgauthorizationTrustorClonedusers: \" + e.Message );\n            }\n        }\n    }\n}"
   },
+  "getorgauthorizationtrustorgroup": {
+    "operationId": "getorgauthorizationtrustorgroup",
+    "functionName": "GetOrgauthorizationTrustorGroup",
+    "signature": "GetOrgauthorizationTrustorGroup(trustorOrgId, trustorGroupId)",
+    "parameters": [
+      {
+        "name": "trustorOrgId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "trustorGroupId",
+        "type": "string",
+        "required": "true"
+      }
+    ],
+    "return": "TrustGroup",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetOrgauthorizationTrustorGroupExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OrganizationAuthorizationApi();\n            var trustorOrgId = \"trustorOrgId_example\";  // string | Trustor Organization Id\n            var trustorGroupId = \"trustorGroupId_example\";  // string | Trustor Group Id\n\n            try\n            { \n                // Get Trustee Group\n                TrustGroup result = apiInstance.GetOrgauthorizationTrustorGroup(trustorOrgId, trustorGroupId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling OrganizationAuthorization.GetOrgauthorizationTrustorGroup: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getorgauthorizationtrustorgroups": {
+    "operationId": "getorgauthorizationtrustorgroups",
+    "functionName": "GetOrgauthorizationTrustorGroups",
+    "signature": "GetOrgauthorizationTrustorGroups(trustorOrgId, pageSize, pageNumber)",
+    "parameters": [
+      {
+        "name": "trustorOrgId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "pageSize",
+        "type": "int?",
+        "required": "false"
+      },
+      {
+        "name": "pageNumber",
+        "type": "int?",
+        "required": "false"
+      }
+    ],
+    "return": "TrustGroupEntityListing",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetOrgauthorizationTrustorGroupsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OrganizationAuthorizationApi();\n            var trustorOrgId = \"trustorOrgId_example\";  // string | Trustee Organization Id\n            var pageSize = 56;  // int? | Page size (optional)  (default to 25)\n            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)\n\n            try\n            { \n                // The list of groups in the trustor organization (i.e. groups granted access).\n                TrustGroupEntityListing result = apiInstance.GetOrgauthorizationTrustorGroups(trustorOrgId, pageSize, pageNumber);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling OrganizationAuthorization.GetOrgauthorizationTrustorGroups: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
   "getorgauthorizationtrustoruser": {
     "operationId": "getorgauthorizationtrustoruser",
     "functionName": "GetOrgauthorizationTrustorUser",
@@ -19003,6 +19181,25 @@
     ],
     "return": "TrustRequest",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostOrgauthorizationPairingsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OrganizationAuthorizationApi();\n            var body = new TrustRequestCreate(); // TrustRequestCreate | Pairing Info\n\n            try\n            { \n                // A pairing id is created by the trustee and given to the trustor to create a trust.\n                TrustRequest result = apiInstance.PostOrgauthorizationPairings(body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling OrganizationAuthorization.PostOrgauthorizationPairings: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "postorgauthorizationtrusteegroups": {
+    "operationId": "postorgauthorizationtrusteegroups",
+    "functionName": "PostOrgauthorizationTrusteeGroups",
+    "signature": "PostOrgauthorizationTrusteeGroups(trusteeOrgId, body)",
+    "parameters": [
+      {
+        "name": "trusteeOrgId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "TrustMemberCreate",
+        "required": "true"
+      }
+    ],
+    "return": "TrustGroup",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostOrgauthorizationTrusteeGroupsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OrganizationAuthorizationApi();\n            var trusteeOrgId = \"trusteeOrgId_example\";  // string | Trustee Organization Id\n            var body = new TrustMemberCreate(); // TrustMemberCreate | Trust\n\n            try\n            { \n                // Add a group to the trust.\n                TrustGroup result = apiInstance.PostOrgauthorizationTrusteeGroups(trusteeOrgId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling OrganizationAuthorization.PostOrgauthorizationTrusteeGroups: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "postorgauthorizationtrusteeusers": {
     "operationId": "postorgauthorizationtrusteeusers",
@@ -19143,6 +19340,54 @@
     "return": "Trustee",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PutOrgauthorizationTrusteeExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OrganizationAuthorizationApi();\n            var trusteeOrgId = \"trusteeOrgId_example\";  // string | Trustee Organization Id\n            var body = new TrustUpdate(); // TrustUpdate | Client\n\n            try\n            { \n                // Update Org Trust\n                Trustee result = apiInstance.PutOrgauthorizationTrustee(trusteeOrgId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling OrganizationAuthorization.PutOrgauthorizationTrustee: \" + e.Message );\n            }\n        }\n    }\n}"
   },
+  "putorgauthorizationtrusteegrouproledivisions": {
+    "operationId": "putorgauthorizationtrusteegrouproledivisions",
+    "functionName": "PutOrgauthorizationTrusteeGroupRoledivisions",
+    "signature": "PutOrgauthorizationTrusteeGroupRoledivisions(trusteeOrgId, trusteeGroupId, body)",
+    "parameters": [
+      {
+        "name": "trusteeOrgId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "trusteeGroupId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "RoleDivisionGrants",
+        "required": "true"
+      }
+    ],
+    "return": "UserAuthorization",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PutOrgauthorizationTrusteeGroupRoledivisionsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OrganizationAuthorizationApi();\n            var trusteeOrgId = \"trusteeOrgId_example\";  // string | Trustee Organization Id\n            var trusteeGroupId = \"trusteeGroupId_example\";  // string | Trustee Group Id\n            var body = new RoleDivisionGrants(); // RoleDivisionGrants | Set of roles with corresponding divisions to apply\n\n            try\n            { \n                // Update Trustee Group Roles\n                UserAuthorization result = apiInstance.PutOrgauthorizationTrusteeGroupRoledivisions(trusteeOrgId, trusteeGroupId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling OrganizationAuthorization.PutOrgauthorizationTrusteeGroupRoledivisions: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "putorgauthorizationtrusteegrouproles": {
+    "operationId": "putorgauthorizationtrusteegrouproles",
+    "functionName": "PutOrgauthorizationTrusteeGroupRoles",
+    "signature": "PutOrgauthorizationTrusteeGroupRoles(trusteeOrgId, trusteeGroupId, body)",
+    "parameters": [
+      {
+        "name": "trusteeOrgId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "trusteeGroupId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "List<string>",
+        "required": "true"
+      }
+    ],
+    "return": "UserAuthorization",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PutOrgauthorizationTrusteeGroupRolesExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OrganizationAuthorizationApi();\n            var trusteeOrgId = \"trusteeOrgId_example\";  // string | Trustee Organization Id\n            var trusteeGroupId = \"trusteeGroupId_example\";  // string | Trustee Group Id\n            var body = new List<string>(); // List<string> | List of roles\n\n            try\n            { \n                // Update Trustee Group Roles\n                UserAuthorization result = apiInstance.PutOrgauthorizationTrusteeGroupRoles(trusteeOrgId, trusteeGroupId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling OrganizationAuthorization.PutOrgauthorizationTrusteeGroupRoles: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
   "putorgauthorizationtrusteeuserroledivisions": {
     "operationId": "putorgauthorizationtrusteeuserroledivisions",
     "functionName": "PutOrgauthorizationTrusteeUserRoledivisions",
@@ -19209,6 +19454,25 @@
     ],
     "return": "ClonedUser",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PutOrgauthorizationTrustorCloneduserExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OrganizationAuthorizationApi();\n            var trustorOrgId = \"trustorOrgId_example\";  // string | Trustor Organization Id\n            var trusteeUserId = \"trusteeUserId_example\";  // string | Trustee User Id\n\n            try\n            { \n                // Creates a clone of the trustee user in the trustor org.\n                ClonedUser result = apiInstance.PutOrgauthorizationTrustorCloneduser(trustorOrgId, trusteeUserId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling OrganizationAuthorization.PutOrgauthorizationTrustorCloneduser: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "putorgauthorizationtrustorgroup": {
+    "operationId": "putorgauthorizationtrustorgroup",
+    "functionName": "PutOrgauthorizationTrustorGroup",
+    "signature": "PutOrgauthorizationTrustorGroup(trustorOrgId, trustorGroupId)",
+    "parameters": [
+      {
+        "name": "trustorOrgId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "trustorGroupId",
+        "type": "string",
+        "required": "true"
+      }
+    ],
+    "return": "TrustGroup",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PutOrgauthorizationTrustorGroupExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new OrganizationAuthorizationApi();\n            var trustorOrgId = \"trustorOrgId_example\";  // string | Trustor Organization Id\n            var trustorGroupId = \"trustorGroupId_example\";  // string | Trustor Group Id\n\n            try\n            { \n                // Add a Trustee Group to the trust.\n                TrustGroup result = apiInstance.PutOrgauthorizationTrustorGroup(trustorOrgId, trustorGroupId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling OrganizationAuthorization.PutOrgauthorizationTrustorGroup: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "putorgauthorizationtrustoruser": {
     "operationId": "putorgauthorizationtrustoruser",
@@ -34222,6 +34486,25 @@
     ],
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class DeleteWebdeploymentsDeploymentExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new WebDeploymentsApi();\n            var deploymentId = \"deploymentId_example\";  // string | The deployment ID\n\n            try\n            { \n                // Delete a deployment\n                apiInstance.DeleteWebdeploymentsDeployment(deploymentId);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WebDeployments.DeleteWebdeploymentsDeployment: \" + e.Message );\n            }\n        }\n    }\n}"
   },
+  "deletewebdeploymentsdeploymentcobrowsesessionid": {
+    "operationId": "deletewebdeploymentsdeploymentcobrowsesessionid",
+    "functionName": "DeleteWebdeploymentsDeploymentCobrowseSessionId",
+    "signature": "DeleteWebdeploymentsDeploymentCobrowseSessionId(deploymentId, sessionId)",
+    "parameters": [
+      {
+        "name": "deploymentId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "sessionId",
+        "type": "string",
+        "required": "true"
+      }
+    ],
+    "return": "Object",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class DeleteWebdeploymentsDeploymentCobrowseSessionIdExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n\n            var apiInstance = new WebDeploymentsApi();\n            var deploymentId = \"deploymentId_example\";  // string | WebMessaging deployment ID\n            var sessionId = \"sessionId_example\";  // string | Cobrowse session id or join code\n\n            try\n            { \n                // Deletes a cobrowse session\n                Object result = apiInstance.DeleteWebdeploymentsDeploymentCobrowseSessionId(deploymentId, sessionId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WebDeployments.DeleteWebdeploymentsDeploymentCobrowseSessionId: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
   "deletewebdeploymentstokenrevoke": {
     "operationId": "deletewebdeploymentstokenrevoke",
     "functionName": "DeleteWebdeploymentsTokenRevoke",
@@ -34314,6 +34597,25 @@
     ],
     "return": "WebDeployment",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetWebdeploymentsDeploymentExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new WebDeploymentsApi();\n            var deploymentId = \"deploymentId_example\";  // string | The deployment ID\n\n            try\n            { \n                // Get a deployment\n                WebDeployment result = apiInstance.GetWebdeploymentsDeployment(deploymentId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WebDeployments.GetWebdeploymentsDeployment: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getwebdeploymentsdeploymentcobrowsesessionid": {
+    "operationId": "getwebdeploymentsdeploymentcobrowsesessionid",
+    "functionName": "GetWebdeploymentsDeploymentCobrowseSessionId",
+    "signature": "GetWebdeploymentsDeploymentCobrowseSessionId(deploymentId, sessionId)",
+    "parameters": [
+      {
+        "name": "deploymentId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "sessionId",
+        "type": "string",
+        "required": "true"
+      }
+    ],
+    "return": "CobrowseWebMessagingSession",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetWebdeploymentsDeploymentCobrowseSessionIdExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n\n            var apiInstance = new WebDeploymentsApi();\n            var deploymentId = \"deploymentId_example\";  // string | WebMessaging deployment ID\n            var sessionId = \"sessionId_example\";  // string | Cobrowse session id or join code\n\n            try\n            { \n                // Retrieves a cobrowse session\n                CobrowseWebMessagingSession result = apiInstance.GetWebdeploymentsDeploymentCobrowseSessionId(deploymentId, sessionId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WebDeployments.GetWebdeploymentsDeploymentCobrowseSessionId: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "getwebdeploymentsdeploymentconfigurations": {
     "operationId": "getwebdeploymentsdeploymentconfigurations",

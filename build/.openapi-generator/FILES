@@ -537,6 +537,7 @@ docs/CobrowseConversation.md
 docs/CobrowseConversationEntityListing.md
 docs/CobrowseMediaParticipant.md
 docs/CobrowseSettings.md
+docs/CobrowseWebMessagingSession.md
 docs/Cobrowsesession.md
 docs/ColumnDataTypeSpecification.md
 docs/ColumnStatus.md
@@ -551,6 +552,8 @@ docs/CommunicationDispositionAppliedEvent.md
 docs/CommunicationEndedEvent.md
 docs/ComparisonPeriod.md
 docs/ComparisonPeriodListing.md
+docs/Compliance.md
+docs/ComplianceResponse.md
 docs/Condition.md
 docs/ConditionalGroupRouting.md
 docs/ConditionalGroupRoutingRule.md
@@ -1085,10 +1088,13 @@ docs/DeleteNotificationsChannelSubscriptions-example.txt
 docs/DeleteOauthClient-example.txt
 docs/DeleteOrgauthorizationTrustee-example.txt
 docs/DeleteOrgauthorizationTrusteeCloneduser-example.txt
+docs/DeleteOrgauthorizationTrusteeGroup-example.txt
+docs/DeleteOrgauthorizationTrusteeGroupRoles-example.txt
 docs/DeleteOrgauthorizationTrusteeUser-example.txt
 docs/DeleteOrgauthorizationTrusteeUserRoles-example.txt
 docs/DeleteOrgauthorizationTrustor-example.txt
 docs/DeleteOrgauthorizationTrustorCloneduser-example.txt
+docs/DeleteOrgauthorizationTrustorGroup-example.txt
 docs/DeleteOrgauthorizationTrustorUser-example.txt
 docs/DeleteOrphanrecording-example.txt
 docs/DeleteOutboundAttemptlimit-example.txt
@@ -1189,6 +1195,7 @@ docs/DeleteWebchatGuestConversationMember-example.txt
 docs/DeleteWebchatSettings-example.txt
 docs/DeleteWebdeploymentsConfiguration-example.txt
 docs/DeleteWebdeploymentsDeployment-example.txt
+docs/DeleteWebdeploymentsDeploymentCobrowseSessionId-example.txt
 docs/DeleteWebdeploymentsTokenRevoke-example.txt
 docs/DeleteWidgetsDeployment-example.txt
 docs/DeleteWorkforcemanagementBusinessunit-example.txt
@@ -1468,6 +1475,7 @@ docs/EmailMediaPolicy.md
 docs/EmailMediaPolicyConditions.md
 docs/EmailMessage.md
 docs/EmailMessageListing.md
+docs/EmailMessageReply.md
 docs/EmailOutboundDomainResult.md
 docs/EmailSetup.md
 docs/EmailsSettings.md
@@ -2186,6 +2194,9 @@ docs/GetOrganizationsWhitelist-example.txt
 docs/GetOrgauthorizationPairing-example.txt
 docs/GetOrgauthorizationTrustee-example.txt
 docs/GetOrgauthorizationTrusteeClonedusers-example.txt
+docs/GetOrgauthorizationTrusteeGroup-example.txt
+docs/GetOrgauthorizationTrusteeGroupRoles-example.txt
+docs/GetOrgauthorizationTrusteeGroups-example.txt
 docs/GetOrgauthorizationTrusteeUser-example.txt
 docs/GetOrgauthorizationTrusteeUserRoles-example.txt
 docs/GetOrgauthorizationTrusteeUsers-example.txt
@@ -2194,6 +2205,8 @@ docs/GetOrgauthorizationTrusteesDefault-example.txt
 docs/GetOrgauthorizationTrustor-example.txt
 docs/GetOrgauthorizationTrustorCloneduser-example.txt
 docs/GetOrgauthorizationTrustorClonedusers-example.txt
+docs/GetOrgauthorizationTrustorGroup-example.txt
+docs/GetOrgauthorizationTrustorGroups-example.txt
 docs/GetOrgauthorizationTrustorUser-example.txt
 docs/GetOrgauthorizationTrustorUsers-example.txt
 docs/GetOrgauthorizationTrustors-example.txt
@@ -2578,6 +2591,7 @@ docs/GetWebdeploymentsConfigurationVersions-example.txt
 docs/GetWebdeploymentsConfigurationVersionsDraft-example.txt
 docs/GetWebdeploymentsConfigurations-example.txt
 docs/GetWebdeploymentsDeployment-example.txt
+docs/GetWebdeploymentsDeploymentCobrowseSessionId-example.txt
 docs/GetWebdeploymentsDeploymentConfigurations-example.txt
 docs/GetWebdeploymentsDeployments-example.txt
 docs/GetWebmessagingMessages-example.txt
@@ -2685,6 +2699,7 @@ docs/HeadTokensMe-example.txt
 docs/HeadcountForecast.md
 docs/HeadcountInterval.md
 docs/HelpLink.md
+docs/HelpSettings.md
 docs/HistoricalAdherenceActuals.md
 docs/HistoricalAdherenceDayMetrics.md
 docs/HistoricalAdherenceExceptionInfo.md
@@ -2847,6 +2862,8 @@ docs/JourneyWebEventsNotificationOutcome.md
 docs/JourneyWebEventsNotificationOutcomeAchievedMessage.md
 docs/JourneyWebEventsNotificationPage.md
 docs/JourneyWebEventsNotificationReferrer.md
+docs/JourneyWebEventsNotificationSegment.md
+docs/JourneyWebEventsNotificationSegmentAssignmentMessage.md
 docs/JourneyWebEventsNotificationSession.md
 docs/JourneyWebEventsNotificationWebActionMessage.md
 docs/JourneyWebEventsNotificationWebEventsNotification.md
@@ -3233,6 +3250,7 @@ docs/OpenMessagingFromRecipient.md
 docs/OpenMessagingToRecipient.md
 docs/OpenNormalizedMessage.md
 docs/Operation.md
+docs/OptInSettings.md
 docs/OrgOAuthClient.md
 docs/OrgUser.md
 docs/OrgWhitelistSettings.md
@@ -3279,6 +3297,7 @@ docs/OutboundRouteEntityListing.md
 docs/OutboundSettings.md
 docs/Outcome.md
 docs/OutcomeAchievement.md
+docs/OutcomeConfig.md
 docs/OutcomeEventScore.md
 docs/OutcomeListing.md
 docs/OutcomeProbabilityCondition.md
@@ -3583,6 +3602,7 @@ docs/PostContentmanagementWorkspaceTagvalues-example.txt
 docs/PostContentmanagementWorkspaceTagvaluesQuery-example.txt
 docs/PostContentmanagementWorkspaces-example.txt
 docs/PostConversationAssign-example.txt
+docs/PostConversationCobrowse-example.txt
 docs/PostConversationDisconnect-example.txt
 docs/PostConversationParticipantCallbacks-example.txt
 docs/PostConversationParticipantDigits-example.txt
@@ -3767,6 +3787,7 @@ docs/PostOauthClientSecret-example.txt
 docs/PostOauthClientUsageQuery-example.txt
 docs/PostOauthClients-example.txt
 docs/PostOrgauthorizationPairings-example.txt
+docs/PostOrgauthorizationTrusteeGroups-example.txt
 docs/PostOrgauthorizationTrusteeUsers-example.txt
 docs/PostOrgauthorizationTrustees-example.txt
 docs/PostOrgauthorizationTrusteesAudits-example.txt
@@ -4134,9 +4155,12 @@ docs/PutOrganizationsIpaddressauthentication-example.txt
 docs/PutOrganizationsMe-example.txt
 docs/PutOrganizationsWhitelist-example.txt
 docs/PutOrgauthorizationTrustee-example.txt
+docs/PutOrgauthorizationTrusteeGroupRoledivisions-example.txt
+docs/PutOrgauthorizationTrusteeGroupRoles-example.txt
 docs/PutOrgauthorizationTrusteeUserRoledivisions-example.txt
 docs/PutOrgauthorizationTrusteeUserRoles-example.txt
 docs/PutOrgauthorizationTrustorCloneduser-example.txt
+docs/PutOrgauthorizationTrustorGroup-example.txt
 docs/PutOrgauthorizationTrustorUser-example.txt
 docs/PutOrphanrecording-example.txt
 docs/PutOutboundAttemptlimit-example.txt
@@ -4842,6 +4866,7 @@ docs/StationsApi.md
 docs/StatisticalResponse.md
 docs/StatisticalSummary.md
 docs/StatusChange.md
+docs/StopSettings.md
 docs/StorySetting.md
 docs/StreetAddress.md
 docs/SubjectDivisionGrants.md
@@ -5047,6 +5072,7 @@ docs/TrunkRecordingEnabledCount.md
 docs/TrustCreate.md
 docs/TrustEntityListing.md
 docs/TrustGroup.md
+docs/TrustGroupEntityListing.md
 docs/TrustMemberCreate.md
 docs/TrustRequest.md
 docs/TrustRequestCreate.md
@@ -6183,6 +6209,7 @@ src/PureCloudPlatform.Client.V2/Model/CobrowseConversation.cs
 src/PureCloudPlatform.Client.V2/Model/CobrowseConversationEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/CobrowseMediaParticipant.cs
 src/PureCloudPlatform.Client.V2/Model/CobrowseSettings.cs
+src/PureCloudPlatform.Client.V2/Model/CobrowseWebMessagingSession.cs
 src/PureCloudPlatform.Client.V2/Model/Cobrowsesession.cs
 src/PureCloudPlatform.Client.V2/Model/ColumnDataTypeSpecification.cs
 src/PureCloudPlatform.Client.V2/Model/ColumnStatus.cs
@@ -6197,6 +6224,8 @@ src/PureCloudPlatform.Client.V2/Model/CommunicationDispositionAppliedEvent.cs
 src/PureCloudPlatform.Client.V2/Model/CommunicationEndedEvent.cs
 src/PureCloudPlatform.Client.V2/Model/ComparisonPeriod.cs
 src/PureCloudPlatform.Client.V2/Model/ComparisonPeriodListing.cs
+src/PureCloudPlatform.Client.V2/Model/Compliance.cs
+src/PureCloudPlatform.Client.V2/Model/ComplianceResponse.cs
 src/PureCloudPlatform.Client.V2/Model/Condition.cs
 src/PureCloudPlatform.Client.V2/Model/ConditionalGroupRouting.cs
 src/PureCloudPlatform.Client.V2/Model/ConditionalGroupRoutingRule.cs
@@ -6887,6 +6916,7 @@ src/PureCloudPlatform.Client.V2/Model/EmailMediaPolicy.cs
 src/PureCloudPlatform.Client.V2/Model/EmailMediaPolicyConditions.cs
 src/PureCloudPlatform.Client.V2/Model/EmailMessage.cs
 src/PureCloudPlatform.Client.V2/Model/EmailMessageListing.cs
+src/PureCloudPlatform.Client.V2/Model/EmailMessageReply.cs
 src/PureCloudPlatform.Client.V2/Model/EmailOutboundDomainResult.cs
 src/PureCloudPlatform.Client.V2/Model/EmailSetup.cs
 src/PureCloudPlatform.Client.V2/Model/EmailsSettings.cs
@@ -7138,6 +7168,7 @@ src/PureCloudPlatform.Client.V2/Model/GuestMemberInfo.cs
 src/PureCloudPlatform.Client.V2/Model/HeadcountForecast.cs
 src/PureCloudPlatform.Client.V2/Model/HeadcountInterval.cs
 src/PureCloudPlatform.Client.V2/Model/HelpLink.cs
+src/PureCloudPlatform.Client.V2/Model/HelpSettings.cs
 src/PureCloudPlatform.Client.V2/Model/HistoricalAdherenceActuals.cs
 src/PureCloudPlatform.Client.V2/Model/HistoricalAdherenceDayMetrics.cs
 src/PureCloudPlatform.Client.V2/Model/HistoricalAdherenceExceptionInfo.cs
@@ -7294,6 +7325,8 @@ src/PureCloudPlatform.Client.V2/Model/JourneyWebEventsNotificationOutcome.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyWebEventsNotificationOutcomeAchievedMessage.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyWebEventsNotificationPage.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyWebEventsNotificationReferrer.cs
+src/PureCloudPlatform.Client.V2/Model/JourneyWebEventsNotificationSegment.cs
+src/PureCloudPlatform.Client.V2/Model/JourneyWebEventsNotificationSegmentAssignmentMessage.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyWebEventsNotificationSession.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyWebEventsNotificationWebActionMessage.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyWebEventsNotificationWebEventsNotification.cs
@@ -7658,6 +7691,7 @@ src/PureCloudPlatform.Client.V2/Model/OpenMessagingFromRecipient.cs
 src/PureCloudPlatform.Client.V2/Model/OpenMessagingToRecipient.cs
 src/PureCloudPlatform.Client.V2/Model/OpenNormalizedMessage.cs
 src/PureCloudPlatform.Client.V2/Model/Operation.cs
+src/PureCloudPlatform.Client.V2/Model/OptInSettings.cs
 src/PureCloudPlatform.Client.V2/Model/OrgOAuthClient.cs
 src/PureCloudPlatform.Client.V2/Model/OrgUser.cs
 src/PureCloudPlatform.Client.V2/Model/OrgWhitelistSettings.cs
@@ -7698,6 +7732,7 @@ src/PureCloudPlatform.Client.V2/Model/OutboundRouteEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundSettings.cs
 src/PureCloudPlatform.Client.V2/Model/Outcome.cs
 src/PureCloudPlatform.Client.V2/Model/OutcomeAchievement.cs
+src/PureCloudPlatform.Client.V2/Model/OutcomeConfig.cs
 src/PureCloudPlatform.Client.V2/Model/OutcomeEventScore.cs
 src/PureCloudPlatform.Client.V2/Model/OutcomeListing.cs
 src/PureCloudPlatform.Client.V2/Model/OutcomeProbabilityCondition.cs
@@ -8422,6 +8457,7 @@ src/PureCloudPlatform.Client.V2/Model/StationSettings.cs
 src/PureCloudPlatform.Client.V2/Model/StatisticalResponse.cs
 src/PureCloudPlatform.Client.V2/Model/StatisticalSummary.cs
 src/PureCloudPlatform.Client.V2/Model/StatusChange.cs
+src/PureCloudPlatform.Client.V2/Model/StopSettings.cs
 src/PureCloudPlatform.Client.V2/Model/StorySetting.cs
 src/PureCloudPlatform.Client.V2/Model/StreetAddress.cs
 src/PureCloudPlatform.Client.V2/Model/SubjectDivisionGrants.cs
@@ -8615,6 +8651,7 @@ src/PureCloudPlatform.Client.V2/Model/TrunkRecordingEnabledCount.cs
 src/PureCloudPlatform.Client.V2/Model/TrustCreate.cs
 src/PureCloudPlatform.Client.V2/Model/TrustEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/TrustGroup.cs
+src/PureCloudPlatform.Client.V2/Model/TrustGroupEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/TrustMemberCreate.cs
 src/PureCloudPlatform.Client.V2/Model/TrustRequest.cs
 src/PureCloudPlatform.Client.V2/Model/TrustRequestCreate.cs

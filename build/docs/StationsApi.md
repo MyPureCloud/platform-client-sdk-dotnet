@@ -223,9 +223,11 @@ namespace Example
 
 ## [**StationSettings**](StationSettings.html) GetStationsSettings ()
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get an organization's StationSettings
+
+This route is deprecated as the FreeSeatingConfiguration feature it references has been removed
 
 
 
@@ -282,9 +284,11 @@ This endpoint does require any parameters.
 
 ## [**StationSettings**](StationSettings.html) PatchStationsSettings (StationSettings body)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Patch an organization's StationSettings
+
+This route is deprecated as the FreeSeatingConfiguration feature it references has been removed
 
 
 
