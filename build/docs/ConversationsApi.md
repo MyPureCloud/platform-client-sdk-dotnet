@@ -123,7 +123,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostAnalyticsConversationsDetailsJobs**](ConversationsApi.html#postanalyticsconversationsdetailsjobs) | **POST** /api/v2/analytics/conversations/details/jobs | Query for conversation details asynchronously |
 | [**PostAnalyticsConversationsDetailsQuery**](ConversationsApi.html#postanalyticsconversationsdetailsquery) | **POST** /api/v2/analytics/conversations/details/query | Query for conversation details |
 | [**PostConversationAssign**](ConversationsApi.html#postconversationassign) | **POST** /api/v2/conversations/{conversationId}/assign | Attempts to manually assign a specified conversation to a specified user.  Ignores bullseye ring, PAR score, skills, and languages. |
-| [**PostConversationCobrowse**](ConversationsApi.html#postconversationcobrowse) | **POST** /api/v2/conversations/{conversationId}/cobrowse | Creates a cobrowse session |
+| [**PostConversationCobrowse**](ConversationsApi.html#postconversationcobrowse) | **POST** /api/v2/conversations/{conversationId}/cobrowse | Creates a cobrowse session. Requires \&quot;conversation:cobrowse:add\&quot; (for web messaging) or \&quot;conversation:cobrowsevoice:add\&quot; permission. |
 | [**PostConversationDisconnect**](ConversationsApi.html#postconversationdisconnect) | **POST** /api/v2/conversations/{conversationId}/disconnect | Performs a full conversation teardown. Issues disconnect requests for any connected media. Applies a system wrap-up code to any participants that are pending wrap-up. This is not intended to be the normal way of ending interactions but is available in the event of problems with the application to allow a resynchronization of state across all components. It is recommended that users submit a support case if they are relying on this endpoint systematically as there is likely something that needs investigation. |
 | [**PostConversationParticipantCallbacks**](ConversationsApi.html#postconversationparticipantcallbacks) | **POST** /api/v2/conversations/{conversationId}/participants/{participantId}/callbacks | Create a new callback for the specified participant on the conversation. |
 | [**PostConversationParticipantDigits**](ConversationsApi.html#postconversationparticipantdigits) | **POST** /api/v2/conversations/{conversationId}/participants/{participantId}/digits | Sends DTMF to the participant |
@@ -7914,13 +7914,14 @@ namespace Example
 
 
 
-Creates a cobrowse session
+Creates a cobrowse session. Requires \"conversation:cobrowse:add\" (for web messaging) or \"conversation:cobrowsevoice:add\" permission.
 
 
 
 Requires ANY permissions: 
 
 * conversation:cobrowse:add
+* conversation:cobrowseVoice:add
 
 ### Example
 ```{"language":"csharp"}
@@ -7948,7 +7949,7 @@ namespace Example
 
             try
             { 
-                // Creates a cobrowse session
+                // Creates a cobrowse session. Requires \"conversation:cobrowse:add\" (for web messaging) or \"conversation:cobrowsevoice:add\" permission.
                 CobrowseWebMessagingSession result = apiInstance.PostConversationCobrowse(conversationId);
                 Debug.WriteLine(result);
             }

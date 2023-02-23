@@ -80,7 +80,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SpamFlow">The flow to use for processing inbound emails that have been marked as spam..</param>
         /// <param name="Signature">The configuration for the canned response signature that will be appended to outbound emails sent via this route.</param>
         /// <param name="HistoryInclusion">The configuration to indicate how the history of a conversation has to be included in a draft.</param>
-        public InboundRoute(string Name = null, string Pattern = null, DomainEntityRef Queue = null, int? Priority = null, List<DomainEntityRef> Skills = null, DomainEntityRef Language = null, string FromName = null, string FromEmail = null, DomainEntityRef Flow = null, QueueEmailAddress ReplyEmailAddress = null, List<EmailAddress> AutoBcc = null, DomainEntityRef SpamFlow = null, Signature Signature = null, HistoryInclusionEnum? HistoryInclusion = null)
+        /// <param name="AllowMultipleActions">Control if multiple actions are allowed on this route. When true the disconnect has to be done manually. When false a conversation will be disconnected by the system after every action.</param>
+        public InboundRoute(string Name = null, string Pattern = null, DomainEntityRef Queue = null, int? Priority = null, List<DomainEntityRef> Skills = null, DomainEntityRef Language = null, string FromName = null, string FromEmail = null, DomainEntityRef Flow = null, QueueEmailAddress ReplyEmailAddress = null, List<EmailAddress> AutoBcc = null, DomainEntityRef SpamFlow = null, Signature Signature = null, HistoryInclusionEnum? HistoryInclusion = null, bool? AllowMultipleActions = null)
         {
             this.Name = Name;
             this.Pattern = Pattern;
@@ -96,6 +97,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SpamFlow = SpamFlow;
             this.Signature = Signature;
             this.HistoryInclusion = HistoryInclusion;
+            this.AllowMultipleActions = AllowMultipleActions;
             
         }
         
@@ -229,6 +231,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Control if multiple actions are allowed on this route. When true the disconnect has to be done manually. When false a conversation will be disconnected by the system after every action
+        /// </summary>
+        /// <value>Control if multiple actions are allowed on this route. When true the disconnect has to be done manually. When false a conversation will be disconnected by the system after every action</value>
+        [DataMember(Name="allowMultipleActions", EmitDefaultValue=false)]
+        public bool? AllowMultipleActions { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -260,6 +271,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SpamFlow: ").Append(SpamFlow).Append("\n");
             sb.Append("  Signature: ").Append(Signature).Append("\n");
             sb.Append("  HistoryInclusion: ").Append(HistoryInclusion).Append("\n");
+            sb.Append("  AllowMultipleActions: ").Append(AllowMultipleActions).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -377,6 +389,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.HistoryInclusion.Equals(other.HistoryInclusion)
                 ) &&
                 (
+                    this.AllowMultipleActions == other.AllowMultipleActions ||
+                    this.AllowMultipleActions != null &&
+                    this.AllowMultipleActions.Equals(other.AllowMultipleActions)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -438,6 +455,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.HistoryInclusion != null)
                     hash = hash * 59 + this.HistoryInclusion.GetHashCode();
+
+                if (this.AllowMultipleActions != null)
+                    hash = hash * 59 + this.AllowMultipleActions.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -10,6 +10,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteJourneyActionmap**](JourneyApi.html#deletejourneyactionmap) | **DELETE** /api/v2/journey/actionmaps/{actionMapId} | Delete single action map. |
 | [**DeleteJourneyActiontemplate**](JourneyApi.html#deletejourneyactiontemplate) | **DELETE** /api/v2/journey/actiontemplates/{actionTemplateId} | Delete a single action template. |
 | [**DeleteJourneyOutcome**](JourneyApi.html#deletejourneyoutcome) | **DELETE** /api/v2/journey/outcomes/{outcomeId} | Delete an outcome. |
+| [**DeleteJourneyOutcomesPredictor**](JourneyApi.html#deletejourneyoutcomespredictor) | **DELETE** /api/v2/journey/outcomes/predictors/{predictorId} | Delete an outcome predictor. |
 | [**DeleteJourneySegment**](JourneyApi.html#deletejourneysegment) | **DELETE** /api/v2/journey/segments/{segmentId} | Delete a segment. |
 | [**GetJourneyActionmap**](JourneyApi.html#getjourneyactionmap) | **GET** /api/v2/journey/actionmaps/{actionMapId} | Retrieve a single action map. |
 | [**GetJourneyActionmaps**](JourneyApi.html#getjourneyactionmaps) | **GET** /api/v2/journey/actionmaps | Retrieve all action maps. |
@@ -21,6 +22,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetJourneyActiontemplates**](JourneyApi.html#getjourneyactiontemplates) | **GET** /api/v2/journey/actiontemplates | Retrieve all action templates. |
 | [**GetJourneyOutcome**](JourneyApi.html#getjourneyoutcome) | **GET** /api/v2/journey/outcomes/{outcomeId} | Retrieve a single outcome. |
 | [**GetJourneyOutcomes**](JourneyApi.html#getjourneyoutcomes) | **GET** /api/v2/journey/outcomes | Retrieve all outcomes. |
+| [**GetJourneyOutcomesPredictor**](JourneyApi.html#getjourneyoutcomespredictor) | **GET** /api/v2/journey/outcomes/predictors/{predictorId} | Retrieve a single outcome predictor. |
+| [**GetJourneyOutcomesPredictors**](JourneyApi.html#getjourneyoutcomespredictors) | **GET** /api/v2/journey/outcomes/predictors | Retrieve all outcome predictors. |
 | [**GetJourneySegment**](JourneyApi.html#getjourneysegment) | **GET** /api/v2/journey/segments/{segmentId} | Retrieve a single segment. |
 | [**GetJourneySegments**](JourneyApi.html#getjourneysegments) | **GET** /api/v2/journey/segments | Retrieve all segments. |
 | [**GetJourneySession**](JourneyApi.html#getjourneysession) | **GET** /api/v2/journey/sessions/{sessionId} | Retrieve a single session. |
@@ -35,6 +38,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostJourneyActionmapsEstimatesJobs**](JourneyApi.html#postjourneyactionmapsestimatesjobs) | **POST** /api/v2/journey/actionmaps/estimates/jobs | Query for estimates |
 | [**PostJourneyActiontemplates**](JourneyApi.html#postjourneyactiontemplates) | **POST** /api/v2/journey/actiontemplates | Create a single action template. |
 | [**PostJourneyOutcomes**](JourneyApi.html#postjourneyoutcomes) | **POST** /api/v2/journey/outcomes | Create an outcome. |
+| [**PostJourneyOutcomesPredictors**](JourneyApi.html#postjourneyoutcomespredictors) | **POST** /api/v2/journey/outcomes/predictors | Create an outcome predictor. |
 | [**PostJourneySegments**](JourneyApi.html#postjourneysegments) | **POST** /api/v2/journey/segments | Create a segment. |
 {: class="table table-striped"}
 
@@ -226,6 +230,70 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **outcomeId** | **string**| ID of the outcome. |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deletejourneyoutcomespredictor"></a>
+
+## void DeleteJourneyOutcomesPredictor (string predictorId)
+
+
+
+Delete an outcome predictor.
+
+
+
+Requires ANY permissions: 
+
+* journey:outcomepredictor:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteJourneyOutcomesPredictorExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var predictorId = predictorId_example;  // string | ID of predictor
+
+            try
+            { 
+                // Delete an outcome predictor.
+                apiInstance.DeleteJourneyOutcomesPredictor(predictorId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.DeleteJourneyOutcomesPredictor: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **predictorId** | **string**| ID of predictor |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -983,6 +1051,131 @@ namespace Example
 ### Return type
 
 [**OutcomeListing**](OutcomeListing.html)
+
+<a name="getjourneyoutcomespredictor"></a>
+
+## [**OutcomePredictor**](OutcomePredictor.html) GetJourneyOutcomesPredictor (string predictorId)
+
+
+
+Retrieve a single outcome predictor.
+
+
+
+Requires ANY permissions: 
+
+* journey:outcomepredictor:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetJourneyOutcomesPredictorExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var predictorId = predictorId_example;  // string | ID of predictor
+
+            try
+            { 
+                // Retrieve a single outcome predictor.
+                OutcomePredictor result = apiInstance.GetJourneyOutcomesPredictor(predictorId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.GetJourneyOutcomesPredictor: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **predictorId** | **string**| ID of predictor |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**OutcomePredictor**](OutcomePredictor.html)
+
+<a name="getjourneyoutcomespredictors"></a>
+
+## [**OutcomePredictorListing**](OutcomePredictorListing.html) GetJourneyOutcomesPredictors ()
+
+
+
+Retrieve all outcome predictors.
+
+
+
+Requires ANY permissions: 
+
+* journey:outcomepredictor:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetJourneyOutcomesPredictorsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+
+            try
+            { 
+                // Retrieve all outcome predictors.
+                OutcomePredictorListing result = apiInstance.GetJourneyOutcomesPredictors();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.GetJourneyOutcomesPredictors: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+
+### Return type
+
+[**OutcomePredictorListing**](OutcomePredictorListing.html)
 
 <a name="getjourneysegment"></a>
 
@@ -1916,6 +2109,71 @@ namespace Example
 ### Return type
 
 [**Outcome**](Outcome.html)
+
+<a name="postjourneyoutcomespredictors"></a>
+
+## [**OutcomePredictor**](OutcomePredictor.html) PostJourneyOutcomesPredictors (OutcomePredictorRequest body = null)
+
+
+
+Create an outcome predictor.
+
+
+
+Requires ANY permissions: 
+
+* journey:outcomepredictor:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostJourneyOutcomesPredictorsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var body = new OutcomePredictorRequest(); // OutcomePredictorRequest |  (optional) 
+
+            try
+            { 
+                // Create an outcome predictor.
+                OutcomePredictor result = apiInstance.PostJourneyOutcomesPredictors(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.PostJourneyOutcomesPredictors: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**OutcomePredictorRequest**](OutcomePredictorRequest.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**OutcomePredictor**](OutcomePredictor.html)
 
 <a name="postjourneysegments"></a>
 

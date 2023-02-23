@@ -20,7 +20,8 @@ title: EmailMessage
 | **HtmlBody** | **string** | The html body of the email message. | [optional] |
 | **Time** | **DateTime?** | The time when the message was received or sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **HistoryIncluded** | **bool?** | Indicates whether the history of previous emails of the conversation is included within the email bodies of this message. | [optional] |
-| **State** | **string** |  | [optional] |
+| **State** | **string** | The state of the current draft. | [optional] |
+| **DraftType** | **string** | The type of draft that need to be treated. | [optional] |
 | **EmailSizeBytes** | **int?** | Indicates an estimation of the size of the current email as a whole, in its final, ready to be sent form. | [optional] |
 | **MaxEmailSizeBytes** | **int?** | Indicates the maximum allowed size for an email to be send via SMTP server, based on the email domain configuration | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |

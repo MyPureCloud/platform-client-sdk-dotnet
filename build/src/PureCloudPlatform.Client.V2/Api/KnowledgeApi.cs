@@ -335,10 +335,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">Knowledge guest session ID.</param>
         /// <param name="categoryId">If specified, retrieves documents associated with category ids, comma separated values expected. (optional)</param>
-        /// <param name="includeSubcategories">Deprecated - Do Not Use. Works along with &#39;categoryId&#39; query parameter. If specified, retrieves documents associated with category ids and its children categories. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 10)</param>
         /// <returns>KnowledgeGuestDocumentResponseListing</returns>
-        KnowledgeGuestDocumentResponseListing GetKnowledgeGuestSessionDocuments (string sessionId, List<string> categoryId = null, bool? includeSubcategories = null, int? pageSize = null);
+        KnowledgeGuestDocumentResponseListing GetKnowledgeGuestSessionDocuments (string sessionId, List<string> categoryId = null, int? pageSize = null);
 
         /// <summary>
         /// Get documents.
@@ -349,10 +348,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">Knowledge guest session ID.</param>
         /// <param name="categoryId">If specified, retrieves documents associated with category ids, comma separated values expected. (optional)</param>
-        /// <param name="includeSubcategories">Deprecated - Do Not Use. Works along with &#39;categoryId&#39; query parameter. If specified, retrieves documents associated with category ids and its children categories. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 10)</param>
         /// <returns>ApiResponse of KnowledgeGuestDocumentResponseListing</returns>
-        ApiResponse<KnowledgeGuestDocumentResponseListing> GetKnowledgeGuestSessionDocumentsWithHttpInfo (string sessionId, List<string> categoryId = null, bool? includeSubcategories = null, int? pageSize = null);
+        ApiResponse<KnowledgeGuestDocumentResponseListing> GetKnowledgeGuestSessionDocumentsWithHttpInfo (string sessionId, List<string> categoryId = null, int? pageSize = null);
 
         /// <summary>
         /// Get knowledge base
@@ -2283,10 +2281,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">Knowledge guest session ID.</param>
         /// <param name="categoryId">If specified, retrieves documents associated with category ids, comma separated values expected. (optional)</param>
-        /// <param name="includeSubcategories">Deprecated - Do Not Use. Works along with &#39;categoryId&#39; query parameter. If specified, retrieves documents associated with category ids and its children categories. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 10)</param>
         /// <returns>Task of KnowledgeGuestDocumentResponseListing</returns>
-        System.Threading.Tasks.Task<KnowledgeGuestDocumentResponseListing> GetKnowledgeGuestSessionDocumentsAsync (string sessionId, List<string> categoryId = null, bool? includeSubcategories = null, int? pageSize = null);
+        System.Threading.Tasks.Task<KnowledgeGuestDocumentResponseListing> GetKnowledgeGuestSessionDocumentsAsync (string sessionId, List<string> categoryId = null, int? pageSize = null);
 
         /// <summary>
         /// Get documents.
@@ -2297,10 +2294,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">Knowledge guest session ID.</param>
         /// <param name="categoryId">If specified, retrieves documents associated with category ids, comma separated values expected. (optional)</param>
-        /// <param name="includeSubcategories">Deprecated - Do Not Use. Works along with &#39;categoryId&#39; query parameter. If specified, retrieves documents associated with category ids and its children categories. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (KnowledgeGuestDocumentResponseListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<KnowledgeGuestDocumentResponseListing>> GetKnowledgeGuestSessionDocumentsAsyncWithHttpInfo (string sessionId, List<string> categoryId = null, bool? includeSubcategories = null, int? pageSize = null);
+        System.Threading.Tasks.Task<ApiResponse<KnowledgeGuestDocumentResponseListing>> GetKnowledgeGuestSessionDocumentsAsyncWithHttpInfo (string sessionId, List<string> categoryId = null, int? pageSize = null);
 
         /// <summary>
         /// Get knowledge base
@@ -6496,12 +6492,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">Knowledge guest session ID.</param>
         /// <param name="categoryId">If specified, retrieves documents associated with category ids, comma separated values expected. (optional)</param>
-        /// <param name="includeSubcategories">Deprecated - Do Not Use. Works along with &#39;categoryId&#39; query parameter. If specified, retrieves documents associated with category ids and its children categories. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 10)</param>
         /// <returns>KnowledgeGuestDocumentResponseListing</returns>
-        public KnowledgeGuestDocumentResponseListing GetKnowledgeGuestSessionDocuments (string sessionId, List<string> categoryId = null, bool? includeSubcategories = null, int? pageSize = null)
+        public KnowledgeGuestDocumentResponseListing GetKnowledgeGuestSessionDocuments (string sessionId, List<string> categoryId = null, int? pageSize = null)
         {
-             ApiResponse<KnowledgeGuestDocumentResponseListing> localVarResponse = GetKnowledgeGuestSessionDocumentsWithHttpInfo(sessionId, categoryId, includeSubcategories, pageSize);
+             ApiResponse<KnowledgeGuestDocumentResponseListing> localVarResponse = GetKnowledgeGuestSessionDocumentsWithHttpInfo(sessionId, categoryId, pageSize);
              return localVarResponse.Data;
         }
 
@@ -6511,10 +6506,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">Knowledge guest session ID.</param>
         /// <param name="categoryId">If specified, retrieves documents associated with category ids, comma separated values expected. (optional)</param>
-        /// <param name="includeSubcategories">Deprecated - Do Not Use. Works along with &#39;categoryId&#39; query parameter. If specified, retrieves documents associated with category ids and its children categories. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 10)</param>
         /// <returns>ApiResponse of KnowledgeGuestDocumentResponseListing</returns>
-        public ApiResponse< KnowledgeGuestDocumentResponseListing > GetKnowledgeGuestSessionDocumentsWithHttpInfo (string sessionId, List<string> categoryId = null, bool? includeSubcategories = null, int? pageSize = null)
+        public ApiResponse< KnowledgeGuestDocumentResponseListing > GetKnowledgeGuestSessionDocumentsWithHttpInfo (string sessionId, List<string> categoryId = null, int? pageSize = null)
         { 
             // verify the required parameter 'sessionId' is set
             if (sessionId == null)
@@ -6554,7 +6548,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (categoryId != null) categoryId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("categoryId", this.Configuration.ApiClient.ParameterToString(obj))); });
-            if (includeSubcategories != null) localVarQueryParams.Add(new Tuple<string, string>("includeSubcategories", this.Configuration.ApiClient.ParameterToString(includeSubcategories)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
 
             // Header params
@@ -6592,12 +6585,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">Knowledge guest session ID.</param>
         /// <param name="categoryId">If specified, retrieves documents associated with category ids, comma separated values expected. (optional)</param>
-        /// <param name="includeSubcategories">Deprecated - Do Not Use. Works along with &#39;categoryId&#39; query parameter. If specified, retrieves documents associated with category ids and its children categories. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 10)</param>
         /// <returns>Task of KnowledgeGuestDocumentResponseListing</returns>
-        public async System.Threading.Tasks.Task<KnowledgeGuestDocumentResponseListing> GetKnowledgeGuestSessionDocumentsAsync (string sessionId, List<string> categoryId = null, bool? includeSubcategories = null, int? pageSize = null)
+        public async System.Threading.Tasks.Task<KnowledgeGuestDocumentResponseListing> GetKnowledgeGuestSessionDocumentsAsync (string sessionId, List<string> categoryId = null, int? pageSize = null)
         {
-             ApiResponse<KnowledgeGuestDocumentResponseListing> localVarResponse = await GetKnowledgeGuestSessionDocumentsAsyncWithHttpInfo(sessionId, categoryId, includeSubcategories, pageSize);
+             ApiResponse<KnowledgeGuestDocumentResponseListing> localVarResponse = await GetKnowledgeGuestSessionDocumentsAsyncWithHttpInfo(sessionId, categoryId, pageSize);
              return localVarResponse.Data;
 
         }
@@ -6608,10 +6600,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">Knowledge guest session ID.</param>
         /// <param name="categoryId">If specified, retrieves documents associated with category ids, comma separated values expected. (optional)</param>
-        /// <param name="includeSubcategories">Deprecated - Do Not Use. Works along with &#39;categoryId&#39; query parameter. If specified, retrieves documents associated with category ids and its children categories. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 10)</param>
         /// <returns>Task of ApiResponse (KnowledgeGuestDocumentResponseListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<KnowledgeGuestDocumentResponseListing>> GetKnowledgeGuestSessionDocumentsAsyncWithHttpInfo (string sessionId, List<string> categoryId = null, bool? includeSubcategories = null, int? pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponse<KnowledgeGuestDocumentResponseListing>> GetKnowledgeGuestSessionDocumentsAsyncWithHttpInfo (string sessionId, List<string> categoryId = null, int? pageSize = null)
         { 
             // verify the required parameter 'sessionId' is set
             if (sessionId == null)
@@ -6652,7 +6643,6 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (categoryId != null) categoryId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("categoryId", this.Configuration.ApiClient.ParameterToString(obj))); });
-            if (includeSubcategories != null) localVarQueryParams.Add(new Tuple<string, string>("includeSubcategories", this.Configuration.ApiClient.ParameterToString(includeSubcategories)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
 
             // Header params

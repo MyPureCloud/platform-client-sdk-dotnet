@@ -91,6 +91,12 @@ namespace PureCloudPlatform.Client.V2.Model
             AppendNumberToDncList,
             
             /// <summary>
+            /// Enum AppendCustomEntryToDncList for "APPEND_CUSTOM_ENTRY_TO_DNC_LIST"
+            /// </summary>
+            [EnumMember(Value = "APPEND_CUSTOM_ENTRY_TO_DNC_LIST")]
+            AppendCustomEntryToDncList,
+            
+            /// <summary>
             /// Enum ScheduleCallback for "SCHEDULE_CALLBACK"
             /// </summary>
             [EnumMember(Value = "SCHEDULE_CALLBACK")]

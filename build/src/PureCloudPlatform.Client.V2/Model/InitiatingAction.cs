@@ -520,6 +520,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Restore,
             
             /// <summary>
+            /// Enum Restoreall for "RestoreAll"
+            /// </summary>
+            [EnumMember(Value = "RestoreAll")]
+            Restoreall,
+            
+            /// <summary>
+            /// Enum Restoredeleted for "RestoreDeleted"
+            /// </summary>
+            [EnumMember(Value = "RestoreDeleted")]
+            Restoredeleted,
+            
+            /// <summary>
             /// Enum Unarchive for "Unarchive"
             /// </summary>
             [EnumMember(Value = "Unarchive")]

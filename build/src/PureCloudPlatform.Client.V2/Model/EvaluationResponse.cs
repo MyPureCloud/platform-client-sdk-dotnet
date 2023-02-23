@@ -162,6 +162,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Status">Status.</param>
         /// <param name="Answers">Answers.</param>
         /// <param name="AgentHasRead">AgentHasRead.</param>
+        /// <param name="Assignee">Assignee.</param>
         /// <param name="ReleaseDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="AssignedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ChangedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
@@ -175,9 +176,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ResourceType">The type of resource. Only used for email evaluations. Will be null for evaluations on all other resources..</param>
         /// <param name="Redacted">Is only true when the user making the request does not have sufficient permissions to see evaluation.</param>
         /// <param name="IsScoringIndex">IsScoringIndex.</param>
-        /// <param name="AuthorizedActions">List of user authorized actions on evaluation. Possible values: edit, editScore, editAgentSignoff, delete, viewAudit.</param>
+        /// <param name="AuthorizedActions">List of user authorized actions on evaluation. Possible values: assign, edit, editScore, editAgentSignoff, delete, release, viewAudit.</param>
         /// <param name="HasAssistanceFailed">Is true when evaluation assistance didn't execute successfully.</param>
-        public EvaluationResponse(string Name = null, ConversationReference Conversation = null, EvaluationFormResponse EvaluationForm = null, User Evaluator = null, User Agent = null, Calibration Calibration = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, Queue Queue = null, List<MediaTypeEnum> MediaType = null, bool? Rescore = null, DateTime? ConversationDate = null, DateTime? ConversationEndDate = null, bool? NeverRelease = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, bool? IsScoringIndex = null, List<string> AuthorizedActions = null, bool? HasAssistanceFailed = null)
+        public EvaluationResponse(string Name = null, ConversationReference Conversation = null, EvaluationFormResponse EvaluationForm = null, User Evaluator = null, User Agent = null, Calibration Calibration = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, User Assignee = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, Queue Queue = null, List<MediaTypeEnum> MediaType = null, bool? Rescore = null, DateTime? ConversationDate = null, DateTime? ConversationEndDate = null, bool? NeverRelease = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, bool? IsScoringIndex = null, List<string> AuthorizedActions = null, bool? HasAssistanceFailed = null)
         {
             this.Name = Name;
             this.Conversation = Conversation;
@@ -188,6 +189,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Status = Status;
             this.Answers = Answers;
             this.AgentHasRead = AgentHasRead;
+            this.Assignee = Assignee;
             this.ReleaseDate = ReleaseDate;
             this.AssignedDate = AssignedDate;
             this.ChangedDate = ChangedDate;
@@ -281,6 +283,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="agentHasRead", EmitDefaultValue=false)]
         public bool? AgentHasRead { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets Assignee
+        /// </summary>
+        [DataMember(Name="assignee", EmitDefaultValue=false)]
+        public User Assignee { get; set; }
 
 
 
@@ -393,9 +403,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// List of user authorized actions on evaluation. Possible values: edit, editScore, editAgentSignoff, delete, viewAudit
+        /// List of user authorized actions on evaluation. Possible values: assign, edit, editScore, editAgentSignoff, delete, release, viewAudit
         /// </summary>
-        /// <value>List of user authorized actions on evaluation. Possible values: edit, editScore, editAgentSignoff, delete, viewAudit</value>
+        /// <value>List of user authorized actions on evaluation. Possible values: assign, edit, editScore, editAgentSignoff, delete, release, viewAudit</value>
         [DataMember(Name="authorizedActions", EmitDefaultValue=false)]
         public List<string> AuthorizedActions { get; set; }
 
@@ -407,6 +417,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Is true when evaluation assistance didn't execute successfully</value>
         [DataMember(Name="hasAssistanceFailed", EmitDefaultValue=false)]
         public bool? HasAssistanceFailed { get; set; }
+
+
+
+        /// <summary>
+        /// The source that created the evaluation.
+        /// </summary>
+        /// <value>The source that created the evaluation.</value>
+        [DataMember(Name="evaluationSource", EmitDefaultValue=false)]
+        public EvaluationSource EvaluationSource { get; private set; }
 
 
 
@@ -437,6 +456,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Answers: ").Append(Answers).Append("\n");
             sb.Append("  AgentHasRead: ").Append(AgentHasRead).Append("\n");
+            sb.Append("  Assignee: ").Append(Assignee).Append("\n");
             sb.Append("  ReleaseDate: ").Append(ReleaseDate).Append("\n");
             sb.Append("  AssignedDate: ").Append(AssignedDate).Append("\n");
             sb.Append("  ChangedDate: ").Append(ChangedDate).Append("\n");
@@ -452,6 +472,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  IsScoringIndex: ").Append(IsScoringIndex).Append("\n");
             sb.Append("  AuthorizedActions: ").Append(AuthorizedActions).Append("\n");
             sb.Append("  HasAssistanceFailed: ").Append(HasAssistanceFailed).Append("\n");
+            sb.Append("  EvaluationSource: ").Append(EvaluationSource).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -544,6 +565,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AgentHasRead.Equals(other.AgentHasRead)
                 ) &&
                 (
+                    this.Assignee == other.Assignee ||
+                    this.Assignee != null &&
+                    this.Assignee.Equals(other.Assignee)
+                ) &&
+                (
                     this.ReleaseDate == other.ReleaseDate ||
                     this.ReleaseDate != null &&
                     this.ReleaseDate.Equals(other.ReleaseDate)
@@ -619,6 +645,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.HasAssistanceFailed.Equals(other.HasAssistanceFailed)
                 ) &&
                 (
+                    this.EvaluationSource == other.EvaluationSource ||
+                    this.EvaluationSource != null &&
+                    this.EvaluationSource.Equals(other.EvaluationSource)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -666,6 +697,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.AgentHasRead != null)
                     hash = hash * 59 + this.AgentHasRead.GetHashCode();
 
+                if (this.Assignee != null)
+                    hash = hash * 59 + this.Assignee.GetHashCode();
+
                 if (this.ReleaseDate != null)
                     hash = hash * 59 + this.ReleaseDate.GetHashCode();
 
@@ -710,6 +744,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.HasAssistanceFailed != null)
                     hash = hash * 59 + this.HasAssistanceFailed.GetHashCode();
+
+                if (this.EvaluationSource != null)
+                    hash = hash * 59 + this.EvaluationSource.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

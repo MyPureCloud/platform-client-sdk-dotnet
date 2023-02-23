@@ -19,8 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class EmailMessage :  IEquatable<EmailMessage>
     {
         /// <summary>
-        /// Gets or Sets State
+        /// The state of the current draft.
         /// </summary>
+        /// <value>The state of the current draft.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StateEnum
         {
@@ -42,13 +43,59 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Ready for "Ready"
             /// </summary>
             [EnumMember(Value = "Ready")]
-            Ready
+            Ready,
+            
+            /// <summary>
+            /// Enum Edited for "Edited"
+            /// </summary>
+            [EnumMember(Value = "Edited")]
+            Edited
         }
         /// <summary>
-        /// Gets or Sets State
+        /// The type of draft that need to be treated.
         /// </summary>
+        /// <value>The type of draft that need to be treated.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum DraftTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Reply for "Reply"
+            /// </summary>
+            [EnumMember(Value = "Reply")]
+            Reply,
+            
+            /// <summary>
+            /// Enum Replyall for "ReplyAll"
+            /// </summary>
+            [EnumMember(Value = "ReplyAll")]
+            Replyall,
+            
+            /// <summary>
+            /// Enum Forward for "Forward"
+            /// </summary>
+            [EnumMember(Value = "Forward")]
+            Forward
+        }
+        /// <summary>
+        /// The state of the current draft.
+        /// </summary>
+        /// <value>The state of the current draft.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        /// <summary>
+        /// The type of draft that need to be treated.
+        /// </summary>
+        /// <value>The type of draft that need to be treated.</value>
+        [DataMember(Name="draftType", EmitDefaultValue=false)]
+        public DraftTypeEnum? DraftType { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailMessage" /> class.
@@ -70,8 +117,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="HtmlBody">The html body of the email message..</param>
         /// <param name="Time">The time when the message was received or sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="HistoryIncluded">Indicates whether the history of previous emails of the conversation is included within the email bodies of this message..</param>
-        /// <param name="State">State.</param>
-        public EmailMessage(string Name = null, List<EmailAddress> To = null, List<EmailAddress> Cc = null, List<EmailAddress> Bcc = null, EmailAddress From = null, EmailAddress ReplyTo = null, string Subject = null, List<Attachment> Attachments = null, string TextBody = null, string HtmlBody = null, DateTime? Time = null, bool? HistoryIncluded = null, StateEnum? State = null)
+        /// <param name="State">The state of the current draft..</param>
+        /// <param name="DraftType">The type of draft that need to be treated..</param>
+        public EmailMessage(string Name = null, List<EmailAddress> To = null, List<EmailAddress> Cc = null, List<EmailAddress> Bcc = null, EmailAddress From = null, EmailAddress ReplyTo = null, string Subject = null, List<Attachment> Attachments = null, string TextBody = null, string HtmlBody = null, DateTime? Time = null, bool? HistoryIncluded = null, StateEnum? State = null, DraftTypeEnum? DraftType = null)
         {
             this.Name = Name;
             this.To = To;
@@ -86,6 +134,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Time = Time;
             this.HistoryIncluded = HistoryIncluded;
             this.State = State;
+            this.DraftType = DraftType;
             
         }
         
@@ -209,6 +258,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
         /// <summary>
         /// Indicates an estimation of the size of the current email as a whole, in its final, ready to be sent form.
         /// </summary>
@@ -258,6 +309,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Time: ").Append(Time).Append("\n");
             sb.Append("  HistoryIncluded: ").Append(HistoryIncluded).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
+            sb.Append("  DraftType: ").Append(DraftType).Append("\n");
             sb.Append("  EmailSizeBytes: ").Append(EmailSizeBytes).Append("\n");
             sb.Append("  MaxEmailSizeBytes: ").Append(MaxEmailSizeBytes).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -372,6 +424,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.State.Equals(other.State)
                 ) &&
                 (
+                    this.DraftType == other.DraftType ||
+                    this.DraftType != null &&
+                    this.DraftType.Equals(other.DraftType)
+                ) &&
+                (
                     this.EmailSizeBytes == other.EmailSizeBytes ||
                     this.EmailSizeBytes != null &&
                     this.EmailSizeBytes.Equals(other.EmailSizeBytes)
@@ -440,6 +497,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
+
+                if (this.DraftType != null)
+                    hash = hash * 59 + this.DraftType.GetHashCode();
 
                 if (this.EmailSizeBytes != null)
                     hash = hash * 59 + this.EmailSizeBytes.GetHashCode();

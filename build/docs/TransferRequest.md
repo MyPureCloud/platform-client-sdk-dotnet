@@ -12,6 +12,7 @@ title: TransferRequest
 | **UserName** | **string** | The user name of the transfer target. | [optional] |
 | **QueueId** | **string** | The queue ID of the transfer target. | [optional] |
 | **Voicemail** | **bool?** | If true, transfer to the voicemail inbox of the participant that is being replaced. | [optional] |
+| **TransferType** | **string** | The type of transfer to perform. | [optional] |
 {: class="table table-striped"}
 
 

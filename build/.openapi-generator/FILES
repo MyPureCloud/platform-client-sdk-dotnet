@@ -1062,6 +1062,7 @@ docs/DeleteIntegrationsCredential-example.txt
 docs/DeleteJourneyActionmap-example.txt
 docs/DeleteJourneyActiontemplate-example.txt
 docs/DeleteJourneyOutcome-example.txt
+docs/DeleteJourneyOutcomesPredictor-example.txt
 docs/DeleteJourneySegment-example.txt
 docs/DeleteKnowledgeKnowledgebase-example.txt
 docs/DeleteKnowledgeKnowledgebaseCategory-example.txt
@@ -1528,6 +1529,7 @@ docs/EvaluationQuestionGroupScore.md
 docs/EvaluationQuestionScore.md
 docs/EvaluationResponse.md
 docs/EvaluationScoringSet.md
+docs/EvaluationSource.md
 docs/EvaluatorActivity.md
 docs/EvaluatorActivityEntityListing.md
 docs/EventCoBrowse.md
@@ -2088,6 +2090,8 @@ docs/GetJourneyActiontemplate-example.txt
 docs/GetJourneyActiontemplates-example.txt
 docs/GetJourneyOutcome-example.txt
 docs/GetJourneyOutcomes-example.txt
+docs/GetJourneyOutcomesPredictor-example.txt
+docs/GetJourneyOutcomesPredictors-example.txt
 docs/GetJourneySegment-example.txt
 docs/GetJourneySegments-example.txt
 docs/GetJourneySession-example.txt
@@ -3300,7 +3304,12 @@ docs/OutcomeAchievement.md
 docs/OutcomeConfig.md
 docs/OutcomeEventScore.md
 docs/OutcomeListing.md
+docs/OutcomePredictor.md
+docs/OutcomePredictorListing.md
+docs/OutcomePredictorRequest.md
 docs/OutcomeProbabilityCondition.md
+docs/OutcomeRef.md
+docs/OutcomeRefRequest.md
 docs/OutcomeScoresResult.md
 docs/OverallBestPoints.md
 docs/OverallBestPointsItem.md
@@ -3727,6 +3736,7 @@ docs/PostJourneyActionmaps-example.txt
 docs/PostJourneyActionmapsEstimatesJobs-example.txt
 docs/PostJourneyActiontemplates-example.txt
 docs/PostJourneyOutcomes-example.txt
+docs/PostJourneyOutcomesPredictors-example.txt
 docs/PostJourneySegments-example.txt
 docs/PostKnowledgeDocumentuploads-example.txt
 docs/PostKnowledgeDocumentuploads-example.txt
@@ -5038,7 +5048,10 @@ docs/TranscriptionTopicTranscriptWord.md
 docs/TranscriptionTopicTranscriptionMessage.md
 docs/TranscriptionTopicTranscriptionRequestStatus.md
 docs/Transcripts.md
+docs/TransferDestination.md
+docs/TransferInitiator.md
 docs/TransferRequest.md
+docs/TransferResponse.md
 docs/Trigger.md
 docs/TriggerEntityListing.md
 docs/TriggerTarget.md
@@ -6969,6 +6982,7 @@ src/PureCloudPlatform.Client.V2/Model/EvaluationQuestionGroupScore.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationQuestionScore.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationResponse.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationScoringSet.cs
+src/PureCloudPlatform.Client.V2/Model/EvaluationSource.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluatorActivity.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluatorActivityEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/EventCoBrowse.cs
@@ -7735,7 +7749,12 @@ src/PureCloudPlatform.Client.V2/Model/OutcomeAchievement.cs
 src/PureCloudPlatform.Client.V2/Model/OutcomeConfig.cs
 src/PureCloudPlatform.Client.V2/Model/OutcomeEventScore.cs
 src/PureCloudPlatform.Client.V2/Model/OutcomeListing.cs
+src/PureCloudPlatform.Client.V2/Model/OutcomePredictor.cs
+src/PureCloudPlatform.Client.V2/Model/OutcomePredictorListing.cs
+src/PureCloudPlatform.Client.V2/Model/OutcomePredictorRequest.cs
 src/PureCloudPlatform.Client.V2/Model/OutcomeProbabilityCondition.cs
+src/PureCloudPlatform.Client.V2/Model/OutcomeRef.cs
+src/PureCloudPlatform.Client.V2/Model/OutcomeRefRequest.cs
 src/PureCloudPlatform.Client.V2/Model/OutcomeScoresResult.cs
 src/PureCloudPlatform.Client.V2/Model/OverallBestPoints.cs
 src/PureCloudPlatform.Client.V2/Model/OverallBestPointsItem.cs
@@ -8617,7 +8636,10 @@ src/PureCloudPlatform.Client.V2/Model/TranscriptionTopicTranscriptWord.cs
 src/PureCloudPlatform.Client.V2/Model/TranscriptionTopicTranscriptionMessage.cs
 src/PureCloudPlatform.Client.V2/Model/TranscriptionTopicTranscriptionRequestStatus.cs
 src/PureCloudPlatform.Client.V2/Model/Transcripts.cs
+src/PureCloudPlatform.Client.V2/Model/TransferDestination.cs
+src/PureCloudPlatform.Client.V2/Model/TransferInitiator.cs
 src/PureCloudPlatform.Client.V2/Model/TransferRequest.cs
+src/PureCloudPlatform.Client.V2/Model/TransferResponse.cs
 src/PureCloudPlatform.Client.V2/Model/Trigger.cs
 src/PureCloudPlatform.Client.V2/Model/TriggerEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/TriggerTarget.cs

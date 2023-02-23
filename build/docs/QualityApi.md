@@ -646,6 +646,8 @@ Get an evaluation
 Requires ANY permissions: 
 
 * quality:evaluation:view
+* quality:evaluation:assign
+* quality:evaluation:release
 
 ### Example
 ```{"language":"csharp"}
@@ -671,7 +673,7 @@ namespace Example
             var apiInstance = new QualityApi();
             var conversationId = conversationId_example;  // string | conversationId
             var evaluationId = evaluationId_example;  // string | evaluationId
-            var expand = expand_example;  // string | agent, evaluator, evaluationForm (optional) 
+            var expand = expand_example;  // string | agent, assignee, evaluator, evaluationForm (optional) 
 
             try
             { 
@@ -695,7 +697,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **evaluationId** | **string**| evaluationId |  |
-| **expand** | **string**| agent, evaluator, evaluationForm | [optional]  |
+| **expand** | **string**| agent, assignee, evaluator, evaluationForm | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -905,13 +907,13 @@ namespace Example
 
 <a name="getqualityevaluationsquery"></a>
 
-## [**EvaluationEntityListing**](EvaluationEntityListing.html) GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
+## [**EvaluationEntityListing**](EvaluationEntityListing.html) GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
 
 
 
 Queries Evaluations and returns a paged list
 
-Query params must include one of conversationId, evaluatorUserId, or agentUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date.
+Query params must include one of conversationId, evaluatorUserId, agentUserId or assigneeUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date.
 
 
 
@@ -950,6 +952,7 @@ namespace Example
             var conversationId = conversationId_example;  // string | conversationId specified (optional) 
             var agentUserId = agentUserId_example;  // string | user id of the agent (optional) 
             var evaluatorUserId = evaluatorUserId_example;  // string | evaluator user id (optional) 
+            var assigneeUserId = assigneeUserId_example;  // string | assignee user id (optional) 
             var queueId = queueId_example;  // string | queue id (optional) 
             var startTime = startTime_example;  // string | start time of the evaluation query (optional) 
             var endTime = endTime_example;  // string | end time of the evaluation query (optional) 
@@ -963,7 +966,7 @@ namespace Example
             try
             { 
                 // Queries Evaluations and returns a paged list
-                EvaluationEntityListing result = apiInstance.GetQualityEvaluationsQuery(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, agentUserId, evaluatorUserId, queueId, startTime, endTime, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder);
+                EvaluationEntityListing result = apiInstance.GetQualityEvaluationsQuery(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, agentUserId, evaluatorUserId, assigneeUserId, queueId, startTime, endTime, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -989,6 +992,7 @@ namespace Example
 | **conversationId** | **string**| conversationId specified | [optional]  |
 | **agentUserId** | **string**| user id of the agent | [optional]  |
 | **evaluatorUserId** | **string**| evaluator user id | [optional]  |
+| **assigneeUserId** | **string**| assignee user id | [optional]  |
 | **queueId** | **string**| queue id | [optional]  |
 | **startTime** | **string**| start time of the evaluation query | [optional]  |
 | **endTime** | **string**| end time of the evaluation query | [optional]  |

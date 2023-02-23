@@ -34,12 +34,6 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Contacts for "contacts"
-            /// </summary>
-            [EnumMember(Value = "contacts")]
-            Contacts,
-            
-            /// <summary>
             /// Enum Agentassistant for "agent.assistant"
             /// </summary>
             [EnumMember(Value = "agent.assistant")]

@@ -251,7 +251,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="evaluationId">evaluationId</param>
-        /// <param name="expand">agent, evaluator, evaluationForm (optional)</param>
+        /// <param name="expand">agent, assignee, evaluator, evaluationForm (optional)</param>
         /// <returns>EvaluationResponse</returns>
         EvaluationResponse GetQualityConversationEvaluation (string conversationId, string evaluationId, string expand = null);
 
@@ -264,7 +264,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="evaluationId">evaluationId</param>
-        /// <param name="expand">agent, evaluator, evaluationForm (optional)</param>
+        /// <param name="expand">agent, assignee, evaluator, evaluationForm (optional)</param>
         /// <returns>ApiResponse of EvaluationResponse</returns>
         ApiResponse<EvaluationResponse> GetQualityConversationEvaluationWithHttpInfo (string conversationId, string evaluationId, string expand = null);
 
@@ -344,7 +344,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Queries Evaluations and returns a paged list
         /// </summary>
         /// <remarks>
-        /// Query params must include one of conversationId, evaluatorUserId, or agentUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date.
+        /// Query params must include one of conversationId, evaluatorUserId, agentUserId or assigneeUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -356,6 +356,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId specified (optional)</param>
         /// <param name="agentUserId">user id of the agent (optional)</param>
         /// <param name="evaluatorUserId">evaluator user id (optional)</param>
+        /// <param name="assigneeUserId">assignee user id (optional)</param>
         /// <param name="queueId">queue id (optional)</param>
         /// <param name="startTime">start time of the evaluation query (optional)</param>
         /// <param name="endTime">end time of the evaluation query (optional)</param>
@@ -366,13 +367,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maximum">maximum (optional)</param>
         /// <param name="sortOrder">sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39; (optional)</param>
         /// <returns>EvaluationEntityListing</returns>
-        EvaluationEntityListing GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
+        EvaluationEntityListing GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
 
         /// <summary>
         /// Queries Evaluations and returns a paged list
         /// </summary>
         /// <remarks>
-        /// Query params must include one of conversationId, evaluatorUserId, or agentUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date.
+        /// Query params must include one of conversationId, evaluatorUserId, agentUserId or assigneeUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -384,6 +385,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId specified (optional)</param>
         /// <param name="agentUserId">user id of the agent (optional)</param>
         /// <param name="evaluatorUserId">evaluator user id (optional)</param>
+        /// <param name="assigneeUserId">assignee user id (optional)</param>
         /// <param name="queueId">queue id (optional)</param>
         /// <param name="startTime">start time of the evaluation query (optional)</param>
         /// <param name="endTime">end time of the evaluation query (optional)</param>
@@ -394,7 +396,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maximum">maximum (optional)</param>
         /// <param name="sortOrder">sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39; (optional)</param>
         /// <returns>ApiResponse of EvaluationEntityListing</returns>
-        ApiResponse<EvaluationEntityListing> GetQualityEvaluationsQueryWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
+        ApiResponse<EvaluationEntityListing> GetQualityEvaluationsQueryWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
 
         /// <summary>
         /// Get an evaluator activity
@@ -1679,7 +1681,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="evaluationId">evaluationId</param>
-        /// <param name="expand">agent, evaluator, evaluationForm (optional)</param>
+        /// <param name="expand">agent, assignee, evaluator, evaluationForm (optional)</param>
         /// <returns>Task of EvaluationResponse</returns>
         System.Threading.Tasks.Task<EvaluationResponse> GetQualityConversationEvaluationAsync (string conversationId, string evaluationId, string expand = null);
 
@@ -1692,7 +1694,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="evaluationId">evaluationId</param>
-        /// <param name="expand">agent, evaluator, evaluationForm (optional)</param>
+        /// <param name="expand">agent, assignee, evaluator, evaluationForm (optional)</param>
         /// <returns>Task of ApiResponse (EvaluationResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<EvaluationResponse>> GetQualityConversationEvaluationAsyncWithHttpInfo (string conversationId, string evaluationId, string expand = null);
 
@@ -1772,7 +1774,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Queries Evaluations and returns a paged list
         /// </summary>
         /// <remarks>
-        /// Query params must include one of conversationId, evaluatorUserId, or agentUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date.
+        /// Query params must include one of conversationId, evaluatorUserId, agentUserId or assigneeUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -1784,6 +1786,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId specified (optional)</param>
         /// <param name="agentUserId">user id of the agent (optional)</param>
         /// <param name="evaluatorUserId">evaluator user id (optional)</param>
+        /// <param name="assigneeUserId">assignee user id (optional)</param>
         /// <param name="queueId">queue id (optional)</param>
         /// <param name="startTime">start time of the evaluation query (optional)</param>
         /// <param name="endTime">end time of the evaluation query (optional)</param>
@@ -1794,13 +1797,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maximum">maximum (optional)</param>
         /// <param name="sortOrder">sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39; (optional)</param>
         /// <returns>Task of EvaluationEntityListing</returns>
-        System.Threading.Tasks.Task<EvaluationEntityListing> GetQualityEvaluationsQueryAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
+        System.Threading.Tasks.Task<EvaluationEntityListing> GetQualityEvaluationsQueryAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
 
         /// <summary>
         /// Queries Evaluations and returns a paged list
         /// </summary>
         /// <remarks>
-        /// Query params must include one of conversationId, evaluatorUserId, or agentUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date.
+        /// Query params must include one of conversationId, evaluatorUserId, agentUserId or assigneeUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -1812,6 +1815,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId specified (optional)</param>
         /// <param name="agentUserId">user id of the agent (optional)</param>
         /// <param name="evaluatorUserId">evaluator user id (optional)</param>
+        /// <param name="assigneeUserId">assignee user id (optional)</param>
         /// <param name="queueId">queue id (optional)</param>
         /// <param name="startTime">start time of the evaluation query (optional)</param>
         /// <param name="endTime">end time of the evaluation query (optional)</param>
@@ -1822,7 +1826,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maximum">maximum (optional)</param>
         /// <param name="sortOrder">sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39; (optional)</param>
         /// <returns>Task of ApiResponse (EvaluationEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> GetQualityEvaluationsQueryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> GetQualityEvaluationsQueryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
 
         /// <summary>
         /// Get an evaluator activity
@@ -4645,7 +4649,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="evaluationId">evaluationId</param>
-        /// <param name="expand">agent, evaluator, evaluationForm (optional)</param>
+        /// <param name="expand">agent, assignee, evaluator, evaluationForm (optional)</param>
         /// <returns>EvaluationResponse</returns>
         public EvaluationResponse GetQualityConversationEvaluation (string conversationId, string evaluationId, string expand = null)
         {
@@ -4659,7 +4663,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="evaluationId">evaluationId</param>
-        /// <param name="expand">agent, evaluator, evaluationForm (optional)</param>
+        /// <param name="expand">agent, assignee, evaluator, evaluationForm (optional)</param>
         /// <returns>ApiResponse of EvaluationResponse</returns>
         public ApiResponse< EvaluationResponse > GetQualityConversationEvaluationWithHttpInfo (string conversationId, string evaluationId, string expand = null)
         { 
@@ -4748,7 +4752,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="evaluationId">evaluationId</param>
-        /// <param name="expand">agent, evaluator, evaluationForm (optional)</param>
+        /// <param name="expand">agent, assignee, evaluator, evaluationForm (optional)</param>
         /// <returns>Task of EvaluationResponse</returns>
         public async System.Threading.Tasks.Task<EvaluationResponse> GetQualityConversationEvaluationAsync (string conversationId, string evaluationId, string expand = null)
         {
@@ -4763,7 +4767,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="evaluationId">evaluationId</param>
-        /// <param name="expand">agent, evaluator, evaluationForm (optional)</param>
+        /// <param name="expand">agent, assignee, evaluator, evaluationForm (optional)</param>
         /// <returns>Task of ApiResponse (EvaluationResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<EvaluationResponse>> GetQualityConversationEvaluationAsyncWithHttpInfo (string conversationId, string evaluationId, string expand = null)
         { 
@@ -5441,7 +5445,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Queries Evaluations and returns a paged list Query params must include one of conversationId, evaluatorUserId, or agentUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date.
+        /// Queries Evaluations and returns a paged list Query params must include one of conversationId, evaluatorUserId, agentUserId or assigneeUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -5453,6 +5457,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId specified (optional)</param>
         /// <param name="agentUserId">user id of the agent (optional)</param>
         /// <param name="evaluatorUserId">evaluator user id (optional)</param>
+        /// <param name="assigneeUserId">assignee user id (optional)</param>
         /// <param name="queueId">queue id (optional)</param>
         /// <param name="startTime">start time of the evaluation query (optional)</param>
         /// <param name="endTime">end time of the evaluation query (optional)</param>
@@ -5463,14 +5468,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maximum">maximum (optional)</param>
         /// <param name="sortOrder">sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39; (optional)</param>
         /// <returns>EvaluationEntityListing</returns>
-        public EvaluationEntityListing GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
+        public EvaluationEntityListing GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
         {
-             ApiResponse<EvaluationEntityListing> localVarResponse = GetQualityEvaluationsQueryWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, agentUserId, evaluatorUserId, queueId, startTime, endTime, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder);
+             ApiResponse<EvaluationEntityListing> localVarResponse = GetQualityEvaluationsQueryWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, agentUserId, evaluatorUserId, assigneeUserId, queueId, startTime, endTime, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Queries Evaluations and returns a paged list Query params must include one of conversationId, evaluatorUserId, or agentUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date.
+        /// Queries Evaluations and returns a paged list Query params must include one of conversationId, evaluatorUserId, agentUserId or assigneeUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -5482,6 +5487,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId specified (optional)</param>
         /// <param name="agentUserId">user id of the agent (optional)</param>
         /// <param name="evaluatorUserId">evaluator user id (optional)</param>
+        /// <param name="assigneeUserId">assignee user id (optional)</param>
         /// <param name="queueId">queue id (optional)</param>
         /// <param name="startTime">start time of the evaluation query (optional)</param>
         /// <param name="endTime">end time of the evaluation query (optional)</param>
@@ -5492,7 +5498,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maximum">maximum (optional)</param>
         /// <param name="sortOrder">sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39; (optional)</param>
         /// <returns>ApiResponse of EvaluationEntityListing</returns>
-        public ApiResponse< EvaluationEntityListing > GetQualityEvaluationsQueryWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
+        public ApiResponse< EvaluationEntityListing > GetQualityEvaluationsQueryWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/quality/evaluations/query";
@@ -5536,6 +5542,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (conversationId != null) localVarQueryParams.Add(new Tuple<string, string>("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId)));
             if (agentUserId != null) localVarQueryParams.Add(new Tuple<string, string>("agentUserId", this.Configuration.ApiClient.ParameterToString(agentUserId)));
             if (evaluatorUserId != null) localVarQueryParams.Add(new Tuple<string, string>("evaluatorUserId", this.Configuration.ApiClient.ParameterToString(evaluatorUserId)));
+            if (assigneeUserId != null) localVarQueryParams.Add(new Tuple<string, string>("assigneeUserId", this.Configuration.ApiClient.ParameterToString(assigneeUserId)));
             if (queueId != null) localVarQueryParams.Add(new Tuple<string, string>("queueId", this.Configuration.ApiClient.ParameterToString(queueId)));
             if (startTime != null) localVarQueryParams.Add(new Tuple<string, string>("startTime", this.Configuration.ApiClient.ParameterToString(startTime)));
             if (endTime != null) localVarQueryParams.Add(new Tuple<string, string>("endTime", this.Configuration.ApiClient.ParameterToString(endTime)));
@@ -5583,7 +5590,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Queries Evaluations and returns a paged list Query params must include one of conversationId, evaluatorUserId, or agentUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date.
+        /// Queries Evaluations and returns a paged list Query params must include one of conversationId, evaluatorUserId, agentUserId or assigneeUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -5595,6 +5602,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId specified (optional)</param>
         /// <param name="agentUserId">user id of the agent (optional)</param>
         /// <param name="evaluatorUserId">evaluator user id (optional)</param>
+        /// <param name="assigneeUserId">assignee user id (optional)</param>
         /// <param name="queueId">queue id (optional)</param>
         /// <param name="startTime">start time of the evaluation query (optional)</param>
         /// <param name="endTime">end time of the evaluation query (optional)</param>
@@ -5605,15 +5613,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maximum">maximum (optional)</param>
         /// <param name="sortOrder">sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39; (optional)</param>
         /// <returns>Task of EvaluationEntityListing</returns>
-        public async System.Threading.Tasks.Task<EvaluationEntityListing> GetQualityEvaluationsQueryAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<EvaluationEntityListing> GetQualityEvaluationsQueryAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
         {
-             ApiResponse<EvaluationEntityListing> localVarResponse = await GetQualityEvaluationsQueryAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, agentUserId, evaluatorUserId, queueId, startTime, endTime, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder);
+             ApiResponse<EvaluationEntityListing> localVarResponse = await GetQualityEvaluationsQueryAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, agentUserId, evaluatorUserId, assigneeUserId, queueId, startTime, endTime, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Queries Evaluations and returns a paged list Query params must include one of conversationId, evaluatorUserId, or agentUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date.
+        /// Queries Evaluations and returns a paged list Query params must include one of conversationId, evaluatorUserId, agentUserId or assigneeUserId. When querying by agentUserId (and not conversationId or evaluatorUserId), the results are sorted by release date. Evaluations set to 'Never Release' are omitted in this case. When querying by evaluatorUserId or conversationId (including when combined with agentUserId), the results are sorted by assigned date.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -5625,6 +5633,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId specified (optional)</param>
         /// <param name="agentUserId">user id of the agent (optional)</param>
         /// <param name="evaluatorUserId">evaluator user id (optional)</param>
+        /// <param name="assigneeUserId">assignee user id (optional)</param>
         /// <param name="queueId">queue id (optional)</param>
         /// <param name="startTime">start time of the evaluation query (optional)</param>
         /// <param name="endTime">end time of the evaluation query (optional)</param>
@@ -5635,7 +5644,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maximum">maximum (optional)</param>
         /// <param name="sortOrder">sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39; (optional)</param>
         /// <returns>Task of ApiResponse (EvaluationEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> GetQualityEvaluationsQueryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> GetQualityEvaluationsQueryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/quality/evaluations/query";
@@ -5679,6 +5688,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (conversationId != null) localVarQueryParams.Add(new Tuple<string, string>("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId)));
             if (agentUserId != null) localVarQueryParams.Add(new Tuple<string, string>("agentUserId", this.Configuration.ApiClient.ParameterToString(agentUserId)));
             if (evaluatorUserId != null) localVarQueryParams.Add(new Tuple<string, string>("evaluatorUserId", this.Configuration.ApiClient.ParameterToString(evaluatorUserId)));
+            if (assigneeUserId != null) localVarQueryParams.Add(new Tuple<string, string>("assigneeUserId", this.Configuration.ApiClient.ParameterToString(assigneeUserId)));
             if (queueId != null) localVarQueryParams.Add(new Tuple<string, string>("queueId", this.Configuration.ApiClient.ParameterToString(queueId)));
             if (startTime != null) localVarQueryParams.Add(new Tuple<string, string>("startTime", this.Configuration.ApiClient.ParameterToString(startTime)));
             if (endTime != null) localVarQueryParams.Add(new Tuple<string, string>("endTime", this.Configuration.ApiClient.ParameterToString(endTime)));

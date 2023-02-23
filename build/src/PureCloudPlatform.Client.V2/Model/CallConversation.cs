@@ -61,13 +61,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name.</param>
         /// <param name="Participants">The list of participants involved in the conversation..</param>
         /// <param name="OtherMediaUris">The list of other media channels involved in the conversation..</param>
+        /// <param name="RecentTransfers">The list of the most recent 20 transfer commands applied to this conversation..</param>
         /// <param name="RecordingState">RecordingState.</param>
         /// <param name="MaxParticipants">If this is a conference conversation, then this field indicates the maximum number of participants allowed to participant in the conference..</param>
-        public CallConversation(string Name = null, List<CallMediaParticipant> Participants = null, List<string> OtherMediaUris = null, RecordingStateEnum? RecordingState = null, int? MaxParticipants = null)
+        public CallConversation(string Name = null, List<CallMediaParticipant> Participants = null, List<string> OtherMediaUris = null, List<TransferResponse> RecentTransfers = null, RecordingStateEnum? RecordingState = null, int? MaxParticipants = null)
         {
             this.Name = Name;
             this.Participants = Participants;
             this.OtherMediaUris = OtherMediaUris;
+            this.RecentTransfers = RecentTransfers;
             this.RecordingState = RecordingState;
             this.MaxParticipants = MaxParticipants;
             
@@ -110,6 +112,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+        /// <summary>
+        /// The list of the most recent 20 transfer commands applied to this conversation.
+        /// </summary>
+        /// <value>The list of the most recent 20 transfer commands applied to this conversation.</value>
+        [DataMember(Name="recentTransfers", EmitDefaultValue=false)]
+        public List<TransferResponse> RecentTransfers { get; set; }
+
+
+
 
 
         /// <summary>
@@ -142,6 +153,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Participants: ").Append(Participants).Append("\n");
             sb.Append("  OtherMediaUris: ").Append(OtherMediaUris).Append("\n");
+            sb.Append("  RecentTransfers: ").Append(RecentTransfers).Append("\n");
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
             sb.Append("  MaxParticipants: ").Append(MaxParticipants).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -206,6 +218,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.OtherMediaUris.SequenceEqual(other.OtherMediaUris)
                 ) &&
                 (
+                    this.RecentTransfers == other.RecentTransfers ||
+                    this.RecentTransfers != null &&
+                    this.RecentTransfers.SequenceEqual(other.RecentTransfers)
+                ) &&
+                (
                     this.RecordingState == other.RecordingState ||
                     this.RecordingState != null &&
                     this.RecordingState.Equals(other.RecordingState)
@@ -244,6 +261,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.OtherMediaUris != null)
                     hash = hash * 59 + this.OtherMediaUris.GetHashCode();
+
+                if (this.RecentTransfers != null)
+                    hash = hash * 59 + this.RecentTransfers.GetHashCode();
 
                 if (this.RecordingState != null)
                     hash = hash * 59 + this.RecordingState.GetHashCode();

@@ -860,8 +860,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeGroupId">Filter by edgeGroup.id (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to "name")</param>
         /// <param name="managed">Filter by managed (optional)</param>
+        /// <param name="showCloudMedia">True to show the cloud media devices in the result. (optional, default to true)</param>
         /// <returns>EdgeEntityListing</returns>
-        EdgeEntityListing GetTelephonyProvidersEdges (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null);
+        EdgeEntityListing GetTelephonyProvidersEdges (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null, bool? showCloudMedia = null);
 
         /// <summary>
         /// Get the list of edges.
@@ -877,8 +878,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeGroupId">Filter by edgeGroup.id (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to "name")</param>
         /// <param name="managed">Filter by managed (optional)</param>
+        /// <param name="showCloudMedia">True to show the cloud media devices in the result. (optional, default to true)</param>
         /// <returns>ApiResponse of EdgeEntityListing</returns>
-        ApiResponse<EdgeEntityListing> GetTelephonyProvidersEdgesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null);
+        ApiResponse<EdgeEntityListing> GetTelephonyProvidersEdgesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null, bool? showCloudMedia = null);
 
         /// <summary>
         /// Get the list of available languages.
@@ -4046,8 +4048,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeGroupId">Filter by edgeGroup.id (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to "name")</param>
         /// <param name="managed">Filter by managed (optional)</param>
+        /// <param name="showCloudMedia">True to show the cloud media devices in the result. (optional, default to true)</param>
         /// <returns>Task of EdgeEntityListing</returns>
-        System.Threading.Tasks.Task<EdgeEntityListing> GetTelephonyProvidersEdgesAsync (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null);
+        System.Threading.Tasks.Task<EdgeEntityListing> GetTelephonyProvidersEdgesAsync (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null, bool? showCloudMedia = null);
 
         /// <summary>
         /// Get the list of edges.
@@ -4063,8 +4066,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeGroupId">Filter by edgeGroup.id (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to "name")</param>
         /// <param name="managed">Filter by managed (optional)</param>
+        /// <param name="showCloudMedia">True to show the cloud media devices in the result. (optional, default to true)</param>
         /// <returns>Task of ApiResponse (EdgeEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EdgeEntityListing>> GetTelephonyProvidersEdgesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null);
+        System.Threading.Tasks.Task<ApiResponse<EdgeEntityListing>> GetTelephonyProvidersEdgesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null, bool? showCloudMedia = null);
 
         /// <summary>
         /// Get the list of available languages.
@@ -13410,10 +13414,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeGroupId">Filter by edgeGroup.id (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to "name")</param>
         /// <param name="managed">Filter by managed (optional)</param>
+        /// <param name="showCloudMedia">True to show the cloud media devices in the result. (optional, default to true)</param>
         /// <returns>EdgeEntityListing</returns>
-        public EdgeEntityListing GetTelephonyProvidersEdges (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null)
+        public EdgeEntityListing GetTelephonyProvidersEdges (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null, bool? showCloudMedia = null)
         {
-             ApiResponse<EdgeEntityListing> localVarResponse = GetTelephonyProvidersEdgesWithHttpInfo(pageSize, pageNumber, name, siteId, edgeGroupId, sortBy, managed);
+             ApiResponse<EdgeEntityListing> localVarResponse = GetTelephonyProvidersEdgesWithHttpInfo(pageSize, pageNumber, name, siteId, edgeGroupId, sortBy, managed, showCloudMedia);
              return localVarResponse.Data;
         }
 
@@ -13428,8 +13433,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeGroupId">Filter by edgeGroup.id (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to "name")</param>
         /// <param name="managed">Filter by managed (optional)</param>
+        /// <param name="showCloudMedia">True to show the cloud media devices in the result. (optional, default to true)</param>
         /// <returns>ApiResponse of EdgeEntityListing</returns>
-        public ApiResponse< EdgeEntityListing > GetTelephonyProvidersEdgesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null)
+        public ApiResponse< EdgeEntityListing > GetTelephonyProvidersEdgesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null, bool? showCloudMedia = null)
         { 
 
             var localVarPath = "/api/v2/telephony/providers/edges";
@@ -13471,6 +13477,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (edgeGroupId != null) localVarQueryParams.Add(new Tuple<string, string>("edgeGroup.id", this.Configuration.ApiClient.ParameterToString(edgeGroupId)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (managed != null) localVarQueryParams.Add(new Tuple<string, string>("managed", this.Configuration.ApiClient.ParameterToString(managed)));
+            if (showCloudMedia != null) localVarQueryParams.Add(new Tuple<string, string>("showCloudMedia", this.Configuration.ApiClient.ParameterToString(showCloudMedia)));
 
             // Header params
 
@@ -13519,10 +13526,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeGroupId">Filter by edgeGroup.id (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to "name")</param>
         /// <param name="managed">Filter by managed (optional)</param>
+        /// <param name="showCloudMedia">True to show the cloud media devices in the result. (optional, default to true)</param>
         /// <returns>Task of EdgeEntityListing</returns>
-        public async System.Threading.Tasks.Task<EdgeEntityListing> GetTelephonyProvidersEdgesAsync (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null)
+        public async System.Threading.Tasks.Task<EdgeEntityListing> GetTelephonyProvidersEdgesAsync (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null, bool? showCloudMedia = null)
         {
-             ApiResponse<EdgeEntityListing> localVarResponse = await GetTelephonyProvidersEdgesAsyncWithHttpInfo(pageSize, pageNumber, name, siteId, edgeGroupId, sortBy, managed);
+             ApiResponse<EdgeEntityListing> localVarResponse = await GetTelephonyProvidersEdgesAsyncWithHttpInfo(pageSize, pageNumber, name, siteId, edgeGroupId, sortBy, managed, showCloudMedia);
              return localVarResponse.Data;
 
         }
@@ -13538,8 +13546,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeGroupId">Filter by edgeGroup.id (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to "name")</param>
         /// <param name="managed">Filter by managed (optional)</param>
+        /// <param name="showCloudMedia">True to show the cloud media devices in the result. (optional, default to true)</param>
         /// <returns>Task of ApiResponse (EdgeEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EdgeEntityListing>> GetTelephonyProvidersEdgesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EdgeEntityListing>> GetTelephonyProvidersEdgesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null, bool? showCloudMedia = null)
         { 
 
             var localVarPath = "/api/v2/telephony/providers/edges";
@@ -13581,6 +13590,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (edgeGroupId != null) localVarQueryParams.Add(new Tuple<string, string>("edgeGroup.id", this.Configuration.ApiClient.ParameterToString(edgeGroupId)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (managed != null) localVarQueryParams.Add(new Tuple<string, string>("managed", this.Configuration.ApiClient.ParameterToString(managed)));
+            if (showCloudMedia != null) localVarQueryParams.Add(new Tuple<string, string>("showCloudMedia", this.Configuration.ApiClient.ParameterToString(showCloudMedia)));
 
             // Header params
 

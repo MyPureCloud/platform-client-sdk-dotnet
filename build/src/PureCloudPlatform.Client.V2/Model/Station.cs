@@ -191,6 +191,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// True when the media helper required.
+        /// </summary>
+        /// <value>True when the media helper required.</value>
+        [DataMember(Name="webRtcRequireMediaHelper", EmitDefaultValue=false)]
+        public bool? WebRtcRequireMediaHelper { get; private set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -221,6 +230,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  WebRtcPersistentEnabled: ").Append(WebRtcPersistentEnabled).Append("\n");
             sb.Append("  WebRtcForceTurn: ").Append(WebRtcForceTurn).Append("\n");
             sb.Append("  WebRtcCallAppearances: ").Append(WebRtcCallAppearances).Append("\n");
+            sb.Append("  WebRtcRequireMediaHelper: ").Append(WebRtcRequireMediaHelper).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -333,6 +343,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.WebRtcCallAppearances.Equals(other.WebRtcCallAppearances)
                 ) &&
                 (
+                    this.WebRtcRequireMediaHelper == other.WebRtcRequireMediaHelper ||
+                    this.WebRtcRequireMediaHelper != null &&
+                    this.WebRtcRequireMediaHelper.Equals(other.WebRtcRequireMediaHelper)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -391,6 +406,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.WebRtcCallAppearances != null)
                     hash = hash * 59 + this.WebRtcCallAppearances.GetHashCode();
+
+                if (this.WebRtcRequireMediaHelper != null)
+                    hash = hash * 59 + this.WebRtcRequireMediaHelper.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

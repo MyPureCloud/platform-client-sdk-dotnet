@@ -222,6 +222,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Afsouth1,
             
             /// <summary>
+            /// Enum Apeast1 for "ap-east-1"
+            /// </summary>
+            [EnumMember(Value = "ap-east-1")]
+            Apeast1,
+            
+            /// <summary>
             /// Enum Apnortheast1 for "ap-northeast-1"
             /// </summary>
             [EnumMember(Value = "ap-northeast-1")]
@@ -246,6 +252,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Apsoutheast2,
             
             /// <summary>
+            /// Enum Apsoutheast3 for "ap-southeast-3"
+            /// </summary>
+            [EnumMember(Value = "ap-southeast-3")]
+            Apsoutheast3,
+            
+            /// <summary>
             /// Enum Cacentral1 for "ca-central-1"
             /// </summary>
             [EnumMember(Value = "ca-central-1")]
@@ -268,6 +280,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "eu-west-2")]
             Euwest2,
+            
+            /// <summary>
+            /// Enum Euwest3 for "eu-west-3"
+            /// </summary>
+            [EnumMember(Value = "eu-west-3")]
+            Euwest3,
             
             /// <summary>
             /// Enum Saeast1 for "sa-east-1"

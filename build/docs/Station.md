@@ -21,6 +21,7 @@ title: Station
 | **WebRtcPersistentEnabled** | **bool?** | The default or configured value of persistent connection setting for the station. Empty if station type is not inin_webrtc_softphone. | [optional] |
 | **WebRtcForceTurn** | **bool?** | Whether the station is configured to require TURN for routing WebRTC calls. Empty if station type is not inin_webrtc_softphone. | [optional] |
 | **WebRtcCallAppearances** | **int?** | The number of call appearances on the station. | [optional] |
+| **WebRtcRequireMediaHelper** | **bool?** | True when the media helper required. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

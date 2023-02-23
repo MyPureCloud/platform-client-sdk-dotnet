@@ -97,6 +97,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Salesconversionratevalue,
             
             /// <summary>
+            /// Enum Salesamountvalue for "SalesAmountValue"
+            /// </summary>
+            [EnumMember(Value = "SalesAmountValue")]
+            Salesamountvalue,
+            
+            /// <summary>
             /// Enum Retentionratevalue for "RetentionRateValue"
             /// </summary>
             [EnumMember(Value = "RetentionRateValue")]

@@ -11,6 +11,7 @@ title: CallConversation
 | **Name** | **string** |  | [optional] |
 | **Participants** | [**List&lt;CallMediaParticipant&gt;**](CallMediaParticipant.html) | The list of participants involved in the conversation. | [optional] |
 | **OtherMediaUris** | **List&lt;string&gt;** | The list of other media channels involved in the conversation. | [optional] |
+| **RecentTransfers** | [**List&lt;TransferResponse&gt;**](TransferResponse.html) | The list of the most recent 20 transfer commands applied to this conversation. | [optional] |
 | **RecordingState** | **string** |  | [optional] |
 | **MaxParticipants** | **int?** | If this is a conference conversation, then this field indicates the maximum number of participants allowed to participant in the conference. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |

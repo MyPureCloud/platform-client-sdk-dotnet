@@ -164,7 +164,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RecordingState">On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings; otherwise indicates state of conversation recording..</param>
         /// <param name="State">The conversation's state.</param>
         /// <param name="Divisions">Identifiers of divisions associated with this conversation.</param>
-        public Conversation(string Name = null, string ExternalTag = null, DateTime? StartTime = null, DateTime? EndTime = null, string Address = null, List<Participant> Participants = null, List<string> ConversationIds = null, int? MaxParticipants = null, RecordingStateEnum? RecordingState = null, StateEnum? State = null, List<ConversationDivisionMembership> Divisions = null)
+        /// <param name="RecentTransfers">The list of the most recent 20 transfer commands applied to this conversation..</param>
+        public Conversation(string Name = null, string ExternalTag = null, DateTime? StartTime = null, DateTime? EndTime = null, string Address = null, List<Participant> Participants = null, List<string> ConversationIds = null, int? MaxParticipants = null, RecordingStateEnum? RecordingState = null, StateEnum? State = null, List<ConversationDivisionMembership> Divisions = null, List<TransferResponse> RecentTransfers = null)
         {
             this.Name = Name;
             this.ExternalTag = ExternalTag;
@@ -177,6 +178,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.RecordingState = RecordingState;
             this.State = State;
             this.Divisions = Divisions;
+            this.RecentTransfers = RecentTransfers;
             
         }
         
@@ -276,6 +278,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The list of the most recent 20 transfer commands applied to this conversation.
+        /// </summary>
+        /// <value>The list of the most recent 20 transfer commands applied to this conversation.</value>
+        [DataMember(Name="recentTransfers", EmitDefaultValue=false)]
+        public List<TransferResponse> RecentTransfers { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -304,6 +315,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  Divisions: ").Append(Divisions).Append("\n");
+            sb.Append("  RecentTransfers: ").Append(RecentTransfers).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -406,6 +418,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Divisions.SequenceEqual(other.Divisions)
                 ) &&
                 (
+                    this.RecentTransfers == other.RecentTransfers ||
+                    this.RecentTransfers != null &&
+                    this.RecentTransfers.SequenceEqual(other.RecentTransfers)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -458,6 +475,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Divisions != null)
                     hash = hash * 59 + this.Divisions.GetHashCode();
+
+                if (this.RecentTransfers != null)
+                    hash = hash * 59 + this.RecentTransfers.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

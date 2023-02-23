@@ -891,7 +891,7 @@ namespace Example
 
 <a name="getknowledgeguestsessiondocuments"></a>
 
-## [**KnowledgeGuestDocumentResponseListing**](KnowledgeGuestDocumentResponseListing.html) GetKnowledgeGuestSessionDocuments (string sessionId, List<string> categoryId = null, bool? includeSubcategories = null, int? pageSize = null)
+## [**KnowledgeGuestDocumentResponseListing**](KnowledgeGuestDocumentResponseListing.html) GetKnowledgeGuestSessionDocuments (string sessionId, List<string> categoryId = null, int? pageSize = null)
 
 
 
@@ -920,13 +920,12 @@ namespace Example
             var apiInstance = new KnowledgeApi();
             var sessionId = sessionId_example;  // string | Knowledge guest session ID.
             var categoryId = new List<string>(); // List<string> | If specified, retrieves documents associated with category ids, comma separated values expected. (optional) 
-            var includeSubcategories = true;  // bool? | Deprecated - Do Not Use. Works along with 'categoryId' query parameter. If specified, retrieves documents associated with category ids and its children categories. (optional) 
             var pageSize = 56;  // int? | Number of entities to return. Maximum of 200. (optional)  (default to 10)
 
             try
             { 
                 // Get documents.
-                KnowledgeGuestDocumentResponseListing result = apiInstance.GetKnowledgeGuestSessionDocuments(sessionId, categoryId, includeSubcategories, pageSize);
+                KnowledgeGuestDocumentResponseListing result = apiInstance.GetKnowledgeGuestSessionDocuments(sessionId, categoryId, pageSize);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -945,7 +944,6 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **sessionId** | **string**| Knowledge guest session ID. |  |
 | **categoryId** | [**List<string>**](string.html)| If specified, retrieves documents associated with category ids, comma separated values expected. | [optional]  |
-| **includeSubcategories** | **bool?**| Deprecated - Do Not Use. Works along with &#39;categoryId&#39; query parameter. If specified, retrieves documents associated with category ids and its children categories. | [optional]  |
 | **pageSize** | **int?**| Number of entities to return. Maximum of 200. | [optional] [default to 10] |
 {: class="table table-striped"}
 

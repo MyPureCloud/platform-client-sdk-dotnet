@@ -2463,7 +2463,7 @@ namespace Example
 
 <a name="gettelephonyprovidersedges"></a>
 
-## [**EdgeEntityListing**](EdgeEntityListing.html) GetTelephonyProvidersEdges (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null)
+## [**EdgeEntityListing**](EdgeEntityListing.html) GetTelephonyProvidersEdges (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null, bool? showCloudMedia = null)
 
 
 
@@ -2504,11 +2504,12 @@ namespace Example
             var edgeGroupId = edgeGroupId_example;  // string | Filter by edgeGroup.id (optional) 
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to "name")
             var managed = true;  // bool? | Filter by managed (optional) 
+            var showCloudMedia = true;  // bool? | True to show the cloud media devices in the result. (optional)  (default to true)
 
             try
             { 
                 // Get the list of edges.
-                EdgeEntityListing result = apiInstance.GetTelephonyProvidersEdges(pageSize, pageNumber, name, siteId, edgeGroupId, sortBy, managed);
+                EdgeEntityListing result = apiInstance.GetTelephonyProvidersEdges(pageSize, pageNumber, name, siteId, edgeGroupId, sortBy, managed, showCloudMedia);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2532,6 +2533,7 @@ namespace Example
 | **edgeGroupId** | **string**| Filter by edgeGroup.id | [optional]  |
 | **sortBy** | **string**| Sort by | [optional] [default to "name"] |
 | **managed** | **bool?**| Filter by managed | [optional]  |
+| **showCloudMedia** | **bool?**| True to show the cloud media devices in the result. | [optional] [default to true] |
 {: class="table table-striped"}
 
 ### Return type

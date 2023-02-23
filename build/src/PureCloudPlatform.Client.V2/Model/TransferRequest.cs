@@ -19,6 +19,39 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class TransferRequest :  IEquatable<TransferRequest>
     {
         /// <summary>
+        /// The type of transfer to perform.
+        /// </summary>
+        /// <value>The type of transfer to perform.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum TransferTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Attended for "Attended"
+            /// </summary>
+            [EnumMember(Value = "Attended")]
+            Attended,
+            
+            /// <summary>
+            /// Enum Unattended for "Unattended"
+            /// </summary>
+            [EnumMember(Value = "Unattended")]
+            Unattended
+        }
+        /// <summary>
+        /// The type of transfer to perform.
+        /// </summary>
+        /// <value>The type of transfer to perform.</value>
+        [DataMember(Name="transferType", EmitDefaultValue=false)]
+        public TransferTypeEnum? TransferType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="TransferRequest" /> class.
         /// </summary>
         /// <param name="UserId">The user ID of the transfer target..</param>
@@ -26,13 +59,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UserName">The user name of the transfer target..</param>
         /// <param name="QueueId">The queue ID of the transfer target..</param>
         /// <param name="Voicemail">If true, transfer to the voicemail inbox of the participant that is being replaced..</param>
-        public TransferRequest(string UserId = null, string Address = null, string UserName = null, string QueueId = null, bool? Voicemail = null)
+        /// <param name="TransferType">The type of transfer to perform..</param>
+        public TransferRequest(string UserId = null, string Address = null, string UserName = null, string QueueId = null, bool? Voicemail = null, TransferTypeEnum? TransferType = null)
         {
             this.UserId = UserId;
             this.Address = Address;
             this.UserName = UserName;
             this.QueueId = QueueId;
             this.Voicemail = Voicemail;
+            this.TransferType = TransferType;
             
         }
         
@@ -82,6 +117,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? Voicemail { get; set; }
 
 
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -96,6 +133,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  UserName: ").Append(UserName).Append("\n");
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  Voicemail: ").Append(Voicemail).Append("\n");
+            sb.Append("  TransferType: ").Append(TransferType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -160,6 +198,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Voicemail == other.Voicemail ||
                     this.Voicemail != null &&
                     this.Voicemail.Equals(other.Voicemail)
+                ) &&
+                (
+                    this.TransferType == other.TransferType ||
+                    this.TransferType != null &&
+                    this.TransferType.Equals(other.TransferType)
                 );
         }
 
@@ -188,6 +231,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Voicemail != null)
                     hash = hash * 59 + this.Voicemail.GetHashCode();
+
+                if (this.TransferType != null)
+                    hash = hash * 59 + this.TransferType.GetHashCode();
 
                 return hash;
             }

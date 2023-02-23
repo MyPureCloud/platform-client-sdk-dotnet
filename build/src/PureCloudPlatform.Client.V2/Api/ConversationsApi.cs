@@ -2823,7 +2823,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<string> PostConversationAssignWithHttpInfo (string conversationId, ConversationUser body);
 
         /// <summary>
-        /// Creates a cobrowse session
+        /// Creates a cobrowse session. Requires \"conversation:cobrowse:add\" (for web messaging) or \"conversation:cobrowsevoice:add\" permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -2834,7 +2834,7 @@ namespace PureCloudPlatform.Client.V2.Api
         CobrowseWebMessagingSession PostConversationCobrowse (string conversationId);
 
         /// <summary>
-        /// Creates a cobrowse session
+        /// Creates a cobrowse session. Requires \"conversation:cobrowse:add\" (for web messaging) or \"conversation:cobrowsevoice:add\" permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -7135,7 +7135,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<string>> PostConversationAssignAsyncWithHttpInfo (string conversationId, ConversationUser body);
 
         /// <summary>
-        /// Creates a cobrowse session
+        /// Creates a cobrowse session. Requires \"conversation:cobrowse:add\" (for web messaging) or \"conversation:cobrowsevoice:add\" permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -7146,7 +7146,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<CobrowseWebMessagingSession> PostConversationCobrowseAsync (string conversationId);
 
         /// <summary>
-        /// Creates a cobrowse session
+        /// Creates a cobrowse session. Requires \"conversation:cobrowse:add\" (for web messaging) or \"conversation:cobrowsevoice:add\" permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -32430,7 +32430,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Creates a cobrowse session 
+        /// Creates a cobrowse session. Requires \"conversation:cobrowse:add\" (for web messaging) or \"conversation:cobrowsevoice:add\" permission. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -32442,7 +32442,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Creates a cobrowse session 
+        /// Creates a cobrowse session. Requires \"conversation:cobrowse:add\" (for web messaging) or \"conversation:cobrowsevoice:add\" permission. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -32524,7 +32524,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Creates a cobrowse session 
+        /// Creates a cobrowse session. Requires \"conversation:cobrowse:add\" (for web messaging) or \"conversation:cobrowsevoice:add\" permission. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -32537,7 +32537,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Creates a cobrowse session 
+        /// Creates a cobrowse session. Requires \"conversation:cobrowse:add\" (for web messaging) or \"conversation:cobrowsevoice:add\" permission. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
