@@ -112,6 +112,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Botsvoice,
             
             /// <summary>
+            /// Enum Callback for "callback"
+            /// </summary>
+            [EnumMember(Value = "callback")]
+            Callback,
+            
+            /// <summary>
             /// Enum Cobrowse for "cobrowse"
             /// </summary>
             [EnumMember(Value = "cobrowse")]
@@ -272,6 +278,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "predictive.routing")]
             Predictiverouting,
+            
+            /// <summary>
+            /// Enum Presence for "presence"
+            /// </summary>
+            [EnumMember(Value = "presence")]
+            Presence,
             
             /// <summary>
             /// Enum Quality for "quality"

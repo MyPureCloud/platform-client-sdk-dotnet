@@ -19,8 +19,8 @@ title: ExtensionPool
 | **State** | **string** | Indicates if the resource is active, inactive, or deleted. | [optional] |
 | **ModifiedByApp** | **string** | The application that last modified the resource. | [optional] |
 | **CreatedByApp** | **string** | The application that created the resource. | [optional] |
-| **StartNumber** | **string** | The starting phone number for the range of this Extension pool. Must be in E.164 format | [optional] |
-| **EndNumber** | **string** | The ending phone number for the range of this Extension pool. Must be in E.164 format | [optional] |
+| **StartNumber** | **string** | The starting phone number for the range of this Extension pool. The number must be between 3 and 9 digits in length and the same length as the endNumber. | [optional] |
+| **EndNumber** | **string** | The ending phone number for the range of this Extension pool. The number must be between 3 and 9 digits in length and the same length as the startNumber. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

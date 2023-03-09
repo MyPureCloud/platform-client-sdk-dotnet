@@ -70,8 +70,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="Description">The resource's description..</param>
         /// <param name="Version">The current version of the resource..</param>
-        /// <param name="StartNumber">The starting phone number for the range of this Extension pool. Must be in E.164 format.</param>
-        /// <param name="EndNumber">The ending phone number for the range of this Extension pool. Must be in E.164 format.</param>
+        /// <param name="StartNumber">The starting phone number for the range of this Extension pool. The number must be between 3 and 9 digits in length and the same length as the endNumber..</param>
+        /// <param name="EndNumber">The ending phone number for the range of this Extension pool. The number must be between 3 and 9 digits in length and the same length as the startNumber..</param>
         public ExtensionPool(string Name = null, Division Division = null, string Description = null, int? Version = null, string StartNumber = null, string EndNumber = null)
         {
             this.Name = Name;
@@ -187,18 +187,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The starting phone number for the range of this Extension pool. Must be in E.164 format
+        /// The starting phone number for the range of this Extension pool. The number must be between 3 and 9 digits in length and the same length as the endNumber.
         /// </summary>
-        /// <value>The starting phone number for the range of this Extension pool. Must be in E.164 format</value>
+        /// <value>The starting phone number for the range of this Extension pool. The number must be between 3 and 9 digits in length and the same length as the endNumber.</value>
         [DataMember(Name="startNumber", EmitDefaultValue=false)]
         public string StartNumber { get; set; }
 
 
 
         /// <summary>
-        /// The ending phone number for the range of this Extension pool. Must be in E.164 format
+        /// The ending phone number for the range of this Extension pool. The number must be between 3 and 9 digits in length and the same length as the startNumber.
         /// </summary>
-        /// <value>The ending phone number for the range of this Extension pool. Must be in E.164 format</value>
+        /// <value>The ending phone number for the range of this Extension pool. The number must be between 3 and 9 digits in length and the same length as the startNumber.</value>
         [DataMember(Name="endNumber", EmitDefaultValue=false)]
         public string EndNumber { get; set; }
 

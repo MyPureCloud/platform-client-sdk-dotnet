@@ -20,6 +20,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetLearningModulesAssignments**](LearningApi.html#getlearningmodulesassignments) | **GET** /api/v2/learning/modules/assignments | Get all learning modules of an organization including assignments for a specific user |
 | [**GetLearningModulesCoverartCoverArtId**](LearningApi.html#getlearningmodulescoverartcoverartid) | **GET** /api/v2/learning/modules/coverart/{coverArtId} | Get a specific Learning Module cover art using ID |
 | [**PatchLearningAssignment**](LearningApi.html#patchlearningassignment) | **PATCH** /api/v2/learning/assignments/{assignmentId} | Update Learning Assignment |
+| [**PatchLearningAssignmentReschedule**](LearningApi.html#patchlearningassignmentreschedule) | **PATCH** /api/v2/learning/assignments/{assignmentId}/reschedule | Reschedule Learning Assignment |
 | [**PostLearningAssessmentsScoring**](LearningApi.html#postlearningassessmentsscoring) | **POST** /api/v2/learning/assessments/scoring | Score learning assessment for preview |
 | [**PostLearningAssignmentReassign**](LearningApi.html#postlearningassignmentreassign) | **POST** /api/v2/learning/assignments/{assignmentId}/reassign | Reassign Learning Assignment |
 | [**PostLearningAssignmentReset**](LearningApi.html#postlearningassignmentreset) | **POST** /api/v2/learning/assignments/{assignmentId}/reset | Reset Learning Assignment |
@@ -31,6 +32,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostLearningModulePublish**](LearningApi.html#postlearningmodulepublish) | **POST** /api/v2/learning/modules/{moduleId}/publish | Publish a Learning module |
 | [**PostLearningModules**](LearningApi.html#postlearningmodules) | **POST** /api/v2/learning/modules | Create a new learning module |
 | [**PostLearningRulesQuery**](LearningApi.html#postlearningrulesquery) | **POST** /api/v2/learning/rules/query | Get users for learning module rule |
+| [**PostLearningScheduleslotsQuery**](LearningApi.html#postlearningscheduleslotsquery) | **POST** /api/v2/learning/scheduleslots/query | Get list of possible slots where a learning activity can be scheduled. |
 | [**PutLearningModule**](LearningApi.html#putlearningmodule) | **PUT** /api/v2/learning/modules/{moduleId} | Update a learning module |
 | [**PutLearningModuleRule**](LearningApi.html#putlearningmodulerule) | **PUT** /api/v2/learning/modules/{moduleId}/rule | Update a learning module rule |
 {: class="table table-striped"}
@@ -321,7 +323,7 @@ namespace Example
 | **sortBy** | **string**| Specifies which field to sort the results by, default sort is by recommendedCompletionDate | [optional] <br />**Values**: RecommendedCompletionDate, DateModified |
 | **userId** | [**List<string>**](string.html)| Specifies the list of user IDs to be queried, up to 100 user IDs. | [optional]  |
 | **types** | [**List<string>**](string.html)| Specifies the module types to filter by | [optional] <br />**Values**: Informational, AssessedContent, Assessment |
-| **states** | [**List<string>**](string.html)| Specifies the assignment states to filter by | [optional] <br />**Values**: Assigned, InProgress, Completed, NotCompleted |
+| **states** | [**List<string>**](string.html)| Specifies the assignment states to filter by | [optional] <br />**Values**: Assigned, InProgress, Completed, NotCompleted, InvalidSchedule |
 | **expand** | [**List<string>**](string.html)| Specifies the expand option for returning additional information | [optional] <br />**Values**: ModuleSummary |
 {: class="table table-striped"}
 
@@ -411,7 +413,7 @@ namespace Example
 | **sortOrder** | **string**| Specifies result set sort order; if not specified, default sort order is descending (Desc) | [optional] [default to Desc]<br />**Values**: Asc, Desc |
 | **sortBy** | **string**| Specifies which field to sort the results by, default sort is by recommendedCompletionDate | [optional] <br />**Values**: RecommendedCompletionDate, DateModified |
 | **types** | [**List<string>**](string.html)| Specifies the module types to filter by | [optional] <br />**Values**: Informational, AssessedContent, Assessment |
-| **states** | [**List<string>**](string.html)| Specifies the assignment states to filter by | [optional] <br />**Values**: Assigned, InProgress, Completed, NotCompleted |
+| **states** | [**List<string>**](string.html)| Specifies the assignment states to filter by | [optional] <br />**Values**: Assigned, InProgress, Completed, NotCompleted, InvalidSchedule |
 | **expand** | [**List<string>**](string.html)| Specifies the expand option for returning additional information | [optional] <br />**Values**: ModuleSummary |
 {: class="table table-striped"}
 
@@ -840,7 +842,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **searchTerm** | **string**| Search Term (searches by name and description) | [optional]  |
 | **overdue** | **string**| Specifies if only modules with overdue/not overdue (overdue is \&quot;True\&quot; or \&quot;False\&quot;) assignments are returned. If overdue is \&quot;Any\&quot; or omitted, both are returned and can including modules that are unassigned. | [optional] [default to Any]<br />**Values**: True, False, Any |
-| **assignmentStates** | [**List<string>**](string.html)| Specifies the assignment states to return. | [optional] <br />**Values**: NotAssigned, Assigned, InProgress, Completed |
+| **assignmentStates** | [**List<string>**](string.html)| Specifies the assignment states to return. | [optional] <br />**Values**: NotAssigned, Assigned, InProgress, Completed, InvalidSchedule |
 | **expand** | [**List<string>**](string.html)| Fields to expand in response(case insensitive) | [optional] <br />**Values**: coverArt |
 {: class="table table-striped"}
 
@@ -973,6 +975,73 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **assignmentId** | **string**| The ID of Learning Assignment |  |
 | **body** | [**LearningAssignmentUpdate**](LearningAssignmentUpdate.html)| The Learning Assignment to be updated | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LearningAssignment**](LearningAssignment.html)
+
+<a name="patchlearningassignmentreschedule"></a>
+
+## [**LearningAssignment**](LearningAssignment.html) PatchLearningAssignmentReschedule (string assignmentId, LearningAssignmentReschedule body = null)
+
+
+
+Reschedule Learning Assignment
+
+
+
+Requires ANY permissions: 
+
+* learning:assignment:reschedule
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchLearningAssignmentRescheduleExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LearningApi();
+            var assignmentId = assignmentId_example;  // string | The ID of Learning Assignment
+            var body = new LearningAssignmentReschedule(); // LearningAssignmentReschedule | The Learning assignment reschedule model (optional) 
+
+            try
+            { 
+                // Reschedule Learning Assignment
+                LearningAssignment result = apiInstance.PatchLearningAssignmentReschedule(assignmentId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LearningApi.PatchLearningAssignmentReschedule: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **assignmentId** | **string**| The ID of Learning Assignment |  |
+| **body** | [**LearningAssignmentReschedule**](LearningAssignmentReschedule.html)| The Learning assignment reschedule model | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1711,6 +1780,71 @@ namespace Example
 ### Return type
 
 [**LearningAssignmentUserListing**](LearningAssignmentUserListing.html)
+
+<a name="postlearningscheduleslotsquery"></a>
+
+## [**LearningScheduleSlotsQueryResponse**](LearningScheduleSlotsQueryResponse.html) PostLearningScheduleslotsQuery (LearningScheduleSlotsQueryRequest body)
+
+
+
+Get list of possible slots where a learning activity can be scheduled.
+
+
+
+Requires ANY permissions: 
+
+* learning:scheduleSlot:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostLearningScheduleslotsQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LearningApi();
+            var body = new LearningScheduleSlotsQueryRequest(); // LearningScheduleSlotsQueryRequest | The slot search request
+
+            try
+            { 
+                // Get list of possible slots where a learning activity can be scheduled.
+                LearningScheduleSlotsQueryResponse result = apiInstance.PostLearningScheduleslotsQuery(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LearningApi.PostLearningScheduleslotsQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**LearningScheduleSlotsQueryRequest**](LearningScheduleSlotsQueryRequest.html)| The slot search request |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LearningScheduleSlotsQueryResponse**](LearningScheduleSlotsQueryResponse.html)
 
 <a name="putlearningmodule"></a>
 

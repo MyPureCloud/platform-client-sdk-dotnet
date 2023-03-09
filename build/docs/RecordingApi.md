@@ -31,8 +31,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRecordingJobs**](RecordingApi.html#getrecordingjobs) | **GET** /api/v2/recording/jobs | Get the status of all jobs within the user&#39;s organization |
 | [**GetRecordingKeyconfiguration**](RecordingApi.html#getrecordingkeyconfiguration) | **GET** /api/v2/recording/keyconfigurations/{keyConfigurationId} | Get the encryption key configurations |
 | [**GetRecordingKeyconfigurations**](RecordingApi.html#getrecordingkeyconfigurations) | **GET** /api/v2/recording/keyconfigurations | Get a list of key configurations data |
-| [**GetRecordingLocalkeysSetting**](RecordingApi.html#getrecordinglocalkeyssetting) | **GET** /api/v2/recording/localkeys/settings/{settingsId} | Get the local encryption settings. Replaced by API recording/keyconfigurations/{keyConfigurationId} |
-| [**GetRecordingLocalkeysSettings**](RecordingApi.html#getrecordinglocalkeyssettings) | **GET** /api/v2/recording/localkeys/settings | gets a list local key settings data. Replaced by API recording/keyconfigurations |
 | [**GetRecordingMediaretentionpolicies**](RecordingApi.html#getrecordingmediaretentionpolicies) | **GET** /api/v2/recording/mediaretentionpolicies | Gets media retention policy list with query options to filter on name and enabled. |
 | [**GetRecordingMediaretentionpolicy**](RecordingApi.html#getrecordingmediaretentionpolicy) | **GET** /api/v2/recording/mediaretentionpolicies/{policyId} | Get a media retention policy |
 | [**GetRecordingRecordingkeys**](RecordingApi.html#getrecordingrecordingkeys) | **GET** /api/v2/recording/recordingkeys | Get encryption key list |
@@ -51,7 +49,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostRecordingKeyconfigurations**](RecordingApi.html#postrecordingkeyconfigurations) | **POST** /api/v2/recording/keyconfigurations | Setup configurations for encryption key creation |
 | [**PostRecordingKeyconfigurationsValidate**](RecordingApi.html#postrecordingkeyconfigurationsvalidate) | **POST** /api/v2/recording/keyconfigurations/validate | Validate encryption key configurations without saving it |
 | [**PostRecordingLocalkeys**](RecordingApi.html#postrecordinglocalkeys) | **POST** /api/v2/recording/localkeys | create a local key management recording key |
-| [**PostRecordingLocalkeysSettings**](RecordingApi.html#postrecordinglocalkeyssettings) | **POST** /api/v2/recording/localkeys/settings | create settings for local key creation. Replaced by API recording/keyconfigurations |
 | [**PostRecordingMediaretentionpolicies**](RecordingApi.html#postrecordingmediaretentionpolicies) | **POST** /api/v2/recording/mediaretentionpolicies | Create media retention policy |
 | [**PostRecordingRecordingkeys**](RecordingApi.html#postrecordingrecordingkeys) | **POST** /api/v2/recording/recordingkeys | Create encryption key |
 | [**PostRecordingUploadsReports**](RecordingApi.html#postrecordinguploadsreports) | **POST** /api/v2/recording/uploads/reports | Creates a recording upload status report |
@@ -64,7 +61,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutRecordingCrossplatformMediaretentionpolicy**](RecordingApi.html#putrecordingcrossplatformmediaretentionpolicy) | **PUT** /api/v2/recording/crossplatform/mediaretentionpolicies/{policyId} | Update a media retention policy |
 | [**PutRecordingJob**](RecordingApi.html#putrecordingjob) | **PUT** /api/v2/recording/jobs/{jobId} | Execute the recording bulk job. |
 | [**PutRecordingKeyconfiguration**](RecordingApi.html#putrecordingkeyconfiguration) | **PUT** /api/v2/recording/keyconfigurations/{keyConfigurationId} | Update the encryption key configurations |
-| [**PutRecordingLocalkeysSetting**](RecordingApi.html#putrecordinglocalkeyssetting) | **PUT** /api/v2/recording/localkeys/settings/{settingsId} | Update the local encryption settings. Replaced by API recording/keyconfigurations/{keyConfigurationId} |
 | [**PutRecordingMediaretentionpolicy**](RecordingApi.html#putrecordingmediaretentionpolicy) | **PUT** /api/v2/recording/mediaretentionpolicies/{policyId} | Update a media retention policy |
 | [**PutRecordingRecordingkeysRotationschedule**](RecordingApi.html#putrecordingrecordingkeysrotationschedule) | **PUT** /api/v2/recording/recordingkeys/rotationschedule | Update key rotation schedule |
 | [**PutRecordingSettings**](RecordingApi.html#putrecordingsettings) | **PUT** /api/v2/recording/settings | Update the Recording Settings for the Organization |
@@ -1739,131 +1735,6 @@ This endpoint does require any parameters.
 
 [**RecordingEncryptionConfigurationListing**](RecordingEncryptionConfigurationListing.html)
 
-<a name="getrecordinglocalkeyssetting"></a>
-
-## [**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html) GetRecordingLocalkeysSetting (string settingsId)
-
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
-
-Get the local encryption settings. Replaced by API recording/keyconfigurations/{keyConfigurationId}
-
-
-
-Requires ANY permissions: 
-
-* recording:encryptionKey:view
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetRecordingLocalkeysSettingExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new RecordingApi();
-            var settingsId = settingsId_example;  // string | Settings Id
-
-            try
-            { 
-                // Get the local encryption settings. Replaced by API recording/keyconfigurations/{keyConfigurationId}
-                LocalEncryptionConfiguration result = apiInstance.GetRecordingLocalkeysSetting(settingsId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling RecordingApi.GetRecordingLocalkeysSetting: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **settingsId** | **string**| Settings Id |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html)
-
-<a name="getrecordinglocalkeyssettings"></a>
-
-## [**LocalEncryptionConfigurationListing**](LocalEncryptionConfigurationListing.html) GetRecordingLocalkeysSettings ()
-
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
-
-gets a list local key settings data. Replaced by API recording/keyconfigurations
-
-
-
-Requires ANY permissions: 
-
-* recording:encryptionKey:view
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetRecordingLocalkeysSettingsExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new RecordingApi();
-
-            try
-            { 
-                // gets a list local key settings data. Replaced by API recording/keyconfigurations
-                LocalEncryptionConfigurationListing result = apiInstance.GetRecordingLocalkeysSettings();
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling RecordingApi.GetRecordingLocalkeysSettings: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does require any parameters.
-
-
-### Return type
-
-[**LocalEncryptionConfigurationListing**](LocalEncryptionConfigurationListing.html)
-
 <a name="getrecordingmediaretentionpolicies"></a>
 
 ## [**PolicyEntityListing**](PolicyEntityListing.html) GetRecordingMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null)
@@ -3074,71 +2945,6 @@ namespace Example
 
 [**EncryptionKey**](EncryptionKey.html)
 
-<a name="postrecordinglocalkeyssettings"></a>
-
-## [**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html) PostRecordingLocalkeysSettings (LocalEncryptionConfiguration body)
-
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
-
-create settings for local key creation. Replaced by API recording/keyconfigurations
-
-
-
-Requires ANY permissions: 
-
-* recording:encryptionKey:edit
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PostRecordingLocalkeysSettingsExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new RecordingApi();
-            var body = new LocalEncryptionConfiguration(); // LocalEncryptionConfiguration | Local Encryption Configuration
-
-            try
-            { 
-                // create settings for local key creation. Replaced by API recording/keyconfigurations
-                LocalEncryptionConfiguration result = apiInstance.PostRecordingLocalkeysSettings(body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling RecordingApi.PostRecordingLocalkeysSettings: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **body** | [**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html)| Local Encryption Configuration |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html)
-
 <a name="postrecordingmediaretentionpolicies"></a>
 
 ## [**Policy**](Policy.html) PostRecordingMediaretentionpolicies (PolicyCreate body)
@@ -3944,73 +3750,6 @@ namespace Example
 ### Return type
 
 [**RecordingEncryptionConfiguration**](RecordingEncryptionConfiguration.html)
-
-<a name="putrecordinglocalkeyssetting"></a>
-
-## [**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html) PutRecordingLocalkeysSetting (string settingsId, LocalEncryptionConfiguration body)
-
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
-
-Update the local encryption settings. Replaced by API recording/keyconfigurations/{keyConfigurationId}
-
-
-
-Requires ANY permissions: 
-
-* recording:encryptionKey:edit
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PutRecordingLocalkeysSettingExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new RecordingApi();
-            var settingsId = settingsId_example;  // string | Settings Id
-            var body = new LocalEncryptionConfiguration(); // LocalEncryptionConfiguration | Local Encryption metadata
-
-            try
-            { 
-                // Update the local encryption settings. Replaced by API recording/keyconfigurations/{keyConfigurationId}
-                LocalEncryptionConfiguration result = apiInstance.PutRecordingLocalkeysSetting(settingsId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling RecordingApi.PutRecordingLocalkeysSetting: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **settingsId** | **string**| Settings Id |  |
-| **body** | [**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html)| Local Encryption metadata |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html)
 
 <a name="putrecordingmediaretentionpolicy"></a>
 

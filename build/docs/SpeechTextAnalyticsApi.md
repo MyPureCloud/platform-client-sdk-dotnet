@@ -15,10 +15,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetSpeechandtextanalyticsConversationCommunicationTranscripturl**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticsconversationcommunicationtranscripturl) | **GET** /api/v2/speechandtextanalytics/conversations/{conversationId}/communications/{communicationId}/transcripturl | Get the pre-signed S3 URL for the transcript of a specific communication of a conversation |
 | [**GetSpeechandtextanalyticsProgram**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticsprogram) | **GET** /api/v2/speechandtextanalytics/programs/{programId} | Get a Speech &amp; Text Analytics program by id |
 | [**GetSpeechandtextanalyticsProgramMappings**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticsprogrammappings) | **GET** /api/v2/speechandtextanalytics/programs/{programId}/mappings | Get Speech &amp; Text Analytics program mappings to queues and flows by id |
+| [**GetSpeechandtextanalyticsProgramTranscriptionengines**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticsprogramtranscriptionengines) | **GET** /api/v2/speechandtextanalytics/programs/{programId}/transcriptionengines | Get transcription engine settings of a program |
 | [**GetSpeechandtextanalyticsPrograms**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticsprograms) | **GET** /api/v2/speechandtextanalytics/programs | Get the list of Speech &amp; Text Analytics programs |
 | [**GetSpeechandtextanalyticsProgramsGeneralJob**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticsprogramsgeneraljob) | **GET** /api/v2/speechandtextanalytics/programs/general/jobs/{jobId} | Get a Speech &amp; Text Analytics general program job by id |
 | [**GetSpeechandtextanalyticsProgramsMappings**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticsprogramsmappings) | **GET** /api/v2/speechandtextanalytics/programs/mappings | Get the list of Speech &amp; Text Analytics programs mappings to queues and flows |
 | [**GetSpeechandtextanalyticsProgramsPublishjob**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticsprogramspublishjob) | **GET** /api/v2/speechandtextanalytics/programs/publishjobs/{jobId} | Get a Speech &amp; Text Analytics publish programs job by id |
+| [**GetSpeechandtextanalyticsProgramsTranscriptionenginesDialects**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticsprogramstranscriptionenginesdialects) | **GET** /api/v2/speechandtextanalytics/programs/transcriptionengines/dialects | Get supported dialects for each transcription engine |
 | [**GetSpeechandtextanalyticsProgramsUnpublished**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticsprogramsunpublished) | **GET** /api/v2/speechandtextanalytics/programs/unpublished | Get the list of Speech &amp; Text Analytics unpublished programs |
 | [**GetSpeechandtextanalyticsSentimentDialects**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticssentimentdialects) | **GET** /api/v2/speechandtextanalytics/sentiment/dialects | Get the list of Speech &amp; Text Analytics sentiment supported dialects |
 | [**GetSpeechandtextanalyticsSentimentfeedback**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticssentimentfeedback) | **GET** /api/v2/speechandtextanalytics/sentimentfeedback | Get the list of Speech &amp; Text Analytics SentimentFeedback |
@@ -38,6 +40,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostSpeechandtextanalyticsTranscriptsSearch**](SpeechTextAnalyticsApi.html#postspeechandtextanalyticstranscriptssearch) | **POST** /api/v2/speechandtextanalytics/transcripts/search | Search resources. |
 | [**PutSpeechandtextanalyticsProgram**](SpeechTextAnalyticsApi.html#putspeechandtextanalyticsprogram) | **PUT** /api/v2/speechandtextanalytics/programs/{programId} | Update existing Speech &amp; Text Analytics program |
 | [**PutSpeechandtextanalyticsProgramMappings**](SpeechTextAnalyticsApi.html#putspeechandtextanalyticsprogrammappings) | **PUT** /api/v2/speechandtextanalytics/programs/{programId}/mappings | Set Speech &amp; Text Analytics program mappings to queues and flows |
+| [**PutSpeechandtextanalyticsProgramTranscriptionengines**](SpeechTextAnalyticsApi.html#putspeechandtextanalyticsprogramtranscriptionengines) | **PUT** /api/v2/speechandtextanalytics/programs/{programId}/transcriptionengines | Update transcription engine settings of a program |
 | [**PutSpeechandtextanalyticsSettings**](SpeechTextAnalyticsApi.html#putspeechandtextanalyticssettings) | **PUT** /api/v2/speechandtextanalytics/settings | Update Speech And Text Analytics Settings |
 | [**PutSpeechandtextanalyticsTopic**](SpeechTextAnalyticsApi.html#putspeechandtextanalyticstopic) | **PUT** /api/v2/speechandtextanalytics/topics/{topicId} | Update existing Speech &amp; Text Analytics topic |
 {: class="table table-striped"}
@@ -557,6 +560,71 @@ namespace Example
 
 [**ProgramMappings**](ProgramMappings.html)
 
+<a name="getspeechandtextanalyticsprogramtranscriptionengines"></a>
+
+## [**ProgramTranscriptionEngines**](ProgramTranscriptionEngines.html) GetSpeechandtextanalyticsProgramTranscriptionengines (string programId)
+
+
+
+Get transcription engine settings of a program
+
+
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:program:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetSpeechandtextanalyticsProgramTranscriptionenginesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+            var programId = programId_example;  // string | The id of the program
+
+            try
+            { 
+                // Get transcription engine settings of a program
+                ProgramTranscriptionEngines result = apiInstance.GetSpeechandtextanalyticsProgramTranscriptionengines(programId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalyticsApi.GetSpeechandtextanalyticsProgramTranscriptionengines: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **programId** | **string**| The id of the program |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ProgramTranscriptionEngines**](ProgramTranscriptionEngines.html)
+
 <a name="getspeechandtextanalyticsprograms"></a>
 
 ## [**ProgramsEntityListing**](ProgramsEntityListing.html) GetSpeechandtextanalyticsPrograms (string nextPage = null, int? pageSize = null, string state = null)
@@ -825,6 +893,65 @@ namespace Example
 ### Return type
 
 [**ProgramJob**](ProgramJob.html)
+
+<a name="getspeechandtextanalyticsprogramstranscriptionenginesdialects"></a>
+
+## [**SupportedDialectsEntityListing**](SupportedDialectsEntityListing.html) GetSpeechandtextanalyticsProgramsTranscriptionenginesDialects ()
+
+
+
+Get supported dialects for each transcription engine
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetSpeechandtextanalyticsProgramsTranscriptionenginesDialectsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+
+            try
+            { 
+                // Get supported dialects for each transcription engine
+                SupportedDialectsEntityListing result = apiInstance.GetSpeechandtextanalyticsProgramsTranscriptionenginesDialects();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalyticsApi.GetSpeechandtextanalyticsProgramsTranscriptionenginesDialects: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+
+### Return type
+
+[**SupportedDialectsEntityListing**](SupportedDialectsEntityListing.html)
 
 <a name="getspeechandtextanalyticsprogramsunpublished"></a>
 
@@ -2065,6 +2192,73 @@ namespace Example
 ### Return type
 
 [**ProgramMappings**](ProgramMappings.html)
+
+<a name="putspeechandtextanalyticsprogramtranscriptionengines"></a>
+
+## [**ProgramTranscriptionEngines**](ProgramTranscriptionEngines.html) PutSpeechandtextanalyticsProgramTranscriptionengines (string programId, TranscriptionEnginesRequest body)
+
+
+
+Update transcription engine settings of a program
+
+
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:program:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutSpeechandtextanalyticsProgramTranscriptionenginesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+            var programId = programId_example;  // string | The id of the program
+            var body = new TranscriptionEnginesRequest(); // TranscriptionEnginesRequest | Program transcription engine setting
+
+            try
+            { 
+                // Update transcription engine settings of a program
+                ProgramTranscriptionEngines result = apiInstance.PutSpeechandtextanalyticsProgramTranscriptionengines(programId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalyticsApi.PutSpeechandtextanalyticsProgramTranscriptionengines: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **programId** | **string**| The id of the program |  |
+| **body** | [**TranscriptionEnginesRequest**](TranscriptionEnginesRequest.html)| Program transcription engine setting |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ProgramTranscriptionEngines**](ProgramTranscriptionEngines.html)
 
 <a name="putspeechandtextanalyticssettings"></a>
 

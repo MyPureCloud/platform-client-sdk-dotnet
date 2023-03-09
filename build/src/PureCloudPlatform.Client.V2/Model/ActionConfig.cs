@@ -21,15 +21,26 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ActionConfig" /> class.
         /// </summary>
+        /// <param name="TimeoutSeconds">Optional 1-60 second timeout enforced on the execution or test of this action. This setting is invalid for Custom Authentication Actions..</param>
         /// <param name="Request">Configuration of outbound request..</param>
         /// <param name="Response">Configuration of response processing..</param>
-        public ActionConfig(RequestConfig Request = null, ResponseConfig Response = null)
+        public ActionConfig(int? TimeoutSeconds = null, RequestConfig Request = null, ResponseConfig Response = null)
         {
+            this.TimeoutSeconds = TimeoutSeconds;
             this.Request = Request;
             this.Response = Response;
             
         }
         
+
+
+        /// <summary>
+        /// Optional 1-60 second timeout enforced on the execution or test of this action. This setting is invalid for Custom Authentication Actions.
+        /// </summary>
+        /// <value>Optional 1-60 second timeout enforced on the execution or test of this action. This setting is invalid for Custom Authentication Actions.</value>
+        [DataMember(Name="timeoutSeconds", EmitDefaultValue=false)]
+        public int? TimeoutSeconds { get; set; }
+
 
 
         /// <summary>
@@ -58,6 +69,7 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class ActionConfig {\n");
 
+            sb.Append("  TimeoutSeconds: ").Append(TimeoutSeconds).Append("\n");
             sb.Append("  Request: ").Append(Request).Append("\n");
             sb.Append("  Response: ").Append(Response).Append("\n");
             sb.Append("}\n");
@@ -101,6 +113,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.TimeoutSeconds == other.TimeoutSeconds ||
+                    this.TimeoutSeconds != null &&
+                    this.TimeoutSeconds.Equals(other.TimeoutSeconds)
+                ) &&
+                (
                     this.Request == other.Request ||
                     this.Request != null &&
                     this.Request.Equals(other.Request)
@@ -123,6 +140,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.TimeoutSeconds != null)
+                    hash = hash * 59 + this.TimeoutSeconds.GetHashCode();
+
                 if (this.Request != null)
                     hash = hash * 59 + this.Request.GetHashCode();
 

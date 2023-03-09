@@ -280,7 +280,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Terminated for "Terminated"
             /// </summary>
             [EnumMember(Value = "Terminated")]
-            Terminated
+            Terminated,
+            
+            /// <summary>
+            /// Enum Acdexpired for "AcdExpired"
+            /// </summary>
+            [EnumMember(Value = "AcdExpired")]
+            Acdexpired
         }
         /// <summary>
         /// Gets or Sets StatusCategory

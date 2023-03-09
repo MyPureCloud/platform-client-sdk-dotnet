@@ -233,6 +233,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<AnalyticsConversationWithoutAttributesMultiGetResponse> PostAnalyticsConversationsTranscriptsQueryWithHttpInfo (TranscriptConversationDetailSearchRequest body);
 
         /// <summary>
+        /// Search conversations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>JsonCursorSearchResponse</returns>
+        JsonCursorSearchResponse PostConversationsParticipantsAttributesSearch (ConversationParticipantSearchRequest body);
+
+        /// <summary>
+        /// Search conversations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>ApiResponse of JsonCursorSearchResponse</returns>
+        ApiResponse<JsonCursorSearchResponse> PostConversationsParticipantsAttributesSearchWithHttpInfo (ConversationParticipantSearchRequest body);
+
+        /// <summary>
         /// Search gkn documentation
         /// </summary>
         /// <remarks>
@@ -721,6 +743,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (AnalyticsConversationWithoutAttributesMultiGetResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AnalyticsConversationWithoutAttributesMultiGetResponse>> PostAnalyticsConversationsTranscriptsQueryAsyncWithHttpInfo (TranscriptConversationDetailSearchRequest body);
+
+        /// <summary>
+        /// Search conversations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>Task of JsonCursorSearchResponse</returns>
+        System.Threading.Tasks.Task<JsonCursorSearchResponse> PostConversationsParticipantsAttributesSearchAsync (ConversationParticipantSearchRequest body);
+
+        /// <summary>
+        /// Search conversations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>Task of ApiResponse (JsonCursorSearchResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<JsonCursorSearchResponse>> PostConversationsParticipantsAttributesSearchAsyncWithHttpInfo (ConversationParticipantSearchRequest body);
 
         /// <summary>
         /// Search gkn documentation
@@ -2833,6 +2877,207 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<AnalyticsConversationWithoutAttributesMultiGetResponse>(localVarStatusCode,
                 localVarHeaders,
                 (AnalyticsConversationWithoutAttributesMultiGetResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AnalyticsConversationWithoutAttributesMultiGetResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Search conversations 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>JsonCursorSearchResponse</returns>
+        public JsonCursorSearchResponse PostConversationsParticipantsAttributesSearch (ConversationParticipantSearchRequest body)
+        {
+             ApiResponse<JsonCursorSearchResponse> localVarResponse = PostConversationsParticipantsAttributesSearchWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Search conversations 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>ApiResponse of JsonCursorSearchResponse</returns>
+        public ApiResponse< JsonCursorSearchResponse > PostConversationsParticipantsAttributesSearchWithHttpInfo (ConversationParticipantSearchRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling SearchApi->PostConversationsParticipantsAttributesSearch");
+
+            var localVarPath = "/api/v2/conversations/participants/attributes/search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsParticipantsAttributesSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsParticipantsAttributesSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<JsonCursorSearchResponse>(localVarStatusCode,
+                localVarHeaders,
+                (JsonCursorSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JsonCursorSearchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Search conversations 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>Task of JsonCursorSearchResponse</returns>
+        public async System.Threading.Tasks.Task<JsonCursorSearchResponse> PostConversationsParticipantsAttributesSearchAsync (ConversationParticipantSearchRequest body)
+        {
+             ApiResponse<JsonCursorSearchResponse> localVarResponse = await PostConversationsParticipantsAttributesSearchAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Search conversations 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Search request options</param>
+        /// <returns>Task of ApiResponse (JsonCursorSearchResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<JsonCursorSearchResponse>> PostConversationsParticipantsAttributesSearchAsyncWithHttpInfo (ConversationParticipantSearchRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling SearchApi->PostConversationsParticipantsAttributesSearch");
+            
+
+            var localVarPath = "/api/v2/conversations/participants/attributes/search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsParticipantsAttributesSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsParticipantsAttributesSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<JsonCursorSearchResponse>(localVarStatusCode,
+                localVarHeaders,
+                (JsonCursorSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JsonCursorSearchResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

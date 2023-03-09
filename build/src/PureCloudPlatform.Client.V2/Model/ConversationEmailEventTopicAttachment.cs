@@ -26,15 +26,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ContentUri">The content uri of the attachment. If set, this is commonly a public api download location..</param>
         /// <param name="ContentType">The type of file the attachment is..</param>
         /// <param name="ContentLength">The length of the attachment file..</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationEmailEventTopicAttachment(string AttachmentId = null, string Name = null, string ContentUri = null, string ContentType = null, int? ContentLength = null, Dictionary<string, Object> AdditionalProperties = null)
+        public ConversationEmailEventTopicAttachment(string AttachmentId = null, string Name = null, string ContentUri = null, string ContentType = null, int? ContentLength = null)
         {
             this.AttachmentId = AttachmentId;
             this.Name = Name;
             this.ContentUri = ContentUri;
             this.ContentType = ContentType;
             this.ContentLength = ContentLength;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -84,14 +82,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? ContentLength { get; set; }
 
 
-
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Dictionary<string, Object> AdditionalProperties { get; set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -106,7 +96,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ContentUri: ").Append(ContentUri).Append("\n");
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
             sb.Append("  ContentLength: ").Append(ContentLength).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -171,11 +160,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ContentLength == other.ContentLength ||
                     this.ContentLength != null &&
                     this.ContentLength.Equals(other.ContentLength)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
                 );
         }
 
@@ -204,9 +188,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ContentLength != null)
                     hash = hash * 59 + this.ContentLength.GetHashCode();
-
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
 
                 return hash;
             }

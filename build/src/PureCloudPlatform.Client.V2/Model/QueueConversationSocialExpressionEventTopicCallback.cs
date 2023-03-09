@@ -355,8 +355,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AfterCallWorkRequired">Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
         /// <param name="CallerId">The phone number displayed to recipients of the phone call. The value should conform to the E164 format..</param>
         /// <param name="CallerIdName">The name displayed to recipients of the phone call..</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public QueueConversationSocialExpressionEventTopicCallback(StateEnum? State = null, InitialStateEnum? InitialState = null, string Id = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, QueueConversationSocialExpressionEventTopicDialerPreview DialerPreview = null, QueueConversationSocialExpressionEventTopicVoicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, string PeerId = null, bool? ExternalCampaign = null, bool? SkipEnabled = null, string Provider = null, int? TimeoutSeconds = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null, QueueConversationSocialExpressionEventTopicWrapup Wrapup = null, QueueConversationSocialExpressionEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string CallerId = null, string CallerIdName = null, Dictionary<string, Object> AdditionalProperties = null)
+        public QueueConversationSocialExpressionEventTopicCallback(StateEnum? State = null, InitialStateEnum? InitialState = null, string Id = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, QueueConversationSocialExpressionEventTopicDialerPreview DialerPreview = null, QueueConversationSocialExpressionEventTopicVoicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, string PeerId = null, bool? ExternalCampaign = null, bool? SkipEnabled = null, string Provider = null, int? TimeoutSeconds = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null, QueueConversationSocialExpressionEventTopicWrapup Wrapup = null, QueueConversationSocialExpressionEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string CallerId = null, string CallerIdName = null)
         {
             this.State = State;
             this.InitialState = InitialState;
@@ -384,7 +383,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AfterCallWorkRequired = AfterCallWorkRequired;
             this.CallerId = CallerId;
             this.CallerIdName = CallerIdName;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -593,14 +591,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public string CallerIdName { get; set; }
 
 
-
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Dictionary<string, Object> AdditionalProperties { get; set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -636,7 +626,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AfterCallWorkRequired: ").Append(AfterCallWorkRequired).Append("\n");
             sb.Append("  CallerId: ").Append(CallerId).Append("\n");
             sb.Append("  CallerIdName: ").Append(CallerIdName).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -806,11 +795,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CallerIdName == other.CallerIdName ||
                     this.CallerIdName != null &&
                     this.CallerIdName.Equals(other.CallerIdName)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
                 );
         }
 
@@ -902,9 +886,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.CallerIdName != null)
                     hash = hash * 59 + this.CallerIdName.GetHashCode();
-
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
 
                 return hash;
             }

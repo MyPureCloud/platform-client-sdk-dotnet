@@ -26,15 +26,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ContactListId">The contactList associated with this preview data pop..</param>
         /// <param name="CampaignId">The campaignId associated with this preview data pop..</param>
         /// <param name="PhoneNumberColumns">The phone number columns associated with this campaign.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationCallbackEventTopicDialerPreview(string Id = null, string ContactId = null, string ContactListId = null, string CampaignId = null, List<ConversationCallbackEventTopicPhoneNumberColumn> PhoneNumberColumns = null, Dictionary<string, Object> AdditionalProperties = null)
+        public ConversationCallbackEventTopicDialerPreview(string Id = null, string ContactId = null, string ContactListId = null, string CampaignId = null, List<ConversationCallbackEventTopicPhoneNumberColumn> PhoneNumberColumns = null)
         {
             this.Id = Id;
             this.ContactId = ContactId;
             this.ContactListId = ContactListId;
             this.CampaignId = CampaignId;
             this.PhoneNumberColumns = PhoneNumberColumns;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -83,14 +81,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<ConversationCallbackEventTopicPhoneNumberColumn> PhoneNumberColumns { get; set; }
 
 
-
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Dictionary<string, Object> AdditionalProperties { get; set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -105,7 +95,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ContactListId: ").Append(ContactListId).Append("\n");
             sb.Append("  CampaignId: ").Append(CampaignId).Append("\n");
             sb.Append("  PhoneNumberColumns: ").Append(PhoneNumberColumns).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -170,11 +159,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PhoneNumberColumns == other.PhoneNumberColumns ||
                     this.PhoneNumberColumns != null &&
                     this.PhoneNumberColumns.SequenceEqual(other.PhoneNumberColumns)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
                 );
         }
 
@@ -203,9 +187,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.PhoneNumberColumns != null)
                     hash = hash * 59 + this.PhoneNumberColumns.GetHashCode();
-
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
 
                 return hash;
             }

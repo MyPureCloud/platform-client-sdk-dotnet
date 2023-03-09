@@ -12,7 +12,6 @@ title: QueueConversationSocialExpressionEventTopicDialerPreview
 | **ContactListId** | **string** | The contactList associated with this preview data pop. | [optional] |
 | **CampaignId** | **string** | The campaignId associated with this preview data pop. | [optional] |
 | **PhoneNumberColumns** | [**List&lt;QueueConversationSocialExpressionEventTopicPhoneNumberColumn&gt;**](QueueConversationSocialExpressionEventTopicPhoneNumberColumn.html) | The phone number columns associated with this campaign | [optional] |
-| **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 {: class="table table-striped"}
 
 

@@ -168,6 +168,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsMessagingIntegrationsTwitter**](ConversationsApi.html#postconversationsmessagingintegrationstwitter) | **POST** /api/v2/conversations/messaging/integrations/twitter | Create a Twitter Integration |
 | [**PostConversationsMessagingIntegrationsWhatsapp**](ConversationsApi.html#postconversationsmessagingintegrationswhatsapp) | **POST** /api/v2/conversations/messaging/integrations/whatsapp | Create a WhatsApp Integration |
 | [**PostConversationsMessagingSupportedcontent**](ConversationsApi.html#postconversationsmessagingsupportedcontent) | **POST** /api/v2/conversations/messaging/supportedcontent | Create a Supported Content profile |
+| [**PostConversationsParticipantsAttributesSearch**](ConversationsApi.html#postconversationsparticipantsattributessearch) | **POST** /api/v2/conversations/participants/attributes/search | Search conversations |
 | [**PutConversationParticipantFlaggedreason**](ConversationsApi.html#putconversationparticipantflaggedreason) | **PUT** /api/v2/conversations/{conversationId}/participants/{participantId}/flaggedreason | Set flagged reason on conversation participant to indicate bad conversation quality. |
 | [**PutConversationSecureattributes**](ConversationsApi.html#putconversationsecureattributes) | **PUT** /api/v2/conversations/{conversationId}/secureattributes | Set the secure attributes on a conversation. |
 | [**PutConversationTags**](ConversationsApi.html#putconversationtags) | **PUT** /api/v2/conversations/{conversationId}/tags | Update the tags on a conversation. |
@@ -10907,6 +10908,71 @@ namespace Example
 ### Return type
 
 [**SupportedContent**](SupportedContent.html)
+
+<a name="postconversationsparticipantsattributessearch"></a>
+
+## [**JsonCursorSearchResponse**](JsonCursorSearchResponse.html) PostConversationsParticipantsAttributesSearch (ConversationParticipantSearchRequest body)
+
+
+
+Search conversations
+
+
+
+Requires ANY permissions: 
+
+* conversation:participant:attributesview
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsParticipantsAttributesSearchExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var body = new ConversationParticipantSearchRequest(); // ConversationParticipantSearchRequest | Search request options
+
+            try
+            { 
+                // Search conversations
+                JsonCursorSearchResponse result = apiInstance.PostConversationsParticipantsAttributesSearch(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsParticipantsAttributesSearch: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ConversationParticipantSearchRequest**](ConversationParticipantSearchRequest.html)| Search request options |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**JsonCursorSearchResponse**](JsonCursorSearchResponse.html)
 
 <a name="putconversationparticipantflaggedreason"></a>
 

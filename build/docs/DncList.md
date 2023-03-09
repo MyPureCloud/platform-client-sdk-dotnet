@@ -21,6 +21,7 @@ title: DncList
 | **DncCodes** | **List&lt;string&gt;** | The list of dnc.com codes to be treated as DNC. Required if the dncSourceType is dnc.com. | [optional] |
 | **LicenseId** | **string** | A gryphon license number. Required if the dncSourceType is gryphon. | [optional] |
 | **Division** | [**DomainEntityRef**](DomainEntityRef.html) | The division this DncList belongs to. | [optional] |
+| **CustomExclusionColumn** | **string** | The column to evaluate exclusion against. Required if the dncSourceType is rds_custom. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

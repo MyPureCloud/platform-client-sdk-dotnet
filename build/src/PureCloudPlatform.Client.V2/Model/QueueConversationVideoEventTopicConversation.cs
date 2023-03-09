@@ -24,14 +24,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">Id.</param>
         /// <param name="MaxParticipants">MaxParticipants.</param>
         /// <param name="Participants">Participants.</param>
+        /// <param name="RecentTransfers">RecentTransfers.</param>
         /// <param name="RecordingState">RecordingState.</param>
         /// <param name="Address">Address.</param>
         /// <param name="ExternalTag">ExternalTag.</param>
-        public QueueConversationVideoEventTopicConversation(string Id = null, int? MaxParticipants = null, List<QueueConversationVideoEventTopicParticipant> Participants = null, string RecordingState = null, string Address = null, string ExternalTag = null)
+        public QueueConversationVideoEventTopicConversation(string Id = null, int? MaxParticipants = null, List<QueueConversationVideoEventTopicParticipant> Participants = null, List<QueueConversationVideoEventTopicRecentTransfer> RecentTransfers = null, string RecordingState = null, string Address = null, string ExternalTag = null)
         {
             this.Id = Id;
             this.MaxParticipants = MaxParticipants;
             this.Participants = Participants;
+            this.RecentTransfers = RecentTransfers;
             this.RecordingState = RecordingState;
             this.Address = Address;
             this.ExternalTag = ExternalTag;
@@ -61,6 +63,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="participants", EmitDefaultValue=false)]
         public List<QueueConversationVideoEventTopicParticipant> Participants { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets RecentTransfers
+        /// </summary>
+        [DataMember(Name="recentTransfers", EmitDefaultValue=false)]
+        public List<QueueConversationVideoEventTopicRecentTransfer> RecentTransfers { get; set; }
 
 
 
@@ -99,6 +109,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  MaxParticipants: ").Append(MaxParticipants).Append("\n");
             sb.Append("  Participants: ").Append(Participants).Append("\n");
+            sb.Append("  RecentTransfers: ").Append(RecentTransfers).Append("\n");
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  ExternalTag: ").Append(ExternalTag).Append("\n");
@@ -158,6 +169,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Participants.SequenceEqual(other.Participants)
                 ) &&
                 (
+                    this.RecentTransfers == other.RecentTransfers ||
+                    this.RecentTransfers != null &&
+                    this.RecentTransfers.SequenceEqual(other.RecentTransfers)
+                ) &&
+                (
                     this.RecordingState == other.RecordingState ||
                     this.RecordingState != null &&
                     this.RecordingState.Equals(other.RecordingState)
@@ -193,6 +209,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Participants != null)
                     hash = hash * 59 + this.Participants.GetHashCode();
+
+                if (this.RecentTransfers != null)
+                    hash = hash * 59 + this.RecentTransfers.GetHashCode();
 
                 if (this.RecordingState != null)
                     hash = hash * 59 + this.RecordingState.GetHashCode();

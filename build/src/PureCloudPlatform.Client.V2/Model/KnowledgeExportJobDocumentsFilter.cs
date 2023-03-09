@@ -21,21 +21,32 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="KnowledgeExportJobDocumentsFilter" /> class.
         /// </summary>
-        /// <param name="Interval">Retrieves the documents modified in specified date and time range. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.</param>
-        public KnowledgeExportJobDocumentsFilter(string Interval = null)
+        /// <param name="Interval">Retrieves the documents modified in specified date and time range. Cannot be used together with entities filter. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.</param>
+        /// <param name="Entities">Retrieves the documents with the given ids. Cannot be used together with internal filter..</param>
+        public KnowledgeExportJobDocumentsFilter(string Interval = null, List<Entity> Entities = null)
         {
             this.Interval = Interval;
+            this.Entities = Entities;
             
         }
         
 
 
         /// <summary>
-        /// Retrieves the documents modified in specified date and time range. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
+        /// Retrieves the documents modified in specified date and time range. Cannot be used together with entities filter. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
         /// </summary>
-        /// <value>Retrieves the documents modified in specified date and time range. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss</value>
+        /// <value>Retrieves the documents modified in specified date and time range. Cannot be used together with entities filter. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss</value>
         [DataMember(Name="interval", EmitDefaultValue=false)]
         public string Interval { get; set; }
+
+
+
+        /// <summary>
+        /// Retrieves the documents with the given ids. Cannot be used together with internal filter.
+        /// </summary>
+        /// <value>Retrieves the documents with the given ids. Cannot be used together with internal filter.</value>
+        [DataMember(Name="entities", EmitDefaultValue=false)]
+        public List<Entity> Entities { get; set; }
 
 
         /// <summary>
@@ -48,6 +59,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class KnowledgeExportJobDocumentsFilter {\n");
 
             sb.Append("  Interval: ").Append(Interval).Append("\n");
+            sb.Append("  Entities: ").Append(Entities).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -92,6 +104,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Interval == other.Interval ||
                     this.Interval != null &&
                     this.Interval.Equals(other.Interval)
+                ) &&
+                (
+                    this.Entities == other.Entities ||
+                    this.Entities != null &&
+                    this.Entities.SequenceEqual(other.Entities)
                 );
         }
 
@@ -108,6 +125,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Interval != null)
                     hash = hash * 59 + this.Interval.GetHashCode();
+
+                if (this.Entities != null)
+                    hash = hash * 59 + this.Entities.GetHashCode();
 
                 return hash;
             }

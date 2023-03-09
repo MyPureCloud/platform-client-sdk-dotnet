@@ -10,6 +10,7 @@ title: ConversationEventTopicConversation
 | **Id** | **string** |  | [optional] |
 | **MaxParticipants** | **int?** |  | [optional] |
 | **Participants** | [**List&lt;ConversationEventTopicParticipant&gt;**](ConversationEventTopicParticipant.html) |  | [optional] |
+| **RecentTransfers** | [**List&lt;ConversationEventTopicRecentTransfer&gt;**](ConversationEventTopicRecentTransfer.html) |  | [optional] |
 | **RecordingState** | **string** |  | [optional] |
 | **Address** | **string** |  | [optional] |
 | **ExternalTag** | **string** |  | [optional] |

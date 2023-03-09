@@ -1922,6 +1922,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ClientId">ClientId.</param>
         /// <param name="RemoteIp">RemoteIp.</param>
         /// <param name="ServiceName">ServiceName.</param>
+        /// <param name="Level">Level.</param>
         /// <param name="EventTime">EventTime.</param>
         /// <param name="Message">Message.</param>
         /// <param name="Action">Action.</param>
@@ -1929,7 +1930,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Entity">Entity.</param>
         /// <param name="PropertyChanges">PropertyChanges.</param>
         /// <param name="Context">Context.</param>
-        public AuditTopicAuditLogMessage(string Id = null, string UserId = null, string UserHomeOrgId = null, AuditTopicDomainEntityRef Username = null, string UserDisplay = null, AuditTopicAddressableEntityRef ClientId = null, List<string> RemoteIp = null, ServiceNameEnum? ServiceName = null, DateTime? EventTime = null, AuditTopicMessageInfo Message = null, ActionEnum? Action = null, EntityTypeEnum? EntityType = null, AuditTopicDomainEntityRef Entity = null, List<AuditTopicPropertyChange> PropertyChanges = null, Dictionary<string, string> Context = null)
+        public AuditTopicAuditLogMessage(string Id = null, string UserId = null, string UserHomeOrgId = null, AuditTopicDomainEntityRef Username = null, string UserDisplay = null, AuditTopicAddressableEntityRef ClientId = null, List<string> RemoteIp = null, ServiceNameEnum? ServiceName = null, string Level = null, DateTime? EventTime = null, AuditTopicMessageInfo Message = null, ActionEnum? Action = null, EntityTypeEnum? EntityType = null, AuditTopicDomainEntityRef Entity = null, List<AuditTopicPropertyChange> PropertyChanges = null, Dictionary<string, string> Context = null)
         {
             this.Id = Id;
             this.UserId = UserId;
@@ -1939,6 +1940,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ClientId = ClientId;
             this.RemoteIp = RemoteIp;
             this.ServiceName = ServiceName;
+            this.Level = Level;
             this.EventTime = EventTime;
             this.Message = Message;
             this.Action = Action;
@@ -2010,6 +2012,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets Level
+        /// </summary>
+        [DataMember(Name="level", EmitDefaultValue=false)]
+        public string Level { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets EventTime
         /// </summary>
         [DataMember(Name="eventTime", EmitDefaultValue=false)]
@@ -2069,6 +2079,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ClientId: ").Append(ClientId).Append("\n");
             sb.Append("  RemoteIp: ").Append(RemoteIp).Append("\n");
             sb.Append("  ServiceName: ").Append(ServiceName).Append("\n");
+            sb.Append("  Level: ").Append(Level).Append("\n");
             sb.Append("  EventTime: ").Append(EventTime).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("  Action: ").Append(Action).Append("\n");
@@ -2157,6 +2168,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ServiceName.Equals(other.ServiceName)
                 ) &&
                 (
+                    this.Level == other.Level ||
+                    this.Level != null &&
+                    this.Level.Equals(other.Level)
+                ) &&
+                (
                     this.EventTime == other.EventTime ||
                     this.EventTime != null &&
                     this.EventTime.Equals(other.EventTime)
@@ -2227,6 +2243,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ServiceName != null)
                     hash = hash * 59 + this.ServiceName.GetHashCode();
+
+                if (this.Level != null)
+                    hash = hash * 59 + this.Level.GetHashCode();
 
                 if (this.EventTime != null)
                     hash = hash * 59 + this.EventTime.GetHashCode();

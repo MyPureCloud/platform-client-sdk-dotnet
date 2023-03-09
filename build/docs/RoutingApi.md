@@ -83,6 +83,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetUserQueues**](RoutingApi.html#getuserqueues) | **GET** /api/v2/users/{userId}/queues | Get queues for user |
 | [**GetUserRoutinglanguages**](RoutingApi.html#getuserroutinglanguages) | **GET** /api/v2/users/{userId}/routinglanguages | List routing language for user |
 | [**GetUserRoutingskills**](RoutingApi.html#getuserroutingskills) | **GET** /api/v2/users/{userId}/routingskills | List routing skills for user |
+| [**GetUserSkillgroups**](RoutingApi.html#getuserskillgroups) | **GET** /api/v2/users/{userId}/skillgroups | Get skill groups for a user |
 | [**PatchRoutingConversation**](RoutingApi.html#patchroutingconversation) | **PATCH** /api/v2/routing/conversations/{conversationId} | Update attributes of an in-queue conversation |
 | [**PatchRoutingEmailDomain**](RoutingApi.html#patchroutingemaildomain) | **PATCH** /api/v2/routing/email/domains/{domainId} | Update domain settings |
 | [**PatchRoutingEmailDomainValidate**](RoutingApi.html#patchroutingemaildomainvalidate) | **PATCH** /api/v2/routing/email/domains/{domainId}/validate | Validate domain settings |
@@ -4621,7 +4622,7 @@ namespace Example
 
 <a name="getroutingsmsphonenumber"></a>
 
-## [**SmsPhoneNumber**](SmsPhoneNumber.html) GetRoutingSmsPhonenumber (string addressId)
+## [**SmsPhoneNumber**](SmsPhoneNumber.html) GetRoutingSmsPhonenumber (string addressId, string expand = null)
 
 
 
@@ -4656,11 +4657,12 @@ namespace Example
 
             var apiInstance = new RoutingApi();
             var addressId = addressId_example;  // string | Address ID
+            var expand = expand_example;  // string | Expand response with additional information (optional) 
 
             try
             { 
                 // Get a phone number provisioned for SMS.
-                SmsPhoneNumber result = apiInstance.GetRoutingSmsPhonenumber(addressId);
+                SmsPhoneNumber result = apiInstance.GetRoutingSmsPhonenumber(addressId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4678,6 +4680,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **addressId** | **string**| Address ID |  |
+| **expand** | **string**| Expand response with additional information | [optional] <br />**Values**: compliance |
 {: class="table table-striped"}
 
 ### Return type
@@ -5244,6 +5247,77 @@ namespace Example
 ### Return type
 
 [**UserSkillEntityListing**](UserSkillEntityListing.html)
+
+<a name="getuserskillgroups"></a>
+
+## [**UserSkillGroupEntityListing**](UserSkillGroupEntityListing.html) GetUserSkillgroups (string userId, int? pageSize = null, string after = null, string before = null)
+
+
+
+Get skill groups for a user
+
+
+
+Requires ANY permissions: 
+
+* routing:skillGroup:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetUserSkillgroupsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var userId = userId_example;  // string | User ID
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var after = after_example;  // string | The cursor that points to the next page (optional) 
+            var before = before_example;  // string | The cursor that points to the previous page (optional) 
+
+            try
+            { 
+                // Get skill groups for a user
+                UserSkillGroupEntityListing result = apiInstance.GetUserSkillgroups(userId, pageSize, after, before);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetUserSkillgroups: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **after** | **string**| The cursor that points to the next page | [optional]  |
+| **before** | **string**| The cursor that points to the previous page | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserSkillGroupEntityListing**](UserSkillGroupEntityListing.html)
 
 <a name="patchroutingconversation"></a>
 

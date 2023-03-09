@@ -35,7 +35,6 @@ title: QueueConversationEventTopicCall
 | **AfterCallWork** | [**QueueConversationEventTopicAfterCallWork**](QueueConversationEventTopicAfterCallWork.html) |  | [optional] |
 | **AfterCallWorkRequired** | **bool?** | Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested. | [optional] |
 | **AgentAssistantId** | **string** | UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation. | [optional] |
-| **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 {: class="table table-striped"}
 
 

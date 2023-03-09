@@ -2487,6 +2487,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<AgentQueryAdherenceExplanationsResponse> PostWorkforcemanagementAgentAdherenceExplanationsQueryWithHttpInfo (string agentId, AgentQueryAdherenceExplanationsRequest body, bool? forceAsync = null, bool? forceDownloadService = null);
 
         /// <summary>
+        /// Get agent possible work shifts for requested time frame
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body</param>
+        /// <returns>AgentPossibleWorkShiftsResponse</returns>
+        AgentPossibleWorkShiftsResponse PostWorkforcemanagementAgentsMePossibleworkshifts (AgentPossibleWorkShiftsRequest body);
+
+        /// <summary>
+        /// Get agent possible work shifts for requested time frame
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of AgentPossibleWorkShiftsResponse</returns>
+        ApiResponse<AgentPossibleWorkShiftsResponse> PostWorkforcemanagementAgentsMePossibleworkshiftsWithHttpInfo (AgentPossibleWorkShiftsRequest body);
+
+        /// <summary>
         /// Get published schedule for the current user
         /// </summary>
         /// <remarks>
@@ -6273,6 +6295,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="forceDownloadService">Force the result of this operation to be sent via download service. For testing/app development purposes (optional)</param>
         /// <returns>Task of ApiResponse (AgentQueryAdherenceExplanationsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AgentQueryAdherenceExplanationsResponse>> PostWorkforcemanagementAgentAdherenceExplanationsQueryAsyncWithHttpInfo (string agentId, AgentQueryAdherenceExplanationsRequest body, bool? forceAsync = null, bool? forceDownloadService = null);
+
+        /// <summary>
+        /// Get agent possible work shifts for requested time frame
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body</param>
+        /// <returns>Task of AgentPossibleWorkShiftsResponse</returns>
+        System.Threading.Tasks.Task<AgentPossibleWorkShiftsResponse> PostWorkforcemanagementAgentsMePossibleworkshiftsAsync (AgentPossibleWorkShiftsRequest body);
+
+        /// <summary>
+        /// Get agent possible work shifts for requested time frame
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (AgentPossibleWorkShiftsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AgentPossibleWorkShiftsResponse>> PostWorkforcemanagementAgentsMePossibleworkshiftsAsyncWithHttpInfo (AgentPossibleWorkShiftsRequest body);
 
         /// <summary>
         /// Get published schedule for the current user
@@ -28414,6 +28458,207 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<AgentQueryAdherenceExplanationsResponse>(localVarStatusCode,
                 localVarHeaders,
                 (AgentQueryAdherenceExplanationsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentQueryAdherenceExplanationsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get agent possible work shifts for requested time frame 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body</param>
+        /// <returns>AgentPossibleWorkShiftsResponse</returns>
+        public AgentPossibleWorkShiftsResponse PostWorkforcemanagementAgentsMePossibleworkshifts (AgentPossibleWorkShiftsRequest body)
+        {
+             ApiResponse<AgentPossibleWorkShiftsResponse> localVarResponse = PostWorkforcemanagementAgentsMePossibleworkshiftsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get agent possible work shifts for requested time frame 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body</param>
+        /// <returns>ApiResponse of AgentPossibleWorkShiftsResponse</returns>
+        public ApiResponse< AgentPossibleWorkShiftsResponse > PostWorkforcemanagementAgentsMePossibleworkshiftsWithHttpInfo (AgentPossibleWorkShiftsRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementAgentsMePossibleworkshifts");
+
+            var localVarPath = "/api/v2/workforcemanagement/agents/me/possibleworkshifts";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementAgentsMePossibleworkshifts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementAgentsMePossibleworkshifts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AgentPossibleWorkShiftsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (AgentPossibleWorkShiftsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentPossibleWorkShiftsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get agent possible work shifts for requested time frame 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body</param>
+        /// <returns>Task of AgentPossibleWorkShiftsResponse</returns>
+        public async System.Threading.Tasks.Task<AgentPossibleWorkShiftsResponse> PostWorkforcemanagementAgentsMePossibleworkshiftsAsync (AgentPossibleWorkShiftsRequest body)
+        {
+             ApiResponse<AgentPossibleWorkShiftsResponse> localVarResponse = await PostWorkforcemanagementAgentsMePossibleworkshiftsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get agent possible work shifts for requested time frame 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">body</param>
+        /// <returns>Task of ApiResponse (AgentPossibleWorkShiftsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AgentPossibleWorkShiftsResponse>> PostWorkforcemanagementAgentsMePossibleworkshiftsAsyncWithHttpInfo (AgentPossibleWorkShiftsRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementAgentsMePossibleworkshifts");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/agents/me/possibleworkshifts";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementAgentsMePossibleworkshifts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementAgentsMePossibleworkshifts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AgentPossibleWorkShiftsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (AgentPossibleWorkShiftsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentPossibleWorkShiftsResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

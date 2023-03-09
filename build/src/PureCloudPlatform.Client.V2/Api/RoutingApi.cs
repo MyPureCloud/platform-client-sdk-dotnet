@@ -1666,8 +1666,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
+        /// <param name="expand">Expand response with additional information (optional)</param>
         /// <returns>SmsPhoneNumber</returns>
-        SmsPhoneNumber GetRoutingSmsPhonenumber (string addressId);
+        SmsPhoneNumber GetRoutingSmsPhonenumber (string addressId, string expand = null);
 
         /// <summary>
         /// Get a phone number provisioned for SMS.
@@ -1677,8 +1678,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
+        /// <param name="expand">Expand response with additional information (optional)</param>
         /// <returns>ApiResponse of SmsPhoneNumber</returns>
-        ApiResponse<SmsPhoneNumber> GetRoutingSmsPhonenumberWithHttpInfo (string addressId);
+        ApiResponse<SmsPhoneNumber> GetRoutingSmsPhonenumberWithHttpInfo (string addressId, string expand = null);
 
         /// <summary>
         /// Get a list of provisioned phone numbers.
@@ -1897,6 +1899,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>ApiResponse of UserSkillEntityListing</returns>
         ApiResponse<UserSkillEntityListing> GetUserRoutingskillsWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+
+        /// <summary>
+        /// Get skill groups for a user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="after">The cursor that points to the next page (optional)</param>
+        /// <param name="before">The cursor that points to the previous page (optional)</param>
+        /// <returns>UserSkillGroupEntityListing</returns>
+        UserSkillGroupEntityListing GetUserSkillgroups (string userId, int? pageSize = null, string after = null, string before = null);
+
+        /// <summary>
+        /// Get skill groups for a user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="after">The cursor that points to the next page (optional)</param>
+        /// <param name="before">The cursor that points to the previous page (optional)</param>
+        /// <returns>ApiResponse of UserSkillGroupEntityListing</returns>
+        ApiResponse<UserSkillGroupEntityListing> GetUserSkillgroupsWithHttpInfo (string userId, int? pageSize = null, string after = null, string before = null);
 
         /// <summary>
         /// Update attributes of an in-queue conversation
@@ -4708,8 +4738,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
+        /// <param name="expand">Expand response with additional information (optional)</param>
         /// <returns>Task of SmsPhoneNumber</returns>
-        System.Threading.Tasks.Task<SmsPhoneNumber> GetRoutingSmsPhonenumberAsync (string addressId);
+        System.Threading.Tasks.Task<SmsPhoneNumber> GetRoutingSmsPhonenumberAsync (string addressId, string expand = null);
 
         /// <summary>
         /// Get a phone number provisioned for SMS.
@@ -4719,8 +4750,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
+        /// <param name="expand">Expand response with additional information (optional)</param>
         /// <returns>Task of ApiResponse (SmsPhoneNumber)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> GetRoutingSmsPhonenumberAsyncWithHttpInfo (string addressId);
+        System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> GetRoutingSmsPhonenumberAsyncWithHttpInfo (string addressId, string expand = null);
 
         /// <summary>
         /// Get a list of provisioned phone numbers.
@@ -4939,6 +4971,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of ApiResponse (UserSkillEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserSkillEntityListing>> GetUserRoutingskillsAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+
+        /// <summary>
+        /// Get skill groups for a user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="after">The cursor that points to the next page (optional)</param>
+        /// <param name="before">The cursor that points to the previous page (optional)</param>
+        /// <returns>Task of UserSkillGroupEntityListing</returns>
+        System.Threading.Tasks.Task<UserSkillGroupEntityListing> GetUserSkillgroupsAsync (string userId, int? pageSize = null, string after = null, string before = null);
+
+        /// <summary>
+        /// Get skill groups for a user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="after">The cursor that points to the next page (optional)</param>
+        /// <param name="before">The cursor that points to the previous page (optional)</param>
+        /// <returns>Task of ApiResponse (UserSkillGroupEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserSkillGroupEntityListing>> GetUserSkillgroupsAsyncWithHttpInfo (string userId, int? pageSize = null, string after = null, string before = null);
 
         /// <summary>
         /// Update attributes of an in-queue conversation
@@ -19377,10 +19437,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
+        /// <param name="expand">Expand response with additional information (optional)</param>
         /// <returns>SmsPhoneNumber</returns>
-        public SmsPhoneNumber GetRoutingSmsPhonenumber (string addressId)
+        public SmsPhoneNumber GetRoutingSmsPhonenumber (string addressId, string expand = null)
         {
-             ApiResponse<SmsPhoneNumber> localVarResponse = GetRoutingSmsPhonenumberWithHttpInfo(addressId);
+             ApiResponse<SmsPhoneNumber> localVarResponse = GetRoutingSmsPhonenumberWithHttpInfo(addressId, expand);
              return localVarResponse.Data;
         }
 
@@ -19389,8 +19450,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
+        /// <param name="expand">Expand response with additional information (optional)</param>
         /// <returns>ApiResponse of SmsPhoneNumber</returns>
-        public ApiResponse< SmsPhoneNumber > GetRoutingSmsPhonenumberWithHttpInfo (string addressId)
+        public ApiResponse< SmsPhoneNumber > GetRoutingSmsPhonenumberWithHttpInfo (string addressId, string expand = null)
         { 
             // verify the required parameter 'addressId' is set
             if (addressId == null)
@@ -19429,6 +19491,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (addressId != null) localVarPathParams.Add("addressId", this.Configuration.ApiClient.ParameterToString(addressId));
 
             // Query params
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
 
@@ -19471,10 +19534,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
+        /// <param name="expand">Expand response with additional information (optional)</param>
         /// <returns>Task of SmsPhoneNumber</returns>
-        public async System.Threading.Tasks.Task<SmsPhoneNumber> GetRoutingSmsPhonenumberAsync (string addressId)
+        public async System.Threading.Tasks.Task<SmsPhoneNumber> GetRoutingSmsPhonenumberAsync (string addressId, string expand = null)
         {
-             ApiResponse<SmsPhoneNumber> localVarResponse = await GetRoutingSmsPhonenumberAsyncWithHttpInfo(addressId);
+             ApiResponse<SmsPhoneNumber> localVarResponse = await GetRoutingSmsPhonenumberAsyncWithHttpInfo(addressId, expand);
              return localVarResponse.Data;
 
         }
@@ -19484,8 +19548,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
+        /// <param name="expand">Expand response with additional information (optional)</param>
         /// <returns>Task of ApiResponse (SmsPhoneNumber)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> GetRoutingSmsPhonenumberAsyncWithHttpInfo (string addressId)
+        public async System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumber>> GetRoutingSmsPhonenumberAsyncWithHttpInfo (string addressId, string expand = null)
         { 
             // verify the required parameter 'addressId' is set
             if (addressId == null)
@@ -19525,6 +19590,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (addressId != null) localVarPathParams.Add("addressId", this.Configuration.ApiClient.ParameterToString(addressId));
 
             // Query params
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
 
@@ -21190,6 +21256,215 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<UserSkillEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (UserSkillEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserSkillEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get skill groups for a user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="after">The cursor that points to the next page (optional)</param>
+        /// <param name="before">The cursor that points to the previous page (optional)</param>
+        /// <returns>UserSkillGroupEntityListing</returns>
+        public UserSkillGroupEntityListing GetUserSkillgroups (string userId, int? pageSize = null, string after = null, string before = null)
+        {
+             ApiResponse<UserSkillGroupEntityListing> localVarResponse = GetUserSkillgroupsWithHttpInfo(userId, pageSize, after, before);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get skill groups for a user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="after">The cursor that points to the next page (optional)</param>
+        /// <param name="before">The cursor that points to the previous page (optional)</param>
+        /// <returns>ApiResponse of UserSkillGroupEntityListing</returns>
+        public ApiResponse< UserSkillGroupEntityListing > GetUserSkillgroupsWithHttpInfo (string userId, int? pageSize = null, string after = null, string before = null)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling RoutingApi->GetUserSkillgroups");
+
+            var localVarPath = "/api/v2/users/{userId}/skillgroups";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserSkillgroups: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserSkillgroups: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserSkillGroupEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (UserSkillGroupEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserSkillGroupEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get skill groups for a user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="after">The cursor that points to the next page (optional)</param>
+        /// <param name="before">The cursor that points to the previous page (optional)</param>
+        /// <returns>Task of UserSkillGroupEntityListing</returns>
+        public async System.Threading.Tasks.Task<UserSkillGroupEntityListing> GetUserSkillgroupsAsync (string userId, int? pageSize = null, string after = null, string before = null)
+        {
+             ApiResponse<UserSkillGroupEntityListing> localVarResponse = await GetUserSkillgroupsAsyncWithHttpInfo(userId, pageSize, after, before);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get skill groups for a user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="after">The cursor that points to the next page (optional)</param>
+        /// <param name="before">The cursor that points to the previous page (optional)</param>
+        /// <returns>Task of ApiResponse (UserSkillGroupEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserSkillGroupEntityListing>> GetUserSkillgroupsAsyncWithHttpInfo (string userId, int? pageSize = null, string after = null, string before = null)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling RoutingApi->GetUserSkillgroups");
+            
+
+            var localVarPath = "/api/v2/users/{userId}/skillgroups";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserSkillgroups: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserSkillgroups: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserSkillGroupEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (UserSkillGroupEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserSkillGroupEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

@@ -160,7 +160,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IsFinalReceipt">Indicates if this is the last message receipt for this message, or if another message receipt can be expected..</param>
         /// <param name="Direction">The direction of the message..</param>
         /// <param name="Metadata">Additional metadata about this message..</param>
-        public OpenNormalizedMessage(string Id = null, OpenMessagingChannel Channel = null, TypeEnum? Type = null, string Text = null, List<OpenMessageContent> Content = null, StatusEnum? Status = null, List<Reason> Reasons = null, bool? IsFinalReceipt = null, DirectionEnum? Direction = null, Dictionary<string, string> Metadata = null)
+        public OpenNormalizedMessage(string Id = null, OpenMessagingChannel Channel = null, TypeEnum? Type = null, string Text = null, List<OpenMessageContent> Content = null, StatusEnum? Status = null, List<ConversationReason> Reasons = null, bool? IsFinalReceipt = null, DirectionEnum? Direction = null, Dictionary<string, string> Metadata = null)
         {
             this.Id = Id;
             this.Channel = Channel;
@@ -222,7 +222,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>List of reasons for a message receipt that indicates the message has failed. Only used with Failed status.</value>
         [DataMember(Name="reasons", EmitDefaultValue=false)]
-        public List<Reason> Reasons { get; set; }
+        public List<ConversationReason> Reasons { get; set; }
 
 
 

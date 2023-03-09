@@ -341,7 +341,7 @@ void (empty response body)
 
 <a name="postnotificationschannelsubscriptions"></a>
 
-## [**ChannelTopicEntityListing**](ChannelTopicEntityListing.html) PostNotificationsChannelSubscriptions (string channelId, List<ChannelTopic> body)
+## [**ChannelTopicEntityListing**](ChannelTopicEntityListing.html) PostNotificationsChannelSubscriptions (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null)
 
 
 
@@ -376,11 +376,12 @@ namespace Example
             var apiInstance = new NotificationsApi();
             var channelId = channelId_example;  // string | Channel ID
             var body = new List<ChannelTopic>(); // List<ChannelTopic> | Body
+            var ignoreErrors = true;  // bool? | Optionally prevent throwing of errors for failed permissions checks. (optional)  (default to false)
 
             try
             { 
                 // Add a list of subscriptions to the existing list of subscriptions
-                ChannelTopicEntityListing result = apiInstance.PostNotificationsChannelSubscriptions(channelId, body);
+                ChannelTopicEntityListing result = apiInstance.PostNotificationsChannelSubscriptions(channelId, body, ignoreErrors);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -399,6 +400,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **channelId** | **string**| Channel ID |  |
 | **body** | [**List<ChannelTopic>**](ChannelTopic.html)| Body |  |
+| **ignoreErrors** | **bool?**| Optionally prevent throwing of errors for failed permissions checks. | [optional] [default to false] |
 {: class="table table-striped"}
 
 ### Return type
@@ -468,7 +470,7 @@ This endpoint does require any parameters.
 
 <a name="putnotificationschannelsubscriptions"></a>
 
-## [**ChannelTopicEntityListing**](ChannelTopicEntityListing.html) PutNotificationsChannelSubscriptions (string channelId, List<ChannelTopic> body)
+## [**ChannelTopicEntityListing**](ChannelTopicEntityListing.html) PutNotificationsChannelSubscriptions (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null)
 
 
 
@@ -503,11 +505,12 @@ namespace Example
             var apiInstance = new NotificationsApi();
             var channelId = channelId_example;  // string | Channel ID
             var body = new List<ChannelTopic>(); // List<ChannelTopic> | Body
+            var ignoreErrors = true;  // bool? | Optionally prevent throwing of errors for failed permissions checks. (optional)  (default to false)
 
             try
             { 
                 // Replace the current list of subscriptions with a new list.
-                ChannelTopicEntityListing result = apiInstance.PutNotificationsChannelSubscriptions(channelId, body);
+                ChannelTopicEntityListing result = apiInstance.PutNotificationsChannelSubscriptions(channelId, body, ignoreErrors);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -526,6 +529,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **channelId** | **string**| Channel ID |  |
 | **body** | [**List<ChannelTopic>**](ChannelTopic.html)| Body |  |
+| **ignoreErrors** | **bool?**| Optionally prevent throwing of errors for failed permissions checks. | [optional] [default to false] |
 {: class="table table-striped"}
 
 ### Return type

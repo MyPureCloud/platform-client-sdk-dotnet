@@ -10,6 +10,7 @@ title: QueueConversationEventTopicConversation
 | **Id** | **string** |  | [optional] |
 | **MaxParticipants** | **int?** |  | [optional] |
 | **Participants** | [**List&lt;QueueConversationEventTopicParticipant&gt;**](QueueConversationEventTopicParticipant.html) |  | [optional] |
+| **RecentTransfers** | [**List&lt;QueueConversationEventTopicRecentTransfer&gt;**](QueueConversationEventTopicRecentTransfer.html) |  | [optional] |
 | **RecordingState** | **string** |  | [optional] |
 | **Address** | **string** |  | [optional] |
 | **ExternalTag** | **string** |  | [optional] |

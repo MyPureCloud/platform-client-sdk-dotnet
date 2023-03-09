@@ -40,6 +40,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetUserRoutinglanguages**](UsersApi.html#getuserroutinglanguages) | **GET** /api/v2/users/{userId}/routinglanguages | List routing language for user |
 | [**GetUserRoutingskills**](UsersApi.html#getuserroutingskills) | **GET** /api/v2/users/{userId}/routingskills | List routing skills for user |
 | [**GetUserRoutingstatus**](UsersApi.html#getuserroutingstatus) | **GET** /api/v2/users/{userId}/routingstatus | Fetch the routing status of a user |
+| [**GetUserSkillgroups**](UsersApi.html#getuserskillgroups) | **GET** /api/v2/users/{userId}/skillgroups | Get skill groups for a user |
 | [**GetUserState**](UsersApi.html#getuserstate) | **GET** /api/v2/users/{userId}/state | Get user state information. |
 | [**GetUserStation**](UsersApi.html#getuserstation) | **GET** /api/v2/users/{userId}/station | Get station information for user |
 | [**GetUserSuperiors**](UsersApi.html#getusersuperiors) | **GET** /api/v2/users/{userId}/superiors | Get superiors |
@@ -2293,6 +2294,77 @@ namespace Example
 
 [**RoutingStatus**](RoutingStatus.html)
 
+<a name="getuserskillgroups"></a>
+
+## [**UserSkillGroupEntityListing**](UserSkillGroupEntityListing.html) GetUserSkillgroups (string userId, int? pageSize = null, string after = null, string before = null)
+
+
+
+Get skill groups for a user
+
+
+
+Requires ANY permissions: 
+
+* routing:skillGroup:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetUserSkillgroupsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new UsersApi();
+            var userId = userId_example;  // string | User ID
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var after = after_example;  // string | The cursor that points to the next page (optional) 
+            var before = before_example;  // string | The cursor that points to the previous page (optional) 
+
+            try
+            { 
+                // Get skill groups for a user
+                UserSkillGroupEntityListing result = apiInstance.GetUserSkillgroups(userId, pageSize, after, before);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetUserSkillgroups: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **after** | **string**| The cursor that points to the next page | [optional]  |
+| **before** | **string**| The cursor that points to the previous page | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserSkillGroupEntityListing**](UserSkillGroupEntityListing.html)
+
 <a name="getuserstate"></a>
 
 ## [**UserState**](UserState.html) GetUserState (string userId)
@@ -2870,7 +2942,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **activityId** | **string**| Specifies the activity ID, maps to either assignment or appointment ID |  |
-| **type** | **string**| Specifies the activity type. | <br />**Values**: Informational, Coaching, AssessedContent, Assessment |
+| **type** | **string**| Specifies the activity type. | <br />**Values**: Informational, Coaching, AssessedContent, Assessment, External |
 {: class="table table-striped"}
 
 ### Return type

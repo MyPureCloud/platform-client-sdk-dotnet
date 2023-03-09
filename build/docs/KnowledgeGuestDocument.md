@@ -8,7 +8,7 @@ title: KnowledgeGuestDocument
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
-| **Title** | **string** | Document title. | [optional] |
+| **Title** | **string** | Document title, having a limit of 500 words. | [optional] |
 | **Visible** | **bool?** | Indicates if the knowledge document should be included in search results. | [optional] |
 | **Alternatives** | [**List&lt;KnowledgeDocumentAlternative&gt;**](KnowledgeDocumentAlternative.html) | List of alternate phrases related to the title which improves search results. | [optional] |
 | **State** | **string** | State of the document. | [optional] |

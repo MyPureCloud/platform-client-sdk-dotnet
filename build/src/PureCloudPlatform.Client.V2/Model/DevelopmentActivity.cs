@@ -55,7 +55,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Assessment for "Assessment"
             /// </summary>
             [EnumMember(Value = "Assessment")]
-            Assessment
+            Assessment,
+            
+            /// <summary>
+            /// Enum External for "External"
+            /// </summary>
+            [EnumMember(Value = "External")]
+            External
         }
         /// <summary>
         /// The status of the activity

@@ -9,7 +9,6 @@ title: QueueConversationVideoEventTopicPhoneNumberColumn
 |------------ | ------------- | ------------- | -------------|
 | **ColumnName** | **string** |  | [optional] |
 | **Type** | **string** |  | [optional] |
-| **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 {: class="table table-striped"}
 
 

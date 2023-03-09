@@ -22,11 +22,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="QueueConversationVideoEventTopicWorkflow" /> class.
         /// </summary>
         /// <param name="WorkflowId">The id of the workflow.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public QueueConversationVideoEventTopicWorkflow(string WorkflowId = null, Dictionary<string, Object> AdditionalProperties = null)
+        public QueueConversationVideoEventTopicWorkflow(string WorkflowId = null)
         {
             this.WorkflowId = WorkflowId;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -40,14 +38,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public string WorkflowId { get; set; }
 
 
-
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Dictionary<string, Object> AdditionalProperties { get; set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -58,7 +48,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class QueueConversationVideoEventTopicWorkflow {\n");
 
             sb.Append("  WorkflowId: ").Append(WorkflowId).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -103,11 +92,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.WorkflowId == other.WorkflowId ||
                     this.WorkflowId != null &&
                     this.WorkflowId.Equals(other.WorkflowId)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
                 );
         }
 
@@ -124,9 +108,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.WorkflowId != null)
                     hash = hash * 59 + this.WorkflowId.GetHashCode();
-
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
 
                 return hash;
             }

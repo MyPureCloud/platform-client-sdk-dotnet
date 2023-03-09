@@ -60,7 +60,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="KnowledgeGuestDocument" /> class.
         /// </summary>
-        /// <param name="Title">Document title..</param>
+        /// <param name="Title">Document title, having a limit of 500 words..</param>
         /// <param name="Visible">Indicates if the knowledge document should be included in search results..</param>
         /// <param name="Alternatives">List of alternate phrases related to the title which improves search results..</param>
         /// <param name="State">State of the document..</param>
@@ -97,9 +97,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Document title.
+        /// Document title, having a limit of 500 words.
         /// </summary>
-        /// <value>Document title.</value>
+        /// <value>Document title, having a limit of 500 words.</value>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; set; }
 

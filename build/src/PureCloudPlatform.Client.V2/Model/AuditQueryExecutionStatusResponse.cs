@@ -157,6 +157,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Gamification,
             
             /// <summary>
+            /// Enum Gdpr for "GDPR"
+            /// </summary>
+            [EnumMember(Value = "GDPR")]
+            Gdpr,
+            
+            /// <summary>
             /// Enum Groups for "Groups"
             /// </summary>
             [EnumMember(Value = "Groups")]

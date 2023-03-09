@@ -56,7 +56,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="ContentType">Type of this content element. If contentType = \"Attachment\" only one item is allowed. (required).</param>
         /// <param name="Attachment">Attachment content..</param>
-        public OpenMessageContent(ContentTypeEnum? ContentType = null, ContentAttachment Attachment = null)
+        public OpenMessageContent(ContentTypeEnum? ContentType = null, ConversationContentAttachment Attachment = null)
         {
             this.ContentType = ContentType;
             this.Attachment = Attachment;
@@ -72,7 +72,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Attachment content.</value>
         [DataMember(Name="attachment", EmitDefaultValue=false)]
-        public ContentAttachment Attachment { get; set; }
+        public ConversationContentAttachment Attachment { get; set; }
 
 
         /// <summary>

@@ -20,6 +20,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteOutboundContactlists**](OutboundApi.html#deleteoutboundcontactlists) | **DELETE** /api/v2/outbound/contactlists | Delete multiple contact lists. |
 | [**DeleteOutboundDigitalruleset**](OutboundApi.html#deleteoutbounddigitalruleset) | **DELETE** /api/v2/outbound/digitalrulesets/{digitalRuleSetId} | Delete an Outbound Digital Rule Set |
 | [**DeleteOutboundDnclist**](OutboundApi.html#deleteoutbounddnclist) | **DELETE** /api/v2/outbound/dnclists/{dncListId} | Delete dialer DNC list |
+| [**DeleteOutboundDnclistCustomexclusioncolumns**](OutboundApi.html#deleteoutbounddnclistcustomexclusioncolumns) | **DELETE** /api/v2/outbound/dnclists/{dncListId}/customexclusioncolumns | Deletes all or expired custom exclusion column entries from a DNC list. |
 | [**DeleteOutboundDnclistEmailaddresses**](OutboundApi.html#deleteoutbounddnclistemailaddresses) | **DELETE** /api/v2/outbound/dnclists/{dncListId}/emailaddresses | Deletes all or expired email addresses from a DNC list. |
 | [**DeleteOutboundDnclistPhonenumbers**](OutboundApi.html#deleteoutbounddnclistphonenumbers) | **DELETE** /api/v2/outbound/dnclists/{dncListId}/phonenumbers | Deletes all or expired phone numbers from a DNC list. |
 | [**DeleteOutboundMessagingcampaign**](OutboundApi.html#deleteoutboundmessagingcampaign) | **DELETE** /api/v2/outbound/messagingcampaigns/{messagingCampaignId} | Delete an Outbound Messaging Campaign |
@@ -88,6 +89,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOutboundSequences**](OutboundApi.html#getoutboundsequences) | **GET** /api/v2/outbound/sequences | Query a list of dialer campaign sequences. |
 | [**GetOutboundSettings**](OutboundApi.html#getoutboundsettings) | **GET** /api/v2/outbound/settings | Get the outbound settings for this organization |
 | [**GetOutboundWrapupcodemappings**](OutboundApi.html#getoutboundwrapupcodemappings) | **GET** /api/v2/outbound/wrapupcodemappings | Get the Dialer wrap up code mapping. |
+| [**PatchOutboundDnclistCustomexclusioncolumns**](OutboundApi.html#patchoutbounddnclistcustomexclusioncolumns) | **PATCH** /api/v2/outbound/dnclists/{dncListId}/customexclusioncolumns | Add entries to or delete entries from a DNC list. |
 | [**PatchOutboundDnclistEmailaddresses**](OutboundApi.html#patchoutbounddnclistemailaddresses) | **PATCH** /api/v2/outbound/dnclists/{dncListId}/emailaddresses | Add emails to or Delete emails from a DNC list. |
 | [**PatchOutboundDnclistPhonenumbers**](OutboundApi.html#patchoutbounddnclistphonenumbers) | **PATCH** /api/v2/outbound/dnclists/{dncListId}/phonenumbers | Add numbers to or delete numbers from a DNC list. |
 | [**PatchOutboundSettings**](OutboundApi.html#patchoutboundsettings) | **PATCH** /api/v2/outbound/settings | Update the outbound settings for this organization |
@@ -969,6 +971,74 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **dncListId** | **string**| DncList ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteoutbounddnclistcustomexclusioncolumns"></a>
+
+## void DeleteOutboundDnclistCustomexclusioncolumns (string dncListId, bool? expiredOnly = null)
+
+
+
+Deletes all or expired custom exclusion column entries from a DNC list.
+
+This operation is only for Internal DNC lists of custom exclusion column entries
+
+
+
+Requires ANY permissions: 
+
+* outbound:dnc:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteOutboundDnclistCustomexclusioncolumnsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var dncListId = dncListId_example;  // string | DncList ID
+            var expiredOnly = true;  // bool? | Set to true to only remove DNC entries that are expired (optional)  (default to false)
+
+            try
+            { 
+                // Deletes all or expired custom exclusion column entries from a DNC list.
+                apiInstance.DeleteOutboundDnclistCustomexclusioncolumns(dncListId, expiredOnly);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.DeleteOutboundDnclistCustomexclusioncolumns: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **dncListId** | **string**| DncList ID |  |
+| **expiredOnly** | **bool?**| Set to true to only remove DNC entries that are expired | [optional] [default to false] |
 {: class="table table-striped"}
 
 ### Return type
@@ -5688,6 +5758,74 @@ This endpoint does require any parameters.
 ### Return type
 
 [**WrapUpCodeMapping**](WrapUpCodeMapping.html)
+
+<a name="patchoutbounddnclistcustomexclusioncolumns"></a>
+
+## void PatchOutboundDnclistCustomexclusioncolumns (string dncListId, DncPatchCustomExclusionColumnsRequest body)
+
+
+
+Add entries to or delete entries from a DNC list.
+
+Only Internal DNC lists may be deleted from
+
+
+
+Requires ANY permissions: 
+
+* outbound:dnc:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchOutboundDnclistCustomexclusioncolumnsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var dncListId = dncListId_example;  // string | DncList ID
+            var body = new DncPatchCustomExclusionColumnsRequest(); // DncPatchCustomExclusionColumnsRequest | DNC Custom exclusion column entries
+
+            try
+            { 
+                // Add entries to or delete entries from a DNC list.
+                apiInstance.PatchOutboundDnclistCustomexclusioncolumns(dncListId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PatchOutboundDnclistCustomexclusioncolumns: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **dncListId** | **string**| DncList ID |  |
+| **body** | [**DncPatchCustomExclusionColumnsRequest**](DncPatchCustomExclusionColumnsRequest.html)| DNC Custom exclusion column entries |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="patchoutbounddnclistemailaddresses"></a>
 

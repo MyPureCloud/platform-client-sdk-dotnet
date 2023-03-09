@@ -307,6 +307,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteOutboundDnclistWithHttpInfo (string dncListId);
 
         /// <summary>
+        /// Deletes all or expired custom exclusion column entries from a DNC list.
+        /// </summary>
+        /// <remarks>
+        /// This operation is only for Internal DNC lists of custom exclusion column entries
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="expiredOnly">Set to true to only remove DNC entries that are expired (optional, default to false)</param>
+        /// <returns></returns>
+        void DeleteOutboundDnclistCustomexclusioncolumns (string dncListId, bool? expiredOnly = null);
+
+        /// <summary>
+        /// Deletes all or expired custom exclusion column entries from a DNC list.
+        /// </summary>
+        /// <remarks>
+        /// This operation is only for Internal DNC lists of custom exclusion column entries
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="expiredOnly">Set to true to only remove DNC entries that are expired (optional, default to false)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteOutboundDnclistCustomexclusioncolumnsWithHttpInfo (string dncListId, bool? expiredOnly = null);
+
+        /// <summary>
         /// Deletes all or expired email addresses from a DNC list.
         /// </summary>
         /// <remarks>
@@ -2089,6 +2113,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<WrapUpCodeMapping> GetOutboundWrapupcodemappingsWithHttpInfo ();
 
         /// <summary>
+        /// Add entries to or delete entries from a DNC list.
+        /// </summary>
+        /// <remarks>
+        /// Only Internal DNC lists may be deleted from
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="body">DNC Custom exclusion column entries</param>
+        /// <returns></returns>
+        void PatchOutboundDnclistCustomexclusioncolumns (string dncListId, DncPatchCustomExclusionColumnsRequest body);
+
+        /// <summary>
+        /// Add entries to or delete entries from a DNC list.
+        /// </summary>
+        /// <remarks>
+        /// Only Internal DNC lists may be deleted from
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="body">DNC Custom exclusion column entries</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PatchOutboundDnclistCustomexclusioncolumnsWithHttpInfo (string dncListId, DncPatchCustomExclusionColumnsRequest body);
+
+        /// <summary>
         /// Add emails to or Delete emails from a DNC list.
         /// </summary>
         /// <remarks>
@@ -3509,6 +3557,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dncListId">DncList ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundDnclistAsyncWithHttpInfo (string dncListId);
+
+        /// <summary>
+        /// Deletes all or expired custom exclusion column entries from a DNC list.
+        /// </summary>
+        /// <remarks>
+        /// This operation is only for Internal DNC lists of custom exclusion column entries
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="expiredOnly">Set to true to only remove DNC entries that are expired (optional, default to false)</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteOutboundDnclistCustomexclusioncolumnsAsync (string dncListId, bool? expiredOnly = null);
+
+        /// <summary>
+        /// Deletes all or expired custom exclusion column entries from a DNC list.
+        /// </summary>
+        /// <remarks>
+        /// This operation is only for Internal DNC lists of custom exclusion column entries
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="expiredOnly">Set to true to only remove DNC entries that are expired (optional, default to false)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundDnclistCustomexclusioncolumnsAsyncWithHttpInfo (string dncListId, bool? expiredOnly = null);
 
         /// <summary>
         /// Deletes all or expired email addresses from a DNC list.
@@ -5291,6 +5363,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (WrapUpCodeMapping)</returns>
         System.Threading.Tasks.Task<ApiResponse<WrapUpCodeMapping>> GetOutboundWrapupcodemappingsAsyncWithHttpInfo ();
+
+        /// <summary>
+        /// Add entries to or delete entries from a DNC list.
+        /// </summary>
+        /// <remarks>
+        /// Only Internal DNC lists may be deleted from
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="body">DNC Custom exclusion column entries</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PatchOutboundDnclistCustomexclusioncolumnsAsync (string dncListId, DncPatchCustomExclusionColumnsRequest body);
+
+        /// <summary>
+        /// Add entries to or delete entries from a DNC list.
+        /// </summary>
+        /// <remarks>
+        /// Only Internal DNC lists may be deleted from
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="body">DNC Custom exclusion column entries</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PatchOutboundDnclistCustomexclusioncolumnsAsyncWithHttpInfo (string dncListId, DncPatchCustomExclusionColumnsRequest body);
 
         /// <summary>
         /// Add emails to or Delete emails from a DNC list.
@@ -8987,6 +9083,201 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundDnclist: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundDnclist: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Deletes all or expired custom exclusion column entries from a DNC list. This operation is only for Internal DNC lists of custom exclusion column entries
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="expiredOnly">Set to true to only remove DNC entries that are expired (optional, default to false)</param>
+        /// <returns></returns>
+        public void DeleteOutboundDnclistCustomexclusioncolumns (string dncListId, bool? expiredOnly = null)
+        {
+             DeleteOutboundDnclistCustomexclusioncolumnsWithHttpInfo(dncListId, expiredOnly);
+        }
+
+        /// <summary>
+        /// Deletes all or expired custom exclusion column entries from a DNC list. This operation is only for Internal DNC lists of custom exclusion column entries
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="expiredOnly">Set to true to only remove DNC entries that are expired (optional, default to false)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteOutboundDnclistCustomexclusioncolumnsWithHttpInfo (string dncListId, bool? expiredOnly = null)
+        { 
+            // verify the required parameter 'dncListId' is set
+            if (dncListId == null)
+                throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->DeleteOutboundDnclistCustomexclusioncolumns");
+
+            var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/customexclusioncolumns";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (dncListId != null) localVarPathParams.Add("dncListId", this.Configuration.ApiClient.ParameterToString(dncListId));
+
+            // Query params
+            if (expiredOnly != null) localVarQueryParams.Add(new Tuple<string, string>("expiredOnly", this.Configuration.ApiClient.ParameterToString(expiredOnly)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundDnclistCustomexclusioncolumns: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundDnclistCustomexclusioncolumns: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Deletes all or expired custom exclusion column entries from a DNC list. This operation is only for Internal DNC lists of custom exclusion column entries
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="expiredOnly">Set to true to only remove DNC entries that are expired (optional, default to false)</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteOutboundDnclistCustomexclusioncolumnsAsync (string dncListId, bool? expiredOnly = null)
+        {
+             await DeleteOutboundDnclistCustomexclusioncolumnsAsyncWithHttpInfo(dncListId, expiredOnly);
+
+        }
+
+        /// <summary>
+        /// Deletes all or expired custom exclusion column entries from a DNC list. This operation is only for Internal DNC lists of custom exclusion column entries
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="expiredOnly">Set to true to only remove DNC entries that are expired (optional, default to false)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundDnclistCustomexclusioncolumnsAsyncWithHttpInfo (string dncListId, bool? expiredOnly = null)
+        { 
+            // verify the required parameter 'dncListId' is set
+            if (dncListId == null)
+                throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->DeleteOutboundDnclistCustomexclusioncolumns");
+            
+
+            var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/customexclusioncolumns";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (dncListId != null) localVarPathParams.Add("dncListId", this.Configuration.ApiClient.ParameterToString(dncListId));
+
+            // Query params
+            if (expiredOnly != null) localVarQueryParams.Add(new Tuple<string, string>("expiredOnly", this.Configuration.ApiClient.ParameterToString(expiredOnly)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundDnclistCustomexclusioncolumns: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundDnclistCustomexclusioncolumns: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -22651,6 +22942,218 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<WrapUpCodeMapping>(localVarStatusCode,
                 localVarHeaders,
                 (WrapUpCodeMapping) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapUpCodeMapping)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Add entries to or delete entries from a DNC list. Only Internal DNC lists may be deleted from
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="body">DNC Custom exclusion column entries</param>
+        /// <returns></returns>
+        public void PatchOutboundDnclistCustomexclusioncolumns (string dncListId, DncPatchCustomExclusionColumnsRequest body)
+        {
+             PatchOutboundDnclistCustomexclusioncolumnsWithHttpInfo(dncListId, body);
+        }
+
+        /// <summary>
+        /// Add entries to or delete entries from a DNC list. Only Internal DNC lists may be deleted from
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="body">DNC Custom exclusion column entries</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PatchOutboundDnclistCustomexclusioncolumnsWithHttpInfo (string dncListId, DncPatchCustomExclusionColumnsRequest body)
+        { 
+            // verify the required parameter 'dncListId' is set
+            if (dncListId == null)
+                throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->PatchOutboundDnclistCustomexclusioncolumns");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PatchOutboundDnclistCustomexclusioncolumns");
+
+            var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/customexclusioncolumns";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (dncListId != null) localVarPathParams.Add("dncListId", this.Configuration.ApiClient.ParameterToString(dncListId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchOutboundDnclistCustomexclusioncolumns: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchOutboundDnclistCustomexclusioncolumns: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Add entries to or delete entries from a DNC list. Only Internal DNC lists may be deleted from
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="body">DNC Custom exclusion column entries</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PatchOutboundDnclistCustomexclusioncolumnsAsync (string dncListId, DncPatchCustomExclusionColumnsRequest body)
+        {
+             await PatchOutboundDnclistCustomexclusioncolumnsAsyncWithHttpInfo(dncListId, body);
+
+        }
+
+        /// <summary>
+        /// Add entries to or delete entries from a DNC list. Only Internal DNC lists may be deleted from
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="dncListId">DncList ID</param>
+        /// <param name="body">DNC Custom exclusion column entries</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchOutboundDnclistCustomexclusioncolumnsAsyncWithHttpInfo (string dncListId, DncPatchCustomExclusionColumnsRequest body)
+        { 
+            // verify the required parameter 'dncListId' is set
+            if (dncListId == null)
+                throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->PatchOutboundDnclistCustomexclusioncolumns");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PatchOutboundDnclistCustomexclusioncolumns");
+            
+
+            var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/customexclusioncolumns";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (dncListId != null) localVarPathParams.Add("dncListId", this.Configuration.ApiClient.ParameterToString(dncListId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchOutboundDnclistCustomexclusioncolumns: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchOutboundDnclistCustomexclusioncolumns: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

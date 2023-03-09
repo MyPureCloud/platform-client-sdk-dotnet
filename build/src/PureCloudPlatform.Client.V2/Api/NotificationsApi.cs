@@ -137,8 +137,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Body</param>
+        /// <param name="ignoreErrors">Optionally prevent throwing of errors for failed permissions checks. (optional, default to false)</param>
         /// <returns>ChannelTopicEntityListing</returns>
-        ChannelTopicEntityListing PostNotificationsChannelSubscriptions (string channelId, List<ChannelTopic> body);
+        ChannelTopicEntityListing PostNotificationsChannelSubscriptions (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null);
 
         /// <summary>
         /// Add a list of subscriptions to the existing list of subscriptions
@@ -149,8 +150,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Body</param>
+        /// <param name="ignoreErrors">Optionally prevent throwing of errors for failed permissions checks. (optional, default to false)</param>
         /// <returns>ApiResponse of ChannelTopicEntityListing</returns>
-        ApiResponse<ChannelTopicEntityListing> PostNotificationsChannelSubscriptionsWithHttpInfo (string channelId, List<ChannelTopic> body);
+        ApiResponse<ChannelTopicEntityListing> PostNotificationsChannelSubscriptionsWithHttpInfo (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null);
 
         /// <summary>
         /// Create a new channel
@@ -181,8 +183,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Body</param>
+        /// <param name="ignoreErrors">Optionally prevent throwing of errors for failed permissions checks. (optional, default to false)</param>
         /// <returns>ChannelTopicEntityListing</returns>
-        ChannelTopicEntityListing PutNotificationsChannelSubscriptions (string channelId, List<ChannelTopic> body);
+        ChannelTopicEntityListing PutNotificationsChannelSubscriptions (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null);
 
         /// <summary>
         /// Replace the current list of subscriptions with a new list.
@@ -193,8 +196,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Body</param>
+        /// <param name="ignoreErrors">Optionally prevent throwing of errors for failed permissions checks. (optional, default to false)</param>
         /// <returns>ApiResponse of ChannelTopicEntityListing</returns>
-        ApiResponse<ChannelTopicEntityListing> PutNotificationsChannelSubscriptionsWithHttpInfo (string channelId, List<ChannelTopic> body);
+        ApiResponse<ChannelTopicEntityListing> PutNotificationsChannelSubscriptionsWithHttpInfo (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null);
 
         #endregion Synchronous Operations
 
@@ -321,8 +325,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Body</param>
+        /// <param name="ignoreErrors">Optionally prevent throwing of errors for failed permissions checks. (optional, default to false)</param>
         /// <returns>Task of ChannelTopicEntityListing</returns>
-        System.Threading.Tasks.Task<ChannelTopicEntityListing> PostNotificationsChannelSubscriptionsAsync (string channelId, List<ChannelTopic> body);
+        System.Threading.Tasks.Task<ChannelTopicEntityListing> PostNotificationsChannelSubscriptionsAsync (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null);
 
         /// <summary>
         /// Add a list of subscriptions to the existing list of subscriptions
@@ -333,8 +338,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Body</param>
+        /// <param name="ignoreErrors">Optionally prevent throwing of errors for failed permissions checks. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> PostNotificationsChannelSubscriptionsAsyncWithHttpInfo (string channelId, List<ChannelTopic> body);
+        System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> PostNotificationsChannelSubscriptionsAsyncWithHttpInfo (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null);
 
         /// <summary>
         /// Create a new channel
@@ -365,8 +371,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Body</param>
+        /// <param name="ignoreErrors">Optionally prevent throwing of errors for failed permissions checks. (optional, default to false)</param>
         /// <returns>Task of ChannelTopicEntityListing</returns>
-        System.Threading.Tasks.Task<ChannelTopicEntityListing> PutNotificationsChannelSubscriptionsAsync (string channelId, List<ChannelTopic> body);
+        System.Threading.Tasks.Task<ChannelTopicEntityListing> PutNotificationsChannelSubscriptionsAsync (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null);
 
         /// <summary>
         /// Replace the current list of subscriptions with a new list.
@@ -377,8 +384,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Body</param>
+        /// <param name="ignoreErrors">Optionally prevent throwing of errors for failed permissions checks. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> PutNotificationsChannelSubscriptionsAsyncWithHttpInfo (string channelId, List<ChannelTopic> body);
+        System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> PutNotificationsChannelSubscriptionsAsyncWithHttpInfo (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null);
 
         #endregion Asynchronous Operations
 
@@ -1421,10 +1429,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Body</param>
+        /// <param name="ignoreErrors">Optionally prevent throwing of errors for failed permissions checks. (optional, default to false)</param>
         /// <returns>ChannelTopicEntityListing</returns>
-        public ChannelTopicEntityListing PostNotificationsChannelSubscriptions (string channelId, List<ChannelTopic> body)
+        public ChannelTopicEntityListing PostNotificationsChannelSubscriptions (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null)
         {
-             ApiResponse<ChannelTopicEntityListing> localVarResponse = PostNotificationsChannelSubscriptionsWithHttpInfo(channelId, body);
+             ApiResponse<ChannelTopicEntityListing> localVarResponse = PostNotificationsChannelSubscriptionsWithHttpInfo(channelId, body, ignoreErrors);
              return localVarResponse.Data;
         }
 
@@ -1434,8 +1443,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Body</param>
+        /// <param name="ignoreErrors">Optionally prevent throwing of errors for failed permissions checks. (optional, default to false)</param>
         /// <returns>ApiResponse of ChannelTopicEntityListing</returns>
-        public ApiResponse< ChannelTopicEntityListing > PostNotificationsChannelSubscriptionsWithHttpInfo (string channelId, List<ChannelTopic> body)
+        public ApiResponse< ChannelTopicEntityListing > PostNotificationsChannelSubscriptionsWithHttpInfo (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null)
         { 
             // verify the required parameter 'channelId' is set
             if (channelId == null)
@@ -1478,6 +1488,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (channelId != null) localVarPathParams.Add("channelId", this.Configuration.ApiClient.ParameterToString(channelId));
 
             // Query params
+            if (ignoreErrors != null) localVarQueryParams.Add(new Tuple<string, string>("ignoreErrors", this.Configuration.ApiClient.ParameterToString(ignoreErrors)));
 
             // Header params
 
@@ -1526,10 +1537,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Body</param>
+        /// <param name="ignoreErrors">Optionally prevent throwing of errors for failed permissions checks. (optional, default to false)</param>
         /// <returns>Task of ChannelTopicEntityListing</returns>
-        public async System.Threading.Tasks.Task<ChannelTopicEntityListing> PostNotificationsChannelSubscriptionsAsync (string channelId, List<ChannelTopic> body)
+        public async System.Threading.Tasks.Task<ChannelTopicEntityListing> PostNotificationsChannelSubscriptionsAsync (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null)
         {
-             ApiResponse<ChannelTopicEntityListing> localVarResponse = await PostNotificationsChannelSubscriptionsAsyncWithHttpInfo(channelId, body);
+             ApiResponse<ChannelTopicEntityListing> localVarResponse = await PostNotificationsChannelSubscriptionsAsyncWithHttpInfo(channelId, body, ignoreErrors);
              return localVarResponse.Data;
 
         }
@@ -1540,8 +1552,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Body</param>
+        /// <param name="ignoreErrors">Optionally prevent throwing of errors for failed permissions checks. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> PostNotificationsChannelSubscriptionsAsyncWithHttpInfo (string channelId, List<ChannelTopic> body)
+        public async System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> PostNotificationsChannelSubscriptionsAsyncWithHttpInfo (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null)
         { 
             // verify the required parameter 'channelId' is set
             if (channelId == null)
@@ -1586,6 +1599,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (channelId != null) localVarPathParams.Add("channelId", this.Configuration.ApiClient.ParameterToString(channelId));
 
             // Query params
+            if (ignoreErrors != null) localVarQueryParams.Add(new Tuple<string, string>("ignoreErrors", this.Configuration.ApiClient.ParameterToString(ignoreErrors)));
 
             // Header params
 
@@ -1813,10 +1827,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Body</param>
+        /// <param name="ignoreErrors">Optionally prevent throwing of errors for failed permissions checks. (optional, default to false)</param>
         /// <returns>ChannelTopicEntityListing</returns>
-        public ChannelTopicEntityListing PutNotificationsChannelSubscriptions (string channelId, List<ChannelTopic> body)
+        public ChannelTopicEntityListing PutNotificationsChannelSubscriptions (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null)
         {
-             ApiResponse<ChannelTopicEntityListing> localVarResponse = PutNotificationsChannelSubscriptionsWithHttpInfo(channelId, body);
+             ApiResponse<ChannelTopicEntityListing> localVarResponse = PutNotificationsChannelSubscriptionsWithHttpInfo(channelId, body, ignoreErrors);
              return localVarResponse.Data;
         }
 
@@ -1826,8 +1841,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Body</param>
+        /// <param name="ignoreErrors">Optionally prevent throwing of errors for failed permissions checks. (optional, default to false)</param>
         /// <returns>ApiResponse of ChannelTopicEntityListing</returns>
-        public ApiResponse< ChannelTopicEntityListing > PutNotificationsChannelSubscriptionsWithHttpInfo (string channelId, List<ChannelTopic> body)
+        public ApiResponse< ChannelTopicEntityListing > PutNotificationsChannelSubscriptionsWithHttpInfo (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null)
         { 
             // verify the required parameter 'channelId' is set
             if (channelId == null)
@@ -1870,6 +1886,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (channelId != null) localVarPathParams.Add("channelId", this.Configuration.ApiClient.ParameterToString(channelId));
 
             // Query params
+            if (ignoreErrors != null) localVarQueryParams.Add(new Tuple<string, string>("ignoreErrors", this.Configuration.ApiClient.ParameterToString(ignoreErrors)));
 
             // Header params
 
@@ -1918,10 +1935,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Body</param>
+        /// <param name="ignoreErrors">Optionally prevent throwing of errors for failed permissions checks. (optional, default to false)</param>
         /// <returns>Task of ChannelTopicEntityListing</returns>
-        public async System.Threading.Tasks.Task<ChannelTopicEntityListing> PutNotificationsChannelSubscriptionsAsync (string channelId, List<ChannelTopic> body)
+        public async System.Threading.Tasks.Task<ChannelTopicEntityListing> PutNotificationsChannelSubscriptionsAsync (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null)
         {
-             ApiResponse<ChannelTopicEntityListing> localVarResponse = await PutNotificationsChannelSubscriptionsAsyncWithHttpInfo(channelId, body);
+             ApiResponse<ChannelTopicEntityListing> localVarResponse = await PutNotificationsChannelSubscriptionsAsyncWithHttpInfo(channelId, body, ignoreErrors);
              return localVarResponse.Data;
 
         }
@@ -1932,8 +1950,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Body</param>
+        /// <param name="ignoreErrors">Optionally prevent throwing of errors for failed permissions checks. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> PutNotificationsChannelSubscriptionsAsyncWithHttpInfo (string channelId, List<ChannelTopic> body)
+        public async System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> PutNotificationsChannelSubscriptionsAsyncWithHttpInfo (string channelId, List<ChannelTopic> body, bool? ignoreErrors = null)
         { 
             // verify the required parameter 'channelId' is set
             if (channelId == null)
@@ -1978,6 +1997,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (channelId != null) localVarPathParams.Add("channelId", this.Configuration.ApiClient.ParameterToString(channelId));
 
             // Query params
+            if (ignoreErrors != null) localVarQueryParams.Add(new Tuple<string, string>("ignoreErrors", this.Configuration.ApiClient.ParameterToString(ignoreErrors)));
 
             // Header params
 

@@ -109,6 +109,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementAdherenceHistoricalBulk**](WorkforceManagementApi.html#postworkforcemanagementadherencehistoricalbulk) | **POST** /api/v2/workforcemanagement/adherence/historical/bulk | Request a historical adherence report in bulk |
 | [**PostWorkforcemanagementAgentAdherenceExplanations**](WorkforceManagementApi.html#postworkforcemanagementagentadherenceexplanations) | **POST** /api/v2/workforcemanagement/agents/{agentId}/adherence/explanations | Add an adherence explanation for the requested user |
 | [**PostWorkforcemanagementAgentAdherenceExplanationsQuery**](WorkforceManagementApi.html#postworkforcemanagementagentadherenceexplanationsquery) | **POST** /api/v2/workforcemanagement/agents/{agentId}/adherence/explanations/query | Query adherence explanations for the given agent across a specified range |
+| [**PostWorkforcemanagementAgentsMePossibleworkshifts**](WorkforceManagementApi.html#postworkforcemanagementagentsmepossibleworkshifts) | **POST** /api/v2/workforcemanagement/agents/me/possibleworkshifts | Get agent possible work shifts for requested time frame |
 | [**PostWorkforcemanagementAgentschedulesMine**](WorkforceManagementApi.html#postworkforcemanagementagentschedulesmine) | **POST** /api/v2/workforcemanagement/agentschedules/mine | Get published schedule for the current user |
 | [**PostWorkforcemanagementBusinessunitActivitycodes**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitactivitycodes) | **POST** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes | Create a new activity code |
 | [**PostWorkforcemanagementBusinessunitAdherenceExplanationsQuery**](WorkforceManagementApi.html#postworkforcemanagementbusinessunitadherenceexplanationsquery) | **POST** /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/explanations/query | Query adherence explanations across an entire business unit for the requested period |
@@ -7328,6 +7329,71 @@ namespace Example
 ### Return type
 
 [**AgentQueryAdherenceExplanationsResponse**](AgentQueryAdherenceExplanationsResponse.html)
+
+<a name="postworkforcemanagementagentsmepossibleworkshifts"></a>
+
+## [**AgentPossibleWorkShiftsResponse**](AgentPossibleWorkShiftsResponse.html) PostWorkforcemanagementAgentsMePossibleworkshifts (AgentPossibleWorkShiftsRequest body)
+
+
+
+Get agent possible work shifts for requested time frame
+
+
+
+Requires ANY permissions: 
+
+* wfm:agentPossibleWorkShifts:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementAgentsMePossibleworkshiftsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var body = new AgentPossibleWorkShiftsRequest(); // AgentPossibleWorkShiftsRequest | body
+
+            try
+            { 
+                // Get agent possible work shifts for requested time frame
+                AgentPossibleWorkShiftsResponse result = apiInstance.PostWorkforcemanagementAgentsMePossibleworkshifts(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementAgentsMePossibleworkshifts: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**AgentPossibleWorkShiftsRequest**](AgentPossibleWorkShiftsRequest.html)| body |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AgentPossibleWorkShiftsResponse**](AgentPossibleWorkShiftsResponse.html)
 
 <a name="postworkforcemanagementagentschedulesmine"></a>
 

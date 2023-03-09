@@ -22,11 +22,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="EventSetting" /> class.
         /// </summary>
         /// <param name="Typing">Settings regarding typing events.</param>
-        /// <param name="Presence">Settings regarding presence events.</param>
-        public EventSetting(TypingSetting Typing = null, PresenceSetting Presence = null)
+        public EventSetting(TypingSetting Typing = null)
         {
             this.Typing = Typing;
-            this.Presence = Presence;
             
         }
         
@@ -40,15 +38,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public TypingSetting Typing { get; set; }
 
 
-
-        /// <summary>
-        /// Settings regarding presence events
-        /// </summary>
-        /// <value>Settings regarding presence events</value>
-        [DataMember(Name="presence", EmitDefaultValue=false)]
-        public PresenceSetting Presence { get; set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -59,7 +48,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class EventSetting {\n");
 
             sb.Append("  Typing: ").Append(Typing).Append("\n");
-            sb.Append("  Presence: ").Append(Presence).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -104,11 +92,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Typing == other.Typing ||
                     this.Typing != null &&
                     this.Typing.Equals(other.Typing)
-                ) &&
-                (
-                    this.Presence == other.Presence ||
-                    this.Presence != null &&
-                    this.Presence.Equals(other.Presence)
                 );
         }
 
@@ -125,9 +108,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Typing != null)
                     hash = hash * 59 + this.Typing.GetHashCode();
-
-                if (this.Presence != null)
-                    hash = hash * 59 + this.Presence.GetHashCode();
 
                 return hash;
             }

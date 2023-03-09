@@ -27,7 +27,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="KnowledgeDocumentAlternative" /> class.
         /// </summary>
-        /// <param name="Phrase">Alternate phrasing to the document title. (required).</param>
+        /// <param name="Phrase">Alternate phrasing to the document title, having a limit of 500 words. (required).</param>
         /// <param name="Autocomplete">Autocomplete enabled for the alternate phrase. (required).</param>
         public KnowledgeDocumentAlternative(string Phrase = null, bool? Autocomplete = null)
         {
@@ -39,9 +39,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Alternate phrasing to the document title.
+        /// Alternate phrasing to the document title, having a limit of 500 words.
         /// </summary>
-        /// <value>Alternate phrasing to the document title.</value>
+        /// <value>Alternate phrasing to the document title, having a limit of 500 words.</value>
         [DataMember(Name="phrase", EmitDefaultValue=false)]
         public string Phrase { get; set; }
 

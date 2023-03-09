@@ -18,6 +18,39 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AppendToDncActionSettings :  IEquatable<AppendToDncActionSettings>
     {
+        /// <summary>
+        /// The Dnc List Type to append entries to
+        /// </summary>
+        /// <value>The Dnc List Type to append entries to</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ListTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Rds for "Rds"
+            /// </summary>
+            [EnumMember(Value = "Rds")]
+            Rds,
+            
+            /// <summary>
+            /// Enum Rdscustom for "RdsCustom"
+            /// </summary>
+            [EnumMember(Value = "RdsCustom")]
+            Rdscustom
+        }
+        /// <summary>
+        /// The Dnc List Type to append entries to
+        /// </summary>
+        /// <value>The Dnc List Type to append entries to</value>
+        [DataMember(Name="listType", EmitDefaultValue=false)]
+        public ListTypeEnum? ListType { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AppendToDncActionSettings" /> class.
@@ -29,10 +62,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Expire">Whether to expire the record appended to the DNC list. (required).</param>
         /// <param name="ExpirationDuration">If 'expire' is set to true, how long to keep the record..</param>
-        public AppendToDncActionSettings(bool? Expire = null, string ExpirationDuration = null)
+        /// <param name="ListType">The Dnc List Type to append entries to.</param>
+        public AppendToDncActionSettings(bool? Expire = null, string ExpirationDuration = null, ListTypeEnum? ListType = null)
         {
             this.Expire = Expire;
             this.ExpirationDuration = ExpirationDuration;
+            this.ListType = ListType;
             
         }
         
@@ -55,6 +90,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public string ExpirationDuration { get; set; }
 
 
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -66,6 +103,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Expire: ").Append(Expire).Append("\n");
             sb.Append("  ExpirationDuration: ").Append(ExpirationDuration).Append("\n");
+            sb.Append("  ListType: ").Append(ListType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -115,6 +153,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExpirationDuration == other.ExpirationDuration ||
                     this.ExpirationDuration != null &&
                     this.ExpirationDuration.Equals(other.ExpirationDuration)
+                ) &&
+                (
+                    this.ListType == other.ListType ||
+                    this.ListType != null &&
+                    this.ListType.Equals(other.ListType)
                 );
         }
 
@@ -134,6 +177,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ExpirationDuration != null)
                     hash = hash * 59 + this.ExpirationDuration.GetHashCode();
+
+                if (this.ListType != null)
+                    hash = hash * 59 + this.ListType.GetHashCode();
 
                 return hash;
             }

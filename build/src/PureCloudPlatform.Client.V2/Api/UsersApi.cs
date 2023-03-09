@@ -819,6 +819,34 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<RoutingStatus> GetUserRoutingstatusWithHttpInfo (string userId);
 
         /// <summary>
+        /// Get skill groups for a user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="after">The cursor that points to the next page (optional)</param>
+        /// <param name="before">The cursor that points to the previous page (optional)</param>
+        /// <returns>UserSkillGroupEntityListing</returns>
+        UserSkillGroupEntityListing GetUserSkillgroups (string userId, int? pageSize = null, string after = null, string before = null);
+
+        /// <summary>
+        /// Get skill groups for a user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="after">The cursor that points to the next page (optional)</param>
+        /// <param name="before">The cursor that points to the previous page (optional)</param>
+        /// <returns>ApiResponse of UserSkillGroupEntityListing</returns>
+        ApiResponse<UserSkillGroupEntityListing> GetUserSkillgroupsWithHttpInfo (string userId, int? pageSize = null, string after = null, string before = null);
+
+        /// <summary>
         /// Get user state information.
         /// </summary>
         /// <remarks>
@@ -2819,6 +2847,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (RoutingStatus)</returns>
         System.Threading.Tasks.Task<ApiResponse<RoutingStatus>> GetUserRoutingstatusAsyncWithHttpInfo (string userId);
+
+        /// <summary>
+        /// Get skill groups for a user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="after">The cursor that points to the next page (optional)</param>
+        /// <param name="before">The cursor that points to the previous page (optional)</param>
+        /// <returns>Task of UserSkillGroupEntityListing</returns>
+        System.Threading.Tasks.Task<UserSkillGroupEntityListing> GetUserSkillgroupsAsync (string userId, int? pageSize = null, string after = null, string before = null);
+
+        /// <summary>
+        /// Get skill groups for a user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="after">The cursor that points to the next page (optional)</param>
+        /// <param name="before">The cursor that points to the previous page (optional)</param>
+        /// <returns>Task of ApiResponse (UserSkillGroupEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserSkillGroupEntityListing>> GetUserSkillgroupsAsyncWithHttpInfo (string userId, int? pageSize = null, string after = null, string before = null);
 
         /// <summary>
         /// Get user state information.
@@ -10640,6 +10696,215 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<RoutingStatus>(localVarStatusCode,
                 localVarHeaders,
                 (RoutingStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RoutingStatus)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get skill groups for a user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="after">The cursor that points to the next page (optional)</param>
+        /// <param name="before">The cursor that points to the previous page (optional)</param>
+        /// <returns>UserSkillGroupEntityListing</returns>
+        public UserSkillGroupEntityListing GetUserSkillgroups (string userId, int? pageSize = null, string after = null, string before = null)
+        {
+             ApiResponse<UserSkillGroupEntityListing> localVarResponse = GetUserSkillgroupsWithHttpInfo(userId, pageSize, after, before);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get skill groups for a user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="after">The cursor that points to the next page (optional)</param>
+        /// <param name="before">The cursor that points to the previous page (optional)</param>
+        /// <returns>ApiResponse of UserSkillGroupEntityListing</returns>
+        public ApiResponse< UserSkillGroupEntityListing > GetUserSkillgroupsWithHttpInfo (string userId, int? pageSize = null, string after = null, string before = null)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserSkillgroups");
+
+            var localVarPath = "/api/v2/users/{userId}/skillgroups";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserSkillgroups: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserSkillgroups: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserSkillGroupEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (UserSkillGroupEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserSkillGroupEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get skill groups for a user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="after">The cursor that points to the next page (optional)</param>
+        /// <param name="before">The cursor that points to the previous page (optional)</param>
+        /// <returns>Task of UserSkillGroupEntityListing</returns>
+        public async System.Threading.Tasks.Task<UserSkillGroupEntityListing> GetUserSkillgroupsAsync (string userId, int? pageSize = null, string after = null, string before = null)
+        {
+             ApiResponse<UserSkillGroupEntityListing> localVarResponse = await GetUserSkillgroupsAsyncWithHttpInfo(userId, pageSize, after, before);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get skill groups for a user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="after">The cursor that points to the next page (optional)</param>
+        /// <param name="before">The cursor that points to the previous page (optional)</param>
+        /// <returns>Task of ApiResponse (UserSkillGroupEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserSkillGroupEntityListing>> GetUserSkillgroupsAsyncWithHttpInfo (string userId, int? pageSize = null, string after = null, string before = null)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserSkillgroups");
+            
+
+            var localVarPath = "/api/v2/users/{userId}/skillgroups";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserSkillgroups: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserSkillgroups: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserSkillGroupEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (UserSkillGroupEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserSkillGroupEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

@@ -160,6 +160,9 @@ title: ViewFilter
 | **MyDashboard** | **bool?** | Filter to indicate the dashboard owned by the user. | [optional] |
 | **StationErrors** | **List&lt;string&gt;** | The list of agent errors that are related to station | [optional] |
 | **CanonicalContactIds** | **List&lt;string&gt;** | The canonical contact ids are used to filter the view | [optional] |
+| **AlertRuleIds** | **List&lt;string&gt;** | The list of Alert Rule IDs | [optional] |
+| **EvaluationFormContextIds** | **List&lt;string&gt;** | The list of Evaluation Form Context IDs | [optional] |
+| **EvaluationStatuses** | **List&lt;string&gt;** | The evaluation statuses that are used to filter the view | [optional] |
 {: class="table table-striped"}
 
 

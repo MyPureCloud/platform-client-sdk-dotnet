@@ -95,6 +95,7 @@ namespace PureCloudPlatform.Client.V2.Client
               {"v2.system.socket_closing", typeof(SystemMessageSystemMessage)},
               {"v2.system.token_revoked.{id}", typeof(SystemMessageSystemMessage)},
               {"v2.system.{id}.{id}", typeof(SystemMessageSystemMessage)},
+              {"v2.taskmanagement.workitems.queues.{id}", typeof(WorkitemsQueueEventsNotificationWorkitem)},
               {"v2.taskmanagement.workitems.users.{id}", typeof(WorkitemsUserEventsNotificationWorkitem)},
               {"v2.taskmanagement.workitems.{id}", typeof(WorkitemsEventsNotificationWorkitem)},
               {"v2.telephony.providers.edges.phones.{id}", typeof(PhoneChangeTopicPhone)},

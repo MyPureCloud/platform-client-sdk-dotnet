@@ -120,7 +120,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DncCodes">The list of dnc.com codes to be treated as DNC. Required if the dncSourceType is dnc.com..</param>
         /// <param name="LicenseId">A gryphon license number. Required if the dncSourceType is gryphon..</param>
         /// <param name="Division">The division this DncList belongs to..</param>
-        public DncListCreate(string Name = null, int? Version = null, DncSourceTypeEnum? DncSourceType = null, ContactMethodEnum? ContactMethod = null, string LoginId = null, string CampaignId = null, List<string> DncCodes = null, string LicenseId = null, DomainEntityRef Division = null)
+        /// <param name="CustomExclusionColumn">The column to evaluate exclusion against. Required if the dncSourceType is rds_custom..</param>
+        public DncListCreate(string Name = null, int? Version = null, DncSourceTypeEnum? DncSourceType = null, ContactMethodEnum? ContactMethod = null, string LoginId = null, string CampaignId = null, List<string> DncCodes = null, string LicenseId = null, DomainEntityRef Division = null, string CustomExclusionColumn = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -131,6 +132,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DncCodes = DncCodes;
             this.LicenseId = LicenseId;
             this.Division = Division;
+            this.CustomExclusionColumn = CustomExclusionColumn;
             
         }
         
@@ -249,6 +251,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The column to evaluate exclusion against. Required if the dncSourceType is rds_custom.
+        /// </summary>
+        /// <value>The column to evaluate exclusion against. Required if the dncSourceType is rds_custom.</value>
+        [DataMember(Name="customExclusionColumn", EmitDefaultValue=false)]
+        public string CustomExclusionColumn { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -279,6 +290,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DncCodes: ").Append(DncCodes).Append("\n");
             sb.Append("  LicenseId: ").Append(LicenseId).Append("\n");
             sb.Append("  Division: ").Append(Division).Append("\n");
+            sb.Append("  CustomExclusionColumn: ").Append(CustomExclusionColumn).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -391,6 +403,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Division.Equals(other.Division)
                 ) &&
                 (
+                    this.CustomExclusionColumn == other.CustomExclusionColumn ||
+                    this.CustomExclusionColumn != null &&
+                    this.CustomExclusionColumn.Equals(other.CustomExclusionColumn)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -449,6 +466,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Division != null)
                     hash = hash * 59 + this.Division.GetHashCode();
+
+                if (this.CustomExclusionColumn != null)
+                    hash = hash * 59 + this.CustomExclusionColumn.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

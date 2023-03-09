@@ -16,6 +16,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetUsersSearch**](SearchApi.html#getuserssearch) | **GET** /api/v2/users/search | Search users using the q64 value returned from a previous search |
 | [**GetVoicemailSearch**](SearchApi.html#getvoicemailsearch) | **GET** /api/v2/voicemail/search | Search voicemails using the q64 value returned from a previous search |
 | [**PostAnalyticsConversationsTranscriptsQuery**](SearchApi.html#postanalyticsconversationstranscriptsquery) | **POST** /api/v2/analytics/conversations/transcripts/query | Search resources. |
+| [**PostConversationsParticipantsAttributesSearch**](SearchApi.html#postconversationsparticipantsattributessearch) | **POST** /api/v2/conversations/participants/attributes/search | Search conversations |
 | [**PostDocumentationGknSearch**](SearchApi.html#postdocumentationgknsearch) | **POST** /api/v2/documentation/gkn/search | Search gkn documentation |
 | [**PostDocumentationSearch**](SearchApi.html#postdocumentationsearch) | **POST** /api/v2/documentation/search | Search documentation |
 | [**PostGroupsSearch**](SearchApi.html#postgroupssearch) | **POST** /api/v2/groups/search | Search groups |
@@ -615,6 +616,71 @@ namespace Example
 ### Return type
 
 [**AnalyticsConversationWithoutAttributesMultiGetResponse**](AnalyticsConversationWithoutAttributesMultiGetResponse.html)
+
+<a name="postconversationsparticipantsattributessearch"></a>
+
+## [**JsonCursorSearchResponse**](JsonCursorSearchResponse.html) PostConversationsParticipantsAttributesSearch (ConversationParticipantSearchRequest body)
+
+
+
+Search conversations
+
+
+
+Requires ANY permissions: 
+
+* conversation:participant:attributesview
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsParticipantsAttributesSearchExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SearchApi();
+            var body = new ConversationParticipantSearchRequest(); // ConversationParticipantSearchRequest | Search request options
+
+            try
+            { 
+                // Search conversations
+                JsonCursorSearchResponse result = apiInstance.PostConversationsParticipantsAttributesSearch(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SearchApi.PostConversationsParticipantsAttributesSearch: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ConversationParticipantSearchRequest**](ConversationParticipantSearchRequest.html)| Search request options |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**JsonCursorSearchResponse**](JsonCursorSearchResponse.html)
 
 <a name="postdocumentationgknsearch"></a>
 

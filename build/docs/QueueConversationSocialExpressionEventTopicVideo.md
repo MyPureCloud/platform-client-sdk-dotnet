@@ -26,7 +26,6 @@ title: QueueConversationSocialExpressionEventTopicVideo
 | **Wrapup** | [**QueueConversationSocialExpressionEventTopicWrapup**](QueueConversationSocialExpressionEventTopicWrapup.html) | Call wrap up or disposition data. | [optional] |
 | **AfterCallWork** | [**QueueConversationSocialExpressionEventTopicAfterCallWork**](QueueConversationSocialExpressionEventTopicAfterCallWork.html) | A communication&#39;s after-call work data. | [optional] |
 | **AfterCallWorkRequired** | **bool?** | Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested. | [optional] |
-| **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 {: class="table table-striped"}
 
 

@@ -19,12 +19,47 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class ChannelTopic :  IEquatable<ChannelTopic>
     {
         /// <summary>
+        /// Gets or Sets State
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum StateEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Permitted for "Permitted"
+            /// </summary>
+            [EnumMember(Value = "Permitted")]
+            Permitted,
+            
+            /// <summary>
+            /// Enum Rejected for "Rejected"
+            /// </summary>
+            [EnumMember(Value = "Rejected")]
+            Rejected
+        }
+        /// <summary>
+        /// Gets or Sets State
+        /// </summary>
+        [DataMember(Name="state", EmitDefaultValue=false)]
+        public StateEnum? State { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="ChannelTopic" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
-        public ChannelTopic(string Id = null)
+        /// <param name="State">State.</param>
+        /// <param name="RejectionReason">RejectionReason.</param>
+        public ChannelTopic(string Id = null, StateEnum? State = null, string RejectionReason = null)
         {
             this.Id = Id;
+            this.State = State;
+            this.RejectionReason = RejectionReason;
             
         }
         
@@ -35,6 +70,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+
+
+
+
+
+        /// <summary>
+        /// Gets or Sets RejectionReason
+        /// </summary>
+        [DataMember(Name="rejectionReason", EmitDefaultValue=false)]
+        public string RejectionReason { get; set; }
 
 
 
@@ -56,6 +101,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ChannelTopic {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  State: ").Append(State).Append("\n");
+            sb.Append("  RejectionReason: ").Append(RejectionReason).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -103,6 +150,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
+                    this.State == other.State ||
+                    this.State != null &&
+                    this.State.Equals(other.State)
+                ) &&
+                (
+                    this.RejectionReason == other.RejectionReason ||
+                    this.RejectionReason != null &&
+                    this.RejectionReason.Equals(other.RejectionReason)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -122,6 +179,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+
+                if (this.State != null)
+                    hash = hash * 59 + this.State.GetHashCode();
+
+                if (this.RejectionReason != null)
+                    hash = hash * 59 + this.RejectionReason.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

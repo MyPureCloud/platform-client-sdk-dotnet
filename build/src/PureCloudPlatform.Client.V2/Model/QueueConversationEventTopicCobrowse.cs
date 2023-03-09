@@ -279,8 +279,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Wrapup">Call wrap up or disposition data..</param>
         /// <param name="AfterCallWork">A communication's after-call work data..</param>
         /// <param name="AfterCallWorkRequired">Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public QueueConversationEventTopicCobrowse(StateEnum? State = null, InitialStateEnum? InitialState = null, DisconnectTypeEnum? DisconnectType = null, string Id = null, QueueConversationEventTopicAddress Self = null, string RoomId = null, string CobrowseSessionId = null, string CobrowseRole = null, List<string> Controlling = null, string ViewerUrl = null, string Provider = null, string ScriptId = null, string PeerId = null, DateTime? ProviderEventTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, QueueConversationEventTopicWrapup Wrapup = null, QueueConversationEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, Dictionary<string, Object> AdditionalProperties = null)
+        public QueueConversationEventTopicCobrowse(StateEnum? State = null, InitialStateEnum? InitialState = null, DisconnectTypeEnum? DisconnectType = null, string Id = null, QueueConversationEventTopicAddress Self = null, string RoomId = null, string CobrowseSessionId = null, string CobrowseRole = null, List<string> Controlling = null, string ViewerUrl = null, string Provider = null, string ScriptId = null, string PeerId = null, DateTime? ProviderEventTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, QueueConversationEventTopicWrapup Wrapup = null, QueueConversationEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null)
         {
             this.State = State;
             this.InitialState = InitialState;
@@ -301,7 +300,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Wrapup = Wrapup;
             this.AfterCallWork = AfterCallWork;
             this.AfterCallWorkRequired = AfterCallWorkRequired;
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
@@ -456,14 +454,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? AfterCallWorkRequired { get; set; }
 
 
-
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Dictionary<string, Object> AdditionalProperties { get; set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -492,7 +482,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             sb.Append("  AfterCallWork: ").Append(AfterCallWork).Append("\n");
             sb.Append("  AfterCallWorkRequired: ").Append(AfterCallWorkRequired).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -627,11 +616,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AfterCallWorkRequired == other.AfterCallWorkRequired ||
                     this.AfterCallWorkRequired != null &&
                     this.AfterCallWorkRequired.Equals(other.AfterCallWorkRequired)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
                 );
         }
 
@@ -702,9 +686,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AfterCallWorkRequired != null)
                     hash = hash * 59 + this.AfterCallWorkRequired.GetHashCode();
-
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
 
                 return hash;
             }
