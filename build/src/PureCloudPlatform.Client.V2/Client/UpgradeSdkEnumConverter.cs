@@ -82,6 +82,7 @@ namespace PureCloudPlatform.Client.V2.Client
                     if (attribute.Value == "OUTDATED_SDK_VERSION")
                     {
                         defaultValue = enumValue;
+                        stringsByValue[enumValue] = attribute.Value;
                     }
                     else
                     {

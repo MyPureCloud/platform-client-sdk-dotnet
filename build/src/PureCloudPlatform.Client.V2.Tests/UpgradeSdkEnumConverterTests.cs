@@ -41,6 +41,7 @@ namespace PureCloudPlatform.Client.V2.Tests
         [TestCase("AlErTiNg", ExpectedResult = TestEnum.Alerting)]
         [TestCase("delivery-success", ExpectedResult = TestEnum.Deliverysuccess)]
         [TestCase(nameof(TestEnum.Deliverysuccess), ExpectedResult = TestEnum.OutdatedSdkVersion)]
+        [TestCase("OUTDATED_SDK_VERSION", ExpectedResult = TestEnum.OutdatedSdkVersion)]
         [TestCase("foo", ExpectedResult = TestEnum.OutdatedSdkVersion)]
         [TestCase("", ExpectedResult = TestEnum.OutdatedSdkVersion)]
         public TestEnum TestReadString(string value)
@@ -63,6 +64,7 @@ namespace PureCloudPlatform.Client.V2.Tests
         }
 
         [TestCase(TestEnum.Deliverysuccess, ExpectedResult = "\"delivery-success\"")]
+        [TestCase(TestEnum.OutdatedSdkVersion, ExpectedResult = "\"OUTDATED_SDK_VERSION\"")]
         [TestCase(256, ExpectedResult = "")]
         public string TestWrite(TestEnum value)
         {
@@ -70,6 +72,7 @@ namespace PureCloudPlatform.Client.V2.Tests
         }
 
         [TestCase(TestEnum.Deliverysuccess, ExpectedResult = "\"delivery-success\"")]
+        [TestCase(TestEnum.OutdatedSdkVersion, ExpectedResult = "\"OUTDATED_SDK_VERSION\"")]
         [TestCase(null, ExpectedResult = "null")]
         public string TestWriteNullable(TestEnum? value)
         {

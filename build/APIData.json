@@ -6050,6 +6050,35 @@
     "return": "CallConversation",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetConversationsCallExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var conversationId = \"conversationId_example\";  // string | conversationId\n\n            try\n            { \n                // Get call conversation\n                CallConversation result = apiInstance.GetConversationsCall(conversationId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.GetConversationsCall: \" + e.Message );\n            }\n        }\n    }\n}"
   },
+  "getconversationscallparticipantcommunicationwrapup": {
+    "operationId": "getconversationscallparticipantcommunicationwrapup",
+    "functionName": "GetConversationsCallParticipantCommunicationWrapup",
+    "signature": "GetConversationsCallParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "provisional",
+        "type": "bool?",
+        "required": "false"
+      }
+    ],
+    "return": "AssignedWrapupCode",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetConversationsCallParticipantCommunicationWrapupExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var conversationId = \"conversationId_example\";  // string | conversationId\n            var participantId = \"participantId_example\";  // string | participantId\n            var communicationId = \"communicationId_example\";  // string | communicationId\n            var provisional = true;  // bool? | Indicates if the wrap-up code is provisional. (optional)  (default to false)\n\n            try\n            { \n                // Get the wrap-up for this conversation communication. \n                AssignedWrapupCode result = apiInstance.GetConversationsCallParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.GetConversationsCallParticipantCommunicationWrapup: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
   "getconversationscallparticipantwrapup": {
     "operationId": "getconversationscallparticipantwrapup",
     "functionName": "GetConversationsCallParticipantWrapup",
@@ -6106,6 +6135,35 @@
     ],
     "return": "CallbackConversation",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetConversationsCallbackExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var conversationId = \"conversationId_example\";  // string | conversationId\n\n            try\n            { \n                // Get callback conversation\n                CallbackConversation result = apiInstance.GetConversationsCallback(conversationId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.GetConversationsCallback: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getconversationscallbackparticipantcommunicationwrapup": {
+    "operationId": "getconversationscallbackparticipantcommunicationwrapup",
+    "functionName": "GetConversationsCallbackParticipantCommunicationWrapup",
+    "signature": "GetConversationsCallbackParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "provisional",
+        "type": "bool?",
+        "required": "false"
+      }
+    ],
+    "return": "AssignedWrapupCode",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetConversationsCallbackParticipantCommunicationWrapupExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var conversationId = \"conversationId_example\";  // string | conversationId\n            var participantId = \"participantId_example\";  // string | participantId\n            var communicationId = \"communicationId_example\";  // string | communicationId\n            var provisional = true;  // bool? | Indicates if the wrap-up code is provisional. (optional)  (default to false)\n\n            try\n            { \n                // Get the wrap-up for this conversation communication. \n                AssignedWrapupCode result = apiInstance.GetConversationsCallbackParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.GetConversationsCallbackParticipantCommunicationWrapup: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "getconversationscallbackparticipantwrapup": {
     "operationId": "getconversationscallbackparticipantwrapup",
@@ -6267,6 +6325,35 @@
     "return": "WebChatMessageEntityList",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetConversationsChatMessagesExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var conversationId = \"conversationId_example\";  // string | conversationId\n            var after = \"after_example\";  // string | If specified, get the messages chronologically after the id of this message (optional) \n            var before = \"before_example\";  // string | If specified, get the messages chronologically before the id of this message (optional) \n            var sortOrder = \"sortOrder_example\";  // string | Sort order (optional)  (default to ascending)\n            var maxResults = 56;  // int? | Limit the returned number of messages, up to a maximum of 100 (optional)  (default to 100)\n\n            try\n            { \n                // Get the messages of a chat conversation.\n                WebChatMessageEntityList result = apiInstance.GetConversationsChatMessages(conversationId, after, before, sortOrder, maxResults);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.GetConversationsChatMessages: \" + e.Message );\n            }\n        }\n    }\n}"
   },
+  "getconversationschatparticipantcommunicationwrapup": {
+    "operationId": "getconversationschatparticipantcommunicationwrapup",
+    "functionName": "GetConversationsChatParticipantCommunicationWrapup",
+    "signature": "GetConversationsChatParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "provisional",
+        "type": "bool?",
+        "required": "false"
+      }
+    ],
+    "return": "AssignedWrapupCode",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetConversationsChatParticipantCommunicationWrapupExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var conversationId = \"conversationId_example\";  // string | conversationId\n            var participantId = \"participantId_example\";  // string | participantId\n            var communicationId = \"communicationId_example\";  // string | communicationId\n            var provisional = true;  // bool? | Indicates if the wrap-up code is provisional. (optional)  (default to false)\n\n            try\n            { \n                // Get the wrap-up for this conversation communication. \n                AssignedWrapupCode result = apiInstance.GetConversationsChatParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.GetConversationsChatParticipantCommunicationWrapup: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
   "getconversationschatparticipantwrapup": {
     "operationId": "getconversationschatparticipantwrapup",
     "functionName": "GetConversationsChatParticipantWrapup",
@@ -6330,6 +6417,35 @@
     ],
     "return": "CobrowseConversation",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetConversationsCobrowsesessionExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var conversationId = \"conversationId_example\";  // string | conversationId\n\n            try\n            { \n                // Get cobrowse conversation\n                CobrowseConversation result = apiInstance.GetConversationsCobrowsesession(conversationId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.GetConversationsCobrowsesession: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getconversationscobrowsesessionparticipantcommunicationwrapup": {
+    "operationId": "getconversationscobrowsesessionparticipantcommunicationwrapup",
+    "functionName": "GetConversationsCobrowsesessionParticipantCommunicationWrapup",
+    "signature": "GetConversationsCobrowsesessionParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "provisional",
+        "type": "bool?",
+        "required": "false"
+      }
+    ],
+    "return": "AssignedWrapupCode",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetConversationsCobrowsesessionParticipantCommunicationWrapupExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var conversationId = \"conversationId_example\";  // string | conversationId\n            var participantId = \"participantId_example\";  // string | participantId\n            var communicationId = \"communicationId_example\";  // string | communicationId\n            var provisional = true;  // bool? | Indicates if the wrap-up code is provisional. (optional)  (default to false)\n\n            try\n            { \n                // Get the wrap-up for this conversation communication. \n                AssignedWrapupCode result = apiInstance.GetConversationsCobrowsesessionParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.GetConversationsCobrowsesessionParticipantCommunicationWrapup: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "getconversationscobrowsesessionparticipantwrapup": {
     "operationId": "getconversationscobrowsesessionparticipantwrapup",
@@ -6441,6 +6557,35 @@
     ],
     "return": "EmailMessage",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetConversationsEmailMessagesDraftExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var conversationId = \"conversationId_example\";  // string | conversationId\n\n            try\n            { \n                // Get conversation draft reply\n                EmailMessage result = apiInstance.GetConversationsEmailMessagesDraft(conversationId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.GetConversationsEmailMessagesDraft: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getconversationsemailparticipantcommunicationwrapup": {
+    "operationId": "getconversationsemailparticipantcommunicationwrapup",
+    "functionName": "GetConversationsEmailParticipantCommunicationWrapup",
+    "signature": "GetConversationsEmailParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "provisional",
+        "type": "bool?",
+        "required": "false"
+      }
+    ],
+    "return": "AssignedWrapupCode",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetConversationsEmailParticipantCommunicationWrapupExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var conversationId = \"conversationId_example\";  // string | conversationId\n            var participantId = \"participantId_example\";  // string | participantId\n            var communicationId = \"communicationId_example\";  // string | communicationId\n            var provisional = true;  // bool? | Indicates if the wrap-up code is provisional. (optional)  (default to false)\n\n            try\n            { \n                // Get the wrap-up for this conversation communication. \n                AssignedWrapupCode result = apiInstance.GetConversationsEmailParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.GetConversationsEmailParticipantCommunicationWrapup: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "getconversationsemailparticipantwrapup": {
     "operationId": "getconversationsemailparticipantwrapup",
@@ -6607,6 +6752,35 @@
     ],
     "return": "MessageData",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetConversationsMessageMessageExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var conversationId = \"conversationId_example\";  // string | conversationId\n            var messageId = \"messageId_example\";  // string | messageId\n            var useNormalizedMessage = true;  // bool? | If true, response removes deprecated fields (textBody, media, stickers) (optional)  (default to false)\n\n            try\n            { \n                // Get conversation message\n                MessageData result = apiInstance.GetConversationsMessageMessage(conversationId, messageId, useNormalizedMessage);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.GetConversationsMessageMessage: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getconversationsmessageparticipantcommunicationwrapup": {
+    "operationId": "getconversationsmessageparticipantcommunicationwrapup",
+    "functionName": "GetConversationsMessageParticipantCommunicationWrapup",
+    "signature": "GetConversationsMessageParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "provisional",
+        "type": "bool?",
+        "required": "false"
+      }
+    ],
+    "return": "AssignedWrapupCode",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetConversationsMessageParticipantCommunicationWrapupExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var conversationId = \"conversationId_example\";  // string | conversationId\n            var participantId = \"participantId_example\";  // string | participantId\n            var communicationId = \"communicationId_example\";  // string | communicationId\n            var provisional = true;  // bool? | Indicates if the wrap-up code is provisional. (optional)  (default to false)\n\n            try\n            { \n                // Get the wrap-up for this conversation communication. \n                AssignedWrapupCode result = apiInstance.GetConversationsMessageParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.GetConversationsMessageParticipantCommunicationWrapup: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "getconversationsmessageparticipantwrapup": {
     "operationId": "getconversationsmessageparticipantwrapup",
@@ -7034,6 +7208,100 @@
     "signature": "GetConversationsMessagingThreadingtimeline()",
     "return": "ConversationThreadingWindow",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetConversationsMessagingThreadingtimelineExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n\n            try\n            { \n                // Get conversation threading window timeline for each messaging type\n                ConversationThreadingWindow result = apiInstance.GetConversationsMessagingThreadingtimeline();\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.GetConversationsMessagingThreadingtimeline: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getconversationsscreenshareparticipantcommunicationwrapup": {
+    "operationId": "getconversationsscreenshareparticipantcommunicationwrapup",
+    "functionName": "GetConversationsScreenshareParticipantCommunicationWrapup",
+    "signature": "GetConversationsScreenshareParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "provisional",
+        "type": "bool?",
+        "required": "false"
+      }
+    ],
+    "return": "AssignedWrapupCode",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetConversationsScreenshareParticipantCommunicationWrapupExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var conversationId = \"conversationId_example\";  // string | conversationId\n            var participantId = \"participantId_example\";  // string | participantId\n            var communicationId = \"communicationId_example\";  // string | communicationId\n            var provisional = true;  // bool? | Indicates if the wrap-up code is provisional. (optional)  (default to false)\n\n            try\n            { \n                // Get the wrap-up for this conversation communication. \n                AssignedWrapupCode result = apiInstance.GetConversationsScreenshareParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.GetConversationsScreenshareParticipantCommunicationWrapup: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getconversationssettings": {
+    "operationId": "getconversationssettings",
+    "functionName": "GetConversationsSettings",
+    "signature": "GetConversationsSettings()",
+    "return": "Settings",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetConversationsSettingsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n\n            try\n            { \n                // Get Settings\n                Settings result = apiInstance.GetConversationsSettings();\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.GetConversationsSettings: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getconversationssocialparticipantcommunicationwrapup": {
+    "operationId": "getconversationssocialparticipantcommunicationwrapup",
+    "functionName": "GetConversationsSocialParticipantCommunicationWrapup",
+    "signature": "GetConversationsSocialParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "provisional",
+        "type": "bool?",
+        "required": "false"
+      }
+    ],
+    "return": "AssignedWrapupCode",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetConversationsSocialParticipantCommunicationWrapupExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var conversationId = \"conversationId_example\";  // string | conversationId\n            var participantId = \"participantId_example\";  // string | participantId\n            var communicationId = \"communicationId_example\";  // string | communicationId\n            var provisional = true;  // bool? | Indicates if the wrap-up code is provisional. (optional)  (default to false)\n\n            try\n            { \n                // Get the wrap-up for this conversation communication. \n                AssignedWrapupCode result = apiInstance.GetConversationsSocialParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.GetConversationsSocialParticipantCommunicationWrapup: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getconversationsvideoparticipantcommunicationwrapup": {
+    "operationId": "getconversationsvideoparticipantcommunicationwrapup",
+    "functionName": "GetConversationsVideoParticipantCommunicationWrapup",
+    "signature": "GetConversationsVideoParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "provisional",
+        "type": "bool?",
+        "required": "false"
+      }
+    ],
+    "return": "AssignedWrapupCode",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetConversationsVideoParticipantCommunicationWrapupExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var conversationId = \"conversationId_example\";  // string | conversationId\n            var participantId = \"participantId_example\";  // string | participantId\n            var communicationId = \"communicationId_example\";  // string | communicationId\n            var provisional = true;  // bool? | Indicates if the wrap-up code is provisional. (optional)  (default to false)\n\n            try\n            { \n                // Get the wrap-up for this conversation communication. \n                AssignedWrapupCode result = apiInstance.GetConversationsVideoParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.GetConversationsVideoParticipantCommunicationWrapup: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "patchconversationparticipant": {
     "operationId": "patchconversationparticipant",
@@ -7797,6 +8065,19 @@
     "return": "SupportedContent",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PatchConversationsMessagingSupportedcontentSupportedContentIdExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var supportedContentId = \"supportedContentId_example\";  // string | Supported Content ID\n            var body = new SupportedContent(); // SupportedContent | SupportedContent\n\n            try\n            { \n                // Update a supported content profile\n                SupportedContent result = apiInstance.PatchConversationsMessagingSupportedcontentSupportedContentId(supportedContentId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.PatchConversationsMessagingSupportedcontentSupportedContentId: \" + e.Message );\n            }\n        }\n    }\n}"
   },
+  "patchconversationssettings": {
+    "operationId": "patchconversationssettings",
+    "functionName": "PatchConversationsSettings",
+    "signature": "PatchConversationsSettings(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "Settings",
+        "required": "true"
+      }
+    ],
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PatchConversationsSettingsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var body = new Settings(); // Settings | Settings\n\n            try\n            { \n                // Update Settings\n                apiInstance.PatchConversationsSettings(body);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.PatchConversationsSettings: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
   "postconversationassign": {
     "operationId": "postconversationassign",
     "functionName": "PostConversationAssign",
@@ -7974,6 +8255,34 @@
     ],
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostConversationsCallParticipantCoachExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var conversationId = \"conversationId_example\";  // string | conversationId\n            var participantId = \"participantId_example\";  // string | participantId\n\n            try\n            { \n                // Listen in on the conversation from the point of view of a given participant while speaking to just the given participant.\n                apiInstance.PostConversationsCallParticipantCoach(conversationId, participantId);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.PostConversationsCallParticipantCoach: \" + e.Message );\n            }\n        }\n    }\n}"
   },
+  "postconversationscallparticipantcommunicationwrapup": {
+    "operationId": "postconversationscallparticipantcommunicationwrapup",
+    "functionName": "PostConversationsCallParticipantCommunicationWrapup",
+    "signature": "PostConversationsCallParticipantCommunicationWrapup(conversationId, participantId, communicationId, body)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ExtendedWrapup",
+        "required": "false"
+      }
+    ],
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostConversationsCallParticipantCommunicationWrapupExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var conversationId = \"conversationId_example\";  // string | conversationId\n            var participantId = \"participantId_example\";  // string | participantId\n            var communicationId = \"communicationId_example\";  // string | communicationId\n            var body = new ExtendedWrapup(); // ExtendedWrapup | Wrap-up (optional) \n\n            try\n            { \n                // Apply wrap-up for this conversation communication\n                apiInstance.PostConversationsCallParticipantCommunicationWrapup(conversationId, participantId, communicationId, body);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.PostConversationsCallParticipantCommunicationWrapup: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
   "postconversationscallparticipantconsult": {
     "operationId": "postconversationscallparticipantconsult",
     "functionName": "PostConversationsCallParticipantConsult",
@@ -8057,6 +8366,34 @@
     ],
     "return": "Conversation",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostConversationsCallParticipantsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var conversationId = \"conversationId_example\";  // string | conversationId\n            var body = new Conversation(); // Conversation | Conversation\n\n            try\n            { \n                // Add participants to a conversation\n                Conversation result = apiInstance.PostConversationsCallParticipants(conversationId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.PostConversationsCallParticipants: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "postconversationscallbackparticipantcommunicationwrapup": {
+    "operationId": "postconversationscallbackparticipantcommunicationwrapup",
+    "functionName": "PostConversationsCallbackParticipantCommunicationWrapup",
+    "signature": "PostConversationsCallbackParticipantCommunicationWrapup(conversationId, participantId, communicationId, body)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ExtendedWrapup",
+        "required": "false"
+      }
+    ],
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostConversationsCallbackParticipantCommunicationWrapupExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var conversationId = \"conversationId_example\";  // string | conversationId\n            var participantId = \"participantId_example\";  // string | participantId\n            var communicationId = \"communicationId_example\";  // string | communicationId\n            var body = new ExtendedWrapup(); // ExtendedWrapup | Wrap-up (optional) \n\n            try\n            { \n                // Apply wrap-up for this conversation communication\n                apiInstance.PostConversationsCallbackParticipantCommunicationWrapup(conversationId, participantId, communicationId, body);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.PostConversationsCallbackParticipantCommunicationWrapup: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "postconversationscallbackparticipantreplace": {
     "operationId": "postconversationscallbackparticipantreplace",
@@ -8179,6 +8516,34 @@
     "return": "WebChatTyping",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostConversationsChatCommunicationTypingExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var conversationId = \"conversationId_example\";  // string | conversationId\n            var communicationId = \"communicationId_example\";  // string | communicationId\n\n            try\n            { \n                // Send a typing-indicator on behalf of a communication in a chat conversation.\n                WebChatTyping result = apiInstance.PostConversationsChatCommunicationTyping(conversationId, communicationId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.PostConversationsChatCommunicationTyping: \" + e.Message );\n            }\n        }\n    }\n}"
   },
+  "postconversationschatparticipantcommunicationwrapup": {
+    "operationId": "postconversationschatparticipantcommunicationwrapup",
+    "functionName": "PostConversationsChatParticipantCommunicationWrapup",
+    "signature": "PostConversationsChatParticipantCommunicationWrapup(conversationId, participantId, communicationId, body)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ExtendedWrapup",
+        "required": "false"
+      }
+    ],
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostConversationsChatParticipantCommunicationWrapupExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var conversationId = \"conversationId_example\";  // string | conversationId\n            var participantId = \"participantId_example\";  // string | participantId\n            var communicationId = \"communicationId_example\";  // string | communicationId\n            var body = new ExtendedWrapup(); // ExtendedWrapup | Wrap-up (optional) \n\n            try\n            { \n                // Apply wrap-up for this conversation communication\n                apiInstance.PostConversationsChatParticipantCommunicationWrapup(conversationId, participantId, communicationId, body);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.PostConversationsChatParticipantCommunicationWrapup: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
   "postconversationschatparticipantreplace": {
     "operationId": "postconversationschatparticipantreplace",
     "functionName": "PostConversationsChatParticipantReplace",
@@ -8215,6 +8580,34 @@
     ],
     "return": "ChatConversation",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostConversationsChatsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var body = new CreateWebChatRequest(); // CreateWebChatRequest | Create web chat request\n\n            try\n            { \n                // Create a web chat conversation\n                ChatConversation result = apiInstance.PostConversationsChats(body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.PostConversationsChats: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "postconversationscobrowsesessionparticipantcommunicationwrapup": {
+    "operationId": "postconversationscobrowsesessionparticipantcommunicationwrapup",
+    "functionName": "PostConversationsCobrowsesessionParticipantCommunicationWrapup",
+    "signature": "PostConversationsCobrowsesessionParticipantCommunicationWrapup(conversationId, participantId, communicationId, body)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ExtendedWrapup",
+        "required": "false"
+      }
+    ],
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostConversationsCobrowsesessionParticipantCommunicationWrapupExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var conversationId = \"conversationId_example\";  // string | conversationId\n            var participantId = \"participantId_example\";  // string | participantId\n            var communicationId = \"communicationId_example\";  // string | communicationId\n            var body = new ExtendedWrapup(); // ExtendedWrapup | Wrap-up (optional) \n\n            try\n            { \n                // Apply wrap-up for this conversation communication\n                apiInstance.PostConversationsCobrowsesessionParticipantCommunicationWrapup(conversationId, participantId, communicationId, body);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.PostConversationsCobrowsesessionParticipantCommunicationWrapup: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "postconversationscobrowsesessionparticipantreplace": {
     "operationId": "postconversationscobrowsesessionparticipantreplace",
@@ -8295,6 +8688,34 @@
     ],
     "return": "EmailMessage",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostConversationsEmailMessagesDraftAttachmentsCopyExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var conversationId = \"conversationId_example\";  // string | conversationId\n            var body = new CopyAttachmentsRequest(); // CopyAttachmentsRequest | Copy Attachment Request\n\n            try\n            { \n                // Copy attachments from an email message to the current draft.\n                EmailMessage result = apiInstance.PostConversationsEmailMessagesDraftAttachmentsCopy(conversationId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.PostConversationsEmailMessagesDraftAttachmentsCopy: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "postconversationsemailparticipantcommunicationwrapup": {
+    "operationId": "postconversationsemailparticipantcommunicationwrapup",
+    "functionName": "PostConversationsEmailParticipantCommunicationWrapup",
+    "signature": "PostConversationsEmailParticipantCommunicationWrapup(conversationId, participantId, communicationId, body)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ExtendedWrapup",
+        "required": "false"
+      }
+    ],
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostConversationsEmailParticipantCommunicationWrapupExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var conversationId = \"conversationId_example\";  // string | conversationId\n            var participantId = \"participantId_example\";  // string | participantId\n            var communicationId = \"communicationId_example\";  // string | communicationId\n            var body = new ExtendedWrapup(); // ExtendedWrapup | Wrap-up (optional) \n\n            try\n            { \n                // Apply wrap-up for this conversation communication\n                apiInstance.PostConversationsEmailParticipantCommunicationWrapup(conversationId, participantId, communicationId, body);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.PostConversationsEmailParticipantCommunicationWrapup: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "postconversationsemailparticipantreplace": {
     "operationId": "postconversationsemailparticipantreplace",
@@ -8484,6 +8905,34 @@
     "return": "TextMessageListing",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostConversationsMessageMessagesBulkExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var conversationId = \"conversationId_example\";  // string | \n            var useNormalizedMessage = true;  // bool? | If true, response removes deprecated fields (textBody, media, stickers) (optional)  (default to false)\n            var body = new List<string>(); // List<string> | messageIds (optional) \n\n            try\n            { \n                // Get messages in batch\n                TextMessageListing result = apiInstance.PostConversationsMessageMessagesBulk(conversationId, useNormalizedMessage, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.PostConversationsMessageMessagesBulk: \" + e.Message );\n            }\n        }\n    }\n}"
   },
+  "postconversationsmessageparticipantcommunicationwrapup": {
+    "operationId": "postconversationsmessageparticipantcommunicationwrapup",
+    "functionName": "PostConversationsMessageParticipantCommunicationWrapup",
+    "signature": "PostConversationsMessageParticipantCommunicationWrapup(conversationId, participantId, communicationId, body)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ExtendedWrapup",
+        "required": "false"
+      }
+    ],
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostConversationsMessageParticipantCommunicationWrapupExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var conversationId = \"conversationId_example\";  // string | conversationId\n            var participantId = \"participantId_example\";  // string | participantId\n            var communicationId = \"communicationId_example\";  // string | communicationId\n            var body = new ExtendedWrapup(); // ExtendedWrapup | Wrap-up (optional) \n\n            try\n            { \n                // Apply wrap-up for this conversation communication\n                apiInstance.PostConversationsMessageParticipantCommunicationWrapup(conversationId, participantId, communicationId, body);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.PostConversationsMessageParticipantCommunicationWrapup: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
   "postconversationsmessageparticipantreplace": {
     "operationId": "postconversationsmessageparticipantreplace",
     "functionName": "PostConversationsMessageParticipantReplace",
@@ -8646,6 +9095,90 @@
     ],
     "return": "JsonCursorSearchResponse",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostConversationsParticipantsAttributesSearchExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new SearchApi();\n            var body = new ConversationParticipantSearchRequest(); // ConversationParticipantSearchRequest | Search request options\n\n            try\n            { \n                // Search conversations\n                JsonCursorSearchResponse result = apiInstance.PostConversationsParticipantsAttributesSearch(body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Search.PostConversationsParticipantsAttributesSearch: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "postconversationsscreenshareparticipantcommunicationwrapup": {
+    "operationId": "postconversationsscreenshareparticipantcommunicationwrapup",
+    "functionName": "PostConversationsScreenshareParticipantCommunicationWrapup",
+    "signature": "PostConversationsScreenshareParticipantCommunicationWrapup(conversationId, participantId, communicationId, body)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ExtendedWrapup",
+        "required": "false"
+      }
+    ],
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostConversationsScreenshareParticipantCommunicationWrapupExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var conversationId = \"conversationId_example\";  // string | conversationId\n            var participantId = \"participantId_example\";  // string | participantId\n            var communicationId = \"communicationId_example\";  // string | communicationId\n            var body = new ExtendedWrapup(); // ExtendedWrapup | Wrap-up (optional) \n\n            try\n            { \n                // Apply wrap-up for this conversation communication\n                apiInstance.PostConversationsScreenshareParticipantCommunicationWrapup(conversationId, participantId, communicationId, body);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.PostConversationsScreenshareParticipantCommunicationWrapup: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "postconversationssocialparticipantcommunicationwrapup": {
+    "operationId": "postconversationssocialparticipantcommunicationwrapup",
+    "functionName": "PostConversationsSocialParticipantCommunicationWrapup",
+    "signature": "PostConversationsSocialParticipantCommunicationWrapup(conversationId, participantId, communicationId, body)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ExtendedWrapup",
+        "required": "false"
+      }
+    ],
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostConversationsSocialParticipantCommunicationWrapupExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var conversationId = \"conversationId_example\";  // string | conversationId\n            var participantId = \"participantId_example\";  // string | participantId\n            var communicationId = \"communicationId_example\";  // string | communicationId\n            var body = new ExtendedWrapup(); // ExtendedWrapup | Wrap-up (optional) \n\n            try\n            { \n                // Apply wrap-up for this conversation communication\n                apiInstance.PostConversationsSocialParticipantCommunicationWrapup(conversationId, participantId, communicationId, body);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.PostConversationsSocialParticipantCommunicationWrapup: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "postconversationsvideoparticipantcommunicationwrapup": {
+    "operationId": "postconversationsvideoparticipantcommunicationwrapup",
+    "functionName": "PostConversationsVideoParticipantCommunicationWrapup",
+    "signature": "PostConversationsVideoParticipantCommunicationWrapup(conversationId, participantId, communicationId, body)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "communicationId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ExtendedWrapup",
+        "required": "false"
+      }
+    ],
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostConversationsVideoParticipantCommunicationWrapupExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ConversationsApi();\n            var conversationId = \"conversationId_example\";  // string | conversationId\n            var participantId = \"participantId_example\";  // string | participantId\n            var communicationId = \"communicationId_example\";  // string | communicationId\n            var body = new ExtendedWrapup(); // ExtendedWrapup | Wrap-up (optional) \n\n            try\n            { \n                // Apply wrap-up for this conversation communication\n                apiInstance.PostConversationsVideoParticipantCommunicationWrapup(conversationId, participantId, communicationId, body);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Conversations.PostConversationsVideoParticipantCommunicationWrapup: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "putconversationparticipantflaggedreason": {
     "operationId": "putconversationparticipantflaggedreason",

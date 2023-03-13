@@ -50,10 +50,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Type">The entity type to target.</param>
         /// <param name="Id">The ID of the entity to target.</param>
-        public TriggerTarget(TypeEnum? Type = null, string Id = null)
+        /// <param name="WorkflowTargetSettings">Optional config for the target. Until the feature gets enabled will always operate in TopLevelPrimitives mode..</param>
+        public TriggerTarget(TypeEnum? Type = null, string Id = null, WorkflowTargetSettings WorkflowTargetSettings = null)
         {
             this.Type = Type;
             this.Id = Id;
+            this.WorkflowTargetSettings = WorkflowTargetSettings;
             
         }
         
@@ -69,6 +71,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Id { get; set; }
 
 
+
+        /// <summary>
+        /// Optional config for the target. Until the feature gets enabled will always operate in TopLevelPrimitives mode.
+        /// </summary>
+        /// <value>Optional config for the target. Until the feature gets enabled will always operate in TopLevelPrimitives mode.</value>
+        [DataMember(Name="workflowTargetSettings", EmitDefaultValue=false)]
+        public WorkflowTargetSettings WorkflowTargetSettings { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -80,6 +91,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  WorkflowTargetSettings: ").Append(WorkflowTargetSettings).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -129,6 +141,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.WorkflowTargetSettings == other.WorkflowTargetSettings ||
+                    this.WorkflowTargetSettings != null &&
+                    this.WorkflowTargetSettings.Equals(other.WorkflowTargetSettings)
                 );
         }
 
@@ -148,6 +165,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+
+                if (this.WorkflowTargetSettings != null)
+                    hash = hash * 59 + this.WorkflowTargetSettings.GetHashCode();
 
                 return hash;
             }
