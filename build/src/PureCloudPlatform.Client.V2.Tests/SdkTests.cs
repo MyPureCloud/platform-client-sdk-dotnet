@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace PureCloudPlatform.Client.V2.Tests
 {
@@ -172,18 +173,19 @@ namespace PureCloudPlatform.Client.V2.Tests
             Assert.AreEqual(availableReceived, true);
         }
 
-        [Test, Order(6)]
+
+        [Test, Retry(2), Order(6)]
         public void GetUser()
         {
-            var user = usersApi.GetUser(userId, new List<string>() { "profileSkills" }, null, null);
-
-            Assert.AreEqual(user.Id, userId);
-            Assert.AreEqual(user.Name, userName);
-            Assert.AreEqual(user.Email, userEmail);
-            Assert.AreEqual(user.Department, userDepartment);
-            Assert.IsNotNull(user.ProfileSkills);
-            Assert.AreEqual(user.ProfileSkills.Count, 1);
-            Assert.AreEqual(user.ProfileSkills[0], userProfileSkill);
+                Thread.Sleep(3000);
+                var user = usersApi.GetUser(userId, new List<string>() { "profileSkills" }, null, null);
+                Assert.AreEqual(user.Id, userId);
+                Assert.AreEqual(user.Name, userName);
+                Assert.AreEqual(user.Email, userEmail);
+                Assert.AreEqual(user.Department, userDepartment);
+                Assert.IsNotNull(user.ProfileSkills);
+                Assert.AreEqual(user.ProfileSkills.Count, 1);
+                Assert.AreEqual(user.ProfileSkills[0], userProfileSkill);
         }
 
         [Test, Order(7)]

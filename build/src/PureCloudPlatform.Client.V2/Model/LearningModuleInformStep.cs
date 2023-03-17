@@ -55,7 +55,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Richtext for "RichText"
             /// </summary>
             [EnumMember(Value = "RichText")]
-            Richtext
+            Richtext,
+            
+            /// <summary>
+            /// Enum Scorm for "Scorm"
+            /// </summary>
+            [EnumMember(Value = "Scorm")]
+            Scorm
         }
         /// <summary>
         /// The learning module inform step type

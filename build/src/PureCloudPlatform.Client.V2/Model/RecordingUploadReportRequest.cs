@@ -49,7 +49,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Failure for "Failure"
             /// </summary>
             [EnumMember(Value = "Failure")]
-            Failure
+            Failure,
+            
+            /// <summary>
+            /// Enum Waitforconversation for "WaitForConversation"
+            /// </summary>
+            [EnumMember(Value = "WaitForConversation")]
+            Waitforconversation
         }
         /// <summary>
         /// Report will include uploads with this status

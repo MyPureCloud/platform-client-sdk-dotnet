@@ -19,16 +19,57 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class Signature :  IEquatable<Signature>
     {
         /// <summary>
+        /// The configuration to indicate when the signature of a conversation has to be included
+        /// </summary>
+        /// <value>The configuration to indicate when the signature of a conversation has to be included</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum InclusionTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Draft for "Draft"
+            /// </summary>
+            [EnumMember(Value = "Draft")]
+            Draft,
+            
+            /// <summary>
+            /// Enum Send for "Send"
+            /// </summary>
+            [EnumMember(Value = "Send")]
+            Send,
+            
+            /// <summary>
+            /// Enum Sendonce for "SendOnce"
+            /// </summary>
+            [EnumMember(Value = "SendOnce")]
+            Sendonce
+        }
+        /// <summary>
+        /// The configuration to indicate when the signature of a conversation has to be included
+        /// </summary>
+        /// <value>The configuration to indicate when the signature of a conversation has to be included</value>
+        [DataMember(Name="inclusionType", EmitDefaultValue=false)]
+        public InclusionTypeEnum? InclusionType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="Signature" /> class.
         /// </summary>
         /// <param name="Enabled">A toggle to enable the signature on email send..</param>
         /// <param name="CannedResponseId">The identifier referring to an email signature canned response..</param>
         /// <param name="AlwaysIncluded">A toggle that defines if a signature is always included or only set on the first email in an email chain..</param>
-        public Signature(bool? Enabled = null, string CannedResponseId = null, bool? AlwaysIncluded = null)
+        /// <param name="InclusionType">The configuration to indicate when the signature of a conversation has to be included.</param>
+        public Signature(bool? Enabled = null, string CannedResponseId = null, bool? AlwaysIncluded = null, InclusionTypeEnum? InclusionType = null)
         {
             this.Enabled = Enabled;
             this.CannedResponseId = CannedResponseId;
             this.AlwaysIncluded = AlwaysIncluded;
+            this.InclusionType = InclusionType;
             
         }
         
@@ -60,6 +101,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? AlwaysIncluded { get; set; }
 
 
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -72,6 +115,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  CannedResponseId: ").Append(CannedResponseId).Append("\n");
             sb.Append("  AlwaysIncluded: ").Append(AlwaysIncluded).Append("\n");
+            sb.Append("  InclusionType: ").Append(InclusionType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -126,6 +170,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AlwaysIncluded == other.AlwaysIncluded ||
                     this.AlwaysIncluded != null &&
                     this.AlwaysIncluded.Equals(other.AlwaysIncluded)
+                ) &&
+                (
+                    this.InclusionType == other.InclusionType ||
+                    this.InclusionType != null &&
+                    this.InclusionType.Equals(other.InclusionType)
                 );
         }
 
@@ -148,6 +197,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AlwaysIncluded != null)
                     hash = hash * 59 + this.AlwaysIncluded.GetHashCode();
+
+                if (this.InclusionType != null)
+                    hash = hash * 59 + this.InclusionType.GetHashCode();
 
                 return hash;
             }

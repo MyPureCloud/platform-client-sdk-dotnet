@@ -10,6 +10,7 @@ title: Signature
 | **Enabled** | **bool?** | A toggle to enable the signature on email send. | [optional] |
 | **CannedResponseId** | **string** | The identifier referring to an email signature canned response. | [optional] |
 | **AlwaysIncluded** | **bool?** | A toggle that defines if a signature is always included or only set on the first email in an email chain. | [optional] |
+| **InclusionType** | **string** | The configuration to indicate when the signature of a conversation has to be included | [optional] |
 {: class="table table-striped"}
 
 

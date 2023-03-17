@@ -1531,7 +1531,10 @@ docs/EvaluationQuestionGroupScore.md
 docs/EvaluationQuestionScore.md
 docs/EvaluationResponse.md
 docs/EvaluationScoringSet.md
+docs/EvaluationSettings.md
+docs/EvaluationSettingsAssignee.md
 docs/EvaluationSource.md
+docs/EvaluationVersion.md
 docs/EvaluatorActivity.md
 docs/EvaluatorActivityEntityListing.md
 docs/EventCoBrowse.md
@@ -2289,6 +2292,7 @@ docs/GetOutboundSequence-example.txt
 docs/GetOutboundSequences-example.txt
 docs/GetOutboundSettings-example.txt
 docs/GetOutboundWrapupcodemappings-example.txt
+docs/GetPresenceSettings-example.txt
 docs/GetPresenceSource-example.txt
 docs/GetPresenceSources-example.txt
 docs/GetPresenceUserPrimarysource-example.txt
@@ -3344,6 +3348,7 @@ docs/OverallBestPointsItem.md
 docs/PINConfiguration.md
 docs/Page.md
 docs/PagedNamespaceListing.md
+docs/PagelessDomainEntityListingEvaluationVersion.md
 docs/PagingSpec.md
 docs/Parameter.md
 docs/ParsedCertificate.md
@@ -3970,7 +3975,6 @@ docs/PostTelephonyProvidersEdgesPhonebasesettings-example.txt
 docs/PostTelephonyProvidersEdgesPhones-example.txt
 docs/PostTelephonyProvidersEdgesPhonesReboot-example.txt
 docs/PostTelephonyProvidersEdgesSiteOutboundroutes-example.txt
-docs/PostTelephonyProvidersEdgesSiteRebalance-example.txt
 docs/PostTelephonyProvidersEdgesSites-example.txt
 docs/PostTelephonyProvidersEdgesTrunkbasesettings-example.txt
 docs/PostTelephonySiptracesDownload-example.txt
@@ -4091,6 +4095,7 @@ docs/PresenceDetailQueryFilter.md
 docs/PresenceDetailQueryPredicate.md
 docs/PresenceEventOrganizationPresence.md
 docs/PresenceEventUserPresence.md
+docs/PresenceSettings.md
 docs/ProcessAutomationApi.json
 docs/ProcessAutomationApi.md
 docs/ProcessScheduleUpdateUploadRequest.md
@@ -4237,6 +4242,7 @@ docs/PutOutboundSchedulesMessagingcampaign-example.txt
 docs/PutOutboundSchedulesSequence-example.txt
 docs/PutOutboundSequence-example.txt
 docs/PutOutboundWrapupcodemappings-example.txt
+docs/PutPresenceSettings-example.txt
 docs/PutPresenceSource-example.txt
 docs/PutPresenceUserPrimarysource-example.txt
 docs/PutPresencedefinition-example.txt
@@ -4682,6 +4688,7 @@ docs/ResponseSetEntityListing.md
 docs/ResponseSubstitution.md
 docs/ResponseText.md
 docs/RestErrorDetail.md
+docs/RestorePresenceSettings.md
 docs/ResultCounters.md
 docs/RetentionDuration.md
 docs/ReverseWhitepagesLookupResult.md
@@ -4828,6 +4835,7 @@ docs/SessionListing.md
 docs/SessionSegmentAssignment.md
 docs/SetContentTemplateActionSettings.md
 docs/SetRecordingState.md
+docs/SetSmsPhoneNumberActionSettings.md
 docs/SetTimeOffLimitValuesRequest.md
 docs/SetUuiDataRequest.md
 docs/SetWrapperDayOfWeek.md
@@ -4897,6 +4905,7 @@ docs/SpeechTextAnalyticsApi.json
 docs/SpeechTextAnalyticsApi.md
 docs/SpeechTextAnalyticsSettingsRequest.md
 docs/SpeechTextAnalyticsSettingsResponse.md
+docs/StarrableDivision.md
 docs/StatEventCampaignTopicIntervalMetrics.md
 docs/StatEventCampaignTopicMetricStats.md
 docs/StatEventCampaignTopicStatsNotification.md
@@ -5680,10 +5689,12 @@ docs/WrapUpCodeReference.md
 docs/Wrapup.md
 docs/WrapupCode.md
 docs/WrapupCodeEntityListing.md
+docs/WrapupCodeRequest.md
 docs/WrapupDetailEventTopicWrapupEvent.md
 docs/WritableDialerContact.md
 docs/WritableDivision.md
 docs/WritableEntity.md
+docs/WritableStarrableDivision.md
 git_push.sh
 src/PureCloudPlatform.Client.V2.Tests/ApiClientTests.cs
 src/PureCloudPlatform.Client.V2.Tests/Properties/AssemblyInfo.cs
@@ -7041,7 +7052,10 @@ src/PureCloudPlatform.Client.V2/Model/EvaluationQuestionGroupScore.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationQuestionScore.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationResponse.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationScoringSet.cs
+src/PureCloudPlatform.Client.V2/Model/EvaluationSettings.cs
+src/PureCloudPlatform.Client.V2/Model/EvaluationSettingsAssignee.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationSource.cs
+src/PureCloudPlatform.Client.V2/Model/EvaluationVersion.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluatorActivity.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluatorActivityEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/EventCoBrowse.cs
@@ -7830,6 +7844,7 @@ src/PureCloudPlatform.Client.V2/Model/OverallBestPointsItem.cs
 src/PureCloudPlatform.Client.V2/Model/PINConfiguration.cs
 src/PureCloudPlatform.Client.V2/Model/Page.cs
 src/PureCloudPlatform.Client.V2/Model/PagedNamespaceListing.cs
+src/PureCloudPlatform.Client.V2/Model/PagelessDomainEntityListingEvaluationVersion.cs
 src/PureCloudPlatform.Client.V2/Model/PagingSpec.cs
 src/PureCloudPlatform.Client.V2/Model/Parameter.cs
 src/PureCloudPlatform.Client.V2/Model/ParsedCertificate.cs
@@ -7934,6 +7949,7 @@ src/PureCloudPlatform.Client.V2/Model/PresenceDetailQueryFilter.cs
 src/PureCloudPlatform.Client.V2/Model/PresenceDetailQueryPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/PresenceEventOrganizationPresence.cs
 src/PureCloudPlatform.Client.V2/Model/PresenceEventUserPresence.cs
+src/PureCloudPlatform.Client.V2/Model/PresenceSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ProcessScheduleUpdateUploadRequest.cs
 src/PureCloudPlatform.Client.V2/Model/Program.cs
 src/PureCloudPlatform.Client.V2/Model/ProgramJob.cs
@@ -8319,6 +8335,7 @@ src/PureCloudPlatform.Client.V2/Model/ResponseSetEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/ResponseSubstitution.cs
 src/PureCloudPlatform.Client.V2/Model/ResponseText.cs
 src/PureCloudPlatform.Client.V2/Model/RestErrorDetail.cs
+src/PureCloudPlatform.Client.V2/Model/RestorePresenceSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ResultCounters.cs
 src/PureCloudPlatform.Client.V2/Model/RetentionDuration.cs
 src/PureCloudPlatform.Client.V2/Model/ReverseWhitepagesLookupResult.cs
@@ -8457,6 +8474,7 @@ src/PureCloudPlatform.Client.V2/Model/SessionListing.cs
 src/PureCloudPlatform.Client.V2/Model/SessionSegmentAssignment.cs
 src/PureCloudPlatform.Client.V2/Model/SetContentTemplateActionSettings.cs
 src/PureCloudPlatform.Client.V2/Model/SetRecordingState.cs
+src/PureCloudPlatform.Client.V2/Model/SetSmsPhoneNumberActionSettings.cs
 src/PureCloudPlatform.Client.V2/Model/SetTimeOffLimitValuesRequest.cs
 src/PureCloudPlatform.Client.V2/Model/SetUuiDataRequest.cs
 src/PureCloudPlatform.Client.V2/Model/SetWrapperDayOfWeek.cs
@@ -8524,6 +8542,7 @@ src/PureCloudPlatform.Client.V2/Model/SourceEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/SourcePlanningGroupRequest.cs
 src/PureCloudPlatform.Client.V2/Model/SpeechTextAnalyticsSettingsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/SpeechTextAnalyticsSettingsResponse.cs
+src/PureCloudPlatform.Client.V2/Model/StarrableDivision.cs
 src/PureCloudPlatform.Client.V2/Model/StatEventCampaignTopicIntervalMetrics.cs
 src/PureCloudPlatform.Client.V2/Model/StatEventCampaignTopicMetricStats.cs
 src/PureCloudPlatform.Client.V2/Model/StatEventCampaignTopicStatsNotification.cs
@@ -9271,10 +9290,12 @@ src/PureCloudPlatform.Client.V2/Model/WrapUpCodeReference.cs
 src/PureCloudPlatform.Client.V2/Model/Wrapup.cs
 src/PureCloudPlatform.Client.V2/Model/WrapupCode.cs
 src/PureCloudPlatform.Client.V2/Model/WrapupCodeEntityListing.cs
+src/PureCloudPlatform.Client.V2/Model/WrapupCodeRequest.cs
 src/PureCloudPlatform.Client.V2/Model/WrapupDetailEventTopicWrapupEvent.cs
 src/PureCloudPlatform.Client.V2/Model/WritableDialerContact.cs
 src/PureCloudPlatform.Client.V2/Model/WritableDivision.cs
 src/PureCloudPlatform.Client.V2/Model/WritableEntity.cs
+src/PureCloudPlatform.Client.V2/Model/WritableStarrableDivision.cs
 src/PureCloudPlatform.Client.V2/Properties/AssemblyInfo.cs
 src/PureCloudPlatform.Client.V2/PureCloudPlatform.Client.V2.csproj
 src/PureCloudPlatform.Client.V2/packages.config

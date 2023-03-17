@@ -550,6 +550,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Telephonyconfiguration,
             
             /// <summary>
+            /// Enum Users for "users"
+            /// </summary>
+            [EnumMember(Value = "users")]
+            Users,
+            
+            /// <summary>
             /// Enum Webdeployments for "web.deployments"
             /// </summary>
             [EnumMember(Value = "web.deployments")]

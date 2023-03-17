@@ -4962,7 +4962,7 @@ namespace Example
 
 <a name="getroutingwrapupcodes"></a>
 
-## [**WrapupCodeEntityListing**](WrapupCodeEntityListing.html) GetRoutingWrapupcodes (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null)
+## [**WrapupCodeEntityListing**](WrapupCodeEntityListing.html) GetRoutingWrapupcodes (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> divisionId = null)
 
 
 
@@ -5001,11 +5001,12 @@ namespace Example
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ascending)
             var name = name_example;  // string | Wrapup code's name ('Sort by' param is ignored unless this field is provided) (optional) 
+            var divisionId = new List<string>(); // List<string> | Filter by division ID(s) (optional) 
 
             try
             { 
                 // Get list of wrapup codes.
-                WrapupCodeEntityListing result = apiInstance.GetRoutingWrapupcodes(pageSize, pageNumber, sortBy, sortOrder, name);
+                WrapupCodeEntityListing result = apiInstance.GetRoutingWrapupcodes(pageSize, pageNumber, sortBy, sortOrder, name, divisionId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5027,6 +5028,7 @@ namespace Example
 | **sortBy** | **string**| Sort by | [optional] [default to name]<br />**Values**: name, id |
 | **sortOrder** | **string**| Sort order | [optional] [default to ascending]<br />**Values**: ascending, descending |
 | **name** | **string**| Wrapup code&#39;s name (&#39;Sort by&#39; param is ignored unless this field is provided) | [optional]  |
+| **divisionId** | [**List<string>**](string.html)| Filter by division ID(s) | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -7596,7 +7598,7 @@ namespace Example
 
 <a name="postroutingwrapupcodes"></a>
 
-## [**WrapupCode**](WrapupCode.html) PostRoutingWrapupcodes (WrapupCode body)
+## [**WrapupCode**](WrapupCode.html) PostRoutingWrapupcodes (WrapupCodeRequest body)
 
 
 
@@ -7630,7 +7632,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new RoutingApi();
-            var body = new WrapupCode(); // WrapupCode | WrapupCode
+            var body = new WrapupCodeRequest(); // WrapupCodeRequest | WrapupCode
 
             try
             { 
@@ -7652,7 +7654,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**WrapupCode**](WrapupCode.html)| WrapupCode |  |
+| **body** | [**WrapupCodeRequest**](WrapupCodeRequest.html)| WrapupCode |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -8393,7 +8395,7 @@ namespace Example
 
 <a name="putroutingwrapupcode"></a>
 
-## [**WrapupCode**](WrapupCode.html) PutRoutingWrapupcode (string codeId, WrapupCode body)
+## [**WrapupCode**](WrapupCode.html) PutRoutingWrapupcode (string codeId, WrapupCodeRequest body)
 
 
 
@@ -8428,7 +8430,7 @@ namespace Example
 
             var apiInstance = new RoutingApi();
             var codeId = codeId_example;  // string | Wrapup Code ID
-            var body = new WrapupCode(); // WrapupCode | WrapupCode
+            var body = new WrapupCodeRequest(); // WrapupCodeRequest | WrapupCode
 
             try
             { 
@@ -8451,7 +8453,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **codeId** | **string**| Wrapup Code ID |  |
-| **body** | [**WrapupCode**](WrapupCode.html)| WrapupCode |  |
+| **body** | [**WrapupCodeRequest**](WrapupCodeRequest.html)| WrapupCode |  |
 {: class="table table-striped"}
 
 ### Return type

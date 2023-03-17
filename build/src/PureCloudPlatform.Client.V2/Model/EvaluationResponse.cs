@@ -48,7 +48,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Finished for "FINISHED"
             /// </summary>
             [EnumMember(Value = "FINISHED")]
-            Finished
+            Finished,
+            
+            /// <summary>
+            /// Enum Inreview for "INREVIEW"
+            /// </summary>
+            [EnumMember(Value = "INREVIEW")]
+            Inreview,
+            
+            /// <summary>
+            /// Enum Retracted for "RETRACTED"
+            /// </summary>
+            [EnumMember(Value = "RETRACTED")]
+            Retracted
         }
         /// <summary>
         /// Gets or Sets MediaType

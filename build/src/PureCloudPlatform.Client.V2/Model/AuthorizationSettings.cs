@@ -56,6 +56,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The date and time of the most recent unused role calculation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The date and time of the most recent unused role calculation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateLastCalculated", EmitDefaultValue=false)]
+        public DateTime? DateLastCalculated { get; private set; }
+
+
+
+        /// <summary>
+        /// The date of the most recent org activity used for analysis. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+        /// </summary>
+        /// <value>The date of the most recent org activity used for analysis. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
+        [DataMember(Name="dateLastActive", EmitDefaultValue=false)]
+        public String DateLastActive { get; private set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -75,6 +93,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  AnalysisEnabled: ").Append(AnalysisEnabled).Append("\n");
             sb.Append("  AnalysisDays: ").Append(AnalysisDays).Append("\n");
+            sb.Append("  DateLastCalculated: ").Append(DateLastCalculated).Append("\n");
+            sb.Append("  DateLastActive: ").Append(DateLastActive).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -132,6 +152,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AnalysisDays.Equals(other.AnalysisDays)
                 ) &&
                 (
+                    this.DateLastCalculated == other.DateLastCalculated ||
+                    this.DateLastCalculated != null &&
+                    this.DateLastCalculated.Equals(other.DateLastCalculated)
+                ) &&
+                (
+                    this.DateLastActive == other.DateLastActive ||
+                    this.DateLastActive != null &&
+                    this.DateLastActive.Equals(other.DateLastActive)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -157,6 +187,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AnalysisDays != null)
                     hash = hash * 59 + this.AnalysisDays.GetHashCode();
+
+                if (this.DateLastCalculated != null)
+                    hash = hash * 59 + this.DateLastCalculated.GetHashCode();
+
+                if (this.DateLastActive != null)
+                    hash = hash * 59 + this.DateLastActive.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
