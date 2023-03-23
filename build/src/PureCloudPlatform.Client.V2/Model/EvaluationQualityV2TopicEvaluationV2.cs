@@ -80,7 +80,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationDate">ConversationDate.</param>
         /// <param name="MediaType">MediaType.</param>
         /// <param name="Calibration">Calibration.</param>
-        public EvaluationQualityV2TopicEvaluationV2(string Id = null, string ConversationId = null, EvaluationQualityV2TopicUser Agent = null, EvaluationQualityV2TopicUser Evaluator = null, DateTime? EventTime = null, string EvaluationFormId = null, string FormName = null, EvaluationQualityV2TopicEvaluationScoringSet ScoringSet = null, string ContextId = null, StatusEnum? Status = null, bool? AgentHasRead = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, string EventType = null, string ResourceId = null, string ResourceType = null, List<string> DivisionIds = null, bool? Rescore = null, DateTime? ConversationDate = null, List<string> MediaType = null, EvaluationQualityV2TopicCalibration Calibration = null)
+        /// <param name="EvaluationSource">EvaluationSource.</param>
+        /// <param name="AssigneeUserId">AssigneeUserId.</param>
+        /// <param name="PreviousAssigneeUserId">PreviousAssigneeUserId.</param>
+        public EvaluationQualityV2TopicEvaluationV2(string Id = null, string ConversationId = null, EvaluationQualityV2TopicUser Agent = null, EvaluationQualityV2TopicUser Evaluator = null, DateTime? EventTime = null, string EvaluationFormId = null, string FormName = null, EvaluationQualityV2TopicEvaluationScoringSet ScoringSet = null, string ContextId = null, StatusEnum? Status = null, bool? AgentHasRead = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, string EventType = null, string ResourceId = null, string ResourceType = null, List<string> DivisionIds = null, bool? Rescore = null, DateTime? ConversationDate = null, List<string> MediaType = null, EvaluationQualityV2TopicCalibration Calibration = null, EvaluationQualityV2TopicEvaluationSource EvaluationSource = null, string AssigneeUserId = null, string PreviousAssigneeUserId = null)
         {
             this.Id = Id;
             this.ConversationId = ConversationId;
@@ -104,6 +107,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ConversationDate = ConversationDate;
             this.MediaType = MediaType;
             this.Calibration = Calibration;
+            this.EvaluationSource = EvaluationSource;
+            this.AssigneeUserId = AssigneeUserId;
+            this.PreviousAssigneeUserId = PreviousAssigneeUserId;
             
         }
         
@@ -278,6 +284,30 @@ namespace PureCloudPlatform.Client.V2.Model
         public EvaluationQualityV2TopicCalibration Calibration { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets EvaluationSource
+        /// </summary>
+        [DataMember(Name="evaluationSource", EmitDefaultValue=false)]
+        public EvaluationQualityV2TopicEvaluationSource EvaluationSource { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets AssigneeUserId
+        /// </summary>
+        [DataMember(Name="assigneeUserId", EmitDefaultValue=false)]
+        public string AssigneeUserId { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets PreviousAssigneeUserId
+        /// </summary>
+        [DataMember(Name="previousAssigneeUserId", EmitDefaultValue=false)]
+        public string PreviousAssigneeUserId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -309,6 +339,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConversationDate: ").Append(ConversationDate).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
             sb.Append("  Calibration: ").Append(Calibration).Append("\n");
+            sb.Append("  EvaluationSource: ").Append(EvaluationSource).Append("\n");
+            sb.Append("  AssigneeUserId: ").Append(AssigneeUserId).Append("\n");
+            sb.Append("  PreviousAssigneeUserId: ").Append(PreviousAssigneeUserId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -458,6 +491,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Calibration == other.Calibration ||
                     this.Calibration != null &&
                     this.Calibration.Equals(other.Calibration)
+                ) &&
+                (
+                    this.EvaluationSource == other.EvaluationSource ||
+                    this.EvaluationSource != null &&
+                    this.EvaluationSource.Equals(other.EvaluationSource)
+                ) &&
+                (
+                    this.AssigneeUserId == other.AssigneeUserId ||
+                    this.AssigneeUserId != null &&
+                    this.AssigneeUserId.Equals(other.AssigneeUserId)
+                ) &&
+                (
+                    this.PreviousAssigneeUserId == other.PreviousAssigneeUserId ||
+                    this.PreviousAssigneeUserId != null &&
+                    this.PreviousAssigneeUserId.Equals(other.PreviousAssigneeUserId)
                 );
         }
 
@@ -537,6 +585,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Calibration != null)
                     hash = hash * 59 + this.Calibration.GetHashCode();
+
+                if (this.EvaluationSource != null)
+                    hash = hash * 59 + this.EvaluationSource.GetHashCode();
+
+                if (this.AssigneeUserId != null)
+                    hash = hash * 59 + this.AssigneeUserId.GetHashCode();
+
+                if (this.PreviousAssigneeUserId != null)
+                    hash = hash * 59 + this.PreviousAssigneeUserId.GetHashCode();
 
                 return hash;
             }

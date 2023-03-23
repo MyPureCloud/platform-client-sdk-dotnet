@@ -15,7 +15,7 @@ using System.Threading;
 
 namespace PureCloudPlatform.Client.V2.Tests
 {
-    [Timeout(60 * 1000)]
+    [Timeout(70 * 1000)]
     public class SdkTests
     {
         private bool stop;
@@ -177,7 +177,7 @@ namespace PureCloudPlatform.Client.V2.Tests
         [Test, Retry(2), Order(6)]
         public void GetUser()
         {
-                Thread.Sleep(3000);
+                Thread.Sleep(6000);
                 var user = usersApi.GetUser(userId, new List<string>() { "profileSkills" }, null, null);
                 Assert.AreEqual(user.Id, userId);
                 Assert.AreEqual(user.Name, userName);

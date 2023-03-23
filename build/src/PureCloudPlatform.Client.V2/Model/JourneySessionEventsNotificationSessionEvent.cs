@@ -232,8 +232,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">Type.</param>
         /// <param name="OutcomeAchievements">OutcomeAchievements.</param>
         /// <param name="SegmentAssignments">SegmentAssignments.</param>
-        /// <param name="Attributes">Attributes.</param>
-        /// <param name="AttributeLists">AttributeLists.</param>
         /// <param name="AwayDate">AwayDate.</param>
         /// <param name="Browser">Browser.</param>
         /// <param name="Device">Device.</param>
@@ -261,7 +259,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LastUserDisconnectType">LastUserDisconnectType.</param>
         /// <param name="LastAcdOutcome">LastAcdOutcome.</param>
         /// <param name="Authenticated">Authenticated.</param>
-        public JourneySessionEventsNotificationSessionEvent(string Id = null, string SelfUri = null, DateTime? CreatedDate = null, DateTime? EndedDate = null, JourneySessionEventsNotificationExternalContact ExternalContact = null, string CustomerId = null, string CustomerIdType = null, string Type = null, List<JourneySessionEventsNotificationOutcomeAchievement> OutcomeAchievements = null, List<JourneySessionEventsNotificationSegmentAssignment> SegmentAssignments = null, Dictionary<string, JourneySessionEventsNotificationCustomEventAttribute> Attributes = null, Dictionary<string, JourneySessionEventsNotificationCustomEventAttributeList> AttributeLists = null, DateTime? AwayDate = null, JourneySessionEventsNotificationBrowser Browser = null, JourneySessionEventsNotificationDevice Device = null, JourneySessionEventsNotificationGeoLocation Geolocation = null, DateTime? IdleDate = null, string IpAddress = null, string IpOrganization = null, JourneySessionEventsNotificationPage LastPage = null, JourneySessionEventsNotificationMktCampaign MktCampaign = null, JourneySessionEventsNotificationReferrer Referrer = null, List<string> SearchTerms = null, string UserAgentString = null, int? DurationInSeconds = null, int? EventCount = null, int? PageviewCount = null, int? ScreenviewCount = null, JourneySessionEventsNotificationSessionLastEvent LastEvent = null, JourneySessionEventsNotificationConversation Conversation = null, OriginatingDirectionEnum? OriginatingDirection = null, string ConversationSubject = null, JourneySessionEventsNotificationConversationUserDisposition LastUserDisposition = null, JourneySessionEventsNotificationUser LastConnectedUser = null, JourneySessionEventsNotificationConnectedQueue LastConnectedQueue = null, List<JourneySessionEventsNotificationConversationChannel> ConversationChannels = null, LastUserDisconnectTypeEnum? LastUserDisconnectType = null, LastAcdOutcomeEnum? LastAcdOutcome = null, bool? Authenticated = null)
+        public JourneySessionEventsNotificationSessionEvent(string Id = null, string SelfUri = null, DateTime? CreatedDate = null, DateTime? EndedDate = null, JourneySessionEventsNotificationExternalContact ExternalContact = null, string CustomerId = null, string CustomerIdType = null, string Type = null, List<JourneySessionEventsNotificationOutcomeAchievement> OutcomeAchievements = null, List<JourneySessionEventsNotificationSegmentAssignment> SegmentAssignments = null, DateTime? AwayDate = null, JourneySessionEventsNotificationBrowser Browser = null, JourneySessionEventsNotificationDevice Device = null, JourneySessionEventsNotificationGeoLocation Geolocation = null, DateTime? IdleDate = null, string IpAddress = null, string IpOrganization = null, JourneySessionEventsNotificationPage LastPage = null, JourneySessionEventsNotificationMktCampaign MktCampaign = null, JourneySessionEventsNotificationReferrer Referrer = null, List<string> SearchTerms = null, string UserAgentString = null, int? DurationInSeconds = null, int? EventCount = null, int? PageviewCount = null, int? ScreenviewCount = null, JourneySessionEventsNotificationSessionLastEvent LastEvent = null, JourneySessionEventsNotificationConversation Conversation = null, OriginatingDirectionEnum? OriginatingDirection = null, string ConversationSubject = null, JourneySessionEventsNotificationConversationUserDisposition LastUserDisposition = null, JourneySessionEventsNotificationUser LastConnectedUser = null, JourneySessionEventsNotificationConnectedQueue LastConnectedQueue = null, List<JourneySessionEventsNotificationConversationChannel> ConversationChannels = null, LastUserDisconnectTypeEnum? LastUserDisconnectType = null, LastAcdOutcomeEnum? LastAcdOutcome = null, bool? Authenticated = null)
         {
             this.Id = Id;
             this.SelfUri = SelfUri;
@@ -273,8 +271,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Type = Type;
             this.OutcomeAchievements = OutcomeAchievements;
             this.SegmentAssignments = SegmentAssignments;
-            this.Attributes = Attributes;
-            this.AttributeLists = AttributeLists;
             this.AwayDate = AwayDate;
             this.Browser = Browser;
             this.Device = Device;
@@ -384,22 +380,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="segmentAssignments", EmitDefaultValue=false)]
         public List<JourneySessionEventsNotificationSegmentAssignment> SegmentAssignments { get; set; }
-
-
-
-        /// <summary>
-        /// Gets or Sets Attributes
-        /// </summary>
-        [DataMember(Name="attributes", EmitDefaultValue=false)]
-        public Dictionary<string, JourneySessionEventsNotificationCustomEventAttribute> Attributes { get; set; }
-
-
-
-        /// <summary>
-        /// Gets or Sets AttributeLists
-        /// </summary>
-        [DataMember(Name="attributeLists", EmitDefaultValue=false)]
-        public Dictionary<string, JourneySessionEventsNotificationCustomEventAttributeList> AttributeLists { get; set; }
 
 
 
@@ -619,8 +599,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  OutcomeAchievements: ").Append(OutcomeAchievements).Append("\n");
             sb.Append("  SegmentAssignments: ").Append(SegmentAssignments).Append("\n");
-            sb.Append("  Attributes: ").Append(Attributes).Append("\n");
-            sb.Append("  AttributeLists: ").Append(AttributeLists).Append("\n");
             sb.Append("  AwayDate: ").Append(AwayDate).Append("\n");
             sb.Append("  Browser: ").Append(Browser).Append("\n");
             sb.Append("  Device: ").Append(Device).Append("\n");
@@ -737,16 +715,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SegmentAssignments == other.SegmentAssignments ||
                     this.SegmentAssignments != null &&
                     this.SegmentAssignments.SequenceEqual(other.SegmentAssignments)
-                ) &&
-                (
-                    this.Attributes == other.Attributes ||
-                    this.Attributes != null &&
-                    this.Attributes.SequenceEqual(other.Attributes)
-                ) &&
-                (
-                    this.AttributeLists == other.AttributeLists ||
-                    this.AttributeLists != null &&
-                    this.AttributeLists.SequenceEqual(other.AttributeLists)
                 ) &&
                 (
                     this.AwayDate == other.AwayDate ||
@@ -925,12 +893,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SegmentAssignments != null)
                     hash = hash * 59 + this.SegmentAssignments.GetHashCode();
-
-                if (this.Attributes != null)
-                    hash = hash * 59 + this.Attributes.GetHashCode();
-
-                if (this.AttributeLists != null)
-                    hash = hash * 59 + this.AttributeLists.GetHashCode();
 
                 if (this.AwayDate != null)
                     hash = hash * 59 + this.AwayDate.GetHashCode();

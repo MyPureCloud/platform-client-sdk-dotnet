@@ -1523,6 +1523,7 @@ docs/EvaluationFormEntityListing.md
 docs/EvaluationFormResponse.md
 docs/EvaluationQualityV2TopicCalibration.md
 docs/EvaluationQualityV2TopicEvaluationScoringSet.md
+docs/EvaluationQualityV2TopicEvaluationSource.md
 docs/EvaluationQualityV2TopicEvaluationV2.md
 docs/EvaluationQualityV2TopicUser.md
 docs/EvaluationQuestion.md
@@ -2845,8 +2846,6 @@ docs/JourneySessionEventsNotificationConnectedQueue.md
 docs/JourneySessionEventsNotificationConversation.md
 docs/JourneySessionEventsNotificationConversationChannel.md
 docs/JourneySessionEventsNotificationConversationUserDisposition.md
-docs/JourneySessionEventsNotificationCustomEventAttribute.md
-docs/JourneySessionEventsNotificationCustomEventAttributeList.md
 docs/JourneySessionEventsNotificationDevice.md
 docs/JourneySessionEventsNotificationExternalContact.md
 docs/JourneySessionEventsNotificationGeoLocation.md
@@ -5671,12 +5670,15 @@ docs/WorkforceManagementApi.md
 docs/WorkitemsEventsNotificationCustomAttribute.md
 docs/WorkitemsEventsNotificationDelta.md
 docs/WorkitemsEventsNotificationWorkitem.md
+docs/WorkitemsEventsNotificationWrapup.md
 docs/WorkitemsQueueEventsNotificationCustomAttribute.md
 docs/WorkitemsQueueEventsNotificationDelta.md
 docs/WorkitemsQueueEventsNotificationWorkitem.md
+docs/WorkitemsQueueEventsNotificationWrapup.md
 docs/WorkitemsUserEventsNotificationCustomAttribute.md
 docs/WorkitemsUserEventsNotificationDelta.md
 docs/WorkitemsUserEventsNotificationWorkitem.md
+docs/WorkitemsUserEventsNotificationWrapup.md
 docs/Workspace.md
 docs/WorkspaceCreate.md
 docs/WorkspaceEntityListing.md
@@ -7044,6 +7046,7 @@ src/PureCloudPlatform.Client.V2/Model/EvaluationFormEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationFormResponse.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationQualityV2TopicCalibration.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationQualityV2TopicEvaluationScoringSet.cs
+src/PureCloudPlatform.Client.V2/Model/EvaluationQualityV2TopicEvaluationSource.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationQualityV2TopicEvaluationV2.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationQualityV2TopicUser.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationQuestion.cs
@@ -7369,8 +7372,6 @@ src/PureCloudPlatform.Client.V2/Model/JourneySessionEventsNotificationConnectedQ
 src/PureCloudPlatform.Client.V2/Model/JourneySessionEventsNotificationConversation.cs
 src/PureCloudPlatform.Client.V2/Model/JourneySessionEventsNotificationConversationChannel.cs
 src/PureCloudPlatform.Client.V2/Model/JourneySessionEventsNotificationConversationUserDisposition.cs
-src/PureCloudPlatform.Client.V2/Model/JourneySessionEventsNotificationCustomEventAttribute.cs
-src/PureCloudPlatform.Client.V2/Model/JourneySessionEventsNotificationCustomEventAttributeList.cs
 src/PureCloudPlatform.Client.V2/Model/JourneySessionEventsNotificationDevice.cs
 src/PureCloudPlatform.Client.V2/Model/JourneySessionEventsNotificationExternalContact.cs
 src/PureCloudPlatform.Client.V2/Model/JourneySessionEventsNotificationGeoLocation.cs
@@ -9272,12 +9273,15 @@ src/PureCloudPlatform.Client.V2/Model/WorkflowTargetSettings.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsEventsNotificationCustomAttribute.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsEventsNotificationDelta.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsEventsNotificationWorkitem.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemsEventsNotificationWrapup.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsQueueEventsNotificationCustomAttribute.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsQueueEventsNotificationDelta.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsQueueEventsNotificationWorkitem.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemsQueueEventsNotificationWrapup.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsUserEventsNotificationCustomAttribute.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsUserEventsNotificationDelta.cs
 src/PureCloudPlatform.Client.V2/Model/WorkitemsUserEventsNotificationWorkitem.cs
+src/PureCloudPlatform.Client.V2/Model/WorkitemsUserEventsNotificationWrapup.cs
 src/PureCloudPlatform.Client.V2/Model/Workspace.cs
 src/PureCloudPlatform.Client.V2/Model/WorkspaceCreate.cs
 src/PureCloudPlatform.Client.V2/Model/WorkspaceEntityListing.cs

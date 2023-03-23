@@ -17,8 +17,6 @@ title: JourneySessionEventsNotificationSessionEvent
 | **Type** | **string** |  | [optional] |
 | **OutcomeAchievements** | [**List&lt;JourneySessionEventsNotificationOutcomeAchievement&gt;**](JourneySessionEventsNotificationOutcomeAchievement.html) |  | [optional] |
 | **SegmentAssignments** | [**List&lt;JourneySessionEventsNotificationSegmentAssignment&gt;**](JourneySessionEventsNotificationSegmentAssignment.html) |  | [optional] |
-| **Attributes** | [**Dictionary&lt;string, JourneySessionEventsNotificationCustomEventAttribute&gt;**](JourneySessionEventsNotificationCustomEventAttribute.html) |  | [optional] |
-| **AttributeLists** | [**Dictionary&lt;string, JourneySessionEventsNotificationCustomEventAttributeList&gt;**](JourneySessionEventsNotificationCustomEventAttributeList.html) |  | [optional] |
 | **AwayDate** | **DateTime?** |  | [optional] |
 | **Browser** | [**JourneySessionEventsNotificationBrowser**](JourneySessionEventsNotificationBrowser.html) |  | [optional] |
 | **Device** | [**JourneySessionEventsNotificationDevice**](JourneySessionEventsNotificationDevice.html) |  | [optional] |

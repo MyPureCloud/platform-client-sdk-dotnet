@@ -335,7 +335,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AlertTimeoutSeconds">AlertTimeoutSeconds.</param>
         /// <param name="QueueId">QueueId.</param>
         /// <param name="CustomFields">CustomFields.</param>
-        public WorkitemsUserEventsNotificationWorkitem(string Id = null, string Name = null, string TypeId = null, string Description = null, string LanguageId = null, int? Priority = null, string DateCreated = null, string DateModified = null, string DateDue = null, string DateExpires = null, int? DurationSeconds = null, int? Ttl = null, string StatusId = null, StatusCategoryEnum? StatusCategory = null, string DateClosed = null, string WorkbinId = null, string ReporterId = null, string AssigneeId = null, string ExternalContactId = null, string ExternalTag = null, string WrapupId = null, string ModifiedBy = null, OperationEnum? Operation = null, List<WorkitemsUserEventsNotificationDelta> Changes = null, AssignmentStateEnum? AssignmentState = null, string AssignmentId = null, int? AlertTimeoutSeconds = null, string QueueId = null, Dictionary<string, WorkitemsUserEventsNotificationCustomAttribute> CustomFields = null)
+        /// <param name="Wrapup">Wrapup.</param>
+        public WorkitemsUserEventsNotificationWorkitem(string Id = null, string Name = null, string TypeId = null, string Description = null, string LanguageId = null, int? Priority = null, string DateCreated = null, string DateModified = null, string DateDue = null, string DateExpires = null, int? DurationSeconds = null, int? Ttl = null, string StatusId = null, StatusCategoryEnum? StatusCategory = null, string DateClosed = null, string WorkbinId = null, string ReporterId = null, string AssigneeId = null, string ExternalContactId = null, string ExternalTag = null, string WrapupId = null, string ModifiedBy = null, OperationEnum? Operation = null, List<WorkitemsUserEventsNotificationDelta> Changes = null, AssignmentStateEnum? AssignmentState = null, string AssignmentId = null, int? AlertTimeoutSeconds = null, string QueueId = null, Dictionary<string, WorkitemsUserEventsNotificationCustomAttribute> CustomFields = null, WorkitemsUserEventsNotificationWrapup Wrapup = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -366,6 +367,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AlertTimeoutSeconds = AlertTimeoutSeconds;
             this.QueueId = QueueId;
             this.CustomFields = CustomFields;
+            this.Wrapup = Wrapup;
             
         }
         
@@ -584,6 +586,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public Dictionary<string, WorkitemsUserEventsNotificationCustomAttribute> CustomFields { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets Wrapup
+        /// </summary>
+        [DataMember(Name="wrapup", EmitDefaultValue=false)]
+        public WorkitemsUserEventsNotificationWrapup Wrapup { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -622,6 +632,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AlertTimeoutSeconds: ").Append(AlertTimeoutSeconds).Append("\n");
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  CustomFields: ").Append(CustomFields).Append("\n");
+            sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -806,6 +817,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CustomFields == other.CustomFields ||
                     this.CustomFields != null &&
                     this.CustomFields.SequenceEqual(other.CustomFields)
+                ) &&
+                (
+                    this.Wrapup == other.Wrapup ||
+                    this.Wrapup != null &&
+                    this.Wrapup.Equals(other.Wrapup)
                 );
         }
 
@@ -906,6 +922,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.CustomFields != null)
                     hash = hash * 59 + this.CustomFields.GetHashCode();
+
+                if (this.Wrapup != null)
+                    hash = hash * 59 + this.Wrapup.GetHashCode();
 
                 return hash;
             }
