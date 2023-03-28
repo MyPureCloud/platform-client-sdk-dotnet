@@ -67,7 +67,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateModified">The date of the last modification to the queue. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ModifiedBy">The ID of the user that last modified the queue..</param>
         /// <param name="CreatedBy">The ID of the user that created the queue..</param>
-        /// <param name="MediaSettings">The media settings for the queue. Valid key values: CALL, CALLBACK, CHAT, EMAIL, MESSAGE, SOCIAL_EXPRESSION, VIDEO_COMM.</param>
+        /// <param name="MediaSettings">The media settings for the queue..</param>
         /// <param name="RoutingRules">The routing rules for the queue, used for Preferred Agent Routing..</param>
         /// <param name="Bullseye">The bullseye settings for the queue..</param>
         /// <param name="AcwSettings">The ACW settings for the queue..</param>
@@ -89,7 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OutboundEmailAddress">OutboundEmailAddress.</param>
         /// <param name="PeerId">The ID of an associated external queue..</param>
         /// <param name="Joined">Joined.</param>
-        public UserQueue(string Name = null, Division Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, Dictionary<string, MediaSetting> MediaSettings = null, List<RoutingRule> RoutingRules = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, List<MemberGroup> MemberGroups = null, DomainEntityRef QueueFlow = null, DomainEntityRef EmailInQueueFlow = null, DomainEntityRef MessageInQueueFlow = null, DomainEntityRef WhisperPrompt = null, DomainEntityRef OnHoldPrompt = null, bool? EnableTranscription = null, bool? EnableManualAssignment = null, AgentOwnedRouting AgentOwnedRouting = null, DirectRouting DirectRouting = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null, string PeerId = null, bool? Joined = null)
+        public UserQueue(string Name = null, Division Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, QueueMediaSettings MediaSettings = null, List<RoutingRule> RoutingRules = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, List<MemberGroup> MemberGroups = null, DomainEntityRef QueueFlow = null, DomainEntityRef EmailInQueueFlow = null, DomainEntityRef MessageInQueueFlow = null, DomainEntityRef WhisperPrompt = null, DomainEntityRef OnHoldPrompt = null, bool? EnableTranscription = null, bool? EnableManualAssignment = null, AgentOwnedRouting AgentOwnedRouting = null, DirectRouting DirectRouting = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null, string PeerId = null, bool? Joined = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -224,11 +224,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The media settings for the queue. Valid key values: CALL, CALLBACK, CHAT, EMAIL, MESSAGE, SOCIAL_EXPRESSION, VIDEO_COMM
+        /// The media settings for the queue.
         /// </summary>
-        /// <value>The media settings for the queue. Valid key values: CALL, CALLBACK, CHAT, EMAIL, MESSAGE, SOCIAL_EXPRESSION, VIDEO_COMM</value>
+        /// <value>The media settings for the queue.</value>
         [DataMember(Name="mediaSettings", EmitDefaultValue=false)]
-        public Dictionary<string, MediaSetting> MediaSettings { get; set; }
+        public QueueMediaSettings MediaSettings { get; set; }
 
 
 
@@ -561,7 +561,7 @@ namespace PureCloudPlatform.Client.V2.Model
                 (
                     this.MediaSettings == other.MediaSettings ||
                     this.MediaSettings != null &&
-                    this.MediaSettings.SequenceEqual(other.MediaSettings)
+                    this.MediaSettings.Equals(other.MediaSettings)
                 ) &&
                 (
                     this.RoutingRules == other.RoutingRules ||

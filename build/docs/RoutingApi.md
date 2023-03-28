@@ -1956,7 +1956,7 @@ namespace Example
 
 <a name="getroutingemaildomains"></a>
 
-## [**InboundDomainEntityListing**](InboundDomainEntityListing.html) GetRoutingEmailDomains (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null)
+## [**InboundDomainEntityListing**](InboundDomainEntityListing.html) GetRoutingEmailDomains (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null)
 
 
 
@@ -1993,11 +1993,12 @@ namespace Example
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var excludeStatus = true;  // bool? | Exclude MX record data (optional)  (default to false)
+            var filter = filter_example;  // string | Optional search filter (optional) 
 
             try
             { 
                 // Get domains
-                InboundDomainEntityListing result = apiInstance.GetRoutingEmailDomains(pageSize, pageNumber, excludeStatus);
+                InboundDomainEntityListing result = apiInstance.GetRoutingEmailDomains(pageSize, pageNumber, excludeStatus, filter);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2017,6 +2018,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **excludeStatus** | **bool?**| Exclude MX record data | [optional] [default to false] |
+| **filter** | **string**| Optional search filter | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2220,7 +2222,7 @@ namespace Example
 
 <a name="getroutingemailoutbounddomains"></a>
 
-## [**OutboundDomainEntityListing**](OutboundDomainEntityListing.html) GetRoutingEmailOutboundDomains ()
+## [**OutboundDomainEntityListing**](OutboundDomainEntityListing.html) GetRoutingEmailOutboundDomains (string filter = null)
 
 
 
@@ -2254,11 +2256,12 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new RoutingApi();
+            var filter = filter_example;  // string | Optional search filter (optional) 
 
             try
             { 
                 // Get outbound domains
-                OutboundDomainEntityListing result = apiInstance.GetRoutingEmailOutboundDomains();
+                OutboundDomainEntityListing result = apiInstance.GetRoutingEmailOutboundDomains(filter);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2271,8 +2274,12 @@ namespace Example
 ```
 
 ### Parameters
-This endpoint does require any parameters.
 
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **filter** | **string**| Optional search filter | [optional]  |
+{: class="table table-striped"}
 
 ### Return type
 

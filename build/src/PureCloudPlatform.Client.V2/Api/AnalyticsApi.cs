@@ -86,7 +86,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get Reporting Turns.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botFlowId">ID of the bot flow.</param>
@@ -103,7 +103,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get Reporting Turns.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botFlowId">ID of the bot flow.</param>
@@ -1194,7 +1194,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get Reporting Turns.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botFlowId">ID of the bot flow.</param>
@@ -1211,7 +1211,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get Reporting Turns.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botFlowId">ID of the bot flow.</param>
@@ -2888,7 +2888,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get Reporting Turns. 
+        /// Get Reporting Turns. Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botFlowId">ID of the bot flow.</param>
@@ -2906,7 +2906,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get Reporting Turns. 
+        /// Get Reporting Turns. Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botFlowId">ID of the bot flow.</param>
@@ -3000,7 +3000,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get Reporting Turns. 
+        /// Get Reporting Turns. Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botFlowId">ID of the bot flow.</param>
@@ -3019,7 +3019,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get Reporting Turns. 
+        /// Get Reporting Turns. Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="botFlowId">ID of the bot flow.</param>

@@ -165,7 +165,7 @@ Delete a grant of a role in a division
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * authorization:grant:delete
 
@@ -3971,7 +3971,7 @@ Bulk-grant roles and divisions to a subject.
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * authorization:grant:add
 
@@ -4039,7 +4039,7 @@ Bulk-remove grants from a subject.
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * authorization:grant:delete
 
@@ -4176,7 +4176,7 @@ Make a grant of a role in a division
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * authorization:grant:add
 

@@ -55,11 +55,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name.</param>
         /// <param name="UploadDestinationUri">UploadDestinationUri.</param>
         /// <param name="UploadMethodType">UploadMethodType.</param>
-        public FaxSendResponse(string Name = null, string UploadDestinationUri = null, UploadMethodTypeEnum? UploadMethodType = null)
+        /// <param name="Headers">Headers.</param>
+        public FaxSendResponse(string Name = null, string UploadDestinationUri = null, UploadMethodTypeEnum? UploadMethodType = null, Dictionary<string, string> Headers = null)
         {
             this.Name = Name;
             this.UploadDestinationUri = UploadDestinationUri;
             this.UploadMethodType = UploadMethodType;
+            this.Headers = Headers;
             
         }
         
@@ -93,6 +95,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets Headers
+        /// </summary>
+        [DataMember(Name="headers", EmitDefaultValue=false)]
+        public Dictionary<string, string> Headers { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -113,6 +123,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  UploadDestinationUri: ").Append(UploadDestinationUri).Append("\n");
             sb.Append("  UploadMethodType: ").Append(UploadMethodType).Append("\n");
+            sb.Append("  Headers: ").Append(Headers).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -175,6 +186,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UploadMethodType.Equals(other.UploadMethodType)
                 ) &&
                 (
+                    this.Headers == other.Headers ||
+                    this.Headers != null &&
+                    this.Headers.SequenceEqual(other.Headers)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -203,6 +219,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.UploadMethodType != null)
                     hash = hash * 59 + this.UploadMethodType.GetHashCode();
+
+                if (this.Headers != null)
+                    hash = hash * 59 + this.Headers.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

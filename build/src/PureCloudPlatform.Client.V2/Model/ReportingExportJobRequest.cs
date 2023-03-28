@@ -616,7 +616,25 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum InteractionDetailView for "INTERACTION_DETAIL_VIEW"
             /// </summary>
             [EnumMember(Value = "INTERACTION_DETAIL_VIEW")]
-            InteractionDetailView
+            InteractionDetailView,
+            
+            /// <summary>
+            /// Enum CampaignInteractionDetailView for "CAMPAIGN_INTERACTION_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "CAMPAIGN_INTERACTION_DETAIL_VIEW")]
+            CampaignInteractionDetailView,
+            
+            /// <summary>
+            /// Enum CampaignAttemptDetailView for "CAMPAIGN_ATTEMPT_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "CAMPAIGN_ATTEMPT_DETAIL_VIEW")]
+            CampaignAttemptDetailView,
+            
+            /// <summary>
+            /// Enum WorkitemPerformanceSummaryView for "WORKITEM_PERFORMANCE_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "WORKITEM_PERFORMANCE_SUMMARY_VIEW")]
+            WorkitemPerformanceSummaryView
         }
         /// <summary>
         /// The user supplied csv delimiter string value either of type 'comma' or 'semicolon' permitted for the export request

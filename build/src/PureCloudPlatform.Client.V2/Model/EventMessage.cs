@@ -33,6 +33,18 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum ActiveCampaignsLimitExceeded for "ACTIVE_CAMPAIGNS_LIMIT_EXCEEDED"
+            /// </summary>
+            [EnumMember(Value = "ACTIVE_CAMPAIGNS_LIMIT_EXCEEDED")]
+            ActiveCampaignsLimitExceeded,
+            
+            /// <summary>
+            /// Enum AllCampaignsBlacklisted for "ALL_CAMPAIGNS_BLACKLISTED"
+            /// </summary>
+            [EnumMember(Value = "ALL_CAMPAIGNS_BLACKLISTED")]
+            AllCampaignsBlacklisted,
+            
+            /// <summary>
             /// Enum ApproachingContactLimit for "APPROACHING_CONTACT_LIMIT"
             /// </summary>
             [EnumMember(Value = "APPROACHING_CONTACT_LIMIT")]
@@ -61,6 +73,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "AUTOMATIC_TIME_ZONE_ZIP_CODE_INVALID")]
             AutomaticTimeZoneZipCodeInvalid,
+            
+            /// <summary>
+            /// Enum CampaignBlacklisted for "CAMPAIGN_BLACKLISTED"
+            /// </summary>
+            [EnumMember(Value = "CAMPAIGN_BLACKLISTED")]
+            CampaignBlacklisted,
             
             /// <summary>
             /// Enum CampaignContentTemplateSubstitutionMismatch for "CAMPAIGN_CONTENT_TEMPLATE_SUBSTITUTION_MISMATCH"
@@ -462,7 +480,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum RecycleCampaign for "RECYCLE_CAMPAIGN"
             /// </summary>
             [EnumMember(Value = "RECYCLE_CAMPAIGN")]
-            RecycleCampaign
+            RecycleCampaign,
+            
+            /// <summary>
+            /// Enum ScheduledCampaignInvalid for "SCHEDULED_CAMPAIGN_INVALID"
+            /// </summary>
+            [EnumMember(Value = "SCHEDULED_CAMPAIGN_INVALID")]
+            ScheduledCampaignInvalid,
+            
+            /// <summary>
+            /// Enum ScheduleUnknownError for "SCHEDULE_UNKNOWN_ERROR"
+            /// </summary>
+            [EnumMember(Value = "SCHEDULE_UNKNOWN_ERROR")]
+            ScheduleUnknownError
         }
         /// <summary>
         /// Gets or Sets Code

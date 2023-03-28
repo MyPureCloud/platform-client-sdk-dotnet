@@ -459,6 +459,7 @@ docs/CallbackConversationEntityListing.md
 docs/CallbackDisconnectIdentifier.md
 docs/CallbackIdentifier.md
 docs/CallbackMediaParticipant.md
+docs/CallbackMediaSettings.md
 docs/Campaign.md
 docs/CampaignDiagnostics.md
 docs/CampaignDivisionView.md
@@ -1815,6 +1816,7 @@ docs/GetAuthorizationSubjectsRolecounts-example.txt
 docs/GetBillingReportsBillableusage-example.txt
 docs/GetBillingTrusteebillingoverviewTrustorOrgId-example.txt
 docs/GetChatSettings-example.txt
+docs/GetChatsSettings-example.txt
 docs/GetCoachingAppointment-example.txt
 docs/GetCoachingAppointmentAnnotation-example.txt
 docs/GetCoachingAppointmentAnnotations-example.txt
@@ -3132,7 +3134,7 @@ docs/MediaParticipantRequest.md
 docs/MediaPolicies.md
 docs/MediaRegions.md
 docs/MediaResult.md
-docs/MediaSetting.md
+docs/MediaSettings.md
 docs/MediaSummary.md
 docs/MediaSummaryDetail.md
 docs/MediaTranscription.md
@@ -3372,6 +3374,7 @@ docs/PatchCallToAction.md
 docs/PatchCallbackRequest.md
 docs/PatchCallbackResponse.md
 docs/PatchChatSettings-example.txt
+docs/PatchChatsSettings-example.txt
 docs/PatchCloseButtonStyleProperties.md
 docs/PatchCoachingAppointment-example.txt
 docs/PatchCoachingAppointmentAnnotation-example.txt
@@ -4143,6 +4146,7 @@ docs/PutAuthorizationRoleUsersAdd-example.txt
 docs/PutAuthorizationRoleUsersRemove-example.txt
 docs/PutAuthorizationRolesDefault-example.txt
 docs/PutChatSettings-example.txt
+docs/PutChatsSettings-example.txt
 docs/PutContentmanagementWorkspace-example.txt
 docs/PutContentmanagementWorkspaceMember-example.txt
 docs/PutContentmanagementWorkspaceTagvalue-example.txt
@@ -4573,6 +4577,7 @@ docs/QueueConversationVideoEventTopicWorkflow.md
 docs/QueueConversationVideoEventTopicWrapup.md
 docs/QueueEmailAddress.md
 docs/QueueEntityListing.md
+docs/QueueMediaSettings.md
 docs/QueueMember.md
 docs/QueueMemberEntityListing.md
 docs/QueueMemberEntityListingV1.md
@@ -4824,6 +4829,7 @@ docs/SequenceSchedule.md
 docs/ServerDate.md
 docs/ServiceContext.md
 docs/ServiceGoalTemplate.md
+docs/ServiceGoalTemplateImpactOverride.md
 docs/ServiceGoalTemplateList.md
 docs/ServiceGoalTemplateReference.md
 docs/ServiceLevel.md
@@ -6219,6 +6225,7 @@ src/PureCloudPlatform.Client.V2/Model/CallbackConversationEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/CallbackDisconnectIdentifier.cs
 src/PureCloudPlatform.Client.V2/Model/CallbackIdentifier.cs
 src/PureCloudPlatform.Client.V2/Model/CallbackMediaParticipant.cs
+src/PureCloudPlatform.Client.V2/Model/CallbackMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/Campaign.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignDiagnostics.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignDivisionView.cs
@@ -7646,7 +7653,7 @@ src/PureCloudPlatform.Client.V2/Model/MediaParticipantRequest.cs
 src/PureCloudPlatform.Client.V2/Model/MediaPolicies.cs
 src/PureCloudPlatform.Client.V2/Model/MediaRegions.cs
 src/PureCloudPlatform.Client.V2/Model/MediaResult.cs
-src/PureCloudPlatform.Client.V2/Model/MediaSetting.cs
+src/PureCloudPlatform.Client.V2/Model/MediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/MediaSummary.cs
 src/PureCloudPlatform.Client.V2/Model/MediaSummaryDetail.cs
 src/PureCloudPlatform.Client.V2/Model/MediaTranscription.cs
@@ -8226,6 +8233,7 @@ src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicWorkflow.c
 src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicWrapup.cs
 src/PureCloudPlatform.Client.V2/Model/QueueEmailAddress.cs
 src/PureCloudPlatform.Client.V2/Model/QueueEntityListing.cs
+src/PureCloudPlatform.Client.V2/Model/QueueMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/QueueMember.cs
 src/PureCloudPlatform.Client.V2/Model/QueueMemberEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/QueueMemberEntityListingV1.cs
@@ -8465,6 +8473,7 @@ src/PureCloudPlatform.Client.V2/Model/SequenceSchedule.cs
 src/PureCloudPlatform.Client.V2/Model/ServerDate.cs
 src/PureCloudPlatform.Client.V2/Model/ServiceContext.cs
 src/PureCloudPlatform.Client.V2/Model/ServiceGoalTemplate.cs
+src/PureCloudPlatform.Client.V2/Model/ServiceGoalTemplateImpactOverride.cs
 src/PureCloudPlatform.Client.V2/Model/ServiceGoalTemplateList.cs
 src/PureCloudPlatform.Client.V2/Model/ServiceGoalTemplateReference.cs
 src/PureCloudPlatform.Client.V2/Model/ServiceLevel.cs

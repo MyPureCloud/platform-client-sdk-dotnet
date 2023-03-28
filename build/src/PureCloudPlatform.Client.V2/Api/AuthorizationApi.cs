@@ -350,9 +350,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
+        /// <param name="userCount">Fetch the count of users who have this role granted in at least one division (optional, default to true)</param>
         /// <param name="expand">Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)</param>
         /// <returns>DomainOrganizationRole</returns>
-        DomainOrganizationRole GetAuthorizationRole (string roleId, List<string> expand = null);
+        DomainOrganizationRole GetAuthorizationRole (string roleId, bool? userCount = null, List<string> expand = null);
 
         /// <summary>
         /// Get a single organization role.
@@ -362,9 +363,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
+        /// <param name="userCount">Fetch the count of users who have this role granted in at least one division (optional, default to true)</param>
         /// <param name="expand">Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)</param>
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
-        ApiResponse<DomainOrganizationRole> GetAuthorizationRoleWithHttpInfo (string roleId, List<string> expand = null);
+        ApiResponse<DomainOrganizationRole> GetAuthorizationRoleWithHttpInfo (string roleId, bool? userCount = null, List<string> expand = null);
 
         /// <summary>
         /// Get an org role to default role comparison
@@ -1396,9 +1398,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
+        /// <param name="userCount">Fetch the count of users who have this role granted in at least one division (optional, default to true)</param>
         /// <param name="expand">Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)</param>
         /// <returns>Task of DomainOrganizationRole</returns>
-        System.Threading.Tasks.Task<DomainOrganizationRole> GetAuthorizationRoleAsync (string roleId, List<string> expand = null);
+        System.Threading.Tasks.Task<DomainOrganizationRole> GetAuthorizationRoleAsync (string roleId, bool? userCount = null, List<string> expand = null);
 
         /// <summary>
         /// Get a single organization role.
@@ -1408,9 +1411,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
+        /// <param name="userCount">Fetch the count of users who have this role granted in at least one division (optional, default to true)</param>
         /// <param name="expand">Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)</param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> GetAuthorizationRoleAsyncWithHttpInfo (string roleId, List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> GetAuthorizationRoleAsyncWithHttpInfo (string roleId, bool? userCount = null, List<string> expand = null);
 
         /// <summary>
         /// Get an org role to default role comparison
@@ -4784,11 +4788,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
+        /// <param name="userCount">Fetch the count of users who have this role granted in at least one division (optional, default to true)</param>
         /// <param name="expand">Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)</param>
         /// <returns>DomainOrganizationRole</returns>
-        public DomainOrganizationRole GetAuthorizationRole (string roleId, List<string> expand = null)
+        public DomainOrganizationRole GetAuthorizationRole (string roleId, bool? userCount = null, List<string> expand = null)
         {
-             ApiResponse<DomainOrganizationRole> localVarResponse = GetAuthorizationRoleWithHttpInfo(roleId, expand);
+             ApiResponse<DomainOrganizationRole> localVarResponse = GetAuthorizationRoleWithHttpInfo(roleId, userCount, expand);
              return localVarResponse.Data;
         }
 
@@ -4797,9 +4802,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
+        /// <param name="userCount">Fetch the count of users who have this role granted in at least one division (optional, default to true)</param>
         /// <param name="expand">Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)</param>
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
-        public ApiResponse< DomainOrganizationRole > GetAuthorizationRoleWithHttpInfo (string roleId, List<string> expand = null)
+        public ApiResponse< DomainOrganizationRole > GetAuthorizationRoleWithHttpInfo (string roleId, bool? userCount = null, List<string> expand = null)
         { 
             // verify the required parameter 'roleId' is set
             if (roleId == null)
@@ -4838,6 +4844,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (roleId != null) localVarPathParams.Add("roleId", this.Configuration.ApiClient.ParameterToString(roleId));
 
             // Query params
+            if (userCount != null) localVarQueryParams.Add(new Tuple<string, string>("userCount", this.Configuration.ApiClient.ParameterToString(userCount)));
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
@@ -4881,11 +4888,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
+        /// <param name="userCount">Fetch the count of users who have this role granted in at least one division (optional, default to true)</param>
         /// <param name="expand">Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)</param>
         /// <returns>Task of DomainOrganizationRole</returns>
-        public async System.Threading.Tasks.Task<DomainOrganizationRole> GetAuthorizationRoleAsync (string roleId, List<string> expand = null)
+        public async System.Threading.Tasks.Task<DomainOrganizationRole> GetAuthorizationRoleAsync (string roleId, bool? userCount = null, List<string> expand = null)
         {
-             ApiResponse<DomainOrganizationRole> localVarResponse = await GetAuthorizationRoleAsyncWithHttpInfo(roleId, expand);
+             ApiResponse<DomainOrganizationRole> localVarResponse = await GetAuthorizationRoleAsyncWithHttpInfo(roleId, userCount, expand);
              return localVarResponse.Data;
 
         }
@@ -4895,9 +4903,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="roleId">Role ID</param>
+        /// <param name="userCount">Fetch the count of users who have this role granted in at least one division (optional, default to true)</param>
         /// <param name="expand">Which fields, if any, to expand. \&quot;unusedPermissions\&quot; returns the permissions not used for the role (optional)</param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> GetAuthorizationRoleAsyncWithHttpInfo (string roleId, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> GetAuthorizationRoleAsyncWithHttpInfo (string roleId, bool? userCount = null, List<string> expand = null)
         { 
             // verify the required parameter 'roleId' is set
             if (roleId == null)
@@ -4937,6 +4946,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (roleId != null) localVarPathParams.Add("roleId", this.Configuration.ApiClient.ParameterToString(roleId));
 
             // Query params
+            if (userCount != null) localVarQueryParams.Add(new Tuple<string, string>("userCount", this.Configuration.ApiClient.ParameterToString(userCount)));
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params

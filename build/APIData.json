@@ -3789,12 +3789,17 @@
   "getauthorizationrole": {
     "operationId": "getauthorizationrole",
     "functionName": "GetAuthorizationRole",
-    "signature": "GetAuthorizationRole(roleId, expand)",
+    "signature": "GetAuthorizationRole(roleId, userCount, expand)",
     "parameters": [
       {
         "name": "roleId",
         "type": "string",
         "required": "true"
+      },
+      {
+        "name": "userCount",
+        "type": "bool?",
+        "required": "false"
       },
       {
         "name": "expand",
@@ -3803,7 +3808,7 @@
       }
     ],
     "return": "DomainOrganizationRole",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetAuthorizationRoleExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new AuthorizationApi();\n            var roleId = \"roleId_example\";  // string | Role ID\n            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. \\\"unusedPermissions\\\" returns the permissions not used for the role (optional) \n\n            try\n            { \n                // Get a single organization role.\n                DomainOrganizationRole result = apiInstance.GetAuthorizationRole(roleId, expand);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Authorization.GetAuthorizationRole: \" + e.Message );\n            }\n        }\n    }\n}"
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetAuthorizationRoleExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new AuthorizationApi();\n            var roleId = \"roleId_example\";  // string | Role ID\n            var userCount = \"userCount_example\";  // bool? | Fetch the count of users who have this role granted in at least one division (optional)  (default to true)\n            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. \\\"unusedPermissions\\\" returns the permissions not used for the role (optional) \n\n            try\n            { \n                // Get a single organization role.\n                DomainOrganizationRole result = apiInstance.GetAuthorizationRole(roleId, userCount, expand);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Authorization.GetAuthorizationRole: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "getauthorizationrolecomparedefaultrightroleid": {
     "operationId": "getauthorizationrolecomparedefaultrightroleid",
@@ -4422,6 +4427,13 @@
     "return": "ChatSettings",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetChatSettingsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ChatApi();\n\n            try\n            { \n                // Get Chat Settings.\n                ChatSettings result = apiInstance.GetChatSettings();\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Chat.GetChatSettings: \" + e.Message );\n            }\n        }\n    }\n}"
   },
+  "getchatssettings": {
+    "operationId": "getchatssettings",
+    "functionName": "GetChatsSettings",
+    "signature": "GetChatsSettings()",
+    "return": "ChatSettings",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetChatsSettingsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ChatApi();\n\n            try\n            { \n                // Get Chat Settings.\n                ChatSettings result = apiInstance.GetChatsSettings();\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Chat.GetChatsSettings: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
   "patchchatsettings": {
     "operationId": "patchchatsettings",
     "functionName": "PatchChatSettings",
@@ -4436,6 +4448,20 @@
     "return": "ChatSettings",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PatchChatSettingsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ChatApi();\n            var body = new ChatSettings(); // ChatSettings | Chat\n\n            try\n            { \n                // Patch Chat Settings.\n                ChatSettings result = apiInstance.PatchChatSettings(body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Chat.PatchChatSettings: \" + e.Message );\n            }\n        }\n    }\n}"
   },
+  "patchchatssettings": {
+    "operationId": "patchchatssettings",
+    "functionName": "PatchChatsSettings",
+    "signature": "PatchChatsSettings(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "ChatSettings",
+        "required": "true"
+      }
+    ],
+    "return": "ChatSettings",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PatchChatsSettingsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ChatApi();\n            var body = new ChatSettings(); // ChatSettings | Chat\n\n            try\n            { \n                // Patch Chat Settings.\n                ChatSettings result = apiInstance.PatchChatsSettings(body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Chat.PatchChatsSettings: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
   "putchatsettings": {
     "operationId": "putchatsettings",
     "functionName": "PutChatSettings",
@@ -4449,6 +4475,20 @@
     ],
     "return": "ChatSettings",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PutChatSettingsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ChatApi();\n            var body = new ChatSettings(); // ChatSettings | Chat\n\n            try\n            { \n                // Update Chat Settings.\n                ChatSettings result = apiInstance.PutChatSettings(body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Chat.PutChatSettings: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "putchatssettings": {
+    "operationId": "putchatssettings",
+    "functionName": "PutChatsSettings",
+    "signature": "PutChatsSettings(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "ChatSettings",
+        "required": "true"
+      }
+    ],
+    "return": "ChatSettings",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PutChatsSettingsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new ChatApi();\n            var body = new ChatSettings(); // ChatSettings | Chat\n\n            try\n            { \n                // Update Chat Settings.\n                ChatSettings result = apiInstance.PutChatsSettings(body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Chat.PutChatsSettings: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "deletecoachingappointment": {
     "operationId": "deletecoachingappointment",
@@ -26584,7 +26624,7 @@
   "getroutingemaildomains": {
     "operationId": "getroutingemaildomains",
     "functionName": "GetRoutingEmailDomains",
-    "signature": "GetRoutingEmailDomains(pageSize, pageNumber, excludeStatus)",
+    "signature": "GetRoutingEmailDomains(pageSize, pageNumber, excludeStatus, filter)",
     "parameters": [
       {
         "name": "pageSize",
@@ -26600,10 +26640,15 @@
         "name": "excludeStatus",
         "type": "bool?",
         "required": "false"
+      },
+      {
+        "name": "filter",
+        "type": "string",
+        "required": "false"
       }
     ],
     "return": "InboundDomainEntityListing",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetRoutingEmailDomainsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new RoutingApi();\n            var pageSize = 56;  // int? | Page size (optional)  (default to 25)\n            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)\n            var excludeStatus = true;  // bool? | Exclude MX record data (optional)  (default to false)\n\n            try\n            { \n                // Get domains\n                InboundDomainEntityListing result = apiInstance.GetRoutingEmailDomains(pageSize, pageNumber, excludeStatus);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Routing.GetRoutingEmailDomains: \" + e.Message );\n            }\n        }\n    }\n}"
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetRoutingEmailDomainsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new RoutingApi();\n            var pageSize = 56;  // int? | Page size (optional)  (default to 25)\n            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)\n            var excludeStatus = true;  // bool? | Exclude MX record data (optional)  (default to false)\n            var filter = \"filter_example\";  // string | Optional search filter (optional) \n\n            try\n            { \n                // Get domains\n                InboundDomainEntityListing result = apiInstance.GetRoutingEmailDomains(pageSize, pageNumber, excludeStatus, filter);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Routing.GetRoutingEmailDomains: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "getroutingemailoutbounddomain": {
     "operationId": "getroutingemailoutbounddomain",
@@ -26650,9 +26695,16 @@
   "getroutingemailoutbounddomains": {
     "operationId": "getroutingemailoutbounddomains",
     "functionName": "GetRoutingEmailOutboundDomains",
-    "signature": "GetRoutingEmailOutboundDomains()",
+    "signature": "GetRoutingEmailOutboundDomains(filter)",
+    "parameters": [
+      {
+        "name": "filter",
+        "type": "string",
+        "required": "false"
+      }
+    ],
     "return": "OutboundDomainEntityListing",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetRoutingEmailOutboundDomainsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new RoutingApi();\n\n            try\n            { \n                // Get outbound domains\n                OutboundDomainEntityListing result = apiInstance.GetRoutingEmailOutboundDomains();\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Routing.GetRoutingEmailOutboundDomains: \" + e.Message );\n            }\n        }\n    }\n}"
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetRoutingEmailOutboundDomainsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new RoutingApi();\n            var filter = \"filter_example\";  // string | Optional search filter (optional) \n\n            try\n            { \n                // Get outbound domains\n                OutboundDomainEntityListing result = apiInstance.GetRoutingEmailOutboundDomains(filter);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Routing.GetRoutingEmailOutboundDomains: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "getroutingemailsetup": {
     "operationId": "getroutingemailsetup",

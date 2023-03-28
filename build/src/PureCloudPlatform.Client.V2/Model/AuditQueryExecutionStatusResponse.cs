@@ -151,6 +151,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Employeeperformance,
             
             /// <summary>
+            /// Enum Externalcontacts for "ExternalContacts"
+            /// </summary>
+            [EnumMember(Value = "ExternalContacts")]
+            Externalcontacts,
+            
+            /// <summary>
             /// Enum Gamification for "Gamification"
             /// </summary>
             [EnumMember(Value = "Gamification")]

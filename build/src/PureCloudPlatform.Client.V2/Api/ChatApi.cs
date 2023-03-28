@@ -20,7 +20,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get Chat Settings.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, please use /chats/settings instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ChatSettings</returns>
@@ -30,17 +30,37 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get Chat Settings.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, please use /chats/settings instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ChatSettings</returns>
         ApiResponse<ChatSettings> GetChatSettingsWithHttpInfo ();
 
         /// <summary>
-        /// Patch Chat Settings.
+        /// Get Chat Settings.
         /// </summary>
         /// <remarks>
         /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ChatSettings</returns>
+        ChatSettings GetChatsSettings ();
+
+        /// <summary>
+        /// Get Chat Settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of ChatSettings</returns>
+        ApiResponse<ChatSettings> GetChatsSettingsWithHttpInfo ();
+
+        /// <summary>
+        /// Patch Chat Settings.
+        /// </summary>
+        /// <remarks>
+        /// This route is deprecated, please use /chats/settings instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
@@ -51,7 +71,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Patch Chat Settings.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, please use /chats/settings instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
@@ -59,10 +79,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ChatSettings> PatchChatSettingsWithHttpInfo (ChatSettings body);
 
         /// <summary>
-        /// Update Chat Settings.
+        /// Patch Chat Settings.
         /// </summary>
         /// <remarks>
         /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Chat</param>
+        /// <returns>ChatSettings</returns>
+        ChatSettings PatchChatsSettings (ChatSettings body);
+
+        /// <summary>
+        /// Patch Chat Settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Chat</param>
+        /// <returns>ApiResponse of ChatSettings</returns>
+        ApiResponse<ChatSettings> PatchChatsSettingsWithHttpInfo (ChatSettings body);
+
+        /// <summary>
+        /// Update Chat Settings.
+        /// </summary>
+        /// <remarks>
+        /// This route is deprecated, please use /chats/settings instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
@@ -73,12 +115,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update Chat Settings.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, please use /chats/settings instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
         /// <returns>ApiResponse of ChatSettings</returns>
         ApiResponse<ChatSettings> PutChatSettingsWithHttpInfo (ChatSettings body);
+
+        /// <summary>
+        /// Update Chat Settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Chat</param>
+        /// <returns>ChatSettings</returns>
+        ChatSettings PutChatsSettings (ChatSettings body);
+
+        /// <summary>
+        /// Update Chat Settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Chat</param>
+        /// <returns>ApiResponse of ChatSettings</returns>
+        ApiResponse<ChatSettings> PutChatsSettingsWithHttpInfo (ChatSettings body);
 
         #endregion Synchronous Operations
 
@@ -88,7 +152,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get Chat Settings.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, please use /chats/settings instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ChatSettings</returns>
@@ -98,17 +162,37 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get Chat Settings.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, please use /chats/settings instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ChatSettings)</returns>
         System.Threading.Tasks.Task<ApiResponse<ChatSettings>> GetChatSettingsAsyncWithHttpInfo ();
 
         /// <summary>
-        /// Patch Chat Settings.
+        /// Get Chat Settings.
         /// </summary>
         /// <remarks>
         /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ChatSettings</returns>
+        System.Threading.Tasks.Task<ChatSettings> GetChatsSettingsAsync ();
+
+        /// <summary>
+        /// Get Chat Settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (ChatSettings)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ChatSettings>> GetChatsSettingsAsyncWithHttpInfo ();
+
+        /// <summary>
+        /// Patch Chat Settings.
+        /// </summary>
+        /// <remarks>
+        /// This route is deprecated, please use /chats/settings instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
@@ -119,7 +203,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Patch Chat Settings.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, please use /chats/settings instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
@@ -127,10 +211,32 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ChatSettings>> PatchChatSettingsAsyncWithHttpInfo (ChatSettings body);
 
         /// <summary>
-        /// Update Chat Settings.
+        /// Patch Chat Settings.
         /// </summary>
         /// <remarks>
         /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Chat</param>
+        /// <returns>Task of ChatSettings</returns>
+        System.Threading.Tasks.Task<ChatSettings> PatchChatsSettingsAsync (ChatSettings body);
+
+        /// <summary>
+        /// Patch Chat Settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Chat</param>
+        /// <returns>Task of ApiResponse (ChatSettings)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ChatSettings>> PatchChatsSettingsAsyncWithHttpInfo (ChatSettings body);
+
+        /// <summary>
+        /// Update Chat Settings.
+        /// </summary>
+        /// <remarks>
+        /// This route is deprecated, please use /chats/settings instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
@@ -141,12 +247,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update Chat Settings.
         /// </summary>
         /// <remarks>
-        /// 
+        /// This route is deprecated, please use /chats/settings instead
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
         /// <returns>Task of ApiResponse (ChatSettings)</returns>
         System.Threading.Tasks.Task<ApiResponse<ChatSettings>> PutChatSettingsAsyncWithHttpInfo (ChatSettings body);
+
+        /// <summary>
+        /// Update Chat Settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Chat</param>
+        /// <returns>Task of ChatSettings</returns>
+        System.Threading.Tasks.Task<ChatSettings> PutChatsSettingsAsync (ChatSettings body);
+
+        /// <summary>
+        /// Update Chat Settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Chat</param>
+        /// <returns>Task of ApiResponse (ChatSettings)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ChatSettings>> PutChatsSettingsAsyncWithHttpInfo (ChatSettings body);
 
         #endregion Asynchronous Operations
 
@@ -241,7 +369,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get Chat Settings. 
+        /// Get Chat Settings. This route is deprecated, please use /chats/settings instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ChatSettings</returns>
@@ -252,7 +380,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get Chat Settings. 
+        /// Get Chat Settings. This route is deprecated, please use /chats/settings instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ChatSettings</returns>
@@ -329,7 +457,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get Chat Settings. 
+        /// Get Chat Settings. This route is deprecated, please use /chats/settings instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ChatSettings</returns>
@@ -341,7 +469,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get Chat Settings. 
+        /// Get Chat Settings. This route is deprecated, please use /chats/settings instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ChatSettings)</returns>
@@ -419,7 +547,185 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Patch Chat Settings. 
+        /// Get Chat Settings. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ChatSettings</returns>
+        public ChatSettings GetChatsSettings ()
+        {
+             ApiResponse<ChatSettings> localVarResponse = GetChatsSettingsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Chat Settings. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of ChatSettings</returns>
+        public ApiResponse< ChatSettings > GetChatsSettingsWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/chats/settings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetChatsSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetChatsSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ChatSettings>(localVarStatusCode,
+                localVarHeaders,
+                (ChatSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChatSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get Chat Settings. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ChatSettings</returns>
+        public async System.Threading.Tasks.Task<ChatSettings> GetChatsSettingsAsync ()
+        {
+             ApiResponse<ChatSettings> localVarResponse = await GetChatsSettingsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get Chat Settings. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (ChatSettings)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ChatSettings>> GetChatsSettingsAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/chats/settings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetChatsSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetChatsSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ChatSettings>(localVarStatusCode,
+                localVarHeaders,
+                (ChatSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChatSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Patch Chat Settings. This route is deprecated, please use /chats/settings instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
@@ -431,7 +737,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Patch Chat Settings. 
+        /// Patch Chat Settings. This route is deprecated, please use /chats/settings instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
@@ -518,7 +824,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Patch Chat Settings. 
+        /// Patch Chat Settings. This route is deprecated, please use /chats/settings instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
@@ -531,7 +837,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Patch Chat Settings. 
+        /// Patch Chat Settings. This route is deprecated, please use /chats/settings instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
@@ -620,7 +926,208 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update Chat Settings. 
+        /// Patch Chat Settings. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Chat</param>
+        /// <returns>ChatSettings</returns>
+        public ChatSettings PatchChatsSettings (ChatSettings body)
+        {
+             ApiResponse<ChatSettings> localVarResponse = PatchChatsSettingsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Patch Chat Settings. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Chat</param>
+        /// <returns>ApiResponse of ChatSettings</returns>
+        public ApiResponse< ChatSettings > PatchChatsSettingsWithHttpInfo (ChatSettings body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PatchChatsSettings");
+
+            var localVarPath = "/api/v2/chats/settings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchChatsSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchChatsSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ChatSettings>(localVarStatusCode,
+                localVarHeaders,
+                (ChatSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChatSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Patch Chat Settings. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Chat</param>
+        /// <returns>Task of ChatSettings</returns>
+        public async System.Threading.Tasks.Task<ChatSettings> PatchChatsSettingsAsync (ChatSettings body)
+        {
+             ApiResponse<ChatSettings> localVarResponse = await PatchChatsSettingsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Patch Chat Settings. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Chat</param>
+        /// <returns>Task of ApiResponse (ChatSettings)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ChatSettings>> PatchChatsSettingsAsyncWithHttpInfo (ChatSettings body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PatchChatsSettings");
+            
+
+            var localVarPath = "/api/v2/chats/settings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchChatsSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchChatsSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ChatSettings>(localVarStatusCode,
+                localVarHeaders,
+                (ChatSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChatSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update Chat Settings. This route is deprecated, please use /chats/settings instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
@@ -632,7 +1139,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update Chat Settings. 
+        /// Update Chat Settings. This route is deprecated, please use /chats/settings instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
@@ -719,7 +1226,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update Chat Settings. 
+        /// Update Chat Settings. This route is deprecated, please use /chats/settings instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
@@ -732,7 +1239,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update Chat Settings. 
+        /// Update Chat Settings. This route is deprecated, please use /chats/settings instead
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
@@ -810,6 +1317,207 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling PutChatSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutChatSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ChatSettings>(localVarStatusCode,
+                localVarHeaders,
+                (ChatSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChatSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update Chat Settings. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Chat</param>
+        /// <returns>ChatSettings</returns>
+        public ChatSettings PutChatsSettings (ChatSettings body)
+        {
+             ApiResponse<ChatSettings> localVarResponse = PutChatsSettingsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update Chat Settings. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Chat</param>
+        /// <returns>ApiResponse of ChatSettings</returns>
+        public ApiResponse< ChatSettings > PutChatsSettingsWithHttpInfo (ChatSettings body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PutChatsSettings");
+
+            var localVarPath = "/api/v2/chats/settings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutChatsSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutChatsSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ChatSettings>(localVarStatusCode,
+                localVarHeaders,
+                (ChatSettings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChatSettings)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update Chat Settings. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Chat</param>
+        /// <returns>Task of ChatSettings</returns>
+        public async System.Threading.Tasks.Task<ChatSettings> PutChatsSettingsAsync (ChatSettings body)
+        {
+             ApiResponse<ChatSettings> localVarResponse = await PutChatsSettingsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update Chat Settings. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Chat</param>
+        /// <returns>Task of ApiResponse (ChatSettings)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ChatSettings>> PutChatsSettingsAsyncWithHttpInfo (ChatSettings body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PutChatsSettings");
+            
+
+            var localVarPath = "/api/v2/chats/settings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutChatsSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutChatsSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ChatSettings>(localVarStatusCode,
                 localVarHeaders,
