@@ -213,7 +213,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Events">List of event elements..</param>
         /// <param name="OriginatingEntity">Specifies if this message was sent by a human agent or bot. The platform may use this to apply appropriate provider policies..</param>
         /// <param name="Metadata">Additional metadata about this message..</param>
-        public ConversationNormalizedMessage(TypeEnum? Type = null, string Text = null, List<ConversationMessageContent> Content = null, List<ConversationMessageEvent> Events = null, OriginatingEntityEnum? OriginatingEntity = null, Dictionary<string, string> Metadata = null)
+        /// <param name="ByoSmsIntegrationId">The internal id representing the customer supplied sms integration message..</param>
+        public ConversationNormalizedMessage(TypeEnum? Type = null, string Text = null, List<ConversationMessageContent> Content = null, List<ConversationMessageEvent> Events = null, OriginatingEntityEnum? OriginatingEntity = null, Dictionary<string, string> Metadata = null, string ByoSmsIntegrationId = null)
         {
             this.Type = Type;
             this.Text = Text;
@@ -221,6 +222,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Events = Events;
             this.OriginatingEntity = OriginatingEntity;
             this.Metadata = Metadata;
+            this.ByoSmsIntegrationId = ByoSmsIntegrationId;
             
         }
         
@@ -305,6 +307,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public Dictionary<string, string> Metadata { get; set; }
 
 
+
+        /// <summary>
+        /// The internal id representing the customer supplied sms integration message.
+        /// </summary>
+        /// <value>The internal id representing the customer supplied sms integration message.</value>
+        [DataMember(Name="byoSmsIntegrationId", EmitDefaultValue=false)]
+        public string ByoSmsIntegrationId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -326,6 +337,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  IsFinalReceipt: ").Append(IsFinalReceipt).Append("\n");
             sb.Append("  Direction: ").Append(Direction).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
+            sb.Append("  ByoSmsIntegrationId: ").Append(ByoSmsIntegrationId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -425,6 +437,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Metadata == other.Metadata ||
                     this.Metadata != null &&
                     this.Metadata.SequenceEqual(other.Metadata)
+                ) &&
+                (
+                    this.ByoSmsIntegrationId == other.ByoSmsIntegrationId ||
+                    this.ByoSmsIntegrationId != null &&
+                    this.ByoSmsIntegrationId.Equals(other.ByoSmsIntegrationId)
                 );
         }
 
@@ -474,6 +491,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();
+
+                if (this.ByoSmsIntegrationId != null)
+                    hash = hash * 59 + this.ByoSmsIntegrationId.GetHashCode();
 
                 return hash;
             }

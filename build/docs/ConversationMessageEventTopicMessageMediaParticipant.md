@@ -47,6 +47,7 @@ title: ConversationMessageEventTopicMessageMediaParticipant
 | **Type** | **string** |  | [optional] |
 | **RecipientCountry** | **string** |  | [optional] |
 | **RecipientType** | **string** |  | [optional] |
+| **ByoSmsIntegrationId** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 

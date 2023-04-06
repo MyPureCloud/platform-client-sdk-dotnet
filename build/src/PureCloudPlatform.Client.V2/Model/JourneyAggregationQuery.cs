@@ -117,18 +117,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Journeyblockingschedulegroupid,
             
             /// <summary>
-            /// Enum Journeycustomerid for "journeyCustomerId"
-            /// </summary>
-            [EnumMember(Value = "journeyCustomerId")]
-            Journeycustomerid,
-            
-            /// <summary>
-            /// Enum Journeycustomeridtype for "journeyCustomerIdType"
-            /// </summary>
-            [EnumMember(Value = "journeyCustomerIdType")]
-            Journeycustomeridtype,
-            
-            /// <summary>
             /// Enum Journeydevicecategory for "journeyDeviceCategory"
             /// </summary>
             [EnumMember(Value = "journeyDeviceCategory")]

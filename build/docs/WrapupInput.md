@@ -1,7 +1,7 @@
 ---
-title: ExtendedWrapup
+title: WrapupInput
 ---
-## ININ.PureCloudApi.Model.ExtendedWrapup
+## ININ.PureCloudApi.Model.WrapupInput
 
 ## Properties
 

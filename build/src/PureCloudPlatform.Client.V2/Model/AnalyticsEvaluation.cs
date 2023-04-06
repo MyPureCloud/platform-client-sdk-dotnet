@@ -72,6 +72,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsEvaluation" /> class.
         /// </summary>
+        /// <param name="AssigneeId">UserId of the assignee.</param>
         /// <param name="CalibrationId">The calibration ID used for the purpose of training evaluators.</param>
         /// <param name="ContextId">A unique identifier for an evaluation form, regardless of version.</param>
         /// <param name="Deleted">Whether the evaluation has been deleted.</param>
@@ -87,8 +88,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UserId">ID of the agent the evaluation was performed against.</param>
         /// <param name="OTotalCriticalScore">OTotalCriticalScore.</param>
         /// <param name="OTotalScore">OTotalScore.</param>
-        public AnalyticsEvaluation(string CalibrationId = null, string ContextId = null, bool? Deleted = null, string EvaluationId = null, EvaluationStatusEnum? EvaluationStatus = null, string EvaluatorId = null, DateTime? EventTime = null, string FormId = null, string FormName = null, string QueueId = null, bool? Released = null, bool? Rescored = null, string UserId = null, long? OTotalCriticalScore = null, long? OTotalScore = null)
+        public AnalyticsEvaluation(string AssigneeId = null, string CalibrationId = null, string ContextId = null, bool? Deleted = null, string EvaluationId = null, EvaluationStatusEnum? EvaluationStatus = null, string EvaluatorId = null, DateTime? EventTime = null, string FormId = null, string FormName = null, string QueueId = null, bool? Released = null, bool? Rescored = null, string UserId = null, long? OTotalCriticalScore = null, long? OTotalScore = null)
         {
+            this.AssigneeId = AssigneeId;
             this.CalibrationId = CalibrationId;
             this.ContextId = ContextId;
             this.Deleted = Deleted;
@@ -107,6 +109,15 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
+
+
+        /// <summary>
+        /// UserId of the assignee
+        /// </summary>
+        /// <value>UserId of the assignee</value>
+        [DataMember(Name="assigneeId", EmitDefaultValue=false)]
+        public string AssigneeId { get; set; }
+
 
 
         /// <summary>
@@ -243,6 +254,7 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class AnalyticsEvaluation {\n");
 
+            sb.Append("  AssigneeId: ").Append(AssigneeId).Append("\n");
             sb.Append("  CalibrationId: ").Append(CalibrationId).Append("\n");
             sb.Append("  ContextId: ").Append(ContextId).Append("\n");
             sb.Append("  Deleted: ").Append(Deleted).Append("\n");
@@ -298,6 +310,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 return false;
 
             return true &&
+                (
+                    this.AssigneeId == other.AssigneeId ||
+                    this.AssigneeId != null &&
+                    this.AssigneeId.Equals(other.AssigneeId)
+                ) &&
                 (
                     this.CalibrationId == other.CalibrationId ||
                     this.CalibrationId != null &&
@@ -386,6 +403,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.AssigneeId != null)
+                    hash = hash * 59 + this.AssigneeId.GetHashCode();
+
                 if (this.CalibrationId != null)
                     hash = hash * 59 + this.CalibrationId.GetHashCode();
 

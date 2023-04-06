@@ -97,6 +97,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchConversationParticipant**](ConversationsApi.html#patchconversationparticipant) | **PATCH** /api/v2/conversations/{conversationId}/participants/{participantId} | Update a participant. |
 | [**PatchConversationParticipantAttributes**](ConversationsApi.html#patchconversationparticipantattributes) | **PATCH** /api/v2/conversations/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
 | [**PatchConversationSecureattributes**](ConversationsApi.html#patchconversationsecureattributes) | **PATCH** /api/v2/conversations/{conversationId}/secureattributes | Update the secure attributes on a conversation. |
+| [**PatchConversationsAftercallworkConversationIdParticipantCommunication**](ConversationsApi.html#patchconversationsaftercallworkconversationidparticipantcommunication) | **PATCH** /api/v2/conversations/aftercallwork/{conversationId}/participants/{participantId}/communications/{communicationId} | Update after-call work for this conversation communication. |
 | [**PatchConversationsCall**](ConversationsApi.html#patchconversationscall) | **PATCH** /api/v2/conversations/calls/{conversationId} | Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants |
 | [**PatchConversationsCallParticipant**](ConversationsApi.html#patchconversationscallparticipant) | **PATCH** /api/v2/conversations/calls/{conversationId}/participants/{participantId} | Update conversation participant |
 | [**PatchConversationsCallParticipantAttributes**](ConversationsApi.html#patchconversationscallparticipantattributes) | **PATCH** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
@@ -6175,6 +6176,77 @@ namespace Example
 
 **string**
 
+<a name="patchconversationsaftercallworkconversationidparticipantcommunication"></a>
+
+## [**AfterCallWorkUpdate**](AfterCallWorkUpdate.html) PatchConversationsAftercallworkConversationIdParticipantCommunication (string conversationId, string participantId, string communicationId, AfterCallWorkUpdate body)
+
+
+
+Update after-call work for this conversation communication.
+
+
+
+Requires ANY permissions: 
+
+* conversation:participant:wrapup
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchConversationsAftercallworkConversationIdParticipantCommunicationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var participantId = participantId_example;  // string | participantId
+            var communicationId = communicationId_example;  // string | communicationId
+            var body = new AfterCallWorkUpdate(); // AfterCallWorkUpdate | AfterCallWorkUpdate
+
+            try
+            { 
+                // Update after-call work for this conversation communication.
+                AfterCallWorkUpdate result = apiInstance.PatchConversationsAftercallworkConversationIdParticipantCommunication(conversationId, participantId, communicationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchConversationsAftercallworkConversationIdParticipantCommunication: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **participantId** | **string**| participantId |  |
+| **communicationId** | **string**| communicationId |  |
+| **body** | [**AfterCallWorkUpdate**](AfterCallWorkUpdate.html)| AfterCallWorkUpdate |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**AfterCallWorkUpdate**](AfterCallWorkUpdate.html)
+
 <a name="patchconversationscall"></a>
 
 ## [**Conversation**](Conversation.html) PatchConversationsCall (string conversationId, Conversation body)
@@ -9218,7 +9290,7 @@ void (empty response body)
 
 <a name="postconversationscallparticipantcommunicationwrapup"></a>
 
-## void PostConversationsCallParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+## void PostConversationsCallParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
 
 
 
@@ -9255,7 +9327,7 @@ namespace Example
             var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var communicationId = communicationId_example;  // string | communicationId
-            var body = new ExtendedWrapup(); // ExtendedWrapup | Wrap-up (optional) 
+            var body = new WrapupInput(); // WrapupInput | Wrap-up (optional) 
 
             try
             { 
@@ -9279,7 +9351,7 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
-| **body** | [**ExtendedWrapup**](ExtendedWrapup.html)| Wrap-up | [optional]  |
+| **body** | [**WrapupInput**](WrapupInput.html)| Wrap-up | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -9555,7 +9627,7 @@ namespace Example
 
 <a name="postconversationscallbackparticipantcommunicationwrapup"></a>
 
-## void PostConversationsCallbackParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+## void PostConversationsCallbackParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
 
 
 
@@ -9592,7 +9664,7 @@ namespace Example
             var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var communicationId = communicationId_example;  // string | communicationId
-            var body = new ExtendedWrapup(); // ExtendedWrapup | Wrap-up (optional) 
+            var body = new WrapupInput(); // WrapupInput | Wrap-up (optional) 
 
             try
             { 
@@ -9616,7 +9688,7 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
-| **body** | [**ExtendedWrapup**](ExtendedWrapup.html)| Wrap-up | [optional]  |
+| **body** | [**WrapupInput**](WrapupInput.html)| Wrap-up | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -10085,7 +10157,7 @@ namespace Example
 
 <a name="postconversationschatparticipantcommunicationwrapup"></a>
 
-## void PostConversationsChatParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+## void PostConversationsChatParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
 
 
 
@@ -10122,7 +10194,7 @@ namespace Example
             var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var communicationId = communicationId_example;  // string | communicationId
-            var body = new ExtendedWrapup(); // ExtendedWrapup | Wrap-up (optional) 
+            var body = new WrapupInput(); // WrapupInput | Wrap-up (optional) 
 
             try
             { 
@@ -10146,7 +10218,7 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
-| **body** | [**ExtendedWrapup**](ExtendedWrapup.html)| Wrap-up | [optional]  |
+| **body** | [**WrapupInput**](WrapupInput.html)| Wrap-up | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -10287,7 +10359,7 @@ namespace Example
 
 <a name="postconversationscobrowsesessionparticipantcommunicationwrapup"></a>
 
-## void PostConversationsCobrowsesessionParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+## void PostConversationsCobrowsesessionParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
 
 
 
@@ -10324,7 +10396,7 @@ namespace Example
             var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var communicationId = communicationId_example;  // string | communicationId
-            var body = new ExtendedWrapup(); // ExtendedWrapup | Wrap-up (optional) 
+            var body = new WrapupInput(); // WrapupInput | Wrap-up (optional) 
 
             try
             { 
@@ -10348,7 +10420,7 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
-| **body** | [**ExtendedWrapup**](ExtendedWrapup.html)| Wrap-up | [optional]  |
+| **body** | [**WrapupInput**](WrapupInput.html)| Wrap-up | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -10622,7 +10694,7 @@ namespace Example
 
 <a name="postconversationsemailparticipantcommunicationwrapup"></a>
 
-## void PostConversationsEmailParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+## void PostConversationsEmailParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
 
 
 
@@ -10659,7 +10731,7 @@ namespace Example
             var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var communicationId = communicationId_example;  // string | communicationId
-            var body = new ExtendedWrapup(); // ExtendedWrapup | Wrap-up (optional) 
+            var body = new WrapupInput(); // WrapupInput | Wrap-up (optional) 
 
             try
             { 
@@ -10683,7 +10755,7 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
-| **body** | [**ExtendedWrapup**](ExtendedWrapup.html)| Wrap-up | [optional]  |
+| **body** | [**WrapupInput**](WrapupInput.html)| Wrap-up | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -11373,7 +11445,7 @@ namespace Example
 
 <a name="postconversationsmessageparticipantcommunicationwrapup"></a>
 
-## void PostConversationsMessageParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+## void PostConversationsMessageParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
 
 
 
@@ -11410,7 +11482,7 @@ namespace Example
             var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var communicationId = communicationId_example;  // string | communicationId
-            var body = new ExtendedWrapup(); // ExtendedWrapup | Wrap-up (optional) 
+            var body = new WrapupInput(); // WrapupInput | Wrap-up (optional) 
 
             try
             { 
@@ -11434,7 +11506,7 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
-| **body** | [**ExtendedWrapup**](ExtendedWrapup.html)| Wrap-up | [optional]  |
+| **body** | [**WrapupInput**](WrapupInput.html)| Wrap-up | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -12170,7 +12242,7 @@ namespace Example
 
 <a name="postconversationsscreenshareparticipantcommunicationwrapup"></a>
 
-## void PostConversationsScreenshareParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+## void PostConversationsScreenshareParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
 
 
 
@@ -12207,7 +12279,7 @@ namespace Example
             var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var communicationId = communicationId_example;  // string | communicationId
-            var body = new ExtendedWrapup(); // ExtendedWrapup | Wrap-up (optional) 
+            var body = new WrapupInput(); // WrapupInput | Wrap-up (optional) 
 
             try
             { 
@@ -12231,7 +12303,7 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
-| **body** | [**ExtendedWrapup**](ExtendedWrapup.html)| Wrap-up | [optional]  |
+| **body** | [**WrapupInput**](WrapupInput.html)| Wrap-up | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -12240,7 +12312,7 @@ void (empty response body)
 
 <a name="postconversationssocialparticipantcommunicationwrapup"></a>
 
-## void PostConversationsSocialParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+## void PostConversationsSocialParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
 
 
 
@@ -12277,7 +12349,7 @@ namespace Example
             var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var communicationId = communicationId_example;  // string | communicationId
-            var body = new ExtendedWrapup(); // ExtendedWrapup | Wrap-up (optional) 
+            var body = new WrapupInput(); // WrapupInput | Wrap-up (optional) 
 
             try
             { 
@@ -12301,7 +12373,7 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
-| **body** | [**ExtendedWrapup**](ExtendedWrapup.html)| Wrap-up | [optional]  |
+| **body** | [**WrapupInput**](WrapupInput.html)| Wrap-up | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -12310,7 +12382,7 @@ void (empty response body)
 
 <a name="postconversationsvideoparticipantcommunicationwrapup"></a>
 
-## void PostConversationsVideoParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+## void PostConversationsVideoParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
 
 
 
@@ -12347,7 +12419,7 @@ namespace Example
             var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var communicationId = communicationId_example;  // string | communicationId
-            var body = new ExtendedWrapup(); // ExtendedWrapup | Wrap-up (optional) 
+            var body = new WrapupInput(); // WrapupInput | Wrap-up (optional) 
 
             try
             { 
@@ -12371,7 +12443,7 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
-| **body** | [**ExtendedWrapup**](ExtendedWrapup.html)| Wrap-up | [optional]  |
+| **body** | [**WrapupInput**](WrapupInput.html)| Wrap-up | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

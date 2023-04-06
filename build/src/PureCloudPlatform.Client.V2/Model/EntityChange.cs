@@ -508,6 +508,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Gdprrequest,
             
             /// <summary>
+            /// Enum Grammar for "Grammar"
+            /// </summary>
+            [EnumMember(Value = "Grammar")]
+            Grammar,
+            
+            /// <summary>
+            /// Enum Grammarlanguage for "GrammarLanguage"
+            /// </summary>
+            [EnumMember(Value = "GrammarLanguage")]
+            Grammarlanguage,
+            
+            /// <summary>
             /// Enum Group for "Group"
             /// </summary>
             [EnumMember(Value = "Group")]
@@ -1000,10 +1012,22 @@ namespace PureCloudPlatform.Client.V2.Model
             Skillsgroup,
             
             /// <summary>
+            /// Enum Skillgroupdefinition for "SkillGroupDefinition"
+            /// </summary>
+            [EnumMember(Value = "SkillGroupDefinition")]
+            Skillgroupdefinition,
+            
+            /// <summary>
             /// Enum Speechtextanalyticssettings for "SpeechTextAnalyticsSettings"
             /// </summary>
             [EnumMember(Value = "SpeechTextAnalyticsSettings")]
             Speechtextanalyticssettings,
+            
+            /// <summary>
+            /// Enum Staffinggroup for "StaffingGroup"
+            /// </summary>
+            [EnumMember(Value = "StaffingGroup")]
+            Staffinggroup,
             
             /// <summary>
             /// Enum Status for "Status"

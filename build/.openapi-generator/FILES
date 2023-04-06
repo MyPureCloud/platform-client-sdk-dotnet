@@ -78,6 +78,7 @@ docs/AdhocRecordingTopicWorkspaceData.md
 docs/Adjacents.md
 docs/AdminTimeOffRequestPatch.md
 docs/AfterCallWork.md
+docs/AfterCallWorkUpdate.md
 docs/Agent.md
 docs/AgentActivity.md
 docs/AgentActivityChangedTopicAgentActivity.md
@@ -1531,6 +1532,7 @@ docs/EvaluationQuestion.md
 docs/EvaluationQuestionGroup.md
 docs/EvaluationQuestionGroupScore.md
 docs/EvaluationQuestionScore.md
+docs/EvaluationReference.md
 docs/EvaluationResponse.md
 docs/EvaluationScoringSet.md
 docs/EvaluationSettings.md
@@ -1557,7 +1559,6 @@ docs/ExpiredEdgeListing.md
 docs/ExportScriptRequest.md
 docs/ExportScriptResponse.md
 docs/ExportUri.md
-docs/ExtendedWrapup.md
 docs/Extension.md
 docs/ExtensionEntityListing.md
 docs/ExtensionPool.md
@@ -2201,6 +2202,8 @@ docs/GetOauthAuthorization-example.txt
 docs/GetOauthAuthorizations-example.txt
 docs/GetOauthClient-example.txt
 docs/GetOauthClientUsageQueryResult-example.txt
+docs/GetOauthClientUsageQueryResult-example.txt
+docs/GetOauthClientUsageSummary-example.txt
 docs/GetOauthClientUsageSummary-example.txt
 docs/GetOauthClients-example.txt
 docs/GetOauthScope-example.txt
@@ -3298,6 +3301,7 @@ docs/OrganizationAuthorizationApi.json
 docs/OrganizationAuthorizationApi.md
 docs/OrganizationFeatures.md
 docs/OrganizationPresence.md
+docs/OrganizationPresenceDefinition.md
 docs/OrganizationPresenceEntityListing.md
 docs/OrganizationProductEntityListing.md
 docs/OrganizationRoleEntityListing.md
@@ -3387,6 +3391,7 @@ docs/PatchContentPositionProperties.md
 docs/PatchConversationParticipant-example.txt
 docs/PatchConversationParticipantAttributes-example.txt
 docs/PatchConversationSecureattributes-example.txt
+docs/PatchConversationsAftercallworkConversationIdParticipantCommunication-example.txt
 docs/PatchConversationsCall-example.txt
 docs/PatchConversationsCallParticipant-example.txt
 docs/PatchConversationsCallParticipantAttributes-example.txt
@@ -3846,6 +3851,7 @@ docs/PostMobiledevices-example.txt
 docs/PostNotificationsChannelSubscriptions-example.txt
 docs/PostNotificationsChannels-example.txt
 docs/PostOauthClientSecret-example.txt
+docs/PostOauthClientUsageQuery-example.txt
 docs/PostOauthClientUsageQuery-example.txt
 docs/PostOauthClients-example.txt
 docs/PostOrgauthorizationPairings-example.txt
@@ -4959,6 +4965,7 @@ docs/SupportCenterSettings.md
 docs/SupportCenterStyleSetting.md
 docs/SupportedContent.md
 docs/SupportedContentListing.md
+docs/SupportedContentProfile.md
 docs/SupportedContentReference.md
 docs/SupportedDialectsEntityListing.md
 docs/SupportedLanguage.md
@@ -5699,6 +5706,7 @@ docs/WrapupCode.md
 docs/WrapupCodeEntityListing.md
 docs/WrapupCodeRequest.md
 docs/WrapupDetailEventTopicWrapupEvent.md
+docs/WrapupInput.md
 docs/WritableDialerContact.md
 docs/WritableDivision.md
 docs/WritableEntity.md
@@ -5856,6 +5864,7 @@ src/PureCloudPlatform.Client.V2/Model/AdhocRecordingTopicWorkspaceData.cs
 src/PureCloudPlatform.Client.V2/Model/Adjacents.cs
 src/PureCloudPlatform.Client.V2/Model/AdminTimeOffRequestPatch.cs
 src/PureCloudPlatform.Client.V2/Model/AfterCallWork.cs
+src/PureCloudPlatform.Client.V2/Model/AfterCallWorkUpdate.cs
 src/PureCloudPlatform.Client.V2/Model/Agent.cs
 src/PureCloudPlatform.Client.V2/Model/AgentActivity.cs
 src/PureCloudPlatform.Client.V2/Model/AgentActivityChangedTopicAgentActivity.cs
@@ -7060,6 +7069,7 @@ src/PureCloudPlatform.Client.V2/Model/EvaluationQuestion.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationQuestionGroup.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationQuestionGroupScore.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationQuestionScore.cs
+src/PureCloudPlatform.Client.V2/Model/EvaluationReference.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationResponse.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationScoringSet.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationSettings.cs
@@ -7084,7 +7094,6 @@ src/PureCloudPlatform.Client.V2/Model/ExpiredEdgeListing.cs
 src/PureCloudPlatform.Client.V2/Model/ExportScriptRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ExportScriptResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ExportUri.cs
-src/PureCloudPlatform.Client.V2/Model/ExtendedWrapup.cs
 src/PureCloudPlatform.Client.V2/Model/Extension.cs
 src/PureCloudPlatform.Client.V2/Model/ExtensionEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/ExtensionPool.cs
@@ -7803,6 +7812,7 @@ src/PureCloudPlatform.Client.V2/Model/OrgWhitelistSettings.cs
 src/PureCloudPlatform.Client.V2/Model/Organization.cs
 src/PureCloudPlatform.Client.V2/Model/OrganizationFeatures.cs
 src/PureCloudPlatform.Client.V2/Model/OrganizationPresence.cs
+src/PureCloudPlatform.Client.V2/Model/OrganizationPresenceDefinition.cs
 src/PureCloudPlatform.Client.V2/Model/OrganizationPresenceEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/OrganizationProductEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/OrganizationRoleEntityListing.cs
@@ -8597,6 +8607,7 @@ src/PureCloudPlatform.Client.V2/Model/SupportCenterSettings.cs
 src/PureCloudPlatform.Client.V2/Model/SupportCenterStyleSetting.cs
 src/PureCloudPlatform.Client.V2/Model/SupportedContent.cs
 src/PureCloudPlatform.Client.V2/Model/SupportedContentListing.cs
+src/PureCloudPlatform.Client.V2/Model/SupportedContentProfile.cs
 src/PureCloudPlatform.Client.V2/Model/SupportedContentReference.cs
 src/PureCloudPlatform.Client.V2/Model/SupportedDialectsEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/SupportedLanguage.cs
@@ -9305,6 +9316,7 @@ src/PureCloudPlatform.Client.V2/Model/WrapupCode.cs
 src/PureCloudPlatform.Client.V2/Model/WrapupCodeEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/WrapupCodeRequest.cs
 src/PureCloudPlatform.Client.V2/Model/WrapupDetailEventTopicWrapupEvent.cs
+src/PureCloudPlatform.Client.V2/Model/WrapupInput.cs
 src/PureCloudPlatform.Client.V2/Model/WritableDialerContact.cs
 src/PureCloudPlatform.Client.V2/Model/WritableDivision.cs
 src/PureCloudPlatform.Client.V2/Model/WritableEntity.cs

@@ -29,7 +29,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LastAttemptOverallConditionSettings">The settings for a 'last attempt overall' condition..</param>
         /// <param name="LastResultByColumnConditionSettings">The settings for a 'last result by column' condition..</param>
         /// <param name="LastResultOverallConditionSettings">The settings for a 'last result overall' condition..</param>
-        public DigitalCondition(bool? Inverted = null, ContactColumnConditionSettings ContactColumnConditionSettings = null, ContactAddressConditionSettings ContactAddressConditionSettings = null, ContactAddressTypeConditionSettings ContactAddressTypeConditionSettings = null, LastAttemptByColumnConditionSettings LastAttemptByColumnConditionSettings = null, LastAttemptOverallConditionSettings LastAttemptOverallConditionSettings = null, LastResultByColumnConditionSettings LastResultByColumnConditionSettings = null, LastResultOverallConditionSettings LastResultOverallConditionSettings = null)
+        /// <param name="DataActionConditionSettings">The settings for a 'data action' condition..</param>
+        public DigitalCondition(bool? Inverted = null, ContactColumnConditionSettings ContactColumnConditionSettings = null, ContactAddressConditionSettings ContactAddressConditionSettings = null, ContactAddressTypeConditionSettings ContactAddressTypeConditionSettings = null, LastAttemptByColumnConditionSettings LastAttemptByColumnConditionSettings = null, LastAttemptOverallConditionSettings LastAttemptOverallConditionSettings = null, LastResultByColumnConditionSettings LastResultByColumnConditionSettings = null, LastResultOverallConditionSettings LastResultOverallConditionSettings = null, DataActionConditionSettings DataActionConditionSettings = null)
         {
             this.Inverted = Inverted;
             this.ContactColumnConditionSettings = ContactColumnConditionSettings;
@@ -39,6 +40,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.LastAttemptOverallConditionSettings = LastAttemptOverallConditionSettings;
             this.LastResultByColumnConditionSettings = LastResultByColumnConditionSettings;
             this.LastResultOverallConditionSettings = LastResultOverallConditionSettings;
+            this.DataActionConditionSettings = DataActionConditionSettings;
             
         }
         
@@ -115,6 +117,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public LastResultOverallConditionSettings LastResultOverallConditionSettings { get; set; }
 
 
+
+        /// <summary>
+        /// The settings for a 'data action' condition.
+        /// </summary>
+        /// <value>The settings for a 'data action' condition.</value>
+        [DataMember(Name="dataActionConditionSettings", EmitDefaultValue=false)]
+        public DataActionConditionSettings DataActionConditionSettings { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -132,6 +143,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  LastAttemptOverallConditionSettings: ").Append(LastAttemptOverallConditionSettings).Append("\n");
             sb.Append("  LastResultByColumnConditionSettings: ").Append(LastResultByColumnConditionSettings).Append("\n");
             sb.Append("  LastResultOverallConditionSettings: ").Append(LastResultOverallConditionSettings).Append("\n");
+            sb.Append("  DataActionConditionSettings: ").Append(DataActionConditionSettings).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -211,6 +223,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LastResultOverallConditionSettings == other.LastResultOverallConditionSettings ||
                     this.LastResultOverallConditionSettings != null &&
                     this.LastResultOverallConditionSettings.Equals(other.LastResultOverallConditionSettings)
+                ) &&
+                (
+                    this.DataActionConditionSettings == other.DataActionConditionSettings ||
+                    this.DataActionConditionSettings != null &&
+                    this.DataActionConditionSettings.Equals(other.DataActionConditionSettings)
                 );
         }
 
@@ -248,6 +265,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.LastResultOverallConditionSettings != null)
                     hash = hash * 59 + this.LastResultOverallConditionSettings.GetHashCode();
+
+                if (this.DataActionConditionSettings != null)
+                    hash = hash * 59 + this.DataActionConditionSettings.GetHashCode();
 
                 return hash;
             }

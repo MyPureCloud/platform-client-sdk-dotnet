@@ -511,7 +511,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">Type.</param>
         /// <param name="RecipientCountry">RecipientCountry.</param>
         /// <param name="RecipientType">RecipientType.</param>
-        public QueueConversationMessageEventTopicMessageMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationMessageEventTopicUriReference User = null, QueueConversationMessageEventTopicUriReference Queue = null, QueueConversationMessageEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, QueueConversationMessageEventTopicErrorBody ErrorInfo = null, QueueConversationMessageEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, QueueConversationMessageEventTopicUriReference ExternalContact = null, QueueConversationMessageEventTopicUriReference ExternalOrganization = null, QueueConversationMessageEventTopicWrapup Wrapup = null, QueueConversationMessageEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, QueueConversationMessageEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, List<string> MediaRoles = null, List<QueueConversationMessageEventTopicMessageDetails> Messages = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null)
+        /// <param name="ByoSmsIntegrationId">ByoSmsIntegrationId.</param>
+        public QueueConversationMessageEventTopicMessageMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationMessageEventTopicUriReference User = null, QueueConversationMessageEventTopicUriReference Queue = null, QueueConversationMessageEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, QueueConversationMessageEventTopicErrorBody ErrorInfo = null, QueueConversationMessageEventTopicUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, QueueConversationMessageEventTopicUriReference ExternalContact = null, QueueConversationMessageEventTopicUriReference ExternalOrganization = null, QueueConversationMessageEventTopicWrapup Wrapup = null, QueueConversationMessageEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, QueueConversationMessageEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, List<string> MediaRoles = null, List<QueueConversationMessageEventTopicMessageDetails> Messages = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, string ByoSmsIntegrationId = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -553,6 +554,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Type = Type;
             this.RecipientCountry = RecipientCountry;
             this.RecipientType = RecipientType;
+            this.ByoSmsIntegrationId = ByoSmsIntegrationId;
             
         }
         
@@ -841,6 +843,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public string RecipientType { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets ByoSmsIntegrationId
+        /// </summary>
+        [DataMember(Name="byoSmsIntegrationId", EmitDefaultValue=false)]
+        public string ByoSmsIntegrationId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -890,6 +900,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  RecipientCountry: ").Append(RecipientCountry).Append("\n");
             sb.Append("  RecipientType: ").Append(RecipientType).Append("\n");
+            sb.Append("  ByoSmsIntegrationId: ").Append(ByoSmsIntegrationId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1129,6 +1140,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RecipientType == other.RecipientType ||
                     this.RecipientType != null &&
                     this.RecipientType.Equals(other.RecipientType)
+                ) &&
+                (
+                    this.ByoSmsIntegrationId == other.ByoSmsIntegrationId ||
+                    this.ByoSmsIntegrationId != null &&
+                    this.ByoSmsIntegrationId.Equals(other.ByoSmsIntegrationId)
                 );
         }
 
@@ -1262,6 +1278,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.RecipientType != null)
                     hash = hash * 59 + this.RecipientType.GetHashCode();
+
+                if (this.ByoSmsIntegrationId != null)
+                    hash = hash * 59 + this.ByoSmsIntegrationId.GetHashCode();
 
                 return hash;
             }

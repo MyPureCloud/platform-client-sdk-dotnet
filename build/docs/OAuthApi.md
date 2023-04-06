@@ -296,6 +296,7 @@ Get the results of a usage query
 Requires ANY permissions: 
 
 * oauth:client:view
+* usage:client:view
 
 ### Example
 ```{"language":"csharp"}
@@ -365,6 +366,7 @@ After calling this method, you will then need to poll for the query results base
 Requires ANY permissions: 
 
 * oauth:client:view
+* usage:client:view
 
 ### Example
 ```{"language":"csharp"}
@@ -691,6 +693,7 @@ After calling this method, you will then need to poll for the query results base
 Requires ANY permissions: 
 
 * oauth:client:view
+* usage:client:view
 
 ### Example
 ```{"language":"csharp"}

@@ -32,6 +32,7 @@ title: QueueConversationSocialExpressionEventTopicMessage
 | **AfterCallWork** | [**QueueConversationSocialExpressionEventTopicAfterCallWork**](QueueConversationSocialExpressionEventTopicAfterCallWork.html) | A communication&#39;s after-call work data. | [optional] |
 | **AfterCallWorkRequired** | **bool?** | Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested. | [optional] |
 | **AgentAssistantId** | **string** | UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation. | [optional] |
+| **ByoSmsIntegrationId** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 

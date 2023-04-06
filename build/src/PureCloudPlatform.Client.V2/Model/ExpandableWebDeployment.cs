@@ -82,15 +82,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Description">The description of the config.</param>
         /// <param name="AllowAllDomains">Property indicates whether all domains are allowed or not. allowedDomains must be empty when this is set as true..</param>
         /// <param name="AllowedDomains">The list of domains that are approved to use this deployment; the list will be added to CORS headers for ease of web use..</param>
+        /// <param name="SupportedContentProfile">The supported content profile for a deployment.</param>
         /// <param name="Flow">A reference to the inboundshortmessage flow used by this deployment.</param>
         /// <param name="Status">The current status of the deployment.</param>
         /// <param name="Configuration">The config version this deployment uses (required).</param>
-        public ExpandableWebDeployment(string Name = null, string Description = null, bool? AllowAllDomains = null, List<string> AllowedDomains = null, DomainEntityRef Flow = null, StatusEnum? Status = null, WebDeploymentConfigurationVersionResponse Configuration = null)
+        public ExpandableWebDeployment(string Name = null, string Description = null, bool? AllowAllDomains = null, List<string> AllowedDomains = null, SupportedContentProfile SupportedContentProfile = null, DomainEntityRef Flow = null, StatusEnum? Status = null, WebDeploymentConfigurationVersionResponse Configuration = null)
         {
             this.Name = Name;
             this.Description = Description;
             this.AllowAllDomains = AllowAllDomains;
             this.AllowedDomains = AllowedDomains;
+            this.SupportedContentProfile = SupportedContentProfile;
             this.Flow = Flow;
             this.Status = Status;
             this.Configuration = Configuration;
@@ -141,6 +143,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The list of domains that are approved to use this deployment; the list will be added to CORS headers for ease of web use.</value>
         [DataMember(Name="allowedDomains", EmitDefaultValue=false)]
         public List<string> AllowedDomains { get; set; }
+
+
+
+        /// <summary>
+        /// The supported content profile for a deployment
+        /// </summary>
+        /// <value>The supported content profile for a deployment</value>
+        [DataMember(Name="supportedContentProfile", EmitDefaultValue=false)]
+        public SupportedContentProfile SupportedContentProfile { get; set; }
 
 
 
@@ -222,6 +233,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  AllowAllDomains: ").Append(AllowAllDomains).Append("\n");
             sb.Append("  AllowedDomains: ").Append(AllowedDomains).Append("\n");
+            sb.Append("  SupportedContentProfile: ").Append(SupportedContentProfile).Append("\n");
             sb.Append("  Snippet: ").Append(Snippet).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
@@ -296,6 +308,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AllowedDomains.SequenceEqual(other.AllowedDomains)
                 ) &&
                 (
+                    this.SupportedContentProfile == other.SupportedContentProfile ||
+                    this.SupportedContentProfile != null &&
+                    this.SupportedContentProfile.Equals(other.SupportedContentProfile)
+                ) &&
+                (
                     this.Snippet == other.Snippet ||
                     this.Snippet != null &&
                     this.Snippet.Equals(other.Snippet)
@@ -362,6 +379,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AllowedDomains != null)
                     hash = hash * 59 + this.AllowedDomains.GetHashCode();
+
+                if (this.SupportedContentProfile != null)
+                    hash = hash * 59 + this.SupportedContentProfile.GetHashCode();
 
                 if (this.Snippet != null)
                     hash = hash * 59 + this.Snippet.GetHashCode();

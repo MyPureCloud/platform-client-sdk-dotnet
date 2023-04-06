@@ -2189,6 +2189,34 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<string> PatchConversationSecureattributesWithHttpInfo (string conversationId, ConversationSecureAttributes body);
 
         /// <summary>
+        /// Update after-call work for this conversation communication.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <param name="body">AfterCallWorkUpdate</param>
+        /// <returns>AfterCallWorkUpdate</returns>
+        AfterCallWorkUpdate PatchConversationsAftercallworkConversationIdParticipantCommunication (string conversationId, string participantId, string communicationId, AfterCallWorkUpdate body);
+
+        /// <summary>
+        /// Update after-call work for this conversation communication.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <param name="body">AfterCallWorkUpdate</param>
+        /// <returns>ApiResponse of AfterCallWorkUpdate</returns>
+        ApiResponse<AfterCallWorkUpdate> PatchConversationsAftercallworkConversationIdParticipantCommunicationWithHttpInfo (string conversationId, string participantId, string communicationId, AfterCallWorkUpdate body);
+
+        /// <summary>
         /// Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants
         /// </summary>
         /// <remarks>
@@ -3324,7 +3352,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns></returns>
-        void PostConversationsCallParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        void PostConversationsCallParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Apply wrap-up for this conversation communication
@@ -3338,7 +3366,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostConversationsCallParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        ApiResponse<Object> PostConversationsCallParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Initiate and update consult transfer
@@ -3452,7 +3480,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns></returns>
-        void PostConversationsCallbackParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        void PostConversationsCallbackParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Apply wrap-up for this conversation communication
@@ -3466,7 +3494,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostConversationsCallbackParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        ApiResponse<Object> PostConversationsCallbackParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Replace this participant with the specified user and/or address
@@ -3644,7 +3672,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns></returns>
-        void PostConversationsChatParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        void PostConversationsChatParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Apply wrap-up for this conversation communication
@@ -3658,7 +3686,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostConversationsChatParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        ApiResponse<Object> PostConversationsChatParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Replace this participant with the specified user and/or address
@@ -3720,7 +3748,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns></returns>
-        void PostConversationsCobrowsesessionParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        void PostConversationsCobrowsesessionParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Apply wrap-up for this conversation communication
@@ -3734,7 +3762,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostConversationsCobrowsesessionParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        ApiResponse<Object> PostConversationsCobrowsesessionParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Replace this participant with the specified user and/or address
@@ -3846,7 +3874,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns></returns>
-        void PostConversationsEmailParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        void PostConversationsEmailParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Apply wrap-up for this conversation communication
@@ -3860,7 +3888,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostConversationsEmailParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        ApiResponse<Object> PostConversationsEmailParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Replace this participant with the specified user and/or address
@@ -4114,7 +4142,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns></returns>
-        void PostConversationsMessageParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        void PostConversationsMessageParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Apply wrap-up for this conversation communication
@@ -4128,7 +4156,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostConversationsMessageParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        ApiResponse<Object> PostConversationsMessageParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Replace this participant with the specified user and/or address
@@ -4388,7 +4416,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns></returns>
-        void PostConversationsScreenshareParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        void PostConversationsScreenshareParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Apply wrap-up for this conversation communication
@@ -4402,7 +4430,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostConversationsScreenshareParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        ApiResponse<Object> PostConversationsScreenshareParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Apply wrap-up for this conversation communication
@@ -4416,7 +4444,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns></returns>
-        void PostConversationsSocialParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        void PostConversationsSocialParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Apply wrap-up for this conversation communication
@@ -4430,7 +4458,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostConversationsSocialParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        ApiResponse<Object> PostConversationsSocialParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Apply wrap-up for this conversation communication
@@ -4444,7 +4472,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns></returns>
-        void PostConversationsVideoParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        void PostConversationsVideoParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Apply wrap-up for this conversation communication
@@ -4458,7 +4486,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostConversationsVideoParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        ApiResponse<Object> PostConversationsVideoParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Set flagged reason on conversation participant to indicate bad conversation quality.
@@ -7069,6 +7097,34 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<string>> PatchConversationSecureattributesAsyncWithHttpInfo (string conversationId, ConversationSecureAttributes body);
 
         /// <summary>
+        /// Update after-call work for this conversation communication.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <param name="body">AfterCallWorkUpdate</param>
+        /// <returns>Task of AfterCallWorkUpdate</returns>
+        System.Threading.Tasks.Task<AfterCallWorkUpdate> PatchConversationsAftercallworkConversationIdParticipantCommunicationAsync (string conversationId, string participantId, string communicationId, AfterCallWorkUpdate body);
+
+        /// <summary>
+        /// Update after-call work for this conversation communication.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <param name="body">AfterCallWorkUpdate</param>
+        /// <returns>Task of ApiResponse (AfterCallWorkUpdate)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AfterCallWorkUpdate>> PatchConversationsAftercallworkConversationIdParticipantCommunicationAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, AfterCallWorkUpdate body);
+
+        /// <summary>
         /// Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants
         /// </summary>
         /// <remarks>
@@ -8204,7 +8260,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostConversationsCallParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        System.Threading.Tasks.Task PostConversationsCallParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Apply wrap-up for this conversation communication
@@ -8218,7 +8274,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsCallParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsCallParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Initiate and update consult transfer
@@ -8332,7 +8388,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostConversationsCallbackParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        System.Threading.Tasks.Task PostConversationsCallbackParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Apply wrap-up for this conversation communication
@@ -8346,7 +8402,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsCallbackParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsCallbackParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Replace this participant with the specified user and/or address
@@ -8524,7 +8580,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostConversationsChatParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        System.Threading.Tasks.Task PostConversationsChatParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Apply wrap-up for this conversation communication
@@ -8538,7 +8594,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsChatParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsChatParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Replace this participant with the specified user and/or address
@@ -8600,7 +8656,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostConversationsCobrowsesessionParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        System.Threading.Tasks.Task PostConversationsCobrowsesessionParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Apply wrap-up for this conversation communication
@@ -8614,7 +8670,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsCobrowsesessionParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsCobrowsesessionParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Replace this participant with the specified user and/or address
@@ -8726,7 +8782,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostConversationsEmailParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        System.Threading.Tasks.Task PostConversationsEmailParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Apply wrap-up for this conversation communication
@@ -8740,7 +8796,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsEmailParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsEmailParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Replace this participant with the specified user and/or address
@@ -8994,7 +9050,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostConversationsMessageParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        System.Threading.Tasks.Task PostConversationsMessageParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Apply wrap-up for this conversation communication
@@ -9008,7 +9064,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsMessageParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsMessageParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Replace this participant with the specified user and/or address
@@ -9268,7 +9324,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostConversationsScreenshareParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        System.Threading.Tasks.Task PostConversationsScreenshareParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Apply wrap-up for this conversation communication
@@ -9282,7 +9338,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsScreenshareParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsScreenshareParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Apply wrap-up for this conversation communication
@@ -9296,7 +9352,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostConversationsSocialParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        System.Threading.Tasks.Task PostConversationsSocialParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Apply wrap-up for this conversation communication
@@ -9310,7 +9366,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsSocialParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsSocialParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Apply wrap-up for this conversation communication
@@ -9324,7 +9380,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostConversationsVideoParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        System.Threading.Tasks.Task PostConversationsVideoParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Apply wrap-up for this conversation communication
@@ -9338,7 +9394,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsVideoParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsVideoParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null);
 
         /// <summary>
         /// Set flagged reason on conversation participant to indicate bad conversation quality.
@@ -27826,6 +27882,246 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Update after-call work for this conversation communication. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <param name="body">AfterCallWorkUpdate</param>
+        /// <returns>AfterCallWorkUpdate</returns>
+        public AfterCallWorkUpdate PatchConversationsAftercallworkConversationIdParticipantCommunication (string conversationId, string participantId, string communicationId, AfterCallWorkUpdate body)
+        {
+             ApiResponse<AfterCallWorkUpdate> localVarResponse = PatchConversationsAftercallworkConversationIdParticipantCommunicationWithHttpInfo(conversationId, participantId, communicationId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update after-call work for this conversation communication. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <param name="body">AfterCallWorkUpdate</param>
+        /// <returns>ApiResponse of AfterCallWorkUpdate</returns>
+        public ApiResponse< AfterCallWorkUpdate > PatchConversationsAftercallworkConversationIdParticipantCommunicationWithHttpInfo (string conversationId, string participantId, string communicationId, AfterCallWorkUpdate body)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PatchConversationsAftercallworkConversationIdParticipantCommunication");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchConversationsAftercallworkConversationIdParticipantCommunication");
+            // verify the required parameter 'communicationId' is set
+            if (communicationId == null)
+                throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PatchConversationsAftercallworkConversationIdParticipantCommunication");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsAftercallworkConversationIdParticipantCommunication");
+
+            var localVarPath = "/api/v2/conversations/aftercallwork/{conversationId}/participants/{participantId}/communications/{communicationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+            if (participantId != null) localVarPathParams.Add("participantId", this.Configuration.ApiClient.ParameterToString(participantId));
+            if (communicationId != null) localVarPathParams.Add("communicationId", this.Configuration.ApiClient.ParameterToString(communicationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationsAftercallworkConversationIdParticipantCommunication: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationsAftercallworkConversationIdParticipantCommunication: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AfterCallWorkUpdate>(localVarStatusCode,
+                localVarHeaders,
+                (AfterCallWorkUpdate) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AfterCallWorkUpdate)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update after-call work for this conversation communication. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <param name="body">AfterCallWorkUpdate</param>
+        /// <returns>Task of AfterCallWorkUpdate</returns>
+        public async System.Threading.Tasks.Task<AfterCallWorkUpdate> PatchConversationsAftercallworkConversationIdParticipantCommunicationAsync (string conversationId, string participantId, string communicationId, AfterCallWorkUpdate body)
+        {
+             ApiResponse<AfterCallWorkUpdate> localVarResponse = await PatchConversationsAftercallworkConversationIdParticipantCommunicationAsyncWithHttpInfo(conversationId, participantId, communicationId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update after-call work for this conversation communication. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="communicationId">communicationId</param>
+        /// <param name="body">AfterCallWorkUpdate</param>
+        /// <returns>Task of ApiResponse (AfterCallWorkUpdate)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AfterCallWorkUpdate>> PatchConversationsAftercallworkConversationIdParticipantCommunicationAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, AfterCallWorkUpdate body)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PatchConversationsAftercallworkConversationIdParticipantCommunication");
+            
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchConversationsAftercallworkConversationIdParticipantCommunication");
+            
+            // verify the required parameter 'communicationId' is set
+            if (communicationId == null)
+                throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PatchConversationsAftercallworkConversationIdParticipantCommunication");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsAftercallworkConversationIdParticipantCommunication");
+            
+
+            var localVarPath = "/api/v2/conversations/aftercallwork/{conversationId}/participants/{participantId}/communications/{communicationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+            if (participantId != null) localVarPathParams.Add("participantId", this.Configuration.ApiClient.ParameterToString(participantId));
+            if (communicationId != null) localVarPathParams.Add("communicationId", this.Configuration.ApiClient.ParameterToString(communicationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationsAftercallworkConversationIdParticipantCommunication: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationsAftercallworkConversationIdParticipantCommunication: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AfterCallWorkUpdate>(localVarStatusCode,
+                localVarHeaders,
+                (AfterCallWorkUpdate) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AfterCallWorkUpdate)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -37637,7 +37933,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns></returns>
-        public void PostConversationsCallParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public void PostConversationsCallParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         {
              PostConversationsCallParticipantCommunicationWrapupWithHttpInfo(conversationId, participantId, communicationId, body);
         }
@@ -37651,7 +37947,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostConversationsCallParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public ApiResponse<Object> PostConversationsCallParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -37750,7 +38046,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostConversationsCallParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public async System.Threading.Tasks.Task PostConversationsCallParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         {
              await PostConversationsCallParticipantCommunicationWrapupAsyncWithHttpInfo(conversationId, participantId, communicationId, body);
 
@@ -37765,7 +38061,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsCallParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsCallParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -38736,7 +39032,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns></returns>
-        public void PostConversationsCallbackParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public void PostConversationsCallbackParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         {
              PostConversationsCallbackParticipantCommunicationWrapupWithHttpInfo(conversationId, participantId, communicationId, body);
         }
@@ -38750,7 +39046,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostConversationsCallbackParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public ApiResponse<Object> PostConversationsCallbackParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -38849,7 +39145,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostConversationsCallbackParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public async System.Threading.Tasks.Task PostConversationsCallbackParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         {
              await PostConversationsCallbackParticipantCommunicationWrapupAsyncWithHttpInfo(conversationId, participantId, communicationId, body);
 
@@ -38864,7 +39160,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsCallbackParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsCallbackParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -40425,7 +40721,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns></returns>
-        public void PostConversationsChatParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public void PostConversationsChatParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         {
              PostConversationsChatParticipantCommunicationWrapupWithHttpInfo(conversationId, participantId, communicationId, body);
         }
@@ -40439,7 +40735,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostConversationsChatParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public ApiResponse<Object> PostConversationsChatParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -40538,7 +40834,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostConversationsChatParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public async System.Threading.Tasks.Task PostConversationsChatParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         {
              await PostConversationsChatParticipantCommunicationWrapupAsyncWithHttpInfo(conversationId, participantId, communicationId, body);
 
@@ -40553,7 +40849,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsChatParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsChatParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -41082,7 +41378,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns></returns>
-        public void PostConversationsCobrowsesessionParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public void PostConversationsCobrowsesessionParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         {
              PostConversationsCobrowsesessionParticipantCommunicationWrapupWithHttpInfo(conversationId, participantId, communicationId, body);
         }
@@ -41096,7 +41392,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostConversationsCobrowsesessionParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public ApiResponse<Object> PostConversationsCobrowsesessionParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -41195,7 +41491,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostConversationsCobrowsesessionParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public async System.Threading.Tasks.Task PostConversationsCobrowsesessionParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         {
              await PostConversationsCobrowsesessionParticipantCommunicationWrapupAsyncWithHttpInfo(conversationId, participantId, communicationId, body);
 
@@ -41210,7 +41506,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsCobrowsesessionParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsCobrowsesessionParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -42173,7 +42469,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns></returns>
-        public void PostConversationsEmailParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public void PostConversationsEmailParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         {
              PostConversationsEmailParticipantCommunicationWrapupWithHttpInfo(conversationId, participantId, communicationId, body);
         }
@@ -42187,7 +42483,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostConversationsEmailParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public ApiResponse<Object> PostConversationsEmailParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -42286,7 +42582,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostConversationsEmailParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public async System.Threading.Tasks.Task PostConversationsEmailParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         {
              await PostConversationsEmailParticipantCommunicationWrapupAsyncWithHttpInfo(conversationId, participantId, communicationId, body);
 
@@ -42301,7 +42597,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsEmailParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsEmailParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -44509,7 +44805,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns></returns>
-        public void PostConversationsMessageParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public void PostConversationsMessageParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         {
              PostConversationsMessageParticipantCommunicationWrapupWithHttpInfo(conversationId, participantId, communicationId, body);
         }
@@ -44523,7 +44819,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostConversationsMessageParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public ApiResponse<Object> PostConversationsMessageParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -44622,7 +44918,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostConversationsMessageParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public async System.Threading.Tasks.Task PostConversationsMessageParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         {
              await PostConversationsMessageParticipantCommunicationWrapupAsyncWithHttpInfo(conversationId, participantId, communicationId, body);
 
@@ -44637,7 +44933,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsMessageParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsMessageParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -46975,7 +47271,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns></returns>
-        public void PostConversationsScreenshareParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public void PostConversationsScreenshareParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         {
              PostConversationsScreenshareParticipantCommunicationWrapupWithHttpInfo(conversationId, participantId, communicationId, body);
         }
@@ -46989,7 +47285,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostConversationsScreenshareParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public ApiResponse<Object> PostConversationsScreenshareParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -47088,7 +47384,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostConversationsScreenshareParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public async System.Threading.Tasks.Task PostConversationsScreenshareParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         {
              await PostConversationsScreenshareParticipantCommunicationWrapupAsyncWithHttpInfo(conversationId, participantId, communicationId, body);
 
@@ -47103,7 +47399,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsScreenshareParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsScreenshareParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -47206,7 +47502,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns></returns>
-        public void PostConversationsSocialParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public void PostConversationsSocialParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         {
              PostConversationsSocialParticipantCommunicationWrapupWithHttpInfo(conversationId, participantId, communicationId, body);
         }
@@ -47220,7 +47516,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostConversationsSocialParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public ApiResponse<Object> PostConversationsSocialParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -47319,7 +47615,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostConversationsSocialParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public async System.Threading.Tasks.Task PostConversationsSocialParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         {
              await PostConversationsSocialParticipantCommunicationWrapupAsyncWithHttpInfo(conversationId, participantId, communicationId, body);
 
@@ -47334,7 +47630,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsSocialParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsSocialParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -47437,7 +47733,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns></returns>
-        public void PostConversationsVideoParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public void PostConversationsVideoParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         {
              PostConversationsVideoParticipantCommunicationWrapupWithHttpInfo(conversationId, participantId, communicationId, body);
         }
@@ -47451,7 +47747,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostConversationsVideoParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public ApiResponse<Object> PostConversationsVideoParticipantCommunicationWrapupWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -47550,7 +47846,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostConversationsVideoParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public async System.Threading.Tasks.Task PostConversationsVideoParticipantCommunicationWrapupAsync (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         {
              await PostConversationsVideoParticipantCommunicationWrapupAsyncWithHttpInfo(conversationId, participantId, communicationId, body);
 
@@ -47565,7 +47861,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="communicationId">communicationId</param>
         /// <param name="body">Wrap-up (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsVideoParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, ExtendedWrapup body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsVideoParticipantCommunicationWrapupAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, WrapupInput body = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)

@@ -12,6 +12,7 @@ title: ExpandableWebDeployment
 | **Description** | **string** | The description of the config | [optional] |
 | **AllowAllDomains** | **bool?** | Property indicates whether all domains are allowed or not. allowedDomains must be empty when this is set as true. | [optional] |
 | **AllowedDomains** | **List&lt;string&gt;** | The list of domains that are approved to use this deployment; the list will be added to CORS headers for ease of web use. | [optional] |
+| **SupportedContentProfile** | [**SupportedContentProfile**](SupportedContentProfile.html) | The supported content profile for a deployment | [optional] |
 | **Snippet** | **string** | Javascript snippet used to load the config | [optional] |
 | **DateCreated** | **DateTime?** | The date the deployment was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DateModified** | **DateTime?** | The date the deployment was most recently modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |

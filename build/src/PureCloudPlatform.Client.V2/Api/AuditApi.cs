@@ -87,7 +87,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionId">Transaction ID</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageSize">Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500. (optional, default to 25)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>AuditQueryExecutionResultsResponse</returns>
         AuditQueryExecutionResultsResponse GetAuditsQueryTransactionIdResults (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null);
@@ -101,7 +101,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionId">Transaction ID</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageSize">Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500. (optional, default to 25)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of AuditQueryExecutionResultsResponse</returns>
         ApiResponse<AuditQueryExecutionResultsResponse> GetAuditsQueryTransactionIdResultsWithHttpInfo (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null);
@@ -227,7 +227,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionId">Transaction ID</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageSize">Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500. (optional, default to 25)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of AuditQueryExecutionResultsResponse</returns>
         System.Threading.Tasks.Task<AuditQueryExecutionResultsResponse> GetAuditsQueryTransactionIdResultsAsync (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null);
@@ -241,7 +241,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionId">Transaction ID</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageSize">Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500. (optional, default to 25)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (AuditQueryExecutionResultsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AuditQueryExecutionResultsResponse>> GetAuditsQueryTransactionIdResultsAsyncWithHttpInfo (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null);
@@ -937,7 +937,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionId">Transaction ID</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageSize">Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500. (optional, default to 25)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>AuditQueryExecutionResultsResponse</returns>
         public AuditQueryExecutionResultsResponse GetAuditsQueryTransactionIdResults (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null)
@@ -952,7 +952,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionId">Transaction ID</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageSize">Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500. (optional, default to 25)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of AuditQueryExecutionResultsResponse</returns>
         public ApiResponse< AuditQueryExecutionResultsResponse > GetAuditsQueryTransactionIdResultsWithHttpInfo (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null)
@@ -1040,7 +1040,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionId">Transaction ID</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageSize">Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500. (optional, default to 25)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of AuditQueryExecutionResultsResponse</returns>
         public async System.Threading.Tasks.Task<AuditQueryExecutionResultsResponse> GetAuditsQueryTransactionIdResultsAsync (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null)
@@ -1056,7 +1056,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionId">Transaction ID</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageSize">Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500. (optional, default to 25)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (AuditQueryExecutionResultsResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AuditQueryExecutionResultsResponse>> GetAuditsQueryTransactionIdResultsAsyncWithHttpInfo (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null)

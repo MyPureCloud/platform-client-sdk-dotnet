@@ -19,6 +19,7 @@ title: ConversationNormalizedMessage
 | **IsFinalReceipt** | **bool?** | Indicates if this is the last message receipt for this message, or if another message receipt can be expected. | [optional] |
 | **Direction** | **string** | The direction of the message. | [optional] |
 | **Metadata** | **Dictionary&lt;string, string&gt;** | Additional metadata about this message. | [optional] |
+| **ByoSmsIntegrationId** | **string** | The internal id representing the customer supplied sms integration message. | [optional] |
 {: class="table table-striped"}
 
 

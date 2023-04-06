@@ -721,7 +721,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EmailErrorDescription">EmailErrorDescription.</param>
         /// <param name="ScheduleExpression">ScheduleExpression.</param>
         /// <param name="ScheduleStaticLinkUrl">ScheduleStaticLinkUrl.</param>
-        public ReportingDataExportTopicDataExportNotification(string Id = null, string RunId = null, string Name = null, StatusEnum? Status = null, ExportFormatEnum? ExportFormat = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, double? PercentageComplete = null, Dictionary<string, string> EmailStatuses = null, string EmailErrorDescription = null, string ScheduleExpression = null, string ScheduleStaticLinkUrl = null)
+        /// <param name="ExportAllowedToRerun">ExportAllowedToRerun.</param>
+        public ReportingDataExportTopicDataExportNotification(string Id = null, string RunId = null, string Name = null, StatusEnum? Status = null, ExportFormatEnum? ExportFormat = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, double? PercentageComplete = null, Dictionary<string, string> EmailStatuses = null, string EmailErrorDescription = null, string ScheduleExpression = null, string ScheduleStaticLinkUrl = null, bool? ExportAllowedToRerun = null)
         {
             this.Id = Id;
             this.RunId = RunId;
@@ -739,6 +740,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.EmailErrorDescription = EmailErrorDescription;
             this.ScheduleExpression = ScheduleExpression;
             this.ScheduleStaticLinkUrl = ScheduleStaticLinkUrl;
+            this.ExportAllowedToRerun = ExportAllowedToRerun;
             
         }
         
@@ -847,6 +849,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public string ScheduleStaticLinkUrl { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets ExportAllowedToRerun
+        /// </summary>
+        [DataMember(Name="exportAllowedToRerun", EmitDefaultValue=false)]
+        public bool? ExportAllowedToRerun { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -872,6 +882,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EmailErrorDescription: ").Append(EmailErrorDescription).Append("\n");
             sb.Append("  ScheduleExpression: ").Append(ScheduleExpression).Append("\n");
             sb.Append("  ScheduleStaticLinkUrl: ").Append(ScheduleStaticLinkUrl).Append("\n");
+            sb.Append("  ExportAllowedToRerun: ").Append(ExportAllowedToRerun).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -991,6 +1002,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ScheduleStaticLinkUrl == other.ScheduleStaticLinkUrl ||
                     this.ScheduleStaticLinkUrl != null &&
                     this.ScheduleStaticLinkUrl.Equals(other.ScheduleStaticLinkUrl)
+                ) &&
+                (
+                    this.ExportAllowedToRerun == other.ExportAllowedToRerun ||
+                    this.ExportAllowedToRerun != null &&
+                    this.ExportAllowedToRerun.Equals(other.ExportAllowedToRerun)
                 );
         }
 
@@ -1052,6 +1068,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ScheduleStaticLinkUrl != null)
                     hash = hash * 59 + this.ScheduleStaticLinkUrl.GetHashCode();
+
+                if (this.ExportAllowedToRerun != null)
+                    hash = hash * 59 + this.ExportAllowedToRerun.GetHashCode();
 
                 return hash;
             }

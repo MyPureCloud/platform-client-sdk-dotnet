@@ -429,11 +429,20 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The first 100 presence definitions for user's organization.
+        /// The first 100 non-divisioned presence definitions for user's organization.
         /// </summary>
-        /// <value>The first 100 presence definitions for user's organization.</value>
+        /// <value>The first 100 non-divisioned presence definitions for user's organization.</value>
         [DataMember(Name="presenceDefinitions", EmitDefaultValue=false)]
         public List<OrganizationPresence> PresenceDefinitions { get; private set; }
+
+
+
+        /// <summary>
+        /// The presence definitions that the user has access to
+        /// </summary>
+        /// <value>The presence definitions that the user has access to</value>
+        [DataMember(Name="divisionedPresenceDefinitions", EmitDefaultValue=false)]
+        public List<OrganizationPresenceDefinition> DivisionedPresenceDefinitions { get; private set; }
 
 
 
@@ -592,6 +601,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  GeolocationSettings: ").Append(GeolocationSettings).Append("\n");
             sb.Append("  Organization: ").Append(Organization).Append("\n");
             sb.Append("  PresenceDefinitions: ").Append(PresenceDefinitions).Append("\n");
+            sb.Append("  DivisionedPresenceDefinitions: ").Append(DivisionedPresenceDefinitions).Append("\n");
             sb.Append("  LocationDefinitions: ").Append(LocationDefinitions).Append("\n");
             sb.Append("  OrgAuthorization: ").Append(OrgAuthorization).Append("\n");
             sb.Append("  Favorites: ").Append(Favorites).Append("\n");
@@ -840,6 +850,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PresenceDefinitions.SequenceEqual(other.PresenceDefinitions)
                 ) &&
                 (
+                    this.DivisionedPresenceDefinitions == other.DivisionedPresenceDefinitions ||
+                    this.DivisionedPresenceDefinitions != null &&
+                    this.DivisionedPresenceDefinitions.SequenceEqual(other.DivisionedPresenceDefinitions)
+                ) &&
+                (
                     this.LocationDefinitions == other.LocationDefinitions ||
                     this.LocationDefinitions != null &&
                     this.LocationDefinitions.SequenceEqual(other.LocationDefinitions)
@@ -1028,6 +1043,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.PresenceDefinitions != null)
                     hash = hash * 59 + this.PresenceDefinitions.GetHashCode();
+
+                if (this.DivisionedPresenceDefinitions != null)
+                    hash = hash * 59 + this.DivisionedPresenceDefinitions.GetHashCode();
 
                 if (this.LocationDefinitions != null)
                     hash = hash * 59 + this.LocationDefinitions.GetHashCode();

@@ -401,7 +401,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RecipientCountry">Indicates the country where the recipient is associated in ISO 3166-1 alpha-2 format..</param>
         /// <param name="RecipientType">The type of the recipient. Eg: Provisioned phoneNumber is the recipient for sms message type..</param>
         /// <param name="Authenticated">If true, the participant member is authenticated..</param>
-        public MessageMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, List<string> MediaRoles = null, DomainEntityRef User = null, DomainEntityRef Queue = null, DomainEntityRef Team = null, Dictionary<string, string> Attributes = null, ErrorInfo ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, Address ToAddress = null, Address FromAddress = null, List<MessageDetails> Messages = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, bool? Authenticated = null)
+        /// <param name="MonitoredParticipantId">The ID of the participant being monitored when performing a message monitor..</param>
+        public MessageMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, List<string> MediaRoles = null, DomainEntityRef User = null, DomainEntityRef Queue = null, DomainEntityRef Team = null, Dictionary<string, string> Attributes = null, ErrorInfo ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, Address ToAddress = null, Address FromAddress = null, List<MessageDetails> Messages = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, bool? Authenticated = null, string MonitoredParticipantId = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -444,6 +445,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.RecipientCountry = RecipientCountry;
             this.RecipientType = RecipientType;
             this.Authenticated = Authenticated;
+            this.MonitoredParticipantId = MonitoredParticipantId;
             
         }
         
@@ -782,6 +784,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? Authenticated { get; set; }
 
 
+
+        /// <summary>
+        /// The ID of the participant being monitored when performing a message monitor.
+        /// </summary>
+        /// <value>The ID of the participant being monitored when performing a message monitor.</value>
+        [DataMember(Name="monitoredParticipantId", EmitDefaultValue=false)]
+        public string MonitoredParticipantId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -832,6 +843,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RecipientCountry: ").Append(RecipientCountry).Append("\n");
             sb.Append("  RecipientType: ").Append(RecipientType).Append("\n");
             sb.Append("  Authenticated: ").Append(Authenticated).Append("\n");
+            sb.Append("  MonitoredParticipantId: ").Append(MonitoredParticipantId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1076,6 +1088,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Authenticated == other.Authenticated ||
                     this.Authenticated != null &&
                     this.Authenticated.Equals(other.Authenticated)
+                ) &&
+                (
+                    this.MonitoredParticipantId == other.MonitoredParticipantId ||
+                    this.MonitoredParticipantId != null &&
+                    this.MonitoredParticipantId.Equals(other.MonitoredParticipantId)
                 );
         }
 
@@ -1212,6 +1229,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Authenticated != null)
                     hash = hash * 59 + this.Authenticated.GetHashCode();
+
+                if (this.MonitoredParticipantId != null)
+                    hash = hash * 59 + this.MonitoredParticipantId.GetHashCode();
 
                 return hash;
             }

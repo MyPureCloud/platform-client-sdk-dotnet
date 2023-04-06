@@ -369,7 +369,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AfterCallWork">A communication's after-call work data..</param>
         /// <param name="AfterCallWorkRequired">Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
         /// <param name="AgentAssistantId">UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation..</param>
-        public QueueConversationVideoEventTopicMessage(string Id = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, bool? Held = null, QueueConversationVideoEventTopicErrorDetails ErrorInfo = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, QueueConversationVideoEventTopicAddress ToAddress = null, QueueConversationVideoEventTopicAddress FromAddress = null, List<QueueConversationVideoEventTopicMessageDetails> Messages = null, string MessagesTranscriptUri = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, QueueConversationVideoEventTopicJourneyContext JourneyContext = null, QueueConversationVideoEventTopicWrapup Wrapup = null, QueueConversationVideoEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null)
+        /// <param name="ByoSmsIntegrationId">ByoSmsIntegrationId.</param>
+        public QueueConversationVideoEventTopicMessage(string Id = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, bool? Held = null, QueueConversationVideoEventTopicErrorDetails ErrorInfo = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, QueueConversationVideoEventTopicAddress ToAddress = null, QueueConversationVideoEventTopicAddress FromAddress = null, List<QueueConversationVideoEventTopicMessageDetails> Messages = null, string MessagesTranscriptUri = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, QueueConversationVideoEventTopicJourneyContext JourneyContext = null, QueueConversationVideoEventTopicWrapup Wrapup = null, QueueConversationVideoEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null, string ByoSmsIntegrationId = null)
         {
             this.Id = Id;
             this.State = State;
@@ -396,6 +397,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AfterCallWork = AfterCallWork;
             this.AfterCallWorkRequired = AfterCallWorkRequired;
             this.AgentAssistantId = AgentAssistantId;
+            this.ByoSmsIntegrationId = ByoSmsIntegrationId;
             
         }
         
@@ -590,6 +592,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public string AgentAssistantId { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets ByoSmsIntegrationId
+        /// </summary>
+        [DataMember(Name="byoSmsIntegrationId", EmitDefaultValue=false)]
+        public string ByoSmsIntegrationId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -624,6 +634,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AfterCallWork: ").Append(AfterCallWork).Append("\n");
             sb.Append("  AfterCallWorkRequired: ").Append(AfterCallWorkRequired).Append("\n");
             sb.Append("  AgentAssistantId: ").Append(AgentAssistantId).Append("\n");
+            sb.Append("  ByoSmsIntegrationId: ").Append(ByoSmsIntegrationId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -788,6 +799,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AgentAssistantId == other.AgentAssistantId ||
                     this.AgentAssistantId != null &&
                     this.AgentAssistantId.Equals(other.AgentAssistantId)
+                ) &&
+                (
+                    this.ByoSmsIntegrationId == other.ByoSmsIntegrationId ||
+                    this.ByoSmsIntegrationId != null &&
+                    this.ByoSmsIntegrationId.Equals(other.ByoSmsIntegrationId)
                 );
         }
 
@@ -876,6 +892,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AgentAssistantId != null)
                     hash = hash * 59 + this.AgentAssistantId.GetHashCode();
+
+                if (this.ByoSmsIntegrationId != null)
+                    hash = hash * 59 + this.ByoSmsIntegrationId.GetHashCode();
 
                 return hash;
             }

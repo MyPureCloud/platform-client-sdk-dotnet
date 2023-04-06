@@ -23,6 +23,7 @@ title: ReportingDataExportTopicDataExportNotification
 | **EmailErrorDescription** | **string** |  | [optional] |
 | **ScheduleExpression** | **string** |  | [optional] |
 | **ScheduleStaticLinkUrl** | **string** |  | [optional] |
+| **ExportAllowedToRerun** | **bool?** |  | [optional] |
 {: class="table table-striped"}
 
 

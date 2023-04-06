@@ -7,6 +7,7 @@ title: AnalyticsEvaluation
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+| **AssigneeId** | **string** | UserId of the assignee | [optional] |
 | **CalibrationId** | **string** | The calibration ID used for the purpose of training evaluators | [optional] |
 | **ContextId** | **string** | A unique identifier for an evaluation form, regardless of version | [optional] |
 | **Deleted** | **bool?** | Whether the evaluation has been deleted | [optional] |

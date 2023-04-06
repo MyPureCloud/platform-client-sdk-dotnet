@@ -13,13 +13,13 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// ExtendedWrapup
+    /// WrapupInput
     /// </summary>
     [DataContract]
-    public partial class ExtendedWrapup :  IEquatable<ExtendedWrapup>
+    public partial class WrapupInput :  IEquatable<WrapupInput>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ExtendedWrapup" /> class.
+        /// Initializes a new instance of the <see cref="WrapupInput" /> class.
         /// </summary>
         /// <param name="Code">The user configured wrap up code id..</param>
         /// <param name="Name">The user configured wrap up code name..</param>
@@ -29,7 +29,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EndTime">The timestamp when the wrapup was finished. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Provisional">Indicates if this is a pending save and should not require a code to be specified.  This allows someone to save some temporary wrapup that will be used later..</param>
         /// <param name="DisableEndTimeUpdates">Prevent updates to wrapup end time when set to true..</param>
-        public ExtendedWrapup(string Code = null, string Name = null, string Notes = null, List<string> Tags = null, int? DurationSeconds = null, DateTime? EndTime = null, bool? Provisional = null, bool? DisableEndTimeUpdates = null)
+        public WrapupInput(string Code = null, string Name = null, string Notes = null, List<string> Tags = null, int? DurationSeconds = null, DateTime? EndTime = null, bool? Provisional = null, bool? DisableEndTimeUpdates = null)
         {
             this.Code = Code;
             this.Name = Name;
@@ -122,7 +122,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ExtendedWrapup {\n");
+            sb.Append("class WrapupInput {\n");
 
             sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -157,15 +157,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ExtendedWrapup);
+            return this.Equals(obj as WrapupInput);
         }
 
         /// <summary>
-        /// Returns true if ExtendedWrapup instances are equal
+        /// Returns true if WrapupInput instances are equal
         /// </summary>
-        /// <param name="other">Instance of ExtendedWrapup to be compared</param>
+        /// <param name="other">Instance of WrapupInput to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ExtendedWrapup other)
+        public bool Equals(WrapupInput other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

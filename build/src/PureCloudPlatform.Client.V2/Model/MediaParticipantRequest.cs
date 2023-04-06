@@ -115,7 +115,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Confined">True to confine this conversation participant.  Should only be used for ad-hoc conferences.</param>
         /// <param name="Held">True to hold this conversation participant..</param>
         /// <param name="WrapupSkipped">True to skip wrap-up for this participant..</param>
-        public MediaParticipantRequest(ExtendedWrapup Wrapup = null, StateEnum? State = null, bool? Recording = null, bool? Muted = null, bool? Confined = null, bool? Held = null, bool? WrapupSkipped = null)
+        public MediaParticipantRequest(WrapupInput Wrapup = null, StateEnum? State = null, bool? Recording = null, bool? Muted = null, bool? Confined = null, bool? Held = null, bool? WrapupSkipped = null)
         {
             this.Wrapup = Wrapup;
             this.State = State;
@@ -134,7 +134,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Wrap-up to assign to this participant.</value>
         [DataMember(Name="wrapup", EmitDefaultValue=false)]
-        public ExtendedWrapup Wrapup { get; set; }
+        public WrapupInput Wrapup { get; set; }
 
 
 

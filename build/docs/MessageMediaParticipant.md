@@ -48,6 +48,7 @@ title: MessageMediaParticipant
 | **RecipientCountry** | **string** | Indicates the country where the recipient is associated in ISO 3166-1 alpha-2 format. | [optional] |
 | **RecipientType** | **string** | The type of the recipient. Eg: Provisioned phoneNumber is the recipient for sms message type. | [optional] |
 | **Authenticated** | **bool?** | If true, the participant member is authenticated. | [optional] |
+| **MonitoredParticipantId** | **string** | The ID of the participant being monitored when performing a message monitor. | [optional] |
 {: class="table table-striped"}
 
 

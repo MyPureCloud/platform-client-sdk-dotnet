@@ -21,9 +21,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserReferenceWithName" /> class.
         /// </summary>
+        /// <param name="Id">The globally unique identifier for the object..</param>
         /// <param name="Name">Name.</param>
-        public UserReferenceWithName(string Name = null)
+        public UserReferenceWithName(string Id = null, string Name = null)
         {
+            this.Id = Id;
             this.Name = Name;
             
         }
@@ -35,7 +37,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

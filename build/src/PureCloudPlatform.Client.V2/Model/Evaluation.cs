@@ -184,13 +184,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationDate">Date of conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ConversationEndDate">End date of conversation if it had completed before evaluation creation. Null if created before the conversation ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="NeverRelease">Signifies if the evaluation is never to be released. This cannot be set true if release date is also set..</param>
+        /// <param name="Assigned">Set to false to unassign the evaluation. This cannot be set to false when assignee is also set..</param>
         /// <param name="ResourceId">Only used for email evaluations. Will be null for all other evaluations..</param>
         /// <param name="ResourceType">The type of resource. Only used for email evaluations. Will be null for evaluations on all other resources..</param>
         /// <param name="Redacted">Is only true when the user making the request does not have sufficient permissions to see evaluation.</param>
         /// <param name="IsScoringIndex">IsScoringIndex.</param>
         /// <param name="AuthorizedActions">List of user authorized actions on evaluation. Possible values: assign, edit, editScore, editAgentSignoff, delete, release, viewAudit.</param>
         /// <param name="HasAssistanceFailed">Is true when evaluation assistance didn't execute successfully.</param>
-        public Evaluation(string Name = null, ConversationReference Conversation = null, EvaluationForm EvaluationForm = null, User Evaluator = null, User Agent = null, Calibration Calibration = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, User Assignee = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, Queue Queue = null, List<MediaTypeEnum> MediaType = null, bool? Rescore = null, DateTime? ConversationDate = null, DateTime? ConversationEndDate = null, bool? NeverRelease = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, bool? IsScoringIndex = null, List<string> AuthorizedActions = null, bool? HasAssistanceFailed = null)
+        public Evaluation(string Name = null, ConversationReference Conversation = null, EvaluationForm EvaluationForm = null, User Evaluator = null, User Agent = null, Calibration Calibration = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, User Assignee = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, Queue Queue = null, List<MediaTypeEnum> MediaType = null, bool? Rescore = null, DateTime? ConversationDate = null, DateTime? ConversationEndDate = null, bool? NeverRelease = null, bool? Assigned = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, bool? IsScoringIndex = null, List<string> AuthorizedActions = null, bool? HasAssistanceFailed = null)
         {
             this.Name = Name;
             this.Conversation = Conversation;
@@ -211,6 +212,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ConversationDate = ConversationDate;
             this.ConversationEndDate = ConversationEndDate;
             this.NeverRelease = NeverRelease;
+            this.Assigned = Assigned;
             this.ResourceId = ResourceId;
             this.ResourceType = ResourceType;
             this.Redacted = Redacted;
@@ -387,6 +389,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Set to false to unassign the evaluation. This cannot be set to false when assignee is also set.
+        /// </summary>
+        /// <value>Set to false to unassign the evaluation. This cannot be set to false when assignee is also set.</value>
+        [DataMember(Name="assigned", EmitDefaultValue=false)]
+        public bool? Assigned { get; set; }
+
+
+
+        /// <summary>
         /// Only used for email evaluations. Will be null for all other evaluations.
         /// </summary>
         /// <value>Only used for email evaluations. Will be null for all other evaluations.</value>
@@ -478,6 +489,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConversationDate: ").Append(ConversationDate).Append("\n");
             sb.Append("  ConversationEndDate: ").Append(ConversationEndDate).Append("\n");
             sb.Append("  NeverRelease: ").Append(NeverRelease).Append("\n");
+            sb.Append("  Assigned: ").Append(Assigned).Append("\n");
             sb.Append("  ResourceId: ").Append(ResourceId).Append("\n");
             sb.Append("  ResourceType: ").Append(ResourceType).Append("\n");
             sb.Append("  Redacted: ").Append(Redacted).Append("\n");
@@ -627,6 +639,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.NeverRelease.Equals(other.NeverRelease)
                 ) &&
                 (
+                    this.Assigned == other.Assigned ||
+                    this.Assigned != null &&
+                    this.Assigned.Equals(other.Assigned)
+                ) &&
+                (
                     this.ResourceId == other.ResourceId ||
                     this.ResourceId != null &&
                     this.ResourceId.Equals(other.ResourceId)
@@ -738,6 +755,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.NeverRelease != null)
                     hash = hash * 59 + this.NeverRelease.GetHashCode();
+
+                if (this.Assigned != null)
+                    hash = hash * 59 + this.Assigned.GetHashCode();
 
                 if (this.ResourceId != null)
                     hash = hash * 59 + this.ResourceId.GetHashCode();
