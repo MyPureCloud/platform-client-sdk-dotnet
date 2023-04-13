@@ -1433,8 +1433,6 @@ docs/EdgeEntityListing.md
 docs/EdgeGroup.md
 docs/EdgeGroupEntityListing.md
 docs/EdgeInterface.md
-docs/EdgeLine.md
-docs/EdgeLineEntityListing.md
 docs/EdgeLogicalInterfacesChangeTopicDomainLogicalInterfaceChange.md
 docs/EdgeLogicalInterfacesChangeTopicErrorInfo.md
 docs/EdgeLogsJob.md
@@ -2481,8 +2479,6 @@ docs/GetTelephonyProvidersEdgeDiagnosticNslookup-example.txt
 docs/GetTelephonyProvidersEdgeDiagnosticPing-example.txt
 docs/GetTelephonyProvidersEdgeDiagnosticRoute-example.txt
 docs/GetTelephonyProvidersEdgeDiagnosticTracepath-example.txt
-docs/GetTelephonyProvidersEdgeLine-example.txt
-docs/GetTelephonyProvidersEdgeLines-example.txt
 docs/GetTelephonyProvidersEdgeLogicalinterface-example.txt
 docs/GetTelephonyProvidersEdgeLogicalinterfaces-example.txt
 docs/GetTelephonyProvidersEdgeLogsJob-example.txt
@@ -4293,7 +4289,6 @@ docs/PutSpeechandtextanalyticsProgramTranscriptionengines-example.txt
 docs/PutSpeechandtextanalyticsSettings-example.txt
 docs/PutSpeechandtextanalyticsTopic-example.txt
 docs/PutTelephonyProvidersEdge-example.txt
-docs/PutTelephonyProvidersEdgeLine-example.txt
 docs/PutTelephonyProvidersEdgeLogicalinterface-example.txt
 docs/PutTelephonyProvidersEdgesCertificateauthority-example.txt
 docs/PutTelephonyProvidersEdgesDid-example.txt
@@ -6970,8 +6965,6 @@ src/PureCloudPlatform.Client.V2/Model/EdgeEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/EdgeGroup.cs
 src/PureCloudPlatform.Client.V2/Model/EdgeGroupEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/EdgeInterface.cs
-src/PureCloudPlatform.Client.V2/Model/EdgeLine.cs
-src/PureCloudPlatform.Client.V2/Model/EdgeLineEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/EdgeLogicalInterfacesChangeTopicDomainLogicalInterfaceChange.cs
 src/PureCloudPlatform.Client.V2/Model/EdgeLogicalInterfacesChangeTopicErrorInfo.cs
 src/PureCloudPlatform.Client.V2/Model/EdgeLogsJob.cs

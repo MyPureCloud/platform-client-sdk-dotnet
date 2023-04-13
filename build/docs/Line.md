@@ -20,7 +20,7 @@ title: Line
 | **ModifiedByApp** | **string** | The application that last modified the resource. | [optional] |
 | **CreatedByApp** | **string** | The application that created the resource. | [optional] |
 | **Properties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
-| **EdgeGroup** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
+| **EdgeGroup** | [**DomainEntityRef**](DomainEntityRef.html) | The edge group associated with the line. (Deprecated) | [optional] |
 | **Template** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
 | **Site** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
 | **LineBaseSettings** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |

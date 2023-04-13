@@ -146,9 +146,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="InformSteps">The list of inform steps in a learning module.</param>
         /// <param name="AssessmentForm">The assessment form for learning module.</param>
         /// <param name="SummaryData">The learning module summary data.</param>
+        /// <param name="ReassignSummaryData">The learning module reassign summary data.</param>
         /// <param name="CoverArt">The cover art for the learning module.</param>
         /// <param name="ArchivalMode">The mode of archival for learning module.</param>
-        public AssignedLearningModule(string Name = null, List<LearningAssignment> CurrentAssignments = null, string Description = null, int? CompletionTimeInDays = null, TypeEnum? Type = null, List<LearningModuleInformStep> InformSteps = null, AssessmentForm AssessmentForm = null, LearningModuleSummary SummaryData = null, LearningModuleCoverArtResponse CoverArt = null, ArchivalModeEnum? ArchivalMode = null)
+        public AssignedLearningModule(string Name = null, List<LearningAssignment> CurrentAssignments = null, string Description = null, int? CompletionTimeInDays = null, TypeEnum? Type = null, List<LearningModuleInformStep> InformSteps = null, AssessmentForm AssessmentForm = null, LearningModuleSummary SummaryData = null, LearningModuleReassignSummary ReassignSummaryData = null, LearningModuleCoverArtResponse CoverArt = null, ArchivalModeEnum? ArchivalMode = null)
         {
             this.Name = Name;
             this.CurrentAssignments = CurrentAssignments;
@@ -158,6 +159,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.InformSteps = InformSteps;
             this.AssessmentForm = AssessmentForm;
             this.SummaryData = SummaryData;
+            this.ReassignSummaryData = ReassignSummaryData;
             this.CoverArt = CoverArt;
             this.ArchivalMode = ArchivalMode;
             
@@ -332,6 +334,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The learning module reassign summary data
+        /// </summary>
+        /// <value>The learning module reassign summary data</value>
+        [DataMember(Name="reassignSummaryData", EmitDefaultValue=false)]
+        public LearningModuleReassignSummary ReassignSummaryData { get; set; }
+
+
+
+        /// <summary>
         /// The cover art for the learning module
         /// </summary>
         /// <value>The cover art for the learning module</value>
@@ -370,6 +381,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  InformSteps: ").Append(InformSteps).Append("\n");
             sb.Append("  AssessmentForm: ").Append(AssessmentForm).Append("\n");
             sb.Append("  SummaryData: ").Append(SummaryData).Append("\n");
+            sb.Append("  ReassignSummaryData: ").Append(ReassignSummaryData).Append("\n");
             sb.Append("  CoverArt: ").Append(CoverArt).Append("\n");
             sb.Append("  ArchivalMode: ").Append(ArchivalMode).Append("\n");
             sb.Append("}\n");
@@ -513,6 +525,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SummaryData.Equals(other.SummaryData)
                 ) &&
                 (
+                    this.ReassignSummaryData == other.ReassignSummaryData ||
+                    this.ReassignSummaryData != null &&
+                    this.ReassignSummaryData.Equals(other.ReassignSummaryData)
+                ) &&
+                (
                     this.CoverArt == other.CoverArt ||
                     this.CoverArt != null &&
                     this.CoverArt.Equals(other.CoverArt)
@@ -594,6 +611,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SummaryData != null)
                     hash = hash * 59 + this.SummaryData.GetHashCode();
+
+                if (this.ReassignSummaryData != null)
+                    hash = hash * 59 + this.ReassignSummaryData.GetHashCode();
 
                 if (this.CoverArt != null)
                     hash = hash * 59 + this.CoverArt.GetHashCode();

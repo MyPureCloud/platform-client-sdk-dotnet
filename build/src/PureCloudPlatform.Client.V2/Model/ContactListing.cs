@@ -26,21 +26,21 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PageNumber">PageNumber.</param>
         /// <param name="Total">Total.</param>
         /// <param name="PartialResults">PartialResults.</param>
-        /// <param name="NextUri">NextUri.</param>
         /// <param name="FirstUri">FirstUri.</param>
+        /// <param name="NextUri">NextUri.</param>
         /// <param name="SelfUri">SelfUri.</param>
         /// <param name="PreviousUri">PreviousUri.</param>
         /// <param name="LastUri">LastUri.</param>
         /// <param name="PageCount">PageCount.</param>
-        public ContactListing(List<ExternalContact> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, bool? PartialResults = null, string NextUri = null, string FirstUri = null, string SelfUri = null, string PreviousUri = null, string LastUri = null, int? PageCount = null)
+        public ContactListing(List<ExternalContact> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, bool? PartialResults = null, string FirstUri = null, string NextUri = null, string SelfUri = null, string PreviousUri = null, string LastUri = null, int? PageCount = null)
         {
             this.Entities = Entities;
             this.PageSize = PageSize;
             this.PageNumber = PageNumber;
             this.Total = Total;
             this.PartialResults = PartialResults;
-            this.NextUri = NextUri;
             this.FirstUri = FirstUri;
+            this.NextUri = NextUri;
             this.SelfUri = SelfUri;
             this.PreviousUri = PreviousUri;
             this.LastUri = LastUri;
@@ -91,18 +91,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets NextUri
-        /// </summary>
-        [DataMember(Name="nextUri", EmitDefaultValue=false)]
-        public string NextUri { get; set; }
-
-
-
-        /// <summary>
         /// Gets or Sets FirstUri
         /// </summary>
         [DataMember(Name="firstUri", EmitDefaultValue=false)]
         public string FirstUri { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets NextUri
+        /// </summary>
+        [DataMember(Name="nextUri", EmitDefaultValue=false)]
+        public string NextUri { get; set; }
 
 
 
@@ -151,8 +151,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
             sb.Append("  Total: ").Append(Total).Append("\n");
             sb.Append("  PartialResults: ").Append(PartialResults).Append("\n");
-            sb.Append("  NextUri: ").Append(NextUri).Append("\n");
             sb.Append("  FirstUri: ").Append(FirstUri).Append("\n");
+            sb.Append("  NextUri: ").Append(NextUri).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  PreviousUri: ").Append(PreviousUri).Append("\n");
             sb.Append("  LastUri: ").Append(LastUri).Append("\n");
@@ -223,14 +223,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PartialResults.Equals(other.PartialResults)
                 ) &&
                 (
-                    this.NextUri == other.NextUri ||
-                    this.NextUri != null &&
-                    this.NextUri.Equals(other.NextUri)
-                ) &&
-                (
                     this.FirstUri == other.FirstUri ||
                     this.FirstUri != null &&
                     this.FirstUri.Equals(other.FirstUri)
+                ) &&
+                (
+                    this.NextUri == other.NextUri ||
+                    this.NextUri != null &&
+                    this.NextUri.Equals(other.NextUri)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -280,11 +280,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.PartialResults != null)
                     hash = hash * 59 + this.PartialResults.GetHashCode();
 
-                if (this.NextUri != null)
-                    hash = hash * 59 + this.NextUri.GetHashCode();
-
                 if (this.FirstUri != null)
                     hash = hash * 59 + this.FirstUri.GetHashCode();
+
+                if (this.NextUri != null)
+                    hash = hash * 59 + this.NextUri.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

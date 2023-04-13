@@ -71,7 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Description">The resource's description..</param>
         /// <param name="Version">The current version of the resource..</param>
         /// <param name="Properties">Properties.</param>
-        /// <param name="EdgeGroup">EdgeGroup.</param>
+        /// <param name="EdgeGroup">The edge group associated with the line. (Deprecated).</param>
         /// <param name="Template">Template.</param>
         /// <param name="Site">Site.</param>
         /// <param name="LineBaseSettings">LineBaseSettings.</param>
@@ -209,8 +209,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets EdgeGroup
+        /// The edge group associated with the line. (Deprecated)
         /// </summary>
+        /// <value>The edge group associated with the line. (Deprecated)</value>
         [DataMember(Name="edgeGroup", EmitDefaultValue=false)]
         public DomainEntityRef EdgeGroup { get; set; }
 

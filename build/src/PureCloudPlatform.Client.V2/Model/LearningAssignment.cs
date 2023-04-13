@@ -199,6 +199,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// True if the assignment is based on latest module
+        /// </summary>
+        /// <value>True if the assignment is based on latest module</value>
+        [DataMember(Name="isLatest", EmitDefaultValue=false)]
+        public bool? IsLatest { get; private set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -273,6 +282,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  IsRule: ").Append(IsRule).Append("\n");
             sb.Append("  IsManual: ").Append(IsManual).Append("\n");
             sb.Append("  IsPassed: ").Append(IsPassed).Append("\n");
+            sb.Append("  IsLatest: ").Append(IsLatest).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  DateRecommendedForCompletion: ").Append(DateRecommendedForCompletion).Append("\n");
@@ -376,6 +386,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.IsPassed.Equals(other.IsPassed)
                 ) &&
                 (
+                    this.IsLatest == other.IsLatest ||
+                    this.IsLatest != null &&
+                    this.IsLatest.Equals(other.IsLatest)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -455,6 +470,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.IsPassed != null)
                     hash = hash * 59 + this.IsPassed.GetHashCode();
+
+                if (this.IsLatest != null)
+                    hash = hash * 59 + this.IsLatest.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

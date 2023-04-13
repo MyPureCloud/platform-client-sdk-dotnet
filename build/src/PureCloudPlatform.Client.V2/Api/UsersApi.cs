@@ -988,6 +988,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="interval">Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="completionInterval">Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned (optional, default to Any)</param>
+        /// <param name="pass">Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) activities are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all activities are returned (optional, default to Any)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
@@ -995,7 +996,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>DevelopmentActivityListing</returns>
-        DevelopmentActivityListing GetUsersDevelopmentActivities (List<string> userId = null, string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null);
+        DevelopmentActivityListing GetUsersDevelopmentActivities (List<string> userId = null, string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null);
 
         /// <summary>
         /// Get list of Development Activities
@@ -1009,6 +1010,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="interval">Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="completionInterval">Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned (optional, default to Any)</param>
+        /// <param name="pass">Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) activities are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all activities are returned (optional, default to Any)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
@@ -1016,7 +1018,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>ApiResponse of DevelopmentActivityListing</returns>
-        ApiResponse<DevelopmentActivityListing> GetUsersDevelopmentActivitiesWithHttpInfo (List<string> userId = null, string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null);
+        ApiResponse<DevelopmentActivityListing> GetUsersDevelopmentActivitiesWithHttpInfo (List<string> userId = null, string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null);
 
         /// <summary>
         /// Get list of Development Activities for current user
@@ -1029,6 +1031,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="interval">Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="completionInterval">Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned (optional, default to Any)</param>
+        /// <param name="pass">Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) activities are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all activities are returned (optional, default to Any)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
@@ -1036,7 +1039,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>DevelopmentActivityListing</returns>
-        DevelopmentActivityListing GetUsersDevelopmentActivitiesMe (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null);
+        DevelopmentActivityListing GetUsersDevelopmentActivitiesMe (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null);
 
         /// <summary>
         /// Get list of Development Activities for current user
@@ -1049,6 +1052,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="interval">Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="completionInterval">Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned (optional, default to Any)</param>
+        /// <param name="pass">Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) activities are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all activities are returned (optional, default to Any)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
@@ -1056,7 +1060,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>ApiResponse of DevelopmentActivityListing</returns>
-        ApiResponse<DevelopmentActivityListing> GetUsersDevelopmentActivitiesMeWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null);
+        ApiResponse<DevelopmentActivityListing> GetUsersDevelopmentActivitiesMeWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null);
 
         /// <summary>
         /// Get a Development Activity
@@ -3018,6 +3022,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="interval">Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="completionInterval">Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned (optional, default to Any)</param>
+        /// <param name="pass">Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) activities are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all activities are returned (optional, default to Any)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
@@ -3025,7 +3030,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>Task of DevelopmentActivityListing</returns>
-        System.Threading.Tasks.Task<DevelopmentActivityListing> GetUsersDevelopmentActivitiesAsync (List<string> userId = null, string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null);
+        System.Threading.Tasks.Task<DevelopmentActivityListing> GetUsersDevelopmentActivitiesAsync (List<string> userId = null, string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null);
 
         /// <summary>
         /// Get list of Development Activities
@@ -3039,6 +3044,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="interval">Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="completionInterval">Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned (optional, default to Any)</param>
+        /// <param name="pass">Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) activities are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all activities are returned (optional, default to Any)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
@@ -3046,7 +3052,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>Task of ApiResponse (DevelopmentActivityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DevelopmentActivityListing>> GetUsersDevelopmentActivitiesAsyncWithHttpInfo (List<string> userId = null, string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null);
+        System.Threading.Tasks.Task<ApiResponse<DevelopmentActivityListing>> GetUsersDevelopmentActivitiesAsyncWithHttpInfo (List<string> userId = null, string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null);
 
         /// <summary>
         /// Get list of Development Activities for current user
@@ -3059,6 +3065,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="interval">Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="completionInterval">Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned (optional, default to Any)</param>
+        /// <param name="pass">Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) activities are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all activities are returned (optional, default to Any)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
@@ -3066,7 +3073,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>Task of DevelopmentActivityListing</returns>
-        System.Threading.Tasks.Task<DevelopmentActivityListing> GetUsersDevelopmentActivitiesMeAsync (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null);
+        System.Threading.Tasks.Task<DevelopmentActivityListing> GetUsersDevelopmentActivitiesMeAsync (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null);
 
         /// <summary>
         /// Get list of Development Activities for current user
@@ -3079,6 +3086,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="interval">Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="completionInterval">Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned (optional, default to Any)</param>
+        /// <param name="pass">Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) activities are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all activities are returned (optional, default to Any)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
@@ -3086,7 +3094,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>Task of ApiResponse (DevelopmentActivityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DevelopmentActivityListing>> GetUsersDevelopmentActivitiesMeAsyncWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null);
+        System.Threading.Tasks.Task<ApiResponse<DevelopmentActivityListing>> GetUsersDevelopmentActivitiesMeAsyncWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null);
 
         /// <summary>
         /// Get a Development Activity
@@ -11928,6 +11936,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="interval">Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="completionInterval">Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned (optional, default to Any)</param>
+        /// <param name="pass">Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) activities are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all activities are returned (optional, default to Any)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
@@ -11935,9 +11944,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>DevelopmentActivityListing</returns>
-        public DevelopmentActivityListing GetUsersDevelopmentActivities (List<string> userId = null, string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
+        public DevelopmentActivityListing GetUsersDevelopmentActivities (List<string> userId = null, string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
         {
-             ApiResponse<DevelopmentActivityListing> localVarResponse = GetUsersDevelopmentActivitiesWithHttpInfo(userId, moduleId, interval, completionInterval, overdue, pageSize, pageNumber, sortOrder, types, statuses, relationship);
+             ApiResponse<DevelopmentActivityListing> localVarResponse = GetUsersDevelopmentActivitiesWithHttpInfo(userId, moduleId, interval, completionInterval, overdue, pass, pageSize, pageNumber, sortOrder, types, statuses, relationship);
              return localVarResponse.Data;
         }
 
@@ -11950,6 +11959,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="interval">Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="completionInterval">Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned (optional, default to Any)</param>
+        /// <param name="pass">Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) activities are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all activities are returned (optional, default to Any)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
@@ -11957,7 +11967,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>ApiResponse of DevelopmentActivityListing</returns>
-        public ApiResponse< DevelopmentActivityListing > GetUsersDevelopmentActivitiesWithHttpInfo (List<string> userId = null, string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
+        public ApiResponse< DevelopmentActivityListing > GetUsersDevelopmentActivitiesWithHttpInfo (List<string> userId = null, string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
         { 
 
             var localVarPath = "/api/v2/users/development/activities";
@@ -11997,6 +12007,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (interval != null) localVarQueryParams.Add(new Tuple<string, string>("interval", this.Configuration.ApiClient.ParameterToString(interval)));
             if (completionInterval != null) localVarQueryParams.Add(new Tuple<string, string>("completionInterval", this.Configuration.ApiClient.ParameterToString(completionInterval)));
             if (overdue != null) localVarQueryParams.Add(new Tuple<string, string>("overdue", this.Configuration.ApiClient.ParameterToString(overdue)));
+            if (pass != null) localVarQueryParams.Add(new Tuple<string, string>("pass", this.Configuration.ApiClient.ParameterToString(pass)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
@@ -12049,6 +12060,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="interval">Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="completionInterval">Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned (optional, default to Any)</param>
+        /// <param name="pass">Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) activities are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all activities are returned (optional, default to Any)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
@@ -12056,9 +12068,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>Task of DevelopmentActivityListing</returns>
-        public async System.Threading.Tasks.Task<DevelopmentActivityListing> GetUsersDevelopmentActivitiesAsync (List<string> userId = null, string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
+        public async System.Threading.Tasks.Task<DevelopmentActivityListing> GetUsersDevelopmentActivitiesAsync (List<string> userId = null, string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
         {
-             ApiResponse<DevelopmentActivityListing> localVarResponse = await GetUsersDevelopmentActivitiesAsyncWithHttpInfo(userId, moduleId, interval, completionInterval, overdue, pageSize, pageNumber, sortOrder, types, statuses, relationship);
+             ApiResponse<DevelopmentActivityListing> localVarResponse = await GetUsersDevelopmentActivitiesAsyncWithHttpInfo(userId, moduleId, interval, completionInterval, overdue, pass, pageSize, pageNumber, sortOrder, types, statuses, relationship);
              return localVarResponse.Data;
 
         }
@@ -12072,6 +12084,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="interval">Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="completionInterval">Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned (optional, default to Any)</param>
+        /// <param name="pass">Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) activities are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all activities are returned (optional, default to Any)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
@@ -12079,7 +12092,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>Task of ApiResponse (DevelopmentActivityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DevelopmentActivityListing>> GetUsersDevelopmentActivitiesAsyncWithHttpInfo (List<string> userId = null, string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DevelopmentActivityListing>> GetUsersDevelopmentActivitiesAsyncWithHttpInfo (List<string> userId = null, string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
         { 
 
             var localVarPath = "/api/v2/users/development/activities";
@@ -12119,6 +12132,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (interval != null) localVarQueryParams.Add(new Tuple<string, string>("interval", this.Configuration.ApiClient.ParameterToString(interval)));
             if (completionInterval != null) localVarQueryParams.Add(new Tuple<string, string>("completionInterval", this.Configuration.ApiClient.ParameterToString(completionInterval)));
             if (overdue != null) localVarQueryParams.Add(new Tuple<string, string>("overdue", this.Configuration.ApiClient.ParameterToString(overdue)));
+            if (pass != null) localVarQueryParams.Add(new Tuple<string, string>("pass", this.Configuration.ApiClient.ParameterToString(pass)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
@@ -12171,6 +12185,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="interval">Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="completionInterval">Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned (optional, default to Any)</param>
+        /// <param name="pass">Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) activities are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all activities are returned (optional, default to Any)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
@@ -12178,9 +12193,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>DevelopmentActivityListing</returns>
-        public DevelopmentActivityListing GetUsersDevelopmentActivitiesMe (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
+        public DevelopmentActivityListing GetUsersDevelopmentActivitiesMe (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
         {
-             ApiResponse<DevelopmentActivityListing> localVarResponse = GetUsersDevelopmentActivitiesMeWithHttpInfo(moduleId, interval, completionInterval, overdue, pageSize, pageNumber, sortOrder, types, statuses, relationship);
+             ApiResponse<DevelopmentActivityListing> localVarResponse = GetUsersDevelopmentActivitiesMeWithHttpInfo(moduleId, interval, completionInterval, overdue, pass, pageSize, pageNumber, sortOrder, types, statuses, relationship);
              return localVarResponse.Data;
         }
 
@@ -12192,6 +12207,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="interval">Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="completionInterval">Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned (optional, default to Any)</param>
+        /// <param name="pass">Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) activities are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all activities are returned (optional, default to Any)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
@@ -12199,7 +12215,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>ApiResponse of DevelopmentActivityListing</returns>
-        public ApiResponse< DevelopmentActivityListing > GetUsersDevelopmentActivitiesMeWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
+        public ApiResponse< DevelopmentActivityListing > GetUsersDevelopmentActivitiesMeWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
         { 
 
             var localVarPath = "/api/v2/users/development/activities/me";
@@ -12238,6 +12254,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (interval != null) localVarQueryParams.Add(new Tuple<string, string>("interval", this.Configuration.ApiClient.ParameterToString(interval)));
             if (completionInterval != null) localVarQueryParams.Add(new Tuple<string, string>("completionInterval", this.Configuration.ApiClient.ParameterToString(completionInterval)));
             if (overdue != null) localVarQueryParams.Add(new Tuple<string, string>("overdue", this.Configuration.ApiClient.ParameterToString(overdue)));
+            if (pass != null) localVarQueryParams.Add(new Tuple<string, string>("pass", this.Configuration.ApiClient.ParameterToString(pass)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
@@ -12289,6 +12306,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="interval">Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="completionInterval">Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned (optional, default to Any)</param>
+        /// <param name="pass">Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) activities are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all activities are returned (optional, default to Any)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
@@ -12296,9 +12314,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>Task of DevelopmentActivityListing</returns>
-        public async System.Threading.Tasks.Task<DevelopmentActivityListing> GetUsersDevelopmentActivitiesMeAsync (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
+        public async System.Threading.Tasks.Task<DevelopmentActivityListing> GetUsersDevelopmentActivitiesMeAsync (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
         {
-             ApiResponse<DevelopmentActivityListing> localVarResponse = await GetUsersDevelopmentActivitiesMeAsyncWithHttpInfo(moduleId, interval, completionInterval, overdue, pageSize, pageNumber, sortOrder, types, statuses, relationship);
+             ApiResponse<DevelopmentActivityListing> localVarResponse = await GetUsersDevelopmentActivitiesMeAsyncWithHttpInfo(moduleId, interval, completionInterval, overdue, pass, pageSize, pageNumber, sortOrder, types, statuses, relationship);
              return localVarResponse.Data;
 
         }
@@ -12311,6 +12329,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="interval">Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="completionInterval">Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)</param>
         /// <param name="overdue">Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned (optional, default to Any)</param>
+        /// <param name="pass">Specifies if only the failed (pass is \&quot;False\&quot;) or passed (pass is \&quot;True\&quot;) activities are returned. If pass is \&quot;Any\&quot; or if the pass parameter is not supplied, all activities are returned (optional, default to Any)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional, default to Desc)</param>
@@ -12318,7 +12337,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="statuses">Specifies the activity statuses to filter by (optional)</param>
         /// <param name="relationship">Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)</param>
         /// <returns>Task of ApiResponse (DevelopmentActivityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DevelopmentActivityListing>> GetUsersDevelopmentActivitiesMeAsyncWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DevelopmentActivityListing>> GetUsersDevelopmentActivitiesMeAsyncWithHttpInfo (string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
         { 
 
             var localVarPath = "/api/v2/users/development/activities/me";
@@ -12357,6 +12376,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (interval != null) localVarQueryParams.Add(new Tuple<string, string>("interval", this.Configuration.ApiClient.ParameterToString(interval)));
             if (completionInterval != null) localVarQueryParams.Add(new Tuple<string, string>("completionInterval", this.Configuration.ApiClient.ParameterToString(completionInterval)));
             if (overdue != null) localVarQueryParams.Add(new Tuple<string, string>("overdue", this.Configuration.ApiClient.ParameterToString(overdue)));
+            if (pass != null) localVarQueryParams.Add(new Tuple<string, string>("pass", this.Configuration.ApiClient.ParameterToString(pass)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));

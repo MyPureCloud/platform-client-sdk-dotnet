@@ -18,6 +18,7 @@ title: LearningAssignment
 | **IsRule** | **bool?** | True if this assignment was created by a Rule | [optional] |
 | **IsManual** | **bool?** | True if this assignment was created manually | [optional] |
 | **IsPassed** | **bool?** | True if the assessment was passed | [optional] |
+| **IsLatest** | **bool?** | True if the assignment is based on latest module | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 | **State** | **string** | The Learning Assignment state | [optional] |
 | **DateRecommendedForCompletion** | **DateTime?** | The recommended completion date of the assignment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |

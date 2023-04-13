@@ -55,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="TransferRequest" /> class.
         /// </summary>
         /// <param name="UserId">The user ID of the transfer target..</param>
-        /// <param name="Address">The address of the transfer target which can be user ID, queue ID or queue name.</param>
+        /// <param name="Address">The user ID or queue ID of the transfer target. Address like a phone number can not be used for callbacks, but they can be used for other forms of communication..</param>
         /// <param name="UserName">The user name of the transfer target..</param>
         /// <param name="QueueId">The queue ID of the transfer target..</param>
         /// <param name="Voicemail">If true, transfer to the voicemail inbox of the participant that is being replaced..</param>
@@ -83,9 +83,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The address of the transfer target which can be user ID, queue ID or queue name
+        /// The user ID or queue ID of the transfer target. Address like a phone number can not be used for callbacks, but they can be used for other forms of communication.
         /// </summary>
-        /// <value>The address of the transfer target which can be user ID, queue ID or queue name</value>
+        /// <value>The user ID or queue ID of the transfer target. Address like a phone number can not be used for callbacks, but they can be used for other forms of communication.</value>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public string Address { get; set; }
 

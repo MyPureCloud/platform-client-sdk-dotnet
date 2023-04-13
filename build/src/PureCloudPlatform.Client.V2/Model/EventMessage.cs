@@ -99,6 +99,12 @@ namespace PureCloudPlatform.Client.V2.Model
             CampaignEmailSubjectCharacterLimitExceeded,
             
             /// <summary>
+            /// Enum CampaignInvalidated for "CAMPAIGN_INVALIDATED"
+            /// </summary>
+            [EnumMember(Value = "CAMPAIGN_INVALIDATED")]
+            CampaignInvalidated,
+            
+            /// <summary>
             /// Enum CampaignMessageCharacterLimitExceeded for "CAMPAIGN_MESSAGE_CHARACTER_LIMIT_EXCEEDED"
             /// </summary>
             [EnumMember(Value = "CAMPAIGN_MESSAGE_CHARACTER_LIMIT_EXCEEDED")]

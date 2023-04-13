@@ -19,6 +19,33 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class DevelopmentActivity :  IEquatable<DevelopmentActivity>
     {
         /// <summary>
+        /// Module archive type
+        /// </summary>
+        /// <value>Module archive type</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ArchivalModeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Graceful for "Graceful"
+            /// </summary>
+            [EnumMember(Value = "Graceful")]
+            Graceful,
+            
+            /// <summary>
+            /// Enum Immediate for "Immediate"
+            /// </summary>
+            [EnumMember(Value = "Immediate")]
+            Immediate
+        }
+        /// <summary>
         /// The type of activity
         /// </summary>
         /// <value>The type of activity</value>
@@ -109,6 +136,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Notcompleted
         }
         /// <summary>
+        /// Module archive type
+        /// </summary>
+        /// <value>Module archive type</value>
+        [DataMember(Name="archivalMode", EmitDefaultValue=false)]
+        public ArchivalModeEnum? ArchivalMode { get; set; }
+        /// <summary>
         /// The type of activity
         /// </summary>
         /// <value>The type of activity</value>
@@ -124,6 +157,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="DevelopmentActivity" /> class.
         /// </summary>
         /// <param name="IsLatest">True if this is the latest version of assignment assigned to the user.</param>
+        /// <param name="IsModuleArchived">True if the associated module is archived.</param>
+        /// <param name="ArchivalMode">Module archive type.</param>
         /// <param name="Name">The name of the activity.</param>
         /// <param name="Type">The type of activity.</param>
         /// <param name="Status">The status of the activity.</param>
@@ -131,9 +166,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Facilitator">Facilitator of the activity.</param>
         /// <param name="Attendees">List of users attending the activity.</param>
         /// <param name="IsOverdue">Indicates if the activity is overdue.</param>
-        public DevelopmentActivity(bool? IsLatest = null, string Name = null, TypeEnum? Type = null, StatusEnum? Status = null, DateTime? DateDue = null, UserReference Facilitator = null, List<UserReference> Attendees = null, bool? IsOverdue = null)
+        public DevelopmentActivity(bool? IsLatest = null, bool? IsModuleArchived = null, ArchivalModeEnum? ArchivalMode = null, string Name = null, TypeEnum? Type = null, StatusEnum? Status = null, DateTime? DateDue = null, UserReference Facilitator = null, List<UserReference> Attendees = null, bool? IsOverdue = null)
         {
             this.IsLatest = IsLatest;
+            this.IsModuleArchived = IsModuleArchived;
+            this.ArchivalMode = ArchivalMode;
             this.Name = Name;
             this.Type = Type;
             this.Status = Status;
@@ -210,6 +247,17 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// True if the associated module is archived
+        /// </summary>
+        /// <value>True if the associated module is archived</value>
+        [DataMember(Name="isModuleArchived", EmitDefaultValue=false)]
+        public bool? IsModuleArchived { get; set; }
+
+
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -282,6 +330,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PercentageScore: ").Append(PercentageScore).Append("\n");
             sb.Append("  IsPassed: ").Append(IsPassed).Append("\n");
             sb.Append("  IsLatest: ").Append(IsLatest).Append("\n");
+            sb.Append("  IsModuleArchived: ").Append(IsModuleArchived).Append("\n");
+            sb.Append("  ArchivalMode: ").Append(ArchivalMode).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
@@ -366,6 +416,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.IsLatest.Equals(other.IsLatest)
                 ) &&
                 (
+                    this.IsModuleArchived == other.IsModuleArchived ||
+                    this.IsModuleArchived != null &&
+                    this.IsModuleArchived.Equals(other.IsModuleArchived)
+                ) &&
+                (
+                    this.ArchivalMode == other.ArchivalMode ||
+                    this.ArchivalMode != null &&
+                    this.ArchivalMode.Equals(other.ArchivalMode)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -438,6 +498,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.IsLatest != null)
                     hash = hash * 59 + this.IsLatest.GetHashCode();
+
+                if (this.IsModuleArchived != null)
+                    hash = hash * 59 + this.IsModuleArchived.GetHashCode();
+
+                if (this.ArchivalMode != null)
+                    hash = hash * 59 + this.ArchivalMode.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

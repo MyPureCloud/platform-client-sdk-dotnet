@@ -30,8 +30,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetTelephonyProvidersEdgeDiagnosticPing**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgediagnosticping) | **GET** /api/v2/telephony/providers/edges/{edgeId}/diagnostic/ping | Get networking-related information from an Edge for a target IP or host. |
 | [**GetTelephonyProvidersEdgeDiagnosticRoute**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgediagnosticroute) | **GET** /api/v2/telephony/providers/edges/{edgeId}/diagnostic/route | Get networking-related information from an Edge for a target IP or host. |
 | [**GetTelephonyProvidersEdgeDiagnosticTracepath**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgediagnostictracepath) | **GET** /api/v2/telephony/providers/edges/{edgeId}/diagnostic/tracepath | Get networking-related information from an Edge for a target IP or host. |
-| [**GetTelephonyProvidersEdgeLine**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgeline) | **GET** /api/v2/telephony/providers/edges/{edgeId}/lines/{lineId} | Get line |
-| [**GetTelephonyProvidersEdgeLines**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgelines) | **GET** /api/v2/telephony/providers/edges/{edgeId}/lines | Get the list of lines. |
 | [**GetTelephonyProvidersEdgeLogicalinterface**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgelogicalinterface) | **GET** /api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId} | Get an edge logical interface |
 | [**GetTelephonyProvidersEdgeLogicalinterfaces**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgelogicalinterfaces) | **GET** /api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces | Get edge logical interfaces. |
 | [**GetTelephonyProvidersEdgeLogsJob**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgelogsjob) | **GET** /api/v2/telephony/providers/edges/{edgeId}/logs/jobs/{jobId} | Get an Edge logs job. |
@@ -120,7 +118,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostTelephonyProvidersEdgesSites**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgessites) | **POST** /api/v2/telephony/providers/edges/sites | Create a Site. |
 | [**PostTelephonyProvidersEdgesTrunkbasesettings**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgestrunkbasesettings) | **POST** /api/v2/telephony/providers/edges/trunkbasesettings | Create a Trunk Base Settings object |
 | [**PutTelephonyProvidersEdge**](TelephonyProvidersEdgeApi.html#puttelephonyprovidersedge) | **PUT** /api/v2/telephony/providers/edges/{edgeId} | Update a edge. |
-| [**PutTelephonyProvidersEdgeLine**](TelephonyProvidersEdgeApi.html#puttelephonyprovidersedgeline) | **PUT** /api/v2/telephony/providers/edges/{edgeId}/lines/{lineId} | Update a line. |
 | [**PutTelephonyProvidersEdgeLogicalinterface**](TelephonyProvidersEdgeApi.html#puttelephonyprovidersedgelogicalinterface) | **PUT** /api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId} | Update an edge logical interface. |
 | [**PutTelephonyProvidersEdgesCertificateauthority**](TelephonyProvidersEdgeApi.html#puttelephonyprovidersedgescertificateauthority) | **PUT** /api/v2/telephony/providers/edges/certificateauthorities/{certificateId} | Update a certificate authority. |
 | [**PutTelephonyProvidersEdgesDid**](TelephonyProvidersEdgeApi.html#puttelephonyprovidersedgesdid) | **PUT** /api/v2/telephony/providers/edges/dids/{didId} | Update a DID by ID. |
@@ -1647,142 +1644,6 @@ namespace Example
 ### Return type
 
 [**EdgeNetworkDiagnosticResponse**](EdgeNetworkDiagnosticResponse.html)
-
-<a name="gettelephonyprovidersedgeline"></a>
-
-## [**EdgeLine**](EdgeLine.html) GetTelephonyProvidersEdgeLine (string edgeId, string lineId)
-
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
-
-Get line
-
-
-
-Requires ANY permissions: 
-
-* telephony:plugin:all
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetTelephonyProvidersEdgeLineExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var edgeId = edgeId_example;  // string | Edge ID
-            var lineId = lineId_example;  // string | Line ID
-
-            try
-            { 
-                // Get line
-                EdgeLine result = apiInstance.GetTelephonyProvidersEdgeLine(edgeId, lineId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetTelephonyProvidersEdgeLine: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **edgeId** | **string**| Edge ID |  |
-| **lineId** | **string**| Line ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**EdgeLine**](EdgeLine.html)
-
-<a name="gettelephonyprovidersedgelines"></a>
-
-## [**EdgeLineEntityListing**](EdgeLineEntityListing.html) GetTelephonyProvidersEdgeLines (string edgeId, int? pageSize = null, int? pageNumber = null)
-
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
-
-Get the list of lines.
-
-
-
-Requires ANY permissions: 
-
-* telephony:plugin:all
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetTelephonyProvidersEdgeLinesExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var edgeId = edgeId_example;  // string | Edge ID
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
-
-            try
-            { 
-                // Get the list of lines.
-                EdgeLineEntityListing result = apiInstance.GetTelephonyProvidersEdgeLines(edgeId, pageSize, pageNumber);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetTelephonyProvidersEdgeLines: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **edgeId** | **string**| Edge ID |  |
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-{: class="table table-striped"}
-
-### Return type
-
-[**EdgeLineEntityListing**](EdgeLineEntityListing.html)
 
 <a name="gettelephonyprovidersedgelogicalinterface"></a>
 
@@ -3924,7 +3785,7 @@ namespace Example
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var name = name_example;  // string | Name (optional) 
             var sortBy = sortBy_example;  // string | Value by which to sort (optional)  (default to "name")
-            var expand = new List<string>(); // List<string> | Fields to expand in the response, comma-separated (optional) 
+            var expand = new List<string>(); // List<string> | Fields to expand in the response, comma-separated. The edgeGroup value is deprecated. (optional) 
 
             try
             { 
@@ -3950,7 +3811,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **name** | **string**| Name | [optional]  |
 | **sortBy** | **string**| Value by which to sort | [optional] [default to "name"] |
-| **expand** | [**List<string>**](string.html)| Fields to expand in the response, comma-separated | [optional] <br />**Values**: properties, site, edgeGroup, primaryEdge, secondaryEdge, edges, assignedUser |
+| **expand** | [**List<string>**](string.html)| Fields to expand in the response, comma-separated. The edgeGroup value is deprecated. | [optional] <br />**Values**: properties, site, edgeGroup, primaryEdge, secondaryEdge, edges, assignedUser |
 {: class="table table-striped"}
 
 ### Return type
@@ -7753,75 +7614,6 @@ namespace Example
 ### Return type
 
 [**Edge**](Edge.html)
-
-<a name="puttelephonyprovidersedgeline"></a>
-
-## [**EdgeLine**](EdgeLine.html) PutTelephonyProvidersEdgeLine (string edgeId, string lineId, EdgeLine body)
-
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
-
-Update a line.
-
-
-
-Requires ANY permissions: 
-
-* telephony:plugin:all
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PutTelephonyProvidersEdgeLineExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var edgeId = edgeId_example;  // string | Edge ID
-            var lineId = lineId_example;  // string | Line ID
-            var body = new EdgeLine(); // EdgeLine | Line
-
-            try
-            { 
-                // Update a line.
-                EdgeLine result = apiInstance.PutTelephonyProvidersEdgeLine(edgeId, lineId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutTelephonyProvidersEdgeLine: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **edgeId** | **string**| Edge ID |  |
-| **lineId** | **string**| Line ID |  |
-| **body** | [**EdgeLine**](EdgeLine.html)| Line |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**EdgeLine**](EdgeLine.html)
 
 <a name="puttelephonyprovidersedgelogicalinterface"></a>
 

@@ -555,56 +555,6 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<EdgeNetworkDiagnosticResponse> GetTelephonyProvidersEdgeDiagnosticTracepathWithHttpInfo (string edgeId);
 
         /// <summary>
-        /// Get line
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="edgeId">Edge ID</param>
-        /// <param name="lineId">Line ID</param>
-        /// <returns>EdgeLine</returns>
-        EdgeLine GetTelephonyProvidersEdgeLine (string edgeId, string lineId);
-
-        /// <summary>
-        /// Get line
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="edgeId">Edge ID</param>
-        /// <param name="lineId">Line ID</param>
-        /// <returns>ApiResponse of EdgeLine</returns>
-        ApiResponse<EdgeLine> GetTelephonyProvidersEdgeLineWithHttpInfo (string edgeId, string lineId);
-
-        /// <summary>
-        /// Get the list of lines.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="edgeId">Edge ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>EdgeLineEntityListing</returns>
-        EdgeLineEntityListing GetTelephonyProvidersEdgeLines (string edgeId, int? pageSize = null, int? pageNumber = null);
-
-        /// <summary>
-        /// Get the list of lines.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="edgeId">Edge ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>ApiResponse of EdgeLineEntityListing</returns>
-        ApiResponse<EdgeLineEntityListing> GetTelephonyProvidersEdgeLinesWithHttpInfo (string edgeId, int? pageSize = null, int? pageNumber = null);
-
-        /// <summary>
         /// Get an edge logical interface
         /// </summary>
         /// <remarks>
@@ -1389,7 +1339,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Value by which to sort (optional, default to "name")</param>
-        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated. The edgeGroup value is deprecated. (optional)</param>
         /// <returns>LineEntityListing</returns>
         LineEntityListing GetTelephonyProvidersEdgesLines (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, List<string> expand = null);
 
@@ -1404,7 +1354,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Value by which to sort (optional, default to "name")</param>
-        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated. The edgeGroup value is deprecated. (optional)</param>
         /// <returns>ApiResponse of LineEntityListing</returns>
         ApiResponse<LineEntityListing> GetTelephonyProvidersEdgesLinesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, List<string> expand = null);
 
@@ -2787,32 +2737,6 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Edge> PutTelephonyProvidersEdgeWithHttpInfo (string edgeId, Edge body);
 
         /// <summary>
-        /// Update a line.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="edgeId">Edge ID</param>
-        /// <param name="lineId">Line ID</param>
-        /// <param name="body">Line</param>
-        /// <returns>EdgeLine</returns>
-        EdgeLine PutTelephonyProvidersEdgeLine (string edgeId, string lineId, EdgeLine body);
-
-        /// <summary>
-        /// Update a line.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="edgeId">Edge ID</param>
-        /// <param name="lineId">Line ID</param>
-        /// <param name="body">Line</param>
-        /// <returns>ApiResponse of EdgeLine</returns>
-        ApiResponse<EdgeLine> PutTelephonyProvidersEdgeLineWithHttpInfo (string edgeId, string lineId, EdgeLine body);
-
-        /// <summary>
         /// Update an edge logical interface.
         /// </summary>
         /// <remarks>
@@ -3721,56 +3645,6 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<EdgeNetworkDiagnosticResponse>> GetTelephonyProvidersEdgeDiagnosticTracepathAsyncWithHttpInfo (string edgeId);
 
         /// <summary>
-        /// Get line
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="edgeId">Edge ID</param>
-        /// <param name="lineId">Line ID</param>
-        /// <returns>Task of EdgeLine</returns>
-        System.Threading.Tasks.Task<EdgeLine> GetTelephonyProvidersEdgeLineAsync (string edgeId, string lineId);
-
-        /// <summary>
-        /// Get line
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="edgeId">Edge ID</param>
-        /// <param name="lineId">Line ID</param>
-        /// <returns>Task of ApiResponse (EdgeLine)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EdgeLine>> GetTelephonyProvidersEdgeLineAsyncWithHttpInfo (string edgeId, string lineId);
-
-        /// <summary>
-        /// Get the list of lines.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="edgeId">Edge ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of EdgeLineEntityListing</returns>
-        System.Threading.Tasks.Task<EdgeLineEntityListing> GetTelephonyProvidersEdgeLinesAsync (string edgeId, int? pageSize = null, int? pageNumber = null);
-
-        /// <summary>
-        /// Get the list of lines.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="edgeId">Edge ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of ApiResponse (EdgeLineEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EdgeLineEntityListing>> GetTelephonyProvidersEdgeLinesAsyncWithHttpInfo (string edgeId, int? pageSize = null, int? pageNumber = null);
-
-        /// <summary>
         /// Get an edge logical interface
         /// </summary>
         /// <remarks>
@@ -4555,7 +4429,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Value by which to sort (optional, default to "name")</param>
-        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated. The edgeGroup value is deprecated. (optional)</param>
         /// <returns>Task of LineEntityListing</returns>
         System.Threading.Tasks.Task<LineEntityListing> GetTelephonyProvidersEdgesLinesAsync (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, List<string> expand = null);
 
@@ -4570,7 +4444,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Value by which to sort (optional, default to "name")</param>
-        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated. The edgeGroup value is deprecated. (optional)</param>
         /// <returns>Task of ApiResponse (LineEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<LineEntityListing>> GetTelephonyProvidersEdgesLinesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, List<string> expand = null);
 
@@ -5951,32 +5825,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Edge</param>
         /// <returns>Task of ApiResponse (Edge)</returns>
         System.Threading.Tasks.Task<ApiResponse<Edge>> PutTelephonyProvidersEdgeAsyncWithHttpInfo (string edgeId, Edge body);
-
-        /// <summary>
-        /// Update a line.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="edgeId">Edge ID</param>
-        /// <param name="lineId">Line ID</param>
-        /// <param name="body">Line</param>
-        /// <returns>Task of EdgeLine</returns>
-        System.Threading.Tasks.Task<EdgeLine> PutTelephonyProvidersEdgeLineAsync (string edgeId, string lineId, EdgeLine body);
-
-        /// <summary>
-        /// Update a line.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="edgeId">Edge ID</param>
-        /// <param name="lineId">Line ID</param>
-        /// <param name="body">Line</param>
-        /// <returns>Task of ApiResponse (EdgeLine)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EdgeLine>> PutTelephonyProvidersEdgeLineAsyncWithHttpInfo (string edgeId, string lineId, EdgeLine body);
 
         /// <summary>
         /// Update an edge logical interface.
@@ -10949,413 +10797,6 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<EdgeNetworkDiagnosticResponse>(localVarStatusCode,
                 localVarHeaders,
                 (EdgeNetworkDiagnosticResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EdgeNetworkDiagnosticResponse)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-
-        /// <summary>
-        /// Get line 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="edgeId">Edge ID</param>
-        /// <param name="lineId">Line ID</param>
-        /// <returns>EdgeLine</returns>
-        public EdgeLine GetTelephonyProvidersEdgeLine (string edgeId, string lineId)
-        {
-             ApiResponse<EdgeLine> localVarResponse = GetTelephonyProvidersEdgeLineWithHttpInfo(edgeId, lineId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get line 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="edgeId">Edge ID</param>
-        /// <param name="lineId">Line ID</param>
-        /// <returns>ApiResponse of EdgeLine</returns>
-        public ApiResponse< EdgeLine > GetTelephonyProvidersEdgeLineWithHttpInfo (string edgeId, string lineId)
-        { 
-            // verify the required parameter 'edgeId' is set
-            if (edgeId == null)
-                throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeLine");
-            // verify the required parameter 'lineId' is set
-            if (lineId == null)
-                throw new ApiException(400, "Missing required parameter 'lineId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeLine");
-
-            var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/lines/{lineId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-                
-
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (edgeId != null) localVarPathParams.Add("edgeId", this.Configuration.ApiClient.ParameterToString(edgeId));
-            if (lineId != null) localVarPathParams.Add("lineId", this.Configuration.ApiClient.ParameterToString(lineId));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgeLine: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgeLine: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<EdgeLine>(localVarStatusCode,
-                localVarHeaders,
-                (EdgeLine) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EdgeLine)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-        /// <summary>
-        /// Get line 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="edgeId">Edge ID</param>
-        /// <param name="lineId">Line ID</param>
-        /// <returns>Task of EdgeLine</returns>
-        public async System.Threading.Tasks.Task<EdgeLine> GetTelephonyProvidersEdgeLineAsync (string edgeId, string lineId)
-        {
-             ApiResponse<EdgeLine> localVarResponse = await GetTelephonyProvidersEdgeLineAsyncWithHttpInfo(edgeId, lineId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get line 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="edgeId">Edge ID</param>
-        /// <param name="lineId">Line ID</param>
-        /// <returns>Task of ApiResponse (EdgeLine)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EdgeLine>> GetTelephonyProvidersEdgeLineAsyncWithHttpInfo (string edgeId, string lineId)
-        { 
-            // verify the required parameter 'edgeId' is set
-            if (edgeId == null)
-                throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeLine");
-            
-            // verify the required parameter 'lineId' is set
-            if (lineId == null)
-                throw new ApiException(400, "Missing required parameter 'lineId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeLine");
-            
-
-            var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/lines/{lineId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (edgeId != null) localVarPathParams.Add("edgeId", this.Configuration.ApiClient.ParameterToString(edgeId));
-            if (lineId != null) localVarPathParams.Add("lineId", this.Configuration.ApiClient.ParameterToString(lineId));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgeLine: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgeLine: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<EdgeLine>(localVarStatusCode,
-                localVarHeaders,
-                (EdgeLine) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EdgeLine)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-
-        /// <summary>
-        /// Get the list of lines. 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="edgeId">Edge ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>EdgeLineEntityListing</returns>
-        public EdgeLineEntityListing GetTelephonyProvidersEdgeLines (string edgeId, int? pageSize = null, int? pageNumber = null)
-        {
-             ApiResponse<EdgeLineEntityListing> localVarResponse = GetTelephonyProvidersEdgeLinesWithHttpInfo(edgeId, pageSize, pageNumber);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get the list of lines. 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="edgeId">Edge ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>ApiResponse of EdgeLineEntityListing</returns>
-        public ApiResponse< EdgeLineEntityListing > GetTelephonyProvidersEdgeLinesWithHttpInfo (string edgeId, int? pageSize = null, int? pageNumber = null)
-        { 
-            // verify the required parameter 'edgeId' is set
-            if (edgeId == null)
-                throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeLines");
-
-            var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/lines";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-                
-
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (edgeId != null) localVarPathParams.Add("edgeId", this.Configuration.ApiClient.ParameterToString(edgeId));
-
-            // Query params
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgeLines: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgeLines: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<EdgeLineEntityListing>(localVarStatusCode,
-                localVarHeaders,
-                (EdgeLineEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EdgeLineEntityListing)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-        /// <summary>
-        /// Get the list of lines. 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="edgeId">Edge ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of EdgeLineEntityListing</returns>
-        public async System.Threading.Tasks.Task<EdgeLineEntityListing> GetTelephonyProvidersEdgeLinesAsync (string edgeId, int? pageSize = null, int? pageNumber = null)
-        {
-             ApiResponse<EdgeLineEntityListing> localVarResponse = await GetTelephonyProvidersEdgeLinesAsyncWithHttpInfo(edgeId, pageSize, pageNumber);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get the list of lines. 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="edgeId">Edge ID</param>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
-        /// <returns>Task of ApiResponse (EdgeLineEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EdgeLineEntityListing>> GetTelephonyProvidersEdgeLinesAsyncWithHttpInfo (string edgeId, int? pageSize = null, int? pageNumber = null)
-        { 
-            // verify the required parameter 'edgeId' is set
-            if (edgeId == null)
-                throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeLines");
-            
-
-            var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/lines";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (edgeId != null) localVarPathParams.Add("edgeId", this.Configuration.ApiClient.ParameterToString(edgeId));
-
-            // Query params
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgeLines: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgeLines: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<EdgeLineEntityListing>(localVarStatusCode,
-                localVarHeaders,
-                (EdgeLineEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EdgeLineEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -17518,7 +16959,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Value by which to sort (optional, default to "name")</param>
-        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated. The edgeGroup value is deprecated. (optional)</param>
         /// <returns>LineEntityListing</returns>
         public LineEntityListing GetTelephonyProvidersEdgesLines (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, List<string> expand = null)
         {
@@ -17534,7 +16975,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Value by which to sort (optional, default to "name")</param>
-        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated. The edgeGroup value is deprecated. (optional)</param>
         /// <returns>ApiResponse of LineEntityListing</returns>
         public ApiResponse< LineEntityListing > GetTelephonyProvidersEdgesLinesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, List<string> expand = null)
         { 
@@ -17621,7 +17062,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Value by which to sort (optional, default to "name")</param>
-        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated. The edgeGroup value is deprecated. (optional)</param>
         /// <returns>Task of LineEntityListing</returns>
         public async System.Threading.Tasks.Task<LineEntityListing> GetTelephonyProvidersEdgesLinesAsync (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, List<string> expand = null)
         {
@@ -17638,7 +17079,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Value by which to sort (optional, default to "name")</param>
-        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated. The edgeGroup value is deprecated. (optional)</param>
         /// <returns>Task of ApiResponse (LineEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<LineEntityListing>> GetTelephonyProvidersEdgesLinesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, List<string> expand = null)
         { 
@@ -29101,233 +28542,6 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Edge>(localVarStatusCode,
                 localVarHeaders,
                 (Edge) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Edge)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-
-        /// <summary>
-        /// Update a line. 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="edgeId">Edge ID</param>
-        /// <param name="lineId">Line ID</param>
-        /// <param name="body">Line</param>
-        /// <returns>EdgeLine</returns>
-        public EdgeLine PutTelephonyProvidersEdgeLine (string edgeId, string lineId, EdgeLine body)
-        {
-             ApiResponse<EdgeLine> localVarResponse = PutTelephonyProvidersEdgeLineWithHttpInfo(edgeId, lineId, body);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Update a line. 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="edgeId">Edge ID</param>
-        /// <param name="lineId">Line ID</param>
-        /// <param name="body">Line</param>
-        /// <returns>ApiResponse of EdgeLine</returns>
-        public ApiResponse< EdgeLine > PutTelephonyProvidersEdgeLineWithHttpInfo (string edgeId, string lineId, EdgeLine body)
-        { 
-            // verify the required parameter 'edgeId' is set
-            if (edgeId == null)
-                throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgeLine");
-            // verify the required parameter 'lineId' is set
-            if (lineId == null)
-                throw new ApiException(400, "Missing required parameter 'lineId' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgeLine");
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgeLine");
-
-            var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/lines/{lineId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-                
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-                
-
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (edgeId != null) localVarPathParams.Add("edgeId", this.Configuration.ApiClient.ParameterToString(edgeId));
-            if (lineId != null) localVarPathParams.Add("lineId", this.Configuration.ApiClient.ParameterToString(lineId));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutTelephonyProvidersEdgeLine: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutTelephonyProvidersEdgeLine: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<EdgeLine>(localVarStatusCode,
-                localVarHeaders,
-                (EdgeLine) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EdgeLine)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-        /// <summary>
-        /// Update a line. 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="edgeId">Edge ID</param>
-        /// <param name="lineId">Line ID</param>
-        /// <param name="body">Line</param>
-        /// <returns>Task of EdgeLine</returns>
-        public async System.Threading.Tasks.Task<EdgeLine> PutTelephonyProvidersEdgeLineAsync (string edgeId, string lineId, EdgeLine body)
-        {
-             ApiResponse<EdgeLine> localVarResponse = await PutTelephonyProvidersEdgeLineAsyncWithHttpInfo(edgeId, lineId, body);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Update a line. 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="edgeId">Edge ID</param>
-        /// <param name="lineId">Line ID</param>
-        /// <param name="body">Line</param>
-        /// <returns>Task of ApiResponse (EdgeLine)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EdgeLine>> PutTelephonyProvidersEdgeLineAsyncWithHttpInfo (string edgeId, string lineId, EdgeLine body)
-        { 
-            // verify the required parameter 'edgeId' is set
-            if (edgeId == null)
-                throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgeLine");
-            
-            // verify the required parameter 'lineId' is set
-            if (lineId == null)
-                throw new ApiException(400, "Missing required parameter 'lineId' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgeLine");
-            
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgeLine");
-            
-
-            var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/lines/{lineId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-                
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (edgeId != null) localVarPathParams.Add("edgeId", this.Configuration.ApiClient.ParameterToString(edgeId));
-            if (lineId != null) localVarPathParams.Add("lineId", this.Configuration.ApiClient.ParameterToString(lineId));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutTelephonyProvidersEdgeLine: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutTelephonyProvidersEdgeLine: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<EdgeLine>(localVarStatusCode,
-                localVarHeaders,
-                (EdgeLine) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EdgeLine)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
