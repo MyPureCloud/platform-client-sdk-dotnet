@@ -519,6 +519,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Conditional,
             
             /// <summary>
+            /// Enum Direct for "Direct"
+            /// </summary>
+            [EnumMember(Value = "Direct")]
+            Direct,
+            
+            /// <summary>
             /// Enum Last for "Last"
             /// </summary>
             [EnumMember(Value = "Last")]
@@ -579,6 +585,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Conditional")]
             Conditional,
+            
+            /// <summary>
+            /// Enum Direct for "Direct"
+            /// </summary>
+            [EnumMember(Value = "Direct")]
+            Direct,
             
             /// <summary>
             /// Enum Last for "Last"

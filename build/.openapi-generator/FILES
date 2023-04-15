@@ -1412,7 +1412,6 @@ docs/DomainPhysicalInterface.md
 docs/DomainResourceConditionNode.md
 docs/DomainResourceConditionValue.md
 docs/DomainRole.md
-docs/DomainSchemaReference.md
 docs/DownloadResponse.md
 docs/DownloadsApi.json
 docs/DownloadsApi.md
@@ -1824,11 +1823,6 @@ docs/GetCoachingAppointments-example.txt
 docs/GetCoachingAppointmentsMe-example.txt
 docs/GetCoachingNotification-example.txt
 docs/GetCoachingNotifications-example.txt
-docs/GetConfigurationSchemasEdgesVnext-example.txt
-docs/GetConfigurationSchemasEdgesVnextSchemaCategory-example.txt
-docs/GetConfigurationSchemasEdgesVnextSchemaCategorySchemaType-example.txt
-docs/GetConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaId-example.txt
-docs/GetConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdExtensionTypeMetadataId-example.txt
 docs/GetContentmanagementDocument-example.txt
 docs/GetContentmanagementDocumentAudits-example.txt
 docs/GetContentmanagementDocumentContent-example.txt
@@ -4291,11 +4285,9 @@ docs/PutSpeechandtextanalyticsTopic-example.txt
 docs/PutTelephonyProvidersEdge-example.txt
 docs/PutTelephonyProvidersEdgeLogicalinterface-example.txt
 docs/PutTelephonyProvidersEdgesCertificateauthority-example.txt
-docs/PutTelephonyProvidersEdgesDid-example.txt
 docs/PutTelephonyProvidersEdgesDidpool-example.txt
 docs/PutTelephonyProvidersEdgesEdgegroup-example.txt
 docs/PutTelephonyProvidersEdgesEdgegroupEdgetrunkbase-example.txt
-docs/PutTelephonyProvidersEdgesExtension-example.txt
 docs/PutTelephonyProvidersEdgesExtensionpool-example.txt
 docs/PutTelephonyProvidersEdgesOutboundroute-example.txt
 docs/PutTelephonyProvidersEdgesPhone-example.txt
@@ -4697,6 +4689,7 @@ docs/RestorePresenceSettings.md
 docs/ResultCounters.md
 docs/RetentionDuration.md
 docs/ReverseWhitepagesLookupResult.md
+docs/ReviewAssessmentResults.md
 docs/Ring.md
 docs/RoleDivision.md
 docs/RoleDivisionGrants.md
@@ -4749,10 +4742,7 @@ docs/SchedulingSettingsResponse.md
 docs/SchedulingStatusResponse.md
 docs/SchedulingTestingOptionsRequest.md
 docs/Schema.md
-docs/SchemaCategory.md
-docs/SchemaCategoryEntityListing.md
 docs/SchemaQuantityLimits.md
-docs/SchemaReferenceEntityListing.md
 docs/ScimConfigResourceType.md
 docs/ScimConfigResourceTypeSchemaExtension.md
 docs/ScimConfigResourceTypesListResponse.md
@@ -6946,7 +6936,6 @@ src/PureCloudPlatform.Client.V2/Model/DomainPhysicalInterface.cs
 src/PureCloudPlatform.Client.V2/Model/DomainResourceConditionNode.cs
 src/PureCloudPlatform.Client.V2/Model/DomainResourceConditionValue.cs
 src/PureCloudPlatform.Client.V2/Model/DomainRole.cs
-src/PureCloudPlatform.Client.V2/Model/DomainSchemaReference.cs
 src/PureCloudPlatform.Client.V2/Model/DownloadResponse.cs
 src/PureCloudPlatform.Client.V2/Model/Draft.cs
 src/PureCloudPlatform.Client.V2/Model/DraftIntents.cs
@@ -8351,6 +8340,7 @@ src/PureCloudPlatform.Client.V2/Model/RestorePresenceSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ResultCounters.cs
 src/PureCloudPlatform.Client.V2/Model/RetentionDuration.cs
 src/PureCloudPlatform.Client.V2/Model/ReverseWhitepagesLookupResult.cs
+src/PureCloudPlatform.Client.V2/Model/ReviewAssessmentResults.cs
 src/PureCloudPlatform.Client.V2/Model/Ring.cs
 src/PureCloudPlatform.Client.V2/Model/RoleDivision.cs
 src/PureCloudPlatform.Client.V2/Model/RoleDivisionGrants.cs
@@ -8399,10 +8389,7 @@ src/PureCloudPlatform.Client.V2/Model/SchedulingSettingsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/SchedulingStatusResponse.cs
 src/PureCloudPlatform.Client.V2/Model/SchedulingTestingOptionsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/Schema.cs
-src/PureCloudPlatform.Client.V2/Model/SchemaCategory.cs
-src/PureCloudPlatform.Client.V2/Model/SchemaCategoryEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/SchemaQuantityLimits.cs
-src/PureCloudPlatform.Client.V2/Model/SchemaReferenceEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/ScimConfigResourceType.cs
 src/PureCloudPlatform.Client.V2/Model/ScimConfigResourceTypeSchemaExtension.cs
 src/PureCloudPlatform.Client.V2/Model/ScimConfigResourceTypesListResponse.cs

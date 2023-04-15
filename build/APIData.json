@@ -15381,7 +15381,7 @@
       }
     ],
     "return": "KnowledgeGuestDocumentResponseListing",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetKnowledgeGuestSessionDocumentsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n\n            var apiInstance = new KnowledgeApi();\n            var sessionId = \"sessionId_example\";  // string | Knowledge guest session ID.\n            var categoryId = new List<string>(); // List<string> | If specified, retrieves documents associated with category ids, comma separated values expected. (optional) \n            var pageSize = 56;  // int? | Number of entities to return. Maximum of 200. (optional)  (default to 10)\n\n            try\n            { \n                // Get documents.\n                KnowledgeGuestDocumentResponseListing result = apiInstance.GetKnowledgeGuestSessionDocuments(sessionId, categoryId, pageSize);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Knowledge.GetKnowledgeGuestSessionDocuments: \" + e.Message );\n            }\n        }\n    }\n}"
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetKnowledgeGuestSessionDocumentsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n\n            var apiInstance = new KnowledgeApi();\n            var sessionId = \"sessionId_example\";  // string | Knowledge guest session ID.\n            var categoryId = new List<string>(); // List<string> | If specified, retrieves documents associated with category ids, comma separated values expected. (optional) \n            var pageSize = 56;  // int? | Number of entities to return. Maximum of 200. (optional) \n\n            try\n            { \n                // Get documents.\n                KnowledgeGuestDocumentResponseListing result = apiInstance.GetKnowledgeGuestSessionDocuments(sessionId, categoryId, pageSize);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Knowledge.GetKnowledgeGuestSessionDocuments: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "getknowledgeknowledgebase": {
     "operationId": "getknowledgeknowledgebase",
@@ -27580,7 +27580,7 @@
   "getroutingsmsphonenumbers": {
     "operationId": "getroutingsmsphonenumbers",
     "functionName": "GetRoutingSmsPhonenumbers",
-    "signature": "GetRoutingSmsPhonenumbers(phoneNumber, phoneNumberType, phoneNumberStatus, countryCode, pageSize, pageNumber, sortBy, sortOrder, language)",
+    "signature": "GetRoutingSmsPhonenumbers(phoneNumber, phoneNumberType, phoneNumberStatus, countryCode, pageSize, pageNumber, sortBy, sortOrder, language, integrationId)",
     "parameters": [
       {
         "name": "phoneNumber",
@@ -27626,10 +27626,15 @@
         "name": "language",
         "type": "string",
         "required": "false"
+      },
+      {
+        "name": "integrationId",
+        "type": "string",
+        "required": "false"
       }
     ],
     "return": "SmsPhoneNumberEntityListing",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetRoutingSmsPhonenumbersExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new RoutingApi();\n            var phoneNumber = \"phoneNumber_example\";  // string | Filter on phone number address. Allowable characters are the digits '0-9' and the wild card character '\\\\*'. If just digits are present, a contains search is done on the address pattern. For example, '317' could be matched anywhere in the address. An '\\\\*' will match multiple digits. For example, to match a specific area code within the US a pattern like '1317*' could be used. (optional) \n            var phoneNumberType = new List<string>(); // List<string> | Filter on phone number type (optional) \n            var phoneNumberStatus = new List<string>(); // List<string> | Filter on phone number status (optional) \n            var countryCode = new List<string>(); // List<string> | Filter on country code (optional) \n            var pageSize = 56;  // int? | Page size (optional)  (default to 25)\n            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)\n            var sortBy = \"sortBy_example\";  // string | Optional field to sort results (optional) \n            var sortOrder = \"sortOrder_example\";  // string | Sort order (optional) \n            var language = \"en-US\";  // string | A language tag (which is sometimes referred to as a \\\"locale identifier\\\") to use to localize country field and sort operations (optional)  (default to \"en-US\")\n\n            try\n            { \n                // Get a list of provisioned phone numbers.\n                SmsPhoneNumberEntityListing result = apiInstance.GetRoutingSmsPhonenumbers(phoneNumber, phoneNumberType, phoneNumberStatus, countryCode, pageSize, pageNumber, sortBy, sortOrder, language);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Routing.GetRoutingSmsPhonenumbers: \" + e.Message );\n            }\n        }\n    }\n}"
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetRoutingSmsPhonenumbersExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new RoutingApi();\n            var phoneNumber = \"phoneNumber_example\";  // string | Filter on phone number address. Allowable characters are the digits '0-9' and the wild card character '\\\\*'. If just digits are present, a contains search is done on the address pattern. For example, '317' could be matched anywhere in the address. An '\\\\*' will match multiple digits. For example, to match a specific area code within the US a pattern like '1317*' could be used. (optional) \n            var phoneNumberType = new List<string>(); // List<string> | Filter on phone number type (optional) \n            var phoneNumberStatus = new List<string>(); // List<string> | Filter on phone number status (optional) \n            var countryCode = new List<string>(); // List<string> | Filter on country code (optional) \n            var pageSize = 56;  // int? | Page size (optional)  (default to 25)\n            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)\n            var sortBy = \"sortBy_example\";  // string | Optional field to sort results (optional) \n            var sortOrder = \"sortOrder_example\";  // string | Sort order (optional) \n            var language = \"en-US\";  // string | A language tag (which is sometimes referred to as a \\\"locale identifier\\\") to use to localize country field and sort operations (optional)  (default to \"en-US\")\n            var integrationId = \"integrationId_example\";  // string | Filter on the Genesys Cloud integration id to which the phone number belongs to (optional) \n\n            try\n            { \n                // Get a list of provisioned phone numbers.\n                SmsPhoneNumberEntityListing result = apiInstance.GetRoutingSmsPhonenumbers(phoneNumber, phoneNumberType, phoneNumberStatus, countryCode, pageSize, pageNumber, sortBy, sortOrder, language, integrationId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Routing.GetRoutingSmsPhonenumbers: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "getroutinguserutilization": {
     "operationId": "getroutinguserutilization",
@@ -31036,141 +31041,6 @@
     ],
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class DeleteTelephonyProvidersEdgesTrunkbasesettingExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new TelephonyProvidersEdgeApi();\n            var trunkBaseSettingsId = \"trunkBaseSettingsId_example\";  // string | Trunk Base ID\n\n            try\n            { \n                // Delete a Trunk Base Settings object by ID\n                apiInstance.DeleteTelephonyProvidersEdgesTrunkbasesetting(trunkBaseSettingsId);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling TelephonyProvidersEdge.DeleteTelephonyProvidersEdgesTrunkbasesetting: \" + e.Message );\n            }\n        }\n    }\n}"
   },
-  "getconfigurationschemasedgesvnext": {
-    "operationId": "getconfigurationschemasedgesvnext",
-    "functionName": "GetConfigurationSchemasEdgesVnext",
-    "signature": "GetConfigurationSchemasEdgesVnext(pageSize, pageNumber)",
-    "parameters": [
-      {
-        "name": "pageSize",
-        "type": "int?",
-        "required": "false"
-      },
-      {
-        "name": "pageNumber",
-        "type": "int?",
-        "required": "false"
-      }
-    ],
-    "return": "SchemaCategoryEntityListing",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetConfigurationSchemasEdgesVnextExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new TelephonyProvidersEdgeApi();\n            var pageSize = 56;  // int? | Page size (optional)  (default to 25)\n            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)\n\n            try\n            { \n                // Lists available schema categories (Deprecated)\n                SchemaCategoryEntityListing result = apiInstance.GetConfigurationSchemasEdgesVnext(pageSize, pageNumber);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling TelephonyProvidersEdge.GetConfigurationSchemasEdgesVnext: \" + e.Message );\n            }\n        }\n    }\n}"
-  },
-  "getconfigurationschemasedgesvnextschemacategory": {
-    "operationId": "getconfigurationschemasedgesvnextschemacategory",
-    "functionName": "GetConfigurationSchemasEdgesVnextSchemaCategory",
-    "signature": "GetConfigurationSchemasEdgesVnextSchemaCategory(schemaCategory, pageSize, pageNumber)",
-    "parameters": [
-      {
-        "name": "schemaCategory",
-        "type": "string",
-        "required": "true"
-      },
-      {
-        "name": "pageSize",
-        "type": "int?",
-        "required": "false"
-      },
-      {
-        "name": "pageNumber",
-        "type": "int?",
-        "required": "false"
-      }
-    ],
-    "return": "SchemaReferenceEntityListing",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetConfigurationSchemasEdgesVnextSchemaCategoryExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new TelephonyProvidersEdgeApi();\n            var schemaCategory = \"schemaCategory_example\";  // string | Schema category\n            var pageSize = 56;  // int? | Page size (optional)  (default to 25)\n            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)\n\n            try\n            { \n                // List schemas of a specific category (Deprecated)\n                SchemaReferenceEntityListing result = apiInstance.GetConfigurationSchemasEdgesVnextSchemaCategory(schemaCategory, pageSize, pageNumber);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling TelephonyProvidersEdge.GetConfigurationSchemasEdgesVnextSchemaCategory: \" + e.Message );\n            }\n        }\n    }\n}"
-  },
-  "getconfigurationschemasedgesvnextschemacategoryschematype": {
-    "operationId": "getconfigurationschemasedgesvnextschemacategoryschematype",
-    "functionName": "GetConfigurationSchemasEdgesVnextSchemaCategorySchemaType",
-    "signature": "GetConfigurationSchemasEdgesVnextSchemaCategorySchemaType(schemaCategory, schemaType, pageSize, pageNumber)",
-    "parameters": [
-      {
-        "name": "schemaCategory",
-        "type": "string",
-        "required": "true"
-      },
-      {
-        "name": "schemaType",
-        "type": "string",
-        "required": "true"
-      },
-      {
-        "name": "pageSize",
-        "type": "int?",
-        "required": "false"
-      },
-      {
-        "name": "pageNumber",
-        "type": "int?",
-        "required": "false"
-      }
-    ],
-    "return": "SchemaReferenceEntityListing",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new TelephonyProvidersEdgeApi();\n            var schemaCategory = \"schemaCategory_example\";  // string | Schema category\n            var schemaType = \"schemaType_example\";  // string | Schema type\n            var pageSize = 56;  // int? | Page size (optional)  (default to 25)\n            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)\n\n            try\n            { \n                // List schemas of a specific category (Deprecated)\n                SchemaReferenceEntityListing result = apiInstance.GetConfigurationSchemasEdgesVnextSchemaCategorySchemaType(schemaCategory, schemaType, pageSize, pageNumber);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling TelephonyProvidersEdge.GetConfigurationSchemasEdgesVnextSchemaCategorySchemaType: \" + e.Message );\n            }\n        }\n    }\n}"
-  },
-  "getconfigurationschemasedgesvnextschemacategoryschematypeschemaid": {
-    "operationId": "getconfigurationschemasedgesvnextschemacategoryschematypeschemaid",
-    "functionName": "GetConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaId",
-    "signature": "GetConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaId(schemaCategory, schemaType, schemaId)",
-    "parameters": [
-      {
-        "name": "schemaCategory",
-        "type": "string",
-        "required": "true"
-      },
-      {
-        "name": "schemaType",
-        "type": "string",
-        "required": "true"
-      },
-      {
-        "name": "schemaId",
-        "type": "string",
-        "required": "true"
-      }
-    ],
-    "return": "Organization",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new TelephonyProvidersEdgeApi();\n            var schemaCategory = \"schemaCategory_example\";  // string | Schema category\n            var schemaType = \"schemaType_example\";  // string | Schema type\n            var schemaId = \"schemaId_example\";  // string | Schema ID\n\n            try\n            { \n                // Get a json schema (Deprecated)\n                Organization result = apiInstance.GetConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaId(schemaCategory, schemaType, schemaId);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling TelephonyProvidersEdge.GetConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaId: \" + e.Message );\n            }\n        }\n    }\n}"
-  },
-  "getconfigurationschemasedgesvnextschemacategoryschematypeschemaidextensiontypemetadataid": {
-    "operationId": "getconfigurationschemasedgesvnextschemacategoryschematypeschemaidextensiontypemetadataid",
-    "functionName": "GetConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdExtensionTypeMetadataId",
-    "signature": "GetConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdExtensionTypeMetadataId(schemaCategory, schemaType, schemaId, extensionType, metadataId, type)",
-    "parameters": [
-      {
-        "name": "schemaCategory",
-        "type": "string",
-        "required": "true"
-      },
-      {
-        "name": "schemaType",
-        "type": "string",
-        "required": "true"
-      },
-      {
-        "name": "schemaId",
-        "type": "string",
-        "required": "true"
-      },
-      {
-        "name": "extensionType",
-        "type": "string",
-        "required": "true"
-      },
-      {
-        "name": "metadataId",
-        "type": "string",
-        "required": "true"
-      },
-      {
-        "name": "type",
-        "type": "string",
-        "required": "false"
-      }
-    ],
-    "return": "Organization",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdExtensionTypeMetadataIdExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new TelephonyProvidersEdgeApi();\n            var schemaCategory = \"schemaCategory_example\";  // string | Schema category\n            var schemaType = \"schemaType_example\";  // string | Schema type\n            var schemaId = \"schemaId_example\";  // string | Schema ID\n            var extensionType = \"extensionType_example\";  // string | extension\n            var metadataId = \"metadataId_example\";  // string | Metadata ID\n            var type = \"type_example\";  // string | Type (optional) \n\n            try\n            { \n                // Get metadata for a schema (Deprecated)\n                Organization result = apiInstance.GetConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdExtensionTypeMetadataId(schemaCategory, schemaType, schemaId, extensionType, metadataId, type);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling TelephonyProvidersEdge.GetConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdExtensionTypeMetadataId: \" + e.Message );\n            }\n        }\n    }\n}"
-  },
   "gettelephonyprovidersedge": {
     "operationId": "gettelephonyprovidersedge",
     "functionName": "GetTelephonyProvidersEdge",
@@ -33125,25 +32995,6 @@
     "return": "DomainCertificateAuthority",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PutTelephonyProvidersEdgesCertificateauthorityExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new TelephonyProvidersEdgeApi();\n            var certificateId = \"certificateId_example\";  // string | Certificate ID\n            var body = new DomainCertificateAuthority(); // DomainCertificateAuthority | Certificate authority\n\n            try\n            { \n                // Update a certificate authority.\n                DomainCertificateAuthority result = apiInstance.PutTelephonyProvidersEdgesCertificateauthority(certificateId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling TelephonyProvidersEdge.PutTelephonyProvidersEdgesCertificateauthority: \" + e.Message );\n            }\n        }\n    }\n}"
   },
-  "puttelephonyprovidersedgesdid": {
-    "operationId": "puttelephonyprovidersedgesdid",
-    "functionName": "PutTelephonyProvidersEdgesDid",
-    "signature": "PutTelephonyProvidersEdgesDid(didId, body)",
-    "parameters": [
-      {
-        "name": "didId",
-        "type": "string",
-        "required": "true"
-      },
-      {
-        "name": "body",
-        "type": "DID",
-        "required": "true"
-      }
-    ],
-    "return": "DID",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PutTelephonyProvidersEdgesDidExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new TelephonyProvidersEdgeApi();\n            var didId = \"didId_example\";  // string | DID ID\n            var body = new DID(); // DID | DID\n\n            try\n            { \n                // Update a DID by ID.\n                DID result = apiInstance.PutTelephonyProvidersEdgesDid(didId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling TelephonyProvidersEdge.PutTelephonyProvidersEdgesDid: \" + e.Message );\n            }\n        }\n    }\n}"
-  },
   "puttelephonyprovidersedgesdidpool": {
     "operationId": "puttelephonyprovidersedgesdidpool",
     "functionName": "PutTelephonyProvidersEdgesDidpool",
@@ -33205,25 +33056,6 @@
     ],
     "return": "EdgeTrunkBase",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PutTelephonyProvidersEdgesEdgegroupEdgetrunkbaseExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new TelephonyProvidersEdgeApi();\n            var edgegroupId = \"edgegroupId_example\";  // string | Edge Group ID\n            var edgetrunkbaseId = \"edgetrunkbaseId_example\";  // string | Edge Trunk Base ID\n            var body = new EdgeTrunkBase(); // EdgeTrunkBase | EdgeTrunkBase\n\n            try\n            { \n                // Update the edge trunk base associated with the edge group\n                EdgeTrunkBase result = apiInstance.PutTelephonyProvidersEdgesEdgegroupEdgetrunkbase(edgegroupId, edgetrunkbaseId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling TelephonyProvidersEdge.PutTelephonyProvidersEdgesEdgegroupEdgetrunkbase: \" + e.Message );\n            }\n        }\n    }\n}"
-  },
-  "puttelephonyprovidersedgesextension": {
-    "operationId": "puttelephonyprovidersedgesextension",
-    "functionName": "PutTelephonyProvidersEdgesExtension",
-    "signature": "PutTelephonyProvidersEdgesExtension(extensionId, body)",
-    "parameters": [
-      {
-        "name": "extensionId",
-        "type": "string",
-        "required": "true"
-      },
-      {
-        "name": "body",
-        "type": "Extension",
-        "required": "true"
-      }
-    ],
-    "return": "Extension",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PutTelephonyProvidersEdgesExtensionExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new TelephonyProvidersEdgeApi();\n            var extensionId = \"extensionId_example\";  // string | Extension ID\n            var body = new Extension(); // Extension | Extension\n\n            try\n            { \n                // Update an extension by ID.\n                Extension result = apiInstance.PutTelephonyProvidersEdgesExtension(extensionId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling TelephonyProvidersEdge.PutTelephonyProvidersEdgesExtension: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "puttelephonyprovidersedgesextensionpool": {
     "operationId": "puttelephonyprovidersedgesextensionpool",

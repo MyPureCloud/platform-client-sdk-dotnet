@@ -84,12 +84,13 @@ namespace PureCloudPlatform.Client.V2.Tests
                 Password = Guid.NewGuid() + "!@#$1234asdfASDF"
             };
 
-            var user = usersApi.PostUsers(newUser);
+            var user = usersApi.PostUsersWithHttpInfo(newUser);
 
-            userId = user.Id;
-            Assert.AreEqual(user.Name, userName);
-            Assert.AreEqual(user.Email, userEmail);
+            userId = user.Data.Id;
+            Assert.AreEqual(user.Data.Name, userName);
+            Assert.AreEqual(user.Data.Email, userEmail);
 
+            Console.WriteLine($"CorrelationId for PostUsersWithHttpInfo {user.CorrelationId}");
             Console.WriteLine($"Created user with ID {userId}");
         }
 
@@ -113,10 +114,11 @@ namespace PureCloudPlatform.Client.V2.Tests
         [Test, Order(4)]
         public void SetProfileSkills()
         {
-            var skills = usersApi.PutUserProfileskills(userId, new List<string>() { userProfileSkill });
+            var skills = usersApi.PutUserProfileskillsWithHttpInfo(userId, new List<string>() { userProfileSkill });
 
-            Assert.AreEqual(skills.Count, 1);
-            Assert.AreEqual(skills[0], userProfileSkill);
+            Assert.AreEqual(skills.Data.Count, 1);
+            Assert.AreEqual(skills.Data[0], userProfileSkill);
+            Console.WriteLine($"CorrelationId for PutUserProfileskillsWithHttpInfo {skills.CorrelationId}");
         }
 
         [Test, Order(5)]
@@ -178,14 +180,15 @@ namespace PureCloudPlatform.Client.V2.Tests
         public void GetUser()
         {
                 Thread.Sleep(6000);
-                var user = usersApi.GetUser(userId, new List<string>() { "profileSkills" }, null, null);
-                Assert.AreEqual(user.Id, userId);
-                Assert.AreEqual(user.Name, userName);
-                Assert.AreEqual(user.Email, userEmail);
-                Assert.AreEqual(user.Department, userDepartment);
-                Assert.IsNotNull(user.ProfileSkills);
-                Assert.AreEqual(user.ProfileSkills.Count, 1);
-                Assert.AreEqual(user.ProfileSkills[0], userProfileSkill);
+                var user = usersApi.GetUserWithHttpInfo(userId, new List<string>() { "profileSkills" }, null, null);
+                Assert.AreEqual(user.Data.Id, userId);
+                Assert.AreEqual(user.Data.Name, userName);
+                Assert.AreEqual(user.Data.Email, userEmail);
+                Assert.AreEqual(user.Data.Department, userDepartment);
+                Console.WriteLine($"CorrelationId for GetUserWithHttpInfo {user.CorrelationId}");
+                Assert.IsNotNull(user.Data.ProfileSkills);
+                Assert.AreEqual(user.Data.ProfileSkills.Count, 1);
+                Assert.AreEqual(user.Data.ProfileSkills[0], userProfileSkill);
         }
 
         [Test, Order(7)]

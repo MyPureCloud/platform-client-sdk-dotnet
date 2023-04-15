@@ -1702,8 +1702,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Optional field to sort results (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize country field and sort operations (optional, default to "en-US")</param>
+        /// <param name="integrationId">Filter on the Genesys Cloud integration id to which the phone number belongs to (optional)</param>
         /// <returns>SmsPhoneNumberEntityListing</returns>
-        SmsPhoneNumberEntityListing GetRoutingSmsPhonenumbers (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null);
+        SmsPhoneNumberEntityListing GetRoutingSmsPhonenumbers (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null, string integrationId = null);
 
         /// <summary>
         /// Get a list of provisioned phone numbers.
@@ -1721,8 +1722,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Optional field to sort results (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize country field and sort operations (optional, default to "en-US")</param>
+        /// <param name="integrationId">Filter on the Genesys Cloud integration id to which the phone number belongs to (optional)</param>
         /// <returns>ApiResponse of SmsPhoneNumberEntityListing</returns>
-        ApiResponse<SmsPhoneNumberEntityListing> GetRoutingSmsPhonenumbersWithHttpInfo (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null);
+        ApiResponse<SmsPhoneNumberEntityListing> GetRoutingSmsPhonenumbersWithHttpInfo (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null, string integrationId = null);
 
         /// <summary>
         /// Get the user's max utilization settings.  If not configured, the organization-wide default is returned.
@@ -4782,8 +4784,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Optional field to sort results (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize country field and sort operations (optional, default to "en-US")</param>
+        /// <param name="integrationId">Filter on the Genesys Cloud integration id to which the phone number belongs to (optional)</param>
         /// <returns>Task of SmsPhoneNumberEntityListing</returns>
-        System.Threading.Tasks.Task<SmsPhoneNumberEntityListing> GetRoutingSmsPhonenumbersAsync (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null);
+        System.Threading.Tasks.Task<SmsPhoneNumberEntityListing> GetRoutingSmsPhonenumbersAsync (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null, string integrationId = null);
 
         /// <summary>
         /// Get a list of provisioned phone numbers.
@@ -4801,8 +4804,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Optional field to sort results (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize country field and sort operations (optional, default to "en-US")</param>
+        /// <param name="integrationId">Filter on the Genesys Cloud integration id to which the phone number belongs to (optional)</param>
         /// <returns>Task of ApiResponse (SmsPhoneNumberEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumberEntityListing>> GetRoutingSmsPhonenumbersAsyncWithHttpInfo (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null);
+        System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumberEntityListing>> GetRoutingSmsPhonenumbersAsyncWithHttpInfo (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null, string integrationId = null);
 
         /// <summary>
         /// Get the user's max utilization settings.  If not configured, the organization-wide default is returned.
@@ -19670,10 +19674,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Optional field to sort results (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize country field and sort operations (optional, default to "en-US")</param>
+        /// <param name="integrationId">Filter on the Genesys Cloud integration id to which the phone number belongs to (optional)</param>
         /// <returns>SmsPhoneNumberEntityListing</returns>
-        public SmsPhoneNumberEntityListing GetRoutingSmsPhonenumbers (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null)
+        public SmsPhoneNumberEntityListing GetRoutingSmsPhonenumbers (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null, string integrationId = null)
         {
-             ApiResponse<SmsPhoneNumberEntityListing> localVarResponse = GetRoutingSmsPhonenumbersWithHttpInfo(phoneNumber, phoneNumberType, phoneNumberStatus, countryCode, pageSize, pageNumber, sortBy, sortOrder, language);
+             ApiResponse<SmsPhoneNumberEntityListing> localVarResponse = GetRoutingSmsPhonenumbersWithHttpInfo(phoneNumber, phoneNumberType, phoneNumberStatus, countryCode, pageSize, pageNumber, sortBy, sortOrder, language, integrationId);
              return localVarResponse.Data;
         }
 
@@ -19690,8 +19695,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Optional field to sort results (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize country field and sort operations (optional, default to "en-US")</param>
+        /// <param name="integrationId">Filter on the Genesys Cloud integration id to which the phone number belongs to (optional)</param>
         /// <returns>ApiResponse of SmsPhoneNumberEntityListing</returns>
-        public ApiResponse< SmsPhoneNumberEntityListing > GetRoutingSmsPhonenumbersWithHttpInfo (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null)
+        public ApiResponse< SmsPhoneNumberEntityListing > GetRoutingSmsPhonenumbersWithHttpInfo (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null, string integrationId = null)
         { 
 
             var localVarPath = "/api/v2/routing/sms/phonenumbers";
@@ -19735,6 +19741,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (language != null) localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(language)));
+            if (integrationId != null) localVarQueryParams.Add(new Tuple<string, string>("integration.id", this.Configuration.ApiClient.ParameterToString(integrationId)));
 
             // Header params
 
@@ -19785,10 +19792,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Optional field to sort results (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize country field and sort operations (optional, default to "en-US")</param>
+        /// <param name="integrationId">Filter on the Genesys Cloud integration id to which the phone number belongs to (optional)</param>
         /// <returns>Task of SmsPhoneNumberEntityListing</returns>
-        public async System.Threading.Tasks.Task<SmsPhoneNumberEntityListing> GetRoutingSmsPhonenumbersAsync (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null)
+        public async System.Threading.Tasks.Task<SmsPhoneNumberEntityListing> GetRoutingSmsPhonenumbersAsync (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null, string integrationId = null)
         {
-             ApiResponse<SmsPhoneNumberEntityListing> localVarResponse = await GetRoutingSmsPhonenumbersAsyncWithHttpInfo(phoneNumber, phoneNumberType, phoneNumberStatus, countryCode, pageSize, pageNumber, sortBy, sortOrder, language);
+             ApiResponse<SmsPhoneNumberEntityListing> localVarResponse = await GetRoutingSmsPhonenumbersAsyncWithHttpInfo(phoneNumber, phoneNumberType, phoneNumberStatus, countryCode, pageSize, pageNumber, sortBy, sortOrder, language, integrationId);
              return localVarResponse.Data;
 
         }
@@ -19806,8 +19814,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Optional field to sort results (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="language">A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize country field and sort operations (optional, default to "en-US")</param>
+        /// <param name="integrationId">Filter on the Genesys Cloud integration id to which the phone number belongs to (optional)</param>
         /// <returns>Task of ApiResponse (SmsPhoneNumberEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumberEntityListing>> GetRoutingSmsPhonenumbersAsyncWithHttpInfo (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SmsPhoneNumberEntityListing>> GetRoutingSmsPhonenumbersAsyncWithHttpInfo (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null, string integrationId = null)
         { 
 
             var localVarPath = "/api/v2/routing/sms/phonenumbers";
@@ -19851,6 +19860,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (language != null) localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(language)));
+            if (integrationId != null) localVarQueryParams.Add(new Tuple<string, string>("integration.id", this.Configuration.ApiClient.ParameterToString(integrationId)));
 
             // Header params
 

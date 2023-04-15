@@ -335,7 +335,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">Knowledge guest session ID.</param>
         /// <param name="categoryId">If specified, retrieves documents associated with category ids, comma separated values expected. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 10)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <returns>KnowledgeGuestDocumentResponseListing</returns>
         KnowledgeGuestDocumentResponseListing GetKnowledgeGuestSessionDocuments (string sessionId, List<string> categoryId = null, int? pageSize = null);
 
@@ -348,7 +348,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">Knowledge guest session ID.</param>
         /// <param name="categoryId">If specified, retrieves documents associated with category ids, comma separated values expected. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 10)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <returns>ApiResponse of KnowledgeGuestDocumentResponseListing</returns>
         ApiResponse<KnowledgeGuestDocumentResponseListing> GetKnowledgeGuestSessionDocumentsWithHttpInfo (string sessionId, List<string> categoryId = null, int? pageSize = null);
 
@@ -2281,7 +2281,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">Knowledge guest session ID.</param>
         /// <param name="categoryId">If specified, retrieves documents associated with category ids, comma separated values expected. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 10)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <returns>Task of KnowledgeGuestDocumentResponseListing</returns>
         System.Threading.Tasks.Task<KnowledgeGuestDocumentResponseListing> GetKnowledgeGuestSessionDocumentsAsync (string sessionId, List<string> categoryId = null, int? pageSize = null);
 
@@ -2294,7 +2294,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">Knowledge guest session ID.</param>
         /// <param name="categoryId">If specified, retrieves documents associated with category ids, comma separated values expected. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 10)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <returns>Task of ApiResponse (KnowledgeGuestDocumentResponseListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<KnowledgeGuestDocumentResponseListing>> GetKnowledgeGuestSessionDocumentsAsyncWithHttpInfo (string sessionId, List<string> categoryId = null, int? pageSize = null);
 
@@ -6492,7 +6492,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">Knowledge guest session ID.</param>
         /// <param name="categoryId">If specified, retrieves documents associated with category ids, comma separated values expected. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 10)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <returns>KnowledgeGuestDocumentResponseListing</returns>
         public KnowledgeGuestDocumentResponseListing GetKnowledgeGuestSessionDocuments (string sessionId, List<string> categoryId = null, int? pageSize = null)
         {
@@ -6506,7 +6506,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">Knowledge guest session ID.</param>
         /// <param name="categoryId">If specified, retrieves documents associated with category ids, comma separated values expected. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 10)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <returns>ApiResponse of KnowledgeGuestDocumentResponseListing</returns>
         public ApiResponse< KnowledgeGuestDocumentResponseListing > GetKnowledgeGuestSessionDocumentsWithHttpInfo (string sessionId, List<string> categoryId = null, int? pageSize = null)
         { 
@@ -6585,7 +6585,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">Knowledge guest session ID.</param>
         /// <param name="categoryId">If specified, retrieves documents associated with category ids, comma separated values expected. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 10)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <returns>Task of KnowledgeGuestDocumentResponseListing</returns>
         public async System.Threading.Tasks.Task<KnowledgeGuestDocumentResponseListing> GetKnowledgeGuestSessionDocumentsAsync (string sessionId, List<string> categoryId = null, int? pageSize = null)
         {
@@ -6600,7 +6600,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">Knowledge guest session ID.</param>
         /// <param name="categoryId">If specified, retrieves documents associated with category ids, comma separated values expected. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional, default to 10)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <returns>Task of ApiResponse (KnowledgeGuestDocumentResponseListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<KnowledgeGuestDocumentResponseListing>> GetKnowledgeGuestSessionDocumentsAsyncWithHttpInfo (string sessionId, List<string> categoryId = null, int? pageSize = null)
         { 

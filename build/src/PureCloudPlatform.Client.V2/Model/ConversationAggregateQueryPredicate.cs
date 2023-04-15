@@ -133,6 +133,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Authenticated,
             
             /// <summary>
+            /// Enum Canonicalexternalcontactid for "canonicalExternalContactId"
+            /// </summary>
+            [EnumMember(Value = "canonicalExternalContactId")]
+            Canonicalexternalcontactid,
+            
+            /// <summary>
             /// Enum Conversationid for "conversationId"
             /// </summary>
             [EnumMember(Value = "conversationId")]

@@ -920,7 +920,7 @@ namespace Example
             var apiInstance = new KnowledgeApi();
             var sessionId = sessionId_example;  // string | Knowledge guest session ID.
             var categoryId = new List<string>(); // List<string> | If specified, retrieves documents associated with category ids, comma separated values expected. (optional) 
-            var pageSize = 56;  // int? | Number of entities to return. Maximum of 200. (optional)  (default to 10)
+            var pageSize = 56;  // int? | Number of entities to return. Maximum of 200. (optional) 
 
             try
             { 
@@ -944,7 +944,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **sessionId** | **string**| Knowledge guest session ID. |  |
 | **categoryId** | [**List<string>**](string.html)| If specified, retrieves documents associated with category ids, comma separated values expected. | [optional]  |
-| **pageSize** | **int?**| Number of entities to return. Maximum of 200. | [optional] [default to 10] |
+| **pageSize** | **int?**| Number of entities to return. Maximum of 200. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

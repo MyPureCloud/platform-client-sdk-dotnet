@@ -4696,7 +4696,7 @@ namespace Example
 
 <a name="getroutingsmsphonenumbers"></a>
 
-## [**SmsPhoneNumberEntityListing**](SmsPhoneNumberEntityListing.html) GetRoutingSmsPhonenumbers (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null)
+## [**SmsPhoneNumberEntityListing**](SmsPhoneNumberEntityListing.html) GetRoutingSmsPhonenumbers (string phoneNumber = null, List<string> phoneNumberType = null, List<string> phoneNumberStatus = null, List<string> countryCode = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string language = null, string integrationId = null)
 
 
 
@@ -4739,11 +4739,12 @@ namespace Example
             var sortBy = sortBy_example;  // string | Optional field to sort results (optional) 
             var sortOrder = sortOrder_example;  // string | Sort order (optional) 
             var language = en-US;  // string | A language tag (which is sometimes referred to as a \"locale identifier\") to use to localize country field and sort operations (optional)  (default to "en-US")
+            var integrationId = integrationId_example;  // string | Filter on the Genesys Cloud integration id to which the phone number belongs to (optional) 
 
             try
             { 
                 // Get a list of provisioned phone numbers.
-                SmsPhoneNumberEntityListing result = apiInstance.GetRoutingSmsPhonenumbers(phoneNumber, phoneNumberType, phoneNumberStatus, countryCode, pageSize, pageNumber, sortBy, sortOrder, language);
+                SmsPhoneNumberEntityListing result = apiInstance.GetRoutingSmsPhonenumbers(phoneNumber, phoneNumberType, phoneNumberStatus, countryCode, pageSize, pageNumber, sortBy, sortOrder, language, integrationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4769,6 +4770,7 @@ namespace Example
 | **sortBy** | **string**| Optional field to sort results | [optional] <br />**Values**: phoneNumber, countryCode, country, dateCreated, dateModified, phoneNumberStatus, phoneNumberType, purchaseDate, supportsMms, supportsSms, supportsVoice |
 | **sortOrder** | **string**| Sort order | [optional] <br />**Values**: ascending, descending |
 | **language** | **string**| A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize country field and sort operations | [optional] [default to "en-US"] |
+| **integrationId** | **string**| Filter on the Genesys Cloud integration id to which the phone number belongs to | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
