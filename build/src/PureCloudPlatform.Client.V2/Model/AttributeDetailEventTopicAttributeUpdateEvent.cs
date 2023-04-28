@@ -25,12 +25,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationId">ConversationId.</param>
         /// <param name="ParticipantId">ParticipantId.</param>
         /// <param name="Attributes">Attributes.</param>
-        public AttributeDetailEventTopicAttributeUpdateEvent(int? EventTime = null, string ConversationId = null, string ParticipantId = null, Dictionary<string, string> Attributes = null)
+        /// <param name="ConversationExternalContactIds">ConversationExternalContactIds.</param>
+        /// <param name="ConversationExternalOrganizationIds">ConversationExternalOrganizationIds.</param>
+        public AttributeDetailEventTopicAttributeUpdateEvent(int? EventTime = null, string ConversationId = null, string ParticipantId = null, Dictionary<string, string> Attributes = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null)
         {
             this.EventTime = EventTime;
             this.ConversationId = ConversationId;
             this.ParticipantId = ParticipantId;
             this.Attributes = Attributes;
+            this.ConversationExternalContactIds = ConversationExternalContactIds;
+            this.ConversationExternalOrganizationIds = ConversationExternalOrganizationIds;
             
         }
         
@@ -67,6 +71,22 @@ namespace PureCloudPlatform.Client.V2.Model
         public Dictionary<string, string> Attributes { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets ConversationExternalContactIds
+        /// </summary>
+        [DataMember(Name="conversationExternalContactIds", EmitDefaultValue=false)]
+        public List<string> ConversationExternalContactIds { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets ConversationExternalOrganizationIds
+        /// </summary>
+        [DataMember(Name="conversationExternalOrganizationIds", EmitDefaultValue=false)]
+        public List<string> ConversationExternalOrganizationIds { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -80,6 +100,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
             sb.Append("  ParticipantId: ").Append(ParticipantId).Append("\n");
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
+            sb.Append("  ConversationExternalContactIds: ").Append(ConversationExternalContactIds).Append("\n");
+            sb.Append("  ConversationExternalOrganizationIds: ").Append(ConversationExternalOrganizationIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -139,6 +161,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Attributes == other.Attributes ||
                     this.Attributes != null &&
                     this.Attributes.SequenceEqual(other.Attributes)
+                ) &&
+                (
+                    this.ConversationExternalContactIds == other.ConversationExternalContactIds ||
+                    this.ConversationExternalContactIds != null &&
+                    this.ConversationExternalContactIds.SequenceEqual(other.ConversationExternalContactIds)
+                ) &&
+                (
+                    this.ConversationExternalOrganizationIds == other.ConversationExternalOrganizationIds ||
+                    this.ConversationExternalOrganizationIds != null &&
+                    this.ConversationExternalOrganizationIds.SequenceEqual(other.ConversationExternalOrganizationIds)
                 );
         }
 
@@ -164,6 +196,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Attributes != null)
                     hash = hash * 59 + this.Attributes.GetHashCode();
+
+                if (this.ConversationExternalContactIds != null)
+                    hash = hash * 59 + this.ConversationExternalContactIds.GetHashCode();
+
+                if (this.ConversationExternalOrganizationIds != null)
+                    hash = hash * 59 + this.ConversationExternalOrganizationIds.GetHashCode();
 
                 return hash;
             }

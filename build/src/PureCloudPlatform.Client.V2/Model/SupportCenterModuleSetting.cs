@@ -67,7 +67,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Article for "Article"
             /// </summary>
             [EnumMember(Value = "Article")]
-            Article
+            Article,
+            
+            /// <summary>
+            /// Enum Topviewedarticles for "TopViewedArticles"
+            /// </summary>
+            [EnumMember(Value = "TopViewedArticles")]
+            Topviewedarticles
         }
         /// <summary>
         /// Screen module type

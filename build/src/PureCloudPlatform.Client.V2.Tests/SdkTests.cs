@@ -91,6 +91,7 @@ namespace PureCloudPlatform.Client.V2.Tests
             Assert.AreEqual(user.Data.Email, userEmail);
 
             Console.WriteLine($"CorrelationId for PostUsersWithHttpInfo {user.CorrelationId}");
+            Console.WriteLine($"Version for PostUsersWithHttpInfo {user.Data.Version}");
             Console.WriteLine($"Created user with ID {userId}");
         }
 
@@ -186,6 +187,7 @@ namespace PureCloudPlatform.Client.V2.Tests
                 Assert.AreEqual(user.Data.Email, userEmail);
                 Assert.AreEqual(user.Data.Department, userDepartment);
                 Console.WriteLine($"CorrelationId for GetUserWithHttpInfo {user.CorrelationId}");
+                Console.WriteLine($"Version for GetUserWithHttpInfo {user.Data.Version}");
                 Assert.IsNotNull(user.Data.ProfileSkills);
                 Assert.AreEqual(user.Data.ProfileSkills.Count, 1);
                 Assert.AreEqual(user.Data.ProfileSkills[0], userProfileSkill);

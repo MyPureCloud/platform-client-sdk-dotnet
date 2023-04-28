@@ -32,6 +32,12 @@ title: EvaluationQualityV2TopicEvaluationV2
 | **EvaluationSource** | [**EvaluationQualityV2TopicEvaluationSource**](EvaluationQualityV2TopicEvaluationSource.html) |  | [optional] |
 | **AssigneeUserId** | **string** |  | [optional] |
 | **PreviousAssigneeUserId** | **string** |  | [optional] |
+| **EvaluationContextId** | **string** |  | [optional] |
+| **DisputeCount** | **int?** |  | [optional] |
+| **Version** | **int?** |  | [optional] |
+| **PreviousStatus** | **string** |  | [optional] |
+| **DeclinedReview** | **bool?** |  | [optional] |
+| **RetractedEvaluation** | [**EvaluationQualityV2TopicEvaluationReference**](EvaluationQualityV2TopicEvaluationReference.html) |  | [optional] |
 {: class="table table-striped"}
 
 

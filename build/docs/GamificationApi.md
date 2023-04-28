@@ -10,6 +10,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteEmployeeperformanceExternalmetricsDefinition**](GamificationApi.html#deleteemployeeperformanceexternalmetricsdefinition) | **DELETE** /api/v2/employeeperformance/externalmetrics/definitions/{metricId} | Delete an External Metric Definition |
 | [**GetEmployeeperformanceExternalmetricsDefinition**](GamificationApi.html#getemployeeperformanceexternalmetricsdefinition) | **GET** /api/v2/employeeperformance/externalmetrics/definitions/{metricId} | Get an External Metric Definition |
 | [**GetEmployeeperformanceExternalmetricsDefinitions**](GamificationApi.html#getemployeeperformanceexternalmetricsdefinitions) | **GET** /api/v2/employeeperformance/externalmetrics/definitions | Get a list of External Metric Definitions of an organization, sorted by name in ascending order |
+| [**GetGamificationInsights**](GamificationApi.html#getgamificationinsights) | **GET** /api/v2/gamification/insights | Get insights summary |
+| [**GetGamificationInsightsDetails**](GamificationApi.html#getgamificationinsightsdetails) | **GET** /api/v2/gamification/insights/details | Get insights details for the current user |
+| [**GetGamificationInsightsGroupsTrends**](GamificationApi.html#getgamificationinsightsgroupstrends) | **GET** /api/v2/gamification/insights/groups/trends | Get insights overall trend for the current user |
+| [**GetGamificationInsightsGroupsTrendsAll**](GamificationApi.html#getgamificationinsightsgroupstrendsall) | **GET** /api/v2/gamification/insights/groups/trends/all | Get insights overall trend |
+| [**GetGamificationInsightsMembers**](GamificationApi.html#getgamificationinsightsmembers) | **GET** /api/v2/gamification/insights/members | Query users in a profile during a period of time |
+| [**GetGamificationInsightsTrends**](GamificationApi.html#getgamificationinsightstrends) | **GET** /api/v2/gamification/insights/trends | Get insights user trend for the current user |
+| [**GetGamificationInsightsUserDetails**](GamificationApi.html#getgamificationinsightsuserdetails) | **GET** /api/v2/gamification/insights/users/{userId}/details | Get insights details for the user |
+| [**GetGamificationInsightsUserTrends**](GamificationApi.html#getgamificationinsightsusertrends) | **GET** /api/v2/gamification/insights/users/{userId}/trends | Get insights user trend for the user |
 | [**GetGamificationLeaderboard**](GamificationApi.html#getgamificationleaderboard) | **GET** /api/v2/gamification/leaderboard | Leaderboard of the requesting user&#39;s division or performance profile |
 | [**GetGamificationLeaderboardAll**](GamificationApi.html#getgamificationleaderboardall) | **GET** /api/v2/gamification/leaderboard/all | Leaderboard by filter type |
 | [**GetGamificationLeaderboardAllBestpoints**](GamificationApi.html#getgamificationleaderboardallbestpoints) | **GET** /api/v2/gamification/leaderboard/all/bestpoints | Best Points by division or performance profile |
@@ -57,6 +65,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostGamificationProfileMetricLink**](GamificationApi.html#postgamificationprofilemetriclink) | **POST** /api/v2/gamification/profiles/{sourceProfileId}/metrics/{sourceMetricId}/link | Creates a linked metric |
 | [**PostGamificationProfileMetrics**](GamificationApi.html#postgamificationprofilemetrics) | **POST** /api/v2/gamification/profiles/{profileId}/metrics | Creates a gamified metric with a given metric definition and metric objective under in a performance profile |
 | [**PostGamificationProfiles**](GamificationApi.html#postgamificationprofiles) | **POST** /api/v2/gamification/profiles | Create a new custom performance profile |
+| [**PostGamificationProfilesUserQuery**](GamificationApi.html#postgamificationprofilesuserquery) | **POST** /api/v2/gamification/profiles/users/{userId}/query | Query performance profiles in date range for a user |
+| [**PostGamificationProfilesUsersMeQuery**](GamificationApi.html#postgamificationprofilesusersmequery) | **POST** /api/v2/gamification/profiles/users/me/query | Query performance profiles in date range for the current user |
 | [**PutGamificationProfile**](GamificationApi.html#putgamificationprofile) | **PUT** /api/v2/gamification/profiles/{profileId} | Updates a performance profile |
 | [**PutGamificationProfileMetric**](GamificationApi.html#putgamificationprofilemetric) | **PUT** /api/v2/gamification/profiles/{profileId}/metrics/{metricId} | Updates a metric in performance profile |
 | [**PutGamificationStatus**](GamificationApi.html#putgamificationstatus) | **PUT** /api/v2/gamification/status | Update gamification activation status |
@@ -257,6 +267,620 @@ namespace Example
 ### Return type
 
 [**ExternalMetricDefinitionListing**](ExternalMetricDefinitionListing.html)
+
+<a name="getgamificationinsights"></a>
+
+## [**InsightsSummary**](InsightsSummary.html) GetGamificationInsights (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, int? pageSize = null, int? pageNumber = null, string sortKey = null, string sortMetricId = null, string sortOrder = null, string userIds = null)
+
+
+
+Get insights summary
+
+
+
+Requires ANY permissions: 
+
+* gamification:insights:viewAll
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetGamificationInsightsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var filterType = filterType_example;  // string | Filter type for the query request.
+            var filterId = filterId_example;  // string | ID for the filter type.
+            var granularity = granularity_example;  // string | Granularity
+            var comparativePeriodStartWorkday = 2013-10-20;  // String | The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var primaryPeriodStartWorkday = 2013-10-20;  // String | The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var sortKey = sortKey_example;  // string | Sort key (optional) 
+            var sortMetricId = sortMetricId_example;  // string | Sort Metric Id (optional) 
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to asc)
+            var userIds = userIds_example;  // string | A list of up to 100 comma-separated user Ids (optional) 
+
+            try
+            { 
+                // Get insights summary
+                InsightsSummary result = apiInstance.GetGamificationInsights(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday, pageSize, pageNumber, sortKey, sortMetricId, sortOrder, userIds);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.GetGamificationInsights: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **filterType** | **string**| Filter type for the query request. | <br />**Values**: PerformanceProfile, Division |
+| **filterId** | **string**| ID for the filter type. |  |
+| **granularity** | **string**| Granularity | <br />**Values**: Weekly, Monthly |
+| **comparativePeriodStartWorkday** | **String**| The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **primaryPeriodStartWorkday** | **String**| The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **sortKey** | **string**| Sort key | [optional] <br />**Values**: percentOfGoal, percentOfGoalChange, overallPercentOfGoal, overallPercentOfGoalChange, value, valueChange |
+| **sortMetricId** | **string**| Sort Metric Id | [optional]  |
+| **sortOrder** | **string**| Sort order | [optional] [default to asc]<br />**Values**: asc, desc |
+| **userIds** | **string**| A list of up to 100 comma-separated user Ids | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**InsightsSummary**](InsightsSummary.html)
+
+<a name="getgamificationinsightsdetails"></a>
+
+## [**InsightsDetails**](InsightsDetails.html) GetGamificationInsightsDetails (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday)
+
+
+
+Get insights details for the current user
+
+
+
+Requires ANY permissions: 
+
+* gamification:insights:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetGamificationInsightsDetailsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var filterType = filterType_example;  // string | Filter type for the query request.
+            var filterId = filterId_example;  // string | ID for the filter type.
+            var granularity = granularity_example;  // string | Granularity
+            var comparativePeriodStartWorkday = 2013-10-20;  // String | The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var primaryPeriodStartWorkday = 2013-10-20;  // String | The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+
+            try
+            { 
+                // Get insights details for the current user
+                InsightsDetails result = apiInstance.GetGamificationInsightsDetails(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.GetGamificationInsightsDetails: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **filterType** | **string**| Filter type for the query request. | <br />**Values**: PerformanceProfile, Division |
+| **filterId** | **string**| ID for the filter type. |  |
+| **granularity** | **string**| Granularity | <br />**Values**: Weekly, Monthly |
+| **comparativePeriodStartWorkday** | **String**| The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **primaryPeriodStartWorkday** | **String**| The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**InsightsDetails**](InsightsDetails.html)
+
+<a name="getgamificationinsightsgroupstrends"></a>
+
+## [**InsightsTrend**](InsightsTrend.html) GetGamificationInsightsGroupsTrends (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday)
+
+
+
+Get insights overall trend for the current user
+
+
+
+Requires ANY permissions: 
+
+* gamification:insights:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetGamificationInsightsGroupsTrendsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var filterType = filterType_example;  // string | Filter type for the query request.
+            var filterId = filterId_example;  // string | ID for the filter type.
+            var granularity = granularity_example;  // string | Granularity
+            var comparativePeriodStartWorkday = 2013-10-20;  // String | The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var comparativePeriodEndWorkday = 2013-10-20;  // String | The end work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var primaryPeriodStartWorkday = 2013-10-20;  // String | The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var primaryPeriodEndWorkday = 2013-10-20;  // String | The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+
+            try
+            { 
+                // Get insights overall trend for the current user
+                InsightsTrend result = apiInstance.GetGamificationInsightsGroupsTrends(filterType, filterId, granularity, comparativePeriodStartWorkday, comparativePeriodEndWorkday, primaryPeriodStartWorkday, primaryPeriodEndWorkday);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.GetGamificationInsightsGroupsTrends: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **filterType** | **string**| Filter type for the query request. | <br />**Values**: PerformanceProfile, Division |
+| **filterId** | **string**| ID for the filter type. |  |
+| **granularity** | **string**| Granularity | <br />**Values**: Daily, Weekly, Monthly |
+| **comparativePeriodStartWorkday** | **String**| The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **comparativePeriodEndWorkday** | **String**| The end work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **primaryPeriodStartWorkday** | **String**| The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **primaryPeriodEndWorkday** | **String**| The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**InsightsTrend**](InsightsTrend.html)
+
+<a name="getgamificationinsightsgroupstrendsall"></a>
+
+## [**InsightsTrend**](InsightsTrend.html) GetGamificationInsightsGroupsTrendsAll (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday)
+
+
+
+Get insights overall trend
+
+
+
+Requires ANY permissions: 
+
+* gamification:insights:viewAll
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetGamificationInsightsGroupsTrendsAllExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var filterType = filterType_example;  // string | Filter type for the query request.
+            var filterId = filterId_example;  // string | ID for the filter type.
+            var granularity = granularity_example;  // string | Granularity
+            var comparativePeriodStartWorkday = 2013-10-20;  // String | The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var comparativePeriodEndWorkday = 2013-10-20;  // String | The end work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var primaryPeriodStartWorkday = 2013-10-20;  // String | The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var primaryPeriodEndWorkday = 2013-10-20;  // String | The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+
+            try
+            { 
+                // Get insights overall trend
+                InsightsTrend result = apiInstance.GetGamificationInsightsGroupsTrendsAll(filterType, filterId, granularity, comparativePeriodStartWorkday, comparativePeriodEndWorkday, primaryPeriodStartWorkday, primaryPeriodEndWorkday);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.GetGamificationInsightsGroupsTrendsAll: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **filterType** | **string**| Filter type for the query request. | <br />**Values**: PerformanceProfile, Division |
+| **filterId** | **string**| ID for the filter type. |  |
+| **granularity** | **string**| Granularity | <br />**Values**: Daily, Weekly, Monthly |
+| **comparativePeriodStartWorkday** | **String**| The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **comparativePeriodEndWorkday** | **String**| The end work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **primaryPeriodStartWorkday** | **String**| The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **primaryPeriodEndWorkday** | **String**| The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**InsightsTrend**](InsightsTrend.html)
+
+<a name="getgamificationinsightsmembers"></a>
+
+## [**InsightsAgents**](InsightsAgents.html) GetGamificationInsightsMembers (string filterType, string filterId, string granularity, String startWorkday)
+
+
+
+Query users in a profile during a period of time
+
+
+
+Requires ANY permissions: 
+
+* gamification:insights:viewAll
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetGamificationInsightsMembersExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var filterType = filterType_example;  // string | Filter type for the query request.
+            var filterId = filterId_example;  // string | ID for the filter type.
+            var granularity = granularity_example;  // string | Granularity
+            var startWorkday = 2013-10-20;  // String | The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+
+            try
+            { 
+                // Query users in a profile during a period of time
+                InsightsAgents result = apiInstance.GetGamificationInsightsMembers(filterType, filterId, granularity, startWorkday);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.GetGamificationInsightsMembers: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **filterType** | **string**| Filter type for the query request. | <br />**Values**: PerformanceProfile, Division |
+| **filterId** | **string**| ID for the filter type. |  |
+| **granularity** | **string**| Granularity | <br />**Values**: Weekly, Monthly |
+| **startWorkday** | **String**| The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**InsightsAgents**](InsightsAgents.html)
+
+<a name="getgamificationinsightstrends"></a>
+
+## [**UserInsightsTrend**](UserInsightsTrend.html) GetGamificationInsightsTrends (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday)
+
+
+
+Get insights user trend for the current user
+
+
+
+Requires ANY permissions: 
+
+* gamification:insights:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetGamificationInsightsTrendsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var filterType = filterType_example;  // string | Filter type for the query request.
+            var filterId = filterId_example;  // string | ID for the filter type.
+            var granularity = granularity_example;  // string | Granularity
+            var comparativePeriodStartWorkday = 2013-10-20;  // String | The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var comparativePeriodEndWorkday = 2013-10-20;  // String | The end work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var primaryPeriodStartWorkday = 2013-10-20;  // String | The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var primaryPeriodEndWorkday = 2013-10-20;  // String | The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+
+            try
+            { 
+                // Get insights user trend for the current user
+                UserInsightsTrend result = apiInstance.GetGamificationInsightsTrends(filterType, filterId, granularity, comparativePeriodStartWorkday, comparativePeriodEndWorkday, primaryPeriodStartWorkday, primaryPeriodEndWorkday);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.GetGamificationInsightsTrends: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **filterType** | **string**| Filter type for the query request. | <br />**Values**: PerformanceProfile, Division |
+| **filterId** | **string**| ID for the filter type. |  |
+| **granularity** | **string**| Granularity | <br />**Values**: Daily, Weekly |
+| **comparativePeriodStartWorkday** | **String**| The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **comparativePeriodEndWorkday** | **String**| The end work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **primaryPeriodStartWorkday** | **String**| The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **primaryPeriodEndWorkday** | **String**| The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserInsightsTrend**](UserInsightsTrend.html)
+
+<a name="getgamificationinsightsuserdetails"></a>
+
+## [**InsightsDetails**](InsightsDetails.html) GetGamificationInsightsUserDetails (string userId, string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday)
+
+
+
+Get insights details for the user
+
+
+
+Requires ANY permissions: 
+
+* gamification:insights:viewAll
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetGamificationInsightsUserDetailsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var userId = userId_example;  // string | The ID of a user.
+            var filterType = filterType_example;  // string | Filter type for the query request.
+            var filterId = filterId_example;  // string | ID for the filter type.
+            var granularity = granularity_example;  // string | Granularity
+            var comparativePeriodStartWorkday = 2013-10-20;  // String | The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var primaryPeriodStartWorkday = 2013-10-20;  // String | The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+
+            try
+            { 
+                // Get insights details for the user
+                InsightsDetails result = apiInstance.GetGamificationInsightsUserDetails(userId, filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.GetGamificationInsightsUserDetails: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| The ID of a user. |  |
+| **filterType** | **string**| Filter type for the query request. | <br />**Values**: PerformanceProfile, Division |
+| **filterId** | **string**| ID for the filter type. |  |
+| **granularity** | **string**| Granularity | <br />**Values**: Weekly, Monthly |
+| **comparativePeriodStartWorkday** | **String**| The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **primaryPeriodStartWorkday** | **String**| The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**InsightsDetails**](InsightsDetails.html)
+
+<a name="getgamificationinsightsusertrends"></a>
+
+## [**UserInsightsTrend**](UserInsightsTrend.html) GetGamificationInsightsUserTrends (string userId, string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday)
+
+
+
+Get insights user trend for the user
+
+
+
+Requires ANY permissions: 
+
+* gamification:insights:viewAll
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetGamificationInsightsUserTrendsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var userId = userId_example;  // string | The ID of a user.
+            var filterType = filterType_example;  // string | Filter type for the query request.
+            var filterId = filterId_example;  // string | ID for the filter type.
+            var granularity = granularity_example;  // string | Granularity
+            var comparativePeriodStartWorkday = 2013-10-20;  // String | The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var comparativePeriodEndWorkday = 2013-10-20;  // String | The end work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var primaryPeriodStartWorkday = 2013-10-20;  // String | The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var primaryPeriodEndWorkday = 2013-10-20;  // String | The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+
+            try
+            { 
+                // Get insights user trend for the user
+                UserInsightsTrend result = apiInstance.GetGamificationInsightsUserTrends(userId, filterType, filterId, granularity, comparativePeriodStartWorkday, comparativePeriodEndWorkday, primaryPeriodStartWorkday, primaryPeriodEndWorkday);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.GetGamificationInsightsUserTrends: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| The ID of a user. |  |
+| **filterType** | **string**| Filter type for the query request. | <br />**Values**: PerformanceProfile, Division |
+| **filterId** | **string**| ID for the filter type. |  |
+| **granularity** | **string**| Granularity | <br />**Values**: Daily, Weekly |
+| **comparativePeriodStartWorkday** | **String**| The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **comparativePeriodEndWorkday** | **String**| The end work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **primaryPeriodStartWorkday** | **String**| The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **primaryPeriodEndWorkday** | **String**| The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserInsightsTrend**](UserInsightsTrend.html)
 
 <a name="getgamificationleaderboard"></a>
 
@@ -3435,6 +4059,137 @@ namespace Example
 ### Return type
 
 [**PerformanceProfile**](PerformanceProfile.html)
+
+<a name="postgamificationprofilesuserquery"></a>
+
+## [**UserProfilesInDateRange**](UserProfilesInDateRange.html) PostGamificationProfilesUserQuery (string userId, UserProfilesInDateRangeRequest body)
+
+
+
+Query performance profiles in date range for a user
+
+
+
+Requires ANY permissions: 
+
+* gamification:agentProfileMembership:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostGamificationProfilesUserQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var userId = userId_example;  // string | The ID of a user.
+            var body = new UserProfilesInDateRangeRequest(); // UserProfilesInDateRangeRequest | The date range of work day.
+
+            try
+            { 
+                // Query performance profiles in date range for a user
+                UserProfilesInDateRange result = apiInstance.PostGamificationProfilesUserQuery(userId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.PostGamificationProfilesUserQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| The ID of a user. |  |
+| **body** | [**UserProfilesInDateRangeRequest**](UserProfilesInDateRangeRequest.html)| The date range of work day. |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserProfilesInDateRange**](UserProfilesInDateRange.html)
+
+<a name="postgamificationprofilesusersmequery"></a>
+
+## [**UserProfilesInDateRange**](UserProfilesInDateRange.html) PostGamificationProfilesUsersMeQuery (UserProfilesInDateRangeRequest body)
+
+
+
+Query performance profiles in date range for the current user
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostGamificationProfilesUsersMeQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var body = new UserProfilesInDateRangeRequest(); // UserProfilesInDateRangeRequest | The date range of work day.
+
+            try
+            { 
+                // Query performance profiles in date range for the current user
+                UserProfilesInDateRange result = apiInstance.PostGamificationProfilesUsersMeQuery(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.PostGamificationProfilesUsersMeQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**UserProfilesInDateRangeRequest**](UserProfilesInDateRangeRequest.html)| The date range of work day. |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserProfilesInDateRange**](UserProfilesInDateRange.html)
 
 <a name="putgamificationprofile"></a>
 

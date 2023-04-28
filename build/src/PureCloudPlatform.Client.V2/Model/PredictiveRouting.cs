@@ -22,9 +22,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="PredictiveRouting" /> class.
         /// </summary>
         /// <param name="RespectSkills">A switch used to determine if agent skills will be considered..</param>
-        public PredictiveRouting(bool? RespectSkills = null)
+        /// <param name="EnableConversationScoreBiasing">A switch used to determine if conversations are weighted by conversation score when the system attempts to assign an agent a new conversation..</param>
+        public PredictiveRouting(bool? RespectSkills = null, bool? EnableConversationScoreBiasing = null)
         {
             this.RespectSkills = RespectSkills;
+            this.EnableConversationScoreBiasing = EnableConversationScoreBiasing;
             
         }
         
@@ -38,6 +40,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? RespectSkills { get; set; }
 
 
+
+        /// <summary>
+        /// A switch used to determine if conversations are weighted by conversation score when the system attempts to assign an agent a new conversation.
+        /// </summary>
+        /// <value>A switch used to determine if conversations are weighted by conversation score when the system attempts to assign an agent a new conversation.</value>
+        [DataMember(Name="enableConversationScoreBiasing", EmitDefaultValue=false)]
+        public bool? EnableConversationScoreBiasing { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -48,6 +59,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class PredictiveRouting {\n");
 
             sb.Append("  RespectSkills: ").Append(RespectSkills).Append("\n");
+            sb.Append("  EnableConversationScoreBiasing: ").Append(EnableConversationScoreBiasing).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -92,6 +104,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RespectSkills == other.RespectSkills ||
                     this.RespectSkills != null &&
                     this.RespectSkills.Equals(other.RespectSkills)
+                ) &&
+                (
+                    this.EnableConversationScoreBiasing == other.EnableConversationScoreBiasing ||
+                    this.EnableConversationScoreBiasing != null &&
+                    this.EnableConversationScoreBiasing.Equals(other.EnableConversationScoreBiasing)
                 );
         }
 
@@ -108,6 +125,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.RespectSkills != null)
                     hash = hash * 59 + this.RespectSkills.GetHashCode();
+
+                if (this.EnableConversationScoreBiasing != null)
+                    hash = hash * 59 + this.EnableConversationScoreBiasing.GetHashCode();
 
                 return hash;
             }

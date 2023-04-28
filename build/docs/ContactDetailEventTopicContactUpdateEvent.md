@@ -25,6 +25,8 @@ title: ContactDetailEventTopicContactUpdateEvent
 | **CallbackScheduledTime** | **int?** |  | [optional] |
 | **Subject** | **string** |  | [optional] |
 | **MessageType** | **string** |  | [optional] |
+| **ConversationExternalContactIds** | **List&lt;string&gt;** |  | [optional] |
+| **ConversationExternalOrganizationIds** | **List&lt;string&gt;** |  | [optional] |
 {: class="table table-striped"}
 
 

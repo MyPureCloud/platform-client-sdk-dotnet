@@ -28,6 +28,8 @@ title: AcwDetailEventTopicAfterCallWorkEvent
 | **WrapupCode** | **string** |  | [optional] |
 | **WrapupNotes** | **string** |  | [optional] |
 | **WrapupDurationMs** | **int?** |  | [optional] |
+| **ConversationExternalContactIds** | **List&lt;string&gt;** |  | [optional] |
+| **ConversationExternalOrganizationIds** | **List&lt;string&gt;** |  | [optional] |
 {: class="table table-striped"}
 
 

@@ -11108,6 +11108,353 @@
     "return": "ExternalMetricDefinitionListing",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetEmployeeperformanceExternalmetricsDefinitionsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new GamificationApi();\n            var pageSize = 56;  // int? | Page size (optional)  (default to 25)\n            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)\n\n            try\n            { \n                // Get a list of External Metric Definitions of an organization, sorted by name in ascending order\n                ExternalMetricDefinitionListing result = apiInstance.GetEmployeeperformanceExternalmetricsDefinitions(pageSize, pageNumber);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Gamification.GetEmployeeperformanceExternalmetricsDefinitions: \" + e.Message );\n            }\n        }\n    }\n}"
   },
+  "getgamificationinsights": {
+    "operationId": "getgamificationinsights",
+    "functionName": "GetGamificationInsights",
+    "signature": "GetGamificationInsights(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday, pageSize, pageNumber, sortKey, sortMetricId, sortOrder, userIds)",
+    "parameters": [
+      {
+        "name": "filterType",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "filterId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "granularity",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "comparativePeriodStartWorkday",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "primaryPeriodStartWorkday",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "pageSize",
+        "type": "int?",
+        "required": "false"
+      },
+      {
+        "name": "pageNumber",
+        "type": "int?",
+        "required": "false"
+      },
+      {
+        "name": "sortKey",
+        "type": "string",
+        "required": "false"
+      },
+      {
+        "name": "sortMetricId",
+        "type": "string",
+        "required": "false"
+      },
+      {
+        "name": "sortOrder",
+        "type": "string",
+        "required": "false"
+      },
+      {
+        "name": "userIds",
+        "type": "string",
+        "required": "false"
+      }
+    ],
+    "return": "InsightsSummary",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetGamificationInsightsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new GamificationApi();\n            var filterType = \"filterType_example\";  // string | Filter type for the query request.\n            var filterId = \"filterId_example\";  // string | ID for the filter type.\n            var granularity = \"granularity_example\";  // string | Granularity\n            var comparativePeriodStartWorkday = new Date();  // String | The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n            var primaryPeriodStartWorkday = new Date();  // String | The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n            var pageSize = 56;  // int? | Page size (optional)  (default to 25)\n            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)\n            var sortKey = \"sortKey_example\";  // string | Sort key (optional) \n            var sortMetricId = \"sortMetricId_example\";  // string | Sort Metric Id (optional) \n            var sortOrder = \"sortOrder_example\";  // string | Sort order (optional)  (default to asc)\n            var userIds = \"userIds_example\";  // string | A list of up to 100 comma-separated user Ids (optional) \n\n            try\n            { \n                // Get insights summary\n                InsightsSummary result = apiInstance.GetGamificationInsights(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday, pageSize, pageNumber, sortKey, sortMetricId, sortOrder, userIds);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Gamification.GetGamificationInsights: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getgamificationinsightsdetails": {
+    "operationId": "getgamificationinsightsdetails",
+    "functionName": "GetGamificationInsightsDetails",
+    "signature": "GetGamificationInsightsDetails(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday)",
+    "parameters": [
+      {
+        "name": "filterType",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "filterId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "granularity",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "comparativePeriodStartWorkday",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "primaryPeriodStartWorkday",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "InsightsDetails",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetGamificationInsightsDetailsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new GamificationApi();\n            var filterType = \"filterType_example\";  // string | Filter type for the query request.\n            var filterId = \"filterId_example\";  // string | ID for the filter type.\n            var granularity = \"granularity_example\";  // string | Granularity\n            var comparativePeriodStartWorkday = new Date();  // String | The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n            var primaryPeriodStartWorkday = new Date();  // String | The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n\n            try\n            { \n                // Get insights details for the current user\n                InsightsDetails result = apiInstance.GetGamificationInsightsDetails(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Gamification.GetGamificationInsightsDetails: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getgamificationinsightsgroupstrends": {
+    "operationId": "getgamificationinsightsgroupstrends",
+    "functionName": "GetGamificationInsightsGroupsTrends",
+    "signature": "GetGamificationInsightsGroupsTrends(filterType, filterId, granularity, comparativePeriodStartWorkday, comparativePeriodEndWorkday, primaryPeriodStartWorkday, primaryPeriodEndWorkday)",
+    "parameters": [
+      {
+        "name": "filterType",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "filterId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "granularity",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "comparativePeriodStartWorkday",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "comparativePeriodEndWorkday",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "primaryPeriodStartWorkday",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "primaryPeriodEndWorkday",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "InsightsTrend",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetGamificationInsightsGroupsTrendsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new GamificationApi();\n            var filterType = \"filterType_example\";  // string | Filter type for the query request.\n            var filterId = \"filterId_example\";  // string | ID for the filter type.\n            var granularity = \"granularity_example\";  // string | Granularity\n            var comparativePeriodStartWorkday = new Date();  // String | The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n            var comparativePeriodEndWorkday = new Date();  // String | The end work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n            var primaryPeriodStartWorkday = new Date();  // String | The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n            var primaryPeriodEndWorkday = new Date();  // String | The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n\n            try\n            { \n                // Get insights overall trend for the current user\n                InsightsTrend result = apiInstance.GetGamificationInsightsGroupsTrends(filterType, filterId, granularity, comparativePeriodStartWorkday, comparativePeriodEndWorkday, primaryPeriodStartWorkday, primaryPeriodEndWorkday);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Gamification.GetGamificationInsightsGroupsTrends: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getgamificationinsightsgroupstrendsall": {
+    "operationId": "getgamificationinsightsgroupstrendsall",
+    "functionName": "GetGamificationInsightsGroupsTrendsAll",
+    "signature": "GetGamificationInsightsGroupsTrendsAll(filterType, filterId, granularity, comparativePeriodStartWorkday, comparativePeriodEndWorkday, primaryPeriodStartWorkday, primaryPeriodEndWorkday)",
+    "parameters": [
+      {
+        "name": "filterType",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "filterId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "granularity",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "comparativePeriodStartWorkday",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "comparativePeriodEndWorkday",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "primaryPeriodStartWorkday",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "primaryPeriodEndWorkday",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "InsightsTrend",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetGamificationInsightsGroupsTrendsAllExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new GamificationApi();\n            var filterType = \"filterType_example\";  // string | Filter type for the query request.\n            var filterId = \"filterId_example\";  // string | ID for the filter type.\n            var granularity = \"granularity_example\";  // string | Granularity\n            var comparativePeriodStartWorkday = new Date();  // String | The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n            var comparativePeriodEndWorkday = new Date();  // String | The end work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n            var primaryPeriodStartWorkday = new Date();  // String | The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n            var primaryPeriodEndWorkday = new Date();  // String | The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n\n            try\n            { \n                // Get insights overall trend\n                InsightsTrend result = apiInstance.GetGamificationInsightsGroupsTrendsAll(filterType, filterId, granularity, comparativePeriodStartWorkday, comparativePeriodEndWorkday, primaryPeriodStartWorkday, primaryPeriodEndWorkday);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Gamification.GetGamificationInsightsGroupsTrendsAll: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getgamificationinsightsmembers": {
+    "operationId": "getgamificationinsightsmembers",
+    "functionName": "GetGamificationInsightsMembers",
+    "signature": "GetGamificationInsightsMembers(filterType, filterId, granularity, startWorkday)",
+    "parameters": [
+      {
+        "name": "filterType",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "filterId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "granularity",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "startWorkday",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "InsightsAgents",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetGamificationInsightsMembersExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new GamificationApi();\n            var filterType = \"filterType_example\";  // string | Filter type for the query request.\n            var filterId = \"filterId_example\";  // string | ID for the filter type.\n            var granularity = \"granularity_example\";  // string | Granularity\n            var startWorkday = new Date();  // String | The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n\n            try\n            { \n                // Query users in a profile during a period of time\n                InsightsAgents result = apiInstance.GetGamificationInsightsMembers(filterType, filterId, granularity, startWorkday);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Gamification.GetGamificationInsightsMembers: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getgamificationinsightstrends": {
+    "operationId": "getgamificationinsightstrends",
+    "functionName": "GetGamificationInsightsTrends",
+    "signature": "GetGamificationInsightsTrends(filterType, filterId, granularity, comparativePeriodStartWorkday, comparativePeriodEndWorkday, primaryPeriodStartWorkday, primaryPeriodEndWorkday)",
+    "parameters": [
+      {
+        "name": "filterType",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "filterId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "granularity",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "comparativePeriodStartWorkday",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "comparativePeriodEndWorkday",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "primaryPeriodStartWorkday",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "primaryPeriodEndWorkday",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "UserInsightsTrend",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetGamificationInsightsTrendsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new GamificationApi();\n            var filterType = \"filterType_example\";  // string | Filter type for the query request.\n            var filterId = \"filterId_example\";  // string | ID for the filter type.\n            var granularity = \"granularity_example\";  // string | Granularity\n            var comparativePeriodStartWorkday = new Date();  // String | The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n            var comparativePeriodEndWorkday = new Date();  // String | The end work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n            var primaryPeriodStartWorkday = new Date();  // String | The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n            var primaryPeriodEndWorkday = new Date();  // String | The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n\n            try\n            { \n                // Get insights user trend for the current user\n                UserInsightsTrend result = apiInstance.GetGamificationInsightsTrends(filterType, filterId, granularity, comparativePeriodStartWorkday, comparativePeriodEndWorkday, primaryPeriodStartWorkday, primaryPeriodEndWorkday);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Gamification.GetGamificationInsightsTrends: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getgamificationinsightsuserdetails": {
+    "operationId": "getgamificationinsightsuserdetails",
+    "functionName": "GetGamificationInsightsUserDetails",
+    "signature": "GetGamificationInsightsUserDetails(userId, filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday)",
+    "parameters": [
+      {
+        "name": "userId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "filterType",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "filterId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "granularity",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "comparativePeriodStartWorkday",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "primaryPeriodStartWorkday",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "InsightsDetails",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetGamificationInsightsUserDetailsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new GamificationApi();\n            var userId = \"userId_example\";  // string | The ID of a user.\n            var filterType = \"filterType_example\";  // string | Filter type for the query request.\n            var filterId = \"filterId_example\";  // string | ID for the filter type.\n            var granularity = \"granularity_example\";  // string | Granularity\n            var comparativePeriodStartWorkday = new Date();  // String | The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n            var primaryPeriodStartWorkday = new Date();  // String | The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n\n            try\n            { \n                // Get insights details for the user\n                InsightsDetails result = apiInstance.GetGamificationInsightsUserDetails(userId, filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Gamification.GetGamificationInsightsUserDetails: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "getgamificationinsightsusertrends": {
+    "operationId": "getgamificationinsightsusertrends",
+    "functionName": "GetGamificationInsightsUserTrends",
+    "signature": "GetGamificationInsightsUserTrends(userId, filterType, filterId, granularity, comparativePeriodStartWorkday, comparativePeriodEndWorkday, primaryPeriodStartWorkday, primaryPeriodEndWorkday)",
+    "parameters": [
+      {
+        "name": "userId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "filterType",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "filterId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "granularity",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "comparativePeriodStartWorkday",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "comparativePeriodEndWorkday",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "primaryPeriodStartWorkday",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "primaryPeriodEndWorkday",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "UserInsightsTrend",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetGamificationInsightsUserTrendsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new GamificationApi();\n            var userId = \"userId_example\";  // string | The ID of a user.\n            var filterType = \"filterType_example\";  // string | Filter type for the query request.\n            var filterId = \"filterId_example\";  // string | ID for the filter type.\n            var granularity = \"granularity_example\";  // string | Granularity\n            var comparativePeriodStartWorkday = new Date();  // String | The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n            var comparativePeriodEndWorkday = new Date();  // String | The end work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n            var primaryPeriodStartWorkday = new Date();  // String | The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n            var primaryPeriodEndWorkday = new Date();  // String | The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n\n            try\n            { \n                // Get insights user trend for the user\n                UserInsightsTrend result = apiInstance.GetGamificationInsightsUserTrends(userId, filterType, filterId, granularity, comparativePeriodStartWorkday, comparativePeriodEndWorkday, primaryPeriodStartWorkday, primaryPeriodEndWorkday);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Gamification.GetGamificationInsightsUserTrends: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
   "getgamificationleaderboard": {
     "operationId": "getgamificationleaderboard",
     "functionName": "GetGamificationLeaderboard",
@@ -12068,6 +12415,39 @@
     ],
     "return": "PerformanceProfile",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostGamificationProfilesExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new GamificationApi();\n            var body = new CreatePerformanceProfile(); // CreatePerformanceProfile | performanceProfile\n            var copyMetrics = true;  // bool? | Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile. (optional)  (default to true)\n\n            try\n            { \n                // Create a new custom performance profile\n                PerformanceProfile result = apiInstance.PostGamificationProfiles(body, copyMetrics);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Gamification.PostGamificationProfiles: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "postgamificationprofilesuserquery": {
+    "operationId": "postgamificationprofilesuserquery",
+    "functionName": "PostGamificationProfilesUserQuery",
+    "signature": "PostGamificationProfilesUserQuery(userId, body)",
+    "parameters": [
+      {
+        "name": "userId",
+        "type": "string",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "UserProfilesInDateRangeRequest",
+        "required": "true"
+      }
+    ],
+    "return": "UserProfilesInDateRange",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostGamificationProfilesUserQueryExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new GamificationApi();\n            var userId = \"userId_example\";  // string | The ID of a user.\n            var body = new UserProfilesInDateRangeRequest(); // UserProfilesInDateRangeRequest | The date range of work day.\n\n            try\n            { \n                // Query performance profiles in date range for a user\n                UserProfilesInDateRange result = apiInstance.PostGamificationProfilesUserQuery(userId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Gamification.PostGamificationProfilesUserQuery: \" + e.Message );\n            }\n        }\n    }\n}"
+  },
+  "postgamificationprofilesusersmequery": {
+    "operationId": "postgamificationprofilesusersmequery",
+    "functionName": "PostGamificationProfilesUsersMeQuery",
+    "signature": "PostGamificationProfilesUsersMeQuery(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "UserProfilesInDateRangeRequest",
+        "required": "true"
+      }
+    ],
+    "return": "UserProfilesInDateRange",
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostGamificationProfilesUsersMeQueryExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new GamificationApi();\n            var body = new UserProfilesInDateRangeRequest(); // UserProfilesInDateRangeRequest | The date range of work day.\n\n            try\n            { \n                // Query performance profiles in date range for the current user\n                UserProfilesInDateRange result = apiInstance.PostGamificationProfilesUsersMeQuery(body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Gamification.PostGamificationProfilesUsersMeQuery: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "putgamificationprofile": {
     "operationId": "putgamificationprofile",
@@ -26912,16 +27292,21 @@
   "getroutingpredictorskeyperformanceindicators": {
     "operationId": "getroutingpredictorskeyperformanceindicators",
     "functionName": "GetRoutingPredictorsKeyperformanceindicators",
-    "signature": "GetRoutingPredictorsKeyperformanceindicators(kpiGroup)",
+    "signature": "GetRoutingPredictorsKeyperformanceindicators(kpiGroup, expand)",
     "parameters": [
       {
         "name": "kpiGroup",
         "type": "string",
         "required": "false"
+      },
+      {
+        "name": "expand",
+        "type": "List<string>",
+        "required": "false"
       }
     ],
     "return": "List<KeyPerformanceIndicator>",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetRoutingPredictorsKeyperformanceindicatorsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new RoutingApi();\n            var kpiGroup = \"kpiGroup_example\";  // string | The Group of Key Performance Indicators to return (optional) \n\n            try\n            { \n                // Get a list of Key Performance Indicators\n                List<KeyPerformanceIndicator> result = apiInstance.GetRoutingPredictorsKeyperformanceindicators(kpiGroup);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Routing.GetRoutingPredictorsKeyperformanceindicators: \" + e.Message );\n            }\n        }\n    }\n}"
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class GetRoutingPredictorsKeyperformanceindicatorsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new RoutingApi();\n            var kpiGroup = \"kpiGroup_example\";  // string | The Group of Key Performance Indicators to return (optional) \n            var expand = new List<string>(); // List<string> | Parameter to request additional data to return in KPI payload (optional) \n\n            try\n            { \n                // Get a list of Key Performance Indicators\n                List<KeyPerformanceIndicator> result = apiInstance.GetRoutingPredictorsKeyperformanceindicators(kpiGroup, expand);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling Routing.GetRoutingPredictorsKeyperformanceindicators: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "getroutingqueue": {
     "operationId": "getroutingqueue",
@@ -30958,19 +31343,6 @@
     ],
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class DeleteTelephonyProvidersEdgesExtensionpoolExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new TelephonyProvidersEdgeApi();\n            var extensionPoolId = \"extensionPoolId_example\";  // string | Extension pool ID\n\n            try\n            { \n                // Delete an extension pool by ID\n                apiInstance.DeleteTelephonyProvidersEdgesExtensionpool(extensionPoolId);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling TelephonyProvidersEdge.DeleteTelephonyProvidersEdgesExtensionpool: \" + e.Message );\n            }\n        }\n    }\n}"
   },
-  "deletetelephonyprovidersedgesoutboundroute": {
-    "operationId": "deletetelephonyprovidersedgesoutboundroute",
-    "functionName": "DeleteTelephonyProvidersEdgesOutboundroute",
-    "signature": "DeleteTelephonyProvidersEdgesOutboundroute(outboundRouteId)",
-    "parameters": [
-      {
-        "name": "outboundRouteId",
-        "type": "string",
-        "required": "true"
-      }
-    ],
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class DeleteTelephonyProvidersEdgesOutboundrouteExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new TelephonyProvidersEdgeApi();\n            var outboundRouteId = \"outboundRouteId_example\";  // string | Outbound route ID\n\n            try\n            { \n                // Delete Outbound Route\n                apiInstance.DeleteTelephonyProvidersEdgesOutboundroute(outboundRouteId);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling TelephonyProvidersEdge.DeleteTelephonyProvidersEdgesOutboundroute: \" + e.Message );\n            }\n        }\n    }\n}"
-  },
   "deletetelephonyprovidersedgesphone": {
     "operationId": "deletetelephonyprovidersedgesphone",
     "functionName": "DeleteTelephonyProvidersEdgesPhone",
@@ -32818,20 +33190,6 @@
     "return": "ExtensionPool",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostTelephonyProvidersEdgesExtensionpoolsExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new TelephonyProvidersEdgeApi();\n            var body = new ExtensionPool(); // ExtensionPool | ExtensionPool\n\n            try\n            { \n                // Create a new extension pool\n                ExtensionPool result = apiInstance.PostTelephonyProvidersEdgesExtensionpools(body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling TelephonyProvidersEdge.PostTelephonyProvidersEdgesExtensionpools: \" + e.Message );\n            }\n        }\n    }\n}"
   },
-  "posttelephonyprovidersedgesoutboundroutes": {
-    "operationId": "posttelephonyprovidersedgesoutboundroutes",
-    "functionName": "PostTelephonyProvidersEdgesOutboundroutes",
-    "signature": "PostTelephonyProvidersEdgesOutboundroutes(body)",
-    "parameters": [
-      {
-        "name": "body",
-        "type": "OutboundRoute",
-        "required": "true"
-      }
-    ],
-    "return": "OutboundRoute",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostTelephonyProvidersEdgesOutboundroutesExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new TelephonyProvidersEdgeApi();\n            var body = new OutboundRoute(); // OutboundRoute | OutboundRoute\n\n            try\n            { \n                // Create outbound rule\n                OutboundRoute result = apiInstance.PostTelephonyProvidersEdgesOutboundroutes(body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling TelephonyProvidersEdge.PostTelephonyProvidersEdgesOutboundroutes: \" + e.Message );\n            }\n        }\n    }\n}"
-  },
   "posttelephonyprovidersedgesphonereboot": {
     "operationId": "posttelephonyprovidersedgesphonereboot",
     "functionName": "PostTelephonyProvidersEdgesPhoneReboot",
@@ -33075,25 +33433,6 @@
     ],
     "return": "ExtensionPool",
     "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PutTelephonyProvidersEdgesExtensionpoolExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new TelephonyProvidersEdgeApi();\n            var extensionPoolId = \"extensionPoolId_example\";  // string | Extension pool ID\n            var body = new ExtensionPool(); // ExtensionPool | ExtensionPool\n\n            try\n            { \n                // Update an extension pool by ID\n                ExtensionPool result = apiInstance.PutTelephonyProvidersEdgesExtensionpool(extensionPoolId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling TelephonyProvidersEdge.PutTelephonyProvidersEdgesExtensionpool: \" + e.Message );\n            }\n        }\n    }\n}"
-  },
-  "puttelephonyprovidersedgesoutboundroute": {
-    "operationId": "puttelephonyprovidersedgesoutboundroute",
-    "functionName": "PutTelephonyProvidersEdgesOutboundroute",
-    "signature": "PutTelephonyProvidersEdgesOutboundroute(outboundRouteId, body)",
-    "parameters": [
-      {
-        "name": "outboundRouteId",
-        "type": "string",
-        "required": "true"
-      },
-      {
-        "name": "body",
-        "type": "OutboundRoute",
-        "required": "true"
-      }
-    ],
-    "return": "OutboundRoute",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PutTelephonyProvidersEdgesOutboundrouteExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new TelephonyProvidersEdgeApi();\n            var outboundRouteId = \"outboundRouteId_example\";  // string | Outbound route ID\n            var body = new OutboundRoute(); // OutboundRoute | OutboundRoute\n\n            try\n            { \n                // Update outbound route\n                OutboundRoute result = apiInstance.PutTelephonyProvidersEdgesOutboundroute(outboundRouteId, body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling TelephonyProvidersEdge.PutTelephonyProvidersEdgesOutboundroute: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "puttelephonyprovidersedgesphone": {
     "operationId": "puttelephonyprovidersedgesphone",
@@ -37381,7 +37720,7 @@
       }
     ],
     "return": "WfmHistoricalAdherenceResponse",
-    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostWorkforcemanagementAdherenceHistoricalExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new WorkforceManagementApi();\n            var body = new WfmHistoricalAdherenceQueryForUsers(); // WfmHistoricalAdherenceQueryForUsers | body (optional) \n\n            try\n            { \n                // Request a historical adherence report for users across management units\n                WfmHistoricalAdherenceResponse result = apiInstance.PostWorkforcemanagementAdherenceHistorical(body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WorkforceManagement.PostWorkforcemanagementAdherenceHistorical: \" + e.Message );\n            }\n        }\n    }\n}"
+    "example": "using System;\nusing System.Diagnostics;\nusing PureCloudPlatform.Client.V2.Api;\nusing PureCloudPlatform.Client.V2.Client;\nusing PureCloudPlatform.Client.V2.Model;\nusing PureCloudPlatform.Client.V2.Extensions;\n\nnamespace Example\n{\n    public class PostWorkforcemanagementAdherenceHistoricalExample\n    {\n        static void Main(string[] args)\n        {   \n            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region\n            Configuration.Default.ApiClient.setBasePath(region);\n            \n            // Configure OAuth2 access token for authorization: PureCloud OAuth\n            // The following example is using the Client Credentials Grant\n            var accessTokenInfo = Configuration.Default.ApiClient.PostToken(\"18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6\", \"M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo\");\n\n            var apiInstance = new WorkforceManagementApi();\n            var body = new WfmHistoricalAdherenceQueryForUsers(); // WfmHistoricalAdherenceQueryForUsers | body (optional) \n\n            try\n            { \n                // Deprecated. Use bulk routes instead (/adherence/historical/bulk)\n                WfmHistoricalAdherenceResponse result = apiInstance.PostWorkforcemanagementAdherenceHistorical(body);\n                Debug.WriteLine(result);\n            }\n            catch (Exception e)\n            {\n                Debug.Print(\"Exception when calling WorkforceManagement.PostWorkforcemanagementAdherenceHistorical: \" + e.Message );\n            }\n        }\n    }\n}"
   },
   "postworkforcemanagementadherencehistoricalbulk": {
     "operationId": "postworkforcemanagementadherencehistoricalbulk",

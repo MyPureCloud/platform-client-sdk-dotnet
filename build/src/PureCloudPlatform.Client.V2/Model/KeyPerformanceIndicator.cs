@@ -297,6 +297,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Queue IDs on which KPI specification is used.
+        /// </summary>
+        /// <value>Queue IDs on which KPI specification is used.</value>
+        [DataMember(Name="queues", EmitDefaultValue=false)]
+        public List<string> Queues { get; private set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -325,6 +334,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  OutcomeConfig: ").Append(OutcomeConfig).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  KpiGroup: ").Append(KpiGroup).Append("\n");
+            sb.Append("  Queues: ").Append(Queues).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -427,6 +437,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.KpiGroup.Equals(other.KpiGroup)
                 ) &&
                 (
+                    this.Queues == other.Queues ||
+                    this.Queues != null &&
+                    this.Queues.SequenceEqual(other.Queues)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -479,6 +494,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.KpiGroup != null)
                     hash = hash * 59 + this.KpiGroup.GetHashCode();
+
+                if (this.Queues != null)
+                    hash = hash * 59 + this.Queues.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

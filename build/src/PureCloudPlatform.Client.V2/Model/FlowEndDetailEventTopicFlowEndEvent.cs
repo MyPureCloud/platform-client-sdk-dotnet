@@ -471,7 +471,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DivisionId">DivisionId.</param>
         /// <param name="FlowVersion">FlowVersion.</param>
         /// <param name="ConnectedDurationMs">ConnectedDurationMs.</param>
-        public FlowEndDetailEventTopicFlowEndEvent(int? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, DisconnectTypeEnum? DisconnectType = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string Subject = null, MessageTypeEnum? MessageType = null, FlowTypeEnum? FlowType = null, string FlowId = null, string DivisionId = null, string FlowVersion = null, int? ConnectedDurationMs = null)
+        /// <param name="ConversationExternalContactIds">ConversationExternalContactIds.</param>
+        /// <param name="ConversationExternalOrganizationIds">ConversationExternalOrganizationIds.</param>
+        public FlowEndDetailEventTopicFlowEndEvent(int? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, DisconnectTypeEnum? DisconnectType = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string Subject = null, MessageTypeEnum? MessageType = null, FlowTypeEnum? FlowType = null, string FlowId = null, string DivisionId = null, string FlowVersion = null, int? ConnectedDurationMs = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null)
         {
             this.EventTime = EventTime;
             this.ConversationId = ConversationId;
@@ -492,6 +494,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DivisionId = DivisionId;
             this.FlowVersion = FlowVersion;
             this.ConnectedDurationMs = ConnectedDurationMs;
+            this.ConversationExternalContactIds = ConversationExternalContactIds;
+            this.ConversationExternalOrganizationIds = ConversationExternalOrganizationIds;
             
         }
         
@@ -618,6 +622,22 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? ConnectedDurationMs { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets ConversationExternalContactIds
+        /// </summary>
+        [DataMember(Name="conversationExternalContactIds", EmitDefaultValue=false)]
+        public List<string> ConversationExternalContactIds { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets ConversationExternalOrganizationIds
+        /// </summary>
+        [DataMember(Name="conversationExternalOrganizationIds", EmitDefaultValue=false)]
+        public List<string> ConversationExternalOrganizationIds { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -646,6 +666,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DivisionId: ").Append(DivisionId).Append("\n");
             sb.Append("  FlowVersion: ").Append(FlowVersion).Append("\n");
             sb.Append("  ConnectedDurationMs: ").Append(ConnectedDurationMs).Append("\n");
+            sb.Append("  ConversationExternalContactIds: ").Append(ConversationExternalContactIds).Append("\n");
+            sb.Append("  ConversationExternalOrganizationIds: ").Append(ConversationExternalOrganizationIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -780,6 +802,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ConnectedDurationMs == other.ConnectedDurationMs ||
                     this.ConnectedDurationMs != null &&
                     this.ConnectedDurationMs.Equals(other.ConnectedDurationMs)
+                ) &&
+                (
+                    this.ConversationExternalContactIds == other.ConversationExternalContactIds ||
+                    this.ConversationExternalContactIds != null &&
+                    this.ConversationExternalContactIds.SequenceEqual(other.ConversationExternalContactIds)
+                ) &&
+                (
+                    this.ConversationExternalOrganizationIds == other.ConversationExternalOrganizationIds ||
+                    this.ConversationExternalOrganizationIds != null &&
+                    this.ConversationExternalOrganizationIds.SequenceEqual(other.ConversationExternalOrganizationIds)
                 );
         }
 
@@ -850,6 +882,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ConnectedDurationMs != null)
                     hash = hash * 59 + this.ConnectedDurationMs.GetHashCode();
+
+                if (this.ConversationExternalContactIds != null)
+                    hash = hash * 59 + this.ConversationExternalContactIds.GetHashCode();
+
+                if (this.ConversationExternalOrganizationIds != null)
+                    hash = hash * 59 + this.ConversationExternalOrganizationIds.GetHashCode();
 
                 return hash;
             }

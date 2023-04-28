@@ -291,6 +291,12 @@ namespace PureCloudPlatform.Client.V2.Model
             DigitalRuleUpdatedContactAddress,
             
             /// <summary>
+            /// Enum DigitalRuleSmsPhoneNumberTypeMismatch for "DIGITAL_RULE_SMS_PHONE_NUMBER_TYPE_MISMATCH"
+            /// </summary>
+            [EnumMember(Value = "DIGITAL_RULE_SMS_PHONE_NUMBER_TYPE_MISMATCH")]
+            DigitalRuleSmsPhoneNumberTypeMismatch,
+            
+            /// <summary>
             /// Enum DncAuthenticationFailure for "DNC_AUTHENTICATION_FAILURE"
             /// </summary>
             [EnumMember(Value = "DNC_AUTHENTICATION_FAILURE")]

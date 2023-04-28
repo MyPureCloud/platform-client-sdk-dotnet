@@ -156,15 +156,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? IncludeDraftDocuments { get; set; }
 
 
-
-        /// <summary>
-        /// The app where the session is started.
-        /// </summary>
-        /// <value>The app where the session is started.</value>
-        [DataMember(Name="app", EmitDefaultValue=false)]
-        public KnowledgeGuestSessionApp App { get; private set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -183,7 +174,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  QueryType: ").Append(QueryType).Append("\n");
             sb.Append("  SessionId: ").Append(SessionId).Append("\n");
             sb.Append("  IncludeDraftDocuments: ").Append(IncludeDraftDocuments).Append("\n");
-            sb.Append("  App: ").Append(App).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -268,11 +258,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.IncludeDraftDocuments == other.IncludeDraftDocuments ||
                     this.IncludeDraftDocuments != null &&
                     this.IncludeDraftDocuments.Equals(other.IncludeDraftDocuments)
-                ) &&
-                (
-                    this.App == other.App ||
-                    this.App != null &&
-                    this.App.Equals(other.App)
                 );
         }
 
@@ -313,9 +298,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.IncludeDraftDocuments != null)
                     hash = hash * 59 + this.IncludeDraftDocuments.GetHashCode();
-
-                if (this.App != null)
-                    hash = hash * 59 + this.App.GetHashCode();
 
                 return hash;
             }

@@ -79,7 +79,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LineId">LineId.</param>
         /// <param name="WhatsAppId">WhatsAppId.</param>
         /// <param name="FacebookId">FacebookId.</param>
-        public ExternalContactsContactChangedTopicContact(string Id = null, TypeEnum? Type = null, string FirstName = null, string MiddleName = null, string LastName = null, string Salutation = null, string Title = null, ExternalContactsContactChangedTopicPhoneNumber WorkPhone = null, ExternalContactsContactChangedTopicPhoneNumber CellPhone = null, ExternalContactsContactChangedTopicPhoneNumber HomePhone = null, ExternalContactsContactChangedTopicPhoneNumber OtherPhone = null, string WorkEmail = null, string PersonalEmail = null, string OtherEmail = null, ExternalContactsContactChangedTopicContactAddress Address = null, bool? SurveyOptOut = null, string ExternalSystemUrl = null, ExternalContactsContactChangedTopicTwitterId TwitterId = null, ExternalContactsContactChangedTopicLineId LineId = null, ExternalContactsContactChangedTopicWhatsAppId WhatsAppId = null, ExternalContactsContactChangedTopicFacebookId FacebookId = null)
+        /// <param name="InstagramId">InstagramId.</param>
+        public ExternalContactsContactChangedTopicContact(string Id = null, TypeEnum? Type = null, string FirstName = null, string MiddleName = null, string LastName = null, string Salutation = null, string Title = null, ExternalContactsContactChangedTopicPhoneNumber WorkPhone = null, ExternalContactsContactChangedTopicPhoneNumber CellPhone = null, ExternalContactsContactChangedTopicPhoneNumber HomePhone = null, ExternalContactsContactChangedTopicPhoneNumber OtherPhone = null, string WorkEmail = null, string PersonalEmail = null, string OtherEmail = null, ExternalContactsContactChangedTopicContactAddress Address = null, bool? SurveyOptOut = null, string ExternalSystemUrl = null, ExternalContactsContactChangedTopicTwitterId TwitterId = null, ExternalContactsContactChangedTopicLineId LineId = null, ExternalContactsContactChangedTopicWhatsAppId WhatsAppId = null, ExternalContactsContactChangedTopicFacebookId FacebookId = null, ExternalContactsContactChangedTopicInstagramId InstagramId = null)
         {
             this.Id = Id;
             this.Type = Type;
@@ -102,6 +103,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.LineId = LineId;
             this.WhatsAppId = WhatsAppId;
             this.FacebookId = FacebookId;
+            this.InstagramId = InstagramId;
             
         }
         
@@ -268,6 +270,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public ExternalContactsContactChangedTopicFacebookId FacebookId { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets InstagramId
+        /// </summary>
+        [DataMember(Name="instagramId", EmitDefaultValue=false)]
+        public ExternalContactsContactChangedTopicInstagramId InstagramId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -298,6 +308,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  LineId: ").Append(LineId).Append("\n");
             sb.Append("  WhatsAppId: ").Append(WhatsAppId).Append("\n");
             sb.Append("  FacebookId: ").Append(FacebookId).Append("\n");
+            sb.Append("  InstagramId: ").Append(InstagramId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -442,6 +453,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FacebookId == other.FacebookId ||
                     this.FacebookId != null &&
                     this.FacebookId.Equals(other.FacebookId)
+                ) &&
+                (
+                    this.InstagramId == other.InstagramId ||
+                    this.InstagramId != null &&
+                    this.InstagramId.Equals(other.InstagramId)
                 );
         }
 
@@ -518,6 +534,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.FacebookId != null)
                     hash = hash * 59 + this.FacebookId.GetHashCode();
+
+                if (this.InstagramId != null)
+                    hash = hash * 59 + this.InstagramId.GetHashCode();
 
                 return hash;
             }

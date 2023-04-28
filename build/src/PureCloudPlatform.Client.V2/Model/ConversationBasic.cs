@@ -32,13 +32,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StartTime">The time when the conversation started. This will be the time when the first participant joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
         /// <param name="EndTime">The time when the conversation ended. This will be the time when the last participant left the conversation, or null when the conversation is still active. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Divisions">Identifiers of divisions associated with this conversation.</param>
-        public ConversationBasic(string Name = null, string ExternalTag = null, DateTime? StartTime = null, DateTime? EndTime = null, List<ConversationDivisionMembership> Divisions = null)
+        /// <param name="SecurePause">True when the recording of this conversation is in secure pause status..</param>
+        public ConversationBasic(string Name = null, string ExternalTag = null, DateTime? StartTime = null, DateTime? EndTime = null, List<ConversationDivisionMembership> Divisions = null, bool? SecurePause = null)
         {
             this.Name = Name;
             this.ExternalTag = ExternalTag;
             this.StartTime = StartTime;
             this.EndTime = EndTime;
             this.Divisions = Divisions;
+            this.SecurePause = SecurePause;
             
         }
         
@@ -98,6 +100,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// True when the recording of this conversation is in secure pause status.
+        /// </summary>
+        /// <value>True when the recording of this conversation is in secure pause status.</value>
+        [DataMember(Name="securePause", EmitDefaultValue=false)]
+        public bool? SecurePause { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -128,6 +139,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
             sb.Append("  Divisions: ").Append(Divisions).Append("\n");
+            sb.Append("  SecurePause: ").Append(SecurePause).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  Participants: ").Append(Participants).Append("\n");
             sb.Append("}\n");
@@ -201,6 +213,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Divisions.SequenceEqual(other.Divisions)
                 ) &&
                 (
+                    this.SecurePause == other.SecurePause ||
+                    this.SecurePause != null &&
+                    this.SecurePause.Equals(other.SecurePause)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -240,6 +257,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Divisions != null)
                     hash = hash * 59 + this.Divisions.GetHashCode();
+
+                if (this.SecurePause != null)
+                    hash = hash * 59 + this.SecurePause.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

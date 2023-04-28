@@ -11,6 +11,8 @@ title: AttributeDetailEventTopicAttributeUpdateEvent
 | **ConversationId** | **string** |  | [optional] |
 | **ParticipantId** | **string** |  | [optional] |
 | **Attributes** | **Dictionary&lt;string, string&gt;** |  | [optional] |
+| **ConversationExternalContactIds** | **List&lt;string&gt;** |  | [optional] |
+| **ConversationExternalOrganizationIds** | **List&lt;string&gt;** |  | [optional] |
 {: class="table table-striped"}
 
 

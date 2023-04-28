@@ -27,7 +27,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationContentNotificationTemplate" /> class.
         /// </summary>
-        /// <param name="Id">The messaging provider template ID. For WhatsApp, 'namespace@name'..</param>
+        /// <param name="Id">The identifier of the message template in 'your-namespace@your-template-id/name' format. For External vendor (e.g WhatsApp), 'your-namespace@your-template-name'. For GenesysCloud canned response message template use 'cannedresponse' as your-namespace and use response ID as your-template-id (e.g. response ID=1234 then 'cannedresponse@1234').</param>
         /// <param name="Language">Template language..</param>
         /// <param name="Header">The template header..</param>
         /// <param name="Body">The template body. (required).</param>
@@ -45,9 +45,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The messaging provider template ID. For WhatsApp, 'namespace@name'.
+        /// The identifier of the message template in 'your-namespace@your-template-id/name' format. For External vendor (e.g WhatsApp), 'your-namespace@your-template-name'. For GenesysCloud canned response message template use 'cannedresponse' as your-namespace and use response ID as your-template-id (e.g. response ID=1234 then 'cannedresponse@1234')
         /// </summary>
-        /// <value>The messaging provider template ID. For WhatsApp, 'namespace@name'.</value>
+        /// <value>The identifier of the message template in 'your-namespace@your-template-id/name' format. For External vendor (e.g WhatsApp), 'your-namespace@your-template-name'. For GenesysCloud canned response message template use 'cannedresponse' as your-namespace and use response ID as your-template-id (e.g. response ID=1234 then 'cannedresponse@1234')</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
 

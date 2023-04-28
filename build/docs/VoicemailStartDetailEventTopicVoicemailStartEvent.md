@@ -19,6 +19,8 @@ title: VoicemailStartDetailEventTopicVoicemailStartEvent
 | **UserId** | **string** |  | [optional] |
 | **QueueId** | **string** |  | [optional] |
 | **DivisionId** | **string** |  | [optional] |
+| **ConversationExternalContactIds** | **List&lt;string&gt;** |  | [optional] |
+| **ConversationExternalOrganizationIds** | **List&lt;string&gt;** |  | [optional] |
 {: class="table table-striped"}
 
 

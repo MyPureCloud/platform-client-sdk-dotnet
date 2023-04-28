@@ -14,7 +14,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteTelephonyProvidersEdgesDidpool**](TelephonyProvidersEdgeApi.html#deletetelephonyprovidersedgesdidpool) | **DELETE** /api/v2/telephony/providers/edges/didpools/{didPoolId} | Delete a DID Pool by ID. |
 | [**DeleteTelephonyProvidersEdgesEdgegroup**](TelephonyProvidersEdgeApi.html#deletetelephonyprovidersedgesedgegroup) | **DELETE** /api/v2/telephony/providers/edges/edgegroups/{edgeGroupId} | Delete an edge group. |
 | [**DeleteTelephonyProvidersEdgesExtensionpool**](TelephonyProvidersEdgeApi.html#deletetelephonyprovidersedgesextensionpool) | **DELETE** /api/v2/telephony/providers/edges/extensionpools/{extensionPoolId} | Delete an extension pool by ID |
-| [**DeleteTelephonyProvidersEdgesOutboundroute**](TelephonyProvidersEdgeApi.html#deletetelephonyprovidersedgesoutboundroute) | **DELETE** /api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId} | Delete Outbound Route |
 | [**DeleteTelephonyProvidersEdgesPhone**](TelephonyProvidersEdgeApi.html#deletetelephonyprovidersedgesphone) | **DELETE** /api/v2/telephony/providers/edges/phones/{phoneId} | Delete a Phone by ID |
 | [**DeleteTelephonyProvidersEdgesPhonebasesetting**](TelephonyProvidersEdgeApi.html#deletetelephonyprovidersedgesphonebasesetting) | **DELETE** /api/v2/telephony/providers/edges/phonebasesettings/{phoneBaseId} | Delete a Phone Base Settings by ID |
 | [**DeleteTelephonyProvidersEdgesSite**](TelephonyProvidersEdgeApi.html#deletetelephonyprovidersedgessite) | **DELETE** /api/v2/telephony/providers/edges/sites/{siteId} | Delete a Site by ID |
@@ -104,7 +103,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostTelephonyProvidersEdgesDidpools**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgesdidpools) | **POST** /api/v2/telephony/providers/edges/didpools | Create a new DID pool |
 | [**PostTelephonyProvidersEdgesEdgegroups**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgesedgegroups) | **POST** /api/v2/telephony/providers/edges/edgegroups | Create an edge group. |
 | [**PostTelephonyProvidersEdgesExtensionpools**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgesextensionpools) | **POST** /api/v2/telephony/providers/edges/extensionpools | Create a new extension pool |
-| [**PostTelephonyProvidersEdgesOutboundroutes**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgesoutboundroutes) | **POST** /api/v2/telephony/providers/edges/outboundroutes | Create outbound rule |
 | [**PostTelephonyProvidersEdgesPhoneReboot**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgesphonereboot) | **POST** /api/v2/telephony/providers/edges/phones/{phoneId}/reboot | Reboot a Phone |
 | [**PostTelephonyProvidersEdgesPhonebasesettings**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgesphonebasesettings) | **POST** /api/v2/telephony/providers/edges/phonebasesettings | Create a new Phone Base Settings object |
 | [**PostTelephonyProvidersEdgesPhones**](TelephonyProvidersEdgeApi.html#posttelephonyprovidersedgesphones) | **POST** /api/v2/telephony/providers/edges/phones | Create a new Phone |
@@ -119,7 +117,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutTelephonyProvidersEdgesEdgegroup**](TelephonyProvidersEdgeApi.html#puttelephonyprovidersedgesedgegroup) | **PUT** /api/v2/telephony/providers/edges/edgegroups/{edgeGroupId} | Update an edge group. |
 | [**PutTelephonyProvidersEdgesEdgegroupEdgetrunkbase**](TelephonyProvidersEdgeApi.html#puttelephonyprovidersedgesedgegroupedgetrunkbase) | **PUT** /api/v2/telephony/providers/edges/edgegroups/{edgegroupId}/edgetrunkbases/{edgetrunkbaseId} | Update the edge trunk base associated with the edge group |
 | [**PutTelephonyProvidersEdgesExtensionpool**](TelephonyProvidersEdgeApi.html#puttelephonyprovidersedgesextensionpool) | **PUT** /api/v2/telephony/providers/edges/extensionpools/{extensionPoolId} | Update an extension pool by ID |
-| [**PutTelephonyProvidersEdgesOutboundroute**](TelephonyProvidersEdgeApi.html#puttelephonyprovidersedgesoutboundroute) | **PUT** /api/v2/telephony/providers/edges/outboundroutes/{outboundRouteId} | Update outbound route |
 | [**PutTelephonyProvidersEdgesPhone**](TelephonyProvidersEdgeApi.html#puttelephonyprovidersedgesphone) | **PUT** /api/v2/telephony/providers/edges/phones/{phoneId} | Update a Phone by ID |
 | [**PutTelephonyProvidersEdgesPhonebasesetting**](TelephonyProvidersEdgeApi.html#puttelephonyprovidersedgesphonebasesetting) | **PUT** /api/v2/telephony/providers/edges/phonebasesettings/{phoneBaseId} | Update a Phone Base Settings by ID |
 | [**PutTelephonyProvidersEdgesSite**](TelephonyProvidersEdgeApi.html#puttelephonyprovidersedgessite) | **PUT** /api/v2/telephony/providers/edges/sites/{siteId} | Update a Site by ID. |
@@ -571,72 +568,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **extensionPoolId** | **string**| Extension pool ID |  |
-{: class="table table-striped"}
-
-### Return type
-
-void (empty response body)
-
-<a name="deletetelephonyprovidersedgesoutboundroute"></a>
-
-## void DeleteTelephonyProvidersEdgesOutboundroute (string outboundRouteId)
-
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
-
-Delete Outbound Route
-
-This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
-
-
-
-Requires ANY permissions: 
-
-* telephony:plugin:all
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class DeleteTelephonyProvidersEdgesOutboundrouteExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var outboundRouteId = outboundRouteId_example;  // string | Outbound route ID
-
-            try
-            { 
-                // Delete Outbound Route
-                apiInstance.DeleteTelephonyProvidersEdgesOutboundroute(outboundRouteId);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.DeleteTelephonyProvidersEdgesOutboundroute: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **outboundRouteId** | **string**| Outbound route ID |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -6673,73 +6604,6 @@ namespace Example
 
 [**ExtensionPool**](ExtensionPool.html)
 
-<a name="posttelephonyprovidersedgesoutboundroutes"></a>
-
-## [**OutboundRoute**](OutboundRoute.html) PostTelephonyProvidersEdgesOutboundroutes (OutboundRoute body)
-
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
-
-Create outbound rule
-
-This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes instead.
-
-
-
-Requires ANY permissions: 
-
-* telephony:plugin:all
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PostTelephonyProvidersEdgesOutboundroutesExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var body = new OutboundRoute(); // OutboundRoute | OutboundRoute
-
-            try
-            { 
-                // Create outbound rule
-                OutboundRoute result = apiInstance.PostTelephonyProvidersEdgesOutboundroutes(body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PostTelephonyProvidersEdgesOutboundroutes: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **body** | [**OutboundRoute**](OutboundRoute.html)| OutboundRoute |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**OutboundRoute**](OutboundRoute.html)
-
 <a name="posttelephonyprovidersedgesphonereboot"></a>
 
 ## void PostTelephonyProvidersEdgesPhoneReboot (string phoneId)
@@ -7667,75 +7531,6 @@ namespace Example
 ### Return type
 
 [**ExtensionPool**](ExtensionPool.html)
-
-<a name="puttelephonyprovidersedgesoutboundroute"></a>
-
-## [**OutboundRoute**](OutboundRoute.html) PutTelephonyProvidersEdgesOutboundroute (string outboundRouteId, OutboundRoute body)
-
-<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
-
-Update outbound route
-
-This route is deprecated, use /telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId} instead.
-
-
-
-Requires ANY permissions: 
-
-* telephony:plugin:all
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PutTelephonyProvidersEdgesOutboundrouteExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new TelephonyProvidersEdgeApi();
-            var outboundRouteId = outboundRouteId_example;  // string | Outbound route ID
-            var body = new OutboundRoute(); // OutboundRoute | OutboundRoute
-
-            try
-            { 
-                // Update outbound route
-                OutboundRoute result = apiInstance.PutTelephonyProvidersEdgesOutboundroute(outboundRouteId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutTelephonyProvidersEdgesOutboundroute: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **outboundRouteId** | **string**| Outbound route ID |  |
-| **body** | [**OutboundRoute**](OutboundRoute.html)| OutboundRoute |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**OutboundRoute**](OutboundRoute.html)
 
 <a name="puttelephonyprovidersedgesphone"></a>
 

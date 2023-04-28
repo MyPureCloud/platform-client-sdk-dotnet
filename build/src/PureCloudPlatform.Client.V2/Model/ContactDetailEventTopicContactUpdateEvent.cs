@@ -222,7 +222,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CallbackScheduledTime">CallbackScheduledTime.</param>
         /// <param name="Subject">Subject.</param>
         /// <param name="MessageType">MessageType.</param>
-        public ContactDetailEventTopicContactUpdateEvent(int? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, MediaTypeEnum? MediaType = null, string ExternalOrganizationId = null, string ExternalContactId = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string CallbackUserName = null, List<string> CallbackNumbers = null, int? CallbackScheduledTime = null, string Subject = null, MessageTypeEnum? MessageType = null)
+        /// <param name="ConversationExternalContactIds">ConversationExternalContactIds.</param>
+        /// <param name="ConversationExternalOrganizationIds">ConversationExternalOrganizationIds.</param>
+        public ContactDetailEventTopicContactUpdateEvent(int? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, MediaTypeEnum? MediaType = null, string ExternalOrganizationId = null, string ExternalContactId = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string CallbackUserName = null, List<string> CallbackNumbers = null, int? CallbackScheduledTime = null, string Subject = null, MessageTypeEnum? MessageType = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null)
         {
             this.EventTime = EventTime;
             this.ConversationId = ConversationId;
@@ -242,6 +244,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CallbackScheduledTime = CallbackScheduledTime;
             this.Subject = Subject;
             this.MessageType = MessageType;
+            this.ConversationExternalContactIds = ConversationExternalContactIds;
+            this.ConversationExternalOrganizationIds = ConversationExternalOrganizationIds;
             
         }
         
@@ -372,6 +376,22 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+        /// <summary>
+        /// Gets or Sets ConversationExternalContactIds
+        /// </summary>
+        [DataMember(Name="conversationExternalContactIds", EmitDefaultValue=false)]
+        public List<string> ConversationExternalContactIds { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets ConversationExternalOrganizationIds
+        /// </summary>
+        [DataMember(Name="conversationExternalOrganizationIds", EmitDefaultValue=false)]
+        public List<string> ConversationExternalOrganizationIds { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -399,6 +419,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CallbackScheduledTime: ").Append(CallbackScheduledTime).Append("\n");
             sb.Append("  Subject: ").Append(Subject).Append("\n");
             sb.Append("  MessageType: ").Append(MessageType).Append("\n");
+            sb.Append("  ConversationExternalContactIds: ").Append(ConversationExternalContactIds).Append("\n");
+            sb.Append("  ConversationExternalOrganizationIds: ").Append(ConversationExternalOrganizationIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -528,6 +550,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MessageType == other.MessageType ||
                     this.MessageType != null &&
                     this.MessageType.Equals(other.MessageType)
+                ) &&
+                (
+                    this.ConversationExternalContactIds == other.ConversationExternalContactIds ||
+                    this.ConversationExternalContactIds != null &&
+                    this.ConversationExternalContactIds.SequenceEqual(other.ConversationExternalContactIds)
+                ) &&
+                (
+                    this.ConversationExternalOrganizationIds == other.ConversationExternalOrganizationIds ||
+                    this.ConversationExternalOrganizationIds != null &&
+                    this.ConversationExternalOrganizationIds.SequenceEqual(other.ConversationExternalOrganizationIds)
                 );
         }
 
@@ -595,6 +627,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MessageType != null)
                     hash = hash * 59 + this.MessageType.GetHashCode();
+
+                if (this.ConversationExternalContactIds != null)
+                    hash = hash * 59 + this.ConversationExternalContactIds.GetHashCode();
+
+                if (this.ConversationExternalOrganizationIds != null)
+                    hash = hash * 59 + this.ConversationExternalOrganizationIds.GetHashCode();
 
                 return hash;
             }

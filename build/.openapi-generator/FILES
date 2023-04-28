@@ -1176,7 +1176,6 @@ docs/DeleteTelephonyProvidersEdgesCertificateauthority-example.txt
 docs/DeleteTelephonyProvidersEdgesDidpool-example.txt
 docs/DeleteTelephonyProvidersEdgesEdgegroup-example.txt
 docs/DeleteTelephonyProvidersEdgesExtensionpool-example.txt
-docs/DeleteTelephonyProvidersEdgesOutboundroute-example.txt
 docs/DeleteTelephonyProvidersEdgesPhone-example.txt
 docs/DeleteTelephonyProvidersEdgesPhonebasesetting-example.txt
 docs/DeleteTelephonyProvidersEdgesSite-example.txt
@@ -1521,6 +1520,7 @@ docs/EvaluationFormAndScoringSet.md
 docs/EvaluationFormEntityListing.md
 docs/EvaluationFormResponse.md
 docs/EvaluationQualityV2TopicCalibration.md
+docs/EvaluationQualityV2TopicEvaluationReference.md
 docs/EvaluationQualityV2TopicEvaluationScoringSet.md
 docs/EvaluationQualityV2TopicEvaluationSource.md
 docs/EvaluationQualityV2TopicEvaluationV2.md
@@ -1567,6 +1567,8 @@ docs/ExternalContactsContactChangedTopicContact.md
 docs/ExternalContactsContactChangedTopicContactAddress.md
 docs/ExternalContactsContactChangedTopicFacebookId.md
 docs/ExternalContactsContactChangedTopicFacebookScopedId.md
+docs/ExternalContactsContactChangedTopicInstagramId.md
+docs/ExternalContactsContactChangedTopicInstagramScopedId.md
 docs/ExternalContactsContactChangedTopicLineId.md
 docs/ExternalContactsContactChangedTopicLineUserId.md
 docs/ExternalContactsContactChangedTopicPhoneNumber.md
@@ -1576,6 +1578,8 @@ docs/ExternalContactsUnresolvedContactChangedTopicContact.md
 docs/ExternalContactsUnresolvedContactChangedTopicContactAddress.md
 docs/ExternalContactsUnresolvedContactChangedTopicFacebookId.md
 docs/ExternalContactsUnresolvedContactChangedTopicFacebookScopedId.md
+docs/ExternalContactsUnresolvedContactChangedTopicInstagramId.md
+docs/ExternalContactsUnresolvedContactChangedTopicInstagramScopedId.md
 docs/ExternalContactsUnresolvedContactChangedTopicLineId.md
 docs/ExternalContactsUnresolvedContactChangedTopicLineUserId.md
 docs/ExternalContactsUnresolvedContactChangedTopicPhoneNumber.md
@@ -1988,6 +1992,14 @@ docs/GetFlowsMilestonesDivisionviews-example.txt
 docs/GetFlowsOutcome-example.txt
 docs/GetFlowsOutcomes-example.txt
 docs/GetFlowsOutcomesDivisionviews-example.txt
+docs/GetGamificationInsights-example.txt
+docs/GetGamificationInsightsDetails-example.txt
+docs/GetGamificationInsightsGroupsTrends-example.txt
+docs/GetGamificationInsightsGroupsTrendsAll-example.txt
+docs/GetGamificationInsightsMembers-example.txt
+docs/GetGamificationInsightsTrends-example.txt
+docs/GetGamificationInsightsUserDetails-example.txt
+docs/GetGamificationInsightsUserTrends-example.txt
 docs/GetGamificationLeaderboard-example.txt
 docs/GetGamificationLeaderboardAll-example.txt
 docs/GetGamificationLeaderboardAllBestpoints-example.txt
@@ -2768,6 +2780,23 @@ docs/InfrastructureascodeJob.md
 docs/InitialConfiguration.md
 docs/InitiateScreenRecording.md
 docs/InitiatingAction.md
+docs/InsightsAgentItem.md
+docs/InsightsAgents.md
+docs/InsightsDetails.md
+docs/InsightsDetailsMetricItem.md
+docs/InsightsDetailsMetricPeriodPoints.md
+docs/InsightsDetailsOverallItem.md
+docs/InsightsDetailsOverallPeriodPoints.md
+docs/InsightsSummary.md
+docs/InsightsSummaryMetricItem.md
+docs/InsightsSummaryMetricPeriodPoints.md
+docs/InsightsSummaryOverallItem.md
+docs/InsightsSummaryOverallPeriodPoints.md
+docs/InsightsSummaryUserItem.md
+docs/InsightsTrend.md
+docs/InsightsTrendMetricItem.md
+docs/InsightsTrendTotalItem.md
+docs/InsightsTrends.md
 docs/InstagramId.md
 docs/InstagramScopedId.md
 docs/Integration.md
@@ -3760,6 +3789,8 @@ docs/PostGamificationProfileMembersValidate-example.txt
 docs/PostGamificationProfileMetricLink-example.txt
 docs/PostGamificationProfileMetrics-example.txt
 docs/PostGamificationProfiles-example.txt
+docs/PostGamificationProfilesUserQuery-example.txt
+docs/PostGamificationProfilesUsersMeQuery-example.txt
 docs/PostGdprRequests-example.txt
 docs/PostGreetings-example.txt
 docs/PostGroupGreetings-example.txt
@@ -3967,7 +3998,6 @@ docs/PostTelephonyProvidersEdgesCertificateauthorities-example.txt
 docs/PostTelephonyProvidersEdgesDidpools-example.txt
 docs/PostTelephonyProvidersEdgesEdgegroups-example.txt
 docs/PostTelephonyProvidersEdgesExtensionpools-example.txt
-docs/PostTelephonyProvidersEdgesOutboundroutes-example.txt
 docs/PostTelephonyProvidersEdgesPhoneReboot-example.txt
 docs/PostTelephonyProvidersEdgesPhonebasesettings-example.txt
 docs/PostTelephonyProvidersEdgesPhones-example.txt
@@ -4097,6 +4127,7 @@ docs/PresenceSettings.md
 docs/ProcessAutomationApi.json
 docs/ProcessAutomationApi.md
 docs/ProcessScheduleUpdateUploadRequest.md
+docs/ProfileWithDateRange.md
 docs/Program.md
 docs/ProgramJob.md
 docs/ProgramJobRequest.md
@@ -4289,7 +4320,6 @@ docs/PutTelephonyProvidersEdgesDidpool-example.txt
 docs/PutTelephonyProvidersEdgesEdgegroup-example.txt
 docs/PutTelephonyProvidersEdgesEdgegroupEdgetrunkbase-example.txt
 docs/PutTelephonyProvidersEdgesExtensionpool-example.txt
-docs/PutTelephonyProvidersEdgesOutboundroute-example.txt
 docs/PutTelephonyProvidersEdgesPhone-example.txt
 docs/PutTelephonyProvidersEdgesPhonebasesetting-example.txt
 docs/PutTelephonyProvidersEdgesSite-example.txt
@@ -4328,6 +4358,7 @@ docs/QualityAuditLogMessage.md
 docs/QualityAuditQueryExecutionResultsResponse.md
 docs/QualityAuditQueryExecutionStatusResponse.md
 docs/QualityAuditQueryFilter.md
+docs/QualityEvaluationScoreItem.md
 docs/QueryAdherenceExplanationsResponse.md
 docs/QueryDivision.md
 docs/QueryFacetInfo.md
@@ -4873,6 +4904,7 @@ docs/SiteEntityListing.md
 docs/SkillEntityListing.md
 docs/SkillGroup.md
 docs/SkillGroupCondition.md
+docs/SkillGroupDefinition.md
 docs/SkillGroupEntityListing.md
 docs/SkillGroupLanguageCondition.md
 docs/SkillGroupMemberDivisionList.md
@@ -5108,6 +5140,7 @@ docs/TransferDestination.md
 docs/TransferInitiator.md
 docs/TransferRequest.md
 docs/TransferResponse.md
+docs/TrendData.md
 docs/Trigger.md
 docs/TriggerEntityListing.md
 docs/TriggerTarget.md
@@ -5250,6 +5283,7 @@ docs/UserGreetingEventGreeting.md
 docs/UserGreetingEventGreetingAudioFile.md
 docs/UserGreetingEventGreetingOwner.md
 docs/UserImage.md
+docs/UserInsightsTrend.md
 docs/UserLanguageEntityListing.md
 docs/UserLicenses.md
 docs/UserLicensesEntityListing.md
@@ -5267,6 +5301,8 @@ docs/UserPresenceEvent.md
 docs/UserPrimarySource.md
 docs/UserProfile.md
 docs/UserProfileEntityListing.md
+docs/UserProfilesInDateRange.md
+docs/UserProfilesInDateRangeRequest.md
 docs/UserQueue.md
 docs/UserQueueEntityListing.md
 docs/UserRecording.md
@@ -5388,6 +5424,8 @@ docs/ValueWrapperPlanningPeriodSettings.md
 docs/ValueWrapperString.md
 docs/VerificationResult.md
 docs/Video.md
+docs/VideoConferenceUpdateTopicParticipantInfo.md
+docs/VideoConferenceUpdateTopicVideoConference.md
 docs/ViewFilter.md
 docs/VisibilityCondition.md
 docs/VmPairingInfo.md
@@ -5657,6 +5695,7 @@ docs/WorkPlanValidationMessageArgument.md
 docs/WorkPlanValidationRequest.md
 docs/WorkdayMetric.md
 docs/WorkdayMetricListing.md
+docs/WorkdayPeriod.md
 docs/WorkdayPointsTrend.md
 docs/WorkdayPointsTrendItem.md
 docs/WorkdayValuesMetricItem.md
@@ -7043,6 +7082,7 @@ src/PureCloudPlatform.Client.V2/Model/EvaluationFormAndScoringSet.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationFormEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationFormResponse.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationQualityV2TopicCalibration.cs
+src/PureCloudPlatform.Client.V2/Model/EvaluationQualityV2TopicEvaluationReference.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationQualityV2TopicEvaluationScoringSet.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationQualityV2TopicEvaluationSource.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationQualityV2TopicEvaluationV2.cs
@@ -7085,6 +7125,8 @@ src/PureCloudPlatform.Client.V2/Model/ExternalContactsContactChangedTopicContact
 src/PureCloudPlatform.Client.V2/Model/ExternalContactsContactChangedTopicContactAddress.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalContactsContactChangedTopicFacebookId.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalContactsContactChangedTopicFacebookScopedId.cs
+src/PureCloudPlatform.Client.V2/Model/ExternalContactsContactChangedTopicInstagramId.cs
+src/PureCloudPlatform.Client.V2/Model/ExternalContactsContactChangedTopicInstagramScopedId.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalContactsContactChangedTopicLineId.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalContactsContactChangedTopicLineUserId.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalContactsContactChangedTopicPhoneNumber.cs
@@ -7094,6 +7136,8 @@ src/PureCloudPlatform.Client.V2/Model/ExternalContactsUnresolvedContactChangedTo
 src/PureCloudPlatform.Client.V2/Model/ExternalContactsUnresolvedContactChangedTopicContactAddress.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalContactsUnresolvedContactChangedTopicFacebookId.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalContactsUnresolvedContactChangedTopicFacebookScopedId.cs
+src/PureCloudPlatform.Client.V2/Model/ExternalContactsUnresolvedContactChangedTopicInstagramId.cs
+src/PureCloudPlatform.Client.V2/Model/ExternalContactsUnresolvedContactChangedTopicInstagramScopedId.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalContactsUnresolvedContactChangedTopicLineId.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalContactsUnresolvedContactChangedTopicLineUserId.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalContactsUnresolvedContactChangedTopicPhoneNumber.cs
@@ -7301,6 +7345,23 @@ src/PureCloudPlatform.Client.V2/Model/InfrastructureascodeJob.cs
 src/PureCloudPlatform.Client.V2/Model/InitialConfiguration.cs
 src/PureCloudPlatform.Client.V2/Model/InitiateScreenRecording.cs
 src/PureCloudPlatform.Client.V2/Model/InitiatingAction.cs
+src/PureCloudPlatform.Client.V2/Model/InsightsAgentItem.cs
+src/PureCloudPlatform.Client.V2/Model/InsightsAgents.cs
+src/PureCloudPlatform.Client.V2/Model/InsightsDetails.cs
+src/PureCloudPlatform.Client.V2/Model/InsightsDetailsMetricItem.cs
+src/PureCloudPlatform.Client.V2/Model/InsightsDetailsMetricPeriodPoints.cs
+src/PureCloudPlatform.Client.V2/Model/InsightsDetailsOverallItem.cs
+src/PureCloudPlatform.Client.V2/Model/InsightsDetailsOverallPeriodPoints.cs
+src/PureCloudPlatform.Client.V2/Model/InsightsSummary.cs
+src/PureCloudPlatform.Client.V2/Model/InsightsSummaryMetricItem.cs
+src/PureCloudPlatform.Client.V2/Model/InsightsSummaryMetricPeriodPoints.cs
+src/PureCloudPlatform.Client.V2/Model/InsightsSummaryOverallItem.cs
+src/PureCloudPlatform.Client.V2/Model/InsightsSummaryOverallPeriodPoints.cs
+src/PureCloudPlatform.Client.V2/Model/InsightsSummaryUserItem.cs
+src/PureCloudPlatform.Client.V2/Model/InsightsTrend.cs
+src/PureCloudPlatform.Client.V2/Model/InsightsTrendMetricItem.cs
+src/PureCloudPlatform.Client.V2/Model/InsightsTrendTotalItem.cs
+src/PureCloudPlatform.Client.V2/Model/InsightsTrends.cs
 src/PureCloudPlatform.Client.V2/Model/InstagramId.cs
 src/PureCloudPlatform.Client.V2/Model/InstagramScopedId.cs
 src/PureCloudPlatform.Client.V2/Model/Integration.cs
@@ -7951,6 +8012,7 @@ src/PureCloudPlatform.Client.V2/Model/PresenceEventOrganizationPresence.cs
 src/PureCloudPlatform.Client.V2/Model/PresenceEventUserPresence.cs
 src/PureCloudPlatform.Client.V2/Model/PresenceSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ProcessScheduleUpdateUploadRequest.cs
+src/PureCloudPlatform.Client.V2/Model/ProfileWithDateRange.cs
 src/PureCloudPlatform.Client.V2/Model/Program.cs
 src/PureCloudPlatform.Client.V2/Model/ProgramJob.cs
 src/PureCloudPlatform.Client.V2/Model/ProgramJobRequest.cs
@@ -7983,6 +8045,7 @@ src/PureCloudPlatform.Client.V2/Model/QualityAuditLogMessage.cs
 src/PureCloudPlatform.Client.V2/Model/QualityAuditQueryExecutionResultsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/QualityAuditQueryExecutionStatusResponse.cs
 src/PureCloudPlatform.Client.V2/Model/QualityAuditQueryFilter.cs
+src/PureCloudPlatform.Client.V2/Model/QualityEvaluationScoreItem.cs
 src/PureCloudPlatform.Client.V2/Model/QueryAdherenceExplanationsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/QueryDivision.cs
 src/PureCloudPlatform.Client.V2/Model/QueryFacetInfo.cs
@@ -8516,6 +8579,7 @@ src/PureCloudPlatform.Client.V2/Model/SiteEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/SkillEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/SkillGroup.cs
 src/PureCloudPlatform.Client.V2/Model/SkillGroupCondition.cs
+src/PureCloudPlatform.Client.V2/Model/SkillGroupDefinition.cs
 src/PureCloudPlatform.Client.V2/Model/SkillGroupEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/SkillGroupLanguageCondition.cs
 src/PureCloudPlatform.Client.V2/Model/SkillGroupMemberDivisionList.cs
@@ -8735,6 +8799,7 @@ src/PureCloudPlatform.Client.V2/Model/TransferDestination.cs
 src/PureCloudPlatform.Client.V2/Model/TransferInitiator.cs
 src/PureCloudPlatform.Client.V2/Model/TransferRequest.cs
 src/PureCloudPlatform.Client.V2/Model/TransferResponse.cs
+src/PureCloudPlatform.Client.V2/Model/TrendData.cs
 src/PureCloudPlatform.Client.V2/Model/Trigger.cs
 src/PureCloudPlatform.Client.V2/Model/TriggerEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/TriggerTarget.cs
@@ -8873,6 +8938,7 @@ src/PureCloudPlatform.Client.V2/Model/UserGreetingEventGreeting.cs
 src/PureCloudPlatform.Client.V2/Model/UserGreetingEventGreetingAudioFile.cs
 src/PureCloudPlatform.Client.V2/Model/UserGreetingEventGreetingOwner.cs
 src/PureCloudPlatform.Client.V2/Model/UserImage.cs
+src/PureCloudPlatform.Client.V2/Model/UserInsightsTrend.cs
 src/PureCloudPlatform.Client.V2/Model/UserLanguageEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/UserLicenses.cs
 src/PureCloudPlatform.Client.V2/Model/UserLicensesEntityListing.cs
@@ -8890,6 +8956,8 @@ src/PureCloudPlatform.Client.V2/Model/UserPresenceEvent.cs
 src/PureCloudPlatform.Client.V2/Model/UserPrimarySource.cs
 src/PureCloudPlatform.Client.V2/Model/UserProfile.cs
 src/PureCloudPlatform.Client.V2/Model/UserProfileEntityListing.cs
+src/PureCloudPlatform.Client.V2/Model/UserProfilesInDateRange.cs
+src/PureCloudPlatform.Client.V2/Model/UserProfilesInDateRangeRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UserQueue.cs
 src/PureCloudPlatform.Client.V2/Model/UserQueueEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/UserRecording.cs
@@ -9005,6 +9073,8 @@ src/PureCloudPlatform.Client.V2/Model/ValueWrapperPlanningPeriodSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ValueWrapperString.cs
 src/PureCloudPlatform.Client.V2/Model/VerificationResult.cs
 src/PureCloudPlatform.Client.V2/Model/Video.cs
+src/PureCloudPlatform.Client.V2/Model/VideoConferenceUpdateTopicParticipantInfo.cs
+src/PureCloudPlatform.Client.V2/Model/VideoConferenceUpdateTopicVideoConference.cs
 src/PureCloudPlatform.Client.V2/Model/ViewFilter.cs
 src/PureCloudPlatform.Client.V2/Model/VisibilityCondition.cs
 src/PureCloudPlatform.Client.V2/Model/VmPairingInfo.cs
@@ -9264,6 +9334,7 @@ src/PureCloudPlatform.Client.V2/Model/WorkPlanValidationMessageArgument.cs
 src/PureCloudPlatform.Client.V2/Model/WorkPlanValidationRequest.cs
 src/PureCloudPlatform.Client.V2/Model/WorkdayMetric.cs
 src/PureCloudPlatform.Client.V2/Model/WorkdayMetricListing.cs
+src/PureCloudPlatform.Client.V2/Model/WorkdayPeriod.cs
 src/PureCloudPlatform.Client.V2/Model/WorkdayPointsTrend.cs
 src/PureCloudPlatform.Client.V2/Model/WorkdayPointsTrendItem.cs
 src/PureCloudPlatform.Client.V2/Model/WorkdayValuesMetricItem.cs

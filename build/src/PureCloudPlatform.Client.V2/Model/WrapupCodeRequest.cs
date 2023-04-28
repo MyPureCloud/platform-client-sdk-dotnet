@@ -28,10 +28,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="WrapupCodeRequest" /> class.
         /// </summary>
         /// <param name="Name">The wrap-up code name. (required).</param>
-        /// <param name="DateCreated">Date when the assistant wrap-up code was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
-        /// <param name="DateModified">Date when the wrapup-code was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
-        /// <param name="CreatedBy">The wrap-up code name. (required).</param>
-        /// <param name="ModifiedBy">ModifiedBy.</param>
+        /// <param name="DateCreated">Date when the wrap-up code was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="DateModified">Date when the wrap-up code was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="CreatedBy">The ID of the user that created the wrap-up code..</param>
+        /// <param name="ModifiedBy">The ID of the user that modified the wrap-up code..</param>
         public WrapupCodeRequest(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string CreatedBy = null, string ModifiedBy = null)
         {
             this.Name = Name;
@@ -63,35 +63,36 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Date when the assistant wrap-up code was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// Date when the wrap-up code was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Date when the assistant wrap-up code was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        /// <value>Date when the wrap-up code was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
 
 
 
         /// <summary>
-        /// Date when the wrapup-code was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// Date when the wrap-up code was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Date when the wrapup-code was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        /// <value>Date when the wrap-up code was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
 
 
 
         /// <summary>
-        /// The wrap-up code name.
+        /// The ID of the user that created the wrap-up code.
         /// </summary>
-        /// <value>The wrap-up code name.</value>
+        /// <value>The ID of the user that created the wrap-up code.</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public string CreatedBy { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets ModifiedBy
+        /// The ID of the user that modified the wrap-up code.
         /// </summary>
+        /// <value>The ID of the user that modified the wrap-up code.</value>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public string ModifiedBy { get; set; }
 

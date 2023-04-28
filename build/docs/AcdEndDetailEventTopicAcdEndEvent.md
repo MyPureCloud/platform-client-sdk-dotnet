@@ -35,6 +35,8 @@ title: AcdEndDetailEventTopicAcdEndEvent
 | **RequestedRoutingUserIds** | **List&lt;string&gt;** |  | [optional] |
 | **RoutingPriority** | **int?** |  | [optional] |
 | **ConnectedDurationMs** | **int?** |  | [optional] |
+| **ConversationExternalContactIds** | **List&lt;string&gt;** |  | [optional] |
+| **ConversationExternalOrganizationIds** | **List&lt;string&gt;** |  | [optional] |
 {: class="table table-striped"}
 
 

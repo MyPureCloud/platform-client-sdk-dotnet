@@ -66,6 +66,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="State">State of the document..</param>
         /// <param name="DateCreated">Document creation date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DateModified">Document last modification date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="DateImported">Document import date-time, or null if was not imported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="LastPublishedVersionNumber">The last published version number of the document..</param>
         /// <param name="DatePublished">The date on which the document was last published. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DocumentVersion">The version of the document..</param>
@@ -73,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Labels">The references to labels associated with the document..</param>
         /// <param name="KnowledgeBase">Knowledge base to which the document belongs to..</param>
         /// <param name="Variations">Variations of the document..</param>
-        public KnowledgeDocumentResponse(string Title = null, bool? Visible = null, List<KnowledgeDocumentAlternative> Alternatives = null, StateEnum? State = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? LastPublishedVersionNumber = null, DateTime? DatePublished = null, AddressableEntityRef DocumentVersion = null, CategoryResponse Category = null, List<LabelResponse> Labels = null, KnowledgeBaseReference KnowledgeBase = null, List<DocumentVariation> Variations = null)
+        public KnowledgeDocumentResponse(string Title = null, bool? Visible = null, List<KnowledgeDocumentAlternative> Alternatives = null, StateEnum? State = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateImported = null, int? LastPublishedVersionNumber = null, DateTime? DatePublished = null, AddressableEntityRef DocumentVersion = null, CategoryResponse Category = null, List<LabelResponse> Labels = null, KnowledgeBaseReference KnowledgeBase = null, List<DocumentVariation> Variations = null)
         {
             this.Title = Title;
             this.Visible = Visible;
@@ -81,6 +82,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.State = State;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
+            this.DateImported = DateImported;
             this.LastPublishedVersionNumber = LastPublishedVersionNumber;
             this.DatePublished = DatePublished;
             this.DocumentVersion = DocumentVersion;
@@ -146,6 +148,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Document last modification date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
+
+
+
+        /// <summary>
+        /// Document import date-time, or null if was not imported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Document import date-time, or null if was not imported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateImported", EmitDefaultValue=false)]
+        public DateTime? DateImported { get; set; }
 
 
 
@@ -254,6 +265,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            sb.Append("  DateImported: ").Append(DateImported).Append("\n");
             sb.Append("  LastPublishedVersionNumber: ").Append(LastPublishedVersionNumber).Append("\n");
             sb.Append("  DatePublished: ").Append(DatePublished).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
@@ -340,6 +352,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateModified.Equals(other.DateModified)
                 ) &&
                 (
+                    this.DateImported == other.DateImported ||
+                    this.DateImported != null &&
+                    this.DateImported.Equals(other.DateImported)
+                ) &&
+                (
                     this.LastPublishedVersionNumber == other.LastPublishedVersionNumber ||
                     this.LastPublishedVersionNumber != null &&
                     this.LastPublishedVersionNumber.Equals(other.LastPublishedVersionNumber)
@@ -422,6 +439,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
+
+                if (this.DateImported != null)
+                    hash = hash * 59 + this.DateImported.GetHashCode();
 
                 if (this.LastPublishedVersionNumber != null)
                     hash = hash * 59 + this.LastPublishedVersionNumber.GetHashCode();

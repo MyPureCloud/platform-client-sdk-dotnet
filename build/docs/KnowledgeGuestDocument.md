@@ -14,6 +14,7 @@ title: KnowledgeGuestDocument
 | **State** | **string** | State of the document. | [optional] |
 | **DateCreated** | **DateTime?** | Document creation date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DateModified** | **DateTime?** | Document last modification date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **DateImported** | **DateTime?** | Document import date-time, or null if was not imported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **LastPublishedVersionNumber** | **int?** | The last published version number of the document. | [optional] |
 | **DatePublished** | **DateTime?** | The date on which the document was last published. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **CreatedBy** | [**UserReference**](UserReference.html) | The user who created the document. | [optional] |

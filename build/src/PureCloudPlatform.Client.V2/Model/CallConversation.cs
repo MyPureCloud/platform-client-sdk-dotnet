@@ -64,7 +64,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RecentTransfers">The list of the most recent 20 transfer commands applied to this conversation..</param>
         /// <param name="RecordingState">RecordingState.</param>
         /// <param name="MaxParticipants">If this is a conference conversation, then this field indicates the maximum number of participants allowed to participant in the conference..</param>
-        public CallConversation(string Name = null, List<CallMediaParticipant> Participants = null, List<string> OtherMediaUris = null, List<TransferResponse> RecentTransfers = null, RecordingStateEnum? RecordingState = null, int? MaxParticipants = null)
+        /// <param name="SecurePause">True when the recording of this conversation is in secure pause status..</param>
+        public CallConversation(string Name = null, List<CallMediaParticipant> Participants = null, List<string> OtherMediaUris = null, List<TransferResponse> RecentTransfers = null, RecordingStateEnum? RecordingState = null, int? MaxParticipants = null, bool? SecurePause = null)
         {
             this.Name = Name;
             this.Participants = Participants;
@@ -72,6 +73,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.RecentTransfers = RecentTransfers;
             this.RecordingState = RecordingState;
             this.MaxParticipants = MaxParticipants;
+            this.SecurePause = SecurePause;
             
         }
         
@@ -133,6 +135,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// True when the recording of this conversation is in secure pause status.
+        /// </summary>
+        /// <value>True when the recording of this conversation is in secure pause status.</value>
+        [DataMember(Name="securePause", EmitDefaultValue=false)]
+        public bool? SecurePause { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -156,6 +167,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RecentTransfers: ").Append(RecentTransfers).Append("\n");
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
             sb.Append("  MaxParticipants: ").Append(MaxParticipants).Append("\n");
+            sb.Append("  SecurePause: ").Append(SecurePause).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -233,6 +245,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MaxParticipants.Equals(other.MaxParticipants)
                 ) &&
                 (
+                    this.SecurePause == other.SecurePause ||
+                    this.SecurePause != null &&
+                    this.SecurePause.Equals(other.SecurePause)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -270,6 +287,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MaxParticipants != null)
                     hash = hash * 59 + this.MaxParticipants.GetHashCode();
+
+                if (this.SecurePause != null)
+                    hash = hash * 59 + this.SecurePause.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

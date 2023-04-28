@@ -393,6 +393,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Muted">True if this call is muted so that remote participants can't hear any audio from this end..</param>
         /// <param name="Confined">True if this call is held and the person on this side hears hold music..</param>
         /// <param name="Held">True if this call is held and the person on this side hears silence..</param>
+        /// <param name="SecurePause">True when the recording of this call is in secure pause status..</param>
         /// <param name="RecordingId">A globally unique identifier for the recording associated with this call..</param>
         /// <param name="Segments">The time line of the participant's call, divided into activity segments..</param>
         /// <param name="ErrorInfo">ErrorInfo.</param>
@@ -414,7 +415,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AfterCallWork">After-call work for the communication..</param>
         /// <param name="AfterCallWorkRequired">Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
         /// <param name="AgentAssistantId">UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation..</param>
-        public Call(StateEnum? State = null, InitialStateEnum? InitialState = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, string RecordingId = null, List<Segment> Segments = null, ErrorInfo ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<DisconnectReason> DisconnectReasons = null, FaxStatus FaxStatus = null, string Provider = null, string ScriptId = null, string PeerId = null, string UuiData = null, Address Self = null, Address Other = null, Wrapup Wrapup = null, AfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null)
+        public Call(StateEnum? State = null, InitialStateEnum? InitialState = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, bool? SecurePause = null, string RecordingId = null, List<Segment> Segments = null, ErrorInfo ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<DisconnectReason> DisconnectReasons = null, FaxStatus FaxStatus = null, string Provider = null, string ScriptId = null, string PeerId = null, string UuiData = null, Address Self = null, Address Other = null, Wrapup Wrapup = null, AfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null)
         {
             this.State = State;
             this.InitialState = InitialState;
@@ -425,6 +426,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Muted = Muted;
             this.Confined = Confined;
             this.Held = Held;
+            this.SecurePause = SecurePause;
             this.RecordingId = RecordingId;
             this.Segments = Segments;
             this.ErrorInfo = ErrorInfo;
@@ -501,6 +503,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>True if this call is held and the person on this side hears silence.</value>
         [DataMember(Name="held", EmitDefaultValue=false)]
         public bool? Held { get; set; }
+
+
+
+        /// <summary>
+        /// True when the recording of this call is in secure pause status.
+        /// </summary>
+        /// <value>True when the recording of this call is in secure pause status.</value>
+        [DataMember(Name="securePause", EmitDefaultValue=false)]
+        public bool? SecurePause { get; set; }
 
 
 
@@ -702,6 +713,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Muted: ").Append(Muted).Append("\n");
             sb.Append("  Confined: ").Append(Confined).Append("\n");
             sb.Append("  Held: ").Append(Held).Append("\n");
+            sb.Append("  SecurePause: ").Append(SecurePause).Append("\n");
             sb.Append("  RecordingId: ").Append(RecordingId).Append("\n");
             sb.Append("  Segments: ").Append(Segments).Append("\n");
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
@@ -807,6 +819,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Held == other.Held ||
                     this.Held != null &&
                     this.Held.Equals(other.Held)
+                ) &&
+                (
+                    this.SecurePause == other.SecurePause ||
+                    this.SecurePause != null &&
+                    this.SecurePause.Equals(other.SecurePause)
                 ) &&
                 (
                     this.RecordingId == other.RecordingId ||
@@ -952,6 +969,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Held != null)
                     hash = hash * 59 + this.Held.GetHashCode();
+
+                if (this.SecurePause != null)
+                    hash = hash * 59 + this.SecurePause.GetHashCode();
 
                 if (this.RecordingId != null)
                     hash = hash * 59 + this.RecordingId.GetHashCode();

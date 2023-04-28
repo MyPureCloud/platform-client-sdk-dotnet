@@ -7,7 +7,7 @@ title: SkillGroupEntityListing
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;SkillGroup&gt;**](SkillGroup.html) |  | [optional] |
+| **Entities** | [**List&lt;SkillGroupDefinition&gt;**](SkillGroupDefinition.html) |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |

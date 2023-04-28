@@ -2888,7 +2888,7 @@ namespace Example
 
 <a name="getroutingpredictorskeyperformanceindicators"></a>
 
-## [**List&lt;KeyPerformanceIndicator&gt;**](KeyPerformanceIndicator.html) GetRoutingPredictorsKeyperformanceindicators (string kpiGroup = null)
+## [**List&lt;KeyPerformanceIndicator&gt;**](KeyPerformanceIndicator.html) GetRoutingPredictorsKeyperformanceindicators (string kpiGroup = null, List<string> expand = null)
 
 
 
@@ -2923,11 +2923,12 @@ namespace Example
 
             var apiInstance = new RoutingApi();
             var kpiGroup = kpiGroup_example;  // string | The Group of Key Performance Indicators to return (optional) 
+            var expand = new List<string>(); // List<string> | Parameter to request additional data to return in KPI payload (optional) 
 
             try
             { 
                 // Get a list of Key Performance Indicators
-                List<KeyPerformanceIndicator> result = apiInstance.GetRoutingPredictorsKeyperformanceindicators(kpiGroup);
+                List<KeyPerformanceIndicator> result = apiInstance.GetRoutingPredictorsKeyperformanceindicators(kpiGroup, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2945,6 +2946,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **kpiGroup** | **string**| The Group of Key Performance Indicators to return | [optional] <br />**Values**: Standard, Custom |
+| **expand** | [**List<string>**](string.html)| Parameter to request additional data to return in KPI payload | [optional] <br />**Values**: queues |
 {: class="table table-striped"}
 
 ### Return type

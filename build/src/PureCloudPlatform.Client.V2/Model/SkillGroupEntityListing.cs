@@ -25,7 +25,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="NextUri">NextUri.</param>
         /// <param name="SelfUri">SelfUri.</param>
         /// <param name="PreviousUri">PreviousUri.</param>
-        public SkillGroupEntityListing(List<SkillGroup> Entities = null, string NextUri = null, string SelfUri = null, string PreviousUri = null)
+        public SkillGroupEntityListing(List<SkillGroupDefinition> Entities = null, string NextUri = null, string SelfUri = null, string PreviousUri = null)
         {
             this.Entities = Entities;
             this.NextUri = NextUri;
@@ -40,7 +40,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<SkillGroup> Entities { get; set; }
+        public List<SkillGroupDefinition> Entities { get; set; }
 
 
 

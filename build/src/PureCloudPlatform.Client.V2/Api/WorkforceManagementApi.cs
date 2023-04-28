@@ -2391,7 +2391,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<QueryAdherenceExplanationsResponse> PostWorkforcemanagementAdherenceExplanationsQueryWithHttpInfo (AgentQueryAdherenceExplanationsRequest body, bool? forceAsync = null, bool? forceDownloadService = null);
 
         /// <summary>
-        /// Request a historical adherence report for users across management units
+        /// Deprecated. Use bulk routes instead (/adherence/historical/bulk)
         /// </summary>
         /// <remarks>
         /// 
@@ -2402,7 +2402,7 @@ namespace PureCloudPlatform.Client.V2.Api
         WfmHistoricalAdherenceResponse PostWorkforcemanagementAdherenceHistorical (WfmHistoricalAdherenceQueryForUsers body = null);
 
         /// <summary>
-        /// Request a historical adherence report for users across management units
+        /// Deprecated. Use bulk routes instead (/adherence/historical/bulk)
         /// </summary>
         /// <remarks>
         /// 
@@ -6201,7 +6201,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<QueryAdherenceExplanationsResponse>> PostWorkforcemanagementAdherenceExplanationsQueryAsyncWithHttpInfo (AgentQueryAdherenceExplanationsRequest body, bool? forceAsync = null, bool? forceDownloadService = null);
 
         /// <summary>
-        /// Request a historical adherence report for users across management units
+        /// Deprecated. Use bulk routes instead (/adherence/historical/bulk)
         /// </summary>
         /// <remarks>
         /// 
@@ -6212,7 +6212,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<WfmHistoricalAdherenceResponse> PostWorkforcemanagementAdherenceHistoricalAsync (WfmHistoricalAdherenceQueryForUsers body = null);
 
         /// <summary>
-        /// Request a historical adherence report for users across management units
+        /// Deprecated. Use bulk routes instead (/adherence/historical/bulk)
         /// </summary>
         /// <remarks>
         /// 
@@ -27637,7 +27637,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Request a historical adherence report for users across management units 
+        /// Deprecated. Use bulk routes instead (/adherence/historical/bulk) 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
@@ -27649,7 +27649,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Request a historical adherence report for users across management units 
+        /// Deprecated. Use bulk routes instead (/adherence/historical/bulk) 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
@@ -27733,7 +27733,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Request a historical adherence report for users across management units 
+        /// Deprecated. Use bulk routes instead (/adherence/historical/bulk) 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>
@@ -27746,7 +27746,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Request a historical adherence report for users across management units 
+        /// Deprecated. Use bulk routes instead (/adherence/historical/bulk) 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">body (optional)</param>

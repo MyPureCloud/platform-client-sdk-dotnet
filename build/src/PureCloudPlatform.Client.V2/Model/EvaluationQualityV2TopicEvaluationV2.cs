@@ -48,13 +48,74 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Finished for "Finished"
             /// </summary>
             [EnumMember(Value = "Finished")]
-            Finished
+            Finished,
+            
+            /// <summary>
+            /// Enum Inreview for "InReview"
+            /// </summary>
+            [EnumMember(Value = "InReview")]
+            Inreview,
+            
+            /// <summary>
+            /// Enum Retracted for "Retracted"
+            /// </summary>
+            [EnumMember(Value = "Retracted")]
+            Retracted
+        }
+        /// <summary>
+        /// Gets or Sets PreviousStatus
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum PreviousStatusEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Pending for "Pending"
+            /// </summary>
+            [EnumMember(Value = "Pending")]
+            Pending,
+            
+            /// <summary>
+            /// Enum Inprogress for "InProgress"
+            /// </summary>
+            [EnumMember(Value = "InProgress")]
+            Inprogress,
+            
+            /// <summary>
+            /// Enum Finished for "Finished"
+            /// </summary>
+            [EnumMember(Value = "Finished")]
+            Finished,
+            
+            /// <summary>
+            /// Enum Inreview for "InReview"
+            /// </summary>
+            [EnumMember(Value = "InReview")]
+            Inreview,
+            
+            /// <summary>
+            /// Enum Retracted for "Retracted"
+            /// </summary>
+            [EnumMember(Value = "Retracted")]
+            Retracted
         }
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
+        /// <summary>
+        /// Gets or Sets PreviousStatus
+        /// </summary>
+        [DataMember(Name="previousStatus", EmitDefaultValue=false)]
+        public PreviousStatusEnum? PreviousStatus { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluationQualityV2TopicEvaluationV2" /> class.
         /// </summary>
@@ -83,7 +144,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EvaluationSource">EvaluationSource.</param>
         /// <param name="AssigneeUserId">AssigneeUserId.</param>
         /// <param name="PreviousAssigneeUserId">PreviousAssigneeUserId.</param>
-        public EvaluationQualityV2TopicEvaluationV2(string Id = null, string ConversationId = null, EvaluationQualityV2TopicUser Agent = null, EvaluationQualityV2TopicUser Evaluator = null, DateTime? EventTime = null, string EvaluationFormId = null, string FormName = null, EvaluationQualityV2TopicEvaluationScoringSet ScoringSet = null, string ContextId = null, StatusEnum? Status = null, bool? AgentHasRead = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, string EventType = null, string ResourceId = null, string ResourceType = null, List<string> DivisionIds = null, bool? Rescore = null, DateTime? ConversationDate = null, List<string> MediaType = null, EvaluationQualityV2TopicCalibration Calibration = null, EvaluationQualityV2TopicEvaluationSource EvaluationSource = null, string AssigneeUserId = null, string PreviousAssigneeUserId = null)
+        /// <param name="EvaluationContextId">EvaluationContextId.</param>
+        /// <param name="DisputeCount">DisputeCount.</param>
+        /// <param name="Version">Version.</param>
+        /// <param name="PreviousStatus">PreviousStatus.</param>
+        /// <param name="DeclinedReview">DeclinedReview.</param>
+        /// <param name="RetractedEvaluation">RetractedEvaluation.</param>
+        public EvaluationQualityV2TopicEvaluationV2(string Id = null, string ConversationId = null, EvaluationQualityV2TopicUser Agent = null, EvaluationQualityV2TopicUser Evaluator = null, DateTime? EventTime = null, string EvaluationFormId = null, string FormName = null, EvaluationQualityV2TopicEvaluationScoringSet ScoringSet = null, string ContextId = null, StatusEnum? Status = null, bool? AgentHasRead = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, string EventType = null, string ResourceId = null, string ResourceType = null, List<string> DivisionIds = null, bool? Rescore = null, DateTime? ConversationDate = null, List<string> MediaType = null, EvaluationQualityV2TopicCalibration Calibration = null, EvaluationQualityV2TopicEvaluationSource EvaluationSource = null, string AssigneeUserId = null, string PreviousAssigneeUserId = null, string EvaluationContextId = null, int? DisputeCount = null, int? Version = null, PreviousStatusEnum? PreviousStatus = null, bool? DeclinedReview = null, EvaluationQualityV2TopicEvaluationReference RetractedEvaluation = null)
         {
             this.Id = Id;
             this.ConversationId = ConversationId;
@@ -110,6 +177,12 @@ namespace PureCloudPlatform.Client.V2.Model
             this.EvaluationSource = EvaluationSource;
             this.AssigneeUserId = AssigneeUserId;
             this.PreviousAssigneeUserId = PreviousAssigneeUserId;
+            this.EvaluationContextId = EvaluationContextId;
+            this.DisputeCount = DisputeCount;
+            this.Version = Version;
+            this.PreviousStatus = PreviousStatus;
+            this.DeclinedReview = DeclinedReview;
+            this.RetractedEvaluation = RetractedEvaluation;
             
         }
         
@@ -308,6 +381,48 @@ namespace PureCloudPlatform.Client.V2.Model
         public string PreviousAssigneeUserId { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets EvaluationContextId
+        /// </summary>
+        [DataMember(Name="evaluationContextId", EmitDefaultValue=false)]
+        public string EvaluationContextId { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets DisputeCount
+        /// </summary>
+        [DataMember(Name="disputeCount", EmitDefaultValue=false)]
+        public int? DisputeCount { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets Version
+        /// </summary>
+        [DataMember(Name="version", EmitDefaultValue=false)]
+        public int? Version { get; set; }
+
+
+
+
+
+        /// <summary>
+        /// Gets or Sets DeclinedReview
+        /// </summary>
+        [DataMember(Name="declinedReview", EmitDefaultValue=false)]
+        public bool? DeclinedReview { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets RetractedEvaluation
+        /// </summary>
+        [DataMember(Name="retractedEvaluation", EmitDefaultValue=false)]
+        public EvaluationQualityV2TopicEvaluationReference RetractedEvaluation { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -342,6 +457,12 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EvaluationSource: ").Append(EvaluationSource).Append("\n");
             sb.Append("  AssigneeUserId: ").Append(AssigneeUserId).Append("\n");
             sb.Append("  PreviousAssigneeUserId: ").Append(PreviousAssigneeUserId).Append("\n");
+            sb.Append("  EvaluationContextId: ").Append(EvaluationContextId).Append("\n");
+            sb.Append("  DisputeCount: ").Append(DisputeCount).Append("\n");
+            sb.Append("  Version: ").Append(Version).Append("\n");
+            sb.Append("  PreviousStatus: ").Append(PreviousStatus).Append("\n");
+            sb.Append("  DeclinedReview: ").Append(DeclinedReview).Append("\n");
+            sb.Append("  RetractedEvaluation: ").Append(RetractedEvaluation).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -506,6 +627,36 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PreviousAssigneeUserId == other.PreviousAssigneeUserId ||
                     this.PreviousAssigneeUserId != null &&
                     this.PreviousAssigneeUserId.Equals(other.PreviousAssigneeUserId)
+                ) &&
+                (
+                    this.EvaluationContextId == other.EvaluationContextId ||
+                    this.EvaluationContextId != null &&
+                    this.EvaluationContextId.Equals(other.EvaluationContextId)
+                ) &&
+                (
+                    this.DisputeCount == other.DisputeCount ||
+                    this.DisputeCount != null &&
+                    this.DisputeCount.Equals(other.DisputeCount)
+                ) &&
+                (
+                    this.Version == other.Version ||
+                    this.Version != null &&
+                    this.Version.Equals(other.Version)
+                ) &&
+                (
+                    this.PreviousStatus == other.PreviousStatus ||
+                    this.PreviousStatus != null &&
+                    this.PreviousStatus.Equals(other.PreviousStatus)
+                ) &&
+                (
+                    this.DeclinedReview == other.DeclinedReview ||
+                    this.DeclinedReview != null &&
+                    this.DeclinedReview.Equals(other.DeclinedReview)
+                ) &&
+                (
+                    this.RetractedEvaluation == other.RetractedEvaluation ||
+                    this.RetractedEvaluation != null &&
+                    this.RetractedEvaluation.Equals(other.RetractedEvaluation)
                 );
         }
 
@@ -594,6 +745,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.PreviousAssigneeUserId != null)
                     hash = hash * 59 + this.PreviousAssigneeUserId.GetHashCode();
+
+                if (this.EvaluationContextId != null)
+                    hash = hash * 59 + this.EvaluationContextId.GetHashCode();
+
+                if (this.DisputeCount != null)
+                    hash = hash * 59 + this.DisputeCount.GetHashCode();
+
+                if (this.Version != null)
+                    hash = hash * 59 + this.Version.GetHashCode();
+
+                if (this.PreviousStatus != null)
+                    hash = hash * 59 + this.PreviousStatus.GetHashCode();
+
+                if (this.DeclinedReview != null)
+                    hash = hash * 59 + this.DeclinedReview.GetHashCode();
+
+                if (this.RetractedEvaluation != null)
+                    hash = hash * 59 + this.RetractedEvaluation.GetHashCode();
 
                 return hash;
             }

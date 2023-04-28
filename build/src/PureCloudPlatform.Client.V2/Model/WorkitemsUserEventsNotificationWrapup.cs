@@ -51,21 +51,60 @@ namespace PureCloudPlatform.Client.V2.Model
             Remove
         }
         /// <summary>
+        /// Gets or Sets Action
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ActionEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum Add for "Add"
+            /// </summary>
+            [EnumMember(Value = "Add")]
+            Add,
+            
+            /// <summary>
+            /// Enum Remove for "Remove"
+            /// </summary>
+            [EnumMember(Value = "Remove")]
+            Remove
+        }
+        /// <summary>
         /// Gets or Sets Op
         /// </summary>
         [DataMember(Name="op", EmitDefaultValue=false)]
         public OpEnum? Op { get; set; }
+        /// <summary>
+        /// Gets or Sets Action
+        /// </summary>
+        [DataMember(Name="action", EmitDefaultValue=false)]
+        public ActionEnum? Action { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkitemsUserEventsNotificationWrapup" /> class.
         /// </summary>
         /// <param name="Code">Code.</param>
         /// <param name="UserId">UserId.</param>
         /// <param name="Op">Op.</param>
-        public WorkitemsUserEventsNotificationWrapup(string Code = null, string UserId = null, OpEnum? Op = null)
+        /// <param name="Action">Action.</param>
+        public WorkitemsUserEventsNotificationWrapup(string Code = null, string UserId = null, OpEnum? Op = null, ActionEnum? Action = null)
         {
             this.Code = Code;
             this.UserId = UserId;
             this.Op = Op;
+            this.Action = Action;
             
         }
         
@@ -88,6 +127,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -100,6 +141,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  Op: ").Append(Op).Append("\n");
+            sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -154,6 +196,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Op == other.Op ||
                     this.Op != null &&
                     this.Op.Equals(other.Op)
+                ) &&
+                (
+                    this.Action == other.Action ||
+                    this.Action != null &&
+                    this.Action.Equals(other.Action)
                 );
         }
 
@@ -176,6 +223,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Op != null)
                     hash = hash * 59 + this.Op.GetHashCode();
+
+                if (this.Action != null)
+                    hash = hash * 59 + this.Action.GetHashCode();
 
                 return hash;
             }

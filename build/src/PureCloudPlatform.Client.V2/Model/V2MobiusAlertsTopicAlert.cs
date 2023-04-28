@@ -60,7 +60,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Close for "CLOSE"
             /// </summary>
             [EnumMember(Value = "CLOSE")]
-            Close
+            Close,
+            
+            /// <summary>
+            /// Enum Renotify for "RENOTIFY"
+            /// </summary>
+            [EnumMember(Value = "RENOTIFY")]
+            Renotify
         }
         /// <summary>
         /// Gets or Sets Action

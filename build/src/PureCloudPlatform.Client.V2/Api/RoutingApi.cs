@@ -998,8 +998,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiGroup">The Group of Key Performance Indicators to return (optional)</param>
+        /// <param name="expand">Parameter to request additional data to return in KPI payload (optional)</param>
         /// <returns>List&lt;KeyPerformanceIndicator&gt;</returns>
-        List<KeyPerformanceIndicator> GetRoutingPredictorsKeyperformanceindicators (string kpiGroup = null);
+        List<KeyPerformanceIndicator> GetRoutingPredictorsKeyperformanceindicators (string kpiGroup = null, List<string> expand = null);
 
         /// <summary>
         /// Get a list of Key Performance Indicators
@@ -1009,8 +1010,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiGroup">The Group of Key Performance Indicators to return (optional)</param>
+        /// <param name="expand">Parameter to request additional data to return in KPI payload (optional)</param>
         /// <returns>ApiResponse of List&lt;KeyPerformanceIndicator&gt;</returns>
-        ApiResponse<List<KeyPerformanceIndicator>> GetRoutingPredictorsKeyperformanceindicatorsWithHttpInfo (string kpiGroup = null);
+        ApiResponse<List<KeyPerformanceIndicator>> GetRoutingPredictorsKeyperformanceindicatorsWithHttpInfo (string kpiGroup = null, List<string> expand = null);
 
         /// <summary>
         /// Get details about this queue.
@@ -4080,8 +4082,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiGroup">The Group of Key Performance Indicators to return (optional)</param>
+        /// <param name="expand">Parameter to request additional data to return in KPI payload (optional)</param>
         /// <returns>Task of List&lt;KeyPerformanceIndicator&gt;</returns>
-        System.Threading.Tasks.Task<List<KeyPerformanceIndicator>> GetRoutingPredictorsKeyperformanceindicatorsAsync (string kpiGroup = null);
+        System.Threading.Tasks.Task<List<KeyPerformanceIndicator>> GetRoutingPredictorsKeyperformanceindicatorsAsync (string kpiGroup = null, List<string> expand = null);
 
         /// <summary>
         /// Get a list of Key Performance Indicators
@@ -4091,8 +4094,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiGroup">The Group of Key Performance Indicators to return (optional)</param>
+        /// <param name="expand">Parameter to request additional data to return in KPI payload (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;KeyPerformanceIndicator&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<KeyPerformanceIndicator>>> GetRoutingPredictorsKeyperformanceindicatorsAsyncWithHttpInfo (string kpiGroup = null);
+        System.Threading.Tasks.Task<ApiResponse<List<KeyPerformanceIndicator>>> GetRoutingPredictorsKeyperformanceindicatorsAsyncWithHttpInfo (string kpiGroup = null, List<string> expand = null);
 
         /// <summary>
         /// Get details about this queue.
@@ -14384,10 +14388,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiGroup">The Group of Key Performance Indicators to return (optional)</param>
+        /// <param name="expand">Parameter to request additional data to return in KPI payload (optional)</param>
         /// <returns>List&lt;KeyPerformanceIndicator&gt;</returns>
-        public List<KeyPerformanceIndicator> GetRoutingPredictorsKeyperformanceindicators (string kpiGroup = null)
+        public List<KeyPerformanceIndicator> GetRoutingPredictorsKeyperformanceindicators (string kpiGroup = null, List<string> expand = null)
         {
-             ApiResponse<List<KeyPerformanceIndicator>> localVarResponse = GetRoutingPredictorsKeyperformanceindicatorsWithHttpInfo(kpiGroup);
+             ApiResponse<List<KeyPerformanceIndicator>> localVarResponse = GetRoutingPredictorsKeyperformanceindicatorsWithHttpInfo(kpiGroup, expand);
              return localVarResponse.Data;
         }
 
@@ -14396,8 +14401,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiGroup">The Group of Key Performance Indicators to return (optional)</param>
+        /// <param name="expand">Parameter to request additional data to return in KPI payload (optional)</param>
         /// <returns>ApiResponse of List&lt;KeyPerformanceIndicator&gt;</returns>
-        public ApiResponse< List<KeyPerformanceIndicator> > GetRoutingPredictorsKeyperformanceindicatorsWithHttpInfo (string kpiGroup = null)
+        public ApiResponse< List<KeyPerformanceIndicator> > GetRoutingPredictorsKeyperformanceindicatorsWithHttpInfo (string kpiGroup = null, List<string> expand = null)
         { 
 
             var localVarPath = "/api/v2/routing/predictors/keyperformanceindicators";
@@ -14433,6 +14439,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (kpiGroup != null) localVarQueryParams.Add(new Tuple<string, string>("kpiGroup", this.Configuration.ApiClient.ParameterToString(kpiGroup)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -14475,10 +14482,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiGroup">The Group of Key Performance Indicators to return (optional)</param>
+        /// <param name="expand">Parameter to request additional data to return in KPI payload (optional)</param>
         /// <returns>Task of List&lt;KeyPerformanceIndicator&gt;</returns>
-        public async System.Threading.Tasks.Task<List<KeyPerformanceIndicator>> GetRoutingPredictorsKeyperformanceindicatorsAsync (string kpiGroup = null)
+        public async System.Threading.Tasks.Task<List<KeyPerformanceIndicator>> GetRoutingPredictorsKeyperformanceindicatorsAsync (string kpiGroup = null, List<string> expand = null)
         {
-             ApiResponse<List<KeyPerformanceIndicator>> localVarResponse = await GetRoutingPredictorsKeyperformanceindicatorsAsyncWithHttpInfo(kpiGroup);
+             ApiResponse<List<KeyPerformanceIndicator>> localVarResponse = await GetRoutingPredictorsKeyperformanceindicatorsAsyncWithHttpInfo(kpiGroup, expand);
              return localVarResponse.Data;
 
         }
@@ -14488,8 +14496,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="kpiGroup">The Group of Key Performance Indicators to return (optional)</param>
+        /// <param name="expand">Parameter to request additional data to return in KPI payload (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;KeyPerformanceIndicator&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<KeyPerformanceIndicator>>> GetRoutingPredictorsKeyperformanceindicatorsAsyncWithHttpInfo (string kpiGroup = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<KeyPerformanceIndicator>>> GetRoutingPredictorsKeyperformanceindicatorsAsyncWithHttpInfo (string kpiGroup = null, List<string> expand = null)
         { 
 
             var localVarPath = "/api/v2/routing/predictors/keyperformanceindicators";
@@ -14525,6 +14534,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (kpiGroup != null) localVarQueryParams.Add(new Tuple<string, string>("kpiGroup", this.Configuration.ApiClient.ParameterToString(kpiGroup)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 

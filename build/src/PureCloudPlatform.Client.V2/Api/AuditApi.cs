@@ -110,7 +110,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create audit query execution
         /// </summary>
         /// <remarks>
-        /// 
+        /// Use /api/v2/audits/query/servicemapping endpoint for a list of valid values
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -121,7 +121,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create audit query execution
         /// </summary>
         /// <remarks>
-        /// 
+        /// Use /api/v2/audits/query/servicemapping endpoint for a list of valid values
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -132,7 +132,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Use /api/v2/audits/query/realtime/servicemapping endpoint for a list of valid values
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -144,7 +144,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Use /api/v2/audits/query/realtime/servicemapping endpoint for a list of valid values
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -250,7 +250,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create audit query execution
         /// </summary>
         /// <remarks>
-        /// 
+        /// Use /api/v2/audits/query/servicemapping endpoint for a list of valid values
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -261,7 +261,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create audit query execution
         /// </summary>
         /// <remarks>
-        /// 
+        /// Use /api/v2/audits/query/servicemapping endpoint for a list of valid values
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -272,7 +272,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Use /api/v2/audits/query/realtime/servicemapping endpoint for a list of valid values
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -284,7 +284,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Use /api/v2/audits/query/realtime/servicemapping endpoint for a list of valid values
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -1141,7 +1141,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create audit query execution 
+        /// Create audit query execution Use /api/v2/audits/query/servicemapping endpoint for a list of valid values
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -1153,7 +1153,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create audit query execution 
+        /// Create audit query execution Use /api/v2/audits/query/servicemapping endpoint for a list of valid values
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -1240,7 +1240,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create audit query execution 
+        /// Create audit query execution Use /api/v2/audits/query/servicemapping endpoint for a list of valid values
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -1253,7 +1253,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create audit query execution 
+        /// Create audit query execution Use /api/v2/audits/query/servicemapping endpoint for a list of valid values
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -1342,7 +1342,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits. 
+        /// This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits. Use /api/v2/audits/query/realtime/servicemapping endpoint for a list of valid values
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -1355,7 +1355,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits. 
+        /// This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits. Use /api/v2/audits/query/realtime/servicemapping endpoint for a list of valid values
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -1444,7 +1444,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits. 
+        /// This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits. Use /api/v2/audits/query/realtime/servicemapping endpoint for a list of valid values
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
@@ -1458,7 +1458,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits. 
+        /// This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits. Use /api/v2/audits/query/realtime/servicemapping endpoint for a list of valid values
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>

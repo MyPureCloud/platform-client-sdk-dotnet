@@ -153,6 +153,7 @@ namespace PureCloudPlatform.Client.V2.Client
               {"v2.users.{id}.workforcemanagement.shrinkage.jobs", typeof(WfmHistoricalShrinkageCalculationsCompleteTopicHistoricalShrinkageCalculationsCompleteNotification)},
               {"v2.users.{id}.workforcemanagement.timeoffbalance.jobs", typeof(WfmTimeOffBalanceJobTopicTimeOffBalanceJobNotification)},
               {"v2.users.{id}.workforcemanagement.timeoffrequests", typeof(WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate)},
+              {"v2.video.conferences.{id}", typeof(VideoConferenceUpdateTopicVideoConference)},
               {"v2.webdeployments.configurations.{id}", typeof(WebDeploymentsConfigTopicWebMessagingConfigChangeEventBody)},
               {"v2.webdeployments.deployments.{id}", typeof(WebDeploymentsDeploymentTopicWebMessagingDeploymentChangeEventBody)},
               {"v2.wem.learning.assignments.modules.{id}", typeof(LearningAssignmentRuleRunTopicLearningAssignmentRuleRunNotification)},
