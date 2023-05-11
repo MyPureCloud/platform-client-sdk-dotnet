@@ -71,6 +71,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOutboundEvent**](OutboundApi.html#getoutboundevent) | **GET** /api/v2/outbound/events/{eventId} | Get Dialer Event |
 | [**GetOutboundEvents**](OutboundApi.html#getoutboundevents) | **GET** /api/v2/outbound/events | Query Event Logs |
 | [**GetOutboundMessagingcampaign**](OutboundApi.html#getoutboundmessagingcampaign) | **GET** /api/v2/outbound/messagingcampaigns/{messagingCampaignId} | Get an Outbound Messaging Campaign |
+| [**GetOutboundMessagingcampaignDiagnostics**](OutboundApi.html#getoutboundmessagingcampaigndiagnostics) | **GET** /api/v2/outbound/messagingcampaigns/{messagingCampaignId}/diagnostics | Get messaging campaign diagnostics |
 | [**GetOutboundMessagingcampaignProgress**](OutboundApi.html#getoutboundmessagingcampaignprogress) | **GET** /api/v2/outbound/messagingcampaigns/{messagingCampaignId}/progress | Get messaging campaign&#39;s progress |
 | [**GetOutboundMessagingcampaigns**](OutboundApi.html#getoutboundmessagingcampaigns) | **GET** /api/v2/outbound/messagingcampaigns | Query a list of Messaging Campaigns |
 | [**GetOutboundMessagingcampaignsDivisionview**](OutboundApi.html#getoutboundmessagingcampaignsdivisionview) | **GET** /api/v2/outbound/messagingcampaigns/divisionviews/{messagingCampaignId} | Get a basic Messaging Campaign information object |
@@ -4556,6 +4557,72 @@ namespace Example
 ### Return type
 
 [**MessagingCampaign**](MessagingCampaign.html)
+
+<a name="getoutboundmessagingcampaigndiagnostics"></a>
+
+## [**MessagingCampaignDiagnostics**](MessagingCampaignDiagnostics.html) GetOutboundMessagingcampaignDiagnostics (string messagingCampaignId)
+
+
+
+Get messaging campaign diagnostics
+
+
+
+Requires ANY permissions: 
+
+* outbound:messagingCampaign:view
+* outbound:emailCampaign:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundMessagingcampaignDiagnosticsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var messagingCampaignId = messagingCampaignId_example;  // string | The Messaging Campaign ID
+
+            try
+            { 
+                // Get messaging campaign diagnostics
+                MessagingCampaignDiagnostics result = apiInstance.GetOutboundMessagingcampaignDiagnostics(messagingCampaignId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundMessagingcampaignDiagnostics: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **messagingCampaignId** | **string**| The Messaging Campaign ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**MessagingCampaignDiagnostics**](MessagingCampaignDiagnostics.html)
 
 <a name="getoutboundmessagingcampaignprogress"></a>
 

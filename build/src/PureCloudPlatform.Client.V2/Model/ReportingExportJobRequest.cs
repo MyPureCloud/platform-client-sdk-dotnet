@@ -331,6 +331,12 @@ namespace PureCloudPlatform.Client.V2.Model
             DashboardDetail,
             
             /// <summary>
+            /// Enum DashboardUsers for "DASHBOARD_USERS"
+            /// </summary>
+            [EnumMember(Value = "DASHBOARD_USERS")]
+            DashboardUsers,
+            
+            /// <summary>
             /// Enum JourneyActionMapSummaryView for "JOURNEY_ACTION_MAP_SUMMARY_VIEW"
             /// </summary>
             [EnumMember(Value = "JOURNEY_ACTION_MAP_SUMMARY_VIEW")]
@@ -708,7 +714,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SelectedColumns">The list of ordered selected columns from the export view by the user.</param>
         /// <param name="HasCustomParticipantAttributes">Indicates if custom participant attributes will be exported.</param>
         /// <param name="RecipientEmails">The list of email recipients for the exports.</param>
-        public ReportingExportJobRequest(string Name = null, string TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string Period = null, ViewTypeEnum? ViewType = null, ViewFilter Filter = null, bool? Read = null, string Locale = null, bool? HasFormatDurations = null, bool? HasSplitFilters = null, bool? ExcludeEmptyRows = null, bool? HasSplitByMedia = null, bool? HasSummaryRow = null, CsvDelimiterEnum? CsvDelimiter = null, List<SelectedColumns> SelectedColumns = null, bool? HasCustomParticipantAttributes = null, List<string> RecipientEmails = null)
+        /// <param name="IncludeDurationFormatInHeader">Indicates whether to include selected duration format to the column headers.</param>
+        public ReportingExportJobRequest(string Name = null, string TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string Period = null, ViewTypeEnum? ViewType = null, ViewFilter Filter = null, bool? Read = null, string Locale = null, bool? HasFormatDurations = null, bool? HasSplitFilters = null, bool? ExcludeEmptyRows = null, bool? HasSplitByMedia = null, bool? HasSummaryRow = null, CsvDelimiterEnum? CsvDelimiter = null, List<SelectedColumns> SelectedColumns = null, bool? HasCustomParticipantAttributes = null, List<string> RecipientEmails = null, bool? IncludeDurationFormatInHeader = null)
         {
             this.Name = Name;
             this.TimeZone = TimeZone;
@@ -728,6 +735,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SelectedColumns = SelectedColumns;
             this.HasCustomParticipantAttributes = HasCustomParticipantAttributes;
             this.RecipientEmails = RecipientEmails;
+            this.IncludeDurationFormatInHeader = IncludeDurationFormatInHeader;
             
         }
         
@@ -873,6 +881,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> RecipientEmails { get; set; }
 
 
+
+        /// <summary>
+        /// Indicates whether to include selected duration format to the column headers
+        /// </summary>
+        /// <value>Indicates whether to include selected duration format to the column headers</value>
+        [DataMember(Name="includeDurationFormatInHeader", EmitDefaultValue=false)]
+        public bool? IncludeDurationFormatInHeader { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -900,6 +917,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SelectedColumns: ").Append(SelectedColumns).Append("\n");
             sb.Append("  HasCustomParticipantAttributes: ").Append(HasCustomParticipantAttributes).Append("\n");
             sb.Append("  RecipientEmails: ").Append(RecipientEmails).Append("\n");
+            sb.Append("  IncludeDurationFormatInHeader: ").Append(IncludeDurationFormatInHeader).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1029,6 +1047,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RecipientEmails == other.RecipientEmails ||
                     this.RecipientEmails != null &&
                     this.RecipientEmails.SequenceEqual(other.RecipientEmails)
+                ) &&
+                (
+                    this.IncludeDurationFormatInHeader == other.IncludeDurationFormatInHeader ||
+                    this.IncludeDurationFormatInHeader != null &&
+                    this.IncludeDurationFormatInHeader.Equals(other.IncludeDurationFormatInHeader)
                 );
         }
 
@@ -1096,6 +1119,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.RecipientEmails != null)
                     hash = hash * 59 + this.RecipientEmails.GetHashCode();
+
+                if (this.IncludeDurationFormatInHeader != null)
+                    hash = hash * 59 + this.IncludeDurationFormatInHeader.GetHashCode();
 
                 return hash;
             }

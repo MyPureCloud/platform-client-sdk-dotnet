@@ -1328,7 +1328,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="evaluationId">evaluationId</param>
         /// <param name="body">evaluation</param>
-        /// <param name="expand">evaluatorId, evaluationForm (optional)</param>
+        /// <param name="expand">evaluatorId, evaluationForm, assignee (optional)</param>
         /// <returns>EvaluationResponse</returns>
         EvaluationResponse PutQualityConversationEvaluation (string conversationId, string evaluationId, Evaluation body, string expand = null);
 
@@ -1342,7 +1342,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="evaluationId">evaluationId</param>
         /// <param name="body">evaluation</param>
-        /// <param name="expand">evaluatorId, evaluationForm (optional)</param>
+        /// <param name="expand">evaluatorId, evaluationForm, assignee (optional)</param>
         /// <returns>ApiResponse of EvaluationResponse</returns>
         ApiResponse<EvaluationResponse> PutQualityConversationEvaluationWithHttpInfo (string conversationId, string evaluationId, Evaluation body, string expand = null);
 
@@ -2758,7 +2758,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="evaluationId">evaluationId</param>
         /// <param name="body">evaluation</param>
-        /// <param name="expand">evaluatorId, evaluationForm (optional)</param>
+        /// <param name="expand">evaluatorId, evaluationForm, assignee (optional)</param>
         /// <returns>Task of EvaluationResponse</returns>
         System.Threading.Tasks.Task<EvaluationResponse> PutQualityConversationEvaluationAsync (string conversationId, string evaluationId, Evaluation body, string expand = null);
 
@@ -2772,7 +2772,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="evaluationId">evaluationId</param>
         /// <param name="body">evaluation</param>
-        /// <param name="expand">evaluatorId, evaluationForm (optional)</param>
+        /// <param name="expand">evaluatorId, evaluationForm, assignee (optional)</param>
         /// <returns>Task of ApiResponse (EvaluationResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<EvaluationResponse>> PutQualityConversationEvaluationAsyncWithHttpInfo (string conversationId, string evaluationId, Evaluation body, string expand = null);
 
@@ -13246,7 +13246,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="evaluationId">evaluationId</param>
         /// <param name="body">evaluation</param>
-        /// <param name="expand">evaluatorId, evaluationForm (optional)</param>
+        /// <param name="expand">evaluatorId, evaluationForm, assignee (optional)</param>
         /// <returns>EvaluationResponse</returns>
         public EvaluationResponse PutQualityConversationEvaluation (string conversationId, string evaluationId, Evaluation body, string expand = null)
         {
@@ -13261,7 +13261,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="evaluationId">evaluationId</param>
         /// <param name="body">evaluation</param>
-        /// <param name="expand">evaluatorId, evaluationForm (optional)</param>
+        /// <param name="expand">evaluatorId, evaluationForm, assignee (optional)</param>
         /// <returns>ApiResponse of EvaluationResponse</returns>
         public ApiResponse< EvaluationResponse > PutQualityConversationEvaluationWithHttpInfo (string conversationId, string evaluationId, Evaluation body, string expand = null)
         { 
@@ -13360,7 +13360,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="evaluationId">evaluationId</param>
         /// <param name="body">evaluation</param>
-        /// <param name="expand">evaluatorId, evaluationForm (optional)</param>
+        /// <param name="expand">evaluatorId, evaluationForm, assignee (optional)</param>
         /// <returns>Task of EvaluationResponse</returns>
         public async System.Threading.Tasks.Task<EvaluationResponse> PutQualityConversationEvaluationAsync (string conversationId, string evaluationId, Evaluation body, string expand = null)
         {
@@ -13376,7 +13376,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="evaluationId">evaluationId</param>
         /// <param name="body">evaluation</param>
-        /// <param name="expand">evaluatorId, evaluationForm (optional)</param>
+        /// <param name="expand">evaluatorId, evaluationForm, assignee (optional)</param>
         /// <returns>Task of ApiResponse (EvaluationResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<EvaluationResponse>> PutQualityConversationEvaluationAsyncWithHttpInfo (string conversationId, string evaluationId, Evaluation body, string expand = null)
         { 

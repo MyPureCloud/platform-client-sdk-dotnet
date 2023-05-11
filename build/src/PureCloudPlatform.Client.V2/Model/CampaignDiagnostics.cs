@@ -72,6 +72,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? ScheduledInteractionsCount { get; private set; }
 
 
+
+        /// <summary>
+        /// Current number of time zone rescheduled calls on the campaign
+        /// </summary>
+        /// <value>Current number of time zone rescheduled calls on the campaign</value>
+        [DataMember(Name="timeZoneRescheduledCallsCount", EmitDefaultValue=false)]
+        public int? TimeZoneRescheduledCallsCount { get; private set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,6 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RuleSetDiagnostics: ").Append(RuleSetDiagnostics).Append("\n");
             sb.Append("  OutstandingInteractionsCount: ").Append(OutstandingInteractionsCount).Append("\n");
             sb.Append("  ScheduledInteractionsCount: ").Append(ScheduledInteractionsCount).Append("\n");
+            sb.Append("  TimeZoneRescheduledCallsCount: ").Append(TimeZoneRescheduledCallsCount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -150,6 +160,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ScheduledInteractionsCount == other.ScheduledInteractionsCount ||
                     this.ScheduledInteractionsCount != null &&
                     this.ScheduledInteractionsCount.Equals(other.ScheduledInteractionsCount)
+                ) &&
+                (
+                    this.TimeZoneRescheduledCallsCount == other.TimeZoneRescheduledCallsCount ||
+                    this.TimeZoneRescheduledCallsCount != null &&
+                    this.TimeZoneRescheduledCallsCount.Equals(other.TimeZoneRescheduledCallsCount)
                 );
         }
 
@@ -178,6 +193,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ScheduledInteractionsCount != null)
                     hash = hash * 59 + this.ScheduledInteractionsCount.GetHashCode();
+
+                if (this.TimeZoneRescheduledCallsCount != null)
+                    hash = hash * 59 + this.TimeZoneRescheduledCallsCount.GetHashCode();
 
                 return hash;
             }

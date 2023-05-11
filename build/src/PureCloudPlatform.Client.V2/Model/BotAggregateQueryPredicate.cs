@@ -157,6 +157,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Knowledgebaseid,
             
             /// <summary>
+            /// Enum Languagecode for "languageCode"
+            /// </summary>
+            [EnumMember(Value = "languageCode")]
+            Languagecode,
+            
+            /// <summary>
             /// Enum Lastactionid for "lastActionId"
             /// </summary>
             [EnumMember(Value = "lastActionId")]

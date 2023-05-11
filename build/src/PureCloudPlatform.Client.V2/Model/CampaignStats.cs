@@ -81,6 +81,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? ScheduledCalls { get; private set; }
 
 
+
+        /// <summary>
+        /// Number of campaign calls currently timezone rescheduled
+        /// </summary>
+        /// <value>Number of campaign calls currently timezone rescheduled</value>
+        [DataMember(Name="timeZoneRescheduledCalls", EmitDefaultValue=false)]
+        public int? TimeZoneRescheduledCalls { get; private set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -96,6 +105,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AdjustedCallsPerAgent: ").Append(AdjustedCallsPerAgent).Append("\n");
             sb.Append("  OutstandingCalls: ").Append(OutstandingCalls).Append("\n");
             sb.Append("  ScheduledCalls: ").Append(ScheduledCalls).Append("\n");
+            sb.Append("  TimeZoneRescheduledCalls: ").Append(TimeZoneRescheduledCalls).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -165,6 +175,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ScheduledCalls == other.ScheduledCalls ||
                     this.ScheduledCalls != null &&
                     this.ScheduledCalls.Equals(other.ScheduledCalls)
+                ) &&
+                (
+                    this.TimeZoneRescheduledCalls == other.TimeZoneRescheduledCalls ||
+                    this.TimeZoneRescheduledCalls != null &&
+                    this.TimeZoneRescheduledCalls.Equals(other.TimeZoneRescheduledCalls)
                 );
         }
 
@@ -196,6 +211,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ScheduledCalls != null)
                     hash = hash * 59 + this.ScheduledCalls.GetHashCode();
+
+                if (this.TimeZoneRescheduledCalls != null)
+                    hash = hash * 59 + this.TimeZoneRescheduledCalls.GetHashCode();
 
                 return hash;
             }

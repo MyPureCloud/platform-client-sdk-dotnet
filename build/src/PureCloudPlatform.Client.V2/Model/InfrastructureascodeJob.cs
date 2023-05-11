@@ -112,6 +112,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// acceleratorId
+        /// </summary>
+        /// <value>acceleratorId</value>
+        [DataMember(Name="acceleratorId", EmitDefaultValue=false)]
+        public string AcceleratorId { get; private set; }
+
+
+
+        /// <summary>
         /// dateSubmitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>dateSubmitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
@@ -168,6 +177,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  DryRun: ").Append(DryRun).Append("\n");
+            sb.Append("  AcceleratorId: ").Append(AcceleratorId).Append("\n");
             sb.Append("  DateSubmitted: ").Append(DateSubmitted).Append("\n");
             sb.Append("  SubmittedBy: ").Append(SubmittedBy).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
@@ -225,6 +235,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DryRun.Equals(other.DryRun)
                 ) &&
                 (
+                    this.AcceleratorId == other.AcceleratorId ||
+                    this.AcceleratorId != null &&
+                    this.AcceleratorId.Equals(other.AcceleratorId)
+                ) &&
+                (
                     this.DateSubmitted == other.DateSubmitted ||
                     this.DateSubmitted != null &&
                     this.DateSubmitted.Equals(other.DateSubmitted)
@@ -272,6 +287,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DryRun != null)
                     hash = hash * 59 + this.DryRun.GetHashCode();
+
+                if (this.AcceleratorId != null)
+                    hash = hash * 59 + this.AcceleratorId.GetHashCode();
 
                 if (this.DateSubmitted != null)
                     hash = hash * 59 + this.DateSubmitted.GetHashCode();

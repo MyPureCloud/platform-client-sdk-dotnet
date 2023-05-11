@@ -183,6 +183,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsConversationWithoutAttributes" /> class.
         /// </summary>
+        /// <param name="ConferenceStart">The start time of a conference call. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ConversationEnd">The end time of a conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ConversationId">Unique identifier for the conversation.</param>
         /// <param name="ConversationInitiator">Indicates the participant purpose of the participant initiating a message conversation.</param>
@@ -199,8 +200,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Surveys">Surveys associated with this conversation.</param>
         /// <param name="Resolutions">Resolutions associated with this conversation.</param>
         /// <param name="Participants">Participants in the conversation.</param>
-        public AnalyticsConversationWithoutAttributes(DateTime? ConversationEnd = null, string ConversationId = null, ConversationInitiatorEnum? ConversationInitiator = null, DateTime? ConversationStart = null, bool? CustomerParticipation = null, List<string> DivisionIds = null, string ExternalTag = null, List<string> KnowledgeBaseIds = null, double? MediaStatsMinConversationMos = null, double? MediaStatsMinConversationRFactor = null, OriginatingDirectionEnum? OriginatingDirection = null, bool? SelfServed = null, List<AnalyticsEvaluation> Evaluations = null, List<AnalyticsSurvey> Surveys = null, List<AnalyticsResolution> Resolutions = null, List<AnalyticsParticipantWithoutAttributes> Participants = null)
+        public AnalyticsConversationWithoutAttributes(DateTime? ConferenceStart = null, DateTime? ConversationEnd = null, string ConversationId = null, ConversationInitiatorEnum? ConversationInitiator = null, DateTime? ConversationStart = null, bool? CustomerParticipation = null, List<string> DivisionIds = null, string ExternalTag = null, List<string> KnowledgeBaseIds = null, double? MediaStatsMinConversationMos = null, double? MediaStatsMinConversationRFactor = null, OriginatingDirectionEnum? OriginatingDirection = null, bool? SelfServed = null, List<AnalyticsEvaluation> Evaluations = null, List<AnalyticsSurvey> Surveys = null, List<AnalyticsResolution> Resolutions = null, List<AnalyticsParticipantWithoutAttributes> Participants = null)
         {
+            this.ConferenceStart = ConferenceStart;
             this.ConversationEnd = ConversationEnd;
             this.ConversationId = ConversationId;
             this.ConversationInitiator = ConversationInitiator;
@@ -220,6 +222,15 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
+
+
+        /// <summary>
+        /// The start time of a conference call. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The start time of a conference call. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="conferenceStart", EmitDefaultValue=false)]
+        public DateTime? ConferenceStart { get; set; }
+
 
 
         /// <summary>
@@ -360,6 +371,7 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class AnalyticsConversationWithoutAttributes {\n");
 
+            sb.Append("  ConferenceStart: ").Append(ConferenceStart).Append("\n");
             sb.Append("  ConversationEnd: ").Append(ConversationEnd).Append("\n");
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
             sb.Append("  ConversationInitiator: ").Append(ConversationInitiator).Append("\n");
@@ -416,6 +428,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 return false;
 
             return true &&
+                (
+                    this.ConferenceStart == other.ConferenceStart ||
+                    this.ConferenceStart != null &&
+                    this.ConferenceStart.Equals(other.ConferenceStart)
+                ) &&
                 (
                     this.ConversationEnd == other.ConversationEnd ||
                     this.ConversationEnd != null &&
@@ -509,6 +526,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.ConferenceStart != null)
+                    hash = hash * 59 + this.ConferenceStart.GetHashCode();
+
                 if (this.ConversationEnd != null)
                     hash = hash * 59 + this.ConversationEnd.GetHashCode();
 

@@ -117,6 +117,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchConversationsCobrowsesessionParticipantAttributes**](ConversationsApi.html#patchconversationscobrowsesessionparticipantattributes) | **PATCH** /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
 | [**PatchConversationsCobrowsesessionParticipantCommunication**](ConversationsApi.html#patchconversationscobrowsesessionparticipantcommunication) | **PATCH** /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
 | [**PatchConversationsEmail**](ConversationsApi.html#patchconversationsemail) | **PATCH** /api/v2/conversations/emails/{conversationId} | Update a conversation by disconnecting all of the participants |
+| [**PatchConversationsEmailMessagesDraft**](ConversationsApi.html#patchconversationsemailmessagesdraft) | **PATCH** /api/v2/conversations/emails/{conversationId}/messages/draft | Reset conversation draft to its initial state and/or auto-fill draft content |
 | [**PatchConversationsEmailParticipant**](ConversationsApi.html#patchconversationsemailparticipant) | **PATCH** /api/v2/conversations/emails/{conversationId}/participants/{participantId} | Update conversation participant |
 | [**PatchConversationsEmailParticipantAttributes**](ConversationsApi.html#patchconversationsemailparticipantattributes) | **PATCH** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
 | [**PatchConversationsEmailParticipantCommunication**](ConversationsApi.html#patchconversationsemailparticipantcommunication) | **PATCH** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
@@ -7534,6 +7535,76 @@ namespace Example
 ### Return type
 
 [**Conversation**](Conversation.html)
+
+<a name="patchconversationsemailmessagesdraft"></a>
+
+## [**EmailMessage**](EmailMessage.html) PatchConversationsEmailMessagesDraft (string conversationId, bool? autoFill = null, bool? discard = null, DraftManipulationRequest body = null)
+
+
+
+Reset conversation draft to its initial state and/or auto-fill draft content
+
+
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchConversationsEmailMessagesDraftExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var autoFill = true;  // bool? | autoFill (optional) 
+            var discard = true;  // bool? | discard (optional) 
+            var body = new DraftManipulationRequest(); // DraftManipulationRequest | Draft Manipulation Request (optional) 
+
+            try
+            { 
+                // Reset conversation draft to its initial state and/or auto-fill draft content
+                EmailMessage result = apiInstance.PatchConversationsEmailMessagesDraft(conversationId, autoFill, discard, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchConversationsEmailMessagesDraft: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **autoFill** | **bool?**| autoFill | [optional]  |
+| **discard** | **bool?**| discard | [optional]  |
+| **body** | [**DraftManipulationRequest**](DraftManipulationRequest.html)| Draft Manipulation Request | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EmailMessage**](EmailMessage.html)
 
 <a name="patchconversationsemailparticipant"></a>
 

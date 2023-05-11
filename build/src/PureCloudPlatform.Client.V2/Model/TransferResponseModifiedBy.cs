@@ -13,29 +13,36 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Organization settings for stations
+    /// TransferResponseModifiedBy
     /// </summary>
     [DataContract]
-    public partial class StationSettings :  IEquatable<StationSettings>
+    public partial class TransferResponseModifiedBy :  IEquatable<TransferResponseModifiedBy>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="StationSettings" /> class.
+        /// Initializes a new instance of the <see cref="TransferResponseModifiedBy" /> class.
         /// </summary>
-        /// <param name="FreeSeatingConfiguration">Configuration options for free-seating.</param>
-        public StationSettings(FreeSeatingConfiguration FreeSeatingConfiguration = null)
+        public TransferResponseModifiedBy()
         {
-            this.FreeSeatingConfiguration = FreeSeatingConfiguration;
             
         }
         
 
 
         /// <summary>
-        /// Configuration options for free-seating
+        /// The globally unique identifier for the object.
         /// </summary>
-        /// <value>Configuration options for free-seating</value>
-        [DataMember(Name="freeSeatingConfiguration", EmitDefaultValue=false)]
-        public FreeSeatingConfiguration FreeSeatingConfiguration { get; set; }
+        /// <value>The globally unique identifier for the object.</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; private set; }
+
+
+
+        /// <summary>
+        /// The URI for this object
+        /// </summary>
+        /// <value>The URI for this object</value>
+        [DataMember(Name="selfUri", EmitDefaultValue=false)]
+        public string SelfUri { get; private set; }
 
 
         /// <summary>
@@ -45,9 +52,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class StationSettings {\n");
+            sb.Append("class TransferResponseModifiedBy {\n");
 
-            sb.Append("  FreeSeatingConfiguration: ").Append(FreeSeatingConfiguration).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -73,15 +81,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as StationSettings);
+            return this.Equals(obj as TransferResponseModifiedBy);
         }
 
         /// <summary>
-        /// Returns true if StationSettings instances are equal
+        /// Returns true if TransferResponseModifiedBy instances are equal
         /// </summary>
-        /// <param name="other">Instance of StationSettings to be compared</param>
+        /// <param name="other">Instance of TransferResponseModifiedBy to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(StationSettings other)
+        public bool Equals(TransferResponseModifiedBy other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -89,9 +97,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.FreeSeatingConfiguration == other.FreeSeatingConfiguration ||
-                    this.FreeSeatingConfiguration != null &&
-                    this.FreeSeatingConfiguration.Equals(other.FreeSeatingConfiguration)
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.SelfUri == other.SelfUri ||
+                    this.SelfUri != null &&
+                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -106,8 +119,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.FreeSeatingConfiguration != null)
-                    hash = hash * 59 + this.FreeSeatingConfiguration.GetHashCode();
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
+
+                if (this.SelfUri != null)
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
 
                 return hash;
             }

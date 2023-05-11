@@ -172,6 +172,7 @@ title: ViewFilter
 | **HasSensitiveData** | **bool?** | Filter to indicate the transcript contains sensitive data. | [optional] |
 | **SubPath** | **string** | Filter for Sub Path | [optional] |
 | **UserState** | **string** | The user supplied state value in the view | [optional] |
+| **IsClearedByCustomer** | **bool?** | Filter to indicate if the customer cleared the conversation. | [optional] |
 {: class="table table-striped"}
 
 

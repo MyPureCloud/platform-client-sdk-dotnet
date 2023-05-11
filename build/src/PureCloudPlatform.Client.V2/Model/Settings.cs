@@ -23,10 +23,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="CommunicationBasedACW">Communication Based ACW.</param>
         /// <param name="IncludeNonAgentConversationSummary">Display communication summary.</param>
-        public Settings(bool? CommunicationBasedACW = null, bool? IncludeNonAgentConversationSummary = null)
+        /// <param name="AllowCallbackQueueSelection">Allow Callback Queue Selection.</param>
+        public Settings(bool? CommunicationBasedACW = null, bool? IncludeNonAgentConversationSummary = null, bool? AllowCallbackQueueSelection = null)
         {
             this.CommunicationBasedACW = CommunicationBasedACW;
             this.IncludeNonAgentConversationSummary = IncludeNonAgentConversationSummary;
+            this.AllowCallbackQueueSelection = AllowCallbackQueueSelection;
             
         }
         
@@ -49,6 +51,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? IncludeNonAgentConversationSummary { get; set; }
 
 
+
+        /// <summary>
+        /// Allow Callback Queue Selection
+        /// </summary>
+        /// <value>Allow Callback Queue Selection</value>
+        [DataMember(Name="allowCallbackQueueSelection", EmitDefaultValue=false)]
+        public bool? AllowCallbackQueueSelection { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,6 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  CommunicationBasedACW: ").Append(CommunicationBasedACW).Append("\n");
             sb.Append("  IncludeNonAgentConversationSummary: ").Append(IncludeNonAgentConversationSummary).Append("\n");
+            sb.Append("  AllowCallbackQueueSelection: ").Append(AllowCallbackQueueSelection).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,6 +121,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.IncludeNonAgentConversationSummary == other.IncludeNonAgentConversationSummary ||
                     this.IncludeNonAgentConversationSummary != null &&
                     this.IncludeNonAgentConversationSummary.Equals(other.IncludeNonAgentConversationSummary)
+                ) &&
+                (
+                    this.AllowCallbackQueueSelection == other.AllowCallbackQueueSelection ||
+                    this.AllowCallbackQueueSelection != null &&
+                    this.AllowCallbackQueueSelection.Equals(other.AllowCallbackQueueSelection)
                 );
         }
 
@@ -128,6 +145,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.IncludeNonAgentConversationSummary != null)
                     hash = hash * 59 + this.IncludeNonAgentConversationSummary.GetHashCode();
+
+                if (this.AllowCallbackQueueSelection != null)
+                    hash = hash * 59 + this.AllowCallbackQueueSelection.GetHashCode();
 
                 return hash;
             }

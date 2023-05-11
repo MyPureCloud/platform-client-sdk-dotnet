@@ -230,7 +230,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="CustomerId">Primary identifier of the customer in the source where the events for the session originate from..</param>
         /// <param name="CustomerIdType">Type of source customer identifier (e.g. cookie, email, phone)..</param>
-        /// <param name="Type">Session types indicate the type or category of sessions (e.g. web, ticket, delivery, atm)..</param>
+        /// <param name="Type">Session types indicate the type or category of sessions (e.g. web, app)..</param>
         /// <param name="ExternalId">Unique identifier in the external system where the events for the session originate from..</param>
         /// <param name="ExternalUrl">A URL that identifies an external system-of-record resource that may have more detailed information on the session..</param>
         /// <param name="ShortId">Shortened numeric identifier of 4-6 digits..</param>
@@ -339,9 +339,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Session types indicate the type or category of sessions (e.g. web, ticket, delivery, atm).
+        /// Session types indicate the type or category of sessions (e.g. web, app).
         /// </summary>
-        /// <value>Session types indicate the type or category of sessions (e.g. web, ticket, delivery, atm).</value>
+        /// <value>Session types indicate the type or category of sessions (e.g. web, app).</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
 

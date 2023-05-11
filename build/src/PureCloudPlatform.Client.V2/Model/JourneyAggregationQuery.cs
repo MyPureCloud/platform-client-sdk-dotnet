@@ -255,6 +255,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Touchpointqueueid,
             
             /// <summary>
+            /// Enum Touchpointrequestedrouting for "touchpointRequestedRouting"
+            /// </summary>
+            [EnumMember(Value = "touchpointRequestedRouting")]
+            Touchpointrequestedrouting,
+            
+            /// <summary>
+            /// Enum Touchpointusedrouting for "touchpointUsedRouting"
+            /// </summary>
+            [EnumMember(Value = "touchpointUsedRouting")]
+            Touchpointusedrouting,
+            
+            /// <summary>
             /// Enum Touchpointwrapupcode for "touchpointWrapupCode"
             /// </summary>
             [EnumMember(Value = "touchpointWrapupCode")]

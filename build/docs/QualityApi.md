@@ -3552,7 +3552,7 @@ namespace Example
             var conversationId = conversationId_example;  // string | conversationId
             var evaluationId = evaluationId_example;  // string | evaluationId
             var body = new Evaluation(); // Evaluation | evaluation
-            var expand = expand_example;  // string | evaluatorId, evaluationForm (optional) 
+            var expand = expand_example;  // string | evaluatorId, evaluationForm, assignee (optional) 
 
             try
             { 
@@ -3577,7 +3577,7 @@ namespace Example
 | **conversationId** | **string**| conversationId |  |
 | **evaluationId** | **string**| evaluationId |  |
 | **body** | [**Evaluation**](Evaluation.html)| evaluation |  |
-| **expand** | **string**| evaluatorId, evaluationForm | [optional]  |
+| **expand** | **string**| evaluatorId, evaluationForm, assignee | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

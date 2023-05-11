@@ -297,6 +297,12 @@ namespace PureCloudPlatform.Client.V2.Model
             DigitalRuleSmsPhoneNumberTypeMismatch,
             
             /// <summary>
+            /// Enum DigitalRuleErrorSkipped for "DIGITAL_RULE_ERROR_SKIPPED"
+            /// </summary>
+            [EnumMember(Value = "DIGITAL_RULE_ERROR_SKIPPED")]
+            DigitalRuleErrorSkipped,
+            
+            /// <summary>
             /// Enum DncAuthenticationFailure for "DNC_AUTHENTICATION_FAILURE"
             /// </summary>
             [EnumMember(Value = "DNC_AUTHENTICATION_FAILURE")]

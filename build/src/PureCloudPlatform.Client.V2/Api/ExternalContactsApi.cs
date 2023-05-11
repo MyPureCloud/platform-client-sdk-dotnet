@@ -1370,7 +1370,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Merge two contacts into a new contact record
         /// </summary>
         /// <remarks>
-        /// 
+        /// Two curated contacts cannot be merged. Refer to the Contact Merging article on the Developer Center for details
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">MergeRequest</param>
@@ -1381,7 +1381,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Merge two contacts into a new contact record
         /// </summary>
         /// <remarks>
-        /// 
+        /// Two curated contacts cannot be merged. Refer to the Contact Merging article on the Developer Center for details
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">MergeRequest</param>
@@ -3056,7 +3056,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Merge two contacts into a new contact record
         /// </summary>
         /// <remarks>
-        /// 
+        /// Two curated contacts cannot be merged. Refer to the Contact Merging article on the Developer Center for details
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">MergeRequest</param>
@@ -3067,7 +3067,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Merge two contacts into a new contact record
         /// </summary>
         /// <remarks>
-        /// 
+        /// Two curated contacts cannot be merged. Refer to the Contact Merging article on the Developer Center for details
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">MergeRequest</param>
@@ -14868,7 +14868,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Merge two contacts into a new contact record 
+        /// Merge two contacts into a new contact record Two curated contacts cannot be merged. Refer to the Contact Merging article on the Developer Center for details
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">MergeRequest</param>
@@ -14880,7 +14880,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Merge two contacts into a new contact record 
+        /// Merge two contacts into a new contact record Two curated contacts cannot be merged. Refer to the Contact Merging article on the Developer Center for details
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">MergeRequest</param>
@@ -14967,7 +14967,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Merge two contacts into a new contact record 
+        /// Merge two contacts into a new contact record Two curated contacts cannot be merged. Refer to the Contact Merging article on the Developer Center for details
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">MergeRequest</param>
@@ -14980,7 +14980,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Merge two contacts into a new contact record 
+        /// Merge two contacts into a new contact record Two curated contacts cannot be merged. Refer to the Contact Merging article on the Developer Center for details
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">MergeRequest</param>

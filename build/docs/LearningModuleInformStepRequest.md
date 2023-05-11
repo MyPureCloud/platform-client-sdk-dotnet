@@ -13,6 +13,8 @@ title: LearningModuleInformStepRequest
 | **SharingUri** | **string** | The sharing uri for Content type inform step | [optional] |
 | **ContentType** | **string** | The document type for Content type Inform step | [optional] |
 | **Order** | **int?** | The order of inform step in a learning module | |
+| **DisplayName** | **string** | The display name for the inform step | [optional] |
+| **Description** | **string** | The description for the inform step | [optional] |
 {: class="table table-striped"}
 
 

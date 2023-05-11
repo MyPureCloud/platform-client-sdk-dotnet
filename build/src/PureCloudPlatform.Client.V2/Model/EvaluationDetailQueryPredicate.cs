@@ -97,6 +97,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Evaluationid,
             
             /// <summary>
+            /// Enum Evaluationstatus for "evaluationStatus"
+            /// </summary>
+            [EnumMember(Value = "evaluationStatus")]
+            Evaluationstatus,
+            
+            /// <summary>
             /// Enum Evaluatorid for "evaluatorId"
             /// </summary>
             [EnumMember(Value = "evaluatorId")]

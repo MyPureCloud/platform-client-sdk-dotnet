@@ -6,7 +6,10 @@ build.bat
 build.sh
 docs/ADFS.md
 docs/AcceleratorInput.md
+docs/AcceleratorList.md
+docs/AcceleratorMetadata.md
 docs/AcceleratorParameter.md
+docs/AcceleratorSpecification.md
 docs/AcdEndDetailEventTopicAcdEndEvent.md
 docs/AcdStartDetailEventTopicAcdStartEvent.md
 docs/AchievedOutcome.md
@@ -483,6 +486,8 @@ docs/CampaignStats.md
 docs/CampaignTimeSlot.md
 docs/Card.md
 docs/CardAction.md
+docs/CarrierServicesApi.json
+docs/CarrierServicesApi.md
 docs/Category.md
 docs/CategoryEntityListing.md
 docs/CategoryListing.md
@@ -700,6 +705,7 @@ docs/ConversationChatEventTopicJourneyCustomerSession.md
 docs/ConversationChatEventTopicScoredAgent.md
 docs/ConversationChatEventTopicUriReference.md
 docs/ConversationChatEventTopicWrapup.md
+docs/ConversationClearSettings.md
 docs/ConversationCobrowseEventTopicCobrowseConversation.md
 docs/ConversationCobrowseEventTopicCobrowseMediaParticipant.md
 docs/ConversationCobrowseEventTopicConversationRoutingData.md
@@ -1417,6 +1423,7 @@ docs/DownloadsApi.md
 docs/Draft.md
 docs/DraftIntents.md
 docs/DraftListing.md
+docs/DraftManipulationRequest.md
 docs/DraftRequest.md
 docs/DraftTopicRequest.md
 docs/DraftTopics.md
@@ -1484,6 +1491,7 @@ docs/EmbeddedIntegration.md
 docs/EmergencyCallFlow.md
 docs/EmergencyGroup.md
 docs/EmergencyGroupListing.md
+docs/EmergencyLocation.md
 docs/EmployerInfo.md
 docs/Empty.md
 docs/EncryptionKey.md
@@ -1685,7 +1693,6 @@ docs/ForecastServiceLevelResponse.md
 docs/ForecastSourceDayPointer.md
 docs/Format.md
 docs/FormsTrackTrigger.md
-docs/FreeSeatingConfiguration.md
 docs/FromEmailAddress.md
 docs/FullDayTimeOffMarker.md
 docs/GDPRJourneyCustomer.md
@@ -1817,6 +1824,7 @@ docs/GetAuthorizationSubjectsMe-example.txt
 docs/GetAuthorizationSubjectsRolecounts-example.txt
 docs/GetBillingReportsBillableusage-example.txt
 docs/GetBillingTrusteebillingoverviewTrustorOrgId-example.txt
+docs/GetCarrierservicesIntegrationsEmergencylocationsMe-example.txt
 docs/GetChatSettings-example.txt
 docs/GetChatsSettings-example.txt
 docs/GetCoachingAppointment-example.txt
@@ -2066,6 +2074,8 @@ docs/GetIdentityprovidersPing-example.txt
 docs/GetIdentityprovidersPurecloud-example.txt
 docs/GetIdentityprovidersPureengage-example.txt
 docs/GetIdentityprovidersSalesforce-example.txt
+docs/GetInfrastructureascodeAccelerator-example.txt
+docs/GetInfrastructureascodeAccelerators-example.txt
 docs/GetInfrastructureascodeJob-example.txt
 docs/GetInfrastructureascodeJobs-example.txt
 docs/GetIntegration-example.txt
@@ -2284,6 +2294,7 @@ docs/GetOutboundDnclistsDivisionviews-example.txt
 docs/GetOutboundEvent-example.txt
 docs/GetOutboundEvents-example.txt
 docs/GetOutboundMessagingcampaign-example.txt
+docs/GetOutboundMessagingcampaignDiagnostics-example.txt
 docs/GetOutboundMessagingcampaignProgress-example.txt
 docs/GetOutboundMessagingcampaigns-example.txt
 docs/GetOutboundMessagingcampaignsDivisionview-example.txt
@@ -2474,7 +2485,6 @@ docs/GetSpeechandtextanalyticsTopicsGeneral-example.txt
 docs/GetSpeechandtextanalyticsTopicsPublishjob-example.txt
 docs/GetStation-example.txt
 docs/GetStations-example.txt
-docs/GetStationsSettings-example.txt
 docs/GetSystempresences-example.txt
 docs/GetTeam-example.txt
 docs/GetTeamMembers-example.txt
@@ -2745,6 +2755,7 @@ docs/HistoricalShrinkageAggregateResponse.md
 docs/HistoricalShrinkageResult.md
 docs/HistoricalShrinkageResultListing.md
 docs/HistoryEntry.md
+docs/HistoryHeadersTranslation.md
 docs/HistoryListing.md
 docs/HoldUpdatedEvent.md
 docs/HomerRecord.md
@@ -3191,6 +3202,7 @@ docs/MessageTypingEventRequest.md
 docs/MessagingApi.json
 docs/MessagingApi.md
 docs/MessagingCampaign.md
+docs/MessagingCampaignDiagnostics.md
 docs/MessagingCampaignDivisionView.md
 docs/MessagingCampaignDivisionViewEntityListing.md
 docs/MessagingCampaignEntityListing.md
@@ -3211,6 +3223,12 @@ docs/MessengerSettings.md
 docs/MessengerStyles.md
 docs/MetaData.md
 docs/Metabase.md
+docs/MetadataDocumentation.md
+docs/MetadataPresentation.md
+docs/MetadataProperty.md
+docs/MetadataResultEntity.md
+docs/MetadataResults.md
+docs/MetadataSchema.md
 docs/MeteredAssignmentByAgent.md
 docs/MeteredEvaluationAssignment.md
 docs/Metric.md
@@ -3360,6 +3378,7 @@ docs/OutcomeAchievement.md
 docs/OutcomeConfig.md
 docs/OutcomeEventScore.md
 docs/OutcomeListing.md
+docs/OutcomePercentileCondition.md
 docs/OutcomePredictor.md
 docs/OutcomePredictorListing.md
 docs/OutcomePredictorRequest.md
@@ -3430,6 +3449,7 @@ docs/PatchConversationsCobrowsesessionParticipant-example.txt
 docs/PatchConversationsCobrowsesessionParticipantAttributes-example.txt
 docs/PatchConversationsCobrowsesessionParticipantCommunication-example.txt
 docs/PatchConversationsEmail-example.txt
+docs/PatchConversationsEmailMessagesDraft-example.txt
 docs/PatchConversationsEmailParticipant-example.txt
 docs/PatchConversationsEmailParticipantAttributes-example.txt
 docs/PatchConversationsEmailParticipantCommunication-example.txt
@@ -3505,7 +3525,6 @@ docs/PatchScimV2User-example.txt
 docs/PatchSegment.md
 docs/PatchShiftTradeRequest.md
 docs/PatchSpeechandtextanalyticsSettings-example.txt
-docs/PatchStationsSettings-example.txt
 docs/PatchSurveyQuestion.md
 docs/PatchTeam-example.txt
 docs/PatchTextStyleProperties.md
@@ -3658,6 +3677,7 @@ docs/PostAuthorizationSubjectBulkreplace-example.txt
 docs/PostAuthorizationSubjectBulkreplace-example.txt
 docs/PostAuthorizationSubjectDivisionRole-example.txt
 docs/PostAuthorizationSubjectDivisionRole-example.txt
+docs/PostCarrierservicesIntegrationsEmergencylocationsMe-example.txt
 docs/PostCertificateDetails-example.txt
 docs/PostCoachingAppointmentAnnotations-example.txt
 docs/PostCoachingAppointmentConversations-example.txt
@@ -4954,7 +4974,6 @@ docs/StatEventWrapUpCodeTopicMetricStats.md
 docs/StatEventWrapUpCodeTopicStatsNotification.md
 docs/Station.md
 docs/StationEntityListing.md
-docs/StationSettings.md
 docs/StationsApi.json
 docs/StationsApi.md
 docs/StatisticalResponse.md
@@ -5140,6 +5159,7 @@ docs/TransferDestination.md
 docs/TransferInitiator.md
 docs/TransferRequest.md
 docs/TransferResponse.md
+docs/TransferResponseModifiedBy.md
 docs/TrendData.md
 docs/Trigger.md
 docs/TriggerEntityListing.md
@@ -5747,6 +5767,7 @@ src/PureCloudPlatform.Client.V2/Api/ArchitectApi.cs
 src/PureCloudPlatform.Client.V2/Api/AuditApi.cs
 src/PureCloudPlatform.Client.V2/Api/AuthorizationApi.cs
 src/PureCloudPlatform.Client.V2/Api/BillingApi.cs
+src/PureCloudPlatform.Client.V2/Api/CarrierServicesApi.cs
 src/PureCloudPlatform.Client.V2/Api/ChatApi.cs
 src/PureCloudPlatform.Client.V2/Api/CoachingApi.cs
 src/PureCloudPlatform.Client.V2/Api/ContentManagementApi.cs
@@ -5816,7 +5837,10 @@ src/PureCloudPlatform.Client.V2/Client/IApiAccessor.cs
 src/PureCloudPlatform.Client.V2/Client/Logger.cs
 src/PureCloudPlatform.Client.V2/Model/ADFS.cs
 src/PureCloudPlatform.Client.V2/Model/AcceleratorInput.cs
+src/PureCloudPlatform.Client.V2/Model/AcceleratorList.cs
+src/PureCloudPlatform.Client.V2/Model/AcceleratorMetadata.cs
 src/PureCloudPlatform.Client.V2/Model/AcceleratorParameter.cs
+src/PureCloudPlatform.Client.V2/Model/AcceleratorSpecification.cs
 src/PureCloudPlatform.Client.V2/Model/AcdEndDetailEventTopicAcdEndEvent.cs
 src/PureCloudPlatform.Client.V2/Model/AcdStartDetailEventTopicAcdStartEvent.cs
 src/PureCloudPlatform.Client.V2/Model/AchievedOutcome.cs
@@ -6492,6 +6516,7 @@ src/PureCloudPlatform.Client.V2/Model/ConversationChatEventTopicJourneyCustomerS
 src/PureCloudPlatform.Client.V2/Model/ConversationChatEventTopicScoredAgent.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationChatEventTopicUriReference.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationChatEventTopicWrapup.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationClearSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationCobrowseEventTopicCobrowseConversation.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationCobrowseEventTopicCobrowseMediaParticipant.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationCobrowseEventTopicConversationRoutingData.cs
@@ -6979,6 +7004,7 @@ src/PureCloudPlatform.Client.V2/Model/DownloadResponse.cs
 src/PureCloudPlatform.Client.V2/Model/Draft.cs
 src/PureCloudPlatform.Client.V2/Model/DraftIntents.cs
 src/PureCloudPlatform.Client.V2/Model/DraftListing.cs
+src/PureCloudPlatform.Client.V2/Model/DraftManipulationRequest.cs
 src/PureCloudPlatform.Client.V2/Model/DraftRequest.cs
 src/PureCloudPlatform.Client.V2/Model/DraftTopicRequest.cs
 src/PureCloudPlatform.Client.V2/Model/DraftTopics.cs
@@ -7046,6 +7072,7 @@ src/PureCloudPlatform.Client.V2/Model/EmbeddedIntegration.cs
 src/PureCloudPlatform.Client.V2/Model/EmergencyCallFlow.cs
 src/PureCloudPlatform.Client.V2/Model/EmergencyGroup.cs
 src/PureCloudPlatform.Client.V2/Model/EmergencyGroupListing.cs
+src/PureCloudPlatform.Client.V2/Model/EmergencyLocation.cs
 src/PureCloudPlatform.Client.V2/Model/EmployerInfo.cs
 src/PureCloudPlatform.Client.V2/Model/Empty.cs
 src/PureCloudPlatform.Client.V2/Model/EncryptionKey.cs
@@ -7239,7 +7266,6 @@ src/PureCloudPlatform.Client.V2/Model/ForecastServiceLevelResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ForecastSourceDayPointer.cs
 src/PureCloudPlatform.Client.V2/Model/Format.cs
 src/PureCloudPlatform.Client.V2/Model/FormsTrackTrigger.cs
-src/PureCloudPlatform.Client.V2/Model/FreeSeatingConfiguration.cs
 src/PureCloudPlatform.Client.V2/Model/FromEmailAddress.cs
 src/PureCloudPlatform.Client.V2/Model/FullDayTimeOffMarker.cs
 src/PureCloudPlatform.Client.V2/Model/GDPRJourneyCustomer.cs
@@ -7314,6 +7340,7 @@ src/PureCloudPlatform.Client.V2/Model/HistoricalShrinkageAggregateResponse.cs
 src/PureCloudPlatform.Client.V2/Model/HistoricalShrinkageResult.cs
 src/PureCloudPlatform.Client.V2/Model/HistoricalShrinkageResultListing.cs
 src/PureCloudPlatform.Client.V2/Model/HistoryEntry.cs
+src/PureCloudPlatform.Client.V2/Model/HistoryHeadersTranslation.cs
 src/PureCloudPlatform.Client.V2/Model/HistoryListing.cs
 src/PureCloudPlatform.Client.V2/Model/HoldUpdatedEvent.cs
 src/PureCloudPlatform.Client.V2/Model/HomerRecord.cs
@@ -7738,6 +7765,7 @@ src/PureCloudPlatform.Client.V2/Model/MessageSticker.cs
 src/PureCloudPlatform.Client.V2/Model/MessageStickerAttachment.cs
 src/PureCloudPlatform.Client.V2/Model/MessageTypingEventRequest.cs
 src/PureCloudPlatform.Client.V2/Model/MessagingCampaign.cs
+src/PureCloudPlatform.Client.V2/Model/MessagingCampaignDiagnostics.cs
 src/PureCloudPlatform.Client.V2/Model/MessagingCampaignDivisionView.cs
 src/PureCloudPlatform.Client.V2/Model/MessagingCampaignDivisionViewEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/MessagingCampaignEntityListing.cs
@@ -7758,6 +7786,12 @@ src/PureCloudPlatform.Client.V2/Model/MessengerSettings.cs
 src/PureCloudPlatform.Client.V2/Model/MessengerStyles.cs
 src/PureCloudPlatform.Client.V2/Model/MetaData.cs
 src/PureCloudPlatform.Client.V2/Model/Metabase.cs
+src/PureCloudPlatform.Client.V2/Model/MetadataDocumentation.cs
+src/PureCloudPlatform.Client.V2/Model/MetadataPresentation.cs
+src/PureCloudPlatform.Client.V2/Model/MetadataProperty.cs
+src/PureCloudPlatform.Client.V2/Model/MetadataResultEntity.cs
+src/PureCloudPlatform.Client.V2/Model/MetadataResults.cs
+src/PureCloudPlatform.Client.V2/Model/MetadataSchema.cs
 src/PureCloudPlatform.Client.V2/Model/MeteredAssignmentByAgent.cs
 src/PureCloudPlatform.Client.V2/Model/MeteredEvaluationAssignment.cs
 src/PureCloudPlatform.Client.V2/Model/Metric.cs
@@ -7893,6 +7927,7 @@ src/PureCloudPlatform.Client.V2/Model/OutcomeAchievement.cs
 src/PureCloudPlatform.Client.V2/Model/OutcomeConfig.cs
 src/PureCloudPlatform.Client.V2/Model/OutcomeEventScore.cs
 src/PureCloudPlatform.Client.V2/Model/OutcomeListing.cs
+src/PureCloudPlatform.Client.V2/Model/OutcomePercentileCondition.cs
 src/PureCloudPlatform.Client.V2/Model/OutcomePredictor.cs
 src/PureCloudPlatform.Client.V2/Model/OutcomePredictorListing.cs
 src/PureCloudPlatform.Client.V2/Model/OutcomePredictorRequest.cs
@@ -8627,7 +8662,6 @@ src/PureCloudPlatform.Client.V2/Model/StatEventWrapUpCodeTopicMetricStats.cs
 src/PureCloudPlatform.Client.V2/Model/StatEventWrapUpCodeTopicStatsNotification.cs
 src/PureCloudPlatform.Client.V2/Model/Station.cs
 src/PureCloudPlatform.Client.V2/Model/StationEntityListing.cs
-src/PureCloudPlatform.Client.V2/Model/StationSettings.cs
 src/PureCloudPlatform.Client.V2/Model/StatisticalResponse.cs
 src/PureCloudPlatform.Client.V2/Model/StatisticalSummary.cs
 src/PureCloudPlatform.Client.V2/Model/StatusChange.cs
@@ -8799,6 +8833,7 @@ src/PureCloudPlatform.Client.V2/Model/TransferDestination.cs
 src/PureCloudPlatform.Client.V2/Model/TransferInitiator.cs
 src/PureCloudPlatform.Client.V2/Model/TransferRequest.cs
 src/PureCloudPlatform.Client.V2/Model/TransferResponse.cs
+src/PureCloudPlatform.Client.V2/Model/TransferResponseModifiedBy.cs
 src/PureCloudPlatform.Client.V2/Model/TrendData.cs
 src/PureCloudPlatform.Client.V2/Model/Trigger.cs
 src/PureCloudPlatform.Client.V2/Model/TriggerEntityListing.cs

@@ -67,6 +67,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Assigneeid for "assigneeId"
+            /// </summary>
+            [EnumMember(Value = "assigneeId")]
+            Assigneeid,
+            
+            /// <summary>
             /// Enum Calibrationid for "calibrationId"
             /// </summary>
             [EnumMember(Value = "calibrationId")]
@@ -95,6 +101,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "divisionId")]
             Divisionid,
+            
+            /// <summary>
+            /// Enum Evaluationcontextid for "evaluationContextId"
+            /// </summary>
+            [EnumMember(Value = "evaluationContextId")]
+            Evaluationcontextid,
             
             /// <summary>
             /// Enum Evaluationcreateddate for "evaluationCreatedDate"

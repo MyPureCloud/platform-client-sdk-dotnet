@@ -115,6 +115,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Disconnect,
             
             /// <summary>
+            /// Enum Clear for "Clear"
+            /// </summary>
+            [EnumMember(Value = "Clear")]
+            Clear,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]

@@ -14,6 +14,7 @@ title: ActionMap
 | **TriggerWithSegments** | **List&lt;string&gt;** | Trigger action map if any segment in the list is assigned to a given customer. | |
 | **TriggerWithEventConditions** | [**List&lt;EventCondition&gt;**](EventCondition.html) | List of event conditions that must be satisfied to trigger the action map. | [optional] |
 | **TriggerWithOutcomeProbabilityConditions** | [**List&lt;OutcomeProbabilityCondition&gt;**](OutcomeProbabilityCondition.html) | Probability conditions for outcomes that must be satisfied to trigger the action map. | [optional] |
+| **TriggerWithOutcomePercentileConditions** | [**List&lt;OutcomePercentileCondition&gt;**](OutcomePercentileCondition.html) | Percentile conditions for outcomes that must be satisfied to trigger the action map. | [optional] |
 | **PageUrlConditions** | [**List&lt;UrlCondition&gt;**](UrlCondition.html) | URL conditions that a page must match for web actions to be displayable. | |
 | **Activation** | [**Activation**](Activation.html) | Type of activation. | [optional] |
 | **Weight** | **int?** | Weight of the action map with higher number denoting higher weight. | [optional] |

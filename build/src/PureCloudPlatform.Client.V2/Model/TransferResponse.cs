@@ -121,14 +121,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="State">The state of the command..</param>
         /// <param name="DateIssued">The date/time that this command was issued. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Initiator">The initiator of the command..</param>
+        /// <param name="ModifiedBy">The user or entity that modified the command..</param>
         /// <param name="Destination">The destination of the command..</param>
         /// <param name="TransferType">The type of transfer to perform..</param>
-        public TransferResponse(string Id = null, StateEnum? State = null, DateTime? DateIssued = null, TransferInitiator Initiator = null, TransferDestination Destination = null, TransferTypeEnum? TransferType = null)
+        public TransferResponse(string Id = null, StateEnum? State = null, DateTime? DateIssued = null, TransferInitiator Initiator = null, TransferResponseModifiedBy ModifiedBy = null, TransferDestination Destination = null, TransferTypeEnum? TransferType = null)
         {
             this.Id = Id;
             this.State = State;
             this.DateIssued = DateIssued;
             this.Initiator = Initiator;
+            this.ModifiedBy = ModifiedBy;
             this.Destination = Destination;
             this.TransferType = TransferType;
             
@@ -166,6 +168,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The user or entity that modified the command.
+        /// </summary>
+        /// <value>The user or entity that modified the command.</value>
+        [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
+        public TransferResponseModifiedBy ModifiedBy { get; set; }
+
+
+
+        /// <summary>
         /// The destination of the command.
         /// </summary>
         /// <value>The destination of the command.</value>
@@ -188,6 +199,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  DateIssued: ").Append(DateIssued).Append("\n");
             sb.Append("  Initiator: ").Append(Initiator).Append("\n");
+            sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
             sb.Append("  Destination: ").Append(Destination).Append("\n");
             sb.Append("  TransferType: ").Append(TransferType).Append("\n");
             sb.Append("}\n");
@@ -251,6 +263,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Initiator.Equals(other.Initiator)
                 ) &&
                 (
+                    this.ModifiedBy == other.ModifiedBy ||
+                    this.ModifiedBy != null &&
+                    this.ModifiedBy.Equals(other.ModifiedBy)
+                ) &&
+                (
                     this.Destination == other.Destination ||
                     this.Destination != null &&
                     this.Destination.Equals(other.Destination)
@@ -284,6 +301,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Initiator != null)
                     hash = hash * 59 + this.Initiator.GetHashCode();
+
+                if (this.ModifiedBy != null)
+                    hash = hash * 59 + this.ModifiedBy.GetHashCode();
 
                 if (this.Destination != null)
                     hash = hash * 59 + this.Destination.GetHashCode();

@@ -84,7 +84,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SharingUri">The sharing uri for Content type inform step.</param>
         /// <param name="ContentType">The document type for Content type Inform step.</param>
         /// <param name="Order">The order of inform step in a learning module (required).</param>
-        public LearningModuleInformStep(TypeEnum? Type = null, string Name = null, string Value = null, string SharingUri = null, string ContentType = null, int? Order = null)
+        /// <param name="DisplayName">The display name for the inform step.</param>
+        /// <param name="Description">The description for the inform step.</param>
+        public LearningModuleInformStep(TypeEnum? Type = null, string Name = null, string Value = null, string SharingUri = null, string ContentType = null, int? Order = null, string DisplayName = null, string Description = null)
         {
             this.Type = Type;
             this.Name = Name;
@@ -92,6 +94,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SharingUri = SharingUri;
             this.ContentType = ContentType;
             this.Order = Order;
+            this.DisplayName = DisplayName;
+            this.Description = Description;
             
         }
         
@@ -143,6 +147,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? Order { get; set; }
 
 
+
+        /// <summary>
+        /// The display name for the inform step
+        /// </summary>
+        /// <value>The display name for the inform step</value>
+        [DataMember(Name="displayName", EmitDefaultValue=false)]
+        public string DisplayName { get; set; }
+
+
+
+        /// <summary>
+        /// The description for the inform step
+        /// </summary>
+        /// <value>The description for the inform step</value>
+        [DataMember(Name="description", EmitDefaultValue=false)]
+        public string Description { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -158,6 +180,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SharingUri: ").Append(SharingUri).Append("\n");
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
             sb.Append("  Order: ").Append(Order).Append("\n");
+            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -227,6 +251,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Order == other.Order ||
                     this.Order != null &&
                     this.Order.Equals(other.Order)
+                ) &&
+                (
+                    this.DisplayName == other.DisplayName ||
+                    this.DisplayName != null &&
+                    this.DisplayName.Equals(other.DisplayName)
+                ) &&
+                (
+                    this.Description == other.Description ||
+                    this.Description != null &&
+                    this.Description.Equals(other.Description)
                 );
         }
 
@@ -258,6 +292,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Order != null)
                     hash = hash * 59 + this.Order.GetHashCode();
+
+                if (this.DisplayName != null)
+                    hash = hash * 59 + this.DisplayName.GetHashCode();
+
+                if (this.Description != null)
+                    hash = hash * 59 + this.Description.GetHashCode();
 
                 return hash;
             }
