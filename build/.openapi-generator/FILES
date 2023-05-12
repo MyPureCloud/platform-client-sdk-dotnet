@@ -1688,6 +1688,7 @@ docs/ForecastAverageSpeedOfAnswerResponse.md
 docs/ForecastPlanningGroupData.md
 docs/ForecastPlanningGroupResponse.md
 docs/ForecastPlanningGroupsResponse.md
+docs/ForecastServiceGoalTemplateImpactOverrideResponse.md
 docs/ForecastServiceGoalTemplateResponse.md
 docs/ForecastServiceLevelResponse.md
 docs/ForecastSourceDayPointer.md
@@ -4121,6 +4122,8 @@ docs/PostWorkforcemanagementManagementunitWorkplans-example.txt
 docs/PostWorkforcemanagementManagementunits-example.txt
 docs/PostWorkforcemanagementNotificationsUpdate-example.txt
 docs/PostWorkforcemanagementSchedules-example.txt
+docs/PostWorkforcemanagementTeamAdherenceHistorical-example.txt
+docs/PostWorkforcemanagementTeamShrinkageJobs-example.txt
 docs/PostWorkforcemanagementTimeofflimitsAvailableQuery-example.txt
 docs/PostWorkforcemanagementTimeoffrequests-example.txt
 docs/PredictionResults.md
@@ -5609,6 +5612,7 @@ docs/WfmHistoricalAdherenceBulkUserDayMetrics.md
 docs/WfmHistoricalAdherenceBulkUserResult.md
 docs/WfmHistoricalAdherenceCalculationsCompleteTopicWfmHistoricalAdherenceCalculationsCompleteNotice.md
 docs/WfmHistoricalAdherenceQuery.md
+docs/WfmHistoricalAdherenceQueryForTeams.md
 docs/WfmHistoricalAdherenceQueryForUsers.md
 docs/WfmHistoricalAdherenceResponse.md
 docs/WfmHistoricalAdherenceResultWrapper.md
@@ -5617,6 +5621,7 @@ docs/WfmHistoricalDataUploadRequestStatusTopicHistoricalDataUploadRequestUpdate.
 docs/WfmHistoricalShrinkageCalculationsCompleteTopicHistoricalShrinkageCalculationsCompleteNotification.md
 docs/WfmHistoricalShrinkageRequest.md
 docs/WfmHistoricalShrinkageResponse.md
+docs/WfmHistoricalShrinkageTeamsRequest.md
 docs/WfmIntegrationsHrisTimeOffTypesJobTopicErrorBody.md
 docs/WfmIntegrationsHrisTimeOffTypesJobTopicHrisTimeOffType.md
 docs/WfmIntegrationsHrisTimeOffTypesJobTopicHrisTimeOffTypesJobNotification.md
@@ -7261,6 +7266,7 @@ src/PureCloudPlatform.Client.V2/Model/ForecastAverageSpeedOfAnswerResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ForecastPlanningGroupData.cs
 src/PureCloudPlatform.Client.V2/Model/ForecastPlanningGroupResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ForecastPlanningGroupsResponse.cs
+src/PureCloudPlatform.Client.V2/Model/ForecastServiceGoalTemplateImpactOverrideResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ForecastServiceGoalTemplateResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ForecastServiceLevelResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ForecastSourceDayPointer.cs
@@ -9265,6 +9271,7 @@ src/PureCloudPlatform.Client.V2/Model/WfmHistoricalAdherenceBulkUserDayMetrics.c
 src/PureCloudPlatform.Client.V2/Model/WfmHistoricalAdherenceBulkUserResult.cs
 src/PureCloudPlatform.Client.V2/Model/WfmHistoricalAdherenceCalculationsCompleteTopicWfmHistoricalAdherenceCalculationsCompleteNotice.cs
 src/PureCloudPlatform.Client.V2/Model/WfmHistoricalAdherenceQuery.cs
+src/PureCloudPlatform.Client.V2/Model/WfmHistoricalAdherenceQueryForTeams.cs
 src/PureCloudPlatform.Client.V2/Model/WfmHistoricalAdherenceQueryForUsers.cs
 src/PureCloudPlatform.Client.V2/Model/WfmHistoricalAdherenceResponse.cs
 src/PureCloudPlatform.Client.V2/Model/WfmHistoricalAdherenceResultWrapper.cs
@@ -9273,6 +9280,7 @@ src/PureCloudPlatform.Client.V2/Model/WfmHistoricalDataUploadRequestStatusTopicH
 src/PureCloudPlatform.Client.V2/Model/WfmHistoricalShrinkageCalculationsCompleteTopicHistoricalShrinkageCalculationsCompleteNotification.cs
 src/PureCloudPlatform.Client.V2/Model/WfmHistoricalShrinkageRequest.cs
 src/PureCloudPlatform.Client.V2/Model/WfmHistoricalShrinkageResponse.cs
+src/PureCloudPlatform.Client.V2/Model/WfmHistoricalShrinkageTeamsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/WfmIntegrationsHrisTimeOffTypesJobTopicErrorBody.cs
 src/PureCloudPlatform.Client.V2/Model/WfmIntegrationsHrisTimeOffTypesJobTopicHrisTimeOffType.cs
 src/PureCloudPlatform.Client.V2/Model/WfmIntegrationsHrisTimeOffTypesJobTopicHrisTimeOffTypesJobNotification.cs

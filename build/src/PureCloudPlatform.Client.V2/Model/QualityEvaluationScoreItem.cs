@@ -162,9 +162,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gamification max points for this metric
+        /// The maximum Gamification points a user may earn for this metric
         /// </summary>
-        /// <value>Gamification max points for this metric</value>
+        /// <value>The maximum Gamification points a user may earn for this metric</value>
         [DataMember(Name="maxPoints", EmitDefaultValue=false)]
         public int? MaxPoints { get; private set; }
 

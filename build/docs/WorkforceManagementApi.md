@@ -159,6 +159,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementManagementunits**](WorkforceManagementApi.html#postworkforcemanagementmanagementunits) | **POST** /api/v2/workforcemanagement/managementunits | Add a management unit |
 | [**PostWorkforcemanagementNotificationsUpdate**](WorkforceManagementApi.html#postworkforcemanagementnotificationsupdate) | **POST** /api/v2/workforcemanagement/notifications/update | Mark a list of notifications as read or unread |
 | [**PostWorkforcemanagementSchedules**](WorkforceManagementApi.html#postworkforcemanagementschedules) | **POST** /api/v2/workforcemanagement/schedules | Get published schedule for the current user |
+| [**PostWorkforcemanagementTeamAdherenceHistorical**](WorkforceManagementApi.html#postworkforcemanagementteamadherencehistorical) | **POST** /api/v2/workforcemanagement/teams/{teamId}/adherence/historical | Request a teams historical adherence report |
+| [**PostWorkforcemanagementTeamShrinkageJobs**](WorkforceManagementApi.html#postworkforcemanagementteamshrinkagejobs) | **POST** /api/v2/workforcemanagement/teams/{teamId}/shrinkage/jobs | Request a historical shrinkage report |
 | [**PostWorkforcemanagementTimeofflimitsAvailableQuery**](WorkforceManagementApi.html#postworkforcemanagementtimeofflimitsavailablequery) | **POST** /api/v2/workforcemanagement/timeofflimits/available/query | Queries available time off for the current user |
 | [**PostWorkforcemanagementTimeoffrequests**](WorkforceManagementApi.html#postworkforcemanagementtimeoffrequests) | **POST** /api/v2/workforcemanagement/timeoffrequests | Create a time off request for the current user |
 | [**PutWorkforcemanagementManagementunitTimeofflimitValues**](WorkforceManagementApi.html#putworkforcemanagementmanagementunittimeofflimitvalues) | **PUT** /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}/values | Sets daily values for a date range of time off limit object |
@@ -1770,7 +1772,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit, or 'mine' for the business unit of the logged-in user.
-            var expand = new List<string>(); // List<string> |  (optional) 
+            var expand = new List<string>(); // List<string> | Include to access additional data on the business unit (optional) 
 
             try
             { 
@@ -1793,7 +1795,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. |  |
-| **expand** | [**List<string>**](string.html)|  | [optional] <br />**Values**: settings, settings.timeZone, settings.startDayOfWeek, settings.shortTermForecasting, settings.scheduling |
+| **expand** | [**List<string>**](string.html)| Include to access additional data on the business unit | [optional] <br />**Values**: settings, settings.timeZone, settings.startDayOfWeek, settings.shortTermForecasting, settings.scheduling |
 {: class="table table-striped"}
 
 ### Return type
@@ -3001,7 +3003,7 @@ namespace Example
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit to which the forecast belongs
             var weekDateId = 2013-10-20;  // String | The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var forecastId = forecastId_example;  // string | The ID of the forecast
-            var expand = new List<string>(); // List<string> |  (optional) 
+            var expand = new List<string>(); // List<string> | Include to access additional data on the forecast (optional) 
 
             try
             { 
@@ -3026,7 +3028,7 @@ namespace Example
 | **businessUnitId** | **string**| The ID of the business unit to which the forecast belongs |  |
 | **weekDateId** | **String**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **forecastId** | **string**| The ID of the forecast |  |
-| **expand** | [**List<string>**](string.html)|  | [optional] <br />**Values**: planningGroups, generationResults |
+| **expand** | [**List<string>**](string.html)| Include to access additional data on the forecast | [optional] <br />**Values**: planningGroups, generationResults |
 {: class="table table-striped"}
 
 ### Return type
@@ -5345,7 +5347,7 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var managementUnitId = managementUnitId_example;  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-            var expand = new List<string>(); // List<string> |  (optional) 
+            var expand = new List<string>(); // List<string> | Include to access additional data on the work plans (optional) 
 
             try
             { 
@@ -5368,7 +5370,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **managementUnitId** | **string**| The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
-| **expand** | [**List<string>**](string.html)|  | [optional] <br />**Values**: agentCount, agents, optionalDays, shifts, shiftStartVariances, details |
+| **expand** | [**List<string>**](string.html)| Include to access additional data on the work plans | [optional] <br />**Values**: agentCount, agents, optionalDays, shifts, shiftStartVariances, details |
 {: class="table table-striped"}
 
 ### Return type
@@ -8628,7 +8630,7 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit to which the forecast belongs
             var weekDateId = 2013-10-20;  // String | The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
-            var body = new GenerateBuForecastRequest(); // GenerateBuForecastRequest | 
+            var body = new GenerateBuForecastRequest(); // GenerateBuForecastRequest | body
             var forceAsync = true;  // bool? | Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional) 
 
             try
@@ -8653,7 +8655,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit to which the forecast belongs |  |
 | **weekDateId** | **String**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
-| **body** | [**GenerateBuForecastRequest**](GenerateBuForecastRequest.html)|  |  |
+| **body** | [**GenerateBuForecastRequest**](GenerateBuForecastRequest.html)| body |  |
 | **forceAsync** | **bool?**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional]  |
 {: class="table table-striped"}
 
@@ -8701,7 +8703,7 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit to which the forecast belongs
             var weekDateId = 2013-10-20;  // String | First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
-            var body = new WfmProcessUploadRequest(); // WfmProcessUploadRequest | 
+            var body = new WfmProcessUploadRequest(); // WfmProcessUploadRequest | body
 
             try
             { 
@@ -8725,7 +8727,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit to which the forecast belongs |  |
 | **weekDateId** | **String**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
-| **body** | [**WfmProcessUploadRequest**](WfmProcessUploadRequest.html)|  |  |
+| **body** | [**WfmProcessUploadRequest**](WfmProcessUploadRequest.html)| body |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -10775,6 +10777,144 @@ namespace Example
 ### Return type
 
 [**UserScheduleContainer**](UserScheduleContainer.html)
+
+<a name="postworkforcemanagementteamadherencehistorical"></a>
+
+## [**WfmHistoricalAdherenceResponse**](WfmHistoricalAdherenceResponse.html) PostWorkforcemanagementTeamAdherenceHistorical (string teamId, WfmHistoricalAdherenceQueryForTeams body = null)
+
+
+
+Request a teams historical adherence report
+
+The maximum supported range for historical adherence queries is 31 days, or 7 days with includeExceptions = true
+
+
+
+Requires ANY permissions: 
+
+* wfm:historicalAdherence:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementTeamAdherenceHistoricalExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var teamId = teamId_example;  // string | The ID of the team
+            var body = new WfmHistoricalAdherenceQueryForTeams(); // WfmHistoricalAdherenceQueryForTeams | body (optional) 
+
+            try
+            { 
+                // Request a teams historical adherence report
+                WfmHistoricalAdherenceResponse result = apiInstance.PostWorkforcemanagementTeamAdherenceHistorical(teamId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementTeamAdherenceHistorical: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **teamId** | **string**| The ID of the team |  |
+| **body** | [**WfmHistoricalAdherenceQueryForTeams**](WfmHistoricalAdherenceQueryForTeams.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**WfmHistoricalAdherenceResponse**](WfmHistoricalAdherenceResponse.html)
+
+<a name="postworkforcemanagementteamshrinkagejobs"></a>
+
+## [**WfmHistoricalShrinkageResponse**](WfmHistoricalShrinkageResponse.html) PostWorkforcemanagementTeamShrinkageJobs (string teamId, WfmHistoricalShrinkageTeamsRequest body = null)
+
+
+
+Request a historical shrinkage report
+
+The maximum supported range for historical shrinkage queries is up to 32 days
+
+
+
+Requires ANY permissions: 
+
+* wfm:shrinkage:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementTeamShrinkageJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var teamId = teamId_example;  // string | The ID of the team
+            var body = new WfmHistoricalShrinkageTeamsRequest(); // WfmHistoricalShrinkageTeamsRequest | body (optional) 
+
+            try
+            { 
+                // Request a historical shrinkage report
+                WfmHistoricalShrinkageResponse result = apiInstance.PostWorkforcemanagementTeamShrinkageJobs(teamId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementTeamShrinkageJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **teamId** | **string**| The ID of the team |  |
+| **body** | [**WfmHistoricalShrinkageTeamsRequest**](WfmHistoricalShrinkageTeamsRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**WfmHistoricalShrinkageResponse**](WfmHistoricalShrinkageResponse.html)
 
 <a name="postworkforcemanagementtimeofflimitsavailablequery"></a>
 

@@ -56,6 +56,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The maximum Gamification points a user may earn for this metric
+        /// </summary>
+        /// <value>The maximum Gamification points a user may earn for this metric</value>
+        [DataMember(Name="maxPoints", EmitDefaultValue=false)]
+        public int? MaxPoints { get; private set; }
+
+
+
+        /// <summary>
         /// Value of this metric
         /// </summary>
         /// <value>Value of this metric</value>
@@ -84,6 +93,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Metric: ").Append(Metric).Append("\n");
             sb.Append("  Objective: ").Append(Objective).Append("\n");
             sb.Append("  Points: ").Append(Points).Append("\n");
+            sb.Append("  MaxPoints: ").Append(MaxPoints).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  PunctualityEvents: ").Append(PunctualityEvents).Append("\n");
             sb.Append("}\n");
@@ -142,6 +152,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Points.Equals(other.Points)
                 ) &&
                 (
+                    this.MaxPoints == other.MaxPoints ||
+                    this.MaxPoints != null &&
+                    this.MaxPoints.Equals(other.MaxPoints)
+                ) &&
+                (
                     this.Value == other.Value ||
                     this.Value != null &&
                     this.Value.Equals(other.Value)
@@ -172,6 +187,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Points != null)
                     hash = hash * 59 + this.Points.GetHashCode();
+
+                if (this.MaxPoints != null)
+                    hash = hash * 59 + this.MaxPoints.GetHashCode();
 
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();

@@ -46,6 +46,33 @@ namespace PureCloudPlatform.Client.V2.Model
             Minimization
         }
         /// <summary>
+        /// The problem type of the Key Performance Indicator.
+        /// </summary>
+        /// <value>The problem type of the Key Performance Indicator.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ProblemTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Classification for "Classification"
+            /// </summary>
+            [EnumMember(Value = "Classification")]
+            Classification,
+            
+            /// <summary>
+            /// Enum Regression for "Regression"
+            /// </summary>
+            [EnumMember(Value = "Regression")]
+            Regression
+        }
+        /// <summary>
         /// The type of Key Performance Indicator.
         /// </summary>
         /// <value>The type of Key Performance Indicator.</value>
@@ -190,6 +217,12 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="optimizationType", EmitDefaultValue=false)]
         public OptimizationTypeEnum? OptimizationType { get; private set; }
         /// <summary>
+        /// The problem type of the Key Performance Indicator.
+        /// </summary>
+        /// <value>The problem type of the Key Performance Indicator.</value>
+        [DataMember(Name="problemType", EmitDefaultValue=false)]
+        public ProblemTypeEnum? ProblemType { get; private set; }
+        /// <summary>
         /// The type of Key Performance Indicator.
         /// </summary>
         /// <value>The type of Key Performance Indicator.</value>
@@ -238,6 +271,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The name of the Key Performance Indicator.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; private set; }
+
+
 
 
 
@@ -325,6 +360,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  OptimizationType: ").Append(OptimizationType).Append("\n");
+            sb.Append("  ProblemType: ").Append(ProblemType).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
@@ -390,6 +426,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.OptimizationType == other.OptimizationType ||
                     this.OptimizationType != null &&
                     this.OptimizationType.Equals(other.OptimizationType)
+                ) &&
+                (
+                    this.ProblemType == other.ProblemType ||
+                    this.ProblemType != null &&
+                    this.ProblemType.Equals(other.ProblemType)
                 ) &&
                 (
                     this.DateCreated == other.DateCreated ||
@@ -467,6 +508,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.OptimizationType != null)
                     hash = hash * 59 + this.OptimizationType.GetHashCode();
+
+                if (this.ProblemType != null)
+                    hash = hash * 59 + this.ProblemType.GetHashCode();
 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();

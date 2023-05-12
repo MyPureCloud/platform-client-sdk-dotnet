@@ -300,6 +300,7 @@ Delete user
 Requires ANY permissions: 
 
 * directory:user:delete
+* directory:organization:admin
 
 ### Example
 ```{"language":"csharp"}

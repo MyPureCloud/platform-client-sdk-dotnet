@@ -27,7 +27,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MarkContactUncontactableActionSettings">The settings for a 'mark contact uncontactable' action..</param>
         /// <param name="MarkContactAddressUncontactableActionSettings">The settings for an 'mark contact address uncontactable' action..</param>
         /// <param name="SetContentTemplateActionSettings">The settings for a 'Set content template' action..</param>
-        public DigitalAction(UpdateContactColumnActionSettings UpdateContactColumnActionSettings = null, Object DoNotSendActionSettings = null, AppendToDncActionSettings AppendToDncActionSettings = null, MarkContactUncontactableActionSettings MarkContactUncontactableActionSettings = null, Object MarkContactAddressUncontactableActionSettings = null, SetContentTemplateActionSettings SetContentTemplateActionSettings = null)
+        /// <param name="SetSmsPhoneNumberActionSettings">The settings for a 'set sms phone number' action..</param>
+        public DigitalAction(UpdateContactColumnActionSettings UpdateContactColumnActionSettings = null, Object DoNotSendActionSettings = null, AppendToDncActionSettings AppendToDncActionSettings = null, MarkContactUncontactableActionSettings MarkContactUncontactableActionSettings = null, Object MarkContactAddressUncontactableActionSettings = null, SetContentTemplateActionSettings SetContentTemplateActionSettings = null, SetSmsPhoneNumberActionSettings SetSmsPhoneNumberActionSettings = null)
         {
             this.UpdateContactColumnActionSettings = UpdateContactColumnActionSettings;
             this.DoNotSendActionSettings = DoNotSendActionSettings;
@@ -35,6 +36,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MarkContactUncontactableActionSettings = MarkContactUncontactableActionSettings;
             this.MarkContactAddressUncontactableActionSettings = MarkContactAddressUncontactableActionSettings;
             this.SetContentTemplateActionSettings = SetContentTemplateActionSettings;
+            this.SetSmsPhoneNumberActionSettings = SetSmsPhoneNumberActionSettings;
             
         }
         
@@ -93,6 +95,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public SetContentTemplateActionSettings SetContentTemplateActionSettings { get; set; }
 
 
+
+        /// <summary>
+        /// The settings for a 'set sms phone number' action.
+        /// </summary>
+        /// <value>The settings for a 'set sms phone number' action.</value>
+        [DataMember(Name="setSmsPhoneNumberActionSettings", EmitDefaultValue=false)]
+        public SetSmsPhoneNumberActionSettings SetSmsPhoneNumberActionSettings { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -108,6 +119,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MarkContactUncontactableActionSettings: ").Append(MarkContactUncontactableActionSettings).Append("\n");
             sb.Append("  MarkContactAddressUncontactableActionSettings: ").Append(MarkContactAddressUncontactableActionSettings).Append("\n");
             sb.Append("  SetContentTemplateActionSettings: ").Append(SetContentTemplateActionSettings).Append("\n");
+            sb.Append("  SetSmsPhoneNumberActionSettings: ").Append(SetSmsPhoneNumberActionSettings).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -177,6 +189,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SetContentTemplateActionSettings == other.SetContentTemplateActionSettings ||
                     this.SetContentTemplateActionSettings != null &&
                     this.SetContentTemplateActionSettings.Equals(other.SetContentTemplateActionSettings)
+                ) &&
+                (
+                    this.SetSmsPhoneNumberActionSettings == other.SetSmsPhoneNumberActionSettings ||
+                    this.SetSmsPhoneNumberActionSettings != null &&
+                    this.SetSmsPhoneNumberActionSettings.Equals(other.SetSmsPhoneNumberActionSettings)
                 );
         }
 
@@ -208,6 +225,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SetContentTemplateActionSettings != null)
                     hash = hash * 59 + this.SetContentTemplateActionSettings.GetHashCode();
+
+                if (this.SetSmsPhoneNumberActionSettings != null)
+                    hash = hash * 59 + this.SetSmsPhoneNumberActionSettings.GetHashCode();
 
                 return hash;
             }
