@@ -11,6 +11,7 @@ title: QueueConversationSocialExpressionEventTopicRecentTransfer
 | **State** | **string** |  | [optional] |
 | **DateIssued** | **DateTime?** | The date/time that this command was issued. | [optional] |
 | **Initiator** | [**QueueConversationSocialExpressionEventTopicInitiator**](QueueConversationSocialExpressionEventTopicInitiator.html) |  | [optional] |
+| **ModifiedBy** | [**QueueConversationSocialExpressionEventTopicModifiedBy**](QueueConversationSocialExpressionEventTopicModifiedBy.html) |  | [optional] |
 | **Destination** | [**QueueConversationSocialExpressionEventTopicDestination**](QueueConversationSocialExpressionEventTopicDestination.html) |  | [optional] |
 | **TransferType** | **string** | The type of transfer to perform. | [optional] |
 {: class="table table-striped"}

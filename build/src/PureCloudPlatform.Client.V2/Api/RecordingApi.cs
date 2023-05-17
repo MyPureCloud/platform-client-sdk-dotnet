@@ -27,6 +27,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns></returns>
+        
         void DeleteConversationRecordingAnnotation (string conversationId, string recordingId, string annotationId);
 
         /// <summary>
@@ -40,6 +41,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> DeleteConversationRecordingAnnotationWithHttpInfo (string conversationId, string recordingId, string annotationId);
 
         /// <summary>
@@ -51,6 +53,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>OrphanRecording</returns>
+        
         OrphanRecording DeleteOrphanrecording (string orphanId);
 
         /// <summary>
@@ -62,6 +65,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>ApiResponse of OrphanRecording</returns>
+        
         ApiResponse<OrphanRecording> DeleteOrphanrecordingWithHttpInfo (string orphanId);
 
         /// <summary>
@@ -73,6 +77,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids"></param>
         /// <returns></returns>
+        
         void DeleteRecordingCrossplatformMediaretentionpolicies (string ids);
 
         /// <summary>
@@ -84,6 +89,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids"></param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> DeleteRecordingCrossplatformMediaretentionpoliciesWithHttpInfo (string ids);
 
         /// <summary>
@@ -95,6 +101,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns></returns>
+        
         void DeleteRecordingCrossplatformMediaretentionpolicy (string policyId);
 
         /// <summary>
@@ -106,6 +113,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> DeleteRecordingCrossplatformMediaretentionpolicyWithHttpInfo (string policyId);
 
         /// <summary>
@@ -117,6 +125,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns></returns>
+        
         void DeleteRecordingJob (string jobId);
 
         /// <summary>
@@ -128,6 +137,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> DeleteRecordingJobWithHttpInfo (string jobId);
 
         /// <summary>
@@ -139,6 +149,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids"></param>
         /// <returns></returns>
+        
         void DeleteRecordingMediaretentionpolicies (string ids);
 
         /// <summary>
@@ -150,6 +161,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids"></param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> DeleteRecordingMediaretentionpoliciesWithHttpInfo (string ids);
 
         /// <summary>
@@ -161,6 +173,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns></returns>
+        
         void DeleteRecordingMediaretentionpolicy (string policyId);
 
         /// <summary>
@@ -172,6 +185,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> DeleteRecordingMediaretentionpolicyWithHttpInfo (string policyId);
 
         /// <summary>
@@ -192,6 +206,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>Recording</returns>
+        
         Recording GetConversationRecording (string conversationId, string recordingId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null);
 
         /// <summary>
@@ -212,6 +227,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>ApiResponse of Recording</returns>
+        
         ApiResponse<Recording> GetConversationRecordingWithHttpInfo (string conversationId, string recordingId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null);
 
         /// <summary>
@@ -225,6 +241,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Annotation</returns>
+        
         Annotation GetConversationRecordingAnnotation (string conversationId, string recordingId, string annotationId);
 
         /// <summary>
@@ -238,6 +255,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>ApiResponse of Annotation</returns>
+        
         ApiResponse<Annotation> GetConversationRecordingAnnotationWithHttpInfo (string conversationId, string recordingId, string annotationId);
 
         /// <summary>
@@ -250,6 +268,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <returns>List&lt;Annotation&gt;</returns>
+        
         List<Annotation> GetConversationRecordingAnnotations (string conversationId, string recordingId);
 
         /// <summary>
@@ -262,6 +281,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <returns>ApiResponse of List&lt;Annotation&gt;</returns>
+        
         ApiResponse<List<Annotation>> GetConversationRecordingAnnotationsWithHttpInfo (string conversationId, string recordingId);
 
         /// <summary>
@@ -273,6 +293,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <returns>List&lt;RecordingMetadata&gt;</returns>
+        
         List<RecordingMetadata> GetConversationRecordingmetadata (string conversationId);
 
         /// <summary>
@@ -284,6 +305,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <returns>ApiResponse of List&lt;RecordingMetadata&gt;</returns>
+        
         ApiResponse<List<RecordingMetadata>> GetConversationRecordingmetadataWithHttpInfo (string conversationId);
 
         /// <summary>
@@ -296,6 +318,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <returns>RecordingMetadata</returns>
+        
         RecordingMetadata GetConversationRecordingmetadataRecordingId (string conversationId, string recordingId);
 
         /// <summary>
@@ -308,6 +331,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <returns>ApiResponse of RecordingMetadata</returns>
+        
         ApiResponse<RecordingMetadata> GetConversationRecordingmetadataRecordingIdWithHttpInfo (string conversationId, string recordingId);
 
         /// <summary>
@@ -322,6 +346,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)</param>
         /// <returns>List&lt;Recording&gt;</returns>
+        
         List<Recording> GetConversationRecordings (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null);
 
         /// <summary>
@@ -336,6 +361,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)</param>
         /// <returns>ApiResponse of List&lt;Recording&gt;</returns>
+        
         ApiResponse<List<Recording>> GetConversationRecordingsWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null);
 
         /// <summary>
@@ -347,6 +373,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>OrphanRecording</returns>
+        
         OrphanRecording GetOrphanrecording (string orphanId);
 
         /// <summary>
@@ -358,6 +385,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>ApiResponse of OrphanRecording</returns>
+        
         ApiResponse<OrphanRecording> GetOrphanrecordingWithHttpInfo (string orphanId);
 
         /// <summary>
@@ -377,6 +405,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>Recording</returns>
+        
         Recording GetOrphanrecordingMedia (string orphanId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null);
 
         /// <summary>
@@ -396,6 +425,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>ApiResponse of Recording</returns>
+        
         ApiResponse<Recording> GetOrphanrecordingMediaWithHttpInfo (string orphanId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null);
 
         /// <summary>
@@ -414,6 +444,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasConversation">Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. (optional, default to false)</param>
         /// <param name="media">Filter resulting orphans based on their media type (optional)</param>
         /// <returns>OrphanRecordingListing</returns>
+        
         OrphanRecordingListing GetOrphanrecordings (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null);
 
         /// <summary>
@@ -432,6 +463,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasConversation">Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. (optional, default to false)</param>
         /// <param name="media">Filter resulting orphans based on their media type (optional)</param>
         /// <returns>ApiResponse of OrphanRecordingListing</returns>
+        
         ApiResponse<OrphanRecordingListing> GetOrphanrecordingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null);
 
         /// <summary>
@@ -443,6 +475,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>BatchDownloadJobStatusResult</returns>
+        
         BatchDownloadJobStatusResult GetRecordingBatchrequest (string jobId);
 
         /// <summary>
@@ -454,6 +487,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>ApiResponse of BatchDownloadJobStatusResult</returns>
+        
         ApiResponse<BatchDownloadJobStatusResult> GetRecordingBatchrequestWithHttpInfo (string jobId);
 
         /// <summary>
@@ -475,6 +509,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <param name="deleteDaysThreshold">provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)</param>
         /// <returns>PolicyEntityListing</returns>
+        
         PolicyEntityListing GetRecordingCrossplatformMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null);
 
         /// <summary>
@@ -496,6 +531,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <param name="deleteDaysThreshold">provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)</param>
         /// <returns>ApiResponse of PolicyEntityListing</returns>
+        
         ApiResponse<PolicyEntityListing> GetRecordingCrossplatformMediaretentionpoliciesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null);
 
         /// <summary>
@@ -507,6 +543,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>CrossPlatformPolicy</returns>
+        
         CrossPlatformPolicy GetRecordingCrossplatformMediaretentionpolicy (string policyId);
 
         /// <summary>
@@ -518,6 +555,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>ApiResponse of CrossPlatformPolicy</returns>
+        
         ApiResponse<CrossPlatformPolicy> GetRecordingCrossplatformMediaretentionpolicyWithHttpInfo (string policyId);
 
         /// <summary>
@@ -529,6 +567,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>RecordingJob</returns>
+        
         RecordingJob GetRecordingJob (string jobId);
 
         /// <summary>
@@ -540,6 +579,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>ApiResponse of RecordingJob</returns>
+        
         ApiResponse<RecordingJob> GetRecordingJobWithHttpInfo (string jobId);
 
         /// <summary>
@@ -555,6 +595,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeTotal">If false, cursor will be used to locate the page instead of pageNumber. (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <returns>FailedRecordingEntityListing</returns>
+        
         FailedRecordingEntityListing GetRecordingJobFailedrecordings (string jobId, int? pageSize = null, int? pageNumber = null, bool? includeTotal = null, string cursor = null);
 
         /// <summary>
@@ -570,6 +611,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeTotal">If false, cursor will be used to locate the page instead of pageNumber. (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <returns>ApiResponse of FailedRecordingEntityListing</returns>
+        
         ApiResponse<FailedRecordingEntityListing> GetRecordingJobFailedrecordingsWithHttpInfo (string jobId, int? pageSize = null, int? pageNumber = null, bool? includeTotal = null, string cursor = null);
 
         /// <summary>
@@ -588,6 +630,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeTotal">If false, cursor will be used to locate the page instead of pageNumber. (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <returns>RecordingJobEntityListing</returns>
+        
         RecordingJobEntityListing GetRecordingJobs (int? pageSize = null, int? pageNumber = null, string sortBy = null, string state = null, bool? showOnlyMyJobs = null, string jobType = null, bool? includeTotal = null, string cursor = null);
 
         /// <summary>
@@ -606,6 +649,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeTotal">If false, cursor will be used to locate the page instead of pageNumber. (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <returns>ApiResponse of RecordingJobEntityListing</returns>
+        
         ApiResponse<RecordingJobEntityListing> GetRecordingJobsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string state = null, bool? showOnlyMyJobs = null, string jobType = null, bool? includeTotal = null, string cursor = null);
 
         /// <summary>
@@ -617,6 +661,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="keyConfigurationId">Key Configurations Id</param>
         /// <returns>RecordingEncryptionConfiguration</returns>
+        
         RecordingEncryptionConfiguration GetRecordingKeyconfiguration (string keyConfigurationId);
 
         /// <summary>
@@ -628,6 +673,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="keyConfigurationId">Key Configurations Id</param>
         /// <returns>ApiResponse of RecordingEncryptionConfiguration</returns>
+        
         ApiResponse<RecordingEncryptionConfiguration> GetRecordingKeyconfigurationWithHttpInfo (string keyConfigurationId);
 
         /// <summary>
@@ -638,6 +684,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>RecordingEncryptionConfigurationListing</returns>
+        
         RecordingEncryptionConfigurationListing GetRecordingKeyconfigurations ();
 
         /// <summary>
@@ -648,6 +695,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of RecordingEncryptionConfigurationListing</returns>
+        
         ApiResponse<RecordingEncryptionConfigurationListing> GetRecordingKeyconfigurationsWithHttpInfo ();
 
         /// <summary>
@@ -669,6 +717,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <param name="deleteDaysThreshold">provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)</param>
         /// <returns>PolicyEntityListing</returns>
+        
         PolicyEntityListing GetRecordingMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null);
 
         /// <summary>
@@ -690,6 +739,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <param name="deleteDaysThreshold">provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)</param>
         /// <returns>ApiResponse of PolicyEntityListing</returns>
+        
         ApiResponse<PolicyEntityListing> GetRecordingMediaretentionpoliciesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null);
 
         /// <summary>
@@ -701,6 +751,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Policy</returns>
+        
         Policy GetRecordingMediaretentionpolicy (string policyId);
 
         /// <summary>
@@ -712,6 +763,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>ApiResponse of Policy</returns>
+        
         ApiResponse<Policy> GetRecordingMediaretentionpolicyWithHttpInfo (string policyId);
 
         /// <summary>
@@ -724,6 +776,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>EncryptionKeyEntityListing</returns>
+        
         EncryptionKeyEntityListing GetRecordingRecordingkeys (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -736,6 +789,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of EncryptionKeyEntityListing</returns>
+        
         ApiResponse<EncryptionKeyEntityListing> GetRecordingRecordingkeysWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -746,6 +800,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>KeyRotationSchedule</returns>
+        
         KeyRotationSchedule GetRecordingRecordingkeysRotationschedule ();
 
         /// <summary>
@@ -756,6 +811,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of KeyRotationSchedule</returns>
+        
         ApiResponse<KeyRotationSchedule> GetRecordingRecordingkeysRotationscheduleWithHttpInfo ();
 
         /// <summary>
@@ -767,6 +823,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createDefault">If no settings are found, a new one is created with default values (optional, default to false)</param>
         /// <returns>RecordingSettings</returns>
+        
         RecordingSettings GetRecordingSettings (bool? createDefault = null);
 
         /// <summary>
@@ -778,6 +835,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createDefault">If no settings are found, a new one is created with default values (optional, default to false)</param>
         /// <returns>ApiResponse of RecordingSettings</returns>
+        
         ApiResponse<RecordingSettings> GetRecordingSettingsWithHttpInfo (bool? createDefault = null);
 
         /// <summary>
@@ -789,6 +847,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reportId">reportId</param>
         /// <returns>RecordingUploadReport</returns>
+        
         RecordingUploadReport GetRecordingUploadsReport (string reportId);
 
         /// <summary>
@@ -800,6 +859,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reportId">reportId</param>
         /// <returns>ApiResponse of RecordingUploadReport</returns>
+        
         ApiResponse<RecordingUploadReport> GetRecordingUploadsReportWithHttpInfo (string reportId);
 
         /// <summary>
@@ -813,6 +873,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <param name="pageSize">Page size. Maximum is 500. (optional, default to 25)</param>
         /// <returns>RecordingRetentionCursorEntityListing</returns>
+        
         RecordingRetentionCursorEntityListing GetRecordingsRetentionQuery (int? retentionThresholdDays, string cursor = null, int? pageSize = null);
 
         /// <summary>
@@ -826,6 +887,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <param name="pageSize">Page size. Maximum is 500. (optional, default to 25)</param>
         /// <returns>ApiResponse of RecordingRetentionCursorEntityListing</returns>
+        
         ApiResponse<RecordingRetentionCursorEntityListing> GetRecordingsRetentionQueryWithHttpInfo (int? retentionThresholdDays, string cursor = null, int? pageSize = null);
 
         /// <summary>
@@ -838,6 +900,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ScreenRecordingSessionListing</returns>
+        
         ScreenRecordingSessionListing GetRecordingsScreensessions (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -850,6 +913,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of ScreenRecordingSessionListing</returns>
+        
         ApiResponse<ScreenRecordingSessionListing> GetRecordingsScreensessionsWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -862,6 +926,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>CrossPlatformPolicy</returns>
+        
         CrossPlatformPolicy PatchRecordingCrossplatformMediaretentionpolicy (string policyId, CrossPlatformPolicyUpdate body);
 
         /// <summary>
@@ -874,6 +939,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of CrossPlatformPolicy</returns>
+        
         ApiResponse<CrossPlatformPolicy> PatchRecordingCrossplatformMediaretentionpolicyWithHttpInfo (string policyId, CrossPlatformPolicyUpdate body);
 
         /// <summary>
@@ -886,6 +952,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Policy</returns>
+        
         Policy PatchRecordingMediaretentionpolicy (string policyId, PolicyUpdate body);
 
         /// <summary>
@@ -898,6 +965,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of Policy</returns>
+        
         ApiResponse<Policy> PatchRecordingMediaretentionpolicyWithHttpInfo (string policyId, PolicyUpdate body);
 
         /// <summary>
@@ -910,6 +978,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingSessionId">Screen recording session ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns></returns>
+        
         void PatchRecordingsScreensession (string recordingSessionId, ScreenRecordingSessionRequest body = null);
 
         /// <summary>
@@ -922,6 +991,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingSessionId">Screen recording session ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> PatchRecordingsScreensessionWithHttpInfo (string recordingSessionId, ScreenRecordingSessionRequest body = null);
 
         /// <summary>
@@ -935,6 +1005,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Annotation</returns>
+        
         Annotation PostConversationRecordingAnnotations (string conversationId, string recordingId, Annotation body);
 
         /// <summary>
@@ -948,6 +1019,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">annotation</param>
         /// <returns>ApiResponse of Annotation</returns>
+        
         ApiResponse<Annotation> PostConversationRecordingAnnotationsWithHttpInfo (string conversationId, string recordingId, Annotation body);
 
         /// <summary>
@@ -959,6 +1031,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Job submission criteria</param>
         /// <returns>BatchDownloadJobSubmissionResult</returns>
+        
         BatchDownloadJobSubmissionResult PostRecordingBatchrequests (BatchDownloadJobSubmission body);
 
         /// <summary>
@@ -970,6 +1043,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Job submission criteria</param>
         /// <returns>ApiResponse of BatchDownloadJobSubmissionResult</returns>
+        
         ApiResponse<BatchDownloadJobSubmissionResult> PostRecordingBatchrequestsWithHttpInfo (BatchDownloadJobSubmission body);
 
         /// <summary>
@@ -981,6 +1055,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>CrossPlatformPolicy</returns>
+        
         CrossPlatformPolicy PostRecordingCrossplatformMediaretentionpolicies (CrossPlatformPolicyCreate body);
 
         /// <summary>
@@ -992,6 +1067,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of CrossPlatformPolicy</returns>
+        
         ApiResponse<CrossPlatformPolicy> PostRecordingCrossplatformMediaretentionpoliciesWithHttpInfo (CrossPlatformPolicyCreate body);
 
         /// <summary>
@@ -1003,6 +1079,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>RecordingJob</returns>
+        
         RecordingJob PostRecordingJobs (RecordingJobsQuery body);
 
         /// <summary>
@@ -1014,6 +1091,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>ApiResponse of RecordingJob</returns>
+        
         ApiResponse<RecordingJob> PostRecordingJobsWithHttpInfo (RecordingJobsQuery body);
 
         /// <summary>
@@ -1025,6 +1103,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Encryption Configuration</param>
         /// <returns>RecordingEncryptionConfiguration</returns>
+        
         RecordingEncryptionConfiguration PostRecordingKeyconfigurations (RecordingEncryptionConfiguration body);
 
         /// <summary>
@@ -1036,6 +1115,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Encryption Configuration</param>
         /// <returns>ApiResponse of RecordingEncryptionConfiguration</returns>
+        
         ApiResponse<RecordingEncryptionConfiguration> PostRecordingKeyconfigurationsWithHttpInfo (RecordingEncryptionConfiguration body);
 
         /// <summary>
@@ -1047,6 +1127,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Encryption Configuration</param>
         /// <returns>RecordingEncryptionConfiguration</returns>
+        
         RecordingEncryptionConfiguration PostRecordingKeyconfigurationsValidate (RecordingEncryptionConfiguration body);
 
         /// <summary>
@@ -1058,6 +1139,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Encryption Configuration</param>
         /// <returns>ApiResponse of RecordingEncryptionConfiguration</returns>
+        
         ApiResponse<RecordingEncryptionConfiguration> PostRecordingKeyconfigurationsValidateWithHttpInfo (RecordingEncryptionConfiguration body);
 
         /// <summary>
@@ -1069,6 +1151,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Local Encryption body</param>
         /// <returns>EncryptionKey</returns>
+        
         EncryptionKey PostRecordingLocalkeys (LocalEncryptionKeyRequest body);
 
         /// <summary>
@@ -1080,6 +1163,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Local Encryption body</param>
         /// <returns>ApiResponse of EncryptionKey</returns>
+        
         ApiResponse<EncryptionKey> PostRecordingLocalkeysWithHttpInfo (LocalEncryptionKeyRequest body);
 
         /// <summary>
@@ -1091,6 +1175,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>Policy</returns>
+        
         Policy PostRecordingMediaretentionpolicies (PolicyCreate body);
 
         /// <summary>
@@ -1102,6 +1187,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of Policy</returns>
+        
         ApiResponse<Policy> PostRecordingMediaretentionpoliciesWithHttpInfo (PolicyCreate body);
 
         /// <summary>
@@ -1112,6 +1198,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>EncryptionKey</returns>
+        
         EncryptionKey PostRecordingRecordingkeys ();
 
         /// <summary>
@@ -1122,6 +1209,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of EncryptionKey</returns>
+        
         ApiResponse<EncryptionKey> PostRecordingRecordingkeysWithHttpInfo ();
 
         /// <summary>
@@ -1133,6 +1221,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Report parameters</param>
         /// <returns>RecordingUploadReport</returns>
+        
         RecordingUploadReport PostRecordingUploadsReports (RecordingUploadReportRequest body);
 
         /// <summary>
@@ -1144,6 +1233,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Report parameters</param>
         /// <returns>ApiResponse of RecordingUploadReport</returns>
+        
         ApiResponse<RecordingUploadReport> PostRecordingUploadsReportsWithHttpInfo (RecordingUploadReportRequest body);
 
         /// <summary>
@@ -1155,6 +1245,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">conversationIds</param>
         /// <returns>List&lt;AddressableEntityRef&gt;</returns>
+        
         List<AddressableEntityRef> PostRecordingsDeletionprotection (ConversationDeletionProtectionQuery body);
 
         /// <summary>
@@ -1166,6 +1257,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">conversationIds</param>
         /// <returns>ApiResponse of List&lt;AddressableEntityRef&gt;</returns>
+        
         ApiResponse<List<AddressableEntityRef>> PostRecordingsDeletionprotectionWithHttpInfo (ConversationDeletionProtectionQuery body);
 
         /// <summary>
@@ -1177,6 +1269,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AcknowledgeScreenRecordingRequest</param>
         /// <returns></returns>
+        
         void PostRecordingsScreensessionsAcknowledge (AcknowledgeScreenRecordingRequest body);
 
         /// <summary>
@@ -1188,6 +1281,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AcknowledgeScreenRecordingRequest</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> PostRecordingsScreensessionsAcknowledgeWithHttpInfo (AcknowledgeScreenRecordingRequest body);
 
         /// <summary>
@@ -1199,6 +1293,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ScreenRecordingMetaDataRequest</param>
         /// <returns></returns>
+        
         void PostRecordingsScreensessionsMetadata (ScreenRecordingMetaDataRequest body);
 
         /// <summary>
@@ -1210,6 +1305,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ScreenRecordingMetaDataRequest</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> PostRecordingsScreensessionsMetadataWithHttpInfo (ScreenRecordingMetaDataRequest body);
 
         /// <summary>
@@ -1224,6 +1320,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">recording</param>
         /// <param name="clearExport">Whether to clear the pending export for the recording (optional)</param>
         /// <returns>Recording</returns>
+        
         Recording PutConversationRecording (string conversationId, string recordingId, Recording body, bool? clearExport = null);
 
         /// <summary>
@@ -1238,6 +1335,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">recording</param>
         /// <param name="clearExport">Whether to clear the pending export for the recording (optional)</param>
         /// <returns>ApiResponse of Recording</returns>
+        
         ApiResponse<Recording> PutConversationRecordingWithHttpInfo (string conversationId, string recordingId, Recording body, bool? clearExport = null);
 
         /// <summary>
@@ -1252,6 +1350,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="annotationId">Annotation ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Annotation</returns>
+        
         Annotation PutConversationRecordingAnnotation (string conversationId, string recordingId, string annotationId, Annotation body);
 
         /// <summary>
@@ -1266,6 +1365,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="annotationId">Annotation ID</param>
         /// <param name="body">annotation</param>
         /// <returns>ApiResponse of Annotation</returns>
+        
         ApiResponse<Annotation> PutConversationRecordingAnnotationWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body);
 
         /// <summary>
@@ -1278,6 +1378,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="orphanId">Orphan ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Recording</returns>
+        
         Recording PutOrphanrecording (string orphanId, OrphanUpdateRequest body = null);
 
         /// <summary>
@@ -1290,6 +1391,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="orphanId">Orphan ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Recording</returns>
+        
         ApiResponse<Recording> PutOrphanrecordingWithHttpInfo (string orphanId, OrphanUpdateRequest body = null);
 
         /// <summary>
@@ -1302,6 +1404,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>CrossPlatformPolicy</returns>
+        
         CrossPlatformPolicy PutRecordingCrossplatformMediaretentionpolicy (string policyId, CrossPlatformPolicy body);
 
         /// <summary>
@@ -1314,6 +1417,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of CrossPlatformPolicy</returns>
+        
         ApiResponse<CrossPlatformPolicy> PutRecordingCrossplatformMediaretentionpolicyWithHttpInfo (string policyId, CrossPlatformPolicy body);
 
         /// <summary>
@@ -1326,6 +1430,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">jobId</param>
         /// <param name="body">query</param>
         /// <returns>RecordingJob</returns>
+        
         RecordingJob PutRecordingJob (string jobId, ExecuteRecordingJobsQuery body);
 
         /// <summary>
@@ -1338,6 +1443,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">jobId</param>
         /// <param name="body">query</param>
         /// <returns>ApiResponse of RecordingJob</returns>
+        
         ApiResponse<RecordingJob> PutRecordingJobWithHttpInfo (string jobId, ExecuteRecordingJobsQuery body);
 
         /// <summary>
@@ -1350,6 +1456,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="keyConfigurationId">Key Configurations Id</param>
         /// <param name="body">Encryption key configuration metadata</param>
         /// <returns>RecordingEncryptionConfiguration</returns>
+        
         RecordingEncryptionConfiguration PutRecordingKeyconfiguration (string keyConfigurationId, RecordingEncryptionConfiguration body);
 
         /// <summary>
@@ -1362,6 +1469,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="keyConfigurationId">Key Configurations Id</param>
         /// <param name="body">Encryption key configuration metadata</param>
         /// <returns>ApiResponse of RecordingEncryptionConfiguration</returns>
+        
         ApiResponse<RecordingEncryptionConfiguration> PutRecordingKeyconfigurationWithHttpInfo (string keyConfigurationId, RecordingEncryptionConfiguration body);
 
         /// <summary>
@@ -1374,6 +1482,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Policy</returns>
+        
         Policy PutRecordingMediaretentionpolicy (string policyId, Policy body);
 
         /// <summary>
@@ -1386,6 +1495,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of Policy</returns>
+        
         ApiResponse<Policy> PutRecordingMediaretentionpolicyWithHttpInfo (string policyId, Policy body);
 
         /// <summary>
@@ -1397,6 +1507,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">KeyRotationSchedule</param>
         /// <returns>KeyRotationSchedule</returns>
+        
         KeyRotationSchedule PutRecordingRecordingkeysRotationschedule (KeyRotationSchedule body);
 
         /// <summary>
@@ -1408,6 +1519,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">KeyRotationSchedule</param>
         /// <returns>ApiResponse of KeyRotationSchedule</returns>
+        
         ApiResponse<KeyRotationSchedule> PutRecordingRecordingkeysRotationscheduleWithHttpInfo (KeyRotationSchedule body);
 
         /// <summary>
@@ -1419,6 +1531,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Recording settings</param>
         /// <returns>RecordingSettings</returns>
+        
         RecordingSettings PutRecordingSettings (RecordingSettings body);
 
         /// <summary>
@@ -1430,6 +1543,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Recording settings</param>
         /// <returns>ApiResponse of RecordingSettings</returns>
+        
         ApiResponse<RecordingSettings> PutRecordingSettingsWithHttpInfo (RecordingSettings body);
 
         /// <summary>
@@ -1442,6 +1556,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="protect">Check for apply, uncheck for revoke (each action requires the respective permission) (optional, default to true)</param>
         /// <param name="body"> (optional)</param>
         /// <returns></returns>
+        
         void PutRecordingsDeletionprotection (bool? protect = null, ConversationDeletionProtectionQuery body = null);
 
         /// <summary>
@@ -1454,6 +1569,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="protect">Check for apply, uncheck for revoke (each action requires the respective permission) (optional, default to true)</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> PutRecordingsDeletionprotectionWithHttpInfo (bool? protect = null, ConversationDeletionProtectionQuery body = null);
 
         #endregion Synchronous Operations
@@ -1471,6 +1587,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task DeleteConversationRecordingAnnotationAsync (string conversationId, string recordingId, string annotationId);
 
         /// <summary>
@@ -1484,6 +1601,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationRecordingAnnotationAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId);
 
         /// <summary>
@@ -1495,6 +1613,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of OrphanRecording</returns>
+        
         System.Threading.Tasks.Task<OrphanRecording> DeleteOrphanrecordingAsync (string orphanId);
 
         /// <summary>
@@ -1506,6 +1625,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of ApiResponse (OrphanRecording)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> DeleteOrphanrecordingAsyncWithHttpInfo (string orphanId);
 
         /// <summary>
@@ -1517,6 +1637,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids"></param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task DeleteRecordingCrossplatformMediaretentionpoliciesAsync (string ids);
 
         /// <summary>
@@ -1528,6 +1649,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids"></param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRecordingCrossplatformMediaretentionpoliciesAsyncWithHttpInfo (string ids);
 
         /// <summary>
@@ -1539,6 +1661,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task DeleteRecordingCrossplatformMediaretentionpolicyAsync (string policyId);
 
         /// <summary>
@@ -1550,6 +1673,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRecordingCrossplatformMediaretentionpolicyAsyncWithHttpInfo (string policyId);
 
         /// <summary>
@@ -1561,6 +1685,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task DeleteRecordingJobAsync (string jobId);
 
         /// <summary>
@@ -1572,6 +1697,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRecordingJobAsyncWithHttpInfo (string jobId);
 
         /// <summary>
@@ -1583,6 +1709,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids"></param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task DeleteRecordingMediaretentionpoliciesAsync (string ids);
 
         /// <summary>
@@ -1594,6 +1721,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids"></param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRecordingMediaretentionpoliciesAsyncWithHttpInfo (string ids);
 
         /// <summary>
@@ -1605,6 +1733,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task DeleteRecordingMediaretentionpolicyAsync (string policyId);
 
         /// <summary>
@@ -1616,6 +1745,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRecordingMediaretentionpolicyAsyncWithHttpInfo (string policyId);
 
         /// <summary>
@@ -1636,6 +1766,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>Task of Recording</returns>
+        
         System.Threading.Tasks.Task<Recording> GetConversationRecordingAsync (string conversationId, string recordingId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null);
 
         /// <summary>
@@ -1656,6 +1787,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>Task of ApiResponse (Recording)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Recording>> GetConversationRecordingAsyncWithHttpInfo (string conversationId, string recordingId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null);
 
         /// <summary>
@@ -1669,6 +1801,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Task of Annotation</returns>
+        
         System.Threading.Tasks.Task<Annotation> GetConversationRecordingAnnotationAsync (string conversationId, string recordingId, string annotationId);
 
         /// <summary>
@@ -1682,6 +1815,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Task of ApiResponse (Annotation)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Annotation>> GetConversationRecordingAnnotationAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId);
 
         /// <summary>
@@ -1694,6 +1828,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <returns>Task of List&lt;Annotation&gt;</returns>
+        
         System.Threading.Tasks.Task<List<Annotation>> GetConversationRecordingAnnotationsAsync (string conversationId, string recordingId);
 
         /// <summary>
@@ -1706,6 +1841,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <returns>Task of ApiResponse (List&lt;Annotation&gt;)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<List<Annotation>>> GetConversationRecordingAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId);
 
         /// <summary>
@@ -1717,6 +1853,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <returns>Task of List&lt;RecordingMetadata&gt;</returns>
+        
         System.Threading.Tasks.Task<List<RecordingMetadata>> GetConversationRecordingmetadataAsync (string conversationId);
 
         /// <summary>
@@ -1728,6 +1865,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <returns>Task of ApiResponse (List&lt;RecordingMetadata&gt;)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<List<RecordingMetadata>>> GetConversationRecordingmetadataAsyncWithHttpInfo (string conversationId);
 
         /// <summary>
@@ -1740,6 +1878,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <returns>Task of RecordingMetadata</returns>
+        
         System.Threading.Tasks.Task<RecordingMetadata> GetConversationRecordingmetadataRecordingIdAsync (string conversationId, string recordingId);
 
         /// <summary>
@@ -1752,6 +1891,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <returns>Task of ApiResponse (RecordingMetadata)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<RecordingMetadata>> GetConversationRecordingmetadataRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId);
 
         /// <summary>
@@ -1766,6 +1906,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)</param>
         /// <returns>Task of List&lt;Recording&gt;</returns>
+        
         System.Threading.Tasks.Task<List<Recording>> GetConversationRecordingsAsync (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null);
 
         /// <summary>
@@ -1780,6 +1921,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;Recording&gt;)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationRecordingsAsyncWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null);
 
         /// <summary>
@@ -1791,6 +1933,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of OrphanRecording</returns>
+        
         System.Threading.Tasks.Task<OrphanRecording> GetOrphanrecordingAsync (string orphanId);
 
         /// <summary>
@@ -1802,6 +1945,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of ApiResponse (OrphanRecording)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> GetOrphanrecordingAsyncWithHttpInfo (string orphanId);
 
         /// <summary>
@@ -1821,6 +1965,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>Task of Recording</returns>
+        
         System.Threading.Tasks.Task<Recording> GetOrphanrecordingMediaAsync (string orphanId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null);
 
         /// <summary>
@@ -1840,6 +1985,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>Task of ApiResponse (Recording)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Recording>> GetOrphanrecordingMediaAsyncWithHttpInfo (string orphanId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null);
 
         /// <summary>
@@ -1858,6 +2004,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasConversation">Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. (optional, default to false)</param>
         /// <param name="media">Filter resulting orphans based on their media type (optional)</param>
         /// <returns>Task of OrphanRecordingListing</returns>
+        
         System.Threading.Tasks.Task<OrphanRecordingListing> GetOrphanrecordingsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null);
 
         /// <summary>
@@ -1876,6 +2023,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasConversation">Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. (optional, default to false)</param>
         /// <param name="media">Filter resulting orphans based on their media type (optional)</param>
         /// <returns>Task of ApiResponse (OrphanRecordingListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<OrphanRecordingListing>> GetOrphanrecordingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null);
 
         /// <summary>
@@ -1887,6 +2035,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>Task of BatchDownloadJobStatusResult</returns>
+        
         System.Threading.Tasks.Task<BatchDownloadJobStatusResult> GetRecordingBatchrequestAsync (string jobId);
 
         /// <summary>
@@ -1898,6 +2047,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>Task of ApiResponse (BatchDownloadJobStatusResult)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<BatchDownloadJobStatusResult>> GetRecordingBatchrequestAsyncWithHttpInfo (string jobId);
 
         /// <summary>
@@ -1919,6 +2069,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <param name="deleteDaysThreshold">provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)</param>
         /// <returns>Task of PolicyEntityListing</returns>
+        
         System.Threading.Tasks.Task<PolicyEntityListing> GetRecordingCrossplatformMediaretentionpoliciesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null);
 
         /// <summary>
@@ -1940,6 +2091,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <param name="deleteDaysThreshold">provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)</param>
         /// <returns>Task of ApiResponse (PolicyEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<PolicyEntityListing>> GetRecordingCrossplatformMediaretentionpoliciesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null);
 
         /// <summary>
@@ -1951,6 +2103,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of CrossPlatformPolicy</returns>
+        
         System.Threading.Tasks.Task<CrossPlatformPolicy> GetRecordingCrossplatformMediaretentionpolicyAsync (string policyId);
 
         /// <summary>
@@ -1962,6 +2115,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of ApiResponse (CrossPlatformPolicy)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<CrossPlatformPolicy>> GetRecordingCrossplatformMediaretentionpolicyAsyncWithHttpInfo (string policyId);
 
         /// <summary>
@@ -1973,6 +2127,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>Task of RecordingJob</returns>
+        
         System.Threading.Tasks.Task<RecordingJob> GetRecordingJobAsync (string jobId);
 
         /// <summary>
@@ -1984,6 +2139,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>Task of ApiResponse (RecordingJob)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<RecordingJob>> GetRecordingJobAsyncWithHttpInfo (string jobId);
 
         /// <summary>
@@ -1999,6 +2155,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeTotal">If false, cursor will be used to locate the page instead of pageNumber. (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <returns>Task of FailedRecordingEntityListing</returns>
+        
         System.Threading.Tasks.Task<FailedRecordingEntityListing> GetRecordingJobFailedrecordingsAsync (string jobId, int? pageSize = null, int? pageNumber = null, bool? includeTotal = null, string cursor = null);
 
         /// <summary>
@@ -2014,6 +2171,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeTotal">If false, cursor will be used to locate the page instead of pageNumber. (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <returns>Task of ApiResponse (FailedRecordingEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<FailedRecordingEntityListing>> GetRecordingJobFailedrecordingsAsyncWithHttpInfo (string jobId, int? pageSize = null, int? pageNumber = null, bool? includeTotal = null, string cursor = null);
 
         /// <summary>
@@ -2032,6 +2190,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeTotal">If false, cursor will be used to locate the page instead of pageNumber. (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <returns>Task of RecordingJobEntityListing</returns>
+        
         System.Threading.Tasks.Task<RecordingJobEntityListing> GetRecordingJobsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string state = null, bool? showOnlyMyJobs = null, string jobType = null, bool? includeTotal = null, string cursor = null);
 
         /// <summary>
@@ -2050,6 +2209,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeTotal">If false, cursor will be used to locate the page instead of pageNumber. (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <returns>Task of ApiResponse (RecordingJobEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<RecordingJobEntityListing>> GetRecordingJobsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string state = null, bool? showOnlyMyJobs = null, string jobType = null, bool? includeTotal = null, string cursor = null);
 
         /// <summary>
@@ -2061,6 +2221,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="keyConfigurationId">Key Configurations Id</param>
         /// <returns>Task of RecordingEncryptionConfiguration</returns>
+        
         System.Threading.Tasks.Task<RecordingEncryptionConfiguration> GetRecordingKeyconfigurationAsync (string keyConfigurationId);
 
         /// <summary>
@@ -2072,6 +2233,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="keyConfigurationId">Key Configurations Id</param>
         /// <returns>Task of ApiResponse (RecordingEncryptionConfiguration)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<RecordingEncryptionConfiguration>> GetRecordingKeyconfigurationAsyncWithHttpInfo (string keyConfigurationId);
 
         /// <summary>
@@ -2082,6 +2244,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of RecordingEncryptionConfigurationListing</returns>
+        
         System.Threading.Tasks.Task<RecordingEncryptionConfigurationListing> GetRecordingKeyconfigurationsAsync ();
 
         /// <summary>
@@ -2092,6 +2255,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (RecordingEncryptionConfigurationListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<RecordingEncryptionConfigurationListing>> GetRecordingKeyconfigurationsAsyncWithHttpInfo ();
 
         /// <summary>
@@ -2113,6 +2277,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <param name="deleteDaysThreshold">provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)</param>
         /// <returns>Task of PolicyEntityListing</returns>
+        
         System.Threading.Tasks.Task<PolicyEntityListing> GetRecordingMediaretentionpoliciesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null);
 
         /// <summary>
@@ -2134,6 +2299,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <param name="deleteDaysThreshold">provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)</param>
         /// <returns>Task of ApiResponse (PolicyEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<PolicyEntityListing>> GetRecordingMediaretentionpoliciesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null);
 
         /// <summary>
@@ -2145,6 +2311,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of Policy</returns>
+        
         System.Threading.Tasks.Task<Policy> GetRecordingMediaretentionpolicyAsync (string policyId);
 
         /// <summary>
@@ -2156,6 +2323,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Policy>> GetRecordingMediaretentionpolicyAsyncWithHttpInfo (string policyId);
 
         /// <summary>
@@ -2168,6 +2336,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of EncryptionKeyEntityListing</returns>
+        
         System.Threading.Tasks.Task<EncryptionKeyEntityListing> GetRecordingRecordingkeysAsync (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -2180,6 +2349,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (EncryptionKeyEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<EncryptionKeyEntityListing>> GetRecordingRecordingkeysAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -2190,6 +2360,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of KeyRotationSchedule</returns>
+        
         System.Threading.Tasks.Task<KeyRotationSchedule> GetRecordingRecordingkeysRotationscheduleAsync ();
 
         /// <summary>
@@ -2200,6 +2371,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (KeyRotationSchedule)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<KeyRotationSchedule>> GetRecordingRecordingkeysRotationscheduleAsyncWithHttpInfo ();
 
         /// <summary>
@@ -2211,6 +2383,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createDefault">If no settings are found, a new one is created with default values (optional, default to false)</param>
         /// <returns>Task of RecordingSettings</returns>
+        
         System.Threading.Tasks.Task<RecordingSettings> GetRecordingSettingsAsync (bool? createDefault = null);
 
         /// <summary>
@@ -2222,6 +2395,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createDefault">If no settings are found, a new one is created with default values (optional, default to false)</param>
         /// <returns>Task of ApiResponse (RecordingSettings)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<RecordingSettings>> GetRecordingSettingsAsyncWithHttpInfo (bool? createDefault = null);
 
         /// <summary>
@@ -2233,6 +2407,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reportId">reportId</param>
         /// <returns>Task of RecordingUploadReport</returns>
+        
         System.Threading.Tasks.Task<RecordingUploadReport> GetRecordingUploadsReportAsync (string reportId);
 
         /// <summary>
@@ -2244,6 +2419,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reportId">reportId</param>
         /// <returns>Task of ApiResponse (RecordingUploadReport)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<RecordingUploadReport>> GetRecordingUploadsReportAsyncWithHttpInfo (string reportId);
 
         /// <summary>
@@ -2257,6 +2433,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <param name="pageSize">Page size. Maximum is 500. (optional, default to 25)</param>
         /// <returns>Task of RecordingRetentionCursorEntityListing</returns>
+        
         System.Threading.Tasks.Task<RecordingRetentionCursorEntityListing> GetRecordingsRetentionQueryAsync (int? retentionThresholdDays, string cursor = null, int? pageSize = null);
 
         /// <summary>
@@ -2270,6 +2447,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <param name="pageSize">Page size. Maximum is 500. (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (RecordingRetentionCursorEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<RecordingRetentionCursorEntityListing>> GetRecordingsRetentionQueryAsyncWithHttpInfo (int? retentionThresholdDays, string cursor = null, int? pageSize = null);
 
         /// <summary>
@@ -2282,6 +2460,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ScreenRecordingSessionListing</returns>
+        
         System.Threading.Tasks.Task<ScreenRecordingSessionListing> GetRecordingsScreensessionsAsync (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -2294,6 +2473,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (ScreenRecordingSessionListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ScreenRecordingSessionListing>> GetRecordingsScreensessionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -2306,6 +2486,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of CrossPlatformPolicy</returns>
+        
         System.Threading.Tasks.Task<CrossPlatformPolicy> PatchRecordingCrossplatformMediaretentionpolicyAsync (string policyId, CrossPlatformPolicyUpdate body);
 
         /// <summary>
@@ -2318,6 +2499,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (CrossPlatformPolicy)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<CrossPlatformPolicy>> PatchRecordingCrossplatformMediaretentionpolicyAsyncWithHttpInfo (string policyId, CrossPlatformPolicyUpdate body);
 
         /// <summary>
@@ -2330,6 +2512,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of Policy</returns>
+        
         System.Threading.Tasks.Task<Policy> PatchRecordingMediaretentionpolicyAsync (string policyId, PolicyUpdate body);
 
         /// <summary>
@@ -2342,6 +2525,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Policy>> PatchRecordingMediaretentionpolicyAsyncWithHttpInfo (string policyId, PolicyUpdate body);
 
         /// <summary>
@@ -2354,6 +2538,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingSessionId">Screen recording session ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task PatchRecordingsScreensessionAsync (string recordingSessionId, ScreenRecordingSessionRequest body = null);
 
         /// <summary>
@@ -2366,6 +2551,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingSessionId">Screen recording session ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchRecordingsScreensessionAsyncWithHttpInfo (string recordingSessionId, ScreenRecordingSessionRequest body = null);
 
         /// <summary>
@@ -2379,6 +2565,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Task of Annotation</returns>
+        
         System.Threading.Tasks.Task<Annotation> PostConversationRecordingAnnotationsAsync (string conversationId, string recordingId, Annotation body);
 
         /// <summary>
@@ -2392,6 +2579,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Task of ApiResponse (Annotation)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Annotation>> PostConversationRecordingAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId, Annotation body);
 
         /// <summary>
@@ -2403,6 +2591,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Job submission criteria</param>
         /// <returns>Task of BatchDownloadJobSubmissionResult</returns>
+        
         System.Threading.Tasks.Task<BatchDownloadJobSubmissionResult> PostRecordingBatchrequestsAsync (BatchDownloadJobSubmission body);
 
         /// <summary>
@@ -2414,6 +2603,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Job submission criteria</param>
         /// <returns>Task of ApiResponse (BatchDownloadJobSubmissionResult)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<BatchDownloadJobSubmissionResult>> PostRecordingBatchrequestsAsyncWithHttpInfo (BatchDownloadJobSubmission body);
 
         /// <summary>
@@ -2425,6 +2615,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>Task of CrossPlatformPolicy</returns>
+        
         System.Threading.Tasks.Task<CrossPlatformPolicy> PostRecordingCrossplatformMediaretentionpoliciesAsync (CrossPlatformPolicyCreate body);
 
         /// <summary>
@@ -2436,6 +2627,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (CrossPlatformPolicy)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<CrossPlatformPolicy>> PostRecordingCrossplatformMediaretentionpoliciesAsyncWithHttpInfo (CrossPlatformPolicyCreate body);
 
         /// <summary>
@@ -2447,6 +2639,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of RecordingJob</returns>
+        
         System.Threading.Tasks.Task<RecordingJob> PostRecordingJobsAsync (RecordingJobsQuery body);
 
         /// <summary>
@@ -2458,6 +2651,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (RecordingJob)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<RecordingJob>> PostRecordingJobsAsyncWithHttpInfo (RecordingJobsQuery body);
 
         /// <summary>
@@ -2469,6 +2663,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Encryption Configuration</param>
         /// <returns>Task of RecordingEncryptionConfiguration</returns>
+        
         System.Threading.Tasks.Task<RecordingEncryptionConfiguration> PostRecordingKeyconfigurationsAsync (RecordingEncryptionConfiguration body);
 
         /// <summary>
@@ -2480,6 +2675,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Encryption Configuration</param>
         /// <returns>Task of ApiResponse (RecordingEncryptionConfiguration)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<RecordingEncryptionConfiguration>> PostRecordingKeyconfigurationsAsyncWithHttpInfo (RecordingEncryptionConfiguration body);
 
         /// <summary>
@@ -2491,6 +2687,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Encryption Configuration</param>
         /// <returns>Task of RecordingEncryptionConfiguration</returns>
+        
         System.Threading.Tasks.Task<RecordingEncryptionConfiguration> PostRecordingKeyconfigurationsValidateAsync (RecordingEncryptionConfiguration body);
 
         /// <summary>
@@ -2502,6 +2699,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Encryption Configuration</param>
         /// <returns>Task of ApiResponse (RecordingEncryptionConfiguration)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<RecordingEncryptionConfiguration>> PostRecordingKeyconfigurationsValidateAsyncWithHttpInfo (RecordingEncryptionConfiguration body);
 
         /// <summary>
@@ -2513,6 +2711,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Local Encryption body</param>
         /// <returns>Task of EncryptionKey</returns>
+        
         System.Threading.Tasks.Task<EncryptionKey> PostRecordingLocalkeysAsync (LocalEncryptionKeyRequest body);
 
         /// <summary>
@@ -2524,6 +2723,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Local Encryption body</param>
         /// <returns>Task of ApiResponse (EncryptionKey)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<EncryptionKey>> PostRecordingLocalkeysAsyncWithHttpInfo (LocalEncryptionKeyRequest body);
 
         /// <summary>
@@ -2535,6 +2735,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>Task of Policy</returns>
+        
         System.Threading.Tasks.Task<Policy> PostRecordingMediaretentionpoliciesAsync (PolicyCreate body);
 
         /// <summary>
@@ -2546,6 +2747,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Policy>> PostRecordingMediaretentionpoliciesAsyncWithHttpInfo (PolicyCreate body);
 
         /// <summary>
@@ -2556,6 +2758,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of EncryptionKey</returns>
+        
         System.Threading.Tasks.Task<EncryptionKey> PostRecordingRecordingkeysAsync ();
 
         /// <summary>
@@ -2566,6 +2769,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (EncryptionKey)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<EncryptionKey>> PostRecordingRecordingkeysAsyncWithHttpInfo ();
 
         /// <summary>
@@ -2577,6 +2781,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Report parameters</param>
         /// <returns>Task of RecordingUploadReport</returns>
+        
         System.Threading.Tasks.Task<RecordingUploadReport> PostRecordingUploadsReportsAsync (RecordingUploadReportRequest body);
 
         /// <summary>
@@ -2588,6 +2793,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Report parameters</param>
         /// <returns>Task of ApiResponse (RecordingUploadReport)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<RecordingUploadReport>> PostRecordingUploadsReportsAsyncWithHttpInfo (RecordingUploadReportRequest body);
 
         /// <summary>
@@ -2599,6 +2805,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">conversationIds</param>
         /// <returns>Task of List&lt;AddressableEntityRef&gt;</returns>
+        
         System.Threading.Tasks.Task<List<AddressableEntityRef>> PostRecordingsDeletionprotectionAsync (ConversationDeletionProtectionQuery body);
 
         /// <summary>
@@ -2610,6 +2817,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">conversationIds</param>
         /// <returns>Task of ApiResponse (List&lt;AddressableEntityRef&gt;)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<List<AddressableEntityRef>>> PostRecordingsDeletionprotectionAsyncWithHttpInfo (ConversationDeletionProtectionQuery body);
 
         /// <summary>
@@ -2621,6 +2829,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AcknowledgeScreenRecordingRequest</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task PostRecordingsScreensessionsAcknowledgeAsync (AcknowledgeScreenRecordingRequest body);
 
         /// <summary>
@@ -2632,6 +2841,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AcknowledgeScreenRecordingRequest</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> PostRecordingsScreensessionsAcknowledgeAsyncWithHttpInfo (AcknowledgeScreenRecordingRequest body);
 
         /// <summary>
@@ -2643,6 +2853,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ScreenRecordingMetaDataRequest</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task PostRecordingsScreensessionsMetadataAsync (ScreenRecordingMetaDataRequest body);
 
         /// <summary>
@@ -2654,6 +2865,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ScreenRecordingMetaDataRequest</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> PostRecordingsScreensessionsMetadataAsyncWithHttpInfo (ScreenRecordingMetaDataRequest body);
 
         /// <summary>
@@ -2668,6 +2880,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">recording</param>
         /// <param name="clearExport">Whether to clear the pending export for the recording (optional)</param>
         /// <returns>Task of Recording</returns>
+        
         System.Threading.Tasks.Task<Recording> PutConversationRecordingAsync (string conversationId, string recordingId, Recording body, bool? clearExport = null);
 
         /// <summary>
@@ -2682,6 +2895,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">recording</param>
         /// <param name="clearExport">Whether to clear the pending export for the recording (optional)</param>
         /// <returns>Task of ApiResponse (Recording)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Recording>> PutConversationRecordingAsyncWithHttpInfo (string conversationId, string recordingId, Recording body, bool? clearExport = null);
 
         /// <summary>
@@ -2696,6 +2910,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="annotationId">Annotation ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Task of Annotation</returns>
+        
         System.Threading.Tasks.Task<Annotation> PutConversationRecordingAnnotationAsync (string conversationId, string recordingId, string annotationId, Annotation body);
 
         /// <summary>
@@ -2710,6 +2925,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="annotationId">Annotation ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Task of ApiResponse (Annotation)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Annotation>> PutConversationRecordingAnnotationAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body);
 
         /// <summary>
@@ -2722,6 +2938,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="orphanId">Orphan ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of Recording</returns>
+        
         System.Threading.Tasks.Task<Recording> PutOrphanrecordingAsync (string orphanId, OrphanUpdateRequest body = null);
 
         /// <summary>
@@ -2734,6 +2951,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="orphanId">Orphan ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (Recording)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Recording>> PutOrphanrecordingAsyncWithHttpInfo (string orphanId, OrphanUpdateRequest body = null);
 
         /// <summary>
@@ -2746,6 +2964,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of CrossPlatformPolicy</returns>
+        
         System.Threading.Tasks.Task<CrossPlatformPolicy> PutRecordingCrossplatformMediaretentionpolicyAsync (string policyId, CrossPlatformPolicy body);
 
         /// <summary>
@@ -2758,6 +2977,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (CrossPlatformPolicy)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<CrossPlatformPolicy>> PutRecordingCrossplatformMediaretentionpolicyAsyncWithHttpInfo (string policyId, CrossPlatformPolicy body);
 
         /// <summary>
@@ -2770,6 +2990,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">jobId</param>
         /// <param name="body">query</param>
         /// <returns>Task of RecordingJob</returns>
+        
         System.Threading.Tasks.Task<RecordingJob> PutRecordingJobAsync (string jobId, ExecuteRecordingJobsQuery body);
 
         /// <summary>
@@ -2782,6 +3003,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">jobId</param>
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (RecordingJob)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<RecordingJob>> PutRecordingJobAsyncWithHttpInfo (string jobId, ExecuteRecordingJobsQuery body);
 
         /// <summary>
@@ -2794,6 +3016,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="keyConfigurationId">Key Configurations Id</param>
         /// <param name="body">Encryption key configuration metadata</param>
         /// <returns>Task of RecordingEncryptionConfiguration</returns>
+        
         System.Threading.Tasks.Task<RecordingEncryptionConfiguration> PutRecordingKeyconfigurationAsync (string keyConfigurationId, RecordingEncryptionConfiguration body);
 
         /// <summary>
@@ -2806,6 +3029,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="keyConfigurationId">Key Configurations Id</param>
         /// <param name="body">Encryption key configuration metadata</param>
         /// <returns>Task of ApiResponse (RecordingEncryptionConfiguration)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<RecordingEncryptionConfiguration>> PutRecordingKeyconfigurationAsyncWithHttpInfo (string keyConfigurationId, RecordingEncryptionConfiguration body);
 
         /// <summary>
@@ -2818,6 +3042,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of Policy</returns>
+        
         System.Threading.Tasks.Task<Policy> PutRecordingMediaretentionpolicyAsync (string policyId, Policy body);
 
         /// <summary>
@@ -2830,6 +3055,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Policy>> PutRecordingMediaretentionpolicyAsyncWithHttpInfo (string policyId, Policy body);
 
         /// <summary>
@@ -2841,6 +3067,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">KeyRotationSchedule</param>
         /// <returns>Task of KeyRotationSchedule</returns>
+        
         System.Threading.Tasks.Task<KeyRotationSchedule> PutRecordingRecordingkeysRotationscheduleAsync (KeyRotationSchedule body);
 
         /// <summary>
@@ -2852,6 +3079,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">KeyRotationSchedule</param>
         /// <returns>Task of ApiResponse (KeyRotationSchedule)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<KeyRotationSchedule>> PutRecordingRecordingkeysRotationscheduleAsyncWithHttpInfo (KeyRotationSchedule body);
 
         /// <summary>
@@ -2863,6 +3091,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Recording settings</param>
         /// <returns>Task of RecordingSettings</returns>
+        
         System.Threading.Tasks.Task<RecordingSettings> PutRecordingSettingsAsync (RecordingSettings body);
 
         /// <summary>
@@ -2874,6 +3103,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Recording settings</param>
         /// <returns>Task of ApiResponse (RecordingSettings)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<RecordingSettings>> PutRecordingSettingsAsyncWithHttpInfo (RecordingSettings body);
 
         /// <summary>
@@ -2886,6 +3116,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="protect">Check for apply, uncheck for revoke (each action requires the respective permission) (optional, default to true)</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task PutRecordingsDeletionprotectionAsync (bool? protect = null, ConversationDeletionProtectionQuery body = null);
 
         /// <summary>
@@ -2898,6 +3129,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="protect">Check for apply, uncheck for revoke (each action requires the respective permission) (optional, default to true)</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> PutRecordingsDeletionprotectionAsyncWithHttpInfo (bool? protect = null, ConversationDeletionProtectionQuery body = null);
 
         #endregion Asynchronous Operations
@@ -3000,6 +3232,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns></returns>
+        
         public void DeleteConversationRecordingAnnotation (string conversationId, string recordingId, string annotationId)
         {
              DeleteConversationRecordingAnnotationWithHttpInfo(conversationId, recordingId, annotationId);
@@ -3013,6 +3246,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> DeleteConversationRecordingAnnotationWithHttpInfo (string conversationId, string recordingId, string annotationId)
         { 
             // verify the required parameter 'conversationId' is set
@@ -3105,6 +3339,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task DeleteConversationRecordingAnnotationAsync (string conversationId, string recordingId, string annotationId)
         {
              await DeleteConversationRecordingAnnotationAsyncWithHttpInfo(conversationId, recordingId, annotationId);
@@ -3119,6 +3354,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationRecordingAnnotationAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId)
         { 
             // verify the required parameter 'conversationId' is set
@@ -3213,6 +3449,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>OrphanRecording</returns>
+        
         public OrphanRecording DeleteOrphanrecording (string orphanId)
         {
              ApiResponse<OrphanRecording> localVarResponse = DeleteOrphanrecordingWithHttpInfo(orphanId);
@@ -3225,6 +3462,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>ApiResponse of OrphanRecording</returns>
+        
         public ApiResponse< OrphanRecording > DeleteOrphanrecordingWithHttpInfo (string orphanId)
         { 
             // verify the required parameter 'orphanId' is set
@@ -3307,6 +3545,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of OrphanRecording</returns>
+        
         public async System.Threading.Tasks.Task<OrphanRecording> DeleteOrphanrecordingAsync (string orphanId)
         {
              ApiResponse<OrphanRecording> localVarResponse = await DeleteOrphanrecordingAsyncWithHttpInfo(orphanId);
@@ -3320,6 +3559,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of ApiResponse (OrphanRecording)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> DeleteOrphanrecordingAsyncWithHttpInfo (string orphanId)
         { 
             // verify the required parameter 'orphanId' is set
@@ -3404,6 +3644,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids"></param>
         /// <returns></returns>
+        
         public void DeleteRecordingCrossplatformMediaretentionpolicies (string ids)
         {
              DeleteRecordingCrossplatformMediaretentionpoliciesWithHttpInfo(ids);
@@ -3415,6 +3656,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids"></param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> DeleteRecordingCrossplatformMediaretentionpoliciesWithHttpInfo (string ids)
         { 
             // verify the required parameter 'ids' is set
@@ -3497,6 +3739,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids"></param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task DeleteRecordingCrossplatformMediaretentionpoliciesAsync (string ids)
         {
              await DeleteRecordingCrossplatformMediaretentionpoliciesAsyncWithHttpInfo(ids);
@@ -3509,6 +3752,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids"></param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRecordingCrossplatformMediaretentionpoliciesAsyncWithHttpInfo (string ids)
         { 
             // verify the required parameter 'ids' is set
@@ -3593,6 +3837,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns></returns>
+        
         public void DeleteRecordingCrossplatformMediaretentionpolicy (string policyId)
         {
              DeleteRecordingCrossplatformMediaretentionpolicyWithHttpInfo(policyId);
@@ -3604,6 +3849,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> DeleteRecordingCrossplatformMediaretentionpolicyWithHttpInfo (string policyId)
         { 
             // verify the required parameter 'policyId' is set
@@ -3686,6 +3932,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task DeleteRecordingCrossplatformMediaretentionpolicyAsync (string policyId)
         {
              await DeleteRecordingCrossplatformMediaretentionpolicyAsyncWithHttpInfo(policyId);
@@ -3698,6 +3945,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRecordingCrossplatformMediaretentionpolicyAsyncWithHttpInfo (string policyId)
         { 
             // verify the required parameter 'policyId' is set
@@ -3782,6 +4030,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns></returns>
+        
         public void DeleteRecordingJob (string jobId)
         {
              DeleteRecordingJobWithHttpInfo(jobId);
@@ -3793,6 +4042,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> DeleteRecordingJobWithHttpInfo (string jobId)
         { 
             // verify the required parameter 'jobId' is set
@@ -3875,6 +4125,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task DeleteRecordingJobAsync (string jobId)
         {
              await DeleteRecordingJobAsyncWithHttpInfo(jobId);
@@ -3887,6 +4138,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRecordingJobAsyncWithHttpInfo (string jobId)
         { 
             // verify the required parameter 'jobId' is set
@@ -3971,6 +4223,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids"></param>
         /// <returns></returns>
+        
         public void DeleteRecordingMediaretentionpolicies (string ids)
         {
              DeleteRecordingMediaretentionpoliciesWithHttpInfo(ids);
@@ -3982,6 +4235,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids"></param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> DeleteRecordingMediaretentionpoliciesWithHttpInfo (string ids)
         { 
             // verify the required parameter 'ids' is set
@@ -4064,6 +4318,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids"></param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task DeleteRecordingMediaretentionpoliciesAsync (string ids)
         {
              await DeleteRecordingMediaretentionpoliciesAsyncWithHttpInfo(ids);
@@ -4076,6 +4331,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids"></param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRecordingMediaretentionpoliciesAsyncWithHttpInfo (string ids)
         { 
             // verify the required parameter 'ids' is set
@@ -4160,6 +4416,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns></returns>
+        
         public void DeleteRecordingMediaretentionpolicy (string policyId)
         {
              DeleteRecordingMediaretentionpolicyWithHttpInfo(policyId);
@@ -4171,6 +4428,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> DeleteRecordingMediaretentionpolicyWithHttpInfo (string policyId)
         { 
             // verify the required parameter 'policyId' is set
@@ -4253,6 +4511,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task DeleteRecordingMediaretentionpolicyAsync (string policyId)
         {
              await DeleteRecordingMediaretentionpolicyAsyncWithHttpInfo(policyId);
@@ -4265,6 +4524,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRecordingMediaretentionpolicyAsyncWithHttpInfo (string policyId)
         { 
             // verify the required parameter 'policyId' is set
@@ -4358,6 +4618,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>Recording</returns>
+        
         public Recording GetConversationRecording (string conversationId, string recordingId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null)
         {
              ApiResponse<Recording> localVarResponse = GetConversationRecordingWithHttpInfo(conversationId, recordingId, formatId, emailFormatId, chatFormatId, messageFormatId, download, fileName, locale, mediaFormats);
@@ -4379,6 +4640,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>ApiResponse of Recording</returns>
+        
         public ApiResponse< Recording > GetConversationRecordingWithHttpInfo (string conversationId, string recordingId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null)
         { 
             // verify the required parameter 'conversationId' is set
@@ -4482,6 +4744,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>Task of Recording</returns>
+        
         public async System.Threading.Tasks.Task<Recording> GetConversationRecordingAsync (string conversationId, string recordingId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null)
         {
              ApiResponse<Recording> localVarResponse = await GetConversationRecordingAsyncWithHttpInfo(conversationId, recordingId, formatId, emailFormatId, chatFormatId, messageFormatId, download, fileName, locale, mediaFormats);
@@ -4504,6 +4767,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>Task of ApiResponse (Recording)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Recording>> GetConversationRecordingAsyncWithHttpInfo (string conversationId, string recordingId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null)
         { 
             // verify the required parameter 'conversationId' is set
@@ -4603,6 +4867,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Annotation</returns>
+        
         public Annotation GetConversationRecordingAnnotation (string conversationId, string recordingId, string annotationId)
         {
              ApiResponse<Annotation> localVarResponse = GetConversationRecordingAnnotationWithHttpInfo(conversationId, recordingId, annotationId);
@@ -4617,6 +4882,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>ApiResponse of Annotation</returns>
+        
         public ApiResponse< Annotation > GetConversationRecordingAnnotationWithHttpInfo (string conversationId, string recordingId, string annotationId)
         { 
             // verify the required parameter 'conversationId' is set
@@ -4709,6 +4975,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Task of Annotation</returns>
+        
         public async System.Threading.Tasks.Task<Annotation> GetConversationRecordingAnnotationAsync (string conversationId, string recordingId, string annotationId)
         {
              ApiResponse<Annotation> localVarResponse = await GetConversationRecordingAnnotationAsyncWithHttpInfo(conversationId, recordingId, annotationId);
@@ -4724,6 +4991,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Task of ApiResponse (Annotation)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Annotation>> GetConversationRecordingAnnotationAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId)
         { 
             // verify the required parameter 'conversationId' is set
@@ -4819,6 +5087,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <returns>List&lt;Annotation&gt;</returns>
+        
         public List<Annotation> GetConversationRecordingAnnotations (string conversationId, string recordingId)
         {
              ApiResponse<List<Annotation>> localVarResponse = GetConversationRecordingAnnotationsWithHttpInfo(conversationId, recordingId);
@@ -4832,6 +5101,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <returns>ApiResponse of List&lt;Annotation&gt;</returns>
+        
         public ApiResponse< List<Annotation> > GetConversationRecordingAnnotationsWithHttpInfo (string conversationId, string recordingId)
         { 
             // verify the required parameter 'conversationId' is set
@@ -4919,6 +5189,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <returns>Task of List&lt;Annotation&gt;</returns>
+        
         public async System.Threading.Tasks.Task<List<Annotation>> GetConversationRecordingAnnotationsAsync (string conversationId, string recordingId)
         {
              ApiResponse<List<Annotation>> localVarResponse = await GetConversationRecordingAnnotationsAsyncWithHttpInfo(conversationId, recordingId);
@@ -4933,6 +5204,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <returns>Task of ApiResponse (List&lt;Annotation&gt;)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<List<Annotation>>> GetConversationRecordingAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId)
         { 
             // verify the required parameter 'conversationId' is set
@@ -5022,6 +5294,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <returns>List&lt;RecordingMetadata&gt;</returns>
+        
         public List<RecordingMetadata> GetConversationRecordingmetadata (string conversationId)
         {
              ApiResponse<List<RecordingMetadata>> localVarResponse = GetConversationRecordingmetadataWithHttpInfo(conversationId);
@@ -5034,6 +5307,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <returns>ApiResponse of List&lt;RecordingMetadata&gt;</returns>
+        
         public ApiResponse< List<RecordingMetadata> > GetConversationRecordingmetadataWithHttpInfo (string conversationId)
         { 
             // verify the required parameter 'conversationId' is set
@@ -5116,6 +5390,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <returns>Task of List&lt;RecordingMetadata&gt;</returns>
+        
         public async System.Threading.Tasks.Task<List<RecordingMetadata>> GetConversationRecordingmetadataAsync (string conversationId)
         {
              ApiResponse<List<RecordingMetadata>> localVarResponse = await GetConversationRecordingmetadataAsyncWithHttpInfo(conversationId);
@@ -5129,6 +5404,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <returns>Task of ApiResponse (List&lt;RecordingMetadata&gt;)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<List<RecordingMetadata>>> GetConversationRecordingmetadataAsyncWithHttpInfo (string conversationId)
         { 
             // verify the required parameter 'conversationId' is set
@@ -5214,6 +5490,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <returns>RecordingMetadata</returns>
+        
         public RecordingMetadata GetConversationRecordingmetadataRecordingId (string conversationId, string recordingId)
         {
              ApiResponse<RecordingMetadata> localVarResponse = GetConversationRecordingmetadataRecordingIdWithHttpInfo(conversationId, recordingId);
@@ -5227,6 +5504,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <returns>ApiResponse of RecordingMetadata</returns>
+        
         public ApiResponse< RecordingMetadata > GetConversationRecordingmetadataRecordingIdWithHttpInfo (string conversationId, string recordingId)
         { 
             // verify the required parameter 'conversationId' is set
@@ -5314,6 +5592,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <returns>Task of RecordingMetadata</returns>
+        
         public async System.Threading.Tasks.Task<RecordingMetadata> GetConversationRecordingmetadataRecordingIdAsync (string conversationId, string recordingId)
         {
              ApiResponse<RecordingMetadata> localVarResponse = await GetConversationRecordingmetadataRecordingIdAsyncWithHttpInfo(conversationId, recordingId);
@@ -5328,6 +5607,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <returns>Task of ApiResponse (RecordingMetadata)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<RecordingMetadata>> GetConversationRecordingmetadataRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId)
         { 
             // verify the required parameter 'conversationId' is set
@@ -5420,6 +5700,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)</param>
         /// <returns>List&lt;Recording&gt;</returns>
+        
         public List<Recording> GetConversationRecordings (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null)
         {
              ApiResponse<List<Recording>> localVarResponse = GetConversationRecordingsWithHttpInfo(conversationId, maxWaitMs, formatId, mediaFormats);
@@ -5435,6 +5716,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)</param>
         /// <returns>ApiResponse of List&lt;Recording&gt;</returns>
+        
         public ApiResponse< List<Recording> > GetConversationRecordingsWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null)
         { 
             // verify the required parameter 'conversationId' is set
@@ -5523,6 +5805,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)</param>
         /// <returns>Task of List&lt;Recording&gt;</returns>
+        
         public async System.Threading.Tasks.Task<List<Recording>> GetConversationRecordingsAsync (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null)
         {
              ApiResponse<List<Recording>> localVarResponse = await GetConversationRecordingsAsyncWithHttpInfo(conversationId, maxWaitMs, formatId, mediaFormats);
@@ -5539,6 +5822,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formatId">The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional, default to WEBM)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;Recording&gt;)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationRecordingsAsyncWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null, List<string> mediaFormats = null)
         { 
             // verify the required parameter 'conversationId' is set
@@ -5626,6 +5910,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>OrphanRecording</returns>
+        
         public OrphanRecording GetOrphanrecording (string orphanId)
         {
              ApiResponse<OrphanRecording> localVarResponse = GetOrphanrecordingWithHttpInfo(orphanId);
@@ -5638,6 +5923,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>ApiResponse of OrphanRecording</returns>
+        
         public ApiResponse< OrphanRecording > GetOrphanrecordingWithHttpInfo (string orphanId)
         { 
             // verify the required parameter 'orphanId' is set
@@ -5720,6 +6006,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of OrphanRecording</returns>
+        
         public async System.Threading.Tasks.Task<OrphanRecording> GetOrphanrecordingAsync (string orphanId)
         {
              ApiResponse<OrphanRecording> localVarResponse = await GetOrphanrecordingAsyncWithHttpInfo(orphanId);
@@ -5733,6 +6020,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of ApiResponse (OrphanRecording)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> GetOrphanrecordingAsyncWithHttpInfo (string orphanId)
         { 
             // verify the required parameter 'orphanId' is set
@@ -5825,6 +6113,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>Recording</returns>
+        
         public Recording GetOrphanrecordingMedia (string orphanId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null)
         {
              ApiResponse<Recording> localVarResponse = GetOrphanrecordingMediaWithHttpInfo(orphanId, formatId, emailFormatId, chatFormatId, messageFormatId, download, fileName, locale, mediaFormats);
@@ -5845,6 +6134,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>ApiResponse of Recording</returns>
+        
         public ApiResponse< Recording > GetOrphanrecordingMediaWithHttpInfo (string orphanId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null)
         { 
             // verify the required parameter 'orphanId' is set
@@ -5943,6 +6233,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>Task of Recording</returns>
+        
         public async System.Threading.Tasks.Task<Recording> GetOrphanrecordingMediaAsync (string orphanId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null)
         {
              ApiResponse<Recording> localVarResponse = await GetOrphanrecordingMediaAsyncWithHttpInfo(orphanId, formatId, emailFormatId, chatFormatId, messageFormatId, download, fileName, locale, mediaFormats);
@@ -5964,6 +6255,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="locale">The locale for the requested file when downloading, as an ISO 639-1 code (optional)</param>
         /// <param name="mediaFormats">All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional)</param>
         /// <returns>Task of ApiResponse (Recording)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Recording>> GetOrphanrecordingMediaAsyncWithHttpInfo (string orphanId, string formatId = null, string emailFormatId = null, string chatFormatId = null, string messageFormatId = null, bool? download = null, string fileName = null, string locale = null, List<string> mediaFormats = null)
         { 
             // verify the required parameter 'orphanId' is set
@@ -6063,6 +6355,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasConversation">Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. (optional, default to false)</param>
         /// <param name="media">Filter resulting orphans based on their media type (optional)</param>
         /// <returns>OrphanRecordingListing</returns>
+        
         public OrphanRecordingListing GetOrphanrecordings (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null)
         {
              ApiResponse<OrphanRecordingListing> localVarResponse = GetOrphanrecordingsWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, hasConversation, media);
@@ -6082,6 +6375,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasConversation">Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. (optional, default to false)</param>
         /// <param name="media">Filter resulting orphans based on their media type (optional)</param>
         /// <returns>ApiResponse of OrphanRecordingListing</returns>
+        
         public ApiResponse< OrphanRecordingListing > GetOrphanrecordingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null)
         { 
 
@@ -6175,6 +6469,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasConversation">Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. (optional, default to false)</param>
         /// <param name="media">Filter resulting orphans based on their media type (optional)</param>
         /// <returns>Task of OrphanRecordingListing</returns>
+        
         public async System.Threading.Tasks.Task<OrphanRecordingListing> GetOrphanrecordingsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null)
         {
              ApiResponse<OrphanRecordingListing> localVarResponse = await GetOrphanrecordingsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, hasConversation, media);
@@ -6195,6 +6490,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasConversation">Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. (optional, default to false)</param>
         /// <param name="media">Filter resulting orphans based on their media type (optional)</param>
         /// <returns>Task of ApiResponse (OrphanRecordingListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<OrphanRecordingListing>> GetOrphanrecordingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null)
         { 
 
@@ -6282,6 +6578,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>BatchDownloadJobStatusResult</returns>
+        
         public BatchDownloadJobStatusResult GetRecordingBatchrequest (string jobId)
         {
              ApiResponse<BatchDownloadJobStatusResult> localVarResponse = GetRecordingBatchrequestWithHttpInfo(jobId);
@@ -6294,6 +6591,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>ApiResponse of BatchDownloadJobStatusResult</returns>
+        
         public ApiResponse< BatchDownloadJobStatusResult > GetRecordingBatchrequestWithHttpInfo (string jobId)
         { 
             // verify the required parameter 'jobId' is set
@@ -6376,6 +6674,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>Task of BatchDownloadJobStatusResult</returns>
+        
         public async System.Threading.Tasks.Task<BatchDownloadJobStatusResult> GetRecordingBatchrequestAsync (string jobId)
         {
              ApiResponse<BatchDownloadJobStatusResult> localVarResponse = await GetRecordingBatchrequestAsyncWithHttpInfo(jobId);
@@ -6389,6 +6688,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>Task of ApiResponse (BatchDownloadJobStatusResult)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<BatchDownloadJobStatusResult>> GetRecordingBatchrequestAsyncWithHttpInfo (string jobId)
         { 
             // verify the required parameter 'jobId' is set
@@ -6483,6 +6783,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <param name="deleteDaysThreshold">provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)</param>
         /// <returns>PolicyEntityListing</returns>
+        
         public PolicyEntityListing GetRecordingCrossplatformMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null)
         {
              ApiResponse<PolicyEntityListing> localVarResponse = GetRecordingCrossplatformMediaretentionpoliciesWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, enabled, summary, hasErrors, deleteDaysThreshold);
@@ -6505,6 +6806,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <param name="deleteDaysThreshold">provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)</param>
         /// <returns>ApiResponse of PolicyEntityListing</returns>
+        
         public ApiResponse< PolicyEntityListing > GetRecordingCrossplatformMediaretentionpoliciesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null)
         { 
 
@@ -6604,6 +6906,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <param name="deleteDaysThreshold">provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)</param>
         /// <returns>Task of PolicyEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<PolicyEntityListing> GetRecordingCrossplatformMediaretentionpoliciesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null)
         {
              ApiResponse<PolicyEntityListing> localVarResponse = await GetRecordingCrossplatformMediaretentionpoliciesAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, enabled, summary, hasErrors, deleteDaysThreshold);
@@ -6627,6 +6930,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <param name="deleteDaysThreshold">provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)</param>
         /// <returns>Task of ApiResponse (PolicyEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<PolicyEntityListing>> GetRecordingCrossplatformMediaretentionpoliciesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null)
         { 
 
@@ -6717,6 +7021,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>CrossPlatformPolicy</returns>
+        
         public CrossPlatformPolicy GetRecordingCrossplatformMediaretentionpolicy (string policyId)
         {
              ApiResponse<CrossPlatformPolicy> localVarResponse = GetRecordingCrossplatformMediaretentionpolicyWithHttpInfo(policyId);
@@ -6729,6 +7034,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>ApiResponse of CrossPlatformPolicy</returns>
+        
         public ApiResponse< CrossPlatformPolicy > GetRecordingCrossplatformMediaretentionpolicyWithHttpInfo (string policyId)
         { 
             // verify the required parameter 'policyId' is set
@@ -6811,6 +7117,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of CrossPlatformPolicy</returns>
+        
         public async System.Threading.Tasks.Task<CrossPlatformPolicy> GetRecordingCrossplatformMediaretentionpolicyAsync (string policyId)
         {
              ApiResponse<CrossPlatformPolicy> localVarResponse = await GetRecordingCrossplatformMediaretentionpolicyAsyncWithHttpInfo(policyId);
@@ -6824,6 +7131,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of ApiResponse (CrossPlatformPolicy)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<CrossPlatformPolicy>> GetRecordingCrossplatformMediaretentionpolicyAsyncWithHttpInfo (string policyId)
         { 
             // verify the required parameter 'policyId' is set
@@ -6908,6 +7216,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>RecordingJob</returns>
+        
         public RecordingJob GetRecordingJob (string jobId)
         {
              ApiResponse<RecordingJob> localVarResponse = GetRecordingJobWithHttpInfo(jobId);
@@ -6920,6 +7229,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>ApiResponse of RecordingJob</returns>
+        
         public ApiResponse< RecordingJob > GetRecordingJobWithHttpInfo (string jobId)
         { 
             // verify the required parameter 'jobId' is set
@@ -7002,6 +7312,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>Task of RecordingJob</returns>
+        
         public async System.Threading.Tasks.Task<RecordingJob> GetRecordingJobAsync (string jobId)
         {
              ApiResponse<RecordingJob> localVarResponse = await GetRecordingJobAsyncWithHttpInfo(jobId);
@@ -7015,6 +7326,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
         /// <returns>Task of ApiResponse (RecordingJob)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<RecordingJob>> GetRecordingJobAsyncWithHttpInfo (string jobId)
         { 
             // verify the required parameter 'jobId' is set
@@ -7103,6 +7415,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeTotal">If false, cursor will be used to locate the page instead of pageNumber. (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <returns>FailedRecordingEntityListing</returns>
+        
         public FailedRecordingEntityListing GetRecordingJobFailedrecordings (string jobId, int? pageSize = null, int? pageNumber = null, bool? includeTotal = null, string cursor = null)
         {
              ApiResponse<FailedRecordingEntityListing> localVarResponse = GetRecordingJobFailedrecordingsWithHttpInfo(jobId, pageSize, pageNumber, includeTotal, cursor);
@@ -7119,6 +7432,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeTotal">If false, cursor will be used to locate the page instead of pageNumber. (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <returns>ApiResponse of FailedRecordingEntityListing</returns>
+        
         public ApiResponse< FailedRecordingEntityListing > GetRecordingJobFailedrecordingsWithHttpInfo (string jobId, int? pageSize = null, int? pageNumber = null, bool? includeTotal = null, string cursor = null)
         { 
             // verify the required parameter 'jobId' is set
@@ -7209,6 +7523,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeTotal">If false, cursor will be used to locate the page instead of pageNumber. (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <returns>Task of FailedRecordingEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<FailedRecordingEntityListing> GetRecordingJobFailedrecordingsAsync (string jobId, int? pageSize = null, int? pageNumber = null, bool? includeTotal = null, string cursor = null)
         {
              ApiResponse<FailedRecordingEntityListing> localVarResponse = await GetRecordingJobFailedrecordingsAsyncWithHttpInfo(jobId, pageSize, pageNumber, includeTotal, cursor);
@@ -7226,6 +7541,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeTotal">If false, cursor will be used to locate the page instead of pageNumber. (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <returns>Task of ApiResponse (FailedRecordingEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<FailedRecordingEntityListing>> GetRecordingJobFailedrecordingsAsyncWithHttpInfo (string jobId, int? pageSize = null, int? pageNumber = null, bool? includeTotal = null, string cursor = null)
         { 
             // verify the required parameter 'jobId' is set
@@ -7321,6 +7637,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeTotal">If false, cursor will be used to locate the page instead of pageNumber. (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <returns>RecordingJobEntityListing</returns>
+        
         public RecordingJobEntityListing GetRecordingJobs (int? pageSize = null, int? pageNumber = null, string sortBy = null, string state = null, bool? showOnlyMyJobs = null, string jobType = null, bool? includeTotal = null, string cursor = null)
         {
              ApiResponse<RecordingJobEntityListing> localVarResponse = GetRecordingJobsWithHttpInfo(pageSize, pageNumber, sortBy, state, showOnlyMyJobs, jobType, includeTotal, cursor);
@@ -7340,6 +7657,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeTotal">If false, cursor will be used to locate the page instead of pageNumber. (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <returns>ApiResponse of RecordingJobEntityListing</returns>
+        
         public ApiResponse< RecordingJobEntityListing > GetRecordingJobsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string state = null, bool? showOnlyMyJobs = null, string jobType = null, bool? includeTotal = null, string cursor = null)
         { 
 
@@ -7433,6 +7751,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeTotal">If false, cursor will be used to locate the page instead of pageNumber. (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <returns>Task of RecordingJobEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<RecordingJobEntityListing> GetRecordingJobsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string state = null, bool? showOnlyMyJobs = null, string jobType = null, bool? includeTotal = null, string cursor = null)
         {
              ApiResponse<RecordingJobEntityListing> localVarResponse = await GetRecordingJobsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, state, showOnlyMyJobs, jobType, includeTotal, cursor);
@@ -7453,6 +7772,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeTotal">If false, cursor will be used to locate the page instead of pageNumber. (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <returns>Task of ApiResponse (RecordingJobEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<RecordingJobEntityListing>> GetRecordingJobsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string state = null, bool? showOnlyMyJobs = null, string jobType = null, bool? includeTotal = null, string cursor = null)
         { 
 
@@ -7540,6 +7860,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="keyConfigurationId">Key Configurations Id</param>
         /// <returns>RecordingEncryptionConfiguration</returns>
+        
         public RecordingEncryptionConfiguration GetRecordingKeyconfiguration (string keyConfigurationId)
         {
              ApiResponse<RecordingEncryptionConfiguration> localVarResponse = GetRecordingKeyconfigurationWithHttpInfo(keyConfigurationId);
@@ -7552,6 +7873,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="keyConfigurationId">Key Configurations Id</param>
         /// <returns>ApiResponse of RecordingEncryptionConfiguration</returns>
+        
         public ApiResponse< RecordingEncryptionConfiguration > GetRecordingKeyconfigurationWithHttpInfo (string keyConfigurationId)
         { 
             // verify the required parameter 'keyConfigurationId' is set
@@ -7634,6 +7956,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="keyConfigurationId">Key Configurations Id</param>
         /// <returns>Task of RecordingEncryptionConfiguration</returns>
+        
         public async System.Threading.Tasks.Task<RecordingEncryptionConfiguration> GetRecordingKeyconfigurationAsync (string keyConfigurationId)
         {
              ApiResponse<RecordingEncryptionConfiguration> localVarResponse = await GetRecordingKeyconfigurationAsyncWithHttpInfo(keyConfigurationId);
@@ -7647,6 +7970,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="keyConfigurationId">Key Configurations Id</param>
         /// <returns>Task of ApiResponse (RecordingEncryptionConfiguration)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<RecordingEncryptionConfiguration>> GetRecordingKeyconfigurationAsyncWithHttpInfo (string keyConfigurationId)
         { 
             // verify the required parameter 'keyConfigurationId' is set
@@ -7730,6 +8054,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>RecordingEncryptionConfigurationListing</returns>
+        
         public RecordingEncryptionConfigurationListing GetRecordingKeyconfigurations ()
         {
              ApiResponse<RecordingEncryptionConfigurationListing> localVarResponse = GetRecordingKeyconfigurationsWithHttpInfo();
@@ -7741,6 +8066,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of RecordingEncryptionConfigurationListing</returns>
+        
         public ApiResponse< RecordingEncryptionConfigurationListing > GetRecordingKeyconfigurationsWithHttpInfo ()
         { 
 
@@ -7818,6 +8144,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of RecordingEncryptionConfigurationListing</returns>
+        
         public async System.Threading.Tasks.Task<RecordingEncryptionConfigurationListing> GetRecordingKeyconfigurationsAsync ()
         {
              ApiResponse<RecordingEncryptionConfigurationListing> localVarResponse = await GetRecordingKeyconfigurationsAsyncWithHttpInfo();
@@ -7830,6 +8157,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (RecordingEncryptionConfigurationListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<RecordingEncryptionConfigurationListing>> GetRecordingKeyconfigurationsAsyncWithHttpInfo ()
         { 
 
@@ -7919,6 +8247,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <param name="deleteDaysThreshold">provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)</param>
         /// <returns>PolicyEntityListing</returns>
+        
         public PolicyEntityListing GetRecordingMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null)
         {
              ApiResponse<PolicyEntityListing> localVarResponse = GetRecordingMediaretentionpoliciesWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, enabled, summary, hasErrors, deleteDaysThreshold);
@@ -7941,6 +8270,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <param name="deleteDaysThreshold">provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)</param>
         /// <returns>ApiResponse of PolicyEntityListing</returns>
+        
         public ApiResponse< PolicyEntityListing > GetRecordingMediaretentionpoliciesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null)
         { 
 
@@ -8040,6 +8370,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <param name="deleteDaysThreshold">provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)</param>
         /// <returns>Task of PolicyEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<PolicyEntityListing> GetRecordingMediaretentionpoliciesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null)
         {
              ApiResponse<PolicyEntityListing> localVarResponse = await GetRecordingMediaretentionpoliciesAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, enabled, summary, hasErrors, deleteDaysThreshold);
@@ -8063,6 +8394,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <param name="deleteDaysThreshold">provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional)</param>
         /// <returns>Task of ApiResponse (PolicyEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<PolicyEntityListing>> GetRecordingMediaretentionpoliciesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null, int? deleteDaysThreshold = null)
         { 
 
@@ -8153,6 +8485,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Policy</returns>
+        
         public Policy GetRecordingMediaretentionpolicy (string policyId)
         {
              ApiResponse<Policy> localVarResponse = GetRecordingMediaretentionpolicyWithHttpInfo(policyId);
@@ -8165,6 +8498,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>ApiResponse of Policy</returns>
+        
         public ApiResponse< Policy > GetRecordingMediaretentionpolicyWithHttpInfo (string policyId)
         { 
             // verify the required parameter 'policyId' is set
@@ -8247,6 +8581,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of Policy</returns>
+        
         public async System.Threading.Tasks.Task<Policy> GetRecordingMediaretentionpolicyAsync (string policyId)
         {
              ApiResponse<Policy> localVarResponse = await GetRecordingMediaretentionpolicyAsyncWithHttpInfo(policyId);
@@ -8260,6 +8595,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Policy>> GetRecordingMediaretentionpolicyAsyncWithHttpInfo (string policyId)
         { 
             // verify the required parameter 'policyId' is set
@@ -8345,6 +8681,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>EncryptionKeyEntityListing</returns>
+        
         public EncryptionKeyEntityListing GetRecordingRecordingkeys (int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<EncryptionKeyEntityListing> localVarResponse = GetRecordingRecordingkeysWithHttpInfo(pageSize, pageNumber);
@@ -8358,6 +8695,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of EncryptionKeyEntityListing</returns>
+        
         public ApiResponse< EncryptionKeyEntityListing > GetRecordingRecordingkeysWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
 
@@ -8439,6 +8777,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of EncryptionKeyEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<EncryptionKeyEntityListing> GetRecordingRecordingkeysAsync (int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<EncryptionKeyEntityListing> localVarResponse = await GetRecordingRecordingkeysAsyncWithHttpInfo(pageSize, pageNumber);
@@ -8453,6 +8792,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (EncryptionKeyEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<EncryptionKeyEntityListing>> GetRecordingRecordingkeysAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
 
@@ -8533,6 +8873,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>KeyRotationSchedule</returns>
+        
         public KeyRotationSchedule GetRecordingRecordingkeysRotationschedule ()
         {
              ApiResponse<KeyRotationSchedule> localVarResponse = GetRecordingRecordingkeysRotationscheduleWithHttpInfo();
@@ -8544,6 +8885,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of KeyRotationSchedule</returns>
+        
         public ApiResponse< KeyRotationSchedule > GetRecordingRecordingkeysRotationscheduleWithHttpInfo ()
         { 
 
@@ -8621,6 +8963,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of KeyRotationSchedule</returns>
+        
         public async System.Threading.Tasks.Task<KeyRotationSchedule> GetRecordingRecordingkeysRotationscheduleAsync ()
         {
              ApiResponse<KeyRotationSchedule> localVarResponse = await GetRecordingRecordingkeysRotationscheduleAsyncWithHttpInfo();
@@ -8633,6 +8976,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (KeyRotationSchedule)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<KeyRotationSchedule>> GetRecordingRecordingkeysRotationscheduleAsyncWithHttpInfo ()
         { 
 
@@ -8712,6 +9056,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createDefault">If no settings are found, a new one is created with default values (optional, default to false)</param>
         /// <returns>RecordingSettings</returns>
+        
         public RecordingSettings GetRecordingSettings (bool? createDefault = null)
         {
              ApiResponse<RecordingSettings> localVarResponse = GetRecordingSettingsWithHttpInfo(createDefault);
@@ -8724,6 +9069,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createDefault">If no settings are found, a new one is created with default values (optional, default to false)</param>
         /// <returns>ApiResponse of RecordingSettings</returns>
+        
         public ApiResponse< RecordingSettings > GetRecordingSettingsWithHttpInfo (bool? createDefault = null)
         { 
 
@@ -8803,6 +9149,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createDefault">If no settings are found, a new one is created with default values (optional, default to false)</param>
         /// <returns>Task of RecordingSettings</returns>
+        
         public async System.Threading.Tasks.Task<RecordingSettings> GetRecordingSettingsAsync (bool? createDefault = null)
         {
              ApiResponse<RecordingSettings> localVarResponse = await GetRecordingSettingsAsyncWithHttpInfo(createDefault);
@@ -8816,6 +9163,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createDefault">If no settings are found, a new one is created with default values (optional, default to false)</param>
         /// <returns>Task of ApiResponse (RecordingSettings)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<RecordingSettings>> GetRecordingSettingsAsyncWithHttpInfo (bool? createDefault = null)
         { 
 
@@ -8896,6 +9244,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reportId">reportId</param>
         /// <returns>RecordingUploadReport</returns>
+        
         public RecordingUploadReport GetRecordingUploadsReport (string reportId)
         {
              ApiResponse<RecordingUploadReport> localVarResponse = GetRecordingUploadsReportWithHttpInfo(reportId);
@@ -8908,6 +9257,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reportId">reportId</param>
         /// <returns>ApiResponse of RecordingUploadReport</returns>
+        
         public ApiResponse< RecordingUploadReport > GetRecordingUploadsReportWithHttpInfo (string reportId)
         { 
             // verify the required parameter 'reportId' is set
@@ -8990,6 +9340,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reportId">reportId</param>
         /// <returns>Task of RecordingUploadReport</returns>
+        
         public async System.Threading.Tasks.Task<RecordingUploadReport> GetRecordingUploadsReportAsync (string reportId)
         {
              ApiResponse<RecordingUploadReport> localVarResponse = await GetRecordingUploadsReportAsyncWithHttpInfo(reportId);
@@ -9003,6 +9354,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reportId">reportId</param>
         /// <returns>Task of ApiResponse (RecordingUploadReport)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<RecordingUploadReport>> GetRecordingUploadsReportAsyncWithHttpInfo (string reportId)
         { 
             // verify the required parameter 'reportId' is set
@@ -9089,6 +9441,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <param name="pageSize">Page size. Maximum is 500. (optional, default to 25)</param>
         /// <returns>RecordingRetentionCursorEntityListing</returns>
+        
         public RecordingRetentionCursorEntityListing GetRecordingsRetentionQuery (int? retentionThresholdDays, string cursor = null, int? pageSize = null)
         {
              ApiResponse<RecordingRetentionCursorEntityListing> localVarResponse = GetRecordingsRetentionQueryWithHttpInfo(retentionThresholdDays, cursor, pageSize);
@@ -9103,6 +9456,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <param name="pageSize">Page size. Maximum is 500. (optional, default to 25)</param>
         /// <returns>ApiResponse of RecordingRetentionCursorEntityListing</returns>
+        
         public ApiResponse< RecordingRetentionCursorEntityListing > GetRecordingsRetentionQueryWithHttpInfo (int? retentionThresholdDays, string cursor = null, int? pageSize = null)
         { 
             // verify the required parameter 'retentionThresholdDays' is set
@@ -9189,6 +9543,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <param name="pageSize">Page size. Maximum is 500. (optional, default to 25)</param>
         /// <returns>Task of RecordingRetentionCursorEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<RecordingRetentionCursorEntityListing> GetRecordingsRetentionQueryAsync (int? retentionThresholdDays, string cursor = null, int? pageSize = null)
         {
              ApiResponse<RecordingRetentionCursorEntityListing> localVarResponse = await GetRecordingsRetentionQueryAsyncWithHttpInfo(retentionThresholdDays, cursor, pageSize);
@@ -9204,6 +9559,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="cursor">Indicates where to resume query results (not required for first page) (optional)</param>
         /// <param name="pageSize">Page size. Maximum is 500. (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (RecordingRetentionCursorEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<RecordingRetentionCursorEntityListing>> GetRecordingsRetentionQueryAsyncWithHttpInfo (int? retentionThresholdDays, string cursor = null, int? pageSize = null)
         { 
             // verify the required parameter 'retentionThresholdDays' is set
@@ -9291,6 +9647,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ScreenRecordingSessionListing</returns>
+        
         public ScreenRecordingSessionListing GetRecordingsScreensessions (int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<ScreenRecordingSessionListing> localVarResponse = GetRecordingsScreensessionsWithHttpInfo(pageSize, pageNumber);
@@ -9304,6 +9661,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of ScreenRecordingSessionListing</returns>
+        
         public ApiResponse< ScreenRecordingSessionListing > GetRecordingsScreensessionsWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
 
@@ -9385,6 +9743,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ScreenRecordingSessionListing</returns>
+        
         public async System.Threading.Tasks.Task<ScreenRecordingSessionListing> GetRecordingsScreensessionsAsync (int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<ScreenRecordingSessionListing> localVarResponse = await GetRecordingsScreensessionsAsyncWithHttpInfo(pageSize, pageNumber);
@@ -9399,6 +9758,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (ScreenRecordingSessionListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ScreenRecordingSessionListing>> GetRecordingsScreensessionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
 
@@ -9481,6 +9841,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>CrossPlatformPolicy</returns>
+        
         public CrossPlatformPolicy PatchRecordingCrossplatformMediaretentionpolicy (string policyId, CrossPlatformPolicyUpdate body)
         {
              ApiResponse<CrossPlatformPolicy> localVarResponse = PatchRecordingCrossplatformMediaretentionpolicyWithHttpInfo(policyId, body);
@@ -9494,6 +9855,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of CrossPlatformPolicy</returns>
+        
         public ApiResponse< CrossPlatformPolicy > PatchRecordingCrossplatformMediaretentionpolicyWithHttpInfo (string policyId, CrossPlatformPolicyUpdate body)
         { 
             // verify the required parameter 'policyId' is set
@@ -9586,6 +9948,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of CrossPlatformPolicy</returns>
+        
         public async System.Threading.Tasks.Task<CrossPlatformPolicy> PatchRecordingCrossplatformMediaretentionpolicyAsync (string policyId, CrossPlatformPolicyUpdate body)
         {
              ApiResponse<CrossPlatformPolicy> localVarResponse = await PatchRecordingCrossplatformMediaretentionpolicyAsyncWithHttpInfo(policyId, body);
@@ -9600,6 +9963,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (CrossPlatformPolicy)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<CrossPlatformPolicy>> PatchRecordingCrossplatformMediaretentionpolicyAsyncWithHttpInfo (string policyId, CrossPlatformPolicyUpdate body)
         { 
             // verify the required parameter 'policyId' is set
@@ -9695,6 +10059,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Policy</returns>
+        
         public Policy PatchRecordingMediaretentionpolicy (string policyId, PolicyUpdate body)
         {
              ApiResponse<Policy> localVarResponse = PatchRecordingMediaretentionpolicyWithHttpInfo(policyId, body);
@@ -9708,6 +10073,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of Policy</returns>
+        
         public ApiResponse< Policy > PatchRecordingMediaretentionpolicyWithHttpInfo (string policyId, PolicyUpdate body)
         { 
             // verify the required parameter 'policyId' is set
@@ -9800,6 +10166,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of Policy</returns>
+        
         public async System.Threading.Tasks.Task<Policy> PatchRecordingMediaretentionpolicyAsync (string policyId, PolicyUpdate body)
         {
              ApiResponse<Policy> localVarResponse = await PatchRecordingMediaretentionpolicyAsyncWithHttpInfo(policyId, body);
@@ -9814,6 +10181,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Policy>> PatchRecordingMediaretentionpolicyAsyncWithHttpInfo (string policyId, PolicyUpdate body)
         { 
             // verify the required parameter 'policyId' is set
@@ -9909,6 +10277,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingSessionId">Screen recording session ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns></returns>
+        
         public void PatchRecordingsScreensession (string recordingSessionId, ScreenRecordingSessionRequest body = null)
         {
              PatchRecordingsScreensessionWithHttpInfo(recordingSessionId, body);
@@ -9921,6 +10290,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingSessionId">Screen recording session ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> PatchRecordingsScreensessionWithHttpInfo (string recordingSessionId, ScreenRecordingSessionRequest body = null)
         { 
             // verify the required parameter 'recordingSessionId' is set
@@ -10010,6 +10380,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingSessionId">Screen recording session ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task PatchRecordingsScreensessionAsync (string recordingSessionId, ScreenRecordingSessionRequest body = null)
         {
              await PatchRecordingsScreensessionAsyncWithHttpInfo(recordingSessionId, body);
@@ -10023,6 +10394,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingSessionId">Screen recording session ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchRecordingsScreensessionAsyncWithHttpInfo (string recordingSessionId, ScreenRecordingSessionRequest body = null)
         { 
             // verify the required parameter 'recordingSessionId' is set
@@ -10115,6 +10487,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Annotation</returns>
+        
         public Annotation PostConversationRecordingAnnotations (string conversationId, string recordingId, Annotation body)
         {
              ApiResponse<Annotation> localVarResponse = PostConversationRecordingAnnotationsWithHttpInfo(conversationId, recordingId, body);
@@ -10129,6 +10502,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">annotation</param>
         /// <returns>ApiResponse of Annotation</returns>
+        
         public ApiResponse< Annotation > PostConversationRecordingAnnotationsWithHttpInfo (string conversationId, string recordingId, Annotation body)
         { 
             // verify the required parameter 'conversationId' is set
@@ -10226,6 +10600,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Task of Annotation</returns>
+        
         public async System.Threading.Tasks.Task<Annotation> PostConversationRecordingAnnotationsAsync (string conversationId, string recordingId, Annotation body)
         {
              ApiResponse<Annotation> localVarResponse = await PostConversationRecordingAnnotationsAsyncWithHttpInfo(conversationId, recordingId, body);
@@ -10241,6 +10616,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Task of ApiResponse (Annotation)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Annotation>> PostConversationRecordingAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId, Annotation body)
         { 
             // verify the required parameter 'conversationId' is set
@@ -10340,6 +10716,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Job submission criteria</param>
         /// <returns>BatchDownloadJobSubmissionResult</returns>
+        
         public BatchDownloadJobSubmissionResult PostRecordingBatchrequests (BatchDownloadJobSubmission body)
         {
              ApiResponse<BatchDownloadJobSubmissionResult> localVarResponse = PostRecordingBatchrequestsWithHttpInfo(body);
@@ -10352,6 +10729,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Job submission criteria</param>
         /// <returns>ApiResponse of BatchDownloadJobSubmissionResult</returns>
+        
         public ApiResponse< BatchDownloadJobSubmissionResult > PostRecordingBatchrequestsWithHttpInfo (BatchDownloadJobSubmission body)
         { 
             // verify the required parameter 'body' is set
@@ -10439,6 +10817,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Job submission criteria</param>
         /// <returns>Task of BatchDownloadJobSubmissionResult</returns>
+        
         public async System.Threading.Tasks.Task<BatchDownloadJobSubmissionResult> PostRecordingBatchrequestsAsync (BatchDownloadJobSubmission body)
         {
              ApiResponse<BatchDownloadJobSubmissionResult> localVarResponse = await PostRecordingBatchrequestsAsyncWithHttpInfo(body);
@@ -10452,6 +10831,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Job submission criteria</param>
         /// <returns>Task of ApiResponse (BatchDownloadJobSubmissionResult)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<BatchDownloadJobSubmissionResult>> PostRecordingBatchrequestsAsyncWithHttpInfo (BatchDownloadJobSubmission body)
         { 
             // verify the required parameter 'body' is set
@@ -10541,6 +10921,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>CrossPlatformPolicy</returns>
+        
         public CrossPlatformPolicy PostRecordingCrossplatformMediaretentionpolicies (CrossPlatformPolicyCreate body)
         {
              ApiResponse<CrossPlatformPolicy> localVarResponse = PostRecordingCrossplatformMediaretentionpoliciesWithHttpInfo(body);
@@ -10553,6 +10934,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of CrossPlatformPolicy</returns>
+        
         public ApiResponse< CrossPlatformPolicy > PostRecordingCrossplatformMediaretentionpoliciesWithHttpInfo (CrossPlatformPolicyCreate body)
         { 
             // verify the required parameter 'body' is set
@@ -10640,6 +11022,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>Task of CrossPlatformPolicy</returns>
+        
         public async System.Threading.Tasks.Task<CrossPlatformPolicy> PostRecordingCrossplatformMediaretentionpoliciesAsync (CrossPlatformPolicyCreate body)
         {
              ApiResponse<CrossPlatformPolicy> localVarResponse = await PostRecordingCrossplatformMediaretentionpoliciesAsyncWithHttpInfo(body);
@@ -10653,6 +11036,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (CrossPlatformPolicy)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<CrossPlatformPolicy>> PostRecordingCrossplatformMediaretentionpoliciesAsyncWithHttpInfo (CrossPlatformPolicyCreate body)
         { 
             // verify the required parameter 'body' is set
@@ -10742,6 +11126,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>RecordingJob</returns>
+        
         public RecordingJob PostRecordingJobs (RecordingJobsQuery body)
         {
              ApiResponse<RecordingJob> localVarResponse = PostRecordingJobsWithHttpInfo(body);
@@ -10754,6 +11139,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>ApiResponse of RecordingJob</returns>
+        
         public ApiResponse< RecordingJob > PostRecordingJobsWithHttpInfo (RecordingJobsQuery body)
         { 
             // verify the required parameter 'body' is set
@@ -10841,6 +11227,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of RecordingJob</returns>
+        
         public async System.Threading.Tasks.Task<RecordingJob> PostRecordingJobsAsync (RecordingJobsQuery body)
         {
              ApiResponse<RecordingJob> localVarResponse = await PostRecordingJobsAsyncWithHttpInfo(body);
@@ -10854,6 +11241,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (RecordingJob)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<RecordingJob>> PostRecordingJobsAsyncWithHttpInfo (RecordingJobsQuery body)
         { 
             // verify the required parameter 'body' is set
@@ -10943,6 +11331,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Encryption Configuration</param>
         /// <returns>RecordingEncryptionConfiguration</returns>
+        
         public RecordingEncryptionConfiguration PostRecordingKeyconfigurations (RecordingEncryptionConfiguration body)
         {
              ApiResponse<RecordingEncryptionConfiguration> localVarResponse = PostRecordingKeyconfigurationsWithHttpInfo(body);
@@ -10955,6 +11344,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Encryption Configuration</param>
         /// <returns>ApiResponse of RecordingEncryptionConfiguration</returns>
+        
         public ApiResponse< RecordingEncryptionConfiguration > PostRecordingKeyconfigurationsWithHttpInfo (RecordingEncryptionConfiguration body)
         { 
             // verify the required parameter 'body' is set
@@ -11042,6 +11432,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Encryption Configuration</param>
         /// <returns>Task of RecordingEncryptionConfiguration</returns>
+        
         public async System.Threading.Tasks.Task<RecordingEncryptionConfiguration> PostRecordingKeyconfigurationsAsync (RecordingEncryptionConfiguration body)
         {
              ApiResponse<RecordingEncryptionConfiguration> localVarResponse = await PostRecordingKeyconfigurationsAsyncWithHttpInfo(body);
@@ -11055,6 +11446,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Encryption Configuration</param>
         /// <returns>Task of ApiResponse (RecordingEncryptionConfiguration)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<RecordingEncryptionConfiguration>> PostRecordingKeyconfigurationsAsyncWithHttpInfo (RecordingEncryptionConfiguration body)
         { 
             // verify the required parameter 'body' is set
@@ -11144,6 +11536,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Encryption Configuration</param>
         /// <returns>RecordingEncryptionConfiguration</returns>
+        
         public RecordingEncryptionConfiguration PostRecordingKeyconfigurationsValidate (RecordingEncryptionConfiguration body)
         {
              ApiResponse<RecordingEncryptionConfiguration> localVarResponse = PostRecordingKeyconfigurationsValidateWithHttpInfo(body);
@@ -11156,6 +11549,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Encryption Configuration</param>
         /// <returns>ApiResponse of RecordingEncryptionConfiguration</returns>
+        
         public ApiResponse< RecordingEncryptionConfiguration > PostRecordingKeyconfigurationsValidateWithHttpInfo (RecordingEncryptionConfiguration body)
         { 
             // verify the required parameter 'body' is set
@@ -11243,6 +11637,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Encryption Configuration</param>
         /// <returns>Task of RecordingEncryptionConfiguration</returns>
+        
         public async System.Threading.Tasks.Task<RecordingEncryptionConfiguration> PostRecordingKeyconfigurationsValidateAsync (RecordingEncryptionConfiguration body)
         {
              ApiResponse<RecordingEncryptionConfiguration> localVarResponse = await PostRecordingKeyconfigurationsValidateAsyncWithHttpInfo(body);
@@ -11256,6 +11651,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Encryption Configuration</param>
         /// <returns>Task of ApiResponse (RecordingEncryptionConfiguration)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<RecordingEncryptionConfiguration>> PostRecordingKeyconfigurationsValidateAsyncWithHttpInfo (RecordingEncryptionConfiguration body)
         { 
             // verify the required parameter 'body' is set
@@ -11345,6 +11741,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Local Encryption body</param>
         /// <returns>EncryptionKey</returns>
+        
         public EncryptionKey PostRecordingLocalkeys (LocalEncryptionKeyRequest body)
         {
              ApiResponse<EncryptionKey> localVarResponse = PostRecordingLocalkeysWithHttpInfo(body);
@@ -11357,6 +11754,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Local Encryption body</param>
         /// <returns>ApiResponse of EncryptionKey</returns>
+        
         public ApiResponse< EncryptionKey > PostRecordingLocalkeysWithHttpInfo (LocalEncryptionKeyRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -11444,6 +11842,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Local Encryption body</param>
         /// <returns>Task of EncryptionKey</returns>
+        
         public async System.Threading.Tasks.Task<EncryptionKey> PostRecordingLocalkeysAsync (LocalEncryptionKeyRequest body)
         {
              ApiResponse<EncryptionKey> localVarResponse = await PostRecordingLocalkeysAsyncWithHttpInfo(body);
@@ -11457,6 +11856,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Local Encryption body</param>
         /// <returns>Task of ApiResponse (EncryptionKey)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<EncryptionKey>> PostRecordingLocalkeysAsyncWithHttpInfo (LocalEncryptionKeyRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -11546,6 +11946,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>Policy</returns>
+        
         public Policy PostRecordingMediaretentionpolicies (PolicyCreate body)
         {
              ApiResponse<Policy> localVarResponse = PostRecordingMediaretentionpoliciesWithHttpInfo(body);
@@ -11558,6 +11959,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of Policy</returns>
+        
         public ApiResponse< Policy > PostRecordingMediaretentionpoliciesWithHttpInfo (PolicyCreate body)
         { 
             // verify the required parameter 'body' is set
@@ -11645,6 +12047,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>Task of Policy</returns>
+        
         public async System.Threading.Tasks.Task<Policy> PostRecordingMediaretentionpoliciesAsync (PolicyCreate body)
         {
              ApiResponse<Policy> localVarResponse = await PostRecordingMediaretentionpoliciesAsyncWithHttpInfo(body);
@@ -11658,6 +12061,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Policy>> PostRecordingMediaretentionpoliciesAsyncWithHttpInfo (PolicyCreate body)
         { 
             // verify the required parameter 'body' is set
@@ -11746,6 +12150,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>EncryptionKey</returns>
+        
         public EncryptionKey PostRecordingRecordingkeys ()
         {
              ApiResponse<EncryptionKey> localVarResponse = PostRecordingRecordingkeysWithHttpInfo();
@@ -11757,6 +12162,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of EncryptionKey</returns>
+        
         public ApiResponse< EncryptionKey > PostRecordingRecordingkeysWithHttpInfo ()
         { 
 
@@ -11834,6 +12240,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of EncryptionKey</returns>
+        
         public async System.Threading.Tasks.Task<EncryptionKey> PostRecordingRecordingkeysAsync ()
         {
              ApiResponse<EncryptionKey> localVarResponse = await PostRecordingRecordingkeysAsyncWithHttpInfo();
@@ -11846,6 +12253,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (EncryptionKey)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<EncryptionKey>> PostRecordingRecordingkeysAsyncWithHttpInfo ()
         { 
 
@@ -11925,6 +12333,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Report parameters</param>
         /// <returns>RecordingUploadReport</returns>
+        
         public RecordingUploadReport PostRecordingUploadsReports (RecordingUploadReportRequest body)
         {
              ApiResponse<RecordingUploadReport> localVarResponse = PostRecordingUploadsReportsWithHttpInfo(body);
@@ -11937,6 +12346,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Report parameters</param>
         /// <returns>ApiResponse of RecordingUploadReport</returns>
+        
         public ApiResponse< RecordingUploadReport > PostRecordingUploadsReportsWithHttpInfo (RecordingUploadReportRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -12024,6 +12434,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Report parameters</param>
         /// <returns>Task of RecordingUploadReport</returns>
+        
         public async System.Threading.Tasks.Task<RecordingUploadReport> PostRecordingUploadsReportsAsync (RecordingUploadReportRequest body)
         {
              ApiResponse<RecordingUploadReport> localVarResponse = await PostRecordingUploadsReportsAsyncWithHttpInfo(body);
@@ -12037,6 +12448,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Report parameters</param>
         /// <returns>Task of ApiResponse (RecordingUploadReport)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<RecordingUploadReport>> PostRecordingUploadsReportsAsyncWithHttpInfo (RecordingUploadReportRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -12126,6 +12538,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">conversationIds</param>
         /// <returns>List&lt;AddressableEntityRef&gt;</returns>
+        
         public List<AddressableEntityRef> PostRecordingsDeletionprotection (ConversationDeletionProtectionQuery body)
         {
              ApiResponse<List<AddressableEntityRef>> localVarResponse = PostRecordingsDeletionprotectionWithHttpInfo(body);
@@ -12138,6 +12551,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">conversationIds</param>
         /// <returns>ApiResponse of List&lt;AddressableEntityRef&gt;</returns>
+        
         public ApiResponse< List<AddressableEntityRef> > PostRecordingsDeletionprotectionWithHttpInfo (ConversationDeletionProtectionQuery body)
         { 
             // verify the required parameter 'body' is set
@@ -12225,6 +12639,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">conversationIds</param>
         /// <returns>Task of List&lt;AddressableEntityRef&gt;</returns>
+        
         public async System.Threading.Tasks.Task<List<AddressableEntityRef>> PostRecordingsDeletionprotectionAsync (ConversationDeletionProtectionQuery body)
         {
              ApiResponse<List<AddressableEntityRef>> localVarResponse = await PostRecordingsDeletionprotectionAsyncWithHttpInfo(body);
@@ -12238,6 +12653,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">conversationIds</param>
         /// <returns>Task of ApiResponse (List&lt;AddressableEntityRef&gt;)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<List<AddressableEntityRef>>> PostRecordingsDeletionprotectionAsyncWithHttpInfo (ConversationDeletionProtectionQuery body)
         { 
             // verify the required parameter 'body' is set
@@ -12327,6 +12743,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AcknowledgeScreenRecordingRequest</param>
         /// <returns></returns>
+        
         public void PostRecordingsScreensessionsAcknowledge (AcknowledgeScreenRecordingRequest body)
         {
              PostRecordingsScreensessionsAcknowledgeWithHttpInfo(body);
@@ -12338,6 +12755,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AcknowledgeScreenRecordingRequest</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> PostRecordingsScreensessionsAcknowledgeWithHttpInfo (AcknowledgeScreenRecordingRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -12425,6 +12843,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AcknowledgeScreenRecordingRequest</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task PostRecordingsScreensessionsAcknowledgeAsync (AcknowledgeScreenRecordingRequest body)
         {
              await PostRecordingsScreensessionsAcknowledgeAsyncWithHttpInfo(body);
@@ -12437,6 +12856,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">AcknowledgeScreenRecordingRequest</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostRecordingsScreensessionsAcknowledgeAsyncWithHttpInfo (AcknowledgeScreenRecordingRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -12526,6 +12946,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ScreenRecordingMetaDataRequest</param>
         /// <returns></returns>
+        
         public void PostRecordingsScreensessionsMetadata (ScreenRecordingMetaDataRequest body)
         {
              PostRecordingsScreensessionsMetadataWithHttpInfo(body);
@@ -12537,6 +12958,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ScreenRecordingMetaDataRequest</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> PostRecordingsScreensessionsMetadataWithHttpInfo (ScreenRecordingMetaDataRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -12624,6 +13046,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ScreenRecordingMetaDataRequest</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task PostRecordingsScreensessionsMetadataAsync (ScreenRecordingMetaDataRequest body)
         {
              await PostRecordingsScreensessionsMetadataAsyncWithHttpInfo(body);
@@ -12636,6 +13059,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ScreenRecordingMetaDataRequest</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostRecordingsScreensessionsMetadataAsyncWithHttpInfo (ScreenRecordingMetaDataRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -12728,6 +13152,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">recording</param>
         /// <param name="clearExport">Whether to clear the pending export for the recording (optional)</param>
         /// <returns>Recording</returns>
+        
         public Recording PutConversationRecording (string conversationId, string recordingId, Recording body, bool? clearExport = null)
         {
              ApiResponse<Recording> localVarResponse = PutConversationRecordingWithHttpInfo(conversationId, recordingId, body, clearExport);
@@ -12743,6 +13168,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">recording</param>
         /// <param name="clearExport">Whether to clear the pending export for the recording (optional)</param>
         /// <returns>ApiResponse of Recording</returns>
+        
         public ApiResponse< Recording > PutConversationRecordingWithHttpInfo (string conversationId, string recordingId, Recording body, bool? clearExport = null)
         { 
             // verify the required parameter 'conversationId' is set
@@ -12842,6 +13268,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">recording</param>
         /// <param name="clearExport">Whether to clear the pending export for the recording (optional)</param>
         /// <returns>Task of Recording</returns>
+        
         public async System.Threading.Tasks.Task<Recording> PutConversationRecordingAsync (string conversationId, string recordingId, Recording body, bool? clearExport = null)
         {
              ApiResponse<Recording> localVarResponse = await PutConversationRecordingAsyncWithHttpInfo(conversationId, recordingId, body, clearExport);
@@ -12858,6 +13285,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">recording</param>
         /// <param name="clearExport">Whether to clear the pending export for the recording (optional)</param>
         /// <returns>Task of ApiResponse (Recording)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Recording>> PutConversationRecordingAsyncWithHttpInfo (string conversationId, string recordingId, Recording body, bool? clearExport = null)
         { 
             // verify the required parameter 'conversationId' is set
@@ -12961,6 +13389,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="annotationId">Annotation ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Annotation</returns>
+        
         public Annotation PutConversationRecordingAnnotation (string conversationId, string recordingId, string annotationId, Annotation body)
         {
              ApiResponse<Annotation> localVarResponse = PutConversationRecordingAnnotationWithHttpInfo(conversationId, recordingId, annotationId, body);
@@ -12976,6 +13405,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="annotationId">Annotation ID</param>
         /// <param name="body">annotation</param>
         /// <returns>ApiResponse of Annotation</returns>
+        
         public ApiResponse< Annotation > PutConversationRecordingAnnotationWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body)
         { 
             // verify the required parameter 'conversationId' is set
@@ -13078,6 +13508,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="annotationId">Annotation ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Task of Annotation</returns>
+        
         public async System.Threading.Tasks.Task<Annotation> PutConversationRecordingAnnotationAsync (string conversationId, string recordingId, string annotationId, Annotation body)
         {
              ApiResponse<Annotation> localVarResponse = await PutConversationRecordingAnnotationAsyncWithHttpInfo(conversationId, recordingId, annotationId, body);
@@ -13094,6 +13525,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="annotationId">Annotation ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Task of ApiResponse (Annotation)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Annotation>> PutConversationRecordingAnnotationAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body)
         { 
             // verify the required parameter 'conversationId' is set
@@ -13199,6 +13631,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="orphanId">Orphan ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Recording</returns>
+        
         public Recording PutOrphanrecording (string orphanId, OrphanUpdateRequest body = null)
         {
              ApiResponse<Recording> localVarResponse = PutOrphanrecordingWithHttpInfo(orphanId, body);
@@ -13212,6 +13645,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="orphanId">Orphan ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Recording</returns>
+        
         public ApiResponse< Recording > PutOrphanrecordingWithHttpInfo (string orphanId, OrphanUpdateRequest body = null)
         { 
             // verify the required parameter 'orphanId' is set
@@ -13301,6 +13735,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="orphanId">Orphan ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of Recording</returns>
+        
         public async System.Threading.Tasks.Task<Recording> PutOrphanrecordingAsync (string orphanId, OrphanUpdateRequest body = null)
         {
              ApiResponse<Recording> localVarResponse = await PutOrphanrecordingAsyncWithHttpInfo(orphanId, body);
@@ -13315,6 +13750,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="orphanId">Orphan ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (Recording)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Recording>> PutOrphanrecordingAsyncWithHttpInfo (string orphanId, OrphanUpdateRequest body = null)
         { 
             // verify the required parameter 'orphanId' is set
@@ -13406,6 +13842,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>CrossPlatformPolicy</returns>
+        
         public CrossPlatformPolicy PutRecordingCrossplatformMediaretentionpolicy (string policyId, CrossPlatformPolicy body)
         {
              ApiResponse<CrossPlatformPolicy> localVarResponse = PutRecordingCrossplatformMediaretentionpolicyWithHttpInfo(policyId, body);
@@ -13419,6 +13856,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of CrossPlatformPolicy</returns>
+        
         public ApiResponse< CrossPlatformPolicy > PutRecordingCrossplatformMediaretentionpolicyWithHttpInfo (string policyId, CrossPlatformPolicy body)
         { 
             // verify the required parameter 'policyId' is set
@@ -13511,6 +13949,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of CrossPlatformPolicy</returns>
+        
         public async System.Threading.Tasks.Task<CrossPlatformPolicy> PutRecordingCrossplatformMediaretentionpolicyAsync (string policyId, CrossPlatformPolicy body)
         {
              ApiResponse<CrossPlatformPolicy> localVarResponse = await PutRecordingCrossplatformMediaretentionpolicyAsyncWithHttpInfo(policyId, body);
@@ -13525,6 +13964,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (CrossPlatformPolicy)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<CrossPlatformPolicy>> PutRecordingCrossplatformMediaretentionpolicyAsyncWithHttpInfo (string policyId, CrossPlatformPolicy body)
         { 
             // verify the required parameter 'policyId' is set
@@ -13620,6 +14060,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">jobId</param>
         /// <param name="body">query</param>
         /// <returns>RecordingJob</returns>
+        
         public RecordingJob PutRecordingJob (string jobId, ExecuteRecordingJobsQuery body)
         {
              ApiResponse<RecordingJob> localVarResponse = PutRecordingJobWithHttpInfo(jobId, body);
@@ -13633,6 +14074,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">jobId</param>
         /// <param name="body">query</param>
         /// <returns>ApiResponse of RecordingJob</returns>
+        
         public ApiResponse< RecordingJob > PutRecordingJobWithHttpInfo (string jobId, ExecuteRecordingJobsQuery body)
         { 
             // verify the required parameter 'jobId' is set
@@ -13725,6 +14167,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">jobId</param>
         /// <param name="body">query</param>
         /// <returns>Task of RecordingJob</returns>
+        
         public async System.Threading.Tasks.Task<RecordingJob> PutRecordingJobAsync (string jobId, ExecuteRecordingJobsQuery body)
         {
              ApiResponse<RecordingJob> localVarResponse = await PutRecordingJobAsyncWithHttpInfo(jobId, body);
@@ -13739,6 +14182,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">jobId</param>
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (RecordingJob)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<RecordingJob>> PutRecordingJobAsyncWithHttpInfo (string jobId, ExecuteRecordingJobsQuery body)
         { 
             // verify the required parameter 'jobId' is set
@@ -13834,6 +14278,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="keyConfigurationId">Key Configurations Id</param>
         /// <param name="body">Encryption key configuration metadata</param>
         /// <returns>RecordingEncryptionConfiguration</returns>
+        
         public RecordingEncryptionConfiguration PutRecordingKeyconfiguration (string keyConfigurationId, RecordingEncryptionConfiguration body)
         {
              ApiResponse<RecordingEncryptionConfiguration> localVarResponse = PutRecordingKeyconfigurationWithHttpInfo(keyConfigurationId, body);
@@ -13847,6 +14292,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="keyConfigurationId">Key Configurations Id</param>
         /// <param name="body">Encryption key configuration metadata</param>
         /// <returns>ApiResponse of RecordingEncryptionConfiguration</returns>
+        
         public ApiResponse< RecordingEncryptionConfiguration > PutRecordingKeyconfigurationWithHttpInfo (string keyConfigurationId, RecordingEncryptionConfiguration body)
         { 
             // verify the required parameter 'keyConfigurationId' is set
@@ -13939,6 +14385,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="keyConfigurationId">Key Configurations Id</param>
         /// <param name="body">Encryption key configuration metadata</param>
         /// <returns>Task of RecordingEncryptionConfiguration</returns>
+        
         public async System.Threading.Tasks.Task<RecordingEncryptionConfiguration> PutRecordingKeyconfigurationAsync (string keyConfigurationId, RecordingEncryptionConfiguration body)
         {
              ApiResponse<RecordingEncryptionConfiguration> localVarResponse = await PutRecordingKeyconfigurationAsyncWithHttpInfo(keyConfigurationId, body);
@@ -13953,6 +14400,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="keyConfigurationId">Key Configurations Id</param>
         /// <param name="body">Encryption key configuration metadata</param>
         /// <returns>Task of ApiResponse (RecordingEncryptionConfiguration)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<RecordingEncryptionConfiguration>> PutRecordingKeyconfigurationAsyncWithHttpInfo (string keyConfigurationId, RecordingEncryptionConfiguration body)
         { 
             // verify the required parameter 'keyConfigurationId' is set
@@ -14048,6 +14496,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Policy</returns>
+        
         public Policy PutRecordingMediaretentionpolicy (string policyId, Policy body)
         {
              ApiResponse<Policy> localVarResponse = PutRecordingMediaretentionpolicyWithHttpInfo(policyId, body);
@@ -14061,6 +14510,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of Policy</returns>
+        
         public ApiResponse< Policy > PutRecordingMediaretentionpolicyWithHttpInfo (string policyId, Policy body)
         { 
             // verify the required parameter 'policyId' is set
@@ -14153,6 +14603,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of Policy</returns>
+        
         public async System.Threading.Tasks.Task<Policy> PutRecordingMediaretentionpolicyAsync (string policyId, Policy body)
         {
              ApiResponse<Policy> localVarResponse = await PutRecordingMediaretentionpolicyAsyncWithHttpInfo(policyId, body);
@@ -14167,6 +14618,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Policy>> PutRecordingMediaretentionpolicyAsyncWithHttpInfo (string policyId, Policy body)
         { 
             // verify the required parameter 'policyId' is set
@@ -14261,6 +14713,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">KeyRotationSchedule</param>
         /// <returns>KeyRotationSchedule</returns>
+        
         public KeyRotationSchedule PutRecordingRecordingkeysRotationschedule (KeyRotationSchedule body)
         {
              ApiResponse<KeyRotationSchedule> localVarResponse = PutRecordingRecordingkeysRotationscheduleWithHttpInfo(body);
@@ -14273,6 +14726,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">KeyRotationSchedule</param>
         /// <returns>ApiResponse of KeyRotationSchedule</returns>
+        
         public ApiResponse< KeyRotationSchedule > PutRecordingRecordingkeysRotationscheduleWithHttpInfo (KeyRotationSchedule body)
         { 
             // verify the required parameter 'body' is set
@@ -14360,6 +14814,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">KeyRotationSchedule</param>
         /// <returns>Task of KeyRotationSchedule</returns>
+        
         public async System.Threading.Tasks.Task<KeyRotationSchedule> PutRecordingRecordingkeysRotationscheduleAsync (KeyRotationSchedule body)
         {
              ApiResponse<KeyRotationSchedule> localVarResponse = await PutRecordingRecordingkeysRotationscheduleAsyncWithHttpInfo(body);
@@ -14373,6 +14828,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">KeyRotationSchedule</param>
         /// <returns>Task of ApiResponse (KeyRotationSchedule)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<KeyRotationSchedule>> PutRecordingRecordingkeysRotationscheduleAsyncWithHttpInfo (KeyRotationSchedule body)
         { 
             // verify the required parameter 'body' is set
@@ -14462,6 +14918,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Recording settings</param>
         /// <returns>RecordingSettings</returns>
+        
         public RecordingSettings PutRecordingSettings (RecordingSettings body)
         {
              ApiResponse<RecordingSettings> localVarResponse = PutRecordingSettingsWithHttpInfo(body);
@@ -14474,6 +14931,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Recording settings</param>
         /// <returns>ApiResponse of RecordingSettings</returns>
+        
         public ApiResponse< RecordingSettings > PutRecordingSettingsWithHttpInfo (RecordingSettings body)
         { 
             // verify the required parameter 'body' is set
@@ -14561,6 +15019,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Recording settings</param>
         /// <returns>Task of RecordingSettings</returns>
+        
         public async System.Threading.Tasks.Task<RecordingSettings> PutRecordingSettingsAsync (RecordingSettings body)
         {
              ApiResponse<RecordingSettings> localVarResponse = await PutRecordingSettingsAsyncWithHttpInfo(body);
@@ -14574,6 +15033,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Recording settings</param>
         /// <returns>Task of ApiResponse (RecordingSettings)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<RecordingSettings>> PutRecordingSettingsAsyncWithHttpInfo (RecordingSettings body)
         { 
             // verify the required parameter 'body' is set
@@ -14664,6 +15124,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="protect">Check for apply, uncheck for revoke (each action requires the respective permission) (optional, default to true)</param>
         /// <param name="body"> (optional)</param>
         /// <returns></returns>
+        
         public void PutRecordingsDeletionprotection (bool? protect = null, ConversationDeletionProtectionQuery body = null)
         {
              PutRecordingsDeletionprotectionWithHttpInfo(protect, body);
@@ -14676,6 +15137,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="protect">Check for apply, uncheck for revoke (each action requires the respective permission) (optional, default to true)</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> PutRecordingsDeletionprotectionWithHttpInfo (bool? protect = null, ConversationDeletionProtectionQuery body = null)
         { 
 
@@ -14762,6 +15224,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="protect">Check for apply, uncheck for revoke (each action requires the respective permission) (optional, default to true)</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task PutRecordingsDeletionprotectionAsync (bool? protect = null, ConversationDeletionProtectionQuery body = null)
         {
              await PutRecordingsDeletionprotectionAsyncWithHttpInfo(protect, body);
@@ -14775,6 +15238,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="protect">Check for apply, uncheck for revoke (each action requires the respective permission) (optional, default to true)</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PutRecordingsDeletionprotectionAsyncWithHttpInfo (bool? protect = null, ConversationDeletionProtectionQuery body = null)
         { 
 

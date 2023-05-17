@@ -13,28 +13,40 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// WemCoachingAppointmentTopicUserReference
+    /// Fields identifying the entity that updated the command.
     /// </summary>
     [DataContract]
-    public partial class WemCoachingAppointmentTopicUserReference :  IEquatable<WemCoachingAppointmentTopicUserReference>
+    public partial class QueueConversationEventTopicModifiedBy :  IEquatable<QueueConversationEventTopicModifiedBy>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="WemCoachingAppointmentTopicUserReference" /> class.
+        /// Initializes a new instance of the <see cref="QueueConversationEventTopicModifiedBy" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        public WemCoachingAppointmentTopicUserReference(string Id = null)
+        /// <param name="Id">The id of the user if the updater is an internal user..</param>
+        /// <param name="SelfUri">The URI for the user if the updater is an internal user..</param>
+        public QueueConversationEventTopicModifiedBy(string Id = null, string SelfUri = null)
         {
             this.Id = Id;
+            this.SelfUri = SelfUri;
             
         }
         
 
 
         /// <summary>
-        /// Gets or Sets Id
+        /// The id of the user if the updater is an internal user.
         /// </summary>
+        /// <value>The id of the user if the updater is an internal user.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+
+
+
+        /// <summary>
+        /// The URI for the user if the updater is an internal user.
+        /// </summary>
+        /// <value>The URI for the user if the updater is an internal user.</value>
+        [DataMember(Name="selfUri", EmitDefaultValue=false)]
+        public string SelfUri { get; set; }
 
 
         /// <summary>
@@ -44,9 +56,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class WemCoachingAppointmentTopicUserReference {\n");
+            sb.Append("class QueueConversationEventTopicModifiedBy {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -72,15 +85,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as WemCoachingAppointmentTopicUserReference);
+            return this.Equals(obj as QueueConversationEventTopicModifiedBy);
         }
 
         /// <summary>
-        /// Returns true if WemCoachingAppointmentTopicUserReference instances are equal
+        /// Returns true if QueueConversationEventTopicModifiedBy instances are equal
         /// </summary>
-        /// <param name="other">Instance of WemCoachingAppointmentTopicUserReference to be compared</param>
+        /// <param name="other">Instance of QueueConversationEventTopicModifiedBy to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(WemCoachingAppointmentTopicUserReference other)
+        public bool Equals(QueueConversationEventTopicModifiedBy other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -91,6 +104,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.SelfUri == other.SelfUri ||
+                    this.SelfUri != null &&
+                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -107,6 +125,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+
+                if (this.SelfUri != null)
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
 
                 return hash;
             }

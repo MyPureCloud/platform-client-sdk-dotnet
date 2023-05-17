@@ -13,27 +13,23 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// WfmAgentScheduleUpdateTopicWfmAgentScheduleUpdateNotification
+    /// WfmAgentScheduleUpdateTopicAgentScheduleUpdateNotification
     /// </summary>
     [DataContract]
-    public partial class WfmAgentScheduleUpdateTopicWfmAgentScheduleUpdateNotification :  IEquatable<WfmAgentScheduleUpdateTopicWfmAgentScheduleUpdateNotification>
+    public partial class WfmAgentScheduleUpdateTopicAgentScheduleUpdateNotification :  IEquatable<WfmAgentScheduleUpdateTopicAgentScheduleUpdateNotification>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="WfmAgentScheduleUpdateTopicWfmAgentScheduleUpdateNotification" /> class.
+        /// Initializes a new instance of the <see cref="WfmAgentScheduleUpdateTopicAgentScheduleUpdateNotification" /> class.
         /// </summary>
         /// <param name="User">User.</param>
         /// <param name="StartDate">StartDate.</param>
         /// <param name="EndDate">EndDate.</param>
-        /// <param name="Shifts">Shifts.</param>
-        /// <param name="FullDayTimeOffMarkers">FullDayTimeOffMarkers.</param>
         /// <param name="Updates">Updates.</param>
-        public WfmAgentScheduleUpdateTopicWfmAgentScheduleUpdateNotification(WfmAgentScheduleUpdateTopicUserReference User = null, DateTime? StartDate = null, DateTime? EndDate = null, List<WfmAgentScheduleUpdateTopicWfmScheduleShift> Shifts = null, List<WfmAgentScheduleUpdateTopicWfmFullDayTimeOffMarker> FullDayTimeOffMarkers = null, List<WfmAgentScheduleUpdateTopicWfmAgentScheduleUpdate> Updates = null)
+        public WfmAgentScheduleUpdateTopicAgentScheduleUpdateNotification(WfmAgentScheduleUpdateTopicUserReference User = null, DateTime? StartDate = null, DateTime? EndDate = null, List<WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate> Updates = null)
         {
             this.User = User;
             this.StartDate = StartDate;
             this.EndDate = EndDate;
-            this.Shifts = Shifts;
-            this.FullDayTimeOffMarkers = FullDayTimeOffMarkers;
             this.Updates = Updates;
             
         }
@@ -65,26 +61,10 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets Shifts
-        /// </summary>
-        [DataMember(Name="shifts", EmitDefaultValue=false)]
-        public List<WfmAgentScheduleUpdateTopicWfmScheduleShift> Shifts { get; set; }
-
-
-
-        /// <summary>
-        /// Gets or Sets FullDayTimeOffMarkers
-        /// </summary>
-        [DataMember(Name="fullDayTimeOffMarkers", EmitDefaultValue=false)]
-        public List<WfmAgentScheduleUpdateTopicWfmFullDayTimeOffMarker> FullDayTimeOffMarkers { get; set; }
-
-
-
-        /// <summary>
         /// Gets or Sets Updates
         /// </summary>
         [DataMember(Name="updates", EmitDefaultValue=false)]
-        public List<WfmAgentScheduleUpdateTopicWfmAgentScheduleUpdate> Updates { get; set; }
+        public List<WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate> Updates { get; set; }
 
 
         /// <summary>
@@ -94,13 +74,11 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class WfmAgentScheduleUpdateTopicWfmAgentScheduleUpdateNotification {\n");
+            sb.Append("class WfmAgentScheduleUpdateTopicAgentScheduleUpdateNotification {\n");
 
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
-            sb.Append("  Shifts: ").Append(Shifts).Append("\n");
-            sb.Append("  FullDayTimeOffMarkers: ").Append(FullDayTimeOffMarkers).Append("\n");
             sb.Append("  Updates: ").Append(Updates).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -127,15 +105,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as WfmAgentScheduleUpdateTopicWfmAgentScheduleUpdateNotification);
+            return this.Equals(obj as WfmAgentScheduleUpdateTopicAgentScheduleUpdateNotification);
         }
 
         /// <summary>
-        /// Returns true if WfmAgentScheduleUpdateTopicWfmAgentScheduleUpdateNotification instances are equal
+        /// Returns true if WfmAgentScheduleUpdateTopicAgentScheduleUpdateNotification instances are equal
         /// </summary>
-        /// <param name="other">Instance of WfmAgentScheduleUpdateTopicWfmAgentScheduleUpdateNotification to be compared</param>
+        /// <param name="other">Instance of WfmAgentScheduleUpdateTopicAgentScheduleUpdateNotification to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(WfmAgentScheduleUpdateTopicWfmAgentScheduleUpdateNotification other)
+        public bool Equals(WfmAgentScheduleUpdateTopicAgentScheduleUpdateNotification other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -156,16 +134,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EndDate == other.EndDate ||
                     this.EndDate != null &&
                     this.EndDate.Equals(other.EndDate)
-                ) &&
-                (
-                    this.Shifts == other.Shifts ||
-                    this.Shifts != null &&
-                    this.Shifts.SequenceEqual(other.Shifts)
-                ) &&
-                (
-                    this.FullDayTimeOffMarkers == other.FullDayTimeOffMarkers ||
-                    this.FullDayTimeOffMarkers != null &&
-                    this.FullDayTimeOffMarkers.SequenceEqual(other.FullDayTimeOffMarkers)
                 ) &&
                 (
                     this.Updates == other.Updates ||
@@ -193,12 +161,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EndDate != null)
                     hash = hash * 59 + this.EndDate.GetHashCode();
-
-                if (this.Shifts != null)
-                    hash = hash * 59 + this.Shifts.GetHashCode();
-
-                if (this.FullDayTimeOffMarkers != null)
-                    hash = hash * 59 + this.FullDayTimeOffMarkers.GetHashCode();
 
                 if (this.Updates != null)
                     hash = hash * 59 + this.Updates.GetHashCode();

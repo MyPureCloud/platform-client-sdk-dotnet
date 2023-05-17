@@ -59,6 +59,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ExternalContactsUnresolvedContactChangedTopicContact" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
+        /// <param name="ExternalOrganization">ExternalOrganization.</param>
         /// <param name="Type">Type.</param>
         /// <param name="FirstName">FirstName.</param>
         /// <param name="MiddleName">MiddleName.</param>
@@ -80,9 +81,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WhatsAppId">WhatsAppId.</param>
         /// <param name="FacebookId">FacebookId.</param>
         /// <param name="InstagramId">InstagramId.</param>
-        public ExternalContactsUnresolvedContactChangedTopicContact(string Id = null, TypeEnum? Type = null, string FirstName = null, string MiddleName = null, string LastName = null, string Salutation = null, string Title = null, ExternalContactsUnresolvedContactChangedTopicPhoneNumber WorkPhone = null, ExternalContactsUnresolvedContactChangedTopicPhoneNumber CellPhone = null, ExternalContactsUnresolvedContactChangedTopicPhoneNumber HomePhone = null, ExternalContactsUnresolvedContactChangedTopicPhoneNumber OtherPhone = null, string WorkEmail = null, string PersonalEmail = null, string OtherEmail = null, ExternalContactsUnresolvedContactChangedTopicContactAddress Address = null, bool? SurveyOptOut = null, string ExternalSystemUrl = null, ExternalContactsUnresolvedContactChangedTopicTwitterId TwitterId = null, ExternalContactsUnresolvedContactChangedTopicLineId LineId = null, ExternalContactsUnresolvedContactChangedTopicWhatsAppId WhatsAppId = null, ExternalContactsUnresolvedContactChangedTopicFacebookId FacebookId = null, ExternalContactsUnresolvedContactChangedTopicInstagramId InstagramId = null)
+        /// <param name="Schema">Schema.</param>
+        /// <param name="CustomFields">CustomFields.</param>
+        public ExternalContactsUnresolvedContactChangedTopicContact(string Id = null, ExternalContactsUnresolvedContactChangedTopicExternalOrganization ExternalOrganization = null, TypeEnum? Type = null, string FirstName = null, string MiddleName = null, string LastName = null, string Salutation = null, string Title = null, ExternalContactsUnresolvedContactChangedTopicPhoneNumber WorkPhone = null, ExternalContactsUnresolvedContactChangedTopicPhoneNumber CellPhone = null, ExternalContactsUnresolvedContactChangedTopicPhoneNumber HomePhone = null, ExternalContactsUnresolvedContactChangedTopicPhoneNumber OtherPhone = null, string WorkEmail = null, string PersonalEmail = null, string OtherEmail = null, ExternalContactsUnresolvedContactChangedTopicContactAddress Address = null, bool? SurveyOptOut = null, string ExternalSystemUrl = null, ExternalContactsUnresolvedContactChangedTopicTwitterId TwitterId = null, ExternalContactsUnresolvedContactChangedTopicLineId LineId = null, ExternalContactsUnresolvedContactChangedTopicWhatsAppId WhatsAppId = null, ExternalContactsUnresolvedContactChangedTopicFacebookId FacebookId = null, ExternalContactsUnresolvedContactChangedTopicInstagramId InstagramId = null, ExternalContactsUnresolvedContactChangedTopicDataSchema Schema = null, Dictionary<string, Object> CustomFields = null)
         {
             this.Id = Id;
+            this.ExternalOrganization = ExternalOrganization;
             this.Type = Type;
             this.FirstName = FirstName;
             this.MiddleName = MiddleName;
@@ -104,6 +108,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.WhatsAppId = WhatsAppId;
             this.FacebookId = FacebookId;
             this.InstagramId = InstagramId;
+            this.Schema = Schema;
+            this.CustomFields = CustomFields;
             
         }
         
@@ -114,6 +120,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets ExternalOrganization
+        /// </summary>
+        [DataMember(Name="externalOrganization", EmitDefaultValue=false)]
+        public ExternalContactsUnresolvedContactChangedTopicExternalOrganization ExternalOrganization { get; set; }
 
 
 
@@ -278,6 +292,22 @@ namespace PureCloudPlatform.Client.V2.Model
         public ExternalContactsUnresolvedContactChangedTopicInstagramId InstagramId { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets Schema
+        /// </summary>
+        [DataMember(Name="schema", EmitDefaultValue=false)]
+        public ExternalContactsUnresolvedContactChangedTopicDataSchema Schema { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets CustomFields
+        /// </summary>
+        [DataMember(Name="customFields", EmitDefaultValue=false)]
+        public Dictionary<string, Object> CustomFields { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -288,6 +318,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ExternalContactsUnresolvedContactChangedTopicContact {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  FirstName: ").Append(FirstName).Append("\n");
             sb.Append("  MiddleName: ").Append(MiddleName).Append("\n");
@@ -309,6 +340,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  WhatsAppId: ").Append(WhatsAppId).Append("\n");
             sb.Append("  FacebookId: ").Append(FacebookId).Append("\n");
             sb.Append("  InstagramId: ").Append(InstagramId).Append("\n");
+            sb.Append("  Schema: ").Append(Schema).Append("\n");
+            sb.Append("  CustomFields: ").Append(CustomFields).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -353,6 +386,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.ExternalOrganization == other.ExternalOrganization ||
+                    this.ExternalOrganization != null &&
+                    this.ExternalOrganization.Equals(other.ExternalOrganization)
                 ) &&
                 (
                     this.Type == other.Type ||
@@ -458,6 +496,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.InstagramId == other.InstagramId ||
                     this.InstagramId != null &&
                     this.InstagramId.Equals(other.InstagramId)
+                ) &&
+                (
+                    this.Schema == other.Schema ||
+                    this.Schema != null &&
+                    this.Schema.Equals(other.Schema)
+                ) &&
+                (
+                    this.CustomFields == other.CustomFields ||
+                    this.CustomFields != null &&
+                    this.CustomFields.SequenceEqual(other.CustomFields)
                 );
         }
 
@@ -474,6 +522,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+
+                if (this.ExternalOrganization != null)
+                    hash = hash * 59 + this.ExternalOrganization.GetHashCode();
 
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
@@ -537,6 +588,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.InstagramId != null)
                     hash = hash * 59 + this.InstagramId.GetHashCode();
+
+                if (this.Schema != null)
+                    hash = hash * 59 + this.Schema.GetHashCode();
+
+                if (this.CustomFields != null)
+                    hash = hash * 59 + this.CustomFields.GetHashCode();
 
                 return hash;
             }

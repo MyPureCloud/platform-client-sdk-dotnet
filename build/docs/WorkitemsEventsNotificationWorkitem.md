@@ -17,6 +17,7 @@ title: WorkitemsEventsNotificationWorkitem
 | **DateModified** | **string** |  | [optional] |
 | **DateDue** | **string** |  | [optional] |
 | **DateExpires** | **string** |  | [optional] |
+| **DateAssignmentStateChanged** | **string** |  | [optional] |
 | **DurationSeconds** | **int?** |  | [optional] |
 | **Ttl** | **int?** |  | [optional] |
 | **StatusId** | **string** |  | [optional] |

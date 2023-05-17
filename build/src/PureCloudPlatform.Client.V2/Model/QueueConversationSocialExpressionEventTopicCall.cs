@@ -388,6 +388,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Muted">True if this call is muted so that remote participants can't hear any audio from this end..</param>
         /// <param name="Confined">True if this call is held and the person on this side hears hold music..</param>
         /// <param name="Held">True if this call is held and the person on this side hears silence..</param>
+        /// <param name="SecurePause">True when the recording of this call is in secure pause status..</param>
         /// <param name="ErrorInfo">ErrorInfo.</param>
         /// <param name="DisconnectType">System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects..</param>
         /// <param name="StartHoldTime">The timestamp the call was placed on hold in the cloud clock if the call is currently on hold..</param>
@@ -408,7 +409,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AfterCallWork">AfterCallWork.</param>
         /// <param name="AfterCallWorkRequired">Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
         /// <param name="AgentAssistantId">UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation..</param>
-        public QueueConversationSocialExpressionEventTopicCall(string Id = null, StateEnum? State = null, InitialStateEnum? InitialState = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, QueueConversationSocialExpressionEventTopicErrorDetails ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DirectionEnum? Direction = null, string DocumentId = null, QueueConversationSocialExpressionEventTopicAddress Self = null, QueueConversationSocialExpressionEventTopicAddress Other = null, string Provider = null, string ScriptId = null, string PeerId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<QueueConversationSocialExpressionEventTopicDisconnectReason> DisconnectReasons = null, QueueConversationSocialExpressionEventTopicFaxStatus FaxStatus = null, string UuiData = null, DateTime? BargedTime = null, QueueConversationSocialExpressionEventTopicWrapup Wrapup = null, QueueConversationSocialExpressionEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null)
+        public QueueConversationSocialExpressionEventTopicCall(string Id = null, StateEnum? State = null, InitialStateEnum? InitialState = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, bool? SecurePause = null, QueueConversationSocialExpressionEventTopicErrorDetails ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DirectionEnum? Direction = null, string DocumentId = null, QueueConversationSocialExpressionEventTopicAddress Self = null, QueueConversationSocialExpressionEventTopicAddress Other = null, string Provider = null, string ScriptId = null, string PeerId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<QueueConversationSocialExpressionEventTopicDisconnectReason> DisconnectReasons = null, QueueConversationSocialExpressionEventTopicFaxStatus FaxStatus = null, string UuiData = null, DateTime? BargedTime = null, QueueConversationSocialExpressionEventTopicWrapup Wrapup = null, QueueConversationSocialExpressionEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null)
         {
             this.Id = Id;
             this.State = State;
@@ -418,6 +419,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Muted = Muted;
             this.Confined = Confined;
             this.Held = Held;
+            this.SecurePause = SecurePause;
             this.ErrorInfo = ErrorInfo;
             this.DisconnectType = DisconnectType;
             this.StartHoldTime = StartHoldTime;
@@ -491,6 +493,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>True if this call is held and the person on this side hears silence.</value>
         [DataMember(Name="held", EmitDefaultValue=false)]
         public bool? Held { get; set; }
+
+
+
+        /// <summary>
+        /// True when the recording of this call is in secure pause status.
+        /// </summary>
+        /// <value>True when the recording of this call is in secure pause status.</value>
+        [DataMember(Name="securePause", EmitDefaultValue=false)]
+        public bool? SecurePause { get; set; }
 
 
 
@@ -672,6 +683,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Muted: ").Append(Muted).Append("\n");
             sb.Append("  Confined: ").Append(Confined).Append("\n");
             sb.Append("  Held: ").Append(Held).Append("\n");
+            sb.Append("  SecurePause: ").Append(SecurePause).Append("\n");
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
             sb.Append("  StartHoldTime: ").Append(StartHoldTime).Append("\n");
@@ -771,6 +783,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Held == other.Held ||
                     this.Held != null &&
                     this.Held.Equals(other.Held)
+                ) &&
+                (
+                    this.SecurePause == other.SecurePause ||
+                    this.SecurePause != null &&
+                    this.SecurePause.Equals(other.SecurePause)
                 ) &&
                 (
                     this.ErrorInfo == other.ErrorInfo ||
@@ -908,6 +925,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Held != null)
                     hash = hash * 59 + this.Held.GetHashCode();
+
+                if (this.SecurePause != null)
+                    hash = hash * 59 + this.SecurePause.GetHashCode();
 
                 if (this.ErrorInfo != null)
                     hash = hash * 59 + this.ErrorInfo.GetHashCode();

@@ -25,6 +25,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <returns></returns>
+        
         void DeleteMessagingSupportedcontentSupportedContentId (string supportedContentId);
 
         /// <summary>
@@ -36,6 +37,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> DeleteMessagingSupportedcontentSupportedContentIdWithHttpInfo (string supportedContentId);
 
         /// <summary>
@@ -48,6 +50,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>SupportedContentListing</returns>
+        
         SupportedContentListing GetMessagingSupportedcontent (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -60,6 +63,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of SupportedContentListing</returns>
+        
         ApiResponse<SupportedContentListing> GetMessagingSupportedcontentWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -71,6 +75,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <returns>SupportedContent</returns>
+        
         SupportedContent GetMessagingSupportedcontentSupportedContentId (string supportedContentId);
 
         /// <summary>
@@ -82,6 +87,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <returns>ApiResponse of SupportedContent</returns>
+        
         ApiResponse<SupportedContent> GetMessagingSupportedcontentSupportedContentIdWithHttpInfo (string supportedContentId);
 
         /// <summary>
@@ -94,6 +100,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <param name="body">SupportedContent</param>
         /// <returns>SupportedContent</returns>
+        
         SupportedContent PatchMessagingSupportedcontentSupportedContentId (string supportedContentId, SupportedContent body);
 
         /// <summary>
@@ -106,6 +113,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <param name="body">SupportedContent</param>
         /// <returns>ApiResponse of SupportedContent</returns>
+        
         ApiResponse<SupportedContent> PatchMessagingSupportedcontentSupportedContentIdWithHttpInfo (string supportedContentId, SupportedContent body);
 
         /// <summary>
@@ -117,6 +125,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SupportedContent</param>
         /// <returns>SupportedContent</returns>
+        
         SupportedContent PostMessagingSupportedcontent (SupportedContent body);
 
         /// <summary>
@@ -128,6 +137,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SupportedContent</param>
         /// <returns>ApiResponse of SupportedContent</returns>
+        
         ApiResponse<SupportedContent> PostMessagingSupportedcontentWithHttpInfo (SupportedContent body);
 
         #endregion Synchronous Operations
@@ -143,6 +153,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task DeleteMessagingSupportedcontentSupportedContentIdAsync (string supportedContentId);
 
         /// <summary>
@@ -154,6 +165,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMessagingSupportedcontentSupportedContentIdAsyncWithHttpInfo (string supportedContentId);
 
         /// <summary>
@@ -166,6 +178,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of SupportedContentListing</returns>
+        
         System.Threading.Tasks.Task<SupportedContentListing> GetMessagingSupportedcontentAsync (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -178,6 +191,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (SupportedContentListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<SupportedContentListing>> GetMessagingSupportedcontentAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -189,6 +203,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <returns>Task of SupportedContent</returns>
+        
         System.Threading.Tasks.Task<SupportedContent> GetMessagingSupportedcontentSupportedContentIdAsync (string supportedContentId);
 
         /// <summary>
@@ -200,6 +215,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <returns>Task of ApiResponse (SupportedContent)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<SupportedContent>> GetMessagingSupportedcontentSupportedContentIdAsyncWithHttpInfo (string supportedContentId);
 
         /// <summary>
@@ -212,6 +228,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <param name="body">SupportedContent</param>
         /// <returns>Task of SupportedContent</returns>
+        
         System.Threading.Tasks.Task<SupportedContent> PatchMessagingSupportedcontentSupportedContentIdAsync (string supportedContentId, SupportedContent body);
 
         /// <summary>
@@ -224,6 +241,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <param name="body">SupportedContent</param>
         /// <returns>Task of ApiResponse (SupportedContent)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<SupportedContent>> PatchMessagingSupportedcontentSupportedContentIdAsyncWithHttpInfo (string supportedContentId, SupportedContent body);
 
         /// <summary>
@@ -235,6 +253,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SupportedContent</param>
         /// <returns>Task of SupportedContent</returns>
+        
         System.Threading.Tasks.Task<SupportedContent> PostMessagingSupportedcontentAsync (SupportedContent body);
 
         /// <summary>
@@ -246,6 +265,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SupportedContent</param>
         /// <returns>Task of ApiResponse (SupportedContent)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<SupportedContent>> PostMessagingSupportedcontentAsyncWithHttpInfo (SupportedContent body);
 
         #endregion Asynchronous Operations
@@ -346,6 +366,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <returns></returns>
+        
         public void DeleteMessagingSupportedcontentSupportedContentId (string supportedContentId)
         {
              DeleteMessagingSupportedcontentSupportedContentIdWithHttpInfo(supportedContentId);
@@ -357,6 +378,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> DeleteMessagingSupportedcontentSupportedContentIdWithHttpInfo (string supportedContentId)
         { 
             // verify the required parameter 'supportedContentId' is set
@@ -439,6 +461,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task DeleteMessagingSupportedcontentSupportedContentIdAsync (string supportedContentId)
         {
              await DeleteMessagingSupportedcontentSupportedContentIdAsyncWithHttpInfo(supportedContentId);
@@ -451,6 +474,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMessagingSupportedcontentSupportedContentIdAsyncWithHttpInfo (string supportedContentId)
         { 
             // verify the required parameter 'supportedContentId' is set
@@ -536,6 +560,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>SupportedContentListing</returns>
+        
         public SupportedContentListing GetMessagingSupportedcontent (int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<SupportedContentListing> localVarResponse = GetMessagingSupportedcontentWithHttpInfo(pageSize, pageNumber);
@@ -549,6 +574,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of SupportedContentListing</returns>
+        
         public ApiResponse< SupportedContentListing > GetMessagingSupportedcontentWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
 
@@ -630,6 +656,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of SupportedContentListing</returns>
+        
         public async System.Threading.Tasks.Task<SupportedContentListing> GetMessagingSupportedcontentAsync (int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<SupportedContentListing> localVarResponse = await GetMessagingSupportedcontentAsyncWithHttpInfo(pageSize, pageNumber);
@@ -644,6 +671,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (SupportedContentListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<SupportedContentListing>> GetMessagingSupportedcontentAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
 
@@ -725,6 +753,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <returns>SupportedContent</returns>
+        
         public SupportedContent GetMessagingSupportedcontentSupportedContentId (string supportedContentId)
         {
              ApiResponse<SupportedContent> localVarResponse = GetMessagingSupportedcontentSupportedContentIdWithHttpInfo(supportedContentId);
@@ -737,6 +766,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <returns>ApiResponse of SupportedContent</returns>
+        
         public ApiResponse< SupportedContent > GetMessagingSupportedcontentSupportedContentIdWithHttpInfo (string supportedContentId)
         { 
             // verify the required parameter 'supportedContentId' is set
@@ -819,6 +849,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <returns>Task of SupportedContent</returns>
+        
         public async System.Threading.Tasks.Task<SupportedContent> GetMessagingSupportedcontentSupportedContentIdAsync (string supportedContentId)
         {
              ApiResponse<SupportedContent> localVarResponse = await GetMessagingSupportedcontentSupportedContentIdAsyncWithHttpInfo(supportedContentId);
@@ -832,6 +863,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <returns>Task of ApiResponse (SupportedContent)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<SupportedContent>> GetMessagingSupportedcontentSupportedContentIdAsyncWithHttpInfo (string supportedContentId)
         { 
             // verify the required parameter 'supportedContentId' is set
@@ -917,6 +949,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <param name="body">SupportedContent</param>
         /// <returns>SupportedContent</returns>
+        
         public SupportedContent PatchMessagingSupportedcontentSupportedContentId (string supportedContentId, SupportedContent body)
         {
              ApiResponse<SupportedContent> localVarResponse = PatchMessagingSupportedcontentSupportedContentIdWithHttpInfo(supportedContentId, body);
@@ -930,6 +963,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <param name="body">SupportedContent</param>
         /// <returns>ApiResponse of SupportedContent</returns>
+        
         public ApiResponse< SupportedContent > PatchMessagingSupportedcontentSupportedContentIdWithHttpInfo (string supportedContentId, SupportedContent body)
         { 
             // verify the required parameter 'supportedContentId' is set
@@ -1022,6 +1056,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <param name="body">SupportedContent</param>
         /// <returns>Task of SupportedContent</returns>
+        
         public async System.Threading.Tasks.Task<SupportedContent> PatchMessagingSupportedcontentSupportedContentIdAsync (string supportedContentId, SupportedContent body)
         {
              ApiResponse<SupportedContent> localVarResponse = await PatchMessagingSupportedcontentSupportedContentIdAsyncWithHttpInfo(supportedContentId, body);
@@ -1036,6 +1071,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <param name="body">SupportedContent</param>
         /// <returns>Task of ApiResponse (SupportedContent)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<SupportedContent>> PatchMessagingSupportedcontentSupportedContentIdAsyncWithHttpInfo (string supportedContentId, SupportedContent body)
         { 
             // verify the required parameter 'supportedContentId' is set
@@ -1130,6 +1166,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SupportedContent</param>
         /// <returns>SupportedContent</returns>
+        
         public SupportedContent PostMessagingSupportedcontent (SupportedContent body)
         {
              ApiResponse<SupportedContent> localVarResponse = PostMessagingSupportedcontentWithHttpInfo(body);
@@ -1142,6 +1179,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SupportedContent</param>
         /// <returns>ApiResponse of SupportedContent</returns>
+        
         public ApiResponse< SupportedContent > PostMessagingSupportedcontentWithHttpInfo (SupportedContent body)
         { 
             // verify the required parameter 'body' is set
@@ -1229,6 +1267,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SupportedContent</param>
         /// <returns>Task of SupportedContent</returns>
+        
         public async System.Threading.Tasks.Task<SupportedContent> PostMessagingSupportedcontentAsync (SupportedContent body)
         {
              ApiResponse<SupportedContent> localVarResponse = await PostMessagingSupportedcontentAsyncWithHttpInfo(body);
@@ -1242,6 +1281,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SupportedContent</param>
         /// <returns>Task of ApiResponse (SupportedContent)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<SupportedContent>> PostMessagingSupportedcontentAsyncWithHttpInfo (SupportedContent body)
         { 
             // verify the required parameter 'body' is set

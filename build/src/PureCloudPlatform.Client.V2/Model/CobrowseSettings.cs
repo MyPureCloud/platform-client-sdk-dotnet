@@ -19,16 +19,46 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class CobrowseSettings :  IEquatable<CobrowseSettings>
     {
         /// <summary>
+        /// Gets or Sets Channels
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ChannelsEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Webmessaging for "Webmessaging"
+            /// </summary>
+            [EnumMember(Value = "Webmessaging")]
+            Webmessaging,
+            
+            /// <summary>
+            /// Enum Voice for "Voice"
+            /// </summary>
+            [EnumMember(Value = "Voice")]
+            Voice
+        }
+        /// <summary>
         /// Initializes a new instance of the <see cref="CobrowseSettings" /> class.
         /// </summary>
         /// <param name="Enabled">Whether or not cobrowse is enabled.</param>
         /// <param name="AllowAgentControl">Whether the viewer should have option to request control.</param>
         /// <param name="MaskSelectors">Mask patterns that will apply to pages being shared.</param>
-        public CobrowseSettings(bool? Enabled = null, bool? AllowAgentControl = null, List<string> MaskSelectors = null)
+        /// <param name="Channels">Cobrowse channels for web messenger.</param>
+        /// <param name="ReadonlySelectors">Readonly patterns that will apply to pages being shared.</param>
+        public CobrowseSettings(bool? Enabled = null, bool? AllowAgentControl = null, List<string> MaskSelectors = null, List<ChannelsEnum> Channels = null, List<string> ReadonlySelectors = null)
         {
             this.Enabled = Enabled;
             this.AllowAgentControl = AllowAgentControl;
             this.MaskSelectors = MaskSelectors;
+            this.Channels = Channels;
+            this.ReadonlySelectors = ReadonlySelectors;
             
         }
         
@@ -60,6 +90,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> MaskSelectors { get; set; }
 
 
+
+        /// <summary>
+        /// Cobrowse channels for web messenger
+        /// </summary>
+        /// <value>Cobrowse channels for web messenger</value>
+        [DataMember(Name="channels", EmitDefaultValue=false)]
+        public List<ChannelsEnum> Channels { get; set; }
+
+
+
+        /// <summary>
+        /// Readonly patterns that will apply to pages being shared
+        /// </summary>
+        /// <value>Readonly patterns that will apply to pages being shared</value>
+        [DataMember(Name="readonlySelectors", EmitDefaultValue=false)]
+        public List<string> ReadonlySelectors { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -72,6 +120,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  AllowAgentControl: ").Append(AllowAgentControl).Append("\n");
             sb.Append("  MaskSelectors: ").Append(MaskSelectors).Append("\n");
+            sb.Append("  Channels: ").Append(Channels).Append("\n");
+            sb.Append("  ReadonlySelectors: ").Append(ReadonlySelectors).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -126,6 +176,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MaskSelectors == other.MaskSelectors ||
                     this.MaskSelectors != null &&
                     this.MaskSelectors.SequenceEqual(other.MaskSelectors)
+                ) &&
+                (
+                    this.Channels == other.Channels ||
+                    this.Channels != null &&
+                    this.Channels.SequenceEqual(other.Channels)
+                ) &&
+                (
+                    this.ReadonlySelectors == other.ReadonlySelectors ||
+                    this.ReadonlySelectors != null &&
+                    this.ReadonlySelectors.SequenceEqual(other.ReadonlySelectors)
                 );
         }
 
@@ -148,6 +208,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MaskSelectors != null)
                     hash = hash * 59 + this.MaskSelectors.GetHashCode();
+
+                if (this.Channels != null)
+                    hash = hash * 59 + this.Channels.GetHashCode();
+
+                if (this.ReadonlySelectors != null)
+                    hash = hash * 59 + this.ReadonlySelectors.GetHashCode();
 
                 return hash;
             }

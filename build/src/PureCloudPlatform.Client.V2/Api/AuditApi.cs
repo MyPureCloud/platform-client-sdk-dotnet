@@ -24,6 +24,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>AuditQueryServiceMapping</returns>
+        
         AuditQueryServiceMapping GetAuditsQueryRealtimeServicemapping ();
 
         /// <summary>
@@ -34,6 +35,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of AuditQueryServiceMapping</returns>
+        
         ApiResponse<AuditQueryServiceMapping> GetAuditsQueryRealtimeServicemappingWithHttpInfo ();
 
         /// <summary>
@@ -44,6 +46,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>AuditQueryServiceMapping</returns>
+        
         AuditQueryServiceMapping GetAuditsQueryServicemapping ();
 
         /// <summary>
@@ -54,6 +57,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of AuditQueryServiceMapping</returns>
+        
         ApiResponse<AuditQueryServiceMapping> GetAuditsQueryServicemappingWithHttpInfo ();
 
         /// <summary>
@@ -65,6 +69,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionId">Transaction ID</param>
         /// <returns>AuditQueryExecutionStatusResponse</returns>
+        
         AuditQueryExecutionStatusResponse GetAuditsQueryTransactionId (string transactionId);
 
         /// <summary>
@@ -76,6 +81,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionId">Transaction ID</param>
         /// <returns>ApiResponse of AuditQueryExecutionStatusResponse</returns>
+        
         ApiResponse<AuditQueryExecutionStatusResponse> GetAuditsQueryTransactionIdWithHttpInfo (string transactionId);
 
         /// <summary>
@@ -90,6 +96,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500. (optional, default to 25)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>AuditQueryExecutionResultsResponse</returns>
+        
         AuditQueryExecutionResultsResponse GetAuditsQueryTransactionIdResults (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null);
 
         /// <summary>
@@ -104,6 +111,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500. (optional, default to 25)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of AuditQueryExecutionResultsResponse</returns>
+        
         ApiResponse<AuditQueryExecutionResultsResponse> GetAuditsQueryTransactionIdResultsWithHttpInfo (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null);
 
         /// <summary>
@@ -115,6 +123,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>AuditQueryExecutionStatusResponse</returns>
+        
         AuditQueryExecutionStatusResponse PostAuditsQuery (AuditQueryRequest body);
 
         /// <summary>
@@ -126,6 +135,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>ApiResponse of AuditQueryExecutionStatusResponse</returns>
+        
         ApiResponse<AuditQueryExecutionStatusResponse> PostAuditsQueryWithHttpInfo (AuditQueryRequest body);
 
         /// <summary>
@@ -138,6 +148,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>AuditRealtimeQueryResultsResponse</returns>
+        
         AuditRealtimeQueryResultsResponse PostAuditsQueryRealtime (AuditRealtimeQueryRequest body, List<string> expand = null);
 
         /// <summary>
@@ -150,6 +161,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of AuditRealtimeQueryResultsResponse</returns>
+        
         ApiResponse<AuditRealtimeQueryResultsResponse> PostAuditsQueryRealtimeWithHttpInfo (AuditRealtimeQueryRequest body, List<string> expand = null);
 
         #endregion Synchronous Operations
@@ -164,6 +176,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of AuditQueryServiceMapping</returns>
+        
         System.Threading.Tasks.Task<AuditQueryServiceMapping> GetAuditsQueryRealtimeServicemappingAsync ();
 
         /// <summary>
@@ -174,6 +187,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (AuditQueryServiceMapping)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<AuditQueryServiceMapping>> GetAuditsQueryRealtimeServicemappingAsyncWithHttpInfo ();
 
         /// <summary>
@@ -184,6 +198,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of AuditQueryServiceMapping</returns>
+        
         System.Threading.Tasks.Task<AuditQueryServiceMapping> GetAuditsQueryServicemappingAsync ();
 
         /// <summary>
@@ -194,6 +209,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (AuditQueryServiceMapping)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<AuditQueryServiceMapping>> GetAuditsQueryServicemappingAsyncWithHttpInfo ();
 
         /// <summary>
@@ -205,6 +221,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionId">Transaction ID</param>
         /// <returns>Task of AuditQueryExecutionStatusResponse</returns>
+        
         System.Threading.Tasks.Task<AuditQueryExecutionStatusResponse> GetAuditsQueryTransactionIdAsync (string transactionId);
 
         /// <summary>
@@ -216,6 +233,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionId">Transaction ID</param>
         /// <returns>Task of ApiResponse (AuditQueryExecutionStatusResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<AuditQueryExecutionStatusResponse>> GetAuditsQueryTransactionIdAsyncWithHttpInfo (string transactionId);
 
         /// <summary>
@@ -230,6 +248,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500. (optional, default to 25)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of AuditQueryExecutionResultsResponse</returns>
+        
         System.Threading.Tasks.Task<AuditQueryExecutionResultsResponse> GetAuditsQueryTransactionIdResultsAsync (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null);
 
         /// <summary>
@@ -244,6 +263,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500. (optional, default to 25)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (AuditQueryExecutionResultsResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<AuditQueryExecutionResultsResponse>> GetAuditsQueryTransactionIdResultsAsyncWithHttpInfo (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null);
 
         /// <summary>
@@ -255,6 +275,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of AuditQueryExecutionStatusResponse</returns>
+        
         System.Threading.Tasks.Task<AuditQueryExecutionStatusResponse> PostAuditsQueryAsync (AuditQueryRequest body);
 
         /// <summary>
@@ -266,6 +287,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (AuditQueryExecutionStatusResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<AuditQueryExecutionStatusResponse>> PostAuditsQueryAsyncWithHttpInfo (AuditQueryRequest body);
 
         /// <summary>
@@ -278,6 +300,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of AuditRealtimeQueryResultsResponse</returns>
+        
         System.Threading.Tasks.Task<AuditRealtimeQueryResultsResponse> PostAuditsQueryRealtimeAsync (AuditRealtimeQueryRequest body, List<string> expand = null);
 
         /// <summary>
@@ -290,6 +313,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (AuditRealtimeQueryResultsResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<AuditRealtimeQueryResultsResponse>> PostAuditsQueryRealtimeAsyncWithHttpInfo (AuditRealtimeQueryRequest body, List<string> expand = null);
 
         #endregion Asynchronous Operations
@@ -389,6 +413,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>AuditQueryServiceMapping</returns>
+        
         public AuditQueryServiceMapping GetAuditsQueryRealtimeServicemapping ()
         {
              ApiResponse<AuditQueryServiceMapping> localVarResponse = GetAuditsQueryRealtimeServicemappingWithHttpInfo();
@@ -400,6 +425,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of AuditQueryServiceMapping</returns>
+        
         public ApiResponse< AuditQueryServiceMapping > GetAuditsQueryRealtimeServicemappingWithHttpInfo ()
         { 
 
@@ -477,6 +503,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of AuditQueryServiceMapping</returns>
+        
         public async System.Threading.Tasks.Task<AuditQueryServiceMapping> GetAuditsQueryRealtimeServicemappingAsync ()
         {
              ApiResponse<AuditQueryServiceMapping> localVarResponse = await GetAuditsQueryRealtimeServicemappingAsyncWithHttpInfo();
@@ -489,6 +516,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (AuditQueryServiceMapping)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<AuditQueryServiceMapping>> GetAuditsQueryRealtimeServicemappingAsyncWithHttpInfo ()
         { 
 
@@ -567,6 +595,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>AuditQueryServiceMapping</returns>
+        
         public AuditQueryServiceMapping GetAuditsQueryServicemapping ()
         {
              ApiResponse<AuditQueryServiceMapping> localVarResponse = GetAuditsQueryServicemappingWithHttpInfo();
@@ -578,6 +607,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of AuditQueryServiceMapping</returns>
+        
         public ApiResponse< AuditQueryServiceMapping > GetAuditsQueryServicemappingWithHttpInfo ()
         { 
 
@@ -655,6 +685,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of AuditQueryServiceMapping</returns>
+        
         public async System.Threading.Tasks.Task<AuditQueryServiceMapping> GetAuditsQueryServicemappingAsync ()
         {
              ApiResponse<AuditQueryServiceMapping> localVarResponse = await GetAuditsQueryServicemappingAsyncWithHttpInfo();
@@ -667,6 +698,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (AuditQueryServiceMapping)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<AuditQueryServiceMapping>> GetAuditsQueryServicemappingAsyncWithHttpInfo ()
         { 
 
@@ -746,6 +778,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionId">Transaction ID</param>
         /// <returns>AuditQueryExecutionStatusResponse</returns>
+        
         public AuditQueryExecutionStatusResponse GetAuditsQueryTransactionId (string transactionId)
         {
              ApiResponse<AuditQueryExecutionStatusResponse> localVarResponse = GetAuditsQueryTransactionIdWithHttpInfo(transactionId);
@@ -758,6 +791,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionId">Transaction ID</param>
         /// <returns>ApiResponse of AuditQueryExecutionStatusResponse</returns>
+        
         public ApiResponse< AuditQueryExecutionStatusResponse > GetAuditsQueryTransactionIdWithHttpInfo (string transactionId)
         { 
             // verify the required parameter 'transactionId' is set
@@ -840,6 +874,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionId">Transaction ID</param>
         /// <returns>Task of AuditQueryExecutionStatusResponse</returns>
+        
         public async System.Threading.Tasks.Task<AuditQueryExecutionStatusResponse> GetAuditsQueryTransactionIdAsync (string transactionId)
         {
              ApiResponse<AuditQueryExecutionStatusResponse> localVarResponse = await GetAuditsQueryTransactionIdAsyncWithHttpInfo(transactionId);
@@ -853,6 +888,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionId">Transaction ID</param>
         /// <returns>Task of ApiResponse (AuditQueryExecutionStatusResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<AuditQueryExecutionStatusResponse>> GetAuditsQueryTransactionIdAsyncWithHttpInfo (string transactionId)
         { 
             // verify the required parameter 'transactionId' is set
@@ -940,6 +976,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500. (optional, default to 25)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>AuditQueryExecutionResultsResponse</returns>
+        
         public AuditQueryExecutionResultsResponse GetAuditsQueryTransactionIdResults (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null)
         {
              ApiResponse<AuditQueryExecutionResultsResponse> localVarResponse = GetAuditsQueryTransactionIdResultsWithHttpInfo(transactionId, cursor, pageSize, expand);
@@ -955,6 +992,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500. (optional, default to 25)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of AuditQueryExecutionResultsResponse</returns>
+        
         public ApiResponse< AuditQueryExecutionResultsResponse > GetAuditsQueryTransactionIdResultsWithHttpInfo (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null)
         { 
             // verify the required parameter 'transactionId' is set
@@ -1043,6 +1081,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500. (optional, default to 25)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of AuditQueryExecutionResultsResponse</returns>
+        
         public async System.Threading.Tasks.Task<AuditQueryExecutionResultsResponse> GetAuditsQueryTransactionIdResultsAsync (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null)
         {
              ApiResponse<AuditQueryExecutionResultsResponse> localVarResponse = await GetAuditsQueryTransactionIdResultsAsyncWithHttpInfo(transactionId, cursor, pageSize, expand);
@@ -1059,6 +1098,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500. (optional, default to 25)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (AuditQueryExecutionResultsResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<AuditQueryExecutionResultsResponse>> GetAuditsQueryTransactionIdResultsAsyncWithHttpInfo (string transactionId, string cursor = null, int? pageSize = null, List<string> expand = null)
         { 
             // verify the required parameter 'transactionId' is set
@@ -1146,6 +1186,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>AuditQueryExecutionStatusResponse</returns>
+        
         public AuditQueryExecutionStatusResponse PostAuditsQuery (AuditQueryRequest body)
         {
              ApiResponse<AuditQueryExecutionStatusResponse> localVarResponse = PostAuditsQueryWithHttpInfo(body);
@@ -1158,6 +1199,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>ApiResponse of AuditQueryExecutionStatusResponse</returns>
+        
         public ApiResponse< AuditQueryExecutionStatusResponse > PostAuditsQueryWithHttpInfo (AuditQueryRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -1245,6 +1287,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of AuditQueryExecutionStatusResponse</returns>
+        
         public async System.Threading.Tasks.Task<AuditQueryExecutionStatusResponse> PostAuditsQueryAsync (AuditQueryRequest body)
         {
              ApiResponse<AuditQueryExecutionStatusResponse> localVarResponse = await PostAuditsQueryAsyncWithHttpInfo(body);
@@ -1258,6 +1301,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (AuditQueryExecutionStatusResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<AuditQueryExecutionStatusResponse>> PostAuditsQueryAsyncWithHttpInfo (AuditQueryRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -1348,6 +1392,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>AuditRealtimeQueryResultsResponse</returns>
+        
         public AuditRealtimeQueryResultsResponse PostAuditsQueryRealtime (AuditRealtimeQueryRequest body, List<string> expand = null)
         {
              ApiResponse<AuditRealtimeQueryResultsResponse> localVarResponse = PostAuditsQueryRealtimeWithHttpInfo(body, expand);
@@ -1361,6 +1406,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of AuditRealtimeQueryResultsResponse</returns>
+        
         public ApiResponse< AuditRealtimeQueryResultsResponse > PostAuditsQueryRealtimeWithHttpInfo (AuditRealtimeQueryRequest body, List<string> expand = null)
         { 
             // verify the required parameter 'body' is set
@@ -1450,6 +1496,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of AuditRealtimeQueryResultsResponse</returns>
+        
         public async System.Threading.Tasks.Task<AuditRealtimeQueryResultsResponse> PostAuditsQueryRealtimeAsync (AuditRealtimeQueryRequest body, List<string> expand = null)
         {
              ApiResponse<AuditRealtimeQueryResultsResponse> localVarResponse = await PostAuditsQueryRealtimeAsyncWithHttpInfo(body, expand);
@@ -1464,6 +1511,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (AuditRealtimeQueryResultsResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<AuditRealtimeQueryResultsResponse>> PostAuditsQueryRealtimeAsyncWithHttpInfo (AuditRealtimeQueryRequest body, List<string> expand = null)
         { 
             // verify the required parameter 'body' is set

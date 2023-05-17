@@ -25,6 +25,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <returns></returns>
+        
         void DeleteOrgauthorizationTrustee (string trusteeOrgId);
 
         /// <summary>
@@ -36,6 +37,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> DeleteOrgauthorizationTrusteeWithHttpInfo (string trusteeOrgId);
 
         /// <summary>
@@ -48,6 +50,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Id of the cloned user to delete</param>
         /// <returns></returns>
+        
         void DeleteOrgauthorizationTrusteeCloneduser (string trusteeOrgId, string trusteeUserId);
 
         /// <summary>
@@ -60,6 +63,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Id of the cloned user to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> DeleteOrgauthorizationTrusteeCloneduserWithHttpInfo (string trusteeOrgId, string trusteeUserId);
 
         /// <summary>
@@ -72,6 +76,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <returns></returns>
+        
         void DeleteOrgauthorizationTrusteeGroup (string trusteeOrgId, string trusteeGroupId);
 
         /// <summary>
@@ -84,6 +89,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> DeleteOrgauthorizationTrusteeGroupWithHttpInfo (string trusteeOrgId, string trusteeGroupId);
 
         /// <summary>
@@ -96,6 +102,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <returns></returns>
+        
         void DeleteOrgauthorizationTrusteeGroupRoles (string trusteeOrgId, string trusteeGroupId);
 
         /// <summary>
@@ -108,6 +115,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> DeleteOrgauthorizationTrusteeGroupRolesWithHttpInfo (string trusteeOrgId, string trusteeGroupId);
 
         /// <summary>
@@ -120,6 +128,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns></returns>
+        
         void DeleteOrgauthorizationTrusteeUser (string trusteeOrgId, string trusteeUserId);
 
         /// <summary>
@@ -132,6 +141,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> DeleteOrgauthorizationTrusteeUserWithHttpInfo (string trusteeOrgId, string trusteeUserId);
 
         /// <summary>
@@ -144,6 +154,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns></returns>
+        
         void DeleteOrgauthorizationTrusteeUserRoles (string trusteeOrgId, string trusteeUserId);
 
         /// <summary>
@@ -156,6 +167,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> DeleteOrgauthorizationTrusteeUserRolesWithHttpInfo (string trusteeOrgId, string trusteeUserId);
 
         /// <summary>
@@ -167,6 +179,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <returns></returns>
+        
         void DeleteOrgauthorizationTrustor (string trustorOrgId);
 
         /// <summary>
@@ -178,6 +191,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> DeleteOrgauthorizationTrustorWithHttpInfo (string trustorOrgId);
 
         /// <summary>
@@ -190,6 +204,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns></returns>
+        
         void DeleteOrgauthorizationTrustorCloneduser (string trustorOrgId, string trusteeUserId);
 
         /// <summary>
@@ -202,6 +217,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> DeleteOrgauthorizationTrustorCloneduserWithHttpInfo (string trustorOrgId, string trusteeUserId);
 
         /// <summary>
@@ -214,6 +230,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trustorGroupId">Trustor Group Id</param>
         /// <returns></returns>
+        
         void DeleteOrgauthorizationTrustorGroup (string trustorOrgId, string trustorGroupId);
 
         /// <summary>
@@ -226,6 +243,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trustorGroupId">Trustor Group Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> DeleteOrgauthorizationTrustorGroupWithHttpInfo (string trustorOrgId, string trustorGroupId);
 
         /// <summary>
@@ -238,6 +256,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns></returns>
+        
         void DeleteOrgauthorizationTrustorUser (string trustorOrgId, string trusteeUserId);
 
         /// <summary>
@@ -250,6 +269,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> DeleteOrgauthorizationTrustorUserWithHttpInfo (string trustorOrgId, string trusteeUserId);
 
         /// <summary>
@@ -261,6 +281,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pairingId">Pairing Id</param>
         /// <returns>TrustRequest</returns>
+        
         TrustRequest GetOrgauthorizationPairing (string pairingId);
 
         /// <summary>
@@ -272,6 +293,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pairingId">Pairing Id</param>
         /// <returns>ApiResponse of TrustRequest</returns>
+        
         ApiResponse<TrustRequest> GetOrgauthorizationPairingWithHttpInfo (string pairingId);
 
         /// <summary>
@@ -283,6 +305,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <returns>Trustee</returns>
+        
         Trustee GetOrgauthorizationTrustee (string trusteeOrgId);
 
         /// <summary>
@@ -294,6 +317,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <returns>ApiResponse of Trustee</returns>
+        
         ApiResponse<Trustee> GetOrgauthorizationTrusteeWithHttpInfo (string trusteeOrgId);
 
         /// <summary>
@@ -305,6 +329,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <returns>ClonedUserEntityListing</returns>
+        
         ClonedUserEntityListing GetOrgauthorizationTrusteeClonedusers (string trusteeOrgId);
 
         /// <summary>
@@ -316,6 +341,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <returns>ApiResponse of ClonedUserEntityListing</returns>
+        
         ApiResponse<ClonedUserEntityListing> GetOrgauthorizationTrusteeClonedusersWithHttpInfo (string trusteeOrgId);
 
         /// <summary>
@@ -328,6 +354,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <returns>TrustGroup</returns>
+        
         TrustGroup GetOrgauthorizationTrusteeGroup (string trusteeOrgId, string trusteeGroupId);
 
         /// <summary>
@@ -340,6 +367,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <returns>ApiResponse of TrustGroup</returns>
+        
         ApiResponse<TrustGroup> GetOrgauthorizationTrusteeGroupWithHttpInfo (string trusteeOrgId, string trusteeGroupId);
 
         /// <summary>
@@ -352,6 +380,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <returns>UserAuthorization</returns>
+        
         UserAuthorization GetOrgauthorizationTrusteeGroupRoles (string trusteeOrgId, string trusteeGroupId);
 
         /// <summary>
@@ -364,6 +393,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <returns>ApiResponse of UserAuthorization</returns>
+        
         ApiResponse<UserAuthorization> GetOrgauthorizationTrusteeGroupRolesWithHttpInfo (string trusteeOrgId, string trusteeGroupId);
 
         /// <summary>
@@ -377,6 +407,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>TrustGroupEntityListing</returns>
+        
         TrustGroupEntityListing GetOrgauthorizationTrusteeGroups (string trusteeOrgId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -390,6 +421,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of TrustGroupEntityListing</returns>
+        
         ApiResponse<TrustGroupEntityListing> GetOrgauthorizationTrusteeGroupsWithHttpInfo (string trusteeOrgId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -402,6 +434,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>TrustUser</returns>
+        
         TrustUser GetOrgauthorizationTrusteeUser (string trusteeOrgId, string trusteeUserId);
 
         /// <summary>
@@ -414,6 +447,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>ApiResponse of TrustUser</returns>
+        
         ApiResponse<TrustUser> GetOrgauthorizationTrusteeUserWithHttpInfo (string trusteeOrgId, string trusteeUserId);
 
         /// <summary>
@@ -426,6 +460,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>UserAuthorization</returns>
+        
         UserAuthorization GetOrgauthorizationTrusteeUserRoles (string trusteeOrgId, string trusteeUserId);
 
         /// <summary>
@@ -438,6 +473,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>ApiResponse of UserAuthorization</returns>
+        
         ApiResponse<UserAuthorization> GetOrgauthorizationTrusteeUserRolesWithHttpInfo (string trusteeOrgId, string trusteeUserId);
 
         /// <summary>
@@ -451,6 +487,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>TrustUserEntityListing</returns>
+        
         TrustUserEntityListing GetOrgauthorizationTrusteeUsers (string trusteeOrgId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -464,6 +501,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of TrustUserEntityListing</returns>
+        
         ApiResponse<TrustUserEntityListing> GetOrgauthorizationTrusteeUsersWithHttpInfo (string trusteeOrgId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -476,6 +514,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>TrustEntityListing</returns>
+        
         TrustEntityListing GetOrgauthorizationTrustees (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -488,6 +527,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of TrustEntityListing</returns>
+        
         ApiResponse<TrustEntityListing> GetOrgauthorizationTrusteesWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -498,6 +538,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Trustee</returns>
+        
         Trustee GetOrgauthorizationTrusteesDefault ();
 
         /// <summary>
@@ -508,6 +549,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Trustee</returns>
+        
         ApiResponse<Trustee> GetOrgauthorizationTrusteesDefaultWithHttpInfo ();
 
         /// <summary>
@@ -519,6 +561,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <returns>Trustor</returns>
+        
         Trustor GetOrgauthorizationTrustor (string trustorOrgId);
 
         /// <summary>
@@ -530,6 +573,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <returns>ApiResponse of Trustor</returns>
+        
         ApiResponse<Trustor> GetOrgauthorizationTrustorWithHttpInfo (string trustorOrgId);
 
         /// <summary>
@@ -542,6 +586,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>ClonedUser</returns>
+        
         ClonedUser GetOrgauthorizationTrustorCloneduser (string trustorOrgId, string trusteeUserId);
 
         /// <summary>
@@ -554,6 +599,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>ApiResponse of ClonedUser</returns>
+        
         ApiResponse<ClonedUser> GetOrgauthorizationTrustorCloneduserWithHttpInfo (string trustorOrgId, string trusteeUserId);
 
         /// <summary>
@@ -565,6 +611,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <returns>ClonedUserEntityListing</returns>
+        
         ClonedUserEntityListing GetOrgauthorizationTrustorClonedusers (string trustorOrgId);
 
         /// <summary>
@@ -576,6 +623,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <returns>ApiResponse of ClonedUserEntityListing</returns>
+        
         ApiResponse<ClonedUserEntityListing> GetOrgauthorizationTrustorClonedusersWithHttpInfo (string trustorOrgId);
 
         /// <summary>
@@ -588,6 +636,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trustorGroupId">Trustor Group Id</param>
         /// <returns>TrustGroup</returns>
+        
         TrustGroup GetOrgauthorizationTrustorGroup (string trustorOrgId, string trustorGroupId);
 
         /// <summary>
@@ -600,6 +649,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trustorGroupId">Trustor Group Id</param>
         /// <returns>ApiResponse of TrustGroup</returns>
+        
         ApiResponse<TrustGroup> GetOrgauthorizationTrustorGroupWithHttpInfo (string trustorOrgId, string trustorGroupId);
 
         /// <summary>
@@ -613,6 +663,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>TrustGroupEntityListing</returns>
+        
         TrustGroupEntityListing GetOrgauthorizationTrustorGroups (string trustorOrgId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -626,6 +677,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of TrustGroupEntityListing</returns>
+        
         ApiResponse<TrustGroupEntityListing> GetOrgauthorizationTrustorGroupsWithHttpInfo (string trustorOrgId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -638,6 +690,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>TrustUser</returns>
+        
         TrustUser GetOrgauthorizationTrustorUser (string trustorOrgId, string trusteeUserId);
 
         /// <summary>
@@ -650,6 +703,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>ApiResponse of TrustUser</returns>
+        
         ApiResponse<TrustUser> GetOrgauthorizationTrustorUserWithHttpInfo (string trustorOrgId, string trusteeUserId);
 
         /// <summary>
@@ -663,6 +717,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>TrustUserEntityListing</returns>
+        
         TrustUserEntityListing GetOrgauthorizationTrustorUsers (string trustorOrgId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -676,6 +731,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of TrustUserEntityListing</returns>
+        
         ApiResponse<TrustUserEntityListing> GetOrgauthorizationTrustorUsersWithHttpInfo (string trustorOrgId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -688,6 +744,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>TrustorEntityListing</returns>
+        
         TrustorEntityListing GetOrgauthorizationTrustors (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -700,6 +757,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of TrustorEntityListing</returns>
+        
         ApiResponse<TrustorEntityListing> GetOrgauthorizationTrustorsWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -711,6 +769,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Pairing Info</param>
         /// <returns>TrustRequest</returns>
+        
         TrustRequest PostOrgauthorizationPairings (TrustRequestCreate body);
 
         /// <summary>
@@ -722,6 +781,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Pairing Info</param>
         /// <returns>ApiResponse of TrustRequest</returns>
+        
         ApiResponse<TrustRequest> PostOrgauthorizationPairingsWithHttpInfo (TrustRequestCreate body);
 
         /// <summary>
@@ -734,6 +794,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="body">Trust</param>
         /// <returns>TrustGroup</returns>
+        
         TrustGroup PostOrgauthorizationTrusteeGroups (string trusteeOrgId, TrustMemberCreate body);
 
         /// <summary>
@@ -746,6 +807,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="body">Trust</param>
         /// <returns>ApiResponse of TrustGroup</returns>
+        
         ApiResponse<TrustGroup> PostOrgauthorizationTrusteeGroupsWithHttpInfo (string trusteeOrgId, TrustMemberCreate body);
 
         /// <summary>
@@ -758,6 +820,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="body">Trust</param>
         /// <returns>TrustUser</returns>
+        
         TrustUser PostOrgauthorizationTrusteeUsers (string trusteeOrgId, TrustMemberCreate body);
 
         /// <summary>
@@ -770,6 +833,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="body">Trust</param>
         /// <returns>ApiResponse of TrustUser</returns>
+        
         ApiResponse<TrustUser> PostOrgauthorizationTrusteeUsersWithHttpInfo (string trusteeOrgId, TrustMemberCreate body);
 
         /// <summary>
@@ -781,6 +845,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Trust</param>
         /// <returns>Trustee</returns>
+        
         Trustee PostOrgauthorizationTrustees (TrustCreate body);
 
         /// <summary>
@@ -792,6 +857,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Trust</param>
         /// <returns>ApiResponse of Trustee</returns>
+        
         ApiResponse<Trustee> PostOrgauthorizationTrusteesWithHttpInfo (TrustCreate body);
 
         /// <summary>
@@ -807,6 +873,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "timestamp")</param>
         /// <param name="sortOrder">Sort order (optional, default to "descending")</param>
         /// <returns>Object</returns>
+        
         Object PostOrgauthorizationTrusteesAudits (TrusteeAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -822,6 +889,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "timestamp")</param>
         /// <param name="sortOrder">Sort order (optional, default to "descending")</param>
         /// <returns>ApiResponse of Object</returns>
+        
         ApiResponse<Object> PostOrgauthorizationTrusteesAuditsWithHttpInfo (TrusteeAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -834,6 +902,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignDefaultRole">Assign Admin role to default pairing with Customer Care (optional)</param>
         /// <param name="autoExpire">Automatically expire pairing after 30 days (optional)</param>
         /// <returns>Trustee</returns>
+        
         Trustee PostOrgauthorizationTrusteesDefault (bool? assignDefaultRole = null, bool? autoExpire = null);
 
         /// <summary>
@@ -846,6 +915,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignDefaultRole">Assign Admin role to default pairing with Customer Care (optional)</param>
         /// <param name="autoExpire">Automatically expire pairing after 30 days (optional)</param>
         /// <returns>ApiResponse of Trustee</returns>
+        
         ApiResponse<Trustee> PostOrgauthorizationTrusteesDefaultWithHttpInfo (bool? assignDefaultRole = null, bool? autoExpire = null);
 
         /// <summary>
@@ -861,6 +931,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "timestamp")</param>
         /// <param name="sortOrder">Sort order (optional, default to "descending")</param>
         /// <returns>Object</returns>
+        
         Object PostOrgauthorizationTrustorAudits (TrustorAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -876,6 +947,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "timestamp")</param>
         /// <param name="sortOrder">Sort order (optional, default to "descending")</param>
         /// <returns>ApiResponse of Object</returns>
+        
         ApiResponse<Object> PostOrgauthorizationTrustorAuditsWithHttpInfo (TrustorAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -888,6 +960,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="body">Client</param>
         /// <returns>Trustee</returns>
+        
         Trustee PutOrgauthorizationTrustee (string trusteeOrgId, TrustUpdate body);
 
         /// <summary>
@@ -900,6 +973,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="body">Client</param>
         /// <returns>ApiResponse of Trustee</returns>
+        
         ApiResponse<Trustee> PutOrgauthorizationTrusteeWithHttpInfo (string trusteeOrgId, TrustUpdate body);
 
         /// <summary>
@@ -913,6 +987,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <param name="body">Set of roles with corresponding divisions to apply</param>
         /// <returns>UserAuthorization</returns>
+        
         UserAuthorization PutOrgauthorizationTrusteeGroupRoledivisions (string trusteeOrgId, string trusteeGroupId, RoleDivisionGrants body);
 
         /// <summary>
@@ -926,6 +1001,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <param name="body">Set of roles with corresponding divisions to apply</param>
         /// <returns>ApiResponse of UserAuthorization</returns>
+        
         ApiResponse<UserAuthorization> PutOrgauthorizationTrusteeGroupRoledivisionsWithHttpInfo (string trusteeOrgId, string trusteeGroupId, RoleDivisionGrants body);
 
         /// <summary>
@@ -939,6 +1015,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <param name="body">List of roles</param>
         /// <returns>UserAuthorization</returns>
+        
         UserAuthorization PutOrgauthorizationTrusteeGroupRoles (string trusteeOrgId, string trusteeGroupId, List<string> body);
 
         /// <summary>
@@ -952,6 +1029,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <param name="body">List of roles</param>
         /// <returns>ApiResponse of UserAuthorization</returns>
+        
         ApiResponse<UserAuthorization> PutOrgauthorizationTrusteeGroupRolesWithHttpInfo (string trusteeOrgId, string trusteeGroupId, List<string> body);
 
         /// <summary>
@@ -965,6 +1043,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <param name="body">Set of roles with corresponding divisions to apply</param>
         /// <returns>UserAuthorization</returns>
+        
         UserAuthorization PutOrgauthorizationTrusteeUserRoledivisions (string trusteeOrgId, string trusteeUserId, RoleDivisionGrants body);
 
         /// <summary>
@@ -978,6 +1057,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <param name="body">Set of roles with corresponding divisions to apply</param>
         /// <returns>ApiResponse of UserAuthorization</returns>
+        
         ApiResponse<UserAuthorization> PutOrgauthorizationTrusteeUserRoledivisionsWithHttpInfo (string trusteeOrgId, string trusteeUserId, RoleDivisionGrants body);
 
         /// <summary>
@@ -991,6 +1071,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <param name="body">List of roles</param>
         /// <returns>UserAuthorization</returns>
+        
         UserAuthorization PutOrgauthorizationTrusteeUserRoles (string trusteeOrgId, string trusteeUserId, List<string> body);
 
         /// <summary>
@@ -1004,6 +1085,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <param name="body">List of roles</param>
         /// <returns>ApiResponse of UserAuthorization</returns>
+        
         ApiResponse<UserAuthorization> PutOrgauthorizationTrusteeUserRolesWithHttpInfo (string trusteeOrgId, string trusteeUserId, List<string> body);
 
         /// <summary>
@@ -1016,6 +1098,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>ClonedUser</returns>
+        
         ClonedUser PutOrgauthorizationTrustorCloneduser (string trustorOrgId, string trusteeUserId);
 
         /// <summary>
@@ -1028,6 +1111,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>ApiResponse of ClonedUser</returns>
+        
         ApiResponse<ClonedUser> PutOrgauthorizationTrustorCloneduserWithHttpInfo (string trustorOrgId, string trusteeUserId);
 
         /// <summary>
@@ -1040,6 +1124,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trustorGroupId">Trustor Group Id</param>
         /// <returns>TrustGroup</returns>
+        
         TrustGroup PutOrgauthorizationTrustorGroup (string trustorOrgId, string trustorGroupId);
 
         /// <summary>
@@ -1052,6 +1137,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trustorGroupId">Trustor Group Id</param>
         /// <returns>ApiResponse of TrustGroup</returns>
+        
         ApiResponse<TrustGroup> PutOrgauthorizationTrustorGroupWithHttpInfo (string trustorOrgId, string trustorGroupId);
 
         /// <summary>
@@ -1064,6 +1150,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>TrustUser</returns>
+        
         TrustUser PutOrgauthorizationTrustorUser (string trustorOrgId, string trusteeUserId);
 
         /// <summary>
@@ -1076,6 +1163,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>ApiResponse of TrustUser</returns>
+        
         ApiResponse<TrustUser> PutOrgauthorizationTrustorUserWithHttpInfo (string trustorOrgId, string trusteeUserId);
 
         #endregion Synchronous Operations
@@ -1091,6 +1179,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task DeleteOrgauthorizationTrusteeAsync (string trusteeOrgId);
 
         /// <summary>
@@ -1102,6 +1191,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrgauthorizationTrusteeAsyncWithHttpInfo (string trusteeOrgId);
 
         /// <summary>
@@ -1114,6 +1204,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Id of the cloned user to delete</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task DeleteOrgauthorizationTrusteeCloneduserAsync (string trusteeOrgId, string trusteeUserId);
 
         /// <summary>
@@ -1126,6 +1217,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Id of the cloned user to delete</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrgauthorizationTrusteeCloneduserAsyncWithHttpInfo (string trusteeOrgId, string trusteeUserId);
 
         /// <summary>
@@ -1138,6 +1230,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task DeleteOrgauthorizationTrusteeGroupAsync (string trusteeOrgId, string trusteeGroupId);
 
         /// <summary>
@@ -1150,6 +1243,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrgauthorizationTrusteeGroupAsyncWithHttpInfo (string trusteeOrgId, string trusteeGroupId);
 
         /// <summary>
@@ -1162,6 +1256,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task DeleteOrgauthorizationTrusteeGroupRolesAsync (string trusteeOrgId, string trusteeGroupId);
 
         /// <summary>
@@ -1174,6 +1269,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrgauthorizationTrusteeGroupRolesAsyncWithHttpInfo (string trusteeOrgId, string trusteeGroupId);
 
         /// <summary>
@@ -1186,6 +1282,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task DeleteOrgauthorizationTrusteeUserAsync (string trusteeOrgId, string trusteeUserId);
 
         /// <summary>
@@ -1198,6 +1295,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrgauthorizationTrusteeUserAsyncWithHttpInfo (string trusteeOrgId, string trusteeUserId);
 
         /// <summary>
@@ -1210,6 +1308,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task DeleteOrgauthorizationTrusteeUserRolesAsync (string trusteeOrgId, string trusteeUserId);
 
         /// <summary>
@@ -1222,6 +1321,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrgauthorizationTrusteeUserRolesAsyncWithHttpInfo (string trusteeOrgId, string trusteeUserId);
 
         /// <summary>
@@ -1233,6 +1333,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task DeleteOrgauthorizationTrustorAsync (string trustorOrgId);
 
         /// <summary>
@@ -1244,6 +1345,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrgauthorizationTrustorAsyncWithHttpInfo (string trustorOrgId);
 
         /// <summary>
@@ -1256,6 +1358,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task DeleteOrgauthorizationTrustorCloneduserAsync (string trustorOrgId, string trusteeUserId);
 
         /// <summary>
@@ -1268,6 +1371,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrgauthorizationTrustorCloneduserAsyncWithHttpInfo (string trustorOrgId, string trusteeUserId);
 
         /// <summary>
@@ -1280,6 +1384,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trustorGroupId">Trustor Group Id</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task DeleteOrgauthorizationTrustorGroupAsync (string trustorOrgId, string trustorGroupId);
 
         /// <summary>
@@ -1292,6 +1397,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trustorGroupId">Trustor Group Id</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrgauthorizationTrustorGroupAsyncWithHttpInfo (string trustorOrgId, string trustorGroupId);
 
         /// <summary>
@@ -1304,6 +1410,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task DeleteOrgauthorizationTrustorUserAsync (string trustorOrgId, string trusteeUserId);
 
         /// <summary>
@@ -1316,6 +1423,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrgauthorizationTrustorUserAsyncWithHttpInfo (string trustorOrgId, string trusteeUserId);
 
         /// <summary>
@@ -1327,6 +1435,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pairingId">Pairing Id</param>
         /// <returns>Task of TrustRequest</returns>
+        
         System.Threading.Tasks.Task<TrustRequest> GetOrgauthorizationPairingAsync (string pairingId);
 
         /// <summary>
@@ -1338,6 +1447,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pairingId">Pairing Id</param>
         /// <returns>Task of ApiResponse (TrustRequest)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<TrustRequest>> GetOrgauthorizationPairingAsyncWithHttpInfo (string pairingId);
 
         /// <summary>
@@ -1349,6 +1459,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <returns>Task of Trustee</returns>
+        
         System.Threading.Tasks.Task<Trustee> GetOrgauthorizationTrusteeAsync (string trusteeOrgId);
 
         /// <summary>
@@ -1360,6 +1471,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <returns>Task of ApiResponse (Trustee)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Trustee>> GetOrgauthorizationTrusteeAsyncWithHttpInfo (string trusteeOrgId);
 
         /// <summary>
@@ -1371,6 +1483,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <returns>Task of ClonedUserEntityListing</returns>
+        
         System.Threading.Tasks.Task<ClonedUserEntityListing> GetOrgauthorizationTrusteeClonedusersAsync (string trusteeOrgId);
 
         /// <summary>
@@ -1382,6 +1495,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <returns>Task of ApiResponse (ClonedUserEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ClonedUserEntityListing>> GetOrgauthorizationTrusteeClonedusersAsyncWithHttpInfo (string trusteeOrgId);
 
         /// <summary>
@@ -1394,6 +1508,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <returns>Task of TrustGroup</returns>
+        
         System.Threading.Tasks.Task<TrustGroup> GetOrgauthorizationTrusteeGroupAsync (string trusteeOrgId, string trusteeGroupId);
 
         /// <summary>
@@ -1406,6 +1521,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <returns>Task of ApiResponse (TrustGroup)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<TrustGroup>> GetOrgauthorizationTrusteeGroupAsyncWithHttpInfo (string trusteeOrgId, string trusteeGroupId);
 
         /// <summary>
@@ -1418,6 +1534,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <returns>Task of UserAuthorization</returns>
+        
         System.Threading.Tasks.Task<UserAuthorization> GetOrgauthorizationTrusteeGroupRolesAsync (string trusteeOrgId, string trusteeGroupId);
 
         /// <summary>
@@ -1430,6 +1547,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> GetOrgauthorizationTrusteeGroupRolesAsyncWithHttpInfo (string trusteeOrgId, string trusteeGroupId);
 
         /// <summary>
@@ -1443,6 +1561,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of TrustGroupEntityListing</returns>
+        
         System.Threading.Tasks.Task<TrustGroupEntityListing> GetOrgauthorizationTrusteeGroupsAsync (string trusteeOrgId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -1456,6 +1575,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (TrustGroupEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<TrustGroupEntityListing>> GetOrgauthorizationTrusteeGroupsAsyncWithHttpInfo (string trusteeOrgId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -1468,6 +1588,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of TrustUser</returns>
+        
         System.Threading.Tasks.Task<TrustUser> GetOrgauthorizationTrusteeUserAsync (string trusteeOrgId, string trusteeUserId);
 
         /// <summary>
@@ -1480,6 +1601,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of ApiResponse (TrustUser)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<TrustUser>> GetOrgauthorizationTrusteeUserAsyncWithHttpInfo (string trusteeOrgId, string trusteeUserId);
 
         /// <summary>
@@ -1492,6 +1614,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of UserAuthorization</returns>
+        
         System.Threading.Tasks.Task<UserAuthorization> GetOrgauthorizationTrusteeUserRolesAsync (string trusteeOrgId, string trusteeUserId);
 
         /// <summary>
@@ -1504,6 +1627,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> GetOrgauthorizationTrusteeUserRolesAsyncWithHttpInfo (string trusteeOrgId, string trusteeUserId);
 
         /// <summary>
@@ -1517,6 +1641,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of TrustUserEntityListing</returns>
+        
         System.Threading.Tasks.Task<TrustUserEntityListing> GetOrgauthorizationTrusteeUsersAsync (string trusteeOrgId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -1530,6 +1655,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (TrustUserEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<TrustUserEntityListing>> GetOrgauthorizationTrusteeUsersAsyncWithHttpInfo (string trusteeOrgId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -1542,6 +1668,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of TrustEntityListing</returns>
+        
         System.Threading.Tasks.Task<TrustEntityListing> GetOrgauthorizationTrusteesAsync (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -1554,6 +1681,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (TrustEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<TrustEntityListing>> GetOrgauthorizationTrusteesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -1564,6 +1692,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Trustee</returns>
+        
         System.Threading.Tasks.Task<Trustee> GetOrgauthorizationTrusteesDefaultAsync ();
 
         /// <summary>
@@ -1574,6 +1703,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Trustee)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Trustee>> GetOrgauthorizationTrusteesDefaultAsyncWithHttpInfo ();
 
         /// <summary>
@@ -1585,6 +1715,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <returns>Task of Trustor</returns>
+        
         System.Threading.Tasks.Task<Trustor> GetOrgauthorizationTrustorAsync (string trustorOrgId);
 
         /// <summary>
@@ -1596,6 +1727,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <returns>Task of ApiResponse (Trustor)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Trustor>> GetOrgauthorizationTrustorAsyncWithHttpInfo (string trustorOrgId);
 
         /// <summary>
@@ -1608,6 +1740,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of ClonedUser</returns>
+        
         System.Threading.Tasks.Task<ClonedUser> GetOrgauthorizationTrustorCloneduserAsync (string trustorOrgId, string trusteeUserId);
 
         /// <summary>
@@ -1620,6 +1753,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of ApiResponse (ClonedUser)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ClonedUser>> GetOrgauthorizationTrustorCloneduserAsyncWithHttpInfo (string trustorOrgId, string trusteeUserId);
 
         /// <summary>
@@ -1631,6 +1765,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <returns>Task of ClonedUserEntityListing</returns>
+        
         System.Threading.Tasks.Task<ClonedUserEntityListing> GetOrgauthorizationTrustorClonedusersAsync (string trustorOrgId);
 
         /// <summary>
@@ -1642,6 +1777,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <returns>Task of ApiResponse (ClonedUserEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ClonedUserEntityListing>> GetOrgauthorizationTrustorClonedusersAsyncWithHttpInfo (string trustorOrgId);
 
         /// <summary>
@@ -1654,6 +1790,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trustorGroupId">Trustor Group Id</param>
         /// <returns>Task of TrustGroup</returns>
+        
         System.Threading.Tasks.Task<TrustGroup> GetOrgauthorizationTrustorGroupAsync (string trustorOrgId, string trustorGroupId);
 
         /// <summary>
@@ -1666,6 +1803,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trustorGroupId">Trustor Group Id</param>
         /// <returns>Task of ApiResponse (TrustGroup)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<TrustGroup>> GetOrgauthorizationTrustorGroupAsyncWithHttpInfo (string trustorOrgId, string trustorGroupId);
 
         /// <summary>
@@ -1679,6 +1817,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of TrustGroupEntityListing</returns>
+        
         System.Threading.Tasks.Task<TrustGroupEntityListing> GetOrgauthorizationTrustorGroupsAsync (string trustorOrgId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -1692,6 +1831,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (TrustGroupEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<TrustGroupEntityListing>> GetOrgauthorizationTrustorGroupsAsyncWithHttpInfo (string trustorOrgId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -1704,6 +1844,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of TrustUser</returns>
+        
         System.Threading.Tasks.Task<TrustUser> GetOrgauthorizationTrustorUserAsync (string trustorOrgId, string trusteeUserId);
 
         /// <summary>
@@ -1716,6 +1857,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of ApiResponse (TrustUser)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<TrustUser>> GetOrgauthorizationTrustorUserAsyncWithHttpInfo (string trustorOrgId, string trusteeUserId);
 
         /// <summary>
@@ -1729,6 +1871,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of TrustUserEntityListing</returns>
+        
         System.Threading.Tasks.Task<TrustUserEntityListing> GetOrgauthorizationTrustorUsersAsync (string trustorOrgId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -1742,6 +1885,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (TrustUserEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<TrustUserEntityListing>> GetOrgauthorizationTrustorUsersAsyncWithHttpInfo (string trustorOrgId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -1754,6 +1898,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of TrustorEntityListing</returns>
+        
         System.Threading.Tasks.Task<TrustorEntityListing> GetOrgauthorizationTrustorsAsync (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -1766,6 +1911,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (TrustorEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<TrustorEntityListing>> GetOrgauthorizationTrustorsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -1777,6 +1923,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Pairing Info</param>
         /// <returns>Task of TrustRequest</returns>
+        
         System.Threading.Tasks.Task<TrustRequest> PostOrgauthorizationPairingsAsync (TrustRequestCreate body);
 
         /// <summary>
@@ -1788,6 +1935,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Pairing Info</param>
         /// <returns>Task of ApiResponse (TrustRequest)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<TrustRequest>> PostOrgauthorizationPairingsAsyncWithHttpInfo (TrustRequestCreate body);
 
         /// <summary>
@@ -1800,6 +1948,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="body">Trust</param>
         /// <returns>Task of TrustGroup</returns>
+        
         System.Threading.Tasks.Task<TrustGroup> PostOrgauthorizationTrusteeGroupsAsync (string trusteeOrgId, TrustMemberCreate body);
 
         /// <summary>
@@ -1812,6 +1961,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="body">Trust</param>
         /// <returns>Task of ApiResponse (TrustGroup)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<TrustGroup>> PostOrgauthorizationTrusteeGroupsAsyncWithHttpInfo (string trusteeOrgId, TrustMemberCreate body);
 
         /// <summary>
@@ -1824,6 +1974,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="body">Trust</param>
         /// <returns>Task of TrustUser</returns>
+        
         System.Threading.Tasks.Task<TrustUser> PostOrgauthorizationTrusteeUsersAsync (string trusteeOrgId, TrustMemberCreate body);
 
         /// <summary>
@@ -1836,6 +1987,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="body">Trust</param>
         /// <returns>Task of ApiResponse (TrustUser)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<TrustUser>> PostOrgauthorizationTrusteeUsersAsyncWithHttpInfo (string trusteeOrgId, TrustMemberCreate body);
 
         /// <summary>
@@ -1847,6 +1999,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Trust</param>
         /// <returns>Task of Trustee</returns>
+        
         System.Threading.Tasks.Task<Trustee> PostOrgauthorizationTrusteesAsync (TrustCreate body);
 
         /// <summary>
@@ -1858,6 +2011,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Trust</param>
         /// <returns>Task of ApiResponse (Trustee)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Trustee>> PostOrgauthorizationTrusteesAsyncWithHttpInfo (TrustCreate body);
 
         /// <summary>
@@ -1873,6 +2027,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "timestamp")</param>
         /// <param name="sortOrder">Sort order (optional, default to "descending")</param>
         /// <returns>Task of Object</returns>
+        
         System.Threading.Tasks.Task<Object> PostOrgauthorizationTrusteesAuditsAsync (TrusteeAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -1888,6 +2043,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "timestamp")</param>
         /// <param name="sortOrder">Sort order (optional, default to "descending")</param>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> PostOrgauthorizationTrusteesAuditsAsyncWithHttpInfo (TrusteeAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -1900,6 +2056,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignDefaultRole">Assign Admin role to default pairing with Customer Care (optional)</param>
         /// <param name="autoExpire">Automatically expire pairing after 30 days (optional)</param>
         /// <returns>Task of Trustee</returns>
+        
         System.Threading.Tasks.Task<Trustee> PostOrgauthorizationTrusteesDefaultAsync (bool? assignDefaultRole = null, bool? autoExpire = null);
 
         /// <summary>
@@ -1912,6 +2069,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignDefaultRole">Assign Admin role to default pairing with Customer Care (optional)</param>
         /// <param name="autoExpire">Automatically expire pairing after 30 days (optional)</param>
         /// <returns>Task of ApiResponse (Trustee)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Trustee>> PostOrgauthorizationTrusteesDefaultAsyncWithHttpInfo (bool? assignDefaultRole = null, bool? autoExpire = null);
 
         /// <summary>
@@ -1927,6 +2085,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "timestamp")</param>
         /// <param name="sortOrder">Sort order (optional, default to "descending")</param>
         /// <returns>Task of Object</returns>
+        
         System.Threading.Tasks.Task<Object> PostOrgauthorizationTrustorAuditsAsync (TrustorAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -1942,6 +2101,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "timestamp")</param>
         /// <param name="sortOrder">Sort order (optional, default to "descending")</param>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> PostOrgauthorizationTrustorAuditsAsyncWithHttpInfo (TrustorAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -1954,6 +2114,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="body">Client</param>
         /// <returns>Task of Trustee</returns>
+        
         System.Threading.Tasks.Task<Trustee> PutOrgauthorizationTrusteeAsync (string trusteeOrgId, TrustUpdate body);
 
         /// <summary>
@@ -1966,6 +2127,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="body">Client</param>
         /// <returns>Task of ApiResponse (Trustee)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Trustee>> PutOrgauthorizationTrusteeAsyncWithHttpInfo (string trusteeOrgId, TrustUpdate body);
 
         /// <summary>
@@ -1979,6 +2141,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <param name="body">Set of roles with corresponding divisions to apply</param>
         /// <returns>Task of UserAuthorization</returns>
+        
         System.Threading.Tasks.Task<UserAuthorization> PutOrgauthorizationTrusteeGroupRoledivisionsAsync (string trusteeOrgId, string trusteeGroupId, RoleDivisionGrants body);
 
         /// <summary>
@@ -1992,6 +2155,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <param name="body">Set of roles with corresponding divisions to apply</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutOrgauthorizationTrusteeGroupRoledivisionsAsyncWithHttpInfo (string trusteeOrgId, string trusteeGroupId, RoleDivisionGrants body);
 
         /// <summary>
@@ -2005,6 +2169,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <param name="body">List of roles</param>
         /// <returns>Task of UserAuthorization</returns>
+        
         System.Threading.Tasks.Task<UserAuthorization> PutOrgauthorizationTrusteeGroupRolesAsync (string trusteeOrgId, string trusteeGroupId, List<string> body);
 
         /// <summary>
@@ -2018,6 +2183,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <param name="body">List of roles</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutOrgauthorizationTrusteeGroupRolesAsyncWithHttpInfo (string trusteeOrgId, string trusteeGroupId, List<string> body);
 
         /// <summary>
@@ -2031,6 +2197,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <param name="body">Set of roles with corresponding divisions to apply</param>
         /// <returns>Task of UserAuthorization</returns>
+        
         System.Threading.Tasks.Task<UserAuthorization> PutOrgauthorizationTrusteeUserRoledivisionsAsync (string trusteeOrgId, string trusteeUserId, RoleDivisionGrants body);
 
         /// <summary>
@@ -2044,6 +2211,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <param name="body">Set of roles with corresponding divisions to apply</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutOrgauthorizationTrusteeUserRoledivisionsAsyncWithHttpInfo (string trusteeOrgId, string trusteeUserId, RoleDivisionGrants body);
 
         /// <summary>
@@ -2057,6 +2225,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <param name="body">List of roles</param>
         /// <returns>Task of UserAuthorization</returns>
+        
         System.Threading.Tasks.Task<UserAuthorization> PutOrgauthorizationTrusteeUserRolesAsync (string trusteeOrgId, string trusteeUserId, List<string> body);
 
         /// <summary>
@@ -2070,6 +2239,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <param name="body">List of roles</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutOrgauthorizationTrusteeUserRolesAsyncWithHttpInfo (string trusteeOrgId, string trusteeUserId, List<string> body);
 
         /// <summary>
@@ -2082,6 +2252,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of ClonedUser</returns>
+        
         System.Threading.Tasks.Task<ClonedUser> PutOrgauthorizationTrustorCloneduserAsync (string trustorOrgId, string trusteeUserId);
 
         /// <summary>
@@ -2094,6 +2265,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of ApiResponse (ClonedUser)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ClonedUser>> PutOrgauthorizationTrustorCloneduserAsyncWithHttpInfo (string trustorOrgId, string trusteeUserId);
 
         /// <summary>
@@ -2106,6 +2278,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trustorGroupId">Trustor Group Id</param>
         /// <returns>Task of TrustGroup</returns>
+        
         System.Threading.Tasks.Task<TrustGroup> PutOrgauthorizationTrustorGroupAsync (string trustorOrgId, string trustorGroupId);
 
         /// <summary>
@@ -2118,6 +2291,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trustorGroupId">Trustor Group Id</param>
         /// <returns>Task of ApiResponse (TrustGroup)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<TrustGroup>> PutOrgauthorizationTrustorGroupAsyncWithHttpInfo (string trustorOrgId, string trustorGroupId);
 
         /// <summary>
@@ -2130,6 +2304,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of TrustUser</returns>
+        
         System.Threading.Tasks.Task<TrustUser> PutOrgauthorizationTrustorUserAsync (string trustorOrgId, string trusteeUserId);
 
         /// <summary>
@@ -2142,6 +2317,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of ApiResponse (TrustUser)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<TrustUser>> PutOrgauthorizationTrustorUserAsyncWithHttpInfo (string trustorOrgId, string trusteeUserId);
 
         #endregion Asynchronous Operations
@@ -2242,6 +2418,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <returns></returns>
+        
         public void DeleteOrgauthorizationTrustee (string trusteeOrgId)
         {
              DeleteOrgauthorizationTrusteeWithHttpInfo(trusteeOrgId);
@@ -2253,6 +2430,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> DeleteOrgauthorizationTrusteeWithHttpInfo (string trusteeOrgId)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -2335,6 +2513,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task DeleteOrgauthorizationTrusteeAsync (string trusteeOrgId)
         {
              await DeleteOrgauthorizationTrusteeAsyncWithHttpInfo(trusteeOrgId);
@@ -2347,6 +2526,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrgauthorizationTrusteeAsyncWithHttpInfo (string trusteeOrgId)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -2432,6 +2612,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Id of the cloned user to delete</param>
         /// <returns></returns>
+        
         public void DeleteOrgauthorizationTrusteeCloneduser (string trusteeOrgId, string trusteeUserId)
         {
              DeleteOrgauthorizationTrusteeCloneduserWithHttpInfo(trusteeOrgId, trusteeUserId);
@@ -2444,6 +2625,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Id of the cloned user to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> DeleteOrgauthorizationTrusteeCloneduserWithHttpInfo (string trusteeOrgId, string trusteeUserId)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -2531,6 +2713,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Id of the cloned user to delete</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task DeleteOrgauthorizationTrusteeCloneduserAsync (string trusteeOrgId, string trusteeUserId)
         {
              await DeleteOrgauthorizationTrusteeCloneduserAsyncWithHttpInfo(trusteeOrgId, trusteeUserId);
@@ -2544,6 +2727,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Id of the cloned user to delete</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrgauthorizationTrusteeCloneduserAsyncWithHttpInfo (string trusteeOrgId, string trusteeUserId)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -2634,6 +2818,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <returns></returns>
+        
         public void DeleteOrgauthorizationTrusteeGroup (string trusteeOrgId, string trusteeGroupId)
         {
              DeleteOrgauthorizationTrusteeGroupWithHttpInfo(trusteeOrgId, trusteeGroupId);
@@ -2646,6 +2831,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> DeleteOrgauthorizationTrusteeGroupWithHttpInfo (string trusteeOrgId, string trusteeGroupId)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -2733,6 +2919,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task DeleteOrgauthorizationTrusteeGroupAsync (string trusteeOrgId, string trusteeGroupId)
         {
              await DeleteOrgauthorizationTrusteeGroupAsyncWithHttpInfo(trusteeOrgId, trusteeGroupId);
@@ -2746,6 +2933,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrgauthorizationTrusteeGroupAsyncWithHttpInfo (string trusteeOrgId, string trusteeGroupId)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -2836,6 +3024,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <returns></returns>
+        
         public void DeleteOrgauthorizationTrusteeGroupRoles (string trusteeOrgId, string trusteeGroupId)
         {
              DeleteOrgauthorizationTrusteeGroupRolesWithHttpInfo(trusteeOrgId, trusteeGroupId);
@@ -2848,6 +3037,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> DeleteOrgauthorizationTrusteeGroupRolesWithHttpInfo (string trusteeOrgId, string trusteeGroupId)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -2935,6 +3125,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task DeleteOrgauthorizationTrusteeGroupRolesAsync (string trusteeOrgId, string trusteeGroupId)
         {
              await DeleteOrgauthorizationTrusteeGroupRolesAsyncWithHttpInfo(trusteeOrgId, trusteeGroupId);
@@ -2948,6 +3139,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrgauthorizationTrusteeGroupRolesAsyncWithHttpInfo (string trusteeOrgId, string trusteeGroupId)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -3038,6 +3230,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns></returns>
+        
         public void DeleteOrgauthorizationTrusteeUser (string trusteeOrgId, string trusteeUserId)
         {
              DeleteOrgauthorizationTrusteeUserWithHttpInfo(trusteeOrgId, trusteeUserId);
@@ -3050,6 +3243,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> DeleteOrgauthorizationTrusteeUserWithHttpInfo (string trusteeOrgId, string trusteeUserId)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -3137,6 +3331,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task DeleteOrgauthorizationTrusteeUserAsync (string trusteeOrgId, string trusteeUserId)
         {
              await DeleteOrgauthorizationTrusteeUserAsyncWithHttpInfo(trusteeOrgId, trusteeUserId);
@@ -3150,6 +3345,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrgauthorizationTrusteeUserAsyncWithHttpInfo (string trusteeOrgId, string trusteeUserId)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -3240,6 +3436,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns></returns>
+        
         public void DeleteOrgauthorizationTrusteeUserRoles (string trusteeOrgId, string trusteeUserId)
         {
              DeleteOrgauthorizationTrusteeUserRolesWithHttpInfo(trusteeOrgId, trusteeUserId);
@@ -3252,6 +3449,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> DeleteOrgauthorizationTrusteeUserRolesWithHttpInfo (string trusteeOrgId, string trusteeUserId)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -3339,6 +3537,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task DeleteOrgauthorizationTrusteeUserRolesAsync (string trusteeOrgId, string trusteeUserId)
         {
              await DeleteOrgauthorizationTrusteeUserRolesAsyncWithHttpInfo(trusteeOrgId, trusteeUserId);
@@ -3352,6 +3551,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrgauthorizationTrusteeUserRolesAsyncWithHttpInfo (string trusteeOrgId, string trusteeUserId)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -3441,6 +3641,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <returns></returns>
+        
         public void DeleteOrgauthorizationTrustor (string trustorOrgId)
         {
              DeleteOrgauthorizationTrustorWithHttpInfo(trustorOrgId);
@@ -3452,6 +3653,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> DeleteOrgauthorizationTrustorWithHttpInfo (string trustorOrgId)
         { 
             // verify the required parameter 'trustorOrgId' is set
@@ -3534,6 +3736,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task DeleteOrgauthorizationTrustorAsync (string trustorOrgId)
         {
              await DeleteOrgauthorizationTrustorAsyncWithHttpInfo(trustorOrgId);
@@ -3546,6 +3749,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrgauthorizationTrustorAsyncWithHttpInfo (string trustorOrgId)
         { 
             // verify the required parameter 'trustorOrgId' is set
@@ -3631,6 +3835,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns></returns>
+        
         public void DeleteOrgauthorizationTrustorCloneduser (string trustorOrgId, string trusteeUserId)
         {
              DeleteOrgauthorizationTrustorCloneduserWithHttpInfo(trustorOrgId, trusteeUserId);
@@ -3643,6 +3848,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> DeleteOrgauthorizationTrustorCloneduserWithHttpInfo (string trustorOrgId, string trusteeUserId)
         { 
             // verify the required parameter 'trustorOrgId' is set
@@ -3730,6 +3936,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task DeleteOrgauthorizationTrustorCloneduserAsync (string trustorOrgId, string trusteeUserId)
         {
              await DeleteOrgauthorizationTrustorCloneduserAsyncWithHttpInfo(trustorOrgId, trusteeUserId);
@@ -3743,6 +3950,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrgauthorizationTrustorCloneduserAsyncWithHttpInfo (string trustorOrgId, string trusteeUserId)
         { 
             // verify the required parameter 'trustorOrgId' is set
@@ -3833,6 +4041,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trustorGroupId">Trustor Group Id</param>
         /// <returns></returns>
+        
         public void DeleteOrgauthorizationTrustorGroup (string trustorOrgId, string trustorGroupId)
         {
              DeleteOrgauthorizationTrustorGroupWithHttpInfo(trustorOrgId, trustorGroupId);
@@ -3845,6 +4054,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trustorGroupId">Trustor Group Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> DeleteOrgauthorizationTrustorGroupWithHttpInfo (string trustorOrgId, string trustorGroupId)
         { 
             // verify the required parameter 'trustorOrgId' is set
@@ -3932,6 +4142,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trustorGroupId">Trustor Group Id</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task DeleteOrgauthorizationTrustorGroupAsync (string trustorOrgId, string trustorGroupId)
         {
              await DeleteOrgauthorizationTrustorGroupAsyncWithHttpInfo(trustorOrgId, trustorGroupId);
@@ -3945,6 +4156,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trustorGroupId">Trustor Group Id</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrgauthorizationTrustorGroupAsyncWithHttpInfo (string trustorOrgId, string trustorGroupId)
         { 
             // verify the required parameter 'trustorOrgId' is set
@@ -4035,6 +4247,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns></returns>
+        
         public void DeleteOrgauthorizationTrustorUser (string trustorOrgId, string trusteeUserId)
         {
              DeleteOrgauthorizationTrustorUserWithHttpInfo(trustorOrgId, trusteeUserId);
@@ -4047,6 +4260,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> DeleteOrgauthorizationTrustorUserWithHttpInfo (string trustorOrgId, string trusteeUserId)
         { 
             // verify the required parameter 'trustorOrgId' is set
@@ -4134,6 +4348,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task DeleteOrgauthorizationTrustorUserAsync (string trustorOrgId, string trusteeUserId)
         {
              await DeleteOrgauthorizationTrustorUserAsyncWithHttpInfo(trustorOrgId, trusteeUserId);
@@ -4147,6 +4362,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrgauthorizationTrustorUserAsyncWithHttpInfo (string trustorOrgId, string trusteeUserId)
         { 
             // verify the required parameter 'trustorOrgId' is set
@@ -4236,6 +4452,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pairingId">Pairing Id</param>
         /// <returns>TrustRequest</returns>
+        
         public TrustRequest GetOrgauthorizationPairing (string pairingId)
         {
              ApiResponse<TrustRequest> localVarResponse = GetOrgauthorizationPairingWithHttpInfo(pairingId);
@@ -4248,6 +4465,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pairingId">Pairing Id</param>
         /// <returns>ApiResponse of TrustRequest</returns>
+        
         public ApiResponse< TrustRequest > GetOrgauthorizationPairingWithHttpInfo (string pairingId)
         { 
             // verify the required parameter 'pairingId' is set
@@ -4330,6 +4548,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pairingId">Pairing Id</param>
         /// <returns>Task of TrustRequest</returns>
+        
         public async System.Threading.Tasks.Task<TrustRequest> GetOrgauthorizationPairingAsync (string pairingId)
         {
              ApiResponse<TrustRequest> localVarResponse = await GetOrgauthorizationPairingAsyncWithHttpInfo(pairingId);
@@ -4343,6 +4562,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pairingId">Pairing Id</param>
         /// <returns>Task of ApiResponse (TrustRequest)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<TrustRequest>> GetOrgauthorizationPairingAsyncWithHttpInfo (string pairingId)
         { 
             // verify the required parameter 'pairingId' is set
@@ -4427,6 +4647,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <returns>Trustee</returns>
+        
         public Trustee GetOrgauthorizationTrustee (string trusteeOrgId)
         {
              ApiResponse<Trustee> localVarResponse = GetOrgauthorizationTrusteeWithHttpInfo(trusteeOrgId);
@@ -4439,6 +4660,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <returns>ApiResponse of Trustee</returns>
+        
         public ApiResponse< Trustee > GetOrgauthorizationTrusteeWithHttpInfo (string trusteeOrgId)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -4521,6 +4743,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <returns>Task of Trustee</returns>
+        
         public async System.Threading.Tasks.Task<Trustee> GetOrgauthorizationTrusteeAsync (string trusteeOrgId)
         {
              ApiResponse<Trustee> localVarResponse = await GetOrgauthorizationTrusteeAsyncWithHttpInfo(trusteeOrgId);
@@ -4534,6 +4757,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <returns>Task of ApiResponse (Trustee)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Trustee>> GetOrgauthorizationTrusteeAsyncWithHttpInfo (string trusteeOrgId)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -4618,6 +4842,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <returns>ClonedUserEntityListing</returns>
+        
         public ClonedUserEntityListing GetOrgauthorizationTrusteeClonedusers (string trusteeOrgId)
         {
              ApiResponse<ClonedUserEntityListing> localVarResponse = GetOrgauthorizationTrusteeClonedusersWithHttpInfo(trusteeOrgId);
@@ -4630,6 +4855,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <returns>ApiResponse of ClonedUserEntityListing</returns>
+        
         public ApiResponse< ClonedUserEntityListing > GetOrgauthorizationTrusteeClonedusersWithHttpInfo (string trusteeOrgId)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -4712,6 +4938,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <returns>Task of ClonedUserEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<ClonedUserEntityListing> GetOrgauthorizationTrusteeClonedusersAsync (string trusteeOrgId)
         {
              ApiResponse<ClonedUserEntityListing> localVarResponse = await GetOrgauthorizationTrusteeClonedusersAsyncWithHttpInfo(trusteeOrgId);
@@ -4725,6 +4952,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <returns>Task of ApiResponse (ClonedUserEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ClonedUserEntityListing>> GetOrgauthorizationTrusteeClonedusersAsyncWithHttpInfo (string trusteeOrgId)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -4810,6 +5038,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <returns>TrustGroup</returns>
+        
         public TrustGroup GetOrgauthorizationTrusteeGroup (string trusteeOrgId, string trusteeGroupId)
         {
              ApiResponse<TrustGroup> localVarResponse = GetOrgauthorizationTrusteeGroupWithHttpInfo(trusteeOrgId, trusteeGroupId);
@@ -4823,6 +5052,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <returns>ApiResponse of TrustGroup</returns>
+        
         public ApiResponse< TrustGroup > GetOrgauthorizationTrusteeGroupWithHttpInfo (string trusteeOrgId, string trusteeGroupId)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -4910,6 +5140,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <returns>Task of TrustGroup</returns>
+        
         public async System.Threading.Tasks.Task<TrustGroup> GetOrgauthorizationTrusteeGroupAsync (string trusteeOrgId, string trusteeGroupId)
         {
              ApiResponse<TrustGroup> localVarResponse = await GetOrgauthorizationTrusteeGroupAsyncWithHttpInfo(trusteeOrgId, trusteeGroupId);
@@ -4924,6 +5155,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <returns>Task of ApiResponse (TrustGroup)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<TrustGroup>> GetOrgauthorizationTrusteeGroupAsyncWithHttpInfo (string trusteeOrgId, string trusteeGroupId)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -5014,6 +5246,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <returns>UserAuthorization</returns>
+        
         public UserAuthorization GetOrgauthorizationTrusteeGroupRoles (string trusteeOrgId, string trusteeGroupId)
         {
              ApiResponse<UserAuthorization> localVarResponse = GetOrgauthorizationTrusteeGroupRolesWithHttpInfo(trusteeOrgId, trusteeGroupId);
@@ -5027,6 +5260,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <returns>ApiResponse of UserAuthorization</returns>
+        
         public ApiResponse< UserAuthorization > GetOrgauthorizationTrusteeGroupRolesWithHttpInfo (string trusteeOrgId, string trusteeGroupId)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -5114,6 +5348,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <returns>Task of UserAuthorization</returns>
+        
         public async System.Threading.Tasks.Task<UserAuthorization> GetOrgauthorizationTrusteeGroupRolesAsync (string trusteeOrgId, string trusteeGroupId)
         {
              ApiResponse<UserAuthorization> localVarResponse = await GetOrgauthorizationTrusteeGroupRolesAsyncWithHttpInfo(trusteeOrgId, trusteeGroupId);
@@ -5128,6 +5363,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> GetOrgauthorizationTrusteeGroupRolesAsyncWithHttpInfo (string trusteeOrgId, string trusteeGroupId)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -5219,6 +5455,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>TrustGroupEntityListing</returns>
+        
         public TrustGroupEntityListing GetOrgauthorizationTrusteeGroups (string trusteeOrgId, int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<TrustGroupEntityListing> localVarResponse = GetOrgauthorizationTrusteeGroupsWithHttpInfo(trusteeOrgId, pageSize, pageNumber);
@@ -5233,6 +5470,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of TrustGroupEntityListing</returns>
+        
         public ApiResponse< TrustGroupEntityListing > GetOrgauthorizationTrusteeGroupsWithHttpInfo (string trusteeOrgId, int? pageSize = null, int? pageNumber = null)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -5319,6 +5557,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of TrustGroupEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<TrustGroupEntityListing> GetOrgauthorizationTrusteeGroupsAsync (string trusteeOrgId, int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<TrustGroupEntityListing> localVarResponse = await GetOrgauthorizationTrusteeGroupsAsyncWithHttpInfo(trusteeOrgId, pageSize, pageNumber);
@@ -5334,6 +5573,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (TrustGroupEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<TrustGroupEntityListing>> GetOrgauthorizationTrusteeGroupsAsyncWithHttpInfo (string trusteeOrgId, int? pageSize = null, int? pageNumber = null)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -5421,6 +5661,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>TrustUser</returns>
+        
         public TrustUser GetOrgauthorizationTrusteeUser (string trusteeOrgId, string trusteeUserId)
         {
              ApiResponse<TrustUser> localVarResponse = GetOrgauthorizationTrusteeUserWithHttpInfo(trusteeOrgId, trusteeUserId);
@@ -5434,6 +5675,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>ApiResponse of TrustUser</returns>
+        
         public ApiResponse< TrustUser > GetOrgauthorizationTrusteeUserWithHttpInfo (string trusteeOrgId, string trusteeUserId)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -5521,6 +5763,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of TrustUser</returns>
+        
         public async System.Threading.Tasks.Task<TrustUser> GetOrgauthorizationTrusteeUserAsync (string trusteeOrgId, string trusteeUserId)
         {
              ApiResponse<TrustUser> localVarResponse = await GetOrgauthorizationTrusteeUserAsyncWithHttpInfo(trusteeOrgId, trusteeUserId);
@@ -5535,6 +5778,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of ApiResponse (TrustUser)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<TrustUser>> GetOrgauthorizationTrusteeUserAsyncWithHttpInfo (string trusteeOrgId, string trusteeUserId)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -5625,6 +5869,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>UserAuthorization</returns>
+        
         public UserAuthorization GetOrgauthorizationTrusteeUserRoles (string trusteeOrgId, string trusteeUserId)
         {
              ApiResponse<UserAuthorization> localVarResponse = GetOrgauthorizationTrusteeUserRolesWithHttpInfo(trusteeOrgId, trusteeUserId);
@@ -5638,6 +5883,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>ApiResponse of UserAuthorization</returns>
+        
         public ApiResponse< UserAuthorization > GetOrgauthorizationTrusteeUserRolesWithHttpInfo (string trusteeOrgId, string trusteeUserId)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -5725,6 +5971,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of UserAuthorization</returns>
+        
         public async System.Threading.Tasks.Task<UserAuthorization> GetOrgauthorizationTrusteeUserRolesAsync (string trusteeOrgId, string trusteeUserId)
         {
              ApiResponse<UserAuthorization> localVarResponse = await GetOrgauthorizationTrusteeUserRolesAsyncWithHttpInfo(trusteeOrgId, trusteeUserId);
@@ -5739,6 +5986,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> GetOrgauthorizationTrusteeUserRolesAsyncWithHttpInfo (string trusteeOrgId, string trusteeUserId)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -5830,6 +6078,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>TrustUserEntityListing</returns>
+        
         public TrustUserEntityListing GetOrgauthorizationTrusteeUsers (string trusteeOrgId, int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<TrustUserEntityListing> localVarResponse = GetOrgauthorizationTrusteeUsersWithHttpInfo(trusteeOrgId, pageSize, pageNumber);
@@ -5844,6 +6093,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of TrustUserEntityListing</returns>
+        
         public ApiResponse< TrustUserEntityListing > GetOrgauthorizationTrusteeUsersWithHttpInfo (string trusteeOrgId, int? pageSize = null, int? pageNumber = null)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -5930,6 +6180,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of TrustUserEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<TrustUserEntityListing> GetOrgauthorizationTrusteeUsersAsync (string trusteeOrgId, int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<TrustUserEntityListing> localVarResponse = await GetOrgauthorizationTrusteeUsersAsyncWithHttpInfo(trusteeOrgId, pageSize, pageNumber);
@@ -5945,6 +6196,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (TrustUserEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<TrustUserEntityListing>> GetOrgauthorizationTrusteeUsersAsyncWithHttpInfo (string trusteeOrgId, int? pageSize = null, int? pageNumber = null)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -6032,6 +6284,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>TrustEntityListing</returns>
+        
         public TrustEntityListing GetOrgauthorizationTrustees (int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<TrustEntityListing> localVarResponse = GetOrgauthorizationTrusteesWithHttpInfo(pageSize, pageNumber);
@@ -6045,6 +6298,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of TrustEntityListing</returns>
+        
         public ApiResponse< TrustEntityListing > GetOrgauthorizationTrusteesWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
 
@@ -6126,6 +6380,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of TrustEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<TrustEntityListing> GetOrgauthorizationTrusteesAsync (int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<TrustEntityListing> localVarResponse = await GetOrgauthorizationTrusteesAsyncWithHttpInfo(pageSize, pageNumber);
@@ -6140,6 +6395,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (TrustEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<TrustEntityListing>> GetOrgauthorizationTrusteesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
 
@@ -6220,6 +6476,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Trustee</returns>
+        
         public Trustee GetOrgauthorizationTrusteesDefault ()
         {
              ApiResponse<Trustee> localVarResponse = GetOrgauthorizationTrusteesDefaultWithHttpInfo();
@@ -6231,6 +6488,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Trustee</returns>
+        
         public ApiResponse< Trustee > GetOrgauthorizationTrusteesDefaultWithHttpInfo ()
         { 
 
@@ -6308,6 +6566,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Trustee</returns>
+        
         public async System.Threading.Tasks.Task<Trustee> GetOrgauthorizationTrusteesDefaultAsync ()
         {
              ApiResponse<Trustee> localVarResponse = await GetOrgauthorizationTrusteesDefaultAsyncWithHttpInfo();
@@ -6320,6 +6579,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Trustee)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Trustee>> GetOrgauthorizationTrusteesDefaultAsyncWithHttpInfo ()
         { 
 
@@ -6399,6 +6659,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <returns>Trustor</returns>
+        
         public Trustor GetOrgauthorizationTrustor (string trustorOrgId)
         {
              ApiResponse<Trustor> localVarResponse = GetOrgauthorizationTrustorWithHttpInfo(trustorOrgId);
@@ -6411,6 +6672,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <returns>ApiResponse of Trustor</returns>
+        
         public ApiResponse< Trustor > GetOrgauthorizationTrustorWithHttpInfo (string trustorOrgId)
         { 
             // verify the required parameter 'trustorOrgId' is set
@@ -6493,6 +6755,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <returns>Task of Trustor</returns>
+        
         public async System.Threading.Tasks.Task<Trustor> GetOrgauthorizationTrustorAsync (string trustorOrgId)
         {
              ApiResponse<Trustor> localVarResponse = await GetOrgauthorizationTrustorAsyncWithHttpInfo(trustorOrgId);
@@ -6506,6 +6769,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <returns>Task of ApiResponse (Trustor)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Trustor>> GetOrgauthorizationTrustorAsyncWithHttpInfo (string trustorOrgId)
         { 
             // verify the required parameter 'trustorOrgId' is set
@@ -6591,6 +6855,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>ClonedUser</returns>
+        
         public ClonedUser GetOrgauthorizationTrustorCloneduser (string trustorOrgId, string trusteeUserId)
         {
              ApiResponse<ClonedUser> localVarResponse = GetOrgauthorizationTrustorCloneduserWithHttpInfo(trustorOrgId, trusteeUserId);
@@ -6604,6 +6869,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>ApiResponse of ClonedUser</returns>
+        
         public ApiResponse< ClonedUser > GetOrgauthorizationTrustorCloneduserWithHttpInfo (string trustorOrgId, string trusteeUserId)
         { 
             // verify the required parameter 'trustorOrgId' is set
@@ -6691,6 +6957,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of ClonedUser</returns>
+        
         public async System.Threading.Tasks.Task<ClonedUser> GetOrgauthorizationTrustorCloneduserAsync (string trustorOrgId, string trusteeUserId)
         {
              ApiResponse<ClonedUser> localVarResponse = await GetOrgauthorizationTrustorCloneduserAsyncWithHttpInfo(trustorOrgId, trusteeUserId);
@@ -6705,6 +6972,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of ApiResponse (ClonedUser)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ClonedUser>> GetOrgauthorizationTrustorCloneduserAsyncWithHttpInfo (string trustorOrgId, string trusteeUserId)
         { 
             // verify the required parameter 'trustorOrgId' is set
@@ -6794,6 +7062,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <returns>ClonedUserEntityListing</returns>
+        
         public ClonedUserEntityListing GetOrgauthorizationTrustorClonedusers (string trustorOrgId)
         {
              ApiResponse<ClonedUserEntityListing> localVarResponse = GetOrgauthorizationTrustorClonedusersWithHttpInfo(trustorOrgId);
@@ -6806,6 +7075,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <returns>ApiResponse of ClonedUserEntityListing</returns>
+        
         public ApiResponse< ClonedUserEntityListing > GetOrgauthorizationTrustorClonedusersWithHttpInfo (string trustorOrgId)
         { 
             // verify the required parameter 'trustorOrgId' is set
@@ -6888,6 +7158,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <returns>Task of ClonedUserEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<ClonedUserEntityListing> GetOrgauthorizationTrustorClonedusersAsync (string trustorOrgId)
         {
              ApiResponse<ClonedUserEntityListing> localVarResponse = await GetOrgauthorizationTrustorClonedusersAsyncWithHttpInfo(trustorOrgId);
@@ -6901,6 +7172,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <returns>Task of ApiResponse (ClonedUserEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ClonedUserEntityListing>> GetOrgauthorizationTrustorClonedusersAsyncWithHttpInfo (string trustorOrgId)
         { 
             // verify the required parameter 'trustorOrgId' is set
@@ -6986,6 +7258,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trustorGroupId">Trustor Group Id</param>
         /// <returns>TrustGroup</returns>
+        
         public TrustGroup GetOrgauthorizationTrustorGroup (string trustorOrgId, string trustorGroupId)
         {
              ApiResponse<TrustGroup> localVarResponse = GetOrgauthorizationTrustorGroupWithHttpInfo(trustorOrgId, trustorGroupId);
@@ -6999,6 +7272,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trustorGroupId">Trustor Group Id</param>
         /// <returns>ApiResponse of TrustGroup</returns>
+        
         public ApiResponse< TrustGroup > GetOrgauthorizationTrustorGroupWithHttpInfo (string trustorOrgId, string trustorGroupId)
         { 
             // verify the required parameter 'trustorOrgId' is set
@@ -7086,6 +7360,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trustorGroupId">Trustor Group Id</param>
         /// <returns>Task of TrustGroup</returns>
+        
         public async System.Threading.Tasks.Task<TrustGroup> GetOrgauthorizationTrustorGroupAsync (string trustorOrgId, string trustorGroupId)
         {
              ApiResponse<TrustGroup> localVarResponse = await GetOrgauthorizationTrustorGroupAsyncWithHttpInfo(trustorOrgId, trustorGroupId);
@@ -7100,6 +7375,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trustorGroupId">Trustor Group Id</param>
         /// <returns>Task of ApiResponse (TrustGroup)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<TrustGroup>> GetOrgauthorizationTrustorGroupAsyncWithHttpInfo (string trustorOrgId, string trustorGroupId)
         { 
             // verify the required parameter 'trustorOrgId' is set
@@ -7191,6 +7467,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>TrustGroupEntityListing</returns>
+        
         public TrustGroupEntityListing GetOrgauthorizationTrustorGroups (string trustorOrgId, int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<TrustGroupEntityListing> localVarResponse = GetOrgauthorizationTrustorGroupsWithHttpInfo(trustorOrgId, pageSize, pageNumber);
@@ -7205,6 +7482,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of TrustGroupEntityListing</returns>
+        
         public ApiResponse< TrustGroupEntityListing > GetOrgauthorizationTrustorGroupsWithHttpInfo (string trustorOrgId, int? pageSize = null, int? pageNumber = null)
         { 
             // verify the required parameter 'trustorOrgId' is set
@@ -7291,6 +7569,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of TrustGroupEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<TrustGroupEntityListing> GetOrgauthorizationTrustorGroupsAsync (string trustorOrgId, int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<TrustGroupEntityListing> localVarResponse = await GetOrgauthorizationTrustorGroupsAsyncWithHttpInfo(trustorOrgId, pageSize, pageNumber);
@@ -7306,6 +7585,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (TrustGroupEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<TrustGroupEntityListing>> GetOrgauthorizationTrustorGroupsAsyncWithHttpInfo (string trustorOrgId, int? pageSize = null, int? pageNumber = null)
         { 
             // verify the required parameter 'trustorOrgId' is set
@@ -7393,6 +7673,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>TrustUser</returns>
+        
         public TrustUser GetOrgauthorizationTrustorUser (string trustorOrgId, string trusteeUserId)
         {
              ApiResponse<TrustUser> localVarResponse = GetOrgauthorizationTrustorUserWithHttpInfo(trustorOrgId, trusteeUserId);
@@ -7406,6 +7687,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>ApiResponse of TrustUser</returns>
+        
         public ApiResponse< TrustUser > GetOrgauthorizationTrustorUserWithHttpInfo (string trustorOrgId, string trusteeUserId)
         { 
             // verify the required parameter 'trustorOrgId' is set
@@ -7493,6 +7775,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of TrustUser</returns>
+        
         public async System.Threading.Tasks.Task<TrustUser> GetOrgauthorizationTrustorUserAsync (string trustorOrgId, string trusteeUserId)
         {
              ApiResponse<TrustUser> localVarResponse = await GetOrgauthorizationTrustorUserAsyncWithHttpInfo(trustorOrgId, trusteeUserId);
@@ -7507,6 +7790,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of ApiResponse (TrustUser)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<TrustUser>> GetOrgauthorizationTrustorUserAsyncWithHttpInfo (string trustorOrgId, string trusteeUserId)
         { 
             // verify the required parameter 'trustorOrgId' is set
@@ -7598,6 +7882,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>TrustUserEntityListing</returns>
+        
         public TrustUserEntityListing GetOrgauthorizationTrustorUsers (string trustorOrgId, int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<TrustUserEntityListing> localVarResponse = GetOrgauthorizationTrustorUsersWithHttpInfo(trustorOrgId, pageSize, pageNumber);
@@ -7612,6 +7897,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of TrustUserEntityListing</returns>
+        
         public ApiResponse< TrustUserEntityListing > GetOrgauthorizationTrustorUsersWithHttpInfo (string trustorOrgId, int? pageSize = null, int? pageNumber = null)
         { 
             // verify the required parameter 'trustorOrgId' is set
@@ -7698,6 +7984,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of TrustUserEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<TrustUserEntityListing> GetOrgauthorizationTrustorUsersAsync (string trustorOrgId, int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<TrustUserEntityListing> localVarResponse = await GetOrgauthorizationTrustorUsersAsyncWithHttpInfo(trustorOrgId, pageSize, pageNumber);
@@ -7713,6 +8000,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (TrustUserEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<TrustUserEntityListing>> GetOrgauthorizationTrustorUsersAsyncWithHttpInfo (string trustorOrgId, int? pageSize = null, int? pageNumber = null)
         { 
             // verify the required parameter 'trustorOrgId' is set
@@ -7800,6 +8088,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>TrustorEntityListing</returns>
+        
         public TrustorEntityListing GetOrgauthorizationTrustors (int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<TrustorEntityListing> localVarResponse = GetOrgauthorizationTrustorsWithHttpInfo(pageSize, pageNumber);
@@ -7813,6 +8102,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of TrustorEntityListing</returns>
+        
         public ApiResponse< TrustorEntityListing > GetOrgauthorizationTrustorsWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
 
@@ -7894,6 +8184,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of TrustorEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<TrustorEntityListing> GetOrgauthorizationTrustorsAsync (int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<TrustorEntityListing> localVarResponse = await GetOrgauthorizationTrustorsAsyncWithHttpInfo(pageSize, pageNumber);
@@ -7908,6 +8199,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (TrustorEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<TrustorEntityListing>> GetOrgauthorizationTrustorsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
 
@@ -7989,6 +8281,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Pairing Info</param>
         /// <returns>TrustRequest</returns>
+        
         public TrustRequest PostOrgauthorizationPairings (TrustRequestCreate body)
         {
              ApiResponse<TrustRequest> localVarResponse = PostOrgauthorizationPairingsWithHttpInfo(body);
@@ -8001,6 +8294,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Pairing Info</param>
         /// <returns>ApiResponse of TrustRequest</returns>
+        
         public ApiResponse< TrustRequest > PostOrgauthorizationPairingsWithHttpInfo (TrustRequestCreate body)
         { 
             // verify the required parameter 'body' is set
@@ -8088,6 +8382,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Pairing Info</param>
         /// <returns>Task of TrustRequest</returns>
+        
         public async System.Threading.Tasks.Task<TrustRequest> PostOrgauthorizationPairingsAsync (TrustRequestCreate body)
         {
              ApiResponse<TrustRequest> localVarResponse = await PostOrgauthorizationPairingsAsyncWithHttpInfo(body);
@@ -8101,6 +8396,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Pairing Info</param>
         /// <returns>Task of ApiResponse (TrustRequest)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<TrustRequest>> PostOrgauthorizationPairingsAsyncWithHttpInfo (TrustRequestCreate body)
         { 
             // verify the required parameter 'body' is set
@@ -8191,6 +8487,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="body">Trust</param>
         /// <returns>TrustGroup</returns>
+        
         public TrustGroup PostOrgauthorizationTrusteeGroups (string trusteeOrgId, TrustMemberCreate body)
         {
              ApiResponse<TrustGroup> localVarResponse = PostOrgauthorizationTrusteeGroupsWithHttpInfo(trusteeOrgId, body);
@@ -8204,6 +8501,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="body">Trust</param>
         /// <returns>ApiResponse of TrustGroup</returns>
+        
         public ApiResponse< TrustGroup > PostOrgauthorizationTrusteeGroupsWithHttpInfo (string trusteeOrgId, TrustMemberCreate body)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -8296,6 +8594,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="body">Trust</param>
         /// <returns>Task of TrustGroup</returns>
+        
         public async System.Threading.Tasks.Task<TrustGroup> PostOrgauthorizationTrusteeGroupsAsync (string trusteeOrgId, TrustMemberCreate body)
         {
              ApiResponse<TrustGroup> localVarResponse = await PostOrgauthorizationTrusteeGroupsAsyncWithHttpInfo(trusteeOrgId, body);
@@ -8310,6 +8609,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="body">Trust</param>
         /// <returns>Task of ApiResponse (TrustGroup)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<TrustGroup>> PostOrgauthorizationTrusteeGroupsAsyncWithHttpInfo (string trusteeOrgId, TrustMemberCreate body)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -8405,6 +8705,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="body">Trust</param>
         /// <returns>TrustUser</returns>
+        
         public TrustUser PostOrgauthorizationTrusteeUsers (string trusteeOrgId, TrustMemberCreate body)
         {
              ApiResponse<TrustUser> localVarResponse = PostOrgauthorizationTrusteeUsersWithHttpInfo(trusteeOrgId, body);
@@ -8418,6 +8719,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="body">Trust</param>
         /// <returns>ApiResponse of TrustUser</returns>
+        
         public ApiResponse< TrustUser > PostOrgauthorizationTrusteeUsersWithHttpInfo (string trusteeOrgId, TrustMemberCreate body)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -8510,6 +8812,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="body">Trust</param>
         /// <returns>Task of TrustUser</returns>
+        
         public async System.Threading.Tasks.Task<TrustUser> PostOrgauthorizationTrusteeUsersAsync (string trusteeOrgId, TrustMemberCreate body)
         {
              ApiResponse<TrustUser> localVarResponse = await PostOrgauthorizationTrusteeUsersAsyncWithHttpInfo(trusteeOrgId, body);
@@ -8524,6 +8827,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="body">Trust</param>
         /// <returns>Task of ApiResponse (TrustUser)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<TrustUser>> PostOrgauthorizationTrusteeUsersAsyncWithHttpInfo (string trusteeOrgId, TrustMemberCreate body)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -8618,6 +8922,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Trust</param>
         /// <returns>Trustee</returns>
+        
         public Trustee PostOrgauthorizationTrustees (TrustCreate body)
         {
              ApiResponse<Trustee> localVarResponse = PostOrgauthorizationTrusteesWithHttpInfo(body);
@@ -8630,6 +8935,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Trust</param>
         /// <returns>ApiResponse of Trustee</returns>
+        
         public ApiResponse< Trustee > PostOrgauthorizationTrusteesWithHttpInfo (TrustCreate body)
         { 
             // verify the required parameter 'body' is set
@@ -8717,6 +9023,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Trust</param>
         /// <returns>Task of Trustee</returns>
+        
         public async System.Threading.Tasks.Task<Trustee> PostOrgauthorizationTrusteesAsync (TrustCreate body)
         {
              ApiResponse<Trustee> localVarResponse = await PostOrgauthorizationTrusteesAsyncWithHttpInfo(body);
@@ -8730,6 +9037,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Trust</param>
         /// <returns>Task of ApiResponse (Trustee)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Trustee>> PostOrgauthorizationTrusteesAsyncWithHttpInfo (TrustCreate body)
         { 
             // verify the required parameter 'body' is set
@@ -8823,6 +9131,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "timestamp")</param>
         /// <param name="sortOrder">Sort order (optional, default to "descending")</param>
         /// <returns>Object</returns>
+        
         public Object PostOrgauthorizationTrusteesAudits (TrusteeAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<Object> localVarResponse = PostOrgauthorizationTrusteesAuditsWithHttpInfo(body, pageSize, pageNumber, sortBy, sortOrder);
@@ -8839,6 +9148,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "timestamp")</param>
         /// <param name="sortOrder">Sort order (optional, default to "descending")</param>
         /// <returns>ApiResponse of Object</returns>
+        
         public ApiResponse< Object > PostOrgauthorizationTrusteesAuditsWithHttpInfo (TrusteeAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         { 
             // verify the required parameter 'body' is set
@@ -8934,6 +9244,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "timestamp")</param>
         /// <param name="sortOrder">Sort order (optional, default to "descending")</param>
         /// <returns>Task of Object</returns>
+        
         public async System.Threading.Tasks.Task<Object> PostOrgauthorizationTrusteesAuditsAsync (TrusteeAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<Object> localVarResponse = await PostOrgauthorizationTrusteesAuditsAsyncWithHttpInfo(body, pageSize, pageNumber, sortBy, sortOrder);
@@ -8951,6 +9262,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "timestamp")</param>
         /// <param name="sortOrder">Sort order (optional, default to "descending")</param>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostOrgauthorizationTrusteesAuditsAsyncWithHttpInfo (TrusteeAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         { 
             // verify the required parameter 'body' is set
@@ -9045,6 +9357,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignDefaultRole">Assign Admin role to default pairing with Customer Care (optional)</param>
         /// <param name="autoExpire">Automatically expire pairing after 30 days (optional)</param>
         /// <returns>Trustee</returns>
+        
         public Trustee PostOrgauthorizationTrusteesDefault (bool? assignDefaultRole = null, bool? autoExpire = null)
         {
              ApiResponse<Trustee> localVarResponse = PostOrgauthorizationTrusteesDefaultWithHttpInfo(assignDefaultRole, autoExpire);
@@ -9058,6 +9371,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignDefaultRole">Assign Admin role to default pairing with Customer Care (optional)</param>
         /// <param name="autoExpire">Automatically expire pairing after 30 days (optional)</param>
         /// <returns>ApiResponse of Trustee</returns>
+        
         public ApiResponse< Trustee > PostOrgauthorizationTrusteesDefaultWithHttpInfo (bool? assignDefaultRole = null, bool? autoExpire = null)
         { 
 
@@ -9139,6 +9453,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignDefaultRole">Assign Admin role to default pairing with Customer Care (optional)</param>
         /// <param name="autoExpire">Automatically expire pairing after 30 days (optional)</param>
         /// <returns>Task of Trustee</returns>
+        
         public async System.Threading.Tasks.Task<Trustee> PostOrgauthorizationTrusteesDefaultAsync (bool? assignDefaultRole = null, bool? autoExpire = null)
         {
              ApiResponse<Trustee> localVarResponse = await PostOrgauthorizationTrusteesDefaultAsyncWithHttpInfo(assignDefaultRole, autoExpire);
@@ -9153,6 +9468,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="assignDefaultRole">Assign Admin role to default pairing with Customer Care (optional)</param>
         /// <param name="autoExpire">Automatically expire pairing after 30 days (optional)</param>
         /// <returns>Task of ApiResponse (Trustee)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Trustee>> PostOrgauthorizationTrusteesDefaultAsyncWithHttpInfo (bool? assignDefaultRole = null, bool? autoExpire = null)
         { 
 
@@ -9238,6 +9554,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "timestamp")</param>
         /// <param name="sortOrder">Sort order (optional, default to "descending")</param>
         /// <returns>Object</returns>
+        
         public Object PostOrgauthorizationTrustorAudits (TrustorAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<Object> localVarResponse = PostOrgauthorizationTrustorAuditsWithHttpInfo(body, pageSize, pageNumber, sortBy, sortOrder);
@@ -9254,6 +9571,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "timestamp")</param>
         /// <param name="sortOrder">Sort order (optional, default to "descending")</param>
         /// <returns>ApiResponse of Object</returns>
+        
         public ApiResponse< Object > PostOrgauthorizationTrustorAuditsWithHttpInfo (TrustorAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         { 
             // verify the required parameter 'body' is set
@@ -9349,6 +9667,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "timestamp")</param>
         /// <param name="sortOrder">Sort order (optional, default to "descending")</param>
         /// <returns>Task of Object</returns>
+        
         public async System.Threading.Tasks.Task<Object> PostOrgauthorizationTrustorAuditsAsync (TrustorAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<Object> localVarResponse = await PostOrgauthorizationTrustorAuditsAsyncWithHttpInfo(body, pageSize, pageNumber, sortBy, sortOrder);
@@ -9366,6 +9685,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "timestamp")</param>
         /// <param name="sortOrder">Sort order (optional, default to "descending")</param>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostOrgauthorizationTrustorAuditsAsyncWithHttpInfo (TrustorAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         { 
             // verify the required parameter 'body' is set
@@ -9460,6 +9780,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="body">Client</param>
         /// <returns>Trustee</returns>
+        
         public Trustee PutOrgauthorizationTrustee (string trusteeOrgId, TrustUpdate body)
         {
              ApiResponse<Trustee> localVarResponse = PutOrgauthorizationTrusteeWithHttpInfo(trusteeOrgId, body);
@@ -9473,6 +9794,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="body">Client</param>
         /// <returns>ApiResponse of Trustee</returns>
+        
         public ApiResponse< Trustee > PutOrgauthorizationTrusteeWithHttpInfo (string trusteeOrgId, TrustUpdate body)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -9565,6 +9887,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="body">Client</param>
         /// <returns>Task of Trustee</returns>
+        
         public async System.Threading.Tasks.Task<Trustee> PutOrgauthorizationTrusteeAsync (string trusteeOrgId, TrustUpdate body)
         {
              ApiResponse<Trustee> localVarResponse = await PutOrgauthorizationTrusteeAsyncWithHttpInfo(trusteeOrgId, body);
@@ -9579,6 +9902,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeOrgId">Trustee Organization Id</param>
         /// <param name="body">Client</param>
         /// <returns>Task of ApiResponse (Trustee)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Trustee>> PutOrgauthorizationTrusteeAsyncWithHttpInfo (string trusteeOrgId, TrustUpdate body)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -9675,6 +9999,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <param name="body">Set of roles with corresponding divisions to apply</param>
         /// <returns>UserAuthorization</returns>
+        
         public UserAuthorization PutOrgauthorizationTrusteeGroupRoledivisions (string trusteeOrgId, string trusteeGroupId, RoleDivisionGrants body)
         {
              ApiResponse<UserAuthorization> localVarResponse = PutOrgauthorizationTrusteeGroupRoledivisionsWithHttpInfo(trusteeOrgId, trusteeGroupId, body);
@@ -9689,6 +10014,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <param name="body">Set of roles with corresponding divisions to apply</param>
         /// <returns>ApiResponse of UserAuthorization</returns>
+        
         public ApiResponse< UserAuthorization > PutOrgauthorizationTrusteeGroupRoledivisionsWithHttpInfo (string trusteeOrgId, string trusteeGroupId, RoleDivisionGrants body)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -9786,6 +10112,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <param name="body">Set of roles with corresponding divisions to apply</param>
         /// <returns>Task of UserAuthorization</returns>
+        
         public async System.Threading.Tasks.Task<UserAuthorization> PutOrgauthorizationTrusteeGroupRoledivisionsAsync (string trusteeOrgId, string trusteeGroupId, RoleDivisionGrants body)
         {
              ApiResponse<UserAuthorization> localVarResponse = await PutOrgauthorizationTrusteeGroupRoledivisionsAsyncWithHttpInfo(trusteeOrgId, trusteeGroupId, body);
@@ -9801,6 +10128,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <param name="body">Set of roles with corresponding divisions to apply</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutOrgauthorizationTrusteeGroupRoledivisionsAsyncWithHttpInfo (string trusteeOrgId, string trusteeGroupId, RoleDivisionGrants body)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -9902,6 +10230,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <param name="body">List of roles</param>
         /// <returns>UserAuthorization</returns>
+        
         public UserAuthorization PutOrgauthorizationTrusteeGroupRoles (string trusteeOrgId, string trusteeGroupId, List<string> body)
         {
              ApiResponse<UserAuthorization> localVarResponse = PutOrgauthorizationTrusteeGroupRolesWithHttpInfo(trusteeOrgId, trusteeGroupId, body);
@@ -9916,6 +10245,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <param name="body">List of roles</param>
         /// <returns>ApiResponse of UserAuthorization</returns>
+        
         public ApiResponse< UserAuthorization > PutOrgauthorizationTrusteeGroupRolesWithHttpInfo (string trusteeOrgId, string trusteeGroupId, List<string> body)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -10013,6 +10343,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <param name="body">List of roles</param>
         /// <returns>Task of UserAuthorization</returns>
+        
         public async System.Threading.Tasks.Task<UserAuthorization> PutOrgauthorizationTrusteeGroupRolesAsync (string trusteeOrgId, string trusteeGroupId, List<string> body)
         {
              ApiResponse<UserAuthorization> localVarResponse = await PutOrgauthorizationTrusteeGroupRolesAsyncWithHttpInfo(trusteeOrgId, trusteeGroupId, body);
@@ -10028,6 +10359,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeGroupId">Trustee Group Id</param>
         /// <param name="body">List of roles</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutOrgauthorizationTrusteeGroupRolesAsyncWithHttpInfo (string trusteeOrgId, string trusteeGroupId, List<string> body)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -10129,6 +10461,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <param name="body">Set of roles with corresponding divisions to apply</param>
         /// <returns>UserAuthorization</returns>
+        
         public UserAuthorization PutOrgauthorizationTrusteeUserRoledivisions (string trusteeOrgId, string trusteeUserId, RoleDivisionGrants body)
         {
              ApiResponse<UserAuthorization> localVarResponse = PutOrgauthorizationTrusteeUserRoledivisionsWithHttpInfo(trusteeOrgId, trusteeUserId, body);
@@ -10143,6 +10476,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <param name="body">Set of roles with corresponding divisions to apply</param>
         /// <returns>ApiResponse of UserAuthorization</returns>
+        
         public ApiResponse< UserAuthorization > PutOrgauthorizationTrusteeUserRoledivisionsWithHttpInfo (string trusteeOrgId, string trusteeUserId, RoleDivisionGrants body)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -10240,6 +10574,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <param name="body">Set of roles with corresponding divisions to apply</param>
         /// <returns>Task of UserAuthorization</returns>
+        
         public async System.Threading.Tasks.Task<UserAuthorization> PutOrgauthorizationTrusteeUserRoledivisionsAsync (string trusteeOrgId, string trusteeUserId, RoleDivisionGrants body)
         {
              ApiResponse<UserAuthorization> localVarResponse = await PutOrgauthorizationTrusteeUserRoledivisionsAsyncWithHttpInfo(trusteeOrgId, trusteeUserId, body);
@@ -10255,6 +10590,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <param name="body">Set of roles with corresponding divisions to apply</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutOrgauthorizationTrusteeUserRoledivisionsAsyncWithHttpInfo (string trusteeOrgId, string trusteeUserId, RoleDivisionGrants body)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -10356,6 +10692,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <param name="body">List of roles</param>
         /// <returns>UserAuthorization</returns>
+        
         public UserAuthorization PutOrgauthorizationTrusteeUserRoles (string trusteeOrgId, string trusteeUserId, List<string> body)
         {
              ApiResponse<UserAuthorization> localVarResponse = PutOrgauthorizationTrusteeUserRolesWithHttpInfo(trusteeOrgId, trusteeUserId, body);
@@ -10370,6 +10707,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <param name="body">List of roles</param>
         /// <returns>ApiResponse of UserAuthorization</returns>
+        
         public ApiResponse< UserAuthorization > PutOrgauthorizationTrusteeUserRolesWithHttpInfo (string trusteeOrgId, string trusteeUserId, List<string> body)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -10467,6 +10805,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <param name="body">List of roles</param>
         /// <returns>Task of UserAuthorization</returns>
+        
         public async System.Threading.Tasks.Task<UserAuthorization> PutOrgauthorizationTrusteeUserRolesAsync (string trusteeOrgId, string trusteeUserId, List<string> body)
         {
              ApiResponse<UserAuthorization> localVarResponse = await PutOrgauthorizationTrusteeUserRolesAsyncWithHttpInfo(trusteeOrgId, trusteeUserId, body);
@@ -10482,6 +10821,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <param name="body">List of roles</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutOrgauthorizationTrusteeUserRolesAsyncWithHttpInfo (string trusteeOrgId, string trusteeUserId, List<string> body)
         { 
             // verify the required parameter 'trusteeOrgId' is set
@@ -10582,6 +10922,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>ClonedUser</returns>
+        
         public ClonedUser PutOrgauthorizationTrustorCloneduser (string trustorOrgId, string trusteeUserId)
         {
              ApiResponse<ClonedUser> localVarResponse = PutOrgauthorizationTrustorCloneduserWithHttpInfo(trustorOrgId, trusteeUserId);
@@ -10595,6 +10936,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>ApiResponse of ClonedUser</returns>
+        
         public ApiResponse< ClonedUser > PutOrgauthorizationTrustorCloneduserWithHttpInfo (string trustorOrgId, string trusteeUserId)
         { 
             // verify the required parameter 'trustorOrgId' is set
@@ -10682,6 +11024,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of ClonedUser</returns>
+        
         public async System.Threading.Tasks.Task<ClonedUser> PutOrgauthorizationTrustorCloneduserAsync (string trustorOrgId, string trusteeUserId)
         {
              ApiResponse<ClonedUser> localVarResponse = await PutOrgauthorizationTrustorCloneduserAsyncWithHttpInfo(trustorOrgId, trusteeUserId);
@@ -10696,6 +11039,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of ApiResponse (ClonedUser)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ClonedUser>> PutOrgauthorizationTrustorCloneduserAsyncWithHttpInfo (string trustorOrgId, string trusteeUserId)
         { 
             // verify the required parameter 'trustorOrgId' is set
@@ -10786,6 +11130,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trustorGroupId">Trustor Group Id</param>
         /// <returns>TrustGroup</returns>
+        
         public TrustGroup PutOrgauthorizationTrustorGroup (string trustorOrgId, string trustorGroupId)
         {
              ApiResponse<TrustGroup> localVarResponse = PutOrgauthorizationTrustorGroupWithHttpInfo(trustorOrgId, trustorGroupId);
@@ -10799,6 +11144,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trustorGroupId">Trustor Group Id</param>
         /// <returns>ApiResponse of TrustGroup</returns>
+        
         public ApiResponse< TrustGroup > PutOrgauthorizationTrustorGroupWithHttpInfo (string trustorOrgId, string trustorGroupId)
         { 
             // verify the required parameter 'trustorOrgId' is set
@@ -10886,6 +11232,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trustorGroupId">Trustor Group Id</param>
         /// <returns>Task of TrustGroup</returns>
+        
         public async System.Threading.Tasks.Task<TrustGroup> PutOrgauthorizationTrustorGroupAsync (string trustorOrgId, string trustorGroupId)
         {
              ApiResponse<TrustGroup> localVarResponse = await PutOrgauthorizationTrustorGroupAsyncWithHttpInfo(trustorOrgId, trustorGroupId);
@@ -10900,6 +11247,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trustorGroupId">Trustor Group Id</param>
         /// <returns>Task of ApiResponse (TrustGroup)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<TrustGroup>> PutOrgauthorizationTrustorGroupAsyncWithHttpInfo (string trustorOrgId, string trustorGroupId)
         { 
             // verify the required parameter 'trustorOrgId' is set
@@ -10990,6 +11338,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>TrustUser</returns>
+        
         public TrustUser PutOrgauthorizationTrustorUser (string trustorOrgId, string trusteeUserId)
         {
              ApiResponse<TrustUser> localVarResponse = PutOrgauthorizationTrustorUserWithHttpInfo(trustorOrgId, trusteeUserId);
@@ -11003,6 +11352,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>ApiResponse of TrustUser</returns>
+        
         public ApiResponse< TrustUser > PutOrgauthorizationTrustorUserWithHttpInfo (string trustorOrgId, string trusteeUserId)
         { 
             // verify the required parameter 'trustorOrgId' is set
@@ -11090,6 +11440,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of TrustUser</returns>
+        
         public async System.Threading.Tasks.Task<TrustUser> PutOrgauthorizationTrustorUserAsync (string trustorOrgId, string trusteeUserId)
         {
              ApiResponse<TrustUser> localVarResponse = await PutOrgauthorizationTrustorUserAsyncWithHttpInfo(trustorOrgId, trusteeUserId);
@@ -11104,6 +11455,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="trustorOrgId">Trustor Organization Id</param>
         /// <param name="trusteeUserId">Trustee User Id</param>
         /// <returns>Task of ApiResponse (TrustUser)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<TrustUser>> PutOrgauthorizationTrustorUserAsyncWithHttpInfo (string trustorOrgId, string trusteeUserId)
         { 
             // verify the required parameter 'trustorOrgId' is set

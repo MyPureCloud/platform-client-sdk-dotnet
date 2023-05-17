@@ -25,6 +25,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Field type</param>
         /// <returns>FieldConfig</returns>
+        [Obsolete]
         FieldConfig GetFieldconfig (string type);
 
         /// <summary>
@@ -36,6 +37,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Field type</param>
         /// <returns>ApiResponse of FieldConfig</returns>
+        [Obsolete]
         ApiResponse<FieldConfig> GetFieldconfigWithHttpInfo (string type);
 
         /// <summary>
@@ -46,6 +48,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>EmbeddedIntegration</returns>
+        
         EmbeddedIntegration GetOrganizationsEmbeddedintegration ();
 
         /// <summary>
@@ -56,6 +59,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of EmbeddedIntegration</returns>
+        
         ApiResponse<EmbeddedIntegration> GetOrganizationsEmbeddedintegrationWithHttpInfo ();
 
         /// <summary>
@@ -66,6 +70,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>IpAddressAuthentication</returns>
+        
         IpAddressAuthentication GetOrganizationsIpaddressauthentication ();
 
         /// <summary>
@@ -76,6 +81,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of IpAddressAuthentication</returns>
+        
         ApiResponse<IpAddressAuthentication> GetOrganizationsIpaddressauthenticationWithHttpInfo ();
 
         /// <summary>
@@ -87,6 +93,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestId">Unique id for the limit change request</param>
         /// <returns>LimitChangeRequestDetails</returns>
+        
         LimitChangeRequestDetails GetOrganizationsLimitsChangerequest (string requestId);
 
         /// <summary>
@@ -98,6 +105,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestId">Unique id for the limit change request</param>
         /// <returns>ApiResponse of LimitChangeRequestDetails</returns>
+        
         ApiResponse<LimitChangeRequestDetails> GetOrganizationsLimitsChangerequestWithHttpInfo (string requestId);
 
         /// <summary>
@@ -113,6 +121,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page Size (optional, default to 25)</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>LimitChangeRequestsEntityListing</returns>
+        
         LimitChangeRequestsEntityListing GetOrganizationsLimitsChangerequests (long? after = null, long? before = null, string status = null, int? pageSize = null, List<string> expand = null);
 
         /// <summary>
@@ -128,6 +137,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page Size (optional, default to 25)</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of LimitChangeRequestsEntityListing</returns>
+        
         ApiResponse<LimitChangeRequestsEntityListing> GetOrganizationsLimitsChangerequestsWithHttpInfo (long? after = null, long? before = null, string status = null, int? pageSize = null, List<string> expand = null);
 
         /// <summary>
@@ -138,6 +148,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>UrlResponse</returns>
+        
         UrlResponse GetOrganizationsLimitsDocs ();
 
         /// <summary>
@@ -148,6 +159,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of UrlResponse</returns>
+        
         ApiResponse<UrlResponse> GetOrganizationsLimitsDocsWithHttpInfo ();
 
         /// <summary>
@@ -159,6 +171,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="namespaceName">The namespace to fetch limits for</param>
         /// <returns>LimitsEntityListing</returns>
+        
         LimitsEntityListing GetOrganizationsLimitsNamespace (string namespaceName);
 
         /// <summary>
@@ -170,6 +183,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="namespaceName">The namespace to fetch limits for</param>
         /// <returns>ApiResponse of LimitsEntityListing</returns>
+        
         ApiResponse<LimitsEntityListing> GetOrganizationsLimitsNamespaceWithHttpInfo (string namespaceName);
 
         /// <summary>
@@ -181,6 +195,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="namespaceName">The namespace to fetch defaults limits for</param>
         /// <returns>LimitsEntityListing</returns>
+        
         LimitsEntityListing GetOrganizationsLimitsNamespaceDefaults (string namespaceName);
 
         /// <summary>
@@ -192,6 +207,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="namespaceName">The namespace to fetch defaults limits for</param>
         /// <returns>ApiResponse of LimitsEntityListing</returns>
+        
         ApiResponse<LimitsEntityListing> GetOrganizationsLimitsNamespaceDefaultsWithHttpInfo (string namespaceName);
 
         /// <summary>
@@ -204,6 +220,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 100)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Object</returns>
+        
         Object GetOrganizationsLimitsNamespaces (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -216,6 +233,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 100)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of Object</returns>
+        
         ApiResponse<Object> GetOrganizationsLimitsNamespacesWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -226,6 +244,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Organization</returns>
+        
         Organization GetOrganizationsMe ();
 
         /// <summary>
@@ -236,6 +255,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Organization</returns>
+        
         ApiResponse<Organization> GetOrganizationsMeWithHttpInfo ();
 
         /// <summary>
@@ -246,6 +266,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>OrgWhitelistSettings</returns>
+        [Obsolete]
         OrgWhitelistSettings GetOrganizationsWhitelist ();
 
         /// <summary>
@@ -256,6 +277,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of OrgWhitelistSettings</returns>
+        [Obsolete]
         ApiResponse<OrgWhitelistSettings> GetOrganizationsWhitelistWithHttpInfo ();
 
         /// <summary>
@@ -268,6 +290,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="featureName">Organization feature</param>
         /// <param name="enabled">New state of feature</param>
         /// <returns>OrganizationFeatures</returns>
+        
         OrganizationFeatures PatchOrganizationsFeature (string featureName, FeatureState enabled);
 
         /// <summary>
@@ -280,6 +303,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="featureName">Organization feature</param>
         /// <param name="enabled">New state of feature</param>
         /// <returns>ApiResponse of OrganizationFeatures</returns>
+        
         ApiResponse<OrganizationFeatures> PatchOrganizationsFeatureWithHttpInfo (string featureName, FeatureState enabled);
 
         /// <summary>
@@ -291,6 +315,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Whitelist settings</param>
         /// <returns>EmbeddedIntegration</returns>
+        
         EmbeddedIntegration PutOrganizationsEmbeddedintegration (EmbeddedIntegration body);
 
         /// <summary>
@@ -302,6 +327,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Whitelist settings</param>
         /// <returns>ApiResponse of EmbeddedIntegration</returns>
+        
         ApiResponse<EmbeddedIntegration> PutOrganizationsEmbeddedintegrationWithHttpInfo (EmbeddedIntegration body);
 
         /// <summary>
@@ -313,6 +339,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">IP address Whitelist settings</param>
         /// <returns>IpAddressAuthentication</returns>
+        
         IpAddressAuthentication PutOrganizationsIpaddressauthentication (IpAddressAuthentication body);
 
         /// <summary>
@@ -324,6 +351,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">IP address Whitelist settings</param>
         /// <returns>ApiResponse of IpAddressAuthentication</returns>
+        
         ApiResponse<IpAddressAuthentication> PutOrganizationsIpaddressauthenticationWithHttpInfo (IpAddressAuthentication body);
 
         /// <summary>
@@ -335,6 +363,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization (optional)</param>
         /// <returns>Organization</returns>
+        
         Organization PutOrganizationsMe (Organization body = null);
 
         /// <summary>
@@ -346,6 +375,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization (optional)</param>
         /// <returns>ApiResponse of Organization</returns>
+        
         ApiResponse<Organization> PutOrganizationsMeWithHttpInfo (Organization body = null);
 
         /// <summary>
@@ -357,6 +387,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Whitelist settings</param>
         /// <returns>OrgWhitelistSettings</returns>
+        [Obsolete]
         OrgWhitelistSettings PutOrganizationsWhitelist (OrgWhitelistSettings body);
 
         /// <summary>
@@ -368,6 +399,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Whitelist settings</param>
         /// <returns>ApiResponse of OrgWhitelistSettings</returns>
+        [Obsolete]
         ApiResponse<OrgWhitelistSettings> PutOrganizationsWhitelistWithHttpInfo (OrgWhitelistSettings body);
 
         #endregion Synchronous Operations
@@ -383,6 +415,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Field type</param>
         /// <returns>Task of FieldConfig</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<FieldConfig> GetFieldconfigAsync (string type);
 
         /// <summary>
@@ -394,6 +427,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Field type</param>
         /// <returns>Task of ApiResponse (FieldConfig)</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<FieldConfig>> GetFieldconfigAsyncWithHttpInfo (string type);
 
         /// <summary>
@@ -404,6 +438,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of EmbeddedIntegration</returns>
+        
         System.Threading.Tasks.Task<EmbeddedIntegration> GetOrganizationsEmbeddedintegrationAsync ();
 
         /// <summary>
@@ -414,6 +449,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (EmbeddedIntegration)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<EmbeddedIntegration>> GetOrganizationsEmbeddedintegrationAsyncWithHttpInfo ();
 
         /// <summary>
@@ -424,6 +460,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of IpAddressAuthentication</returns>
+        
         System.Threading.Tasks.Task<IpAddressAuthentication> GetOrganizationsIpaddressauthenticationAsync ();
 
         /// <summary>
@@ -434,6 +471,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (IpAddressAuthentication)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<IpAddressAuthentication>> GetOrganizationsIpaddressauthenticationAsyncWithHttpInfo ();
 
         /// <summary>
@@ -445,6 +483,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestId">Unique id for the limit change request</param>
         /// <returns>Task of LimitChangeRequestDetails</returns>
+        
         System.Threading.Tasks.Task<LimitChangeRequestDetails> GetOrganizationsLimitsChangerequestAsync (string requestId);
 
         /// <summary>
@@ -456,6 +495,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestId">Unique id for the limit change request</param>
         /// <returns>Task of ApiResponse (LimitChangeRequestDetails)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<LimitChangeRequestDetails>> GetOrganizationsLimitsChangerequestAsyncWithHttpInfo (string requestId);
 
         /// <summary>
@@ -471,6 +511,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page Size (optional, default to 25)</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of LimitChangeRequestsEntityListing</returns>
+        
         System.Threading.Tasks.Task<LimitChangeRequestsEntityListing> GetOrganizationsLimitsChangerequestsAsync (long? after = null, long? before = null, string status = null, int? pageSize = null, List<string> expand = null);
 
         /// <summary>
@@ -486,6 +527,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page Size (optional, default to 25)</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (LimitChangeRequestsEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<LimitChangeRequestsEntityListing>> GetOrganizationsLimitsChangerequestsAsyncWithHttpInfo (long? after = null, long? before = null, string status = null, int? pageSize = null, List<string> expand = null);
 
         /// <summary>
@@ -496,6 +538,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of UrlResponse</returns>
+        
         System.Threading.Tasks.Task<UrlResponse> GetOrganizationsLimitsDocsAsync ();
 
         /// <summary>
@@ -506,6 +549,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (UrlResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<UrlResponse>> GetOrganizationsLimitsDocsAsyncWithHttpInfo ();
 
         /// <summary>
@@ -517,6 +561,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="namespaceName">The namespace to fetch limits for</param>
         /// <returns>Task of LimitsEntityListing</returns>
+        
         System.Threading.Tasks.Task<LimitsEntityListing> GetOrganizationsLimitsNamespaceAsync (string namespaceName);
 
         /// <summary>
@@ -528,6 +573,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="namespaceName">The namespace to fetch limits for</param>
         /// <returns>Task of ApiResponse (LimitsEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<LimitsEntityListing>> GetOrganizationsLimitsNamespaceAsyncWithHttpInfo (string namespaceName);
 
         /// <summary>
@@ -539,6 +585,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="namespaceName">The namespace to fetch defaults limits for</param>
         /// <returns>Task of LimitsEntityListing</returns>
+        
         System.Threading.Tasks.Task<LimitsEntityListing> GetOrganizationsLimitsNamespaceDefaultsAsync (string namespaceName);
 
         /// <summary>
@@ -550,6 +597,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="namespaceName">The namespace to fetch defaults limits for</param>
         /// <returns>Task of ApiResponse (LimitsEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<LimitsEntityListing>> GetOrganizationsLimitsNamespaceDefaultsAsyncWithHttpInfo (string namespaceName);
 
         /// <summary>
@@ -562,6 +610,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 100)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of Object</returns>
+        
         System.Threading.Tasks.Task<Object> GetOrganizationsLimitsNamespacesAsync (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -574,6 +623,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 100)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> GetOrganizationsLimitsNamespacesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -584,6 +634,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Organization</returns>
+        
         System.Threading.Tasks.Task<Organization> GetOrganizationsMeAsync ();
 
         /// <summary>
@@ -594,6 +645,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Organization)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Organization>> GetOrganizationsMeAsyncWithHttpInfo ();
 
         /// <summary>
@@ -604,6 +656,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of OrgWhitelistSettings</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<OrgWhitelistSettings> GetOrganizationsWhitelistAsync ();
 
         /// <summary>
@@ -614,6 +667,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (OrgWhitelistSettings)</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<OrgWhitelistSettings>> GetOrganizationsWhitelistAsyncWithHttpInfo ();
 
         /// <summary>
@@ -626,6 +680,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="featureName">Organization feature</param>
         /// <param name="enabled">New state of feature</param>
         /// <returns>Task of OrganizationFeatures</returns>
+        
         System.Threading.Tasks.Task<OrganizationFeatures> PatchOrganizationsFeatureAsync (string featureName, FeatureState enabled);
 
         /// <summary>
@@ -638,6 +693,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="featureName">Organization feature</param>
         /// <param name="enabled">New state of feature</param>
         /// <returns>Task of ApiResponse (OrganizationFeatures)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<OrganizationFeatures>> PatchOrganizationsFeatureAsyncWithHttpInfo (string featureName, FeatureState enabled);
 
         /// <summary>
@@ -649,6 +705,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Whitelist settings</param>
         /// <returns>Task of EmbeddedIntegration</returns>
+        
         System.Threading.Tasks.Task<EmbeddedIntegration> PutOrganizationsEmbeddedintegrationAsync (EmbeddedIntegration body);
 
         /// <summary>
@@ -660,6 +717,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Whitelist settings</param>
         /// <returns>Task of ApiResponse (EmbeddedIntegration)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<EmbeddedIntegration>> PutOrganizationsEmbeddedintegrationAsyncWithHttpInfo (EmbeddedIntegration body);
 
         /// <summary>
@@ -671,6 +729,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">IP address Whitelist settings</param>
         /// <returns>Task of IpAddressAuthentication</returns>
+        
         System.Threading.Tasks.Task<IpAddressAuthentication> PutOrganizationsIpaddressauthenticationAsync (IpAddressAuthentication body);
 
         /// <summary>
@@ -682,6 +741,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">IP address Whitelist settings</param>
         /// <returns>Task of ApiResponse (IpAddressAuthentication)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<IpAddressAuthentication>> PutOrganizationsIpaddressauthenticationAsyncWithHttpInfo (IpAddressAuthentication body);
 
         /// <summary>
@@ -693,6 +753,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization (optional)</param>
         /// <returns>Task of Organization</returns>
+        
         System.Threading.Tasks.Task<Organization> PutOrganizationsMeAsync (Organization body = null);
 
         /// <summary>
@@ -704,6 +765,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization (optional)</param>
         /// <returns>Task of ApiResponse (Organization)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Organization>> PutOrganizationsMeAsyncWithHttpInfo (Organization body = null);
 
         /// <summary>
@@ -715,6 +777,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Whitelist settings</param>
         /// <returns>Task of OrgWhitelistSettings</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<OrgWhitelistSettings> PutOrganizationsWhitelistAsync (OrgWhitelistSettings body);
 
         /// <summary>
@@ -726,6 +789,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Whitelist settings</param>
         /// <returns>Task of ApiResponse (OrgWhitelistSettings)</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<OrgWhitelistSettings>> PutOrganizationsWhitelistAsyncWithHttpInfo (OrgWhitelistSettings body);
 
         #endregion Asynchronous Operations
@@ -826,6 +890,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Field type</param>
         /// <returns>FieldConfig</returns>
+        [Obsolete]
         public FieldConfig GetFieldconfig (string type)
         {
              ApiResponse<FieldConfig> localVarResponse = GetFieldconfigWithHttpInfo(type);
@@ -838,6 +903,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Field type</param>
         /// <returns>ApiResponse of FieldConfig</returns>
+        [Obsolete]
         public ApiResponse< FieldConfig > GetFieldconfigWithHttpInfo (string type)
         { 
             // verify the required parameter 'type' is set
@@ -920,6 +986,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Field type</param>
         /// <returns>Task of FieldConfig</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<FieldConfig> GetFieldconfigAsync (string type)
         {
              ApiResponse<FieldConfig> localVarResponse = await GetFieldconfigAsyncWithHttpInfo(type);
@@ -933,6 +1000,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Field type</param>
         /// <returns>Task of ApiResponse (FieldConfig)</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<FieldConfig>> GetFieldconfigAsyncWithHttpInfo (string type)
         { 
             // verify the required parameter 'type' is set
@@ -1016,6 +1084,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>EmbeddedIntegration</returns>
+        
         public EmbeddedIntegration GetOrganizationsEmbeddedintegration ()
         {
              ApiResponse<EmbeddedIntegration> localVarResponse = GetOrganizationsEmbeddedintegrationWithHttpInfo();
@@ -1027,6 +1096,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of EmbeddedIntegration</returns>
+        
         public ApiResponse< EmbeddedIntegration > GetOrganizationsEmbeddedintegrationWithHttpInfo ()
         { 
 
@@ -1104,6 +1174,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of EmbeddedIntegration</returns>
+        
         public async System.Threading.Tasks.Task<EmbeddedIntegration> GetOrganizationsEmbeddedintegrationAsync ()
         {
              ApiResponse<EmbeddedIntegration> localVarResponse = await GetOrganizationsEmbeddedintegrationAsyncWithHttpInfo();
@@ -1116,6 +1187,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (EmbeddedIntegration)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<EmbeddedIntegration>> GetOrganizationsEmbeddedintegrationAsyncWithHttpInfo ()
         { 
 
@@ -1194,6 +1266,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>IpAddressAuthentication</returns>
+        
         public IpAddressAuthentication GetOrganizationsIpaddressauthentication ()
         {
              ApiResponse<IpAddressAuthentication> localVarResponse = GetOrganizationsIpaddressauthenticationWithHttpInfo();
@@ -1205,6 +1278,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of IpAddressAuthentication</returns>
+        
         public ApiResponse< IpAddressAuthentication > GetOrganizationsIpaddressauthenticationWithHttpInfo ()
         { 
 
@@ -1282,6 +1356,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of IpAddressAuthentication</returns>
+        
         public async System.Threading.Tasks.Task<IpAddressAuthentication> GetOrganizationsIpaddressauthenticationAsync ()
         {
              ApiResponse<IpAddressAuthentication> localVarResponse = await GetOrganizationsIpaddressauthenticationAsyncWithHttpInfo();
@@ -1294,6 +1369,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (IpAddressAuthentication)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<IpAddressAuthentication>> GetOrganizationsIpaddressauthenticationAsyncWithHttpInfo ()
         { 
 
@@ -1373,6 +1449,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestId">Unique id for the limit change request</param>
         /// <returns>LimitChangeRequestDetails</returns>
+        
         public LimitChangeRequestDetails GetOrganizationsLimitsChangerequest (string requestId)
         {
              ApiResponse<LimitChangeRequestDetails> localVarResponse = GetOrganizationsLimitsChangerequestWithHttpInfo(requestId);
@@ -1385,6 +1462,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestId">Unique id for the limit change request</param>
         /// <returns>ApiResponse of LimitChangeRequestDetails</returns>
+        
         public ApiResponse< LimitChangeRequestDetails > GetOrganizationsLimitsChangerequestWithHttpInfo (string requestId)
         { 
             // verify the required parameter 'requestId' is set
@@ -1467,6 +1545,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestId">Unique id for the limit change request</param>
         /// <returns>Task of LimitChangeRequestDetails</returns>
+        
         public async System.Threading.Tasks.Task<LimitChangeRequestDetails> GetOrganizationsLimitsChangerequestAsync (string requestId)
         {
              ApiResponse<LimitChangeRequestDetails> localVarResponse = await GetOrganizationsLimitsChangerequestAsyncWithHttpInfo(requestId);
@@ -1480,6 +1559,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestId">Unique id for the limit change request</param>
         /// <returns>Task of ApiResponse (LimitChangeRequestDetails)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<LimitChangeRequestDetails>> GetOrganizationsLimitsChangerequestAsyncWithHttpInfo (string requestId)
         { 
             // verify the required parameter 'requestId' is set
@@ -1568,6 +1648,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page Size (optional, default to 25)</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>LimitChangeRequestsEntityListing</returns>
+        
         public LimitChangeRequestsEntityListing GetOrganizationsLimitsChangerequests (long? after = null, long? before = null, string status = null, int? pageSize = null, List<string> expand = null)
         {
              ApiResponse<LimitChangeRequestsEntityListing> localVarResponse = GetOrganizationsLimitsChangerequestsWithHttpInfo(after, before, status, pageSize, expand);
@@ -1584,6 +1665,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page Size (optional, default to 25)</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of LimitChangeRequestsEntityListing</returns>
+        
         public ApiResponse< LimitChangeRequestsEntityListing > GetOrganizationsLimitsChangerequestsWithHttpInfo (long? after = null, long? before = null, string status = null, int? pageSize = null, List<string> expand = null)
         { 
 
@@ -1671,6 +1753,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page Size (optional, default to 25)</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of LimitChangeRequestsEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<LimitChangeRequestsEntityListing> GetOrganizationsLimitsChangerequestsAsync (long? after = null, long? before = null, string status = null, int? pageSize = null, List<string> expand = null)
         {
              ApiResponse<LimitChangeRequestsEntityListing> localVarResponse = await GetOrganizationsLimitsChangerequestsAsyncWithHttpInfo(after, before, status, pageSize, expand);
@@ -1688,6 +1771,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page Size (optional, default to 25)</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (LimitChangeRequestsEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<LimitChangeRequestsEntityListing>> GetOrganizationsLimitsChangerequestsAsyncWithHttpInfo (long? after = null, long? before = null, string status = null, int? pageSize = null, List<string> expand = null)
         { 
 
@@ -1771,6 +1855,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>UrlResponse</returns>
+        
         public UrlResponse GetOrganizationsLimitsDocs ()
         {
              ApiResponse<UrlResponse> localVarResponse = GetOrganizationsLimitsDocsWithHttpInfo();
@@ -1782,6 +1867,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of UrlResponse</returns>
+        
         public ApiResponse< UrlResponse > GetOrganizationsLimitsDocsWithHttpInfo ()
         { 
 
@@ -1859,6 +1945,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of UrlResponse</returns>
+        
         public async System.Threading.Tasks.Task<UrlResponse> GetOrganizationsLimitsDocsAsync ()
         {
              ApiResponse<UrlResponse> localVarResponse = await GetOrganizationsLimitsDocsAsyncWithHttpInfo();
@@ -1871,6 +1958,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (UrlResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<UrlResponse>> GetOrganizationsLimitsDocsAsyncWithHttpInfo ()
         { 
 
@@ -1950,6 +2038,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="namespaceName">The namespace to fetch limits for</param>
         /// <returns>LimitsEntityListing</returns>
+        
         public LimitsEntityListing GetOrganizationsLimitsNamespace (string namespaceName)
         {
              ApiResponse<LimitsEntityListing> localVarResponse = GetOrganizationsLimitsNamespaceWithHttpInfo(namespaceName);
@@ -1962,6 +2051,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="namespaceName">The namespace to fetch limits for</param>
         /// <returns>ApiResponse of LimitsEntityListing</returns>
+        
         public ApiResponse< LimitsEntityListing > GetOrganizationsLimitsNamespaceWithHttpInfo (string namespaceName)
         { 
             // verify the required parameter 'namespaceName' is set
@@ -2044,6 +2134,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="namespaceName">The namespace to fetch limits for</param>
         /// <returns>Task of LimitsEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<LimitsEntityListing> GetOrganizationsLimitsNamespaceAsync (string namespaceName)
         {
              ApiResponse<LimitsEntityListing> localVarResponse = await GetOrganizationsLimitsNamespaceAsyncWithHttpInfo(namespaceName);
@@ -2057,6 +2148,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="namespaceName">The namespace to fetch limits for</param>
         /// <returns>Task of ApiResponse (LimitsEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<LimitsEntityListing>> GetOrganizationsLimitsNamespaceAsyncWithHttpInfo (string namespaceName)
         { 
             // verify the required parameter 'namespaceName' is set
@@ -2141,6 +2233,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="namespaceName">The namespace to fetch defaults limits for</param>
         /// <returns>LimitsEntityListing</returns>
+        
         public LimitsEntityListing GetOrganizationsLimitsNamespaceDefaults (string namespaceName)
         {
              ApiResponse<LimitsEntityListing> localVarResponse = GetOrganizationsLimitsNamespaceDefaultsWithHttpInfo(namespaceName);
@@ -2153,6 +2246,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="namespaceName">The namespace to fetch defaults limits for</param>
         /// <returns>ApiResponse of LimitsEntityListing</returns>
+        
         public ApiResponse< LimitsEntityListing > GetOrganizationsLimitsNamespaceDefaultsWithHttpInfo (string namespaceName)
         { 
             // verify the required parameter 'namespaceName' is set
@@ -2235,6 +2329,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="namespaceName">The namespace to fetch defaults limits for</param>
         /// <returns>Task of LimitsEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<LimitsEntityListing> GetOrganizationsLimitsNamespaceDefaultsAsync (string namespaceName)
         {
              ApiResponse<LimitsEntityListing> localVarResponse = await GetOrganizationsLimitsNamespaceDefaultsAsyncWithHttpInfo(namespaceName);
@@ -2248,6 +2343,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="namespaceName">The namespace to fetch defaults limits for</param>
         /// <returns>Task of ApiResponse (LimitsEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<LimitsEntityListing>> GetOrganizationsLimitsNamespaceDefaultsAsyncWithHttpInfo (string namespaceName)
         { 
             // verify the required parameter 'namespaceName' is set
@@ -2333,6 +2429,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 100)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Object</returns>
+        
         public Object GetOrganizationsLimitsNamespaces (int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<Object> localVarResponse = GetOrganizationsLimitsNamespacesWithHttpInfo(pageSize, pageNumber);
@@ -2346,6 +2443,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 100)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of Object</returns>
+        
         public ApiResponse< Object > GetOrganizationsLimitsNamespacesWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
 
@@ -2427,6 +2525,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 100)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of Object</returns>
+        
         public async System.Threading.Tasks.Task<Object> GetOrganizationsLimitsNamespacesAsync (int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<Object> localVarResponse = await GetOrganizationsLimitsNamespacesAsyncWithHttpInfo(pageSize, pageNumber);
@@ -2441,6 +2540,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 100)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> GetOrganizationsLimitsNamespacesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
 
@@ -2521,6 +2621,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Organization</returns>
+        
         public Organization GetOrganizationsMe ()
         {
              ApiResponse<Organization> localVarResponse = GetOrganizationsMeWithHttpInfo();
@@ -2532,6 +2633,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Organization</returns>
+        
         public ApiResponse< Organization > GetOrganizationsMeWithHttpInfo ()
         { 
 
@@ -2609,6 +2711,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Organization</returns>
+        
         public async System.Threading.Tasks.Task<Organization> GetOrganizationsMeAsync ()
         {
              ApiResponse<Organization> localVarResponse = await GetOrganizationsMeAsyncWithHttpInfo();
@@ -2621,6 +2724,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Organization)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Organization>> GetOrganizationsMeAsyncWithHttpInfo ()
         { 
 
@@ -2699,6 +2803,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>OrgWhitelistSettings</returns>
+        [Obsolete]
         public OrgWhitelistSettings GetOrganizationsWhitelist ()
         {
              ApiResponse<OrgWhitelistSettings> localVarResponse = GetOrganizationsWhitelistWithHttpInfo();
@@ -2710,6 +2815,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of OrgWhitelistSettings</returns>
+        [Obsolete]
         public ApiResponse< OrgWhitelistSettings > GetOrganizationsWhitelistWithHttpInfo ()
         { 
 
@@ -2787,6 +2893,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of OrgWhitelistSettings</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<OrgWhitelistSettings> GetOrganizationsWhitelistAsync ()
         {
              ApiResponse<OrgWhitelistSettings> localVarResponse = await GetOrganizationsWhitelistAsyncWithHttpInfo();
@@ -2799,6 +2906,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (OrgWhitelistSettings)</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<OrgWhitelistSettings>> GetOrganizationsWhitelistAsyncWithHttpInfo ()
         { 
 
@@ -2879,6 +2987,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="featureName">Organization feature</param>
         /// <param name="enabled">New state of feature</param>
         /// <returns>OrganizationFeatures</returns>
+        
         public OrganizationFeatures PatchOrganizationsFeature (string featureName, FeatureState enabled)
         {
              ApiResponse<OrganizationFeatures> localVarResponse = PatchOrganizationsFeatureWithHttpInfo(featureName, enabled);
@@ -2892,6 +3001,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="featureName">Organization feature</param>
         /// <param name="enabled">New state of feature</param>
         /// <returns>ApiResponse of OrganizationFeatures</returns>
+        
         public ApiResponse< OrganizationFeatures > PatchOrganizationsFeatureWithHttpInfo (string featureName, FeatureState enabled)
         { 
             // verify the required parameter 'featureName' is set
@@ -2984,6 +3094,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="featureName">Organization feature</param>
         /// <param name="enabled">New state of feature</param>
         /// <returns>Task of OrganizationFeatures</returns>
+        
         public async System.Threading.Tasks.Task<OrganizationFeatures> PatchOrganizationsFeatureAsync (string featureName, FeatureState enabled)
         {
              ApiResponse<OrganizationFeatures> localVarResponse = await PatchOrganizationsFeatureAsyncWithHttpInfo(featureName, enabled);
@@ -2998,6 +3109,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="featureName">Organization feature</param>
         /// <param name="enabled">New state of feature</param>
         /// <returns>Task of ApiResponse (OrganizationFeatures)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<OrganizationFeatures>> PatchOrganizationsFeatureAsyncWithHttpInfo (string featureName, FeatureState enabled)
         { 
             // verify the required parameter 'featureName' is set
@@ -3092,6 +3204,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Whitelist settings</param>
         /// <returns>EmbeddedIntegration</returns>
+        
         public EmbeddedIntegration PutOrganizationsEmbeddedintegration (EmbeddedIntegration body)
         {
              ApiResponse<EmbeddedIntegration> localVarResponse = PutOrganizationsEmbeddedintegrationWithHttpInfo(body);
@@ -3104,6 +3217,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Whitelist settings</param>
         /// <returns>ApiResponse of EmbeddedIntegration</returns>
+        
         public ApiResponse< EmbeddedIntegration > PutOrganizationsEmbeddedintegrationWithHttpInfo (EmbeddedIntegration body)
         { 
             // verify the required parameter 'body' is set
@@ -3191,6 +3305,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Whitelist settings</param>
         /// <returns>Task of EmbeddedIntegration</returns>
+        
         public async System.Threading.Tasks.Task<EmbeddedIntegration> PutOrganizationsEmbeddedintegrationAsync (EmbeddedIntegration body)
         {
              ApiResponse<EmbeddedIntegration> localVarResponse = await PutOrganizationsEmbeddedintegrationAsyncWithHttpInfo(body);
@@ -3204,6 +3319,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Whitelist settings</param>
         /// <returns>Task of ApiResponse (EmbeddedIntegration)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<EmbeddedIntegration>> PutOrganizationsEmbeddedintegrationAsyncWithHttpInfo (EmbeddedIntegration body)
         { 
             // verify the required parameter 'body' is set
@@ -3293,6 +3409,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">IP address Whitelist settings</param>
         /// <returns>IpAddressAuthentication</returns>
+        
         public IpAddressAuthentication PutOrganizationsIpaddressauthentication (IpAddressAuthentication body)
         {
              ApiResponse<IpAddressAuthentication> localVarResponse = PutOrganizationsIpaddressauthenticationWithHttpInfo(body);
@@ -3305,6 +3422,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">IP address Whitelist settings</param>
         /// <returns>ApiResponse of IpAddressAuthentication</returns>
+        
         public ApiResponse< IpAddressAuthentication > PutOrganizationsIpaddressauthenticationWithHttpInfo (IpAddressAuthentication body)
         { 
             // verify the required parameter 'body' is set
@@ -3392,6 +3510,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">IP address Whitelist settings</param>
         /// <returns>Task of IpAddressAuthentication</returns>
+        
         public async System.Threading.Tasks.Task<IpAddressAuthentication> PutOrganizationsIpaddressauthenticationAsync (IpAddressAuthentication body)
         {
              ApiResponse<IpAddressAuthentication> localVarResponse = await PutOrganizationsIpaddressauthenticationAsyncWithHttpInfo(body);
@@ -3405,6 +3524,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">IP address Whitelist settings</param>
         /// <returns>Task of ApiResponse (IpAddressAuthentication)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<IpAddressAuthentication>> PutOrganizationsIpaddressauthenticationAsyncWithHttpInfo (IpAddressAuthentication body)
         { 
             // verify the required parameter 'body' is set
@@ -3494,6 +3614,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization (optional)</param>
         /// <returns>Organization</returns>
+        
         public Organization PutOrganizationsMe (Organization body = null)
         {
              ApiResponse<Organization> localVarResponse = PutOrganizationsMeWithHttpInfo(body);
@@ -3506,6 +3627,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization (optional)</param>
         /// <returns>ApiResponse of Organization</returns>
+        
         public ApiResponse< Organization > PutOrganizationsMeWithHttpInfo (Organization body = null)
         { 
 
@@ -3590,6 +3712,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization (optional)</param>
         /// <returns>Task of Organization</returns>
+        
         public async System.Threading.Tasks.Task<Organization> PutOrganizationsMeAsync (Organization body = null)
         {
              ApiResponse<Organization> localVarResponse = await PutOrganizationsMeAsyncWithHttpInfo(body);
@@ -3603,6 +3726,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization (optional)</param>
         /// <returns>Task of ApiResponse (Organization)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Organization>> PutOrganizationsMeAsyncWithHttpInfo (Organization body = null)
         { 
 
@@ -3688,6 +3812,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Whitelist settings</param>
         /// <returns>OrgWhitelistSettings</returns>
+        [Obsolete]
         public OrgWhitelistSettings PutOrganizationsWhitelist (OrgWhitelistSettings body)
         {
              ApiResponse<OrgWhitelistSettings> localVarResponse = PutOrganizationsWhitelistWithHttpInfo(body);
@@ -3700,6 +3825,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Whitelist settings</param>
         /// <returns>ApiResponse of OrgWhitelistSettings</returns>
+        [Obsolete]
         public ApiResponse< OrgWhitelistSettings > PutOrganizationsWhitelistWithHttpInfo (OrgWhitelistSettings body)
         { 
             // verify the required parameter 'body' is set
@@ -3787,6 +3913,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Whitelist settings</param>
         /// <returns>Task of OrgWhitelistSettings</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<OrgWhitelistSettings> PutOrganizationsWhitelistAsync (OrgWhitelistSettings body)
         {
              ApiResponse<OrgWhitelistSettings> localVarResponse = await PutOrganizationsWhitelistAsyncWithHttpInfo(body);
@@ -3800,6 +3927,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Whitelist settings</param>
         /// <returns>Task of ApiResponse (OrgWhitelistSettings)</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<OrgWhitelistSettings>> PutOrganizationsWhitelistAsyncWithHttpInfo (OrgWhitelistSettings body)
         { 
             // verify the required parameter 'body' is set

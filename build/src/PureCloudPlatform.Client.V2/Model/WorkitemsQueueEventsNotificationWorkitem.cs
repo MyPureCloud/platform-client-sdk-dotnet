@@ -316,6 +316,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateModified">DateModified.</param>
         /// <param name="DateDue">DateDue.</param>
         /// <param name="DateExpires">DateExpires.</param>
+        /// <param name="DateAssignmentStateChanged">DateAssignmentStateChanged.</param>
         /// <param name="DurationSeconds">DurationSeconds.</param>
         /// <param name="Ttl">Ttl.</param>
         /// <param name="StatusId">StatusId.</param>
@@ -336,7 +337,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="QueueId">QueueId.</param>
         /// <param name="CustomFields">CustomFields.</param>
         /// <param name="Wrapup">Wrapup.</param>
-        public WorkitemsQueueEventsNotificationWorkitem(string Id = null, string Name = null, string TypeId = null, string Description = null, string LanguageId = null, int? Priority = null, string DateCreated = null, string DateModified = null, string DateDue = null, string DateExpires = null, int? DurationSeconds = null, int? Ttl = null, string StatusId = null, StatusCategoryEnum? StatusCategory = null, string DateClosed = null, string WorkbinId = null, string ReporterId = null, string AssigneeId = null, string ExternalContactId = null, string ExternalTag = null, string WrapupId = null, string ModifiedBy = null, OperationEnum? Operation = null, List<WorkitemsQueueEventsNotificationDelta> Changes = null, AssignmentStateEnum? AssignmentState = null, string AssignmentId = null, int? AlertTimeoutSeconds = null, string QueueId = null, Dictionary<string, WorkitemsQueueEventsNotificationCustomAttribute> CustomFields = null, WorkitemsQueueEventsNotificationWrapup Wrapup = null)
+        public WorkitemsQueueEventsNotificationWorkitem(string Id = null, string Name = null, string TypeId = null, string Description = null, string LanguageId = null, int? Priority = null, string DateCreated = null, string DateModified = null, string DateDue = null, string DateExpires = null, string DateAssignmentStateChanged = null, int? DurationSeconds = null, int? Ttl = null, string StatusId = null, StatusCategoryEnum? StatusCategory = null, string DateClosed = null, string WorkbinId = null, string ReporterId = null, string AssigneeId = null, string ExternalContactId = null, string ExternalTag = null, string WrapupId = null, string ModifiedBy = null, OperationEnum? Operation = null, List<WorkitemsQueueEventsNotificationDelta> Changes = null, AssignmentStateEnum? AssignmentState = null, string AssignmentId = null, int? AlertTimeoutSeconds = null, string QueueId = null, Dictionary<string, WorkitemsQueueEventsNotificationCustomAttribute> CustomFields = null, WorkitemsQueueEventsNotificationWrapup Wrapup = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -348,6 +349,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DateModified = DateModified;
             this.DateDue = DateDue;
             this.DateExpires = DateExpires;
+            this.DateAssignmentStateChanged = DateAssignmentStateChanged;
             this.DurationSeconds = DurationSeconds;
             this.Ttl = Ttl;
             this.StatusId = StatusId;
@@ -450,6 +452,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="dateExpires", EmitDefaultValue=false)]
         public string DateExpires { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets DateAssignmentStateChanged
+        /// </summary>
+        [DataMember(Name="dateAssignmentStateChanged", EmitDefaultValue=false)]
+        public string DateAssignmentStateChanged { get; set; }
 
 
 
@@ -613,6 +623,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  DateDue: ").Append(DateDue).Append("\n");
             sb.Append("  DateExpires: ").Append(DateExpires).Append("\n");
+            sb.Append("  DateAssignmentStateChanged: ").Append(DateAssignmentStateChanged).Append("\n");
             sb.Append("  DurationSeconds: ").Append(DurationSeconds).Append("\n");
             sb.Append("  Ttl: ").Append(Ttl).Append("\n");
             sb.Append("  StatusId: ").Append(StatusId).Append("\n");
@@ -722,6 +733,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateExpires == other.DateExpires ||
                     this.DateExpires != null &&
                     this.DateExpires.Equals(other.DateExpires)
+                ) &&
+                (
+                    this.DateAssignmentStateChanged == other.DateAssignmentStateChanged ||
+                    this.DateAssignmentStateChanged != null &&
+                    this.DateAssignmentStateChanged.Equals(other.DateAssignmentStateChanged)
                 ) &&
                 (
                     this.DurationSeconds == other.DurationSeconds ||
@@ -865,6 +881,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DateExpires != null)
                     hash = hash * 59 + this.DateExpires.GetHashCode();
+
+                if (this.DateAssignmentStateChanged != null)
+                    hash = hash * 59 + this.DateAssignmentStateChanged.GetHashCode();
 
                 if (this.DurationSeconds != null)
                     hash = hash * 59 + this.DurationSeconds.GetHashCode();

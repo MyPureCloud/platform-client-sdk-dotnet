@@ -1,14 +1,13 @@
 ---
-title: WemCoachingAppointmentTopicCoachingAppointmentDocument
+title: WemCoachingUserNotificationTopicCoachingAppointmentReference
 ---
-## ININ.PureCloudApi.Model.WemCoachingAppointmentTopicCoachingAppointmentDocument
+## ININ.PureCloudApi.Model.WemCoachingUserNotificationTopicCoachingAppointmentReference
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
-| **Action** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 

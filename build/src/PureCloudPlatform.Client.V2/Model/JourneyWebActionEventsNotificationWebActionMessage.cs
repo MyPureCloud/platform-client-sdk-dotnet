@@ -34,7 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Geolocation">Geolocation.</param>
         /// <param name="MktCampaign">MktCampaign.</param>
         /// <param name="VisitReferrer">VisitReferrer.</param>
-        public JourneyWebActionEventsNotificationWebActionMessage(JourneyWebActionEventsNotificationEventAction Action = null, JourneyWebActionEventsNotificationActionTarget ActionTarget = null, JourneyWebActionEventsNotificationActionMap ActionMap = null, string ErrorCode = null, string ErrorMessage = null, string UserAgentString = null, string IpAddress = null, string IpOrganization = null, JourneyWebActionEventsNotificationBrowser Browser = null, JourneyWebActionEventsNotificationDevice Device = null, JourneyWebActionEventsNotificationGeoLocation Geolocation = null, JourneyWebActionEventsNotificationMktCampaign MktCampaign = null, JourneyWebActionEventsNotificationReferrer VisitReferrer = null)
+        /// <param name="TimeToDisposition">TimeToDisposition.</param>
+        public JourneyWebActionEventsNotificationWebActionMessage(JourneyWebActionEventsNotificationEventAction Action = null, JourneyWebActionEventsNotificationActionTarget ActionTarget = null, JourneyWebActionEventsNotificationActionMap ActionMap = null, string ErrorCode = null, string ErrorMessage = null, string UserAgentString = null, string IpAddress = null, string IpOrganization = null, JourneyWebActionEventsNotificationBrowser Browser = null, JourneyWebActionEventsNotificationDevice Device = null, JourneyWebActionEventsNotificationGeoLocation Geolocation = null, JourneyWebActionEventsNotificationMktCampaign MktCampaign = null, JourneyWebActionEventsNotificationReferrer VisitReferrer = null, int? TimeToDisposition = null)
         {
             this.Action = Action;
             this.ActionTarget = ActionTarget;
@@ -49,6 +50,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Geolocation = Geolocation;
             this.MktCampaign = MktCampaign;
             this.VisitReferrer = VisitReferrer;
+            this.TimeToDisposition = TimeToDisposition;
             
         }
         
@@ -157,6 +159,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public JourneyWebActionEventsNotificationReferrer VisitReferrer { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets TimeToDisposition
+        /// </summary>
+        [DataMember(Name="timeToDisposition", EmitDefaultValue=false)]
+        public int? TimeToDisposition { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -179,6 +189,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Geolocation: ").Append(Geolocation).Append("\n");
             sb.Append("  MktCampaign: ").Append(MktCampaign).Append("\n");
             sb.Append("  VisitReferrer: ").Append(VisitReferrer).Append("\n");
+            sb.Append("  TimeToDisposition: ").Append(TimeToDisposition).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -283,6 +294,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.VisitReferrer == other.VisitReferrer ||
                     this.VisitReferrer != null &&
                     this.VisitReferrer.Equals(other.VisitReferrer)
+                ) &&
+                (
+                    this.TimeToDisposition == other.TimeToDisposition ||
+                    this.TimeToDisposition != null &&
+                    this.TimeToDisposition.Equals(other.TimeToDisposition)
                 );
         }
 
@@ -335,6 +351,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.VisitReferrer != null)
                     hash = hash * 59 + this.VisitReferrer.GetHashCode();
+
+                if (this.TimeToDisposition != null)
+                    hash = hash * 59 + this.TimeToDisposition.GetHashCode();
 
                 return hash;
             }

@@ -25,6 +25,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="licenseId">ID</param>
         /// <returns>LicenseDefinition</returns>
+        
         LicenseDefinition GetLicenseDefinition (string licenseId);
 
         /// <summary>
@@ -36,6 +37,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="licenseId">ID</param>
         /// <returns>ApiResponse of LicenseDefinition</returns>
+        
         ApiResponse<LicenseDefinition> GetLicenseDefinitionWithHttpInfo (string licenseId);
 
         /// <summary>
@@ -46,6 +48,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;LicenseDefinition&gt;</returns>
+        
         List<LicenseDefinition> GetLicenseDefinitions ();
 
         /// <summary>
@@ -56,6 +59,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;LicenseDefinition&gt;</returns>
+        
         ApiResponse<List<LicenseDefinition>> GetLicenseDefinitionsWithHttpInfo ();
 
         /// <summary>
@@ -67,6 +71,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="featureName">featureName</param>
         /// <returns>LicenseOrgToggle</returns>
+        
         LicenseOrgToggle GetLicenseToggle (string featureName);
 
         /// <summary>
@@ -78,6 +83,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="featureName">featureName</param>
         /// <returns>ApiResponse of LicenseOrgToggle</returns>
+        
         ApiResponse<LicenseOrgToggle> GetLicenseToggleWithHttpInfo (string featureName);
 
         /// <summary>
@@ -89,6 +95,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">ID</param>
         /// <returns>LicenseUser</returns>
+        
         LicenseUser GetLicenseUser (string userId);
 
         /// <summary>
@@ -100,6 +107,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">ID</param>
         /// <returns>ApiResponse of LicenseUser</returns>
+        
         ApiResponse<LicenseUser> GetLicenseUserWithHttpInfo (string userId);
 
         /// <summary>
@@ -112,6 +120,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>UserLicensesEntityListing</returns>
+        
         UserLicensesEntityListing GetLicenseUsers (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -124,6 +133,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of UserLicensesEntityListing</returns>
+        
         ApiResponse<UserLicensesEntityListing> GetLicenseUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -135,6 +145,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The roleIds to use while inferring licenses (optional)</param>
         /// <returns>List&lt;string&gt;</returns>
+        
         List<string> PostLicenseInfer (List<string> body = null);
 
         /// <summary>
@@ -146,6 +157,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The roleIds to use while inferring licenses (optional)</param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
+        
         ApiResponse<List<string>> PostLicenseInferWithHttpInfo (List<string> body = null);
 
         /// <summary>
@@ -157,6 +169,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The license assignments to update. (optional)</param>
         /// <returns>List&lt;LicenseUpdateStatus&gt;</returns>
+        
         List<LicenseUpdateStatus> PostLicenseOrganization (LicenseBatchAssignmentRequest body = null);
 
         /// <summary>
@@ -168,6 +181,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The license assignments to update. (optional)</param>
         /// <returns>ApiResponse of List&lt;LicenseUpdateStatus&gt;</returns>
+        
         ApiResponse<List<LicenseUpdateStatus>> PostLicenseOrganizationWithHttpInfo (LicenseBatchAssignmentRequest body = null);
 
         /// <summary>
@@ -179,6 +193,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="featureName">featureName</param>
         /// <returns>LicenseOrgToggle</returns>
+        
         LicenseOrgToggle PostLicenseToggle (string featureName);
 
         /// <summary>
@@ -190,6 +205,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="featureName">featureName</param>
         /// <returns>ApiResponse of LicenseOrgToggle</returns>
+        
         ApiResponse<LicenseOrgToggle> PostLicenseToggleWithHttpInfo (string featureName);
 
         /// <summary>
@@ -201,6 +217,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The user IDs to fetch. (optional)</param>
         /// <returns>Dictionary&lt;string, Object&gt;</returns>
+        
         Dictionary<string, Object> PostLicenseUsers (List<string> body = null);
 
         /// <summary>
@@ -212,6 +229,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The user IDs to fetch. (optional)</param>
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        
         ApiResponse<Dictionary<string, Object>> PostLicenseUsersWithHttpInfo (List<string> body = null);
 
         #endregion Synchronous Operations
@@ -227,6 +245,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="licenseId">ID</param>
         /// <returns>Task of LicenseDefinition</returns>
+        
         System.Threading.Tasks.Task<LicenseDefinition> GetLicenseDefinitionAsync (string licenseId);
 
         /// <summary>
@@ -238,6 +257,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="licenseId">ID</param>
         /// <returns>Task of ApiResponse (LicenseDefinition)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<LicenseDefinition>> GetLicenseDefinitionAsyncWithHttpInfo (string licenseId);
 
         /// <summary>
@@ -248,6 +268,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;LicenseDefinition&gt;</returns>
+        
         System.Threading.Tasks.Task<List<LicenseDefinition>> GetLicenseDefinitionsAsync ();
 
         /// <summary>
@@ -258,6 +279,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;LicenseDefinition&gt;)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<List<LicenseDefinition>>> GetLicenseDefinitionsAsyncWithHttpInfo ();
 
         /// <summary>
@@ -269,6 +291,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="featureName">featureName</param>
         /// <returns>Task of LicenseOrgToggle</returns>
+        
         System.Threading.Tasks.Task<LicenseOrgToggle> GetLicenseToggleAsync (string featureName);
 
         /// <summary>
@@ -280,6 +303,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="featureName">featureName</param>
         /// <returns>Task of ApiResponse (LicenseOrgToggle)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<LicenseOrgToggle>> GetLicenseToggleAsyncWithHttpInfo (string featureName);
 
         /// <summary>
@@ -291,6 +315,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">ID</param>
         /// <returns>Task of LicenseUser</returns>
+        
         System.Threading.Tasks.Task<LicenseUser> GetLicenseUserAsync (string userId);
 
         /// <summary>
@@ -302,6 +327,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">ID</param>
         /// <returns>Task of ApiResponse (LicenseUser)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<LicenseUser>> GetLicenseUserAsyncWithHttpInfo (string userId);
 
         /// <summary>
@@ -314,6 +340,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of UserLicensesEntityListing</returns>
+        
         System.Threading.Tasks.Task<UserLicensesEntityListing> GetLicenseUsersAsync (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -326,6 +353,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (UserLicensesEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<UserLicensesEntityListing>> GetLicenseUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -337,6 +365,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The roleIds to use while inferring licenses (optional)</param>
         /// <returns>Task of List&lt;string&gt;</returns>
+        
         System.Threading.Tasks.Task<List<string>> PostLicenseInferAsync (List<string> body = null);
 
         /// <summary>
@@ -348,6 +377,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The roleIds to use while inferring licenses (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<List<string>>> PostLicenseInferAsyncWithHttpInfo (List<string> body = null);
 
         /// <summary>
@@ -359,6 +389,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The license assignments to update. (optional)</param>
         /// <returns>Task of List&lt;LicenseUpdateStatus&gt;</returns>
+        
         System.Threading.Tasks.Task<List<LicenseUpdateStatus>> PostLicenseOrganizationAsync (LicenseBatchAssignmentRequest body = null);
 
         /// <summary>
@@ -370,6 +401,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The license assignments to update. (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;LicenseUpdateStatus&gt;)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<List<LicenseUpdateStatus>>> PostLicenseOrganizationAsyncWithHttpInfo (LicenseBatchAssignmentRequest body = null);
 
         /// <summary>
@@ -381,6 +413,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="featureName">featureName</param>
         /// <returns>Task of LicenseOrgToggle</returns>
+        
         System.Threading.Tasks.Task<LicenseOrgToggle> PostLicenseToggleAsync (string featureName);
 
         /// <summary>
@@ -392,6 +425,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="featureName">featureName</param>
         /// <returns>Task of ApiResponse (LicenseOrgToggle)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<LicenseOrgToggle>> PostLicenseToggleAsyncWithHttpInfo (string featureName);
 
         /// <summary>
@@ -403,6 +437,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The user IDs to fetch. (optional)</param>
         /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
+        
         System.Threading.Tasks.Task<Dictionary<string, Object>> PostLicenseUsersAsync (List<string> body = null);
 
         /// <summary>
@@ -414,6 +449,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The user IDs to fetch. (optional)</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> PostLicenseUsersAsyncWithHttpInfo (List<string> body = null);
 
         #endregion Asynchronous Operations
@@ -514,6 +550,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="licenseId">ID</param>
         /// <returns>LicenseDefinition</returns>
+        
         public LicenseDefinition GetLicenseDefinition (string licenseId)
         {
              ApiResponse<LicenseDefinition> localVarResponse = GetLicenseDefinitionWithHttpInfo(licenseId);
@@ -526,6 +563,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="licenseId">ID</param>
         /// <returns>ApiResponse of LicenseDefinition</returns>
+        
         public ApiResponse< LicenseDefinition > GetLicenseDefinitionWithHttpInfo (string licenseId)
         { 
             // verify the required parameter 'licenseId' is set
@@ -608,6 +646,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="licenseId">ID</param>
         /// <returns>Task of LicenseDefinition</returns>
+        
         public async System.Threading.Tasks.Task<LicenseDefinition> GetLicenseDefinitionAsync (string licenseId)
         {
              ApiResponse<LicenseDefinition> localVarResponse = await GetLicenseDefinitionAsyncWithHttpInfo(licenseId);
@@ -621,6 +660,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="licenseId">ID</param>
         /// <returns>Task of ApiResponse (LicenseDefinition)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<LicenseDefinition>> GetLicenseDefinitionAsyncWithHttpInfo (string licenseId)
         { 
             // verify the required parameter 'licenseId' is set
@@ -704,6 +744,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;LicenseDefinition&gt;</returns>
+        
         public List<LicenseDefinition> GetLicenseDefinitions ()
         {
              ApiResponse<List<LicenseDefinition>> localVarResponse = GetLicenseDefinitionsWithHttpInfo();
@@ -715,6 +756,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;LicenseDefinition&gt;</returns>
+        
         public ApiResponse< List<LicenseDefinition> > GetLicenseDefinitionsWithHttpInfo ()
         { 
 
@@ -792,6 +834,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;LicenseDefinition&gt;</returns>
+        
         public async System.Threading.Tasks.Task<List<LicenseDefinition>> GetLicenseDefinitionsAsync ()
         {
              ApiResponse<List<LicenseDefinition>> localVarResponse = await GetLicenseDefinitionsAsyncWithHttpInfo();
@@ -804,6 +847,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;LicenseDefinition&gt;)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<List<LicenseDefinition>>> GetLicenseDefinitionsAsyncWithHttpInfo ()
         { 
 
@@ -883,6 +927,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="featureName">featureName</param>
         /// <returns>LicenseOrgToggle</returns>
+        
         public LicenseOrgToggle GetLicenseToggle (string featureName)
         {
              ApiResponse<LicenseOrgToggle> localVarResponse = GetLicenseToggleWithHttpInfo(featureName);
@@ -895,6 +940,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="featureName">featureName</param>
         /// <returns>ApiResponse of LicenseOrgToggle</returns>
+        
         public ApiResponse< LicenseOrgToggle > GetLicenseToggleWithHttpInfo (string featureName)
         { 
             // verify the required parameter 'featureName' is set
@@ -977,6 +1023,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="featureName">featureName</param>
         /// <returns>Task of LicenseOrgToggle</returns>
+        
         public async System.Threading.Tasks.Task<LicenseOrgToggle> GetLicenseToggleAsync (string featureName)
         {
              ApiResponse<LicenseOrgToggle> localVarResponse = await GetLicenseToggleAsyncWithHttpInfo(featureName);
@@ -990,6 +1037,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="featureName">featureName</param>
         /// <returns>Task of ApiResponse (LicenseOrgToggle)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<LicenseOrgToggle>> GetLicenseToggleAsyncWithHttpInfo (string featureName)
         { 
             // verify the required parameter 'featureName' is set
@@ -1074,6 +1122,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">ID</param>
         /// <returns>LicenseUser</returns>
+        
         public LicenseUser GetLicenseUser (string userId)
         {
              ApiResponse<LicenseUser> localVarResponse = GetLicenseUserWithHttpInfo(userId);
@@ -1086,6 +1135,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">ID</param>
         /// <returns>ApiResponse of LicenseUser</returns>
+        
         public ApiResponse< LicenseUser > GetLicenseUserWithHttpInfo (string userId)
         { 
             // verify the required parameter 'userId' is set
@@ -1168,6 +1218,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">ID</param>
         /// <returns>Task of LicenseUser</returns>
+        
         public async System.Threading.Tasks.Task<LicenseUser> GetLicenseUserAsync (string userId)
         {
              ApiResponse<LicenseUser> localVarResponse = await GetLicenseUserAsyncWithHttpInfo(userId);
@@ -1181,6 +1232,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">ID</param>
         /// <returns>Task of ApiResponse (LicenseUser)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<LicenseUser>> GetLicenseUserAsyncWithHttpInfo (string userId)
         { 
             // verify the required parameter 'userId' is set
@@ -1266,6 +1318,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>UserLicensesEntityListing</returns>
+        
         public UserLicensesEntityListing GetLicenseUsers (int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<UserLicensesEntityListing> localVarResponse = GetLicenseUsersWithHttpInfo(pageSize, pageNumber);
@@ -1279,6 +1332,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of UserLicensesEntityListing</returns>
+        
         public ApiResponse< UserLicensesEntityListing > GetLicenseUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
 
@@ -1360,6 +1414,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of UserLicensesEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<UserLicensesEntityListing> GetLicenseUsersAsync (int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<UserLicensesEntityListing> localVarResponse = await GetLicenseUsersAsyncWithHttpInfo(pageSize, pageNumber);
@@ -1374,6 +1429,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (UserLicensesEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<UserLicensesEntityListing>> GetLicenseUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
 
@@ -1455,6 +1511,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The roleIds to use while inferring licenses (optional)</param>
         /// <returns>List&lt;string&gt;</returns>
+        
         public List<string> PostLicenseInfer (List<string> body = null)
         {
              ApiResponse<List<string>> localVarResponse = PostLicenseInferWithHttpInfo(body);
@@ -1467,6 +1524,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The roleIds to use while inferring licenses (optional)</param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
+        
         public ApiResponse< List<string> > PostLicenseInferWithHttpInfo (List<string> body = null)
         { 
 
@@ -1551,6 +1609,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The roleIds to use while inferring licenses (optional)</param>
         /// <returns>Task of List&lt;string&gt;</returns>
+        
         public async System.Threading.Tasks.Task<List<string>> PostLicenseInferAsync (List<string> body = null)
         {
              ApiResponse<List<string>> localVarResponse = await PostLicenseInferAsyncWithHttpInfo(body);
@@ -1564,6 +1623,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The roleIds to use while inferring licenses (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<List<string>>> PostLicenseInferAsyncWithHttpInfo (List<string> body = null)
         { 
 
@@ -1649,6 +1709,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The license assignments to update. (optional)</param>
         /// <returns>List&lt;LicenseUpdateStatus&gt;</returns>
+        
         public List<LicenseUpdateStatus> PostLicenseOrganization (LicenseBatchAssignmentRequest body = null)
         {
              ApiResponse<List<LicenseUpdateStatus>> localVarResponse = PostLicenseOrganizationWithHttpInfo(body);
@@ -1661,6 +1722,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The license assignments to update. (optional)</param>
         /// <returns>ApiResponse of List&lt;LicenseUpdateStatus&gt;</returns>
+        
         public ApiResponse< List<LicenseUpdateStatus> > PostLicenseOrganizationWithHttpInfo (LicenseBatchAssignmentRequest body = null)
         { 
 
@@ -1745,6 +1807,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The license assignments to update. (optional)</param>
         /// <returns>Task of List&lt;LicenseUpdateStatus&gt;</returns>
+        
         public async System.Threading.Tasks.Task<List<LicenseUpdateStatus>> PostLicenseOrganizationAsync (LicenseBatchAssignmentRequest body = null)
         {
              ApiResponse<List<LicenseUpdateStatus>> localVarResponse = await PostLicenseOrganizationAsyncWithHttpInfo(body);
@@ -1758,6 +1821,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The license assignments to update. (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;LicenseUpdateStatus&gt;)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<List<LicenseUpdateStatus>>> PostLicenseOrganizationAsyncWithHttpInfo (LicenseBatchAssignmentRequest body = null)
         { 
 
@@ -1843,6 +1907,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="featureName">featureName</param>
         /// <returns>LicenseOrgToggle</returns>
+        
         public LicenseOrgToggle PostLicenseToggle (string featureName)
         {
              ApiResponse<LicenseOrgToggle> localVarResponse = PostLicenseToggleWithHttpInfo(featureName);
@@ -1855,6 +1920,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="featureName">featureName</param>
         /// <returns>ApiResponse of LicenseOrgToggle</returns>
+        
         public ApiResponse< LicenseOrgToggle > PostLicenseToggleWithHttpInfo (string featureName)
         { 
             // verify the required parameter 'featureName' is set
@@ -1937,6 +2003,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="featureName">featureName</param>
         /// <returns>Task of LicenseOrgToggle</returns>
+        
         public async System.Threading.Tasks.Task<LicenseOrgToggle> PostLicenseToggleAsync (string featureName)
         {
              ApiResponse<LicenseOrgToggle> localVarResponse = await PostLicenseToggleAsyncWithHttpInfo(featureName);
@@ -1950,6 +2017,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="featureName">featureName</param>
         /// <returns>Task of ApiResponse (LicenseOrgToggle)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<LicenseOrgToggle>> PostLicenseToggleAsyncWithHttpInfo (string featureName)
         { 
             // verify the required parameter 'featureName' is set
@@ -2034,6 +2102,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The user IDs to fetch. (optional)</param>
         /// <returns>Dictionary&lt;string, Object&gt;</returns>
+        
         public Dictionary<string, Object> PostLicenseUsers (List<string> body = null)
         {
              ApiResponse<Dictionary<string, Object>> localVarResponse = PostLicenseUsersWithHttpInfo(body);
@@ -2046,6 +2115,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The user IDs to fetch. (optional)</param>
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        
         public ApiResponse< Dictionary<string, Object> > PostLicenseUsersWithHttpInfo (List<string> body = null)
         { 
 
@@ -2130,6 +2200,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The user IDs to fetch. (optional)</param>
         /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
+        
         public async System.Threading.Tasks.Task<Dictionary<string, Object>> PostLicenseUsersAsync (List<string> body = null)
         {
              ApiResponse<Dictionary<string, Object>> localVarResponse = await PostLicenseUsersAsyncWithHttpInfo(body);
@@ -2143,6 +2214,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The user IDs to fetch. (optional)</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> PostLicenseUsersAsyncWithHttpInfo (List<string> body = null)
         { 
 

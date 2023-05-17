@@ -25,6 +25,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns></returns>
+        
         void DeleteGreeting (string greetingId);
 
         /// <summary>
@@ -36,6 +37,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> DeleteGreetingWithHttpInfo (string greetingId);
 
         /// <summary>
@@ -47,6 +49,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>Greeting</returns>
+        
         Greeting GetGreeting (string greetingId);
 
         /// <summary>
@@ -58,6 +61,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>ApiResponse of Greeting</returns>
+        
         ApiResponse<Greeting> GetGreetingWithHttpInfo (string greetingId);
 
         /// <summary>
@@ -70,6 +74,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
         /// <returns>GreetingMediaInfo</returns>
+        
         GreetingMediaInfo GetGreetingMedia (string greetingId, string formatId = null);
 
         /// <summary>
@@ -82,6 +87,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
         /// <returns>ApiResponse of GreetingMediaInfo</returns>
+        
         ApiResponse<GreetingMediaInfo> GetGreetingMediaWithHttpInfo (string greetingId, string formatId = null);
 
         /// <summary>
@@ -94,6 +100,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>DomainEntityListing</returns>
+        
         DomainEntityListing GetGreetings (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -106,6 +113,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of DomainEntityListing</returns>
+        
         ApiResponse<DomainEntityListing> GetGreetingsWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -116,6 +124,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>DefaultGreetingList</returns>
+        
         DefaultGreetingList GetGreetingsDefaults ();
 
         /// <summary>
@@ -126,6 +135,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of DefaultGreetingList</returns>
+        
         ApiResponse<DefaultGreetingList> GetGreetingsDefaultsWithHttpInfo ();
 
         /// <summary>
@@ -139,6 +149,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>GreetingListing</returns>
+        
         GreetingListing GetGroupGreetings (string groupId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -152,6 +163,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of GreetingListing</returns>
+        
         ApiResponse<GreetingListing> GetGroupGreetingsWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -163,6 +175,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <returns>DefaultGreetingList</returns>
+        
         DefaultGreetingList GetGroupGreetingsDefaults (string groupId);
 
         /// <summary>
@@ -174,6 +187,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <returns>ApiResponse of DefaultGreetingList</returns>
+        
         ApiResponse<DefaultGreetingList> GetGroupGreetingsDefaultsWithHttpInfo (string groupId);
 
         /// <summary>
@@ -187,6 +201,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>DomainEntityListing</returns>
+        
         DomainEntityListing GetUserGreetings (string userId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -200,6 +215,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of DomainEntityListing</returns>
+        
         ApiResponse<DomainEntityListing> GetUserGreetingsWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -211,6 +227,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>DefaultGreetingList</returns>
+        
         DefaultGreetingList GetUserGreetingsDefaults (string userId);
 
         /// <summary>
@@ -222,6 +239,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of DefaultGreetingList</returns>
+        
         ApiResponse<DefaultGreetingList> GetUserGreetingsDefaultsWithHttpInfo (string userId);
 
         /// <summary>
@@ -233,6 +251,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Greeting</returns>
+        
         Greeting PostGreetings (Greeting body);
 
         /// <summary>
@@ -244,6 +263,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Greeting to create</param>
         /// <returns>ApiResponse of Greeting</returns>
+        
         ApiResponse<Greeting> PostGreetingsWithHttpInfo (Greeting body);
 
         /// <summary>
@@ -256,6 +276,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Greeting</returns>
+        
         Greeting PostGroupGreetings (string groupId, Greeting body);
 
         /// <summary>
@@ -268,6 +289,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="body">The Greeting to create</param>
         /// <returns>ApiResponse of Greeting</returns>
+        
         ApiResponse<Greeting> PostGroupGreetingsWithHttpInfo (string groupId, Greeting body);
 
         /// <summary>
@@ -280,6 +302,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Greeting</returns>
+        
         Greeting PostUserGreetings (string userId, Greeting body);
 
         /// <summary>
@@ -292,6 +315,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The Greeting to create</param>
         /// <returns>ApiResponse of Greeting</returns>
+        
         ApiResponse<Greeting> PostUserGreetingsWithHttpInfo (string userId, Greeting body);
 
         /// <summary>
@@ -304,6 +328,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="body">The updated Greeting</param>
         /// <returns>Greeting</returns>
+        
         Greeting PutGreeting (string greetingId, Greeting body);
 
         /// <summary>
@@ -316,6 +341,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="body">The updated Greeting</param>
         /// <returns>ApiResponse of Greeting</returns>
+        
         ApiResponse<Greeting> PutGreetingWithHttpInfo (string greetingId, Greeting body);
 
         /// <summary>
@@ -327,6 +353,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>DefaultGreetingList</returns>
+        
         DefaultGreetingList PutGreetingsDefaults (DefaultGreetingList body);
 
         /// <summary>
@@ -338,6 +365,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>ApiResponse of DefaultGreetingList</returns>
+        
         ApiResponse<DefaultGreetingList> PutGreetingsDefaultsWithHttpInfo (DefaultGreetingList body);
 
         /// <summary>
@@ -350,6 +378,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>DefaultGreetingList</returns>
+        
         DefaultGreetingList PutGroupGreetingsDefaults (string groupId, DefaultGreetingList body);
 
         /// <summary>
@@ -362,6 +391,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>ApiResponse of DefaultGreetingList</returns>
+        
         ApiResponse<DefaultGreetingList> PutGroupGreetingsDefaultsWithHttpInfo (string groupId, DefaultGreetingList body);
 
         /// <summary>
@@ -374,6 +404,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>DefaultGreetingList</returns>
+        
         DefaultGreetingList PutUserGreetingsDefaults (string userId, DefaultGreetingList body);
 
         /// <summary>
@@ -386,6 +417,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>ApiResponse of DefaultGreetingList</returns>
+        
         ApiResponse<DefaultGreetingList> PutUserGreetingsDefaultsWithHttpInfo (string userId, DefaultGreetingList body);
 
         #endregion Synchronous Operations
@@ -401,6 +433,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task DeleteGreetingAsync (string greetingId);
 
         /// <summary>
@@ -412,6 +445,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteGreetingAsyncWithHttpInfo (string greetingId);
 
         /// <summary>
@@ -423,6 +457,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>Task of Greeting</returns>
+        
         System.Threading.Tasks.Task<Greeting> GetGreetingAsync (string greetingId);
 
         /// <summary>
@@ -434,6 +469,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>Task of ApiResponse (Greeting)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Greeting>> GetGreetingAsyncWithHttpInfo (string greetingId);
 
         /// <summary>
@@ -446,6 +482,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
         /// <returns>Task of GreetingMediaInfo</returns>
+        
         System.Threading.Tasks.Task<GreetingMediaInfo> GetGreetingMediaAsync (string greetingId, string formatId = null);
 
         /// <summary>
@@ -458,6 +495,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
         /// <returns>Task of ApiResponse (GreetingMediaInfo)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<GreetingMediaInfo>> GetGreetingMediaAsyncWithHttpInfo (string greetingId, string formatId = null);
 
         /// <summary>
@@ -470,6 +508,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of DomainEntityListing</returns>
+        
         System.Threading.Tasks.Task<DomainEntityListing> GetGreetingsAsync (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -482,6 +521,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (DomainEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DomainEntityListing>> GetGreetingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -492,6 +532,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of DefaultGreetingList</returns>
+        
         System.Threading.Tasks.Task<DefaultGreetingList> GetGreetingsDefaultsAsync ();
 
         /// <summary>
@@ -502,6 +543,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> GetGreetingsDefaultsAsyncWithHttpInfo ();
 
         /// <summary>
@@ -515,6 +557,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of GreetingListing</returns>
+        
         System.Threading.Tasks.Task<GreetingListing> GetGroupGreetingsAsync (string groupId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -528,6 +571,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (GreetingListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<GreetingListing>> GetGroupGreetingsAsyncWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -539,6 +583,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of DefaultGreetingList</returns>
+        
         System.Threading.Tasks.Task<DefaultGreetingList> GetGroupGreetingsDefaultsAsync (string groupId);
 
         /// <summary>
@@ -550,6 +595,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> GetGroupGreetingsDefaultsAsyncWithHttpInfo (string groupId);
 
         /// <summary>
@@ -563,6 +609,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of DomainEntityListing</returns>
+        
         System.Threading.Tasks.Task<DomainEntityListing> GetUserGreetingsAsync (string userId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -576,6 +623,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (DomainEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DomainEntityListing>> GetUserGreetingsAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -587,6 +635,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of DefaultGreetingList</returns>
+        
         System.Threading.Tasks.Task<DefaultGreetingList> GetUserGreetingsDefaultsAsync (string userId);
 
         /// <summary>
@@ -598,6 +647,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> GetUserGreetingsDefaultsAsyncWithHttpInfo (string userId);
 
         /// <summary>
@@ -609,6 +659,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Task of Greeting</returns>
+        
         System.Threading.Tasks.Task<Greeting> PostGreetingsAsync (Greeting body);
 
         /// <summary>
@@ -620,6 +671,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Task of ApiResponse (Greeting)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Greeting>> PostGreetingsAsyncWithHttpInfo (Greeting body);
 
         /// <summary>
@@ -632,6 +684,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Task of Greeting</returns>
+        
         System.Threading.Tasks.Task<Greeting> PostGroupGreetingsAsync (string groupId, Greeting body);
 
         /// <summary>
@@ -644,6 +697,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Task of ApiResponse (Greeting)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Greeting>> PostGroupGreetingsAsyncWithHttpInfo (string groupId, Greeting body);
 
         /// <summary>
@@ -656,6 +710,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Task of Greeting</returns>
+        
         System.Threading.Tasks.Task<Greeting> PostUserGreetingsAsync (string userId, Greeting body);
 
         /// <summary>
@@ -668,6 +723,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Task of ApiResponse (Greeting)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Greeting>> PostUserGreetingsAsyncWithHttpInfo (string userId, Greeting body);
 
         /// <summary>
@@ -680,6 +736,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="body">The updated Greeting</param>
         /// <returns>Task of Greeting</returns>
+        
         System.Threading.Tasks.Task<Greeting> PutGreetingAsync (string greetingId, Greeting body);
 
         /// <summary>
@@ -692,6 +749,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="body">The updated Greeting</param>
         /// <returns>Task of ApiResponse (Greeting)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Greeting>> PutGreetingAsyncWithHttpInfo (string greetingId, Greeting body);
 
         /// <summary>
@@ -703,6 +761,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>Task of DefaultGreetingList</returns>
+        
         System.Threading.Tasks.Task<DefaultGreetingList> PutGreetingsDefaultsAsync (DefaultGreetingList body);
 
         /// <summary>
@@ -714,6 +773,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> PutGreetingsDefaultsAsyncWithHttpInfo (DefaultGreetingList body);
 
         /// <summary>
@@ -726,6 +786,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>Task of DefaultGreetingList</returns>
+        
         System.Threading.Tasks.Task<DefaultGreetingList> PutGroupGreetingsDefaultsAsync (string groupId, DefaultGreetingList body);
 
         /// <summary>
@@ -738,6 +799,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> PutGroupGreetingsDefaultsAsyncWithHttpInfo (string groupId, DefaultGreetingList body);
 
         /// <summary>
@@ -750,6 +812,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>Task of DefaultGreetingList</returns>
+        
         System.Threading.Tasks.Task<DefaultGreetingList> PutUserGreetingsDefaultsAsync (string userId, DefaultGreetingList body);
 
         /// <summary>
@@ -762,6 +825,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> PutUserGreetingsDefaultsAsyncWithHttpInfo (string userId, DefaultGreetingList body);
 
         #endregion Asynchronous Operations
@@ -862,6 +926,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns></returns>
+        
         public void DeleteGreeting (string greetingId)
         {
              DeleteGreetingWithHttpInfo(greetingId);
@@ -873,6 +938,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> DeleteGreetingWithHttpInfo (string greetingId)
         { 
             // verify the required parameter 'greetingId' is set
@@ -955,6 +1021,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task DeleteGreetingAsync (string greetingId)
         {
              await DeleteGreetingAsyncWithHttpInfo(greetingId);
@@ -967,6 +1034,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteGreetingAsyncWithHttpInfo (string greetingId)
         { 
             // verify the required parameter 'greetingId' is set
@@ -1051,6 +1119,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>Greeting</returns>
+        
         public Greeting GetGreeting (string greetingId)
         {
              ApiResponse<Greeting> localVarResponse = GetGreetingWithHttpInfo(greetingId);
@@ -1063,6 +1132,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>ApiResponse of Greeting</returns>
+        
         public ApiResponse< Greeting > GetGreetingWithHttpInfo (string greetingId)
         { 
             // verify the required parameter 'greetingId' is set
@@ -1145,6 +1215,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>Task of Greeting</returns>
+        
         public async System.Threading.Tasks.Task<Greeting> GetGreetingAsync (string greetingId)
         {
              ApiResponse<Greeting> localVarResponse = await GetGreetingAsyncWithHttpInfo(greetingId);
@@ -1158,6 +1229,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>Task of ApiResponse (Greeting)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Greeting>> GetGreetingAsyncWithHttpInfo (string greetingId)
         { 
             // verify the required parameter 'greetingId' is set
@@ -1243,6 +1315,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
         /// <returns>GreetingMediaInfo</returns>
+        
         public GreetingMediaInfo GetGreetingMedia (string greetingId, string formatId = null)
         {
              ApiResponse<GreetingMediaInfo> localVarResponse = GetGreetingMediaWithHttpInfo(greetingId, formatId);
@@ -1256,6 +1329,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
         /// <returns>ApiResponse of GreetingMediaInfo</returns>
+        
         public ApiResponse< GreetingMediaInfo > GetGreetingMediaWithHttpInfo (string greetingId, string formatId = null)
         { 
             // verify the required parameter 'greetingId' is set
@@ -1340,6 +1414,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
         /// <returns>Task of GreetingMediaInfo</returns>
+        
         public async System.Threading.Tasks.Task<GreetingMediaInfo> GetGreetingMediaAsync (string greetingId, string formatId = null)
         {
              ApiResponse<GreetingMediaInfo> localVarResponse = await GetGreetingMediaAsyncWithHttpInfo(greetingId, formatId);
@@ -1354,6 +1429,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
         /// <returns>Task of ApiResponse (GreetingMediaInfo)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<GreetingMediaInfo>> GetGreetingMediaAsyncWithHttpInfo (string greetingId, string formatId = null)
         { 
             // verify the required parameter 'greetingId' is set
@@ -1440,6 +1516,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>DomainEntityListing</returns>
+        
         public DomainEntityListing GetGreetings (int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<DomainEntityListing> localVarResponse = GetGreetingsWithHttpInfo(pageSize, pageNumber);
@@ -1453,6 +1530,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of DomainEntityListing</returns>
+        
         public ApiResponse< DomainEntityListing > GetGreetingsWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
 
@@ -1534,6 +1612,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of DomainEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<DomainEntityListing> GetGreetingsAsync (int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<DomainEntityListing> localVarResponse = await GetGreetingsAsyncWithHttpInfo(pageSize, pageNumber);
@@ -1548,6 +1627,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (DomainEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DomainEntityListing>> GetGreetingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
 
@@ -1628,6 +1708,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>DefaultGreetingList</returns>
+        
         public DefaultGreetingList GetGreetingsDefaults ()
         {
              ApiResponse<DefaultGreetingList> localVarResponse = GetGreetingsDefaultsWithHttpInfo();
@@ -1639,6 +1720,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of DefaultGreetingList</returns>
+        
         public ApiResponse< DefaultGreetingList > GetGreetingsDefaultsWithHttpInfo ()
         { 
 
@@ -1716,6 +1798,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of DefaultGreetingList</returns>
+        
         public async System.Threading.Tasks.Task<DefaultGreetingList> GetGreetingsDefaultsAsync ()
         {
              ApiResponse<DefaultGreetingList> localVarResponse = await GetGreetingsDefaultsAsyncWithHttpInfo();
@@ -1728,6 +1811,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> GetGreetingsDefaultsAsyncWithHttpInfo ()
         { 
 
@@ -1809,6 +1893,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>GreetingListing</returns>
+        
         public GreetingListing GetGroupGreetings (string groupId, int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<GreetingListing> localVarResponse = GetGroupGreetingsWithHttpInfo(groupId, pageSize, pageNumber);
@@ -1823,6 +1908,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of GreetingListing</returns>
+        
         public ApiResponse< GreetingListing > GetGroupGreetingsWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null)
         { 
             // verify the required parameter 'groupId' is set
@@ -1909,6 +1995,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of GreetingListing</returns>
+        
         public async System.Threading.Tasks.Task<GreetingListing> GetGroupGreetingsAsync (string groupId, int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<GreetingListing> localVarResponse = await GetGroupGreetingsAsyncWithHttpInfo(groupId, pageSize, pageNumber);
@@ -1924,6 +2011,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (GreetingListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<GreetingListing>> GetGroupGreetingsAsyncWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null)
         { 
             // verify the required parameter 'groupId' is set
@@ -2010,6 +2098,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <returns>DefaultGreetingList</returns>
+        
         public DefaultGreetingList GetGroupGreetingsDefaults (string groupId)
         {
              ApiResponse<DefaultGreetingList> localVarResponse = GetGroupGreetingsDefaultsWithHttpInfo(groupId);
@@ -2022,6 +2111,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <returns>ApiResponse of DefaultGreetingList</returns>
+        
         public ApiResponse< DefaultGreetingList > GetGroupGreetingsDefaultsWithHttpInfo (string groupId)
         { 
             // verify the required parameter 'groupId' is set
@@ -2104,6 +2194,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of DefaultGreetingList</returns>
+        
         public async System.Threading.Tasks.Task<DefaultGreetingList> GetGroupGreetingsDefaultsAsync (string groupId)
         {
              ApiResponse<DefaultGreetingList> localVarResponse = await GetGroupGreetingsDefaultsAsyncWithHttpInfo(groupId);
@@ -2117,6 +2208,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> GetGroupGreetingsDefaultsAsyncWithHttpInfo (string groupId)
         { 
             // verify the required parameter 'groupId' is set
@@ -2203,6 +2295,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>DomainEntityListing</returns>
+        
         public DomainEntityListing GetUserGreetings (string userId, int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<DomainEntityListing> localVarResponse = GetUserGreetingsWithHttpInfo(userId, pageSize, pageNumber);
@@ -2217,6 +2310,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of DomainEntityListing</returns>
+        
         public ApiResponse< DomainEntityListing > GetUserGreetingsWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null)
         { 
             // verify the required parameter 'userId' is set
@@ -2303,6 +2397,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of DomainEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<DomainEntityListing> GetUserGreetingsAsync (string userId, int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<DomainEntityListing> localVarResponse = await GetUserGreetingsAsyncWithHttpInfo(userId, pageSize, pageNumber);
@@ -2318,6 +2413,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (DomainEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DomainEntityListing>> GetUserGreetingsAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null)
         { 
             // verify the required parameter 'userId' is set
@@ -2404,6 +2500,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>DefaultGreetingList</returns>
+        
         public DefaultGreetingList GetUserGreetingsDefaults (string userId)
         {
              ApiResponse<DefaultGreetingList> localVarResponse = GetUserGreetingsDefaultsWithHttpInfo(userId);
@@ -2416,6 +2513,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of DefaultGreetingList</returns>
+        
         public ApiResponse< DefaultGreetingList > GetUserGreetingsDefaultsWithHttpInfo (string userId)
         { 
             // verify the required parameter 'userId' is set
@@ -2498,6 +2596,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of DefaultGreetingList</returns>
+        
         public async System.Threading.Tasks.Task<DefaultGreetingList> GetUserGreetingsDefaultsAsync (string userId)
         {
              ApiResponse<DefaultGreetingList> localVarResponse = await GetUserGreetingsDefaultsAsyncWithHttpInfo(userId);
@@ -2511,6 +2610,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> GetUserGreetingsDefaultsAsyncWithHttpInfo (string userId)
         { 
             // verify the required parameter 'userId' is set
@@ -2595,6 +2695,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Greeting</returns>
+        
         public Greeting PostGreetings (Greeting body)
         {
              ApiResponse<Greeting> localVarResponse = PostGreetingsWithHttpInfo(body);
@@ -2607,6 +2708,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Greeting to create</param>
         /// <returns>ApiResponse of Greeting</returns>
+        
         public ApiResponse< Greeting > PostGreetingsWithHttpInfo (Greeting body)
         { 
             // verify the required parameter 'body' is set
@@ -2694,6 +2796,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Task of Greeting</returns>
+        
         public async System.Threading.Tasks.Task<Greeting> PostGreetingsAsync (Greeting body)
         {
              ApiResponse<Greeting> localVarResponse = await PostGreetingsAsyncWithHttpInfo(body);
@@ -2707,6 +2810,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Task of ApiResponse (Greeting)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Greeting>> PostGreetingsAsyncWithHttpInfo (Greeting body)
         { 
             // verify the required parameter 'body' is set
@@ -2797,6 +2901,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Greeting</returns>
+        
         public Greeting PostGroupGreetings (string groupId, Greeting body)
         {
              ApiResponse<Greeting> localVarResponse = PostGroupGreetingsWithHttpInfo(groupId, body);
@@ -2810,6 +2915,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="body">The Greeting to create</param>
         /// <returns>ApiResponse of Greeting</returns>
+        
         public ApiResponse< Greeting > PostGroupGreetingsWithHttpInfo (string groupId, Greeting body)
         { 
             // verify the required parameter 'groupId' is set
@@ -2902,6 +3008,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Task of Greeting</returns>
+        
         public async System.Threading.Tasks.Task<Greeting> PostGroupGreetingsAsync (string groupId, Greeting body)
         {
              ApiResponse<Greeting> localVarResponse = await PostGroupGreetingsAsyncWithHttpInfo(groupId, body);
@@ -2916,6 +3023,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Task of ApiResponse (Greeting)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Greeting>> PostGroupGreetingsAsyncWithHttpInfo (string groupId, Greeting body)
         { 
             // verify the required parameter 'groupId' is set
@@ -3011,6 +3119,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Greeting</returns>
+        
         public Greeting PostUserGreetings (string userId, Greeting body)
         {
              ApiResponse<Greeting> localVarResponse = PostUserGreetingsWithHttpInfo(userId, body);
@@ -3024,6 +3133,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The Greeting to create</param>
         /// <returns>ApiResponse of Greeting</returns>
+        
         public ApiResponse< Greeting > PostUserGreetingsWithHttpInfo (string userId, Greeting body)
         { 
             // verify the required parameter 'userId' is set
@@ -3116,6 +3226,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Task of Greeting</returns>
+        
         public async System.Threading.Tasks.Task<Greeting> PostUserGreetingsAsync (string userId, Greeting body)
         {
              ApiResponse<Greeting> localVarResponse = await PostUserGreetingsAsyncWithHttpInfo(userId, body);
@@ -3130,6 +3241,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Task of ApiResponse (Greeting)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Greeting>> PostUserGreetingsAsyncWithHttpInfo (string userId, Greeting body)
         { 
             // verify the required parameter 'userId' is set
@@ -3225,6 +3337,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="body">The updated Greeting</param>
         /// <returns>Greeting</returns>
+        
         public Greeting PutGreeting (string greetingId, Greeting body)
         {
              ApiResponse<Greeting> localVarResponse = PutGreetingWithHttpInfo(greetingId, body);
@@ -3238,6 +3351,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="body">The updated Greeting</param>
         /// <returns>ApiResponse of Greeting</returns>
+        
         public ApiResponse< Greeting > PutGreetingWithHttpInfo (string greetingId, Greeting body)
         { 
             // verify the required parameter 'greetingId' is set
@@ -3330,6 +3444,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="body">The updated Greeting</param>
         /// <returns>Task of Greeting</returns>
+        
         public async System.Threading.Tasks.Task<Greeting> PutGreetingAsync (string greetingId, Greeting body)
         {
              ApiResponse<Greeting> localVarResponse = await PutGreetingAsyncWithHttpInfo(greetingId, body);
@@ -3344,6 +3459,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="body">The updated Greeting</param>
         /// <returns>Task of ApiResponse (Greeting)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Greeting>> PutGreetingAsyncWithHttpInfo (string greetingId, Greeting body)
         { 
             // verify the required parameter 'greetingId' is set
@@ -3438,6 +3554,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>DefaultGreetingList</returns>
+        
         public DefaultGreetingList PutGreetingsDefaults (DefaultGreetingList body)
         {
              ApiResponse<DefaultGreetingList> localVarResponse = PutGreetingsDefaultsWithHttpInfo(body);
@@ -3450,6 +3567,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>ApiResponse of DefaultGreetingList</returns>
+        
         public ApiResponse< DefaultGreetingList > PutGreetingsDefaultsWithHttpInfo (DefaultGreetingList body)
         { 
             // verify the required parameter 'body' is set
@@ -3537,6 +3655,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>Task of DefaultGreetingList</returns>
+        
         public async System.Threading.Tasks.Task<DefaultGreetingList> PutGreetingsDefaultsAsync (DefaultGreetingList body)
         {
              ApiResponse<DefaultGreetingList> localVarResponse = await PutGreetingsDefaultsAsyncWithHttpInfo(body);
@@ -3550,6 +3669,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> PutGreetingsDefaultsAsyncWithHttpInfo (DefaultGreetingList body)
         { 
             // verify the required parameter 'body' is set
@@ -3640,6 +3760,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>DefaultGreetingList</returns>
+        
         public DefaultGreetingList PutGroupGreetingsDefaults (string groupId, DefaultGreetingList body)
         {
              ApiResponse<DefaultGreetingList> localVarResponse = PutGroupGreetingsDefaultsWithHttpInfo(groupId, body);
@@ -3653,6 +3774,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>ApiResponse of DefaultGreetingList</returns>
+        
         public ApiResponse< DefaultGreetingList > PutGroupGreetingsDefaultsWithHttpInfo (string groupId, DefaultGreetingList body)
         { 
             // verify the required parameter 'groupId' is set
@@ -3745,6 +3867,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>Task of DefaultGreetingList</returns>
+        
         public async System.Threading.Tasks.Task<DefaultGreetingList> PutGroupGreetingsDefaultsAsync (string groupId, DefaultGreetingList body)
         {
              ApiResponse<DefaultGreetingList> localVarResponse = await PutGroupGreetingsDefaultsAsyncWithHttpInfo(groupId, body);
@@ -3759,6 +3882,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> PutGroupGreetingsDefaultsAsyncWithHttpInfo (string groupId, DefaultGreetingList body)
         { 
             // verify the required parameter 'groupId' is set
@@ -3854,6 +3978,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>DefaultGreetingList</returns>
+        
         public DefaultGreetingList PutUserGreetingsDefaults (string userId, DefaultGreetingList body)
         {
              ApiResponse<DefaultGreetingList> localVarResponse = PutUserGreetingsDefaultsWithHttpInfo(userId, body);
@@ -3867,6 +3992,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>ApiResponse of DefaultGreetingList</returns>
+        
         public ApiResponse< DefaultGreetingList > PutUserGreetingsDefaultsWithHttpInfo (string userId, DefaultGreetingList body)
         { 
             // verify the required parameter 'userId' is set
@@ -3959,6 +4085,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>Task of DefaultGreetingList</returns>
+        
         public async System.Threading.Tasks.Task<DefaultGreetingList> PutUserGreetingsDefaultsAsync (string userId, DefaultGreetingList body)
         {
              ApiResponse<DefaultGreetingList> localVarResponse = await PutUserGreetingsDefaultsAsyncWithHttpInfo(userId, body);
@@ -3973,6 +4100,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> PutUserGreetingsDefaultsAsyncWithHttpInfo (string userId, DefaultGreetingList body)
         { 
             // verify the required parameter 'userId' is set

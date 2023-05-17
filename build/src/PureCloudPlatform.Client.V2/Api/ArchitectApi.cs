@@ -25,6 +25,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emergencyGroupId">Emergency group ID</param>
         /// <returns></returns>
+        
         void DeleteArchitectEmergencygroup (string emergencyGroupId);
 
         /// <summary>
@@ -36,6 +37,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emergencyGroupId">Emergency group ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> DeleteArchitectEmergencygroupWithHttpInfo (string emergencyGroupId);
 
         /// <summary>
@@ -47,6 +49,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
         /// <returns></returns>
+        
         void DeleteArchitectIvr (string ivrId);
 
         /// <summary>
@@ -58,6 +61,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> DeleteArchitectIvrWithHttpInfo (string ivrId);
 
         /// <summary>
@@ -70,6 +74,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="allResources">Whether or not to delete all the prompt resources (optional)</param>
         /// <returns></returns>
+        
         void DeleteArchitectPrompt (string promptId, bool? allResources = null);
 
         /// <summary>
@@ -82,6 +87,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="allResources">Whether or not to delete all the prompt resources (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> DeleteArchitectPromptWithHttpInfo (string promptId, bool? allResources = null);
 
         /// <summary>
@@ -94,6 +100,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns></returns>
+        
         void DeleteArchitectPromptResource (string promptId, string languageCode);
 
         /// <summary>
@@ -106,6 +113,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> DeleteArchitectPromptResourceWithHttpInfo (string promptId, string languageCode);
 
         /// <summary>
@@ -118,6 +126,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns></returns>
+        
         void DeleteArchitectPromptResourceAudio (string promptId, string languageCode);
 
         /// <summary>
@@ -130,6 +139,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> DeleteArchitectPromptResourceAudioWithHttpInfo (string promptId, string languageCode);
 
         /// <summary>
@@ -141,6 +151,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">List of Prompt IDs</param>
         /// <returns>Operation</returns>
+        
         Operation DeleteArchitectPrompts (List<string> id);
 
         /// <summary>
@@ -152,6 +163,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">List of Prompt IDs</param>
         /// <returns>ApiResponse of Operation</returns>
+        
         ApiResponse<Operation> DeleteArchitectPromptsWithHttpInfo (List<string> id);
 
         /// <summary>
@@ -163,6 +175,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns></returns>
+        
         void DeleteArchitectSchedule (string scheduleId);
 
         /// <summary>
@@ -174,6 +187,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> DeleteArchitectScheduleWithHttpInfo (string scheduleId);
 
         /// <summary>
@@ -185,6 +199,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <returns></returns>
+        
         void DeleteArchitectSchedulegroup (string scheduleGroupId);
 
         /// <summary>
@@ -196,6 +211,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> DeleteArchitectSchedulegroupWithHttpInfo (string scheduleGroupId);
 
         /// <summary>
@@ -208,6 +224,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns></returns>
+        
         void DeleteArchitectSystempromptResource (string promptId, string languageCode);
 
         /// <summary>
@@ -220,6 +237,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> DeleteArchitectSystempromptResourceWithHttpInfo (string promptId, string languageCode);
 
         /// <summary>
@@ -231,6 +249,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
         /// <returns></returns>
+        
         void DeleteFlow (string flowId);
 
         /// <summary>
@@ -242,6 +261,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> DeleteFlowWithHttpInfo (string flowId);
 
         /// <summary>
@@ -253,6 +273,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">List of Flow IDs</param>
         /// <returns>Operation</returns>
+        
         Operation DeleteFlows (List<string> id);
 
         /// <summary>
@@ -264,6 +285,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">List of Flow IDs</param>
         /// <returns>ApiResponse of Operation</returns>
+        
         ApiResponse<Operation> DeleteFlowsWithHttpInfo (List<string> id);
 
         /// <summary>
@@ -276,6 +298,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="force">force delete, even if in use (optional, default to false)</param>
         /// <returns></returns>
+        
         void DeleteFlowsDatatable (string datatableId, bool? force = null);
 
         /// <summary>
@@ -288,6 +311,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="force">force delete, even if in use (optional, default to false)</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> DeleteFlowsDatatableWithHttpInfo (string datatableId, bool? force = null);
 
         /// <summary>
@@ -300,6 +324,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="rowId">the key for the row</param>
         /// <returns></returns>
+        
         void DeleteFlowsDatatableRow (string datatableId, string rowId);
 
         /// <summary>
@@ -312,6 +337,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="rowId">the key for the row</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> DeleteFlowsDatatableRowWithHttpInfo (string datatableId, string rowId);
 
         /// <summary>
@@ -323,6 +349,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="milestoneId">flow milestone ID</param>
         /// <returns>Object</returns>
+        
         Object DeleteFlowsMilestone (string milestoneId);
 
         /// <summary>
@@ -334,6 +361,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="milestoneId">flow milestone ID</param>
         /// <returns>ApiResponse of Object</returns>
+        
         ApiResponse<Object> DeleteFlowsMilestoneWithHttpInfo (string milestoneId);
 
         /// <summary>
@@ -352,6 +380,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="consumedResourceType">Types of consumed resources to return, if consumed resources are requested (optional)</param>
         /// <param name="consumingResourceType">Types of consuming resources to return, if consuming resources are requested (optional)</param>
         /// <returns>DependencyObjectEntityListing</returns>
+        
         DependencyObjectEntityListing GetArchitectDependencytracking (string name, int? pageNumber = null, int? pageSize = null, List<string> objectType = null, bool? consumedResources = null, bool? consumingResources = null, List<string> consumedResourceType = null, List<string> consumingResourceType = null);
 
         /// <summary>
@@ -370,6 +399,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="consumedResourceType">Types of consumed resources to return, if consumed resources are requested (optional)</param>
         /// <param name="consumingResourceType">Types of consuming resources to return, if consuming resources are requested (optional)</param>
         /// <returns>ApiResponse of DependencyObjectEntityListing</returns>
+        
         ApiResponse<DependencyObjectEntityListing> GetArchitectDependencytrackingWithHttpInfo (string name, int? pageNumber = null, int? pageSize = null, List<string> objectType = null, bool? consumedResources = null, bool? consumingResources = null, List<string> consumedResourceType = null, List<string> consumingResourceType = null);
 
         /// <summary>
@@ -380,6 +410,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>DependencyStatus</returns>
+        
         DependencyStatus GetArchitectDependencytrackingBuild ();
 
         /// <summary>
@@ -390,6 +421,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of DependencyStatus</returns>
+        
         ApiResponse<DependencyStatus> GetArchitectDependencytrackingBuildWithHttpInfo ();
 
         /// <summary>
@@ -406,6 +438,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ConsumedResourcesEntityListing</returns>
+        
         ConsumedResourcesEntityListing GetArchitectDependencytrackingConsumedresources (string id, string version, string objectType, List<string> resourceType = null, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -422,6 +455,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of ConsumedResourcesEntityListing</returns>
+        
         ApiResponse<ConsumedResourcesEntityListing> GetArchitectDependencytrackingConsumedresourcesWithHttpInfo (string id, string version, string objectType, List<string> resourceType = null, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -439,6 +473,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="flowFilter">Show only checkedIn or published flows (optional)</param>
         /// <returns>ConsumingResourcesEntityListing</returns>
+        
         ConsumingResourcesEntityListing GetArchitectDependencytrackingConsumingresources (string id, string objectType, List<string> resourceType = null, string version = null, int? pageNumber = null, int? pageSize = null, string flowFilter = null);
 
         /// <summary>
@@ -456,6 +491,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="flowFilter">Show only checkedIn or published flows (optional)</param>
         /// <returns>ApiResponse of ConsumingResourcesEntityListing</returns>
+        
         ApiResponse<ConsumingResourcesEntityListing> GetArchitectDependencytrackingConsumingresourcesWithHttpInfo (string id, string objectType, List<string> resourceType = null, string version = null, int? pageNumber = null, int? pageSize = null, string flowFilter = null);
 
         /// <summary>
@@ -473,6 +509,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>DependencyObjectEntityListing</returns>
+        
         DependencyObjectEntityListing GetArchitectDependencytrackingDeletedresourceconsumers (string name = null, List<string> objectType = null, string flowFilter = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -490,6 +527,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of DependencyObjectEntityListing</returns>
+        
         ApiResponse<DependencyObjectEntityListing> GetArchitectDependencytrackingDeletedresourceconsumersWithHttpInfo (string name = null, List<string> objectType = null, string flowFilter = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -508,6 +546,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="consumingResourceType">Types of consuming resources to return, if consuming resources are requested (optional)</param>
         /// <param name="consumedResourceRequest">Indicate that this is going to look up a consumed resource object (optional)</param>
         /// <returns>DependencyObject</returns>
+        
         DependencyObject GetArchitectDependencytrackingObject (string id, string version = null, string objectType = null, bool? consumedResources = null, bool? consumingResources = null, List<string> consumedResourceType = null, List<string> consumingResourceType = null, bool? consumedResourceRequest = null);
 
         /// <summary>
@@ -526,6 +565,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="consumingResourceType">Types of consuming resources to return, if consuming resources are requested (optional)</param>
         /// <param name="consumedResourceRequest">Indicate that this is going to look up a consumed resource object (optional)</param>
         /// <returns>ApiResponse of DependencyObject</returns>
+        
         ApiResponse<DependencyObject> GetArchitectDependencytrackingObjectWithHttpInfo (string id, string version = null, string objectType = null, bool? consumedResources = null, bool? consumingResources = null, List<string> consumedResourceType = null, List<string> consumingResourceType = null, bool? consumedResourceRequest = null);
 
         /// <summary>
@@ -537,6 +577,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="typeId">Type ID</param>
         /// <returns>DependencyType</returns>
+        
         DependencyType GetArchitectDependencytrackingType (string typeId);
 
         /// <summary>
@@ -548,6 +589,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="typeId">Type ID</param>
         /// <returns>ApiResponse of DependencyType</returns>
+        
         ApiResponse<DependencyType> GetArchitectDependencytrackingTypeWithHttpInfo (string typeId);
 
         /// <summary>
@@ -560,6 +602,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>DependencyTypeEntityListing</returns>
+        
         DependencyTypeEntityListing GetArchitectDependencytrackingTypes (int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -572,6 +615,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of DependencyTypeEntityListing</returns>
+        
         ApiResponse<DependencyTypeEntityListing> GetArchitectDependencytrackingTypesWithHttpInfo (int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -588,6 +632,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>DependencyObjectEntityListing</returns>
+        
         DependencyObjectEntityListing GetArchitectDependencytrackingUpdatedresourceconsumers (string name = null, List<string> objectType = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -604,6 +649,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of DependencyObjectEntityListing</returns>
+        
         ApiResponse<DependencyObjectEntityListing> GetArchitectDependencytrackingUpdatedresourceconsumersWithHttpInfo (string name = null, List<string> objectType = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -615,6 +661,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emergencyGroupId">Emergency group ID</param>
         /// <returns>EmergencyGroup</returns>
+        
         EmergencyGroup GetArchitectEmergencygroup (string emergencyGroupId);
 
         /// <summary>
@@ -626,6 +673,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emergencyGroupId">Emergency group ID</param>
         /// <returns>ApiResponse of EmergencyGroup</returns>
+        
         ApiResponse<EmergencyGroup> GetArchitectEmergencygroupWithHttpInfo (string emergencyGroupId);
 
         /// <summary>
@@ -641,6 +689,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the Emergency Group to filter by. (optional)</param>
         /// <returns>EmergencyGroupListing</returns>
+        
         EmergencyGroupListing GetArchitectEmergencygroups (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
 
         /// <summary>
@@ -656,6 +705,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the Emergency Group to filter by. (optional)</param>
         /// <returns>ApiResponse of EmergencyGroupListing</returns>
+        
         ApiResponse<EmergencyGroupListing> GetArchitectEmergencygroupsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
 
         /// <summary>
@@ -667,6 +717,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
         /// <returns>IVR</returns>
+        
         IVR GetArchitectIvr (string ivrId);
 
         /// <summary>
@@ -678,6 +729,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
         /// <returns>ApiResponse of IVR</returns>
+        
         ApiResponse<IVR> GetArchitectIvrWithHttpInfo (string ivrId);
 
         /// <summary>
@@ -695,6 +747,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dnis">The phone number of the IVR to filter by. (optional)</param>
         /// <param name="scheduleGroup">The Schedule Group of the IVR to filter by. (optional)</param>
         /// <returns>IVREntityListing</returns>
+        
         IVREntityListing GetArchitectIvrs (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null, string scheduleGroup = null);
 
         /// <summary>
@@ -712,6 +765,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dnis">The phone number of the IVR to filter by. (optional)</param>
         /// <param name="scheduleGroup">The Schedule Group of the IVR to filter by. (optional)</param>
         /// <returns>ApiResponse of IVREntityListing</returns>
+        
         ApiResponse<IVREntityListing> GetArchitectIvrsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null, string scheduleGroup = null);
 
         /// <summary>
@@ -723,6 +777,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <returns>Prompt</returns>
+        
         Prompt GetArchitectPrompt (string promptId);
 
         /// <summary>
@@ -734,6 +789,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <returns>ApiResponse of Prompt</returns>
+        
         ApiResponse<Prompt> GetArchitectPromptWithHttpInfo (string promptId);
 
         /// <summary>
@@ -751,6 +807,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>HistoryListing</returns>
+        
         HistoryListing GetArchitectPromptHistoryHistoryId (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null);
 
         /// <summary>
@@ -768,6 +825,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>ApiResponse of HistoryListing</returns>
+        
         ApiResponse<HistoryListing> GetArchitectPromptHistoryHistoryIdWithHttpInfo (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null);
 
         /// <summary>
@@ -780,6 +838,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns>PromptAsset</returns>
+        
         PromptAsset GetArchitectPromptResource (string promptId, string languageCode);
 
         /// <summary>
@@ -792,6 +851,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns>ApiResponse of PromptAsset</returns>
+        
         ApiResponse<PromptAsset> GetArchitectPromptResourceWithHttpInfo (string promptId, string languageCode);
 
         /// <summary>
@@ -805,6 +865,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>PromptAssetEntityListing</returns>
+        
         PromptAssetEntityListing GetArchitectPromptResources (string promptId, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -818,6 +879,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of PromptAssetEntityListing</returns>
+        
         ApiResponse<PromptAssetEntityListing> GetArchitectPromptResourcesWithHttpInfo (string promptId, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -835,6 +897,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "id")</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>PromptEntityListing</returns>
+        
         PromptEntityListing GetArchitectPrompts (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -852,6 +915,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "id")</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>ApiResponse of PromptEntityListing</returns>
+        
         ApiResponse<PromptEntityListing> GetArchitectPromptsWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -863,6 +927,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Schedule</returns>
+        
         Schedule GetArchitectSchedule (string scheduleId);
 
         /// <summary>
@@ -874,6 +939,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>ApiResponse of Schedule</returns>
+        
         ApiResponse<Schedule> GetArchitectScheduleWithHttpInfo (string scheduleId);
 
         /// <summary>
@@ -885,6 +951,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <returns>ScheduleGroup</returns>
+        
         ScheduleGroup GetArchitectSchedulegroup (string scheduleGroupId);
 
         /// <summary>
@@ -896,6 +963,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <returns>ApiResponse of ScheduleGroup</returns>
+        
         ApiResponse<ScheduleGroup> GetArchitectSchedulegroupWithHttpInfo (string scheduleGroupId);
 
         /// <summary>
@@ -913,6 +981,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleIds">A comma-delimited list of Schedule IDs to filter by. (optional)</param>
         /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>ScheduleGroupEntityListing</returns>
+        
         ScheduleGroupEntityListing GetArchitectSchedulegroups (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null, List<string> divisionId = null);
 
         /// <summary>
@@ -930,6 +999,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleIds">A comma-delimited list of Schedule IDs to filter by. (optional)</param>
         /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>ApiResponse of ScheduleGroupEntityListing</returns>
+        
         ApiResponse<ScheduleGroupEntityListing> GetArchitectSchedulegroupsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null, List<string> divisionId = null);
 
         /// <summary>
@@ -946,6 +1016,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name of the Schedule to filter by. (optional)</param>
         /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>ScheduleEntityListing</returns>
+        
         ScheduleEntityListing GetArchitectSchedules (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, List<string> divisionId = null);
 
         /// <summary>
@@ -962,6 +1033,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name of the Schedule to filter by. (optional)</param>
         /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>ApiResponse of ScheduleEntityListing</returns>
+        
         ApiResponse<ScheduleEntityListing> GetArchitectSchedulesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, List<string> divisionId = null);
 
         /// <summary>
@@ -973,6 +1045,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">promptId</param>
         /// <returns>SystemPrompt</returns>
+        
         SystemPrompt GetArchitectSystemprompt (string promptId);
 
         /// <summary>
@@ -984,6 +1057,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">promptId</param>
         /// <returns>ApiResponse of SystemPrompt</returns>
+        
         ApiResponse<SystemPrompt> GetArchitectSystempromptWithHttpInfo (string promptId);
 
         /// <summary>
@@ -1001,6 +1075,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>HistoryListing</returns>
+        
         HistoryListing GetArchitectSystempromptHistoryHistoryId (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null);
 
         /// <summary>
@@ -1018,6 +1093,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>ApiResponse of HistoryListing</returns>
+        
         ApiResponse<HistoryListing> GetArchitectSystempromptHistoryHistoryIdWithHttpInfo (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null);
 
         /// <summary>
@@ -1030,6 +1106,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns>SystemPromptAsset</returns>
+        
         SystemPromptAsset GetArchitectSystempromptResource (string promptId, string languageCode);
 
         /// <summary>
@@ -1042,6 +1119,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns>ApiResponse of SystemPromptAsset</returns>
+        
         ApiResponse<SystemPromptAsset> GetArchitectSystempromptResourceWithHttpInfo (string promptId, string languageCode);
 
         /// <summary>
@@ -1057,6 +1135,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "id")</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>SystemPromptAssetEntityListing</returns>
+        
         SystemPromptAssetEntityListing GetArchitectSystempromptResources (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -1072,6 +1151,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "id")</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>ApiResponse of SystemPromptAssetEntityListing</returns>
+        
         ApiResponse<SystemPromptAssetEntityListing> GetArchitectSystempromptResourcesWithHttpInfo (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -1089,6 +1169,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <returns>SystemPromptEntityListing</returns>
+        
         SystemPromptEntityListing GetArchitectSystemprompts (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string nameOrDescription = null);
 
         /// <summary>
@@ -1106,6 +1187,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <returns>ApiResponse of SystemPromptEntityListing</returns>
+        
         ApiResponse<SystemPromptEntityListing> GetArchitectSystempromptsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string nameOrDescription = null);
 
         /// <summary>
@@ -1118,6 +1200,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="deleted">Deleted flows (optional, default to false)</param>
         /// <returns>Flow</returns>
+        
         Flow GetFlow (string flowId, bool? deleted = null);
 
         /// <summary>
@@ -1130,6 +1213,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="deleted">Deleted flows (optional, default to false)</param>
         /// <returns>ApiResponse of Flow</returns>
+        
         ApiResponse<Flow> GetFlowWithHttpInfo (string flowId, bool? deleted = null);
 
         /// <summary>
@@ -1147,6 +1231,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>HistoryListing</returns>
+        
         HistoryListing GetFlowHistoryHistoryId (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null);
 
         /// <summary>
@@ -1164,6 +1249,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>ApiResponse of HistoryListing</returns>
+        
         ApiResponse<HistoryListing> GetFlowHistoryHistoryIdWithHttpInfo (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null);
 
         /// <summary>
@@ -1176,6 +1262,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="deleted">Deleted flows (optional, default to false)</param>
         /// <returns>Object</returns>
+        
         Object GetFlowLatestconfiguration (string flowId, bool? deleted = null);
 
         /// <summary>
@@ -1188,6 +1275,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="deleted">Deleted flows (optional, default to false)</param>
         /// <returns>ApiResponse of Object</returns>
+        
         ApiResponse<Object> GetFlowLatestconfigurationWithHttpInfo (string flowId, bool? deleted = null);
 
         /// <summary>
@@ -1201,6 +1289,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="versionId">Version ID</param>
         /// <param name="deleted">Deleted flows (optional)</param>
         /// <returns>FlowVersion</returns>
+        
         FlowVersion GetFlowVersion (string flowId, string versionId, string deleted = null);
 
         /// <summary>
@@ -1214,6 +1303,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="versionId">Version ID</param>
         /// <param name="deleted">Deleted flows (optional)</param>
         /// <returns>ApiResponse of FlowVersion</returns>
+        
         ApiResponse<FlowVersion> GetFlowVersionWithHttpInfo (string flowId, string versionId, string deleted = null);
 
         /// <summary>
@@ -1227,6 +1317,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="versionId">Version ID</param>
         /// <param name="deleted">Deleted flows (optional)</param>
         /// <returns>Object</returns>
+        
         Object GetFlowVersionConfiguration (string flowId, string versionId, string deleted = null);
 
         /// <summary>
@@ -1240,6 +1331,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="versionId">Version ID</param>
         /// <param name="deleted">Deleted flows (optional)</param>
         /// <returns>ApiResponse of Object</returns>
+        
         ApiResponse<Object> GetFlowVersionConfigurationWithHttpInfo (string flowId, string versionId, string deleted = null);
 
         /// <summary>
@@ -1254,6 +1346,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="deleted">Include Deleted flows (optional)</param>
         /// <returns>FlowVersionEntityListing</returns>
+        
         FlowVersionEntityListing GetFlowVersions (string flowId, int? pageNumber = null, int? pageSize = null, bool? deleted = null);
 
         /// <summary>
@@ -1268,6 +1361,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="deleted">Include Deleted flows (optional)</param>
         /// <returns>ApiResponse of FlowVersionEntityListing</returns>
+        
         ApiResponse<FlowVersionEntityListing> GetFlowVersionsWithHttpInfo (string flowId, int? pageNumber = null, int? pageSize = null, bool? deleted = null);
 
         /// <summary>
@@ -1297,6 +1391,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="publishedBefore">Published before (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>FlowEntityListing</returns>
+        
         FlowEntityListing GetFlows (List<string> type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string lockedByClientId = null, string secure = null, bool? deleted = null, bool? includeSchemas = null, string publishedAfter = null, string publishedBefore = null, List<string> divisionId = null);
 
         /// <summary>
@@ -1326,6 +1421,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="publishedBefore">Published before (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>ApiResponse of FlowEntityListing</returns>
+        
         ApiResponse<FlowEntityListing> GetFlowsWithHttpInfo (List<string> type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string lockedByClientId = null, string secure = null, bool? deleted = null, bool? includeSchemas = null, string publishedAfter = null, string publishedBefore = null, List<string> divisionId = null);
 
         /// <summary>
@@ -1338,6 +1434,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <returns>DataTable</returns>
+        
         DataTable GetFlowsDatatable (string datatableId, string expand = null);
 
         /// <summary>
@@ -1350,6 +1447,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <returns>ApiResponse of DataTable</returns>
+        
         ApiResponse<DataTable> GetFlowsDatatableWithHttpInfo (string datatableId, string expand = null);
 
         /// <summary>
@@ -1362,6 +1460,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="exportJobId">id of export job</param>
         /// <returns>DataTableExportJob</returns>
+        
         DataTableExportJob GetFlowsDatatableExportJob (string datatableId, string exportJobId);
 
         /// <summary>
@@ -1374,6 +1473,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="exportJobId">id of export job</param>
         /// <returns>ApiResponse of DataTableExportJob</returns>
+        
         ApiResponse<DataTableExportJob> GetFlowsDatatableExportJobWithHttpInfo (string datatableId, string exportJobId);
 
         /// <summary>
@@ -1386,6 +1486,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="importJobId">id of import job</param>
         /// <returns>DataTableImportJob</returns>
+        
         DataTableImportJob GetFlowsDatatableImportJob (string datatableId, string importJobId);
 
         /// <summary>
@@ -1398,6 +1499,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="importJobId">id of import job</param>
         /// <returns>ApiResponse of DataTableImportJob</returns>
+        
         ApiResponse<DataTableImportJob> GetFlowsDatatableImportJobWithHttpInfo (string datatableId, string importJobId);
 
         /// <summary>
@@ -1411,6 +1513,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>DataTableImportEntityListing</returns>
+        
         DataTableImportEntityListing GetFlowsDatatableImportJobs (string datatableId, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -1424,6 +1527,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of DataTableImportEntityListing</returns>
+        
         ApiResponse<DataTableImportEntityListing> GetFlowsDatatableImportJobsWithHttpInfo (string datatableId, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -1437,6 +1541,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="rowId">The key for the row</param>
         /// <param name="showbrief">if true returns just the key field for the row (optional, default to true)</param>
         /// <returns>Dictionary&lt;string, Object&gt;</returns>
+        
         Dictionary<string, Object> GetFlowsDatatableRow (string datatableId, string rowId, bool? showbrief = null);
 
         /// <summary>
@@ -1450,6 +1555,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="rowId">The key for the row</param>
         /// <param name="showbrief">if true returns just the key field for the row (optional, default to true)</param>
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        
         ApiResponse<Dictionary<string, Object>> GetFlowsDatatableRowWithHttpInfo (string datatableId, string rowId, bool? showbrief = null);
 
         /// <summary>
@@ -1465,6 +1571,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="showbrief">If true returns just the key value of the row (optional, default to true)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
         /// <returns>DataTableRowEntityListing</returns>
+        
         DataTableRowEntityListing GetFlowsDatatableRows (string datatableId, int? pageNumber = null, int? pageSize = null, bool? showbrief = null, string sortOrder = null);
 
         /// <summary>
@@ -1480,6 +1587,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="showbrief">If true returns just the key value of the row (optional, default to true)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
         /// <returns>ApiResponse of DataTableRowEntityListing</returns>
+        
         ApiResponse<DataTableRowEntityListing> GetFlowsDatatableRowsWithHttpInfo (string datatableId, int? pageNumber = null, int? pageSize = null, bool? showbrief = null, string sortOrder = null);
 
         /// <summary>
@@ -1497,6 +1605,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="name">Filter by Name. The wildcard character * is supported within the filter. Matches are case-insensitive. (optional)</param>
         /// <returns>DataTablesDomainEntityListing</returns>
+        
         DataTablesDomainEntityListing GetFlowsDatatables (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null);
 
         /// <summary>
@@ -1514,6 +1623,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="name">Filter by Name. The wildcard character * is supported within the filter. Matches are case-insensitive. (optional)</param>
         /// <returns>ApiResponse of DataTablesDomainEntityListing</returns>
+        
         ApiResponse<DataTablesDomainEntityListing> GetFlowsDatatablesWithHttpInfo (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null);
 
         /// <summary>
@@ -1526,6 +1636,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <returns>DataTable</returns>
+        
         DataTable GetFlowsDatatablesDivisionview (string datatableId, string expand = null);
 
         /// <summary>
@@ -1538,6 +1649,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <returns>ApiResponse of DataTable</returns>
+        
         ApiResponse<DataTable> GetFlowsDatatablesDivisionviewWithHttpInfo (string datatableId, string expand = null);
 
         /// <summary>
@@ -1555,6 +1667,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="name">Filter by Name. The wildcard character * is supported within the filter. Matches are case-insensitive. (optional)</param>
         /// <returns>DataTablesDomainEntityListing</returns>
+        
         DataTablesDomainEntityListing GetFlowsDatatablesDivisionviews (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null);
 
         /// <summary>
@@ -1572,6 +1685,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="name">Filter by Name. The wildcard character * is supported within the filter. Matches are case-insensitive. (optional)</param>
         /// <returns>ApiResponse of DataTablesDomainEntityListing</returns>
+        
         ApiResponse<DataTablesDomainEntityListing> GetFlowsDatatablesDivisionviewsWithHttpInfo (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null);
 
         /// <summary>
@@ -1594,6 +1708,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="includeSchemas">Include variable schemas (optional, default to false)</param>
         /// <returns>FlowDivisionViewEntityListing</returns>
+        
         FlowDivisionViewEntityListing GetFlowsDivisionviews (List<string> type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string publishVersionId = null, string publishedAfter = null, string publishedBefore = null, List<string> divisionId = null, bool? includeSchemas = null);
 
         /// <summary>
@@ -1616,6 +1731,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="includeSchemas">Include variable schemas (optional, default to false)</param>
         /// <returns>ApiResponse of FlowDivisionViewEntityListing</returns>
+        
         ApiResponse<FlowDivisionViewEntityListing> GetFlowsDivisionviewsWithHttpInfo (List<string> type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string publishVersionId = null, string publishedAfter = null, string publishedBefore = null, List<string> divisionId = null, bool? includeSchemas = null);
 
         /// <summary>
@@ -1627,6 +1743,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowExecutionId">flow execution ID</param>
         /// <returns>FlowRuntimeExecution</returns>
+        
         FlowRuntimeExecution GetFlowsExecution (string flowExecutionId);
 
         /// <summary>
@@ -1638,6 +1755,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowExecutionId">flow execution ID</param>
         /// <returns>ApiResponse of FlowRuntimeExecution</returns>
+        
         ApiResponse<FlowRuntimeExecution> GetFlowsExecutionWithHttpInfo (string flowExecutionId);
 
         /// <summary>
@@ -1650,6 +1768,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">Job ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ArchitectJobStateResponse</returns>
+        
         ArchitectJobStateResponse GetFlowsJob (string jobId, List<string> expand = null);
 
         /// <summary>
@@ -1662,6 +1781,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">Job ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of ArchitectJobStateResponse</returns>
+        
         ApiResponse<ArchitectJobStateResponse> GetFlowsJobWithHttpInfo (string jobId, List<string> expand = null);
 
         /// <summary>
@@ -1673,6 +1793,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="milestoneId">flow milestone ID</param>
         /// <returns>FlowMilestone</returns>
+        
         FlowMilestone GetFlowsMilestone (string milestoneId);
 
         /// <summary>
@@ -1684,6 +1805,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="milestoneId">flow milestone ID</param>
         /// <returns>ApiResponse of FlowMilestone</returns>
+        
         ApiResponse<FlowMilestone> GetFlowsMilestoneWithHttpInfo (string milestoneId);
 
         /// <summary>
@@ -1703,6 +1825,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>FlowMilestoneListing</returns>
+        
         FlowMilestoneListing GetFlowsMilestones (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, List<string> divisionId = null);
 
         /// <summary>
@@ -1722,6 +1845,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>ApiResponse of FlowMilestoneListing</returns>
+        
         ApiResponse<FlowMilestoneListing> GetFlowsMilestonesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, List<string> divisionId = null);
 
         /// <summary>
@@ -1739,6 +1863,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>FlowMilestoneDivisionViewEntityListing</returns>
+        
         FlowMilestoneDivisionViewEntityListing GetFlowsMilestonesDivisionviews (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
 
         /// <summary>
@@ -1756,6 +1881,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>ApiResponse of FlowMilestoneDivisionViewEntityListing</returns>
+        
         ApiResponse<FlowMilestoneDivisionViewEntityListing> GetFlowsMilestonesDivisionviewsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
 
         /// <summary>
@@ -1767,6 +1893,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowOutcomeId">flow outcome ID</param>
         /// <returns>FlowOutcome</returns>
+        
         FlowOutcome GetFlowsOutcome (string flowOutcomeId);
 
         /// <summary>
@@ -1778,6 +1905,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowOutcomeId">flow outcome ID</param>
         /// <returns>ApiResponse of FlowOutcome</returns>
+        
         ApiResponse<FlowOutcome> GetFlowsOutcomeWithHttpInfo (string flowOutcomeId);
 
         /// <summary>
@@ -1797,6 +1925,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>FlowOutcomeListing</returns>
+        
         FlowOutcomeListing GetFlowsOutcomes (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, List<string> divisionId = null);
 
         /// <summary>
@@ -1816,6 +1945,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>ApiResponse of FlowOutcomeListing</returns>
+        
         ApiResponse<FlowOutcomeListing> GetFlowsOutcomesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, List<string> divisionId = null);
 
         /// <summary>
@@ -1833,6 +1963,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>FlowOutcomeDivisionViewEntityListing</returns>
+        
         FlowOutcomeDivisionViewEntityListing GetFlowsOutcomesDivisionviews (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
 
         /// <summary>
@@ -1850,6 +1981,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>ApiResponse of FlowOutcomeDivisionViewEntityListing</returns>
+        
         ApiResponse<FlowOutcomeDivisionViewEntityListing> GetFlowsOutcomesDivisionviewsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
 
         /// <summary>
@@ -1860,6 +1992,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
+        
         void PostArchitectDependencytrackingBuild ();
 
         /// <summary>
@@ -1870,6 +2003,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> PostArchitectDependencytrackingBuildWithHttpInfo ();
 
         /// <summary>
@@ -1881,6 +2015,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>EmergencyGroup</returns>
+        
         EmergencyGroup PostArchitectEmergencygroups (EmergencyGroup body);
 
         /// <summary>
@@ -1892,6 +2027,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of EmergencyGroup</returns>
+        
         ApiResponse<EmergencyGroup> PostArchitectEmergencygroupsWithHttpInfo (EmergencyGroup body);
 
         /// <summary>
@@ -1903,6 +2039,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>IVR</returns>
+        
         IVR PostArchitectIvrs (IVR body);
 
         /// <summary>
@@ -1914,6 +2051,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of IVR</returns>
+        
         ApiResponse<IVR> PostArchitectIvrsWithHttpInfo (IVR body);
 
         /// <summary>
@@ -1925,6 +2063,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <returns>Operation</returns>
+        
         Operation PostArchitectPromptHistory (string promptId);
 
         /// <summary>
@@ -1936,6 +2075,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <returns>ApiResponse of Operation</returns>
+        
         ApiResponse<Operation> PostArchitectPromptHistoryWithHttpInfo (string promptId);
 
         /// <summary>
@@ -1948,6 +2088,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>PromptAsset</returns>
+        
         PromptAsset PostArchitectPromptResources (string promptId, PromptAssetCreate body);
 
         /// <summary>
@@ -1960,6 +2101,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of PromptAsset</returns>
+        
         ApiResponse<PromptAsset> PostArchitectPromptResourcesWithHttpInfo (string promptId, PromptAssetCreate body);
 
         /// <summary>
@@ -1971,6 +2113,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Prompt</returns>
+        
         Prompt PostArchitectPrompts (Prompt body);
 
         /// <summary>
@@ -1982,6 +2125,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Prompt</returns>
+        
         ApiResponse<Prompt> PostArchitectPromptsWithHttpInfo (Prompt body);
 
         /// <summary>
@@ -1993,6 +2137,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ScheduleGroup</returns>
+        
         ScheduleGroup PostArchitectSchedulegroups (ScheduleGroup body);
 
         /// <summary>
@@ -2004,6 +2149,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of ScheduleGroup</returns>
+        
         ApiResponse<ScheduleGroup> PostArchitectSchedulegroupsWithHttpInfo (ScheduleGroup body);
 
         /// <summary>
@@ -2015,6 +2161,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Schedule</returns>
+        
         Schedule PostArchitectSchedules (Schedule body);
 
         /// <summary>
@@ -2026,6 +2173,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Schedule</returns>
+        
         ApiResponse<Schedule> PostArchitectSchedulesWithHttpInfo (Schedule body);
 
         /// <summary>
@@ -2037,6 +2185,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">promptId</param>
         /// <returns>Operation</returns>
+        
         Operation PostArchitectSystempromptHistory (string promptId);
 
         /// <summary>
@@ -2048,6 +2197,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">promptId</param>
         /// <returns>ApiResponse of Operation</returns>
+        
         ApiResponse<Operation> PostArchitectSystempromptHistoryWithHttpInfo (string promptId);
 
         /// <summary>
@@ -2060,6 +2210,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>SystemPromptAsset</returns>
+        
         SystemPromptAsset PostArchitectSystempromptResources (string promptId, SystemPromptAsset body);
 
         /// <summary>
@@ -2072,6 +2223,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of SystemPromptAsset</returns>
+        
         ApiResponse<SystemPromptAsset> PostArchitectSystempromptResourcesWithHttpInfo (string promptId, SystemPromptAsset body);
 
         /// <summary>
@@ -2083,6 +2235,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
         /// <returns>Operation</returns>
+        
         Operation PostFlowHistory (string flowId);
 
         /// <summary>
@@ -2094,6 +2247,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
         /// <returns>ApiResponse of Operation</returns>
+        
         ApiResponse<Operation> PostFlowHistoryWithHttpInfo (string flowId);
 
         /// <summary>
@@ -2106,6 +2260,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="body"></param>
         /// <returns>FlowVersion</returns>
+        
         FlowVersion PostFlowVersions (string flowId, Object body);
 
         /// <summary>
@@ -2118,6 +2273,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of FlowVersion</returns>
+        
         ApiResponse<FlowVersion> PostFlowVersionsWithHttpInfo (string flowId, Object body);
 
         /// <summary>
@@ -2130,6 +2286,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <param name="language">Language (optional)</param>
         /// <returns>Flow</returns>
+        
         Flow PostFlows (Flow body, string language = null);
 
         /// <summary>
@@ -2142,6 +2299,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <param name="language">Language (optional)</param>
         /// <returns>ApiResponse of Flow</returns>
+        
         ApiResponse<Flow> PostFlowsWithHttpInfo (Flow body, string language = null);
 
         /// <summary>
@@ -2153,6 +2311,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>Operation</returns>
+        
         Operation PostFlowsActionsCheckin (string flow);
 
         /// <summary>
@@ -2164,6 +2323,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>ApiResponse of Operation</returns>
+        
         ApiResponse<Operation> PostFlowsActionsCheckinWithHttpInfo (string flow);
 
         /// <summary>
@@ -2175,6 +2335,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>Flow</returns>
+        
         Flow PostFlowsActionsCheckout (string flow);
 
         /// <summary>
@@ -2186,6 +2347,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>ApiResponse of Flow</returns>
+        
         ApiResponse<Flow> PostFlowsActionsCheckoutWithHttpInfo (string flow);
 
         /// <summary>
@@ -2197,6 +2359,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>Flow</returns>
+        
         Flow PostFlowsActionsDeactivate (string flow);
 
         /// <summary>
@@ -2208,6 +2371,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>ApiResponse of Flow</returns>
+        
         ApiResponse<Flow> PostFlowsActionsDeactivateWithHttpInfo (string flow);
 
         /// <summary>
@@ -2220,6 +2384,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flow">Flow ID</param>
         /// <param name="version">version (optional)</param>
         /// <returns>Operation</returns>
+        
         Operation PostFlowsActionsPublish (string flow, string version = null);
 
         /// <summary>
@@ -2232,6 +2397,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flow">Flow ID</param>
         /// <param name="version">version (optional)</param>
         /// <returns>ApiResponse of Operation</returns>
+        
         ApiResponse<Operation> PostFlowsActionsPublishWithHttpInfo (string flow, string version = null);
 
         /// <summary>
@@ -2243,6 +2409,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>Flow</returns>
+        
         Flow PostFlowsActionsRevert (string flow);
 
         /// <summary>
@@ -2254,6 +2421,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>ApiResponse of Flow</returns>
+        
         ApiResponse<Flow> PostFlowsActionsRevertWithHttpInfo (string flow);
 
         /// <summary>
@@ -2265,6 +2433,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>Flow</returns>
+        
         Flow PostFlowsActionsUnlock (string flow);
 
         /// <summary>
@@ -2276,6 +2445,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>ApiResponse of Flow</returns>
+        
         ApiResponse<Flow> PostFlowsActionsUnlockWithHttpInfo (string flow);
 
         /// <summary>
@@ -2287,6 +2457,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
         /// <returns>DataTableExportJob</returns>
+        
         DataTableExportJob PostFlowsDatatableExportJobs (string datatableId);
 
         /// <summary>
@@ -2298,6 +2469,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
         /// <returns>ApiResponse of DataTableExportJob</returns>
+        
         ApiResponse<DataTableExportJob> PostFlowsDatatableExportJobsWithHttpInfo (string datatableId);
 
         /// <summary>
@@ -2310,6 +2482,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="body">import job information</param>
         /// <returns>DataTableImportJob</returns>
+        
         DataTableImportJob PostFlowsDatatableImportJobs (string datatableId, DataTableImportJob body);
 
         /// <summary>
@@ -2322,6 +2495,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="body">import job information</param>
         /// <returns>ApiResponse of DataTableImportJob</returns>
+        
         ApiResponse<DataTableImportJob> PostFlowsDatatableImportJobsWithHttpInfo (string datatableId, DataTableImportJob body);
 
         /// <summary>
@@ -2334,6 +2508,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="dataTableRow"></param>
         /// <returns>Dictionary&lt;string, Object&gt;</returns>
+        
         Dictionary<string, Object> PostFlowsDatatableRows (string datatableId, Object dataTableRow);
 
         /// <summary>
@@ -2346,6 +2521,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="dataTableRow"></param>
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        
         ApiResponse<Dictionary<string, Object>> PostFlowsDatatableRowsWithHttpInfo (string datatableId, Object dataTableRow);
 
         /// <summary>
@@ -2357,6 +2533,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">datatable json-schema</param>
         /// <returns>DataTable</returns>
+        
         DataTable PostFlowsDatatables (DataTable body);
 
         /// <summary>
@@ -2368,6 +2545,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">datatable json-schema</param>
         /// <returns>ApiResponse of DataTable</returns>
+        
         ApiResponse<DataTable> PostFlowsDatatablesWithHttpInfo (DataTable body);
 
         /// <summary>
@@ -2379,6 +2557,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowLaunchRequest"></param>
         /// <returns>FlowExecutionLaunchResponse</returns>
+        
         FlowExecutionLaunchResponse PostFlowsExecutions (FlowExecutionLaunchRequest flowLaunchRequest);
 
         /// <summary>
@@ -2390,6 +2569,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowLaunchRequest"></param>
         /// <returns>ApiResponse of FlowExecutionLaunchResponse</returns>
+        
         ApiResponse<FlowExecutionLaunchResponse> PostFlowsExecutionsWithHttpInfo (FlowExecutionLaunchRequest flowLaunchRequest);
 
         /// <summary>
@@ -2400,6 +2580,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>RegisterArchitectJobResponse</returns>
+        
         RegisterArchitectJobResponse PostFlowsJobs ();
 
         /// <summary>
@@ -2410,6 +2591,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of RegisterArchitectJobResponse</returns>
+        
         ApiResponse<RegisterArchitectJobResponse> PostFlowsJobsWithHttpInfo ();
 
         /// <summary>
@@ -2421,6 +2603,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>FlowMilestone</returns>
+        
         FlowMilestone PostFlowsMilestones (FlowMilestone body = null);
 
         /// <summary>
@@ -2432,6 +2615,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of FlowMilestone</returns>
+        
         ApiResponse<FlowMilestone> PostFlowsMilestonesWithHttpInfo (FlowMilestone body = null);
 
         /// <summary>
@@ -2443,6 +2627,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>FlowOutcome</returns>
+        
         FlowOutcome PostFlowsOutcomes (FlowOutcome body = null);
 
         /// <summary>
@@ -2454,6 +2639,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of FlowOutcome</returns>
+        
         ApiResponse<FlowOutcome> PostFlowsOutcomesWithHttpInfo (FlowOutcome body = null);
 
         /// <summary>
@@ -2466,6 +2652,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="emergencyGroupId">Emergency group ID</param>
         /// <param name="body"></param>
         /// <returns>EmergencyGroup</returns>
+        
         EmergencyGroup PutArchitectEmergencygroup (string emergencyGroupId, EmergencyGroup body);
 
         /// <summary>
@@ -2478,6 +2665,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="emergencyGroupId">Emergency group ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of EmergencyGroup</returns>
+        
         ApiResponse<EmergencyGroup> PutArchitectEmergencygroupWithHttpInfo (string emergencyGroupId, EmergencyGroup body);
 
         /// <summary>
@@ -2490,6 +2678,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ivrId">IVR id</param>
         /// <param name="body"></param>
         /// <returns>IVR</returns>
+        
         IVR PutArchitectIvr (string ivrId, IVR body);
 
         /// <summary>
@@ -2502,6 +2691,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ivrId">IVR id</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of IVR</returns>
+        
         ApiResponse<IVR> PutArchitectIvrWithHttpInfo (string ivrId, IVR body);
 
         /// <summary>
@@ -2514,6 +2704,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>Prompt</returns>
+        
         Prompt PutArchitectPrompt (string promptId, Prompt body);
 
         /// <summary>
@@ -2526,6 +2717,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Prompt</returns>
+        
         ApiResponse<Prompt> PutArchitectPromptWithHttpInfo (string promptId, Prompt body);
 
         /// <summary>
@@ -2539,6 +2731,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language</param>
         /// <param name="body"></param>
         /// <returns>PromptAsset</returns>
+        
         PromptAsset PutArchitectPromptResource (string promptId, string languageCode, PromptAsset body);
 
         /// <summary>
@@ -2552,6 +2745,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of PromptAsset</returns>
+        
         ApiResponse<PromptAsset> PutArchitectPromptResourceWithHttpInfo (string promptId, string languageCode, PromptAsset body);
 
         /// <summary>
@@ -2564,6 +2758,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body"></param>
         /// <returns>Schedule</returns>
+        
         Schedule PutArchitectSchedule (string scheduleId, Schedule body);
 
         /// <summary>
@@ -2576,6 +2771,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Schedule</returns>
+        
         ApiResponse<Schedule> PutArchitectScheduleWithHttpInfo (string scheduleId, Schedule body);
 
         /// <summary>
@@ -2588,6 +2784,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <param name="body"></param>
         /// <returns>ScheduleGroup</returns>
+        
         ScheduleGroup PutArchitectSchedulegroup (string scheduleGroupId, ScheduleGroup body);
 
         /// <summary>
@@ -2600,6 +2797,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of ScheduleGroup</returns>
+        
         ApiResponse<ScheduleGroup> PutArchitectSchedulegroupWithHttpInfo (string scheduleGroupId, ScheduleGroup body);
 
         /// <summary>
@@ -2613,6 +2811,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language</param>
         /// <param name="body"></param>
         /// <returns>SystemPromptAsset</returns>
+        
         SystemPromptAsset PutArchitectSystempromptResource (string promptId, string languageCode, SystemPromptAsset body);
 
         /// <summary>
@@ -2626,6 +2825,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of SystemPromptAsset</returns>
+        
         ApiResponse<SystemPromptAsset> PutArchitectSystempromptResourceWithHttpInfo (string promptId, string languageCode, SystemPromptAsset body);
 
         /// <summary>
@@ -2638,6 +2838,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="body"></param>
         /// <returns>Flow</returns>
+        
         Flow PutFlow (string flowId, Flow body);
 
         /// <summary>
@@ -2650,6 +2851,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Flow</returns>
+        
         ApiResponse<Flow> PutFlowWithHttpInfo (string flowId, Flow body);
 
         /// <summary>
@@ -2663,6 +2865,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">datatable json-schema</param>
         /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <returns>DataTable</returns>
+        
         DataTable PutFlowsDatatable (string datatableId, DataTable body, string expand = null);
 
         /// <summary>
@@ -2676,6 +2879,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">datatable json-schema</param>
         /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <returns>ApiResponse of DataTable</returns>
+        
         ApiResponse<DataTable> PutFlowsDatatableWithHttpInfo (string datatableId, DataTable body, string expand = null);
 
         /// <summary>
@@ -2689,6 +2893,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="rowId">the key for the row</param>
         /// <param name="body">datatable row (optional)</param>
         /// <returns>Dictionary&lt;string, Object&gt;</returns>
+        
         Dictionary<string, Object> PutFlowsDatatableRow (string datatableId, string rowId, Object body = null);
 
         /// <summary>
@@ -2702,6 +2907,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="rowId">the key for the row</param>
         /// <param name="body">datatable row (optional)</param>
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        
         ApiResponse<Dictionary<string, Object>> PutFlowsDatatableRowWithHttpInfo (string datatableId, string rowId, Object body = null);
 
         /// <summary>
@@ -2714,6 +2920,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="milestoneId">flow milestone ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>FlowMilestone</returns>
+        
         FlowMilestone PutFlowsMilestone (string milestoneId, FlowMilestone body = null);
 
         /// <summary>
@@ -2726,6 +2933,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="milestoneId">flow milestone ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of FlowMilestone</returns>
+        
         ApiResponse<FlowMilestone> PutFlowsMilestoneWithHttpInfo (string milestoneId, FlowMilestone body = null);
 
         /// <summary>
@@ -2738,6 +2946,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowOutcomeId">flow outcome ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Operation</returns>
+        
         Operation PutFlowsOutcome (string flowOutcomeId, FlowOutcome body = null);
 
         /// <summary>
@@ -2750,6 +2959,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowOutcomeId">flow outcome ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Operation</returns>
+        
         ApiResponse<Operation> PutFlowsOutcomeWithHttpInfo (string flowOutcomeId, FlowOutcome body = null);
 
         #endregion Synchronous Operations
@@ -2765,6 +2975,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emergencyGroupId">Emergency group ID</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task DeleteArchitectEmergencygroupAsync (string emergencyGroupId);
 
         /// <summary>
@@ -2776,6 +2987,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emergencyGroupId">Emergency group ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteArchitectEmergencygroupAsyncWithHttpInfo (string emergencyGroupId);
 
         /// <summary>
@@ -2787,6 +2999,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task DeleteArchitectIvrAsync (string ivrId);
 
         /// <summary>
@@ -2798,6 +3011,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteArchitectIvrAsyncWithHttpInfo (string ivrId);
 
         /// <summary>
@@ -2810,6 +3024,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="allResources">Whether or not to delete all the prompt resources (optional)</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task DeleteArchitectPromptAsync (string promptId, bool? allResources = null);
 
         /// <summary>
@@ -2822,6 +3037,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="allResources">Whether or not to delete all the prompt resources (optional)</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteArchitectPromptAsyncWithHttpInfo (string promptId, bool? allResources = null);
 
         /// <summary>
@@ -2834,6 +3050,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task DeleteArchitectPromptResourceAsync (string promptId, string languageCode);
 
         /// <summary>
@@ -2846,6 +3063,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteArchitectPromptResourceAsyncWithHttpInfo (string promptId, string languageCode);
 
         /// <summary>
@@ -2858,6 +3076,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task DeleteArchitectPromptResourceAudioAsync (string promptId, string languageCode);
 
         /// <summary>
@@ -2870,6 +3089,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteArchitectPromptResourceAudioAsyncWithHttpInfo (string promptId, string languageCode);
 
         /// <summary>
@@ -2881,6 +3101,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">List of Prompt IDs</param>
         /// <returns>Task of Operation</returns>
+        
         System.Threading.Tasks.Task<Operation> DeleteArchitectPromptsAsync (List<string> id);
 
         /// <summary>
@@ -2892,6 +3113,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">List of Prompt IDs</param>
         /// <returns>Task of ApiResponse (Operation)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Operation>> DeleteArchitectPromptsAsyncWithHttpInfo (List<string> id);
 
         /// <summary>
@@ -2903,6 +3125,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task DeleteArchitectScheduleAsync (string scheduleId);
 
         /// <summary>
@@ -2914,6 +3137,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteArchitectScheduleAsyncWithHttpInfo (string scheduleId);
 
         /// <summary>
@@ -2925,6 +3149,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task DeleteArchitectSchedulegroupAsync (string scheduleGroupId);
 
         /// <summary>
@@ -2936,6 +3161,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteArchitectSchedulegroupAsyncWithHttpInfo (string scheduleGroupId);
 
         /// <summary>
@@ -2948,6 +3174,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task DeleteArchitectSystempromptResourceAsync (string promptId, string languageCode);
 
         /// <summary>
@@ -2960,6 +3187,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteArchitectSystempromptResourceAsyncWithHttpInfo (string promptId, string languageCode);
 
         /// <summary>
@@ -2971,6 +3199,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task DeleteFlowAsync (string flowId);
 
         /// <summary>
@@ -2982,6 +3211,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowAsyncWithHttpInfo (string flowId);
 
         /// <summary>
@@ -2993,6 +3223,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">List of Flow IDs</param>
         /// <returns>Task of Operation</returns>
+        
         System.Threading.Tasks.Task<Operation> DeleteFlowsAsync (List<string> id);
 
         /// <summary>
@@ -3004,6 +3235,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">List of Flow IDs</param>
         /// <returns>Task of ApiResponse (Operation)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Operation>> DeleteFlowsAsyncWithHttpInfo (List<string> id);
 
         /// <summary>
@@ -3016,6 +3248,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="force">force delete, even if in use (optional, default to false)</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task DeleteFlowsDatatableAsync (string datatableId, bool? force = null);
 
         /// <summary>
@@ -3028,6 +3261,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="force">force delete, even if in use (optional, default to false)</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowsDatatableAsyncWithHttpInfo (string datatableId, bool? force = null);
 
         /// <summary>
@@ -3040,6 +3274,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="rowId">the key for the row</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task DeleteFlowsDatatableRowAsync (string datatableId, string rowId);
 
         /// <summary>
@@ -3052,6 +3287,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="rowId">the key for the row</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowsDatatableRowAsyncWithHttpInfo (string datatableId, string rowId);
 
         /// <summary>
@@ -3063,6 +3299,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="milestoneId">flow milestone ID</param>
         /// <returns>Task of Object</returns>
+        
         System.Threading.Tasks.Task<Object> DeleteFlowsMilestoneAsync (string milestoneId);
 
         /// <summary>
@@ -3074,6 +3311,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="milestoneId">flow milestone ID</param>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowsMilestoneAsyncWithHttpInfo (string milestoneId);
 
         /// <summary>
@@ -3092,6 +3330,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="consumedResourceType">Types of consumed resources to return, if consumed resources are requested (optional)</param>
         /// <param name="consumingResourceType">Types of consuming resources to return, if consuming resources are requested (optional)</param>
         /// <returns>Task of DependencyObjectEntityListing</returns>
+        
         System.Threading.Tasks.Task<DependencyObjectEntityListing> GetArchitectDependencytrackingAsync (string name, int? pageNumber = null, int? pageSize = null, List<string> objectType = null, bool? consumedResources = null, bool? consumingResources = null, List<string> consumedResourceType = null, List<string> consumingResourceType = null);
 
         /// <summary>
@@ -3110,6 +3349,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="consumedResourceType">Types of consumed resources to return, if consumed resources are requested (optional)</param>
         /// <param name="consumingResourceType">Types of consuming resources to return, if consuming resources are requested (optional)</param>
         /// <returns>Task of ApiResponse (DependencyObjectEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DependencyObjectEntityListing>> GetArchitectDependencytrackingAsyncWithHttpInfo (string name, int? pageNumber = null, int? pageSize = null, List<string> objectType = null, bool? consumedResources = null, bool? consumingResources = null, List<string> consumedResourceType = null, List<string> consumingResourceType = null);
 
         /// <summary>
@@ -3120,6 +3360,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of DependencyStatus</returns>
+        
         System.Threading.Tasks.Task<DependencyStatus> GetArchitectDependencytrackingBuildAsync ();
 
         /// <summary>
@@ -3130,6 +3371,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (DependencyStatus)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DependencyStatus>> GetArchitectDependencytrackingBuildAsyncWithHttpInfo ();
 
         /// <summary>
@@ -3146,6 +3388,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ConsumedResourcesEntityListing</returns>
+        
         System.Threading.Tasks.Task<ConsumedResourcesEntityListing> GetArchitectDependencytrackingConsumedresourcesAsync (string id, string version, string objectType, List<string> resourceType = null, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -3162,6 +3405,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (ConsumedResourcesEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ConsumedResourcesEntityListing>> GetArchitectDependencytrackingConsumedresourcesAsyncWithHttpInfo (string id, string version, string objectType, List<string> resourceType = null, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -3179,6 +3423,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="flowFilter">Show only checkedIn or published flows (optional)</param>
         /// <returns>Task of ConsumingResourcesEntityListing</returns>
+        
         System.Threading.Tasks.Task<ConsumingResourcesEntityListing> GetArchitectDependencytrackingConsumingresourcesAsync (string id, string objectType, List<string> resourceType = null, string version = null, int? pageNumber = null, int? pageSize = null, string flowFilter = null);
 
         /// <summary>
@@ -3196,6 +3441,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="flowFilter">Show only checkedIn or published flows (optional)</param>
         /// <returns>Task of ApiResponse (ConsumingResourcesEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ConsumingResourcesEntityListing>> GetArchitectDependencytrackingConsumingresourcesAsyncWithHttpInfo (string id, string objectType, List<string> resourceType = null, string version = null, int? pageNumber = null, int? pageSize = null, string flowFilter = null);
 
         /// <summary>
@@ -3213,6 +3459,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of DependencyObjectEntityListing</returns>
+        
         System.Threading.Tasks.Task<DependencyObjectEntityListing> GetArchitectDependencytrackingDeletedresourceconsumersAsync (string name = null, List<string> objectType = null, string flowFilter = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -3230,6 +3477,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (DependencyObjectEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DependencyObjectEntityListing>> GetArchitectDependencytrackingDeletedresourceconsumersAsyncWithHttpInfo (string name = null, List<string> objectType = null, string flowFilter = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -3248,6 +3496,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="consumingResourceType">Types of consuming resources to return, if consuming resources are requested (optional)</param>
         /// <param name="consumedResourceRequest">Indicate that this is going to look up a consumed resource object (optional)</param>
         /// <returns>Task of DependencyObject</returns>
+        
         System.Threading.Tasks.Task<DependencyObject> GetArchitectDependencytrackingObjectAsync (string id, string version = null, string objectType = null, bool? consumedResources = null, bool? consumingResources = null, List<string> consumedResourceType = null, List<string> consumingResourceType = null, bool? consumedResourceRequest = null);
 
         /// <summary>
@@ -3266,6 +3515,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="consumingResourceType">Types of consuming resources to return, if consuming resources are requested (optional)</param>
         /// <param name="consumedResourceRequest">Indicate that this is going to look up a consumed resource object (optional)</param>
         /// <returns>Task of ApiResponse (DependencyObject)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DependencyObject>> GetArchitectDependencytrackingObjectAsyncWithHttpInfo (string id, string version = null, string objectType = null, bool? consumedResources = null, bool? consumingResources = null, List<string> consumedResourceType = null, List<string> consumingResourceType = null, bool? consumedResourceRequest = null);
 
         /// <summary>
@@ -3277,6 +3527,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="typeId">Type ID</param>
         /// <returns>Task of DependencyType</returns>
+        
         System.Threading.Tasks.Task<DependencyType> GetArchitectDependencytrackingTypeAsync (string typeId);
 
         /// <summary>
@@ -3288,6 +3539,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="typeId">Type ID</param>
         /// <returns>Task of ApiResponse (DependencyType)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DependencyType>> GetArchitectDependencytrackingTypeAsyncWithHttpInfo (string typeId);
 
         /// <summary>
@@ -3300,6 +3552,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of DependencyTypeEntityListing</returns>
+        
         System.Threading.Tasks.Task<DependencyTypeEntityListing> GetArchitectDependencytrackingTypesAsync (int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -3312,6 +3565,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (DependencyTypeEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DependencyTypeEntityListing>> GetArchitectDependencytrackingTypesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -3328,6 +3582,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of DependencyObjectEntityListing</returns>
+        
         System.Threading.Tasks.Task<DependencyObjectEntityListing> GetArchitectDependencytrackingUpdatedresourceconsumersAsync (string name = null, List<string> objectType = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -3344,6 +3599,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (DependencyObjectEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DependencyObjectEntityListing>> GetArchitectDependencytrackingUpdatedresourceconsumersAsyncWithHttpInfo (string name = null, List<string> objectType = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -3355,6 +3611,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emergencyGroupId">Emergency group ID</param>
         /// <returns>Task of EmergencyGroup</returns>
+        
         System.Threading.Tasks.Task<EmergencyGroup> GetArchitectEmergencygroupAsync (string emergencyGroupId);
 
         /// <summary>
@@ -3366,6 +3623,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emergencyGroupId">Emergency group ID</param>
         /// <returns>Task of ApiResponse (EmergencyGroup)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<EmergencyGroup>> GetArchitectEmergencygroupAsyncWithHttpInfo (string emergencyGroupId);
 
         /// <summary>
@@ -3381,6 +3639,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the Emergency Group to filter by. (optional)</param>
         /// <returns>Task of EmergencyGroupListing</returns>
+        
         System.Threading.Tasks.Task<EmergencyGroupListing> GetArchitectEmergencygroupsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
 
         /// <summary>
@@ -3396,6 +3655,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the Emergency Group to filter by. (optional)</param>
         /// <returns>Task of ApiResponse (EmergencyGroupListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<EmergencyGroupListing>> GetArchitectEmergencygroupsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
 
         /// <summary>
@@ -3407,6 +3667,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
         /// <returns>Task of IVR</returns>
+        
         System.Threading.Tasks.Task<IVR> GetArchitectIvrAsync (string ivrId);
 
         /// <summary>
@@ -3418,6 +3679,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
         /// <returns>Task of ApiResponse (IVR)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<IVR>> GetArchitectIvrAsyncWithHttpInfo (string ivrId);
 
         /// <summary>
@@ -3435,6 +3697,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dnis">The phone number of the IVR to filter by. (optional)</param>
         /// <param name="scheduleGroup">The Schedule Group of the IVR to filter by. (optional)</param>
         /// <returns>Task of IVREntityListing</returns>
+        
         System.Threading.Tasks.Task<IVREntityListing> GetArchitectIvrsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null, string scheduleGroup = null);
 
         /// <summary>
@@ -3452,6 +3715,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dnis">The phone number of the IVR to filter by. (optional)</param>
         /// <param name="scheduleGroup">The Schedule Group of the IVR to filter by. (optional)</param>
         /// <returns>Task of ApiResponse (IVREntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<IVREntityListing>> GetArchitectIvrsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null, string scheduleGroup = null);
 
         /// <summary>
@@ -3463,6 +3727,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <returns>Task of Prompt</returns>
+        
         System.Threading.Tasks.Task<Prompt> GetArchitectPromptAsync (string promptId);
 
         /// <summary>
@@ -3474,6 +3739,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <returns>Task of ApiResponse (Prompt)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Prompt>> GetArchitectPromptAsyncWithHttpInfo (string promptId);
 
         /// <summary>
@@ -3491,6 +3757,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>Task of HistoryListing</returns>
+        
         System.Threading.Tasks.Task<HistoryListing> GetArchitectPromptHistoryHistoryIdAsync (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null);
 
         /// <summary>
@@ -3508,6 +3775,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>Task of ApiResponse (HistoryListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<HistoryListing>> GetArchitectPromptHistoryHistoryIdAsyncWithHttpInfo (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null);
 
         /// <summary>
@@ -3520,6 +3788,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns>Task of PromptAsset</returns>
+        
         System.Threading.Tasks.Task<PromptAsset> GetArchitectPromptResourceAsync (string promptId, string languageCode);
 
         /// <summary>
@@ -3532,6 +3801,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns>Task of ApiResponse (PromptAsset)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<PromptAsset>> GetArchitectPromptResourceAsyncWithHttpInfo (string promptId, string languageCode);
 
         /// <summary>
@@ -3545,6 +3815,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of PromptAssetEntityListing</returns>
+        
         System.Threading.Tasks.Task<PromptAssetEntityListing> GetArchitectPromptResourcesAsync (string promptId, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -3558,6 +3829,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (PromptAssetEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<PromptAssetEntityListing>> GetArchitectPromptResourcesAsyncWithHttpInfo (string promptId, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -3575,6 +3847,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "id")</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>Task of PromptEntityListing</returns>
+        
         System.Threading.Tasks.Task<PromptEntityListing> GetArchitectPromptsAsync (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -3592,6 +3865,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "id")</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>Task of ApiResponse (PromptEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<PromptEntityListing>> GetArchitectPromptsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -3603,6 +3877,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of Schedule</returns>
+        
         System.Threading.Tasks.Task<Schedule> GetArchitectScheduleAsync (string scheduleId);
 
         /// <summary>
@@ -3614,6 +3889,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of ApiResponse (Schedule)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Schedule>> GetArchitectScheduleAsyncWithHttpInfo (string scheduleId);
 
         /// <summary>
@@ -3625,6 +3901,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <returns>Task of ScheduleGroup</returns>
+        
         System.Threading.Tasks.Task<ScheduleGroup> GetArchitectSchedulegroupAsync (string scheduleGroupId);
 
         /// <summary>
@@ -3636,6 +3913,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <returns>Task of ApiResponse (ScheduleGroup)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ScheduleGroup>> GetArchitectSchedulegroupAsyncWithHttpInfo (string scheduleGroupId);
 
         /// <summary>
@@ -3653,6 +3931,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleIds">A comma-delimited list of Schedule IDs to filter by. (optional)</param>
         /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>Task of ScheduleGroupEntityListing</returns>
+        
         System.Threading.Tasks.Task<ScheduleGroupEntityListing> GetArchitectSchedulegroupsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null, List<string> divisionId = null);
 
         /// <summary>
@@ -3670,6 +3949,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleIds">A comma-delimited list of Schedule IDs to filter by. (optional)</param>
         /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>Task of ApiResponse (ScheduleGroupEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ScheduleGroupEntityListing>> GetArchitectSchedulegroupsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null, List<string> divisionId = null);
 
         /// <summary>
@@ -3686,6 +3966,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name of the Schedule to filter by. (optional)</param>
         /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>Task of ScheduleEntityListing</returns>
+        
         System.Threading.Tasks.Task<ScheduleEntityListing> GetArchitectSchedulesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, List<string> divisionId = null);
 
         /// <summary>
@@ -3702,6 +3983,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name of the Schedule to filter by. (optional)</param>
         /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>Task of ApiResponse (ScheduleEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ScheduleEntityListing>> GetArchitectSchedulesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, List<string> divisionId = null);
 
         /// <summary>
@@ -3713,6 +3995,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">promptId</param>
         /// <returns>Task of SystemPrompt</returns>
+        
         System.Threading.Tasks.Task<SystemPrompt> GetArchitectSystempromptAsync (string promptId);
 
         /// <summary>
@@ -3724,6 +4007,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">promptId</param>
         /// <returns>Task of ApiResponse (SystemPrompt)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<SystemPrompt>> GetArchitectSystempromptAsyncWithHttpInfo (string promptId);
 
         /// <summary>
@@ -3741,6 +4025,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>Task of HistoryListing</returns>
+        
         System.Threading.Tasks.Task<HistoryListing> GetArchitectSystempromptHistoryHistoryIdAsync (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null);
 
         /// <summary>
@@ -3758,6 +4043,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>Task of ApiResponse (HistoryListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<HistoryListing>> GetArchitectSystempromptHistoryHistoryIdAsyncWithHttpInfo (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null);
 
         /// <summary>
@@ -3770,6 +4056,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns>Task of SystemPromptAsset</returns>
+        
         System.Threading.Tasks.Task<SystemPromptAsset> GetArchitectSystempromptResourceAsync (string promptId, string languageCode);
 
         /// <summary>
@@ -3782,6 +4069,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns>Task of ApiResponse (SystemPromptAsset)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<SystemPromptAsset>> GetArchitectSystempromptResourceAsyncWithHttpInfo (string promptId, string languageCode);
 
         /// <summary>
@@ -3797,6 +4085,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "id")</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>Task of SystemPromptAssetEntityListing</returns>
+        
         System.Threading.Tasks.Task<SystemPromptAssetEntityListing> GetArchitectSystempromptResourcesAsync (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -3812,6 +4101,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "id")</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>Task of ApiResponse (SystemPromptAssetEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<SystemPromptAssetEntityListing>> GetArchitectSystempromptResourcesAsyncWithHttpInfo (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
@@ -3829,6 +4119,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <returns>Task of SystemPromptEntityListing</returns>
+        
         System.Threading.Tasks.Task<SystemPromptEntityListing> GetArchitectSystempromptsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string nameOrDescription = null);
 
         /// <summary>
@@ -3846,6 +4137,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <returns>Task of ApiResponse (SystemPromptEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<SystemPromptEntityListing>> GetArchitectSystempromptsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string nameOrDescription = null);
 
         /// <summary>
@@ -3858,6 +4150,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="deleted">Deleted flows (optional, default to false)</param>
         /// <returns>Task of Flow</returns>
+        
         System.Threading.Tasks.Task<Flow> GetFlowAsync (string flowId, bool? deleted = null);
 
         /// <summary>
@@ -3870,6 +4163,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="deleted">Deleted flows (optional, default to false)</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Flow>> GetFlowAsyncWithHttpInfo (string flowId, bool? deleted = null);
 
         /// <summary>
@@ -3887,6 +4181,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>Task of HistoryListing</returns>
+        
         System.Threading.Tasks.Task<HistoryListing> GetFlowHistoryHistoryIdAsync (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null);
 
         /// <summary>
@@ -3904,6 +4199,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>Task of ApiResponse (HistoryListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<HistoryListing>> GetFlowHistoryHistoryIdAsyncWithHttpInfo (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null);
 
         /// <summary>
@@ -3916,6 +4212,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="deleted">Deleted flows (optional, default to false)</param>
         /// <returns>Task of Object</returns>
+        
         System.Threading.Tasks.Task<Object> GetFlowLatestconfigurationAsync (string flowId, bool? deleted = null);
 
         /// <summary>
@@ -3928,6 +4225,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="deleted">Deleted flows (optional, default to false)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> GetFlowLatestconfigurationAsyncWithHttpInfo (string flowId, bool? deleted = null);
 
         /// <summary>
@@ -3941,6 +4239,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="versionId">Version ID</param>
         /// <param name="deleted">Deleted flows (optional)</param>
         /// <returns>Task of FlowVersion</returns>
+        
         System.Threading.Tasks.Task<FlowVersion> GetFlowVersionAsync (string flowId, string versionId, string deleted = null);
 
         /// <summary>
@@ -3954,6 +4253,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="versionId">Version ID</param>
         /// <param name="deleted">Deleted flows (optional)</param>
         /// <returns>Task of ApiResponse (FlowVersion)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<FlowVersion>> GetFlowVersionAsyncWithHttpInfo (string flowId, string versionId, string deleted = null);
 
         /// <summary>
@@ -3967,6 +4267,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="versionId">Version ID</param>
         /// <param name="deleted">Deleted flows (optional)</param>
         /// <returns>Task of Object</returns>
+        
         System.Threading.Tasks.Task<Object> GetFlowVersionConfigurationAsync (string flowId, string versionId, string deleted = null);
 
         /// <summary>
@@ -3980,6 +4281,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="versionId">Version ID</param>
         /// <param name="deleted">Deleted flows (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> GetFlowVersionConfigurationAsyncWithHttpInfo (string flowId, string versionId, string deleted = null);
 
         /// <summary>
@@ -3994,6 +4296,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="deleted">Include Deleted flows (optional)</param>
         /// <returns>Task of FlowVersionEntityListing</returns>
+        
         System.Threading.Tasks.Task<FlowVersionEntityListing> GetFlowVersionsAsync (string flowId, int? pageNumber = null, int? pageSize = null, bool? deleted = null);
 
         /// <summary>
@@ -4008,6 +4311,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="deleted">Include Deleted flows (optional)</param>
         /// <returns>Task of ApiResponse (FlowVersionEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<FlowVersionEntityListing>> GetFlowVersionsAsyncWithHttpInfo (string flowId, int? pageNumber = null, int? pageSize = null, bool? deleted = null);
 
         /// <summary>
@@ -4037,6 +4341,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="publishedBefore">Published before (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>Task of FlowEntityListing</returns>
+        
         System.Threading.Tasks.Task<FlowEntityListing> GetFlowsAsync (List<string> type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string lockedByClientId = null, string secure = null, bool? deleted = null, bool? includeSchemas = null, string publishedAfter = null, string publishedBefore = null, List<string> divisionId = null);
 
         /// <summary>
@@ -4066,6 +4371,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="publishedBefore">Published before (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (FlowEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<FlowEntityListing>> GetFlowsAsyncWithHttpInfo (List<string> type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string lockedByClientId = null, string secure = null, bool? deleted = null, bool? includeSchemas = null, string publishedAfter = null, string publishedBefore = null, List<string> divisionId = null);
 
         /// <summary>
@@ -4078,6 +4384,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <returns>Task of DataTable</returns>
+        
         System.Threading.Tasks.Task<DataTable> GetFlowsDatatableAsync (string datatableId, string expand = null);
 
         /// <summary>
@@ -4090,6 +4397,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <returns>Task of ApiResponse (DataTable)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DataTable>> GetFlowsDatatableAsyncWithHttpInfo (string datatableId, string expand = null);
 
         /// <summary>
@@ -4102,6 +4410,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="exportJobId">id of export job</param>
         /// <returns>Task of DataTableExportJob</returns>
+        
         System.Threading.Tasks.Task<DataTableExportJob> GetFlowsDatatableExportJobAsync (string datatableId, string exportJobId);
 
         /// <summary>
@@ -4114,6 +4423,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="exportJobId">id of export job</param>
         /// <returns>Task of ApiResponse (DataTableExportJob)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DataTableExportJob>> GetFlowsDatatableExportJobAsyncWithHttpInfo (string datatableId, string exportJobId);
 
         /// <summary>
@@ -4126,6 +4436,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="importJobId">id of import job</param>
         /// <returns>Task of DataTableImportJob</returns>
+        
         System.Threading.Tasks.Task<DataTableImportJob> GetFlowsDatatableImportJobAsync (string datatableId, string importJobId);
 
         /// <summary>
@@ -4138,6 +4449,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="importJobId">id of import job</param>
         /// <returns>Task of ApiResponse (DataTableImportJob)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DataTableImportJob>> GetFlowsDatatableImportJobAsyncWithHttpInfo (string datatableId, string importJobId);
 
         /// <summary>
@@ -4151,6 +4463,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of DataTableImportEntityListing</returns>
+        
         System.Threading.Tasks.Task<DataTableImportEntityListing> GetFlowsDatatableImportJobsAsync (string datatableId, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -4164,6 +4477,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (DataTableImportEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DataTableImportEntityListing>> GetFlowsDatatableImportJobsAsyncWithHttpInfo (string datatableId, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -4177,6 +4491,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="rowId">The key for the row</param>
         /// <param name="showbrief">if true returns just the key field for the row (optional, default to true)</param>
         /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
+        
         System.Threading.Tasks.Task<Dictionary<string, Object>> GetFlowsDatatableRowAsync (string datatableId, string rowId, bool? showbrief = null);
 
         /// <summary>
@@ -4190,6 +4505,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="rowId">The key for the row</param>
         /// <param name="showbrief">if true returns just the key field for the row (optional, default to true)</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> GetFlowsDatatableRowAsyncWithHttpInfo (string datatableId, string rowId, bool? showbrief = null);
 
         /// <summary>
@@ -4205,6 +4521,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="showbrief">If true returns just the key value of the row (optional, default to true)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
         /// <returns>Task of DataTableRowEntityListing</returns>
+        
         System.Threading.Tasks.Task<DataTableRowEntityListing> GetFlowsDatatableRowsAsync (string datatableId, int? pageNumber = null, int? pageSize = null, bool? showbrief = null, string sortOrder = null);
 
         /// <summary>
@@ -4220,6 +4537,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="showbrief">If true returns just the key value of the row (optional, default to true)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
         /// <returns>Task of ApiResponse (DataTableRowEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DataTableRowEntityListing>> GetFlowsDatatableRowsAsyncWithHttpInfo (string datatableId, int? pageNumber = null, int? pageSize = null, bool? showbrief = null, string sortOrder = null);
 
         /// <summary>
@@ -4237,6 +4555,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="name">Filter by Name. The wildcard character * is supported within the filter. Matches are case-insensitive. (optional)</param>
         /// <returns>Task of DataTablesDomainEntityListing</returns>
+        
         System.Threading.Tasks.Task<DataTablesDomainEntityListing> GetFlowsDatatablesAsync (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null);
 
         /// <summary>
@@ -4254,6 +4573,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="name">Filter by Name. The wildcard character * is supported within the filter. Matches are case-insensitive. (optional)</param>
         /// <returns>Task of ApiResponse (DataTablesDomainEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DataTablesDomainEntityListing>> GetFlowsDatatablesAsyncWithHttpInfo (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null);
 
         /// <summary>
@@ -4266,6 +4586,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <returns>Task of DataTable</returns>
+        
         System.Threading.Tasks.Task<DataTable> GetFlowsDatatablesDivisionviewAsync (string datatableId, string expand = null);
 
         /// <summary>
@@ -4278,6 +4599,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <returns>Task of ApiResponse (DataTable)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DataTable>> GetFlowsDatatablesDivisionviewAsyncWithHttpInfo (string datatableId, string expand = null);
 
         /// <summary>
@@ -4295,6 +4617,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="name">Filter by Name. The wildcard character * is supported within the filter. Matches are case-insensitive. (optional)</param>
         /// <returns>Task of DataTablesDomainEntityListing</returns>
+        
         System.Threading.Tasks.Task<DataTablesDomainEntityListing> GetFlowsDatatablesDivisionviewsAsync (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null);
 
         /// <summary>
@@ -4312,6 +4635,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="name">Filter by Name. The wildcard character * is supported within the filter. Matches are case-insensitive. (optional)</param>
         /// <returns>Task of ApiResponse (DataTablesDomainEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DataTablesDomainEntityListing>> GetFlowsDatatablesDivisionviewsAsyncWithHttpInfo (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null);
 
         /// <summary>
@@ -4334,6 +4658,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="includeSchemas">Include variable schemas (optional, default to false)</param>
         /// <returns>Task of FlowDivisionViewEntityListing</returns>
+        
         System.Threading.Tasks.Task<FlowDivisionViewEntityListing> GetFlowsDivisionviewsAsync (List<string> type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string publishVersionId = null, string publishedAfter = null, string publishedBefore = null, List<string> divisionId = null, bool? includeSchemas = null);
 
         /// <summary>
@@ -4356,6 +4681,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="includeSchemas">Include variable schemas (optional, default to false)</param>
         /// <returns>Task of ApiResponse (FlowDivisionViewEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<FlowDivisionViewEntityListing>> GetFlowsDivisionviewsAsyncWithHttpInfo (List<string> type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string publishVersionId = null, string publishedAfter = null, string publishedBefore = null, List<string> divisionId = null, bool? includeSchemas = null);
 
         /// <summary>
@@ -4367,6 +4693,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowExecutionId">flow execution ID</param>
         /// <returns>Task of FlowRuntimeExecution</returns>
+        
         System.Threading.Tasks.Task<FlowRuntimeExecution> GetFlowsExecutionAsync (string flowExecutionId);
 
         /// <summary>
@@ -4378,6 +4705,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowExecutionId">flow execution ID</param>
         /// <returns>Task of ApiResponse (FlowRuntimeExecution)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<FlowRuntimeExecution>> GetFlowsExecutionAsyncWithHttpInfo (string flowExecutionId);
 
         /// <summary>
@@ -4390,6 +4718,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">Job ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ArchitectJobStateResponse</returns>
+        
         System.Threading.Tasks.Task<ArchitectJobStateResponse> GetFlowsJobAsync (string jobId, List<string> expand = null);
 
         /// <summary>
@@ -4402,6 +4731,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">Job ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (ArchitectJobStateResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ArchitectJobStateResponse>> GetFlowsJobAsyncWithHttpInfo (string jobId, List<string> expand = null);
 
         /// <summary>
@@ -4413,6 +4743,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="milestoneId">flow milestone ID</param>
         /// <returns>Task of FlowMilestone</returns>
+        
         System.Threading.Tasks.Task<FlowMilestone> GetFlowsMilestoneAsync (string milestoneId);
 
         /// <summary>
@@ -4424,6 +4755,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="milestoneId">flow milestone ID</param>
         /// <returns>Task of ApiResponse (FlowMilestone)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<FlowMilestone>> GetFlowsMilestoneAsyncWithHttpInfo (string milestoneId);
 
         /// <summary>
@@ -4443,6 +4775,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>Task of FlowMilestoneListing</returns>
+        
         System.Threading.Tasks.Task<FlowMilestoneListing> GetFlowsMilestonesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, List<string> divisionId = null);
 
         /// <summary>
@@ -4462,6 +4795,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (FlowMilestoneListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<FlowMilestoneListing>> GetFlowsMilestonesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, List<string> divisionId = null);
 
         /// <summary>
@@ -4479,6 +4813,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>Task of FlowMilestoneDivisionViewEntityListing</returns>
+        
         System.Threading.Tasks.Task<FlowMilestoneDivisionViewEntityListing> GetFlowsMilestonesDivisionviewsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
 
         /// <summary>
@@ -4496,6 +4831,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (FlowMilestoneDivisionViewEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<FlowMilestoneDivisionViewEntityListing>> GetFlowsMilestonesDivisionviewsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
 
         /// <summary>
@@ -4507,6 +4843,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowOutcomeId">flow outcome ID</param>
         /// <returns>Task of FlowOutcome</returns>
+        
         System.Threading.Tasks.Task<FlowOutcome> GetFlowsOutcomeAsync (string flowOutcomeId);
 
         /// <summary>
@@ -4518,6 +4855,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowOutcomeId">flow outcome ID</param>
         /// <returns>Task of ApiResponse (FlowOutcome)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<FlowOutcome>> GetFlowsOutcomeAsyncWithHttpInfo (string flowOutcomeId);
 
         /// <summary>
@@ -4537,6 +4875,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>Task of FlowOutcomeListing</returns>
+        
         System.Threading.Tasks.Task<FlowOutcomeListing> GetFlowsOutcomesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, List<string> divisionId = null);
 
         /// <summary>
@@ -4556,6 +4895,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (FlowOutcomeListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<FlowOutcomeListing>> GetFlowsOutcomesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, List<string> divisionId = null);
 
         /// <summary>
@@ -4573,6 +4913,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>Task of FlowOutcomeDivisionViewEntityListing</returns>
+        
         System.Threading.Tasks.Task<FlowOutcomeDivisionViewEntityListing> GetFlowsOutcomesDivisionviewsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
 
         /// <summary>
@@ -4590,6 +4931,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (FlowOutcomeDivisionViewEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<FlowOutcomeDivisionViewEntityListing>> GetFlowsOutcomesDivisionviewsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null);
 
         /// <summary>
@@ -4600,6 +4942,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task PostArchitectDependencytrackingBuildAsync ();
 
         /// <summary>
@@ -4610,6 +4953,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> PostArchitectDependencytrackingBuildAsyncWithHttpInfo ();
 
         /// <summary>
@@ -4621,6 +4965,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of EmergencyGroup</returns>
+        
         System.Threading.Tasks.Task<EmergencyGroup> PostArchitectEmergencygroupsAsync (EmergencyGroup body);
 
         /// <summary>
@@ -4632,6 +4977,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (EmergencyGroup)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<EmergencyGroup>> PostArchitectEmergencygroupsAsyncWithHttpInfo (EmergencyGroup body);
 
         /// <summary>
@@ -4643,6 +4989,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of IVR</returns>
+        
         System.Threading.Tasks.Task<IVR> PostArchitectIvrsAsync (IVR body);
 
         /// <summary>
@@ -4654,6 +5001,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (IVR)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<IVR>> PostArchitectIvrsAsyncWithHttpInfo (IVR body);
 
         /// <summary>
@@ -4665,6 +5013,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <returns>Task of Operation</returns>
+        
         System.Threading.Tasks.Task<Operation> PostArchitectPromptHistoryAsync (string promptId);
 
         /// <summary>
@@ -4676,6 +5025,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <returns>Task of ApiResponse (Operation)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Operation>> PostArchitectPromptHistoryAsyncWithHttpInfo (string promptId);
 
         /// <summary>
@@ -4688,6 +5038,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>Task of PromptAsset</returns>
+        
         System.Threading.Tasks.Task<PromptAsset> PostArchitectPromptResourcesAsync (string promptId, PromptAssetCreate body);
 
         /// <summary>
@@ -4700,6 +5051,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (PromptAsset)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<PromptAsset>> PostArchitectPromptResourcesAsyncWithHttpInfo (string promptId, PromptAssetCreate body);
 
         /// <summary>
@@ -4711,6 +5063,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of Prompt</returns>
+        
         System.Threading.Tasks.Task<Prompt> PostArchitectPromptsAsync (Prompt body);
 
         /// <summary>
@@ -4722,6 +5075,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Prompt)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Prompt>> PostArchitectPromptsAsyncWithHttpInfo (Prompt body);
 
         /// <summary>
@@ -4733,6 +5087,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ScheduleGroup</returns>
+        
         System.Threading.Tasks.Task<ScheduleGroup> PostArchitectSchedulegroupsAsync (ScheduleGroup body);
 
         /// <summary>
@@ -4744,6 +5099,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (ScheduleGroup)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ScheduleGroup>> PostArchitectSchedulegroupsAsyncWithHttpInfo (ScheduleGroup body);
 
         /// <summary>
@@ -4755,6 +5111,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of Schedule</returns>
+        
         System.Threading.Tasks.Task<Schedule> PostArchitectSchedulesAsync (Schedule body);
 
         /// <summary>
@@ -4766,6 +5123,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Schedule)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Schedule>> PostArchitectSchedulesAsyncWithHttpInfo (Schedule body);
 
         /// <summary>
@@ -4777,6 +5135,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">promptId</param>
         /// <returns>Task of Operation</returns>
+        
         System.Threading.Tasks.Task<Operation> PostArchitectSystempromptHistoryAsync (string promptId);
 
         /// <summary>
@@ -4788,6 +5147,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">promptId</param>
         /// <returns>Task of ApiResponse (Operation)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Operation>> PostArchitectSystempromptHistoryAsyncWithHttpInfo (string promptId);
 
         /// <summary>
@@ -4800,6 +5160,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>Task of SystemPromptAsset</returns>
+        
         System.Threading.Tasks.Task<SystemPromptAsset> PostArchitectSystempromptResourcesAsync (string promptId, SystemPromptAsset body);
 
         /// <summary>
@@ -4812,6 +5173,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (SystemPromptAsset)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<SystemPromptAsset>> PostArchitectSystempromptResourcesAsyncWithHttpInfo (string promptId, SystemPromptAsset body);
 
         /// <summary>
@@ -4823,6 +5185,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
         /// <returns>Task of Operation</returns>
+        
         System.Threading.Tasks.Task<Operation> PostFlowHistoryAsync (string flowId);
 
         /// <summary>
@@ -4834,6 +5197,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
         /// <returns>Task of ApiResponse (Operation)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Operation>> PostFlowHistoryAsyncWithHttpInfo (string flowId);
 
         /// <summary>
@@ -4846,6 +5210,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="body"></param>
         /// <returns>Task of FlowVersion</returns>
+        
         System.Threading.Tasks.Task<FlowVersion> PostFlowVersionsAsync (string flowId, Object body);
 
         /// <summary>
@@ -4858,6 +5223,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (FlowVersion)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<FlowVersion>> PostFlowVersionsAsyncWithHttpInfo (string flowId, Object body);
 
         /// <summary>
@@ -4870,6 +5236,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <param name="language">Language (optional)</param>
         /// <returns>Task of Flow</returns>
+        
         System.Threading.Tasks.Task<Flow> PostFlowsAsync (Flow body, string language = null);
 
         /// <summary>
@@ -4882,6 +5249,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <param name="language">Language (optional)</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsAsyncWithHttpInfo (Flow body, string language = null);
 
         /// <summary>
@@ -4893,6 +5261,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>Task of Operation</returns>
+        
         System.Threading.Tasks.Task<Operation> PostFlowsActionsCheckinAsync (string flow);
 
         /// <summary>
@@ -4904,6 +5273,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>Task of ApiResponse (Operation)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Operation>> PostFlowsActionsCheckinAsyncWithHttpInfo (string flow);
 
         /// <summary>
@@ -4915,6 +5285,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>Task of Flow</returns>
+        
         System.Threading.Tasks.Task<Flow> PostFlowsActionsCheckoutAsync (string flow);
 
         /// <summary>
@@ -4926,6 +5297,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsActionsCheckoutAsyncWithHttpInfo (string flow);
 
         /// <summary>
@@ -4937,6 +5309,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>Task of Flow</returns>
+        
         System.Threading.Tasks.Task<Flow> PostFlowsActionsDeactivateAsync (string flow);
 
         /// <summary>
@@ -4948,6 +5321,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsActionsDeactivateAsyncWithHttpInfo (string flow);
 
         /// <summary>
@@ -4960,6 +5334,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flow">Flow ID</param>
         /// <param name="version">version (optional)</param>
         /// <returns>Task of Operation</returns>
+        
         System.Threading.Tasks.Task<Operation> PostFlowsActionsPublishAsync (string flow, string version = null);
 
         /// <summary>
@@ -4972,6 +5347,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flow">Flow ID</param>
         /// <param name="version">version (optional)</param>
         /// <returns>Task of ApiResponse (Operation)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Operation>> PostFlowsActionsPublishAsyncWithHttpInfo (string flow, string version = null);
 
         /// <summary>
@@ -4983,6 +5359,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>Task of Flow</returns>
+        
         System.Threading.Tasks.Task<Flow> PostFlowsActionsRevertAsync (string flow);
 
         /// <summary>
@@ -4994,6 +5371,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsActionsRevertAsyncWithHttpInfo (string flow);
 
         /// <summary>
@@ -5005,6 +5383,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>Task of Flow</returns>
+        
         System.Threading.Tasks.Task<Flow> PostFlowsActionsUnlockAsync (string flow);
 
         /// <summary>
@@ -5016,6 +5395,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsActionsUnlockAsyncWithHttpInfo (string flow);
 
         /// <summary>
@@ -5027,6 +5407,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
         /// <returns>Task of DataTableExportJob</returns>
+        
         System.Threading.Tasks.Task<DataTableExportJob> PostFlowsDatatableExportJobsAsync (string datatableId);
 
         /// <summary>
@@ -5038,6 +5419,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
         /// <returns>Task of ApiResponse (DataTableExportJob)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DataTableExportJob>> PostFlowsDatatableExportJobsAsyncWithHttpInfo (string datatableId);
 
         /// <summary>
@@ -5050,6 +5432,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="body">import job information</param>
         /// <returns>Task of DataTableImportJob</returns>
+        
         System.Threading.Tasks.Task<DataTableImportJob> PostFlowsDatatableImportJobsAsync (string datatableId, DataTableImportJob body);
 
         /// <summary>
@@ -5062,6 +5445,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="body">import job information</param>
         /// <returns>Task of ApiResponse (DataTableImportJob)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DataTableImportJob>> PostFlowsDatatableImportJobsAsyncWithHttpInfo (string datatableId, DataTableImportJob body);
 
         /// <summary>
@@ -5074,6 +5458,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="dataTableRow"></param>
         /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
+        
         System.Threading.Tasks.Task<Dictionary<string, Object>> PostFlowsDatatableRowsAsync (string datatableId, Object dataTableRow);
 
         /// <summary>
@@ -5086,6 +5471,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="dataTableRow"></param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> PostFlowsDatatableRowsAsyncWithHttpInfo (string datatableId, Object dataTableRow);
 
         /// <summary>
@@ -5097,6 +5483,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">datatable json-schema</param>
         /// <returns>Task of DataTable</returns>
+        
         System.Threading.Tasks.Task<DataTable> PostFlowsDatatablesAsync (DataTable body);
 
         /// <summary>
@@ -5108,6 +5495,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">datatable json-schema</param>
         /// <returns>Task of ApiResponse (DataTable)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DataTable>> PostFlowsDatatablesAsyncWithHttpInfo (DataTable body);
 
         /// <summary>
@@ -5119,6 +5507,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowLaunchRequest"></param>
         /// <returns>Task of FlowExecutionLaunchResponse</returns>
+        
         System.Threading.Tasks.Task<FlowExecutionLaunchResponse> PostFlowsExecutionsAsync (FlowExecutionLaunchRequest flowLaunchRequest);
 
         /// <summary>
@@ -5130,6 +5519,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowLaunchRequest"></param>
         /// <returns>Task of ApiResponse (FlowExecutionLaunchResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<FlowExecutionLaunchResponse>> PostFlowsExecutionsAsyncWithHttpInfo (FlowExecutionLaunchRequest flowLaunchRequest);
 
         /// <summary>
@@ -5140,6 +5530,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of RegisterArchitectJobResponse</returns>
+        
         System.Threading.Tasks.Task<RegisterArchitectJobResponse> PostFlowsJobsAsync ();
 
         /// <summary>
@@ -5150,6 +5541,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (RegisterArchitectJobResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<RegisterArchitectJobResponse>> PostFlowsJobsAsyncWithHttpInfo ();
 
         /// <summary>
@@ -5161,6 +5553,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of FlowMilestone</returns>
+        
         System.Threading.Tasks.Task<FlowMilestone> PostFlowsMilestonesAsync (FlowMilestone body = null);
 
         /// <summary>
@@ -5172,6 +5565,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (FlowMilestone)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<FlowMilestone>> PostFlowsMilestonesAsyncWithHttpInfo (FlowMilestone body = null);
 
         /// <summary>
@@ -5183,6 +5577,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of FlowOutcome</returns>
+        
         System.Threading.Tasks.Task<FlowOutcome> PostFlowsOutcomesAsync (FlowOutcome body = null);
 
         /// <summary>
@@ -5194,6 +5589,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (FlowOutcome)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<FlowOutcome>> PostFlowsOutcomesAsyncWithHttpInfo (FlowOutcome body = null);
 
         /// <summary>
@@ -5206,6 +5602,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="emergencyGroupId">Emergency group ID</param>
         /// <param name="body"></param>
         /// <returns>Task of EmergencyGroup</returns>
+        
         System.Threading.Tasks.Task<EmergencyGroup> PutArchitectEmergencygroupAsync (string emergencyGroupId, EmergencyGroup body);
 
         /// <summary>
@@ -5218,6 +5615,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="emergencyGroupId">Emergency group ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (EmergencyGroup)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<EmergencyGroup>> PutArchitectEmergencygroupAsyncWithHttpInfo (string emergencyGroupId, EmergencyGroup body);
 
         /// <summary>
@@ -5230,6 +5628,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ivrId">IVR id</param>
         /// <param name="body"></param>
         /// <returns>Task of IVR</returns>
+        
         System.Threading.Tasks.Task<IVR> PutArchitectIvrAsync (string ivrId, IVR body);
 
         /// <summary>
@@ -5242,6 +5641,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ivrId">IVR id</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (IVR)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<IVR>> PutArchitectIvrAsyncWithHttpInfo (string ivrId, IVR body);
 
         /// <summary>
@@ -5254,6 +5654,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>Task of Prompt</returns>
+        
         System.Threading.Tasks.Task<Prompt> PutArchitectPromptAsync (string promptId, Prompt body);
 
         /// <summary>
@@ -5266,6 +5667,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Prompt)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Prompt>> PutArchitectPromptAsyncWithHttpInfo (string promptId, Prompt body);
 
         /// <summary>
@@ -5279,6 +5681,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language</param>
         /// <param name="body"></param>
         /// <returns>Task of PromptAsset</returns>
+        
         System.Threading.Tasks.Task<PromptAsset> PutArchitectPromptResourceAsync (string promptId, string languageCode, PromptAsset body);
 
         /// <summary>
@@ -5292,6 +5695,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (PromptAsset)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<PromptAsset>> PutArchitectPromptResourceAsyncWithHttpInfo (string promptId, string languageCode, PromptAsset body);
 
         /// <summary>
@@ -5304,6 +5708,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body"></param>
         /// <returns>Task of Schedule</returns>
+        
         System.Threading.Tasks.Task<Schedule> PutArchitectScheduleAsync (string scheduleId, Schedule body);
 
         /// <summary>
@@ -5316,6 +5721,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Schedule)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Schedule>> PutArchitectScheduleAsyncWithHttpInfo (string scheduleId, Schedule body);
 
         /// <summary>
@@ -5328,6 +5734,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ScheduleGroup</returns>
+        
         System.Threading.Tasks.Task<ScheduleGroup> PutArchitectSchedulegroupAsync (string scheduleGroupId, ScheduleGroup body);
 
         /// <summary>
@@ -5340,6 +5747,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (ScheduleGroup)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ScheduleGroup>> PutArchitectSchedulegroupAsyncWithHttpInfo (string scheduleGroupId, ScheduleGroup body);
 
         /// <summary>
@@ -5353,6 +5761,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language</param>
         /// <param name="body"></param>
         /// <returns>Task of SystemPromptAsset</returns>
+        
         System.Threading.Tasks.Task<SystemPromptAsset> PutArchitectSystempromptResourceAsync (string promptId, string languageCode, SystemPromptAsset body);
 
         /// <summary>
@@ -5366,6 +5775,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (SystemPromptAsset)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<SystemPromptAsset>> PutArchitectSystempromptResourceAsyncWithHttpInfo (string promptId, string languageCode, SystemPromptAsset body);
 
         /// <summary>
@@ -5378,6 +5788,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="body"></param>
         /// <returns>Task of Flow</returns>
+        
         System.Threading.Tasks.Task<Flow> PutFlowAsync (string flowId, Flow body);
 
         /// <summary>
@@ -5390,6 +5801,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Flow)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Flow>> PutFlowAsyncWithHttpInfo (string flowId, Flow body);
 
         /// <summary>
@@ -5403,6 +5815,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">datatable json-schema</param>
         /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <returns>Task of DataTable</returns>
+        
         System.Threading.Tasks.Task<DataTable> PutFlowsDatatableAsync (string datatableId, DataTable body, string expand = null);
 
         /// <summary>
@@ -5416,6 +5829,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">datatable json-schema</param>
         /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <returns>Task of ApiResponse (DataTable)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DataTable>> PutFlowsDatatableAsyncWithHttpInfo (string datatableId, DataTable body, string expand = null);
 
         /// <summary>
@@ -5429,6 +5843,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="rowId">the key for the row</param>
         /// <param name="body">datatable row (optional)</param>
         /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
+        
         System.Threading.Tasks.Task<Dictionary<string, Object>> PutFlowsDatatableRowAsync (string datatableId, string rowId, Object body = null);
 
         /// <summary>
@@ -5442,6 +5857,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="rowId">the key for the row</param>
         /// <param name="body">datatable row (optional)</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> PutFlowsDatatableRowAsyncWithHttpInfo (string datatableId, string rowId, Object body = null);
 
         /// <summary>
@@ -5454,6 +5870,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="milestoneId">flow milestone ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of FlowMilestone</returns>
+        
         System.Threading.Tasks.Task<FlowMilestone> PutFlowsMilestoneAsync (string milestoneId, FlowMilestone body = null);
 
         /// <summary>
@@ -5466,6 +5883,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="milestoneId">flow milestone ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (FlowMilestone)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<FlowMilestone>> PutFlowsMilestoneAsyncWithHttpInfo (string milestoneId, FlowMilestone body = null);
 
         /// <summary>
@@ -5478,6 +5896,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowOutcomeId">flow outcome ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of Operation</returns>
+        
         System.Threading.Tasks.Task<Operation> PutFlowsOutcomeAsync (string flowOutcomeId, FlowOutcome body = null);
 
         /// <summary>
@@ -5490,6 +5909,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowOutcomeId">flow outcome ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (Operation)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Operation>> PutFlowsOutcomeAsyncWithHttpInfo (string flowOutcomeId, FlowOutcome body = null);
 
         #endregion Asynchronous Operations
@@ -5590,6 +6010,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emergencyGroupId">Emergency group ID</param>
         /// <returns></returns>
+        
         public void DeleteArchitectEmergencygroup (string emergencyGroupId)
         {
              DeleteArchitectEmergencygroupWithHttpInfo(emergencyGroupId);
@@ -5601,6 +6022,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emergencyGroupId">Emergency group ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> DeleteArchitectEmergencygroupWithHttpInfo (string emergencyGroupId)
         { 
             // verify the required parameter 'emergencyGroupId' is set
@@ -5683,6 +6105,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emergencyGroupId">Emergency group ID</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task DeleteArchitectEmergencygroupAsync (string emergencyGroupId)
         {
              await DeleteArchitectEmergencygroupAsyncWithHttpInfo(emergencyGroupId);
@@ -5695,6 +6118,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emergencyGroupId">Emergency group ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteArchitectEmergencygroupAsyncWithHttpInfo (string emergencyGroupId)
         { 
             // verify the required parameter 'emergencyGroupId' is set
@@ -5779,6 +6203,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
         /// <returns></returns>
+        
         public void DeleteArchitectIvr (string ivrId)
         {
              DeleteArchitectIvrWithHttpInfo(ivrId);
@@ -5790,6 +6215,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> DeleteArchitectIvrWithHttpInfo (string ivrId)
         { 
             // verify the required parameter 'ivrId' is set
@@ -5872,6 +6298,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task DeleteArchitectIvrAsync (string ivrId)
         {
              await DeleteArchitectIvrAsyncWithHttpInfo(ivrId);
@@ -5884,6 +6311,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteArchitectIvrAsyncWithHttpInfo (string ivrId)
         { 
             // verify the required parameter 'ivrId' is set
@@ -5969,6 +6397,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="allResources">Whether or not to delete all the prompt resources (optional)</param>
         /// <returns></returns>
+        
         public void DeleteArchitectPrompt (string promptId, bool? allResources = null)
         {
              DeleteArchitectPromptWithHttpInfo(promptId, allResources);
@@ -5981,6 +6410,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="allResources">Whether or not to delete all the prompt resources (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> DeleteArchitectPromptWithHttpInfo (string promptId, bool? allResources = null)
         { 
             // verify the required parameter 'promptId' is set
@@ -6065,6 +6495,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="allResources">Whether or not to delete all the prompt resources (optional)</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task DeleteArchitectPromptAsync (string promptId, bool? allResources = null)
         {
              await DeleteArchitectPromptAsyncWithHttpInfo(promptId, allResources);
@@ -6078,6 +6509,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="allResources">Whether or not to delete all the prompt resources (optional)</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteArchitectPromptAsyncWithHttpInfo (string promptId, bool? allResources = null)
         { 
             // verify the required parameter 'promptId' is set
@@ -6164,6 +6596,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns></returns>
+        
         public void DeleteArchitectPromptResource (string promptId, string languageCode)
         {
              DeleteArchitectPromptResourceWithHttpInfo(promptId, languageCode);
@@ -6176,6 +6609,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> DeleteArchitectPromptResourceWithHttpInfo (string promptId, string languageCode)
         { 
             // verify the required parameter 'promptId' is set
@@ -6263,6 +6697,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task DeleteArchitectPromptResourceAsync (string promptId, string languageCode)
         {
              await DeleteArchitectPromptResourceAsyncWithHttpInfo(promptId, languageCode);
@@ -6276,6 +6711,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteArchitectPromptResourceAsyncWithHttpInfo (string promptId, string languageCode)
         { 
             // verify the required parameter 'promptId' is set
@@ -6366,6 +6802,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns></returns>
+        
         public void DeleteArchitectPromptResourceAudio (string promptId, string languageCode)
         {
              DeleteArchitectPromptResourceAudioWithHttpInfo(promptId, languageCode);
@@ -6378,6 +6815,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> DeleteArchitectPromptResourceAudioWithHttpInfo (string promptId, string languageCode)
         { 
             // verify the required parameter 'promptId' is set
@@ -6465,6 +6903,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task DeleteArchitectPromptResourceAudioAsync (string promptId, string languageCode)
         {
              await DeleteArchitectPromptResourceAudioAsyncWithHttpInfo(promptId, languageCode);
@@ -6478,6 +6917,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteArchitectPromptResourceAudioAsyncWithHttpInfo (string promptId, string languageCode)
         { 
             // verify the required parameter 'promptId' is set
@@ -6567,6 +7007,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">List of Prompt IDs</param>
         /// <returns>Operation</returns>
+        
         public Operation DeleteArchitectPrompts (List<string> id)
         {
              ApiResponse<Operation> localVarResponse = DeleteArchitectPromptsWithHttpInfo(id);
@@ -6579,6 +7020,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">List of Prompt IDs</param>
         /// <returns>ApiResponse of Operation</returns>
+        
         public ApiResponse< Operation > DeleteArchitectPromptsWithHttpInfo (List<string> id)
         { 
             // verify the required parameter 'id' is set
@@ -6661,6 +7103,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">List of Prompt IDs</param>
         /// <returns>Task of Operation</returns>
+        
         public async System.Threading.Tasks.Task<Operation> DeleteArchitectPromptsAsync (List<string> id)
         {
              ApiResponse<Operation> localVarResponse = await DeleteArchitectPromptsAsyncWithHttpInfo(id);
@@ -6674,6 +7117,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">List of Prompt IDs</param>
         /// <returns>Task of ApiResponse (Operation)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Operation>> DeleteArchitectPromptsAsyncWithHttpInfo (List<string> id)
         { 
             // verify the required parameter 'id' is set
@@ -6758,6 +7202,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns></returns>
+        
         public void DeleteArchitectSchedule (string scheduleId)
         {
              DeleteArchitectScheduleWithHttpInfo(scheduleId);
@@ -6769,6 +7214,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> DeleteArchitectScheduleWithHttpInfo (string scheduleId)
         { 
             // verify the required parameter 'scheduleId' is set
@@ -6851,6 +7297,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task DeleteArchitectScheduleAsync (string scheduleId)
         {
              await DeleteArchitectScheduleAsyncWithHttpInfo(scheduleId);
@@ -6863,6 +7310,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteArchitectScheduleAsyncWithHttpInfo (string scheduleId)
         { 
             // verify the required parameter 'scheduleId' is set
@@ -6947,6 +7395,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <returns></returns>
+        
         public void DeleteArchitectSchedulegroup (string scheduleGroupId)
         {
              DeleteArchitectSchedulegroupWithHttpInfo(scheduleGroupId);
@@ -6958,6 +7407,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> DeleteArchitectSchedulegroupWithHttpInfo (string scheduleGroupId)
         { 
             // verify the required parameter 'scheduleGroupId' is set
@@ -7040,6 +7490,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task DeleteArchitectSchedulegroupAsync (string scheduleGroupId)
         {
              await DeleteArchitectSchedulegroupAsyncWithHttpInfo(scheduleGroupId);
@@ -7052,6 +7503,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteArchitectSchedulegroupAsyncWithHttpInfo (string scheduleGroupId)
         { 
             // verify the required parameter 'scheduleGroupId' is set
@@ -7137,6 +7589,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns></returns>
+        
         public void DeleteArchitectSystempromptResource (string promptId, string languageCode)
         {
              DeleteArchitectSystempromptResourceWithHttpInfo(promptId, languageCode);
@@ -7149,6 +7602,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> DeleteArchitectSystempromptResourceWithHttpInfo (string promptId, string languageCode)
         { 
             // verify the required parameter 'promptId' is set
@@ -7236,6 +7690,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task DeleteArchitectSystempromptResourceAsync (string promptId, string languageCode)
         {
              await DeleteArchitectSystempromptResourceAsyncWithHttpInfo(promptId, languageCode);
@@ -7249,6 +7704,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteArchitectSystempromptResourceAsyncWithHttpInfo (string promptId, string languageCode)
         { 
             // verify the required parameter 'promptId' is set
@@ -7338,6 +7794,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
         /// <returns></returns>
+        
         public void DeleteFlow (string flowId)
         {
              DeleteFlowWithHttpInfo(flowId);
@@ -7349,6 +7806,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> DeleteFlowWithHttpInfo (string flowId)
         { 
             // verify the required parameter 'flowId' is set
@@ -7431,6 +7889,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task DeleteFlowAsync (string flowId)
         {
              await DeleteFlowAsyncWithHttpInfo(flowId);
@@ -7443,6 +7902,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowAsyncWithHttpInfo (string flowId)
         { 
             // verify the required parameter 'flowId' is set
@@ -7527,6 +7987,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">List of Flow IDs</param>
         /// <returns>Operation</returns>
+        
         public Operation DeleteFlows (List<string> id)
         {
              ApiResponse<Operation> localVarResponse = DeleteFlowsWithHttpInfo(id);
@@ -7539,6 +8000,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">List of Flow IDs</param>
         /// <returns>ApiResponse of Operation</returns>
+        
         public ApiResponse< Operation > DeleteFlowsWithHttpInfo (List<string> id)
         { 
             // verify the required parameter 'id' is set
@@ -7621,6 +8083,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">List of Flow IDs</param>
         /// <returns>Task of Operation</returns>
+        
         public async System.Threading.Tasks.Task<Operation> DeleteFlowsAsync (List<string> id)
         {
              ApiResponse<Operation> localVarResponse = await DeleteFlowsAsyncWithHttpInfo(id);
@@ -7634,6 +8097,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">List of Flow IDs</param>
         /// <returns>Task of ApiResponse (Operation)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Operation>> DeleteFlowsAsyncWithHttpInfo (List<string> id)
         { 
             // verify the required parameter 'id' is set
@@ -7719,6 +8183,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="force">force delete, even if in use (optional, default to false)</param>
         /// <returns></returns>
+        
         public void DeleteFlowsDatatable (string datatableId, bool? force = null)
         {
              DeleteFlowsDatatableWithHttpInfo(datatableId, force);
@@ -7731,6 +8196,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="force">force delete, even if in use (optional, default to false)</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> DeleteFlowsDatatableWithHttpInfo (string datatableId, bool? force = null)
         { 
             // verify the required parameter 'datatableId' is set
@@ -7815,6 +8281,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="force">force delete, even if in use (optional, default to false)</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task DeleteFlowsDatatableAsync (string datatableId, bool? force = null)
         {
              await DeleteFlowsDatatableAsyncWithHttpInfo(datatableId, force);
@@ -7828,6 +8295,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="force">force delete, even if in use (optional, default to false)</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowsDatatableAsyncWithHttpInfo (string datatableId, bool? force = null)
         { 
             // verify the required parameter 'datatableId' is set
@@ -7914,6 +8382,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="rowId">the key for the row</param>
         /// <returns></returns>
+        
         public void DeleteFlowsDatatableRow (string datatableId, string rowId)
         {
              DeleteFlowsDatatableRowWithHttpInfo(datatableId, rowId);
@@ -7926,6 +8395,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="rowId">the key for the row</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> DeleteFlowsDatatableRowWithHttpInfo (string datatableId, string rowId)
         { 
             // verify the required parameter 'datatableId' is set
@@ -8013,6 +8483,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="rowId">the key for the row</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task DeleteFlowsDatatableRowAsync (string datatableId, string rowId)
         {
              await DeleteFlowsDatatableRowAsyncWithHttpInfo(datatableId, rowId);
@@ -8026,6 +8497,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="rowId">the key for the row</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowsDatatableRowAsyncWithHttpInfo (string datatableId, string rowId)
         { 
             // verify the required parameter 'datatableId' is set
@@ -8115,6 +8587,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="milestoneId">flow milestone ID</param>
         /// <returns>Object</returns>
+        
         public Object DeleteFlowsMilestone (string milestoneId)
         {
              ApiResponse<Object> localVarResponse = DeleteFlowsMilestoneWithHttpInfo(milestoneId);
@@ -8127,6 +8600,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="milestoneId">flow milestone ID</param>
         /// <returns>ApiResponse of Object</returns>
+        
         public ApiResponse< Object > DeleteFlowsMilestoneWithHttpInfo (string milestoneId)
         { 
             // verify the required parameter 'milestoneId' is set
@@ -8209,6 +8683,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="milestoneId">flow milestone ID</param>
         /// <returns>Task of Object</returns>
+        
         public async System.Threading.Tasks.Task<Object> DeleteFlowsMilestoneAsync (string milestoneId)
         {
              ApiResponse<Object> localVarResponse = await DeleteFlowsMilestoneAsyncWithHttpInfo(milestoneId);
@@ -8222,6 +8697,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="milestoneId">flow milestone ID</param>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowsMilestoneAsyncWithHttpInfo (string milestoneId)
         { 
             // verify the required parameter 'milestoneId' is set
@@ -8313,6 +8789,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="consumedResourceType">Types of consumed resources to return, if consumed resources are requested (optional)</param>
         /// <param name="consumingResourceType">Types of consuming resources to return, if consuming resources are requested (optional)</param>
         /// <returns>DependencyObjectEntityListing</returns>
+        
         public DependencyObjectEntityListing GetArchitectDependencytracking (string name, int? pageNumber = null, int? pageSize = null, List<string> objectType = null, bool? consumedResources = null, bool? consumingResources = null, List<string> consumedResourceType = null, List<string> consumingResourceType = null)
         {
              ApiResponse<DependencyObjectEntityListing> localVarResponse = GetArchitectDependencytrackingWithHttpInfo(name, pageNumber, pageSize, objectType, consumedResources, consumingResources, consumedResourceType, consumingResourceType);
@@ -8332,6 +8809,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="consumedResourceType">Types of consumed resources to return, if consumed resources are requested (optional)</param>
         /// <param name="consumingResourceType">Types of consuming resources to return, if consuming resources are requested (optional)</param>
         /// <returns>ApiResponse of DependencyObjectEntityListing</returns>
+        
         public ApiResponse< DependencyObjectEntityListing > GetArchitectDependencytrackingWithHttpInfo (string name, int? pageNumber = null, int? pageSize = null, List<string> objectType = null, bool? consumedResources = null, bool? consumingResources = null, List<string> consumedResourceType = null, List<string> consumingResourceType = null)
         { 
             // verify the required parameter 'name' is set
@@ -8428,6 +8906,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="consumedResourceType">Types of consumed resources to return, if consumed resources are requested (optional)</param>
         /// <param name="consumingResourceType">Types of consuming resources to return, if consuming resources are requested (optional)</param>
         /// <returns>Task of DependencyObjectEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<DependencyObjectEntityListing> GetArchitectDependencytrackingAsync (string name, int? pageNumber = null, int? pageSize = null, List<string> objectType = null, bool? consumedResources = null, bool? consumingResources = null, List<string> consumedResourceType = null, List<string> consumingResourceType = null)
         {
              ApiResponse<DependencyObjectEntityListing> localVarResponse = await GetArchitectDependencytrackingAsyncWithHttpInfo(name, pageNumber, pageSize, objectType, consumedResources, consumingResources, consumedResourceType, consumingResourceType);
@@ -8448,6 +8927,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="consumedResourceType">Types of consumed resources to return, if consumed resources are requested (optional)</param>
         /// <param name="consumingResourceType">Types of consuming resources to return, if consuming resources are requested (optional)</param>
         /// <returns>Task of ApiResponse (DependencyObjectEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DependencyObjectEntityListing>> GetArchitectDependencytrackingAsyncWithHttpInfo (string name, int? pageNumber = null, int? pageSize = null, List<string> objectType = null, bool? consumedResources = null, bool? consumingResources = null, List<string> consumedResourceType = null, List<string> consumingResourceType = null)
         { 
             // verify the required parameter 'name' is set
@@ -8538,6 +9018,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>DependencyStatus</returns>
+        
         public DependencyStatus GetArchitectDependencytrackingBuild ()
         {
              ApiResponse<DependencyStatus> localVarResponse = GetArchitectDependencytrackingBuildWithHttpInfo();
@@ -8549,6 +9030,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of DependencyStatus</returns>
+        
         public ApiResponse< DependencyStatus > GetArchitectDependencytrackingBuildWithHttpInfo ()
         { 
 
@@ -8626,6 +9108,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of DependencyStatus</returns>
+        
         public async System.Threading.Tasks.Task<DependencyStatus> GetArchitectDependencytrackingBuildAsync ()
         {
              ApiResponse<DependencyStatus> localVarResponse = await GetArchitectDependencytrackingBuildAsyncWithHttpInfo();
@@ -8638,6 +9121,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (DependencyStatus)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DependencyStatus>> GetArchitectDependencytrackingBuildAsyncWithHttpInfo ()
         { 
 
@@ -8722,6 +9206,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ConsumedResourcesEntityListing</returns>
+        
         public ConsumedResourcesEntityListing GetArchitectDependencytrackingConsumedresources (string id, string version, string objectType, List<string> resourceType = null, int? pageNumber = null, int? pageSize = null)
         {
              ApiResponse<ConsumedResourcesEntityListing> localVarResponse = GetArchitectDependencytrackingConsumedresourcesWithHttpInfo(id, version, objectType, resourceType, pageNumber, pageSize);
@@ -8739,6 +9224,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of ConsumedResourcesEntityListing</returns>
+        
         public ApiResponse< ConsumedResourcesEntityListing > GetArchitectDependencytrackingConsumedresourcesWithHttpInfo (string id, string version, string objectType, List<string> resourceType = null, int? pageNumber = null, int? pageSize = null)
         { 
             // verify the required parameter 'id' is set
@@ -8837,6 +9323,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ConsumedResourcesEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<ConsumedResourcesEntityListing> GetArchitectDependencytrackingConsumedresourcesAsync (string id, string version, string objectType, List<string> resourceType = null, int? pageNumber = null, int? pageSize = null)
         {
              ApiResponse<ConsumedResourcesEntityListing> localVarResponse = await GetArchitectDependencytrackingConsumedresourcesAsyncWithHttpInfo(id, version, objectType, resourceType, pageNumber, pageSize);
@@ -8855,6 +9342,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (ConsumedResourcesEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ConsumedResourcesEntityListing>> GetArchitectDependencytrackingConsumedresourcesAsyncWithHttpInfo (string id, string version, string objectType, List<string> resourceType = null, int? pageNumber = null, int? pageSize = null)
         { 
             // verify the required parameter 'id' is set
@@ -8958,6 +9446,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="flowFilter">Show only checkedIn or published flows (optional)</param>
         /// <returns>ConsumingResourcesEntityListing</returns>
+        
         public ConsumingResourcesEntityListing GetArchitectDependencytrackingConsumingresources (string id, string objectType, List<string> resourceType = null, string version = null, int? pageNumber = null, int? pageSize = null, string flowFilter = null)
         {
              ApiResponse<ConsumingResourcesEntityListing> localVarResponse = GetArchitectDependencytrackingConsumingresourcesWithHttpInfo(id, objectType, resourceType, version, pageNumber, pageSize, flowFilter);
@@ -8976,6 +9465,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="flowFilter">Show only checkedIn or published flows (optional)</param>
         /// <returns>ApiResponse of ConsumingResourcesEntityListing</returns>
+        
         public ApiResponse< ConsumingResourcesEntityListing > GetArchitectDependencytrackingConsumingresourcesWithHttpInfo (string id, string objectType, List<string> resourceType = null, string version = null, int? pageNumber = null, int? pageSize = null, string flowFilter = null)
         { 
             // verify the required parameter 'id' is set
@@ -9073,6 +9563,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="flowFilter">Show only checkedIn or published flows (optional)</param>
         /// <returns>Task of ConsumingResourcesEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<ConsumingResourcesEntityListing> GetArchitectDependencytrackingConsumingresourcesAsync (string id, string objectType, List<string> resourceType = null, string version = null, int? pageNumber = null, int? pageSize = null, string flowFilter = null)
         {
              ApiResponse<ConsumingResourcesEntityListing> localVarResponse = await GetArchitectDependencytrackingConsumingresourcesAsyncWithHttpInfo(id, objectType, resourceType, version, pageNumber, pageSize, flowFilter);
@@ -9092,6 +9583,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="flowFilter">Show only checkedIn or published flows (optional)</param>
         /// <returns>Task of ApiResponse (ConsumingResourcesEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ConsumingResourcesEntityListing>> GetArchitectDependencytrackingConsumingresourcesAsyncWithHttpInfo (string id, string objectType, List<string> resourceType = null, string version = null, int? pageNumber = null, int? pageSize = null, string flowFilter = null)
         { 
             // verify the required parameter 'id' is set
@@ -9192,6 +9684,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>DependencyObjectEntityListing</returns>
+        
         public DependencyObjectEntityListing GetArchitectDependencytrackingDeletedresourceconsumers (string name = null, List<string> objectType = null, string flowFilter = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null)
         {
              ApiResponse<DependencyObjectEntityListing> localVarResponse = GetArchitectDependencytrackingDeletedresourceconsumersWithHttpInfo(name, objectType, flowFilter, consumedResources, consumedResourceType, pageNumber, pageSize);
@@ -9210,6 +9703,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of DependencyObjectEntityListing</returns>
+        
         public ApiResponse< DependencyObjectEntityListing > GetArchitectDependencytrackingDeletedresourceconsumersWithHttpInfo (string name = null, List<string> objectType = null, string flowFilter = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null)
         { 
 
@@ -9301,6 +9795,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of DependencyObjectEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<DependencyObjectEntityListing> GetArchitectDependencytrackingDeletedresourceconsumersAsync (string name = null, List<string> objectType = null, string flowFilter = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null)
         {
              ApiResponse<DependencyObjectEntityListing> localVarResponse = await GetArchitectDependencytrackingDeletedresourceconsumersAsyncWithHttpInfo(name, objectType, flowFilter, consumedResources, consumedResourceType, pageNumber, pageSize);
@@ -9320,6 +9815,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (DependencyObjectEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DependencyObjectEntityListing>> GetArchitectDependencytrackingDeletedresourceconsumersAsyncWithHttpInfo (string name = null, List<string> objectType = null, string flowFilter = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null)
         { 
 
@@ -9413,6 +9909,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="consumingResourceType">Types of consuming resources to return, if consuming resources are requested (optional)</param>
         /// <param name="consumedResourceRequest">Indicate that this is going to look up a consumed resource object (optional)</param>
         /// <returns>DependencyObject</returns>
+        
         public DependencyObject GetArchitectDependencytrackingObject (string id, string version = null, string objectType = null, bool? consumedResources = null, bool? consumingResources = null, List<string> consumedResourceType = null, List<string> consumingResourceType = null, bool? consumedResourceRequest = null)
         {
              ApiResponse<DependencyObject> localVarResponse = GetArchitectDependencytrackingObjectWithHttpInfo(id, version, objectType, consumedResources, consumingResources, consumedResourceType, consumingResourceType, consumedResourceRequest);
@@ -9432,6 +9929,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="consumingResourceType">Types of consuming resources to return, if consuming resources are requested (optional)</param>
         /// <param name="consumedResourceRequest">Indicate that this is going to look up a consumed resource object (optional)</param>
         /// <returns>ApiResponse of DependencyObject</returns>
+        
         public ApiResponse< DependencyObject > GetArchitectDependencytrackingObjectWithHttpInfo (string id, string version = null, string objectType = null, bool? consumedResources = null, bool? consumingResources = null, List<string> consumedResourceType = null, List<string> consumingResourceType = null, bool? consumedResourceRequest = null)
         { 
             // verify the required parameter 'id' is set
@@ -9528,6 +10026,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="consumingResourceType">Types of consuming resources to return, if consuming resources are requested (optional)</param>
         /// <param name="consumedResourceRequest">Indicate that this is going to look up a consumed resource object (optional)</param>
         /// <returns>Task of DependencyObject</returns>
+        
         public async System.Threading.Tasks.Task<DependencyObject> GetArchitectDependencytrackingObjectAsync (string id, string version = null, string objectType = null, bool? consumedResources = null, bool? consumingResources = null, List<string> consumedResourceType = null, List<string> consumingResourceType = null, bool? consumedResourceRequest = null)
         {
              ApiResponse<DependencyObject> localVarResponse = await GetArchitectDependencytrackingObjectAsyncWithHttpInfo(id, version, objectType, consumedResources, consumingResources, consumedResourceType, consumingResourceType, consumedResourceRequest);
@@ -9548,6 +10047,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="consumingResourceType">Types of consuming resources to return, if consuming resources are requested (optional)</param>
         /// <param name="consumedResourceRequest">Indicate that this is going to look up a consumed resource object (optional)</param>
         /// <returns>Task of ApiResponse (DependencyObject)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DependencyObject>> GetArchitectDependencytrackingObjectAsyncWithHttpInfo (string id, string version = null, string objectType = null, bool? consumedResources = null, bool? consumingResources = null, List<string> consumedResourceType = null, List<string> consumingResourceType = null, bool? consumedResourceRequest = null)
         { 
             // verify the required parameter 'id' is set
@@ -9639,6 +10139,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="typeId">Type ID</param>
         /// <returns>DependencyType</returns>
+        
         public DependencyType GetArchitectDependencytrackingType (string typeId)
         {
              ApiResponse<DependencyType> localVarResponse = GetArchitectDependencytrackingTypeWithHttpInfo(typeId);
@@ -9651,6 +10152,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="typeId">Type ID</param>
         /// <returns>ApiResponse of DependencyType</returns>
+        
         public ApiResponse< DependencyType > GetArchitectDependencytrackingTypeWithHttpInfo (string typeId)
         { 
             // verify the required parameter 'typeId' is set
@@ -9733,6 +10235,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="typeId">Type ID</param>
         /// <returns>Task of DependencyType</returns>
+        
         public async System.Threading.Tasks.Task<DependencyType> GetArchitectDependencytrackingTypeAsync (string typeId)
         {
              ApiResponse<DependencyType> localVarResponse = await GetArchitectDependencytrackingTypeAsyncWithHttpInfo(typeId);
@@ -9746,6 +10249,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="typeId">Type ID</param>
         /// <returns>Task of ApiResponse (DependencyType)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DependencyType>> GetArchitectDependencytrackingTypeAsyncWithHttpInfo (string typeId)
         { 
             // verify the required parameter 'typeId' is set
@@ -9831,6 +10335,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>DependencyTypeEntityListing</returns>
+        
         public DependencyTypeEntityListing GetArchitectDependencytrackingTypes (int? pageNumber = null, int? pageSize = null)
         {
              ApiResponse<DependencyTypeEntityListing> localVarResponse = GetArchitectDependencytrackingTypesWithHttpInfo(pageNumber, pageSize);
@@ -9844,6 +10349,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of DependencyTypeEntityListing</returns>
+        
         public ApiResponse< DependencyTypeEntityListing > GetArchitectDependencytrackingTypesWithHttpInfo (int? pageNumber = null, int? pageSize = null)
         { 
 
@@ -9925,6 +10431,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of DependencyTypeEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<DependencyTypeEntityListing> GetArchitectDependencytrackingTypesAsync (int? pageNumber = null, int? pageSize = null)
         {
              ApiResponse<DependencyTypeEntityListing> localVarResponse = await GetArchitectDependencytrackingTypesAsyncWithHttpInfo(pageNumber, pageSize);
@@ -9939,6 +10446,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (DependencyTypeEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DependencyTypeEntityListing>> GetArchitectDependencytrackingTypesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null)
         { 
 
@@ -10025,6 +10533,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>DependencyObjectEntityListing</returns>
+        
         public DependencyObjectEntityListing GetArchitectDependencytrackingUpdatedresourceconsumers (string name = null, List<string> objectType = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null)
         {
              ApiResponse<DependencyObjectEntityListing> localVarResponse = GetArchitectDependencytrackingUpdatedresourceconsumersWithHttpInfo(name, objectType, consumedResources, consumedResourceType, pageNumber, pageSize);
@@ -10042,6 +10551,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of DependencyObjectEntityListing</returns>
+        
         public ApiResponse< DependencyObjectEntityListing > GetArchitectDependencytrackingUpdatedresourceconsumersWithHttpInfo (string name = null, List<string> objectType = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null)
         { 
 
@@ -10131,6 +10641,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of DependencyObjectEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<DependencyObjectEntityListing> GetArchitectDependencytrackingUpdatedresourceconsumersAsync (string name = null, List<string> objectType = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null)
         {
              ApiResponse<DependencyObjectEntityListing> localVarResponse = await GetArchitectDependencytrackingUpdatedresourceconsumersAsyncWithHttpInfo(name, objectType, consumedResources, consumedResourceType, pageNumber, pageSize);
@@ -10149,6 +10660,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (DependencyObjectEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DependencyObjectEntityListing>> GetArchitectDependencytrackingUpdatedresourceconsumersAsyncWithHttpInfo (string name = null, List<string> objectType = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null)
         { 
 
@@ -10234,6 +10746,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emergencyGroupId">Emergency group ID</param>
         /// <returns>EmergencyGroup</returns>
+        
         public EmergencyGroup GetArchitectEmergencygroup (string emergencyGroupId)
         {
              ApiResponse<EmergencyGroup> localVarResponse = GetArchitectEmergencygroupWithHttpInfo(emergencyGroupId);
@@ -10246,6 +10759,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emergencyGroupId">Emergency group ID</param>
         /// <returns>ApiResponse of EmergencyGroup</returns>
+        
         public ApiResponse< EmergencyGroup > GetArchitectEmergencygroupWithHttpInfo (string emergencyGroupId)
         { 
             // verify the required parameter 'emergencyGroupId' is set
@@ -10328,6 +10842,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emergencyGroupId">Emergency group ID</param>
         /// <returns>Task of EmergencyGroup</returns>
+        
         public async System.Threading.Tasks.Task<EmergencyGroup> GetArchitectEmergencygroupAsync (string emergencyGroupId)
         {
              ApiResponse<EmergencyGroup> localVarResponse = await GetArchitectEmergencygroupAsyncWithHttpInfo(emergencyGroupId);
@@ -10341,6 +10856,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emergencyGroupId">Emergency group ID</param>
         /// <returns>Task of ApiResponse (EmergencyGroup)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<EmergencyGroup>> GetArchitectEmergencygroupAsyncWithHttpInfo (string emergencyGroupId)
         { 
             // verify the required parameter 'emergencyGroupId' is set
@@ -10429,6 +10945,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the Emergency Group to filter by. (optional)</param>
         /// <returns>EmergencyGroupListing</returns>
+        
         public EmergencyGroupListing GetArchitectEmergencygroups (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
         {
              ApiResponse<EmergencyGroupListing> localVarResponse = GetArchitectEmergencygroupsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name);
@@ -10445,6 +10962,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the Emergency Group to filter by. (optional)</param>
         /// <returns>ApiResponse of EmergencyGroupListing</returns>
+        
         public ApiResponse< EmergencyGroupListing > GetArchitectEmergencygroupsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
         { 
 
@@ -10532,6 +11050,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the Emergency Group to filter by. (optional)</param>
         /// <returns>Task of EmergencyGroupListing</returns>
+        
         public async System.Threading.Tasks.Task<EmergencyGroupListing> GetArchitectEmergencygroupsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
         {
              ApiResponse<EmergencyGroupListing> localVarResponse = await GetArchitectEmergencygroupsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name);
@@ -10549,6 +11068,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to "ASC")</param>
         /// <param name="name">Name of the Emergency Group to filter by. (optional)</param>
         /// <returns>Task of ApiResponse (EmergencyGroupListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<EmergencyGroupListing>> GetArchitectEmergencygroupsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
         { 
 
@@ -10633,6 +11153,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
         /// <returns>IVR</returns>
+        
         public IVR GetArchitectIvr (string ivrId)
         {
              ApiResponse<IVR> localVarResponse = GetArchitectIvrWithHttpInfo(ivrId);
@@ -10645,6 +11166,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
         /// <returns>ApiResponse of IVR</returns>
+        
         public ApiResponse< IVR > GetArchitectIvrWithHttpInfo (string ivrId)
         { 
             // verify the required parameter 'ivrId' is set
@@ -10727,6 +11249,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
         /// <returns>Task of IVR</returns>
+        
         public async System.Threading.Tasks.Task<IVR> GetArchitectIvrAsync (string ivrId)
         {
              ApiResponse<IVR> localVarResponse = await GetArchitectIvrAsyncWithHttpInfo(ivrId);
@@ -10740,6 +11263,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
         /// <returns>Task of ApiResponse (IVR)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<IVR>> GetArchitectIvrAsyncWithHttpInfo (string ivrId)
         { 
             // verify the required parameter 'ivrId' is set
@@ -10830,6 +11354,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dnis">The phone number of the IVR to filter by. (optional)</param>
         /// <param name="scheduleGroup">The Schedule Group of the IVR to filter by. (optional)</param>
         /// <returns>IVREntityListing</returns>
+        
         public IVREntityListing GetArchitectIvrs (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null, string scheduleGroup = null)
         {
              ApiResponse<IVREntityListing> localVarResponse = GetArchitectIvrsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name, dnis, scheduleGroup);
@@ -10848,6 +11373,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dnis">The phone number of the IVR to filter by. (optional)</param>
         /// <param name="scheduleGroup">The Schedule Group of the IVR to filter by. (optional)</param>
         /// <returns>ApiResponse of IVREntityListing</returns>
+        
         public ApiResponse< IVREntityListing > GetArchitectIvrsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null, string scheduleGroup = null)
         { 
 
@@ -10939,6 +11465,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dnis">The phone number of the IVR to filter by. (optional)</param>
         /// <param name="scheduleGroup">The Schedule Group of the IVR to filter by. (optional)</param>
         /// <returns>Task of IVREntityListing</returns>
+        
         public async System.Threading.Tasks.Task<IVREntityListing> GetArchitectIvrsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null, string scheduleGroup = null)
         {
              ApiResponse<IVREntityListing> localVarResponse = await GetArchitectIvrsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name, dnis, scheduleGroup);
@@ -10958,6 +11485,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="dnis">The phone number of the IVR to filter by. (optional)</param>
         /// <param name="scheduleGroup">The Schedule Group of the IVR to filter by. (optional)</param>
         /// <returns>Task of ApiResponse (IVREntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<IVREntityListing>> GetArchitectIvrsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null, string scheduleGroup = null)
         { 
 
@@ -11044,6 +11572,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <returns>Prompt</returns>
+        
         public Prompt GetArchitectPrompt (string promptId)
         {
              ApiResponse<Prompt> localVarResponse = GetArchitectPromptWithHttpInfo(promptId);
@@ -11056,6 +11585,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <returns>ApiResponse of Prompt</returns>
+        
         public ApiResponse< Prompt > GetArchitectPromptWithHttpInfo (string promptId)
         { 
             // verify the required parameter 'promptId' is set
@@ -11138,6 +11668,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <returns>Task of Prompt</returns>
+        
         public async System.Threading.Tasks.Task<Prompt> GetArchitectPromptAsync (string promptId)
         {
              ApiResponse<Prompt> localVarResponse = await GetArchitectPromptAsyncWithHttpInfo(promptId);
@@ -11151,6 +11682,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <returns>Task of ApiResponse (Prompt)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Prompt>> GetArchitectPromptAsyncWithHttpInfo (string promptId)
         { 
             // verify the required parameter 'promptId' is set
@@ -11241,6 +11773,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>HistoryListing</returns>
+        
         public HistoryListing GetArchitectPromptHistoryHistoryId (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null)
         {
              ApiResponse<HistoryListing> localVarResponse = GetArchitectPromptHistoryHistoryIdWithHttpInfo(promptId, historyId, pageNumber, pageSize, sortOrder, sortBy, action);
@@ -11259,6 +11792,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>ApiResponse of HistoryListing</returns>
+        
         public ApiResponse< HistoryListing > GetArchitectPromptHistoryHistoryIdWithHttpInfo (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null)
         { 
             // verify the required parameter 'promptId' is set
@@ -11356,6 +11890,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>Task of HistoryListing</returns>
+        
         public async System.Threading.Tasks.Task<HistoryListing> GetArchitectPromptHistoryHistoryIdAsync (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null)
         {
              ApiResponse<HistoryListing> localVarResponse = await GetArchitectPromptHistoryHistoryIdAsyncWithHttpInfo(promptId, historyId, pageNumber, pageSize, sortOrder, sortBy, action);
@@ -11375,6 +11910,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>Task of ApiResponse (HistoryListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<HistoryListing>> GetArchitectPromptHistoryHistoryIdAsyncWithHttpInfo (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null)
         { 
             // verify the required parameter 'promptId' is set
@@ -11470,6 +12006,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns>PromptAsset</returns>
+        
         public PromptAsset GetArchitectPromptResource (string promptId, string languageCode)
         {
              ApiResponse<PromptAsset> localVarResponse = GetArchitectPromptResourceWithHttpInfo(promptId, languageCode);
@@ -11483,6 +12020,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns>ApiResponse of PromptAsset</returns>
+        
         public ApiResponse< PromptAsset > GetArchitectPromptResourceWithHttpInfo (string promptId, string languageCode)
         { 
             // verify the required parameter 'promptId' is set
@@ -11570,6 +12108,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns>Task of PromptAsset</returns>
+        
         public async System.Threading.Tasks.Task<PromptAsset> GetArchitectPromptResourceAsync (string promptId, string languageCode)
         {
              ApiResponse<PromptAsset> localVarResponse = await GetArchitectPromptResourceAsyncWithHttpInfo(promptId, languageCode);
@@ -11584,6 +12123,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns>Task of ApiResponse (PromptAsset)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<PromptAsset>> GetArchitectPromptResourceAsyncWithHttpInfo (string promptId, string languageCode)
         { 
             // verify the required parameter 'promptId' is set
@@ -11675,6 +12215,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>PromptAssetEntityListing</returns>
+        
         public PromptAssetEntityListing GetArchitectPromptResources (string promptId, int? pageNumber = null, int? pageSize = null)
         {
              ApiResponse<PromptAssetEntityListing> localVarResponse = GetArchitectPromptResourcesWithHttpInfo(promptId, pageNumber, pageSize);
@@ -11689,6 +12230,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of PromptAssetEntityListing</returns>
+        
         public ApiResponse< PromptAssetEntityListing > GetArchitectPromptResourcesWithHttpInfo (string promptId, int? pageNumber = null, int? pageSize = null)
         { 
             // verify the required parameter 'promptId' is set
@@ -11775,6 +12317,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of PromptAssetEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<PromptAssetEntityListing> GetArchitectPromptResourcesAsync (string promptId, int? pageNumber = null, int? pageSize = null)
         {
              ApiResponse<PromptAssetEntityListing> localVarResponse = await GetArchitectPromptResourcesAsyncWithHttpInfo(promptId, pageNumber, pageSize);
@@ -11790,6 +12333,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (PromptAssetEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<PromptAssetEntityListing>> GetArchitectPromptResourcesAsyncWithHttpInfo (string promptId, int? pageNumber = null, int? pageSize = null)
         { 
             // verify the required parameter 'promptId' is set
@@ -11882,6 +12426,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "id")</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>PromptEntityListing</returns>
+        
         public PromptEntityListing GetArchitectPrompts (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<PromptEntityListing> localVarResponse = GetArchitectPromptsWithHttpInfo(pageNumber, pageSize, name, description, nameOrDescription, sortBy, sortOrder);
@@ -11900,6 +12445,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "id")</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>ApiResponse of PromptEntityListing</returns>
+        
         public ApiResponse< PromptEntityListing > GetArchitectPromptsWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null)
         { 
 
@@ -11991,6 +12537,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "id")</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>Task of PromptEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<PromptEntityListing> GetArchitectPromptsAsync (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<PromptEntityListing> localVarResponse = await GetArchitectPromptsAsyncWithHttpInfo(pageNumber, pageSize, name, description, nameOrDescription, sortBy, sortOrder);
@@ -12010,6 +12557,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "id")</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>Task of ApiResponse (PromptEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<PromptEntityListing>> GetArchitectPromptsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null)
         { 
 
@@ -12096,6 +12644,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Schedule</returns>
+        
         public Schedule GetArchitectSchedule (string scheduleId)
         {
              ApiResponse<Schedule> localVarResponse = GetArchitectScheduleWithHttpInfo(scheduleId);
@@ -12108,6 +12657,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>ApiResponse of Schedule</returns>
+        
         public ApiResponse< Schedule > GetArchitectScheduleWithHttpInfo (string scheduleId)
         { 
             // verify the required parameter 'scheduleId' is set
@@ -12190,6 +12740,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of Schedule</returns>
+        
         public async System.Threading.Tasks.Task<Schedule> GetArchitectScheduleAsync (string scheduleId)
         {
              ApiResponse<Schedule> localVarResponse = await GetArchitectScheduleAsyncWithHttpInfo(scheduleId);
@@ -12203,6 +12754,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of ApiResponse (Schedule)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Schedule>> GetArchitectScheduleAsyncWithHttpInfo (string scheduleId)
         { 
             // verify the required parameter 'scheduleId' is set
@@ -12287,6 +12839,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <returns>ScheduleGroup</returns>
+        
         public ScheduleGroup GetArchitectSchedulegroup (string scheduleGroupId)
         {
              ApiResponse<ScheduleGroup> localVarResponse = GetArchitectSchedulegroupWithHttpInfo(scheduleGroupId);
@@ -12299,6 +12852,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <returns>ApiResponse of ScheduleGroup</returns>
+        
         public ApiResponse< ScheduleGroup > GetArchitectSchedulegroupWithHttpInfo (string scheduleGroupId)
         { 
             // verify the required parameter 'scheduleGroupId' is set
@@ -12381,6 +12935,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <returns>Task of ScheduleGroup</returns>
+        
         public async System.Threading.Tasks.Task<ScheduleGroup> GetArchitectSchedulegroupAsync (string scheduleGroupId)
         {
              ApiResponse<ScheduleGroup> localVarResponse = await GetArchitectSchedulegroupAsyncWithHttpInfo(scheduleGroupId);
@@ -12394,6 +12949,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <returns>Task of ApiResponse (ScheduleGroup)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ScheduleGroup>> GetArchitectSchedulegroupAsyncWithHttpInfo (string scheduleGroupId)
         { 
             // verify the required parameter 'scheduleGroupId' is set
@@ -12484,6 +13040,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleIds">A comma-delimited list of Schedule IDs to filter by. (optional)</param>
         /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>ScheduleGroupEntityListing</returns>
+        
         public ScheduleGroupEntityListing GetArchitectSchedulegroups (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null, List<string> divisionId = null)
         {
              ApiResponse<ScheduleGroupEntityListing> localVarResponse = GetArchitectSchedulegroupsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name, scheduleIds, divisionId);
@@ -12502,6 +13059,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleIds">A comma-delimited list of Schedule IDs to filter by. (optional)</param>
         /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>ApiResponse of ScheduleGroupEntityListing</returns>
+        
         public ApiResponse< ScheduleGroupEntityListing > GetArchitectSchedulegroupsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null, List<string> divisionId = null)
         { 
 
@@ -12593,6 +13151,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleIds">A comma-delimited list of Schedule IDs to filter by. (optional)</param>
         /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>Task of ScheduleGroupEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<ScheduleGroupEntityListing> GetArchitectSchedulegroupsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null, List<string> divisionId = null)
         {
              ApiResponse<ScheduleGroupEntityListing> localVarResponse = await GetArchitectSchedulegroupsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name, scheduleIds, divisionId);
@@ -12612,6 +13171,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleIds">A comma-delimited list of Schedule IDs to filter by. (optional)</param>
         /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>Task of ApiResponse (ScheduleGroupEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ScheduleGroupEntityListing>> GetArchitectSchedulegroupsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null, List<string> divisionId = null)
         { 
 
@@ -12703,6 +13263,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name of the Schedule to filter by. (optional)</param>
         /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>ScheduleEntityListing</returns>
+        
         public ScheduleEntityListing GetArchitectSchedules (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, List<string> divisionId = null)
         {
              ApiResponse<ScheduleEntityListing> localVarResponse = GetArchitectSchedulesWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name, divisionId);
@@ -12720,6 +13281,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name of the Schedule to filter by. (optional)</param>
         /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>ApiResponse of ScheduleEntityListing</returns>
+        
         public ApiResponse< ScheduleEntityListing > GetArchitectSchedulesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, List<string> divisionId = null)
         { 
 
@@ -12809,6 +13371,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name of the Schedule to filter by. (optional)</param>
         /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>Task of ScheduleEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<ScheduleEntityListing> GetArchitectSchedulesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, List<string> divisionId = null)
         {
              ApiResponse<ScheduleEntityListing> localVarResponse = await GetArchitectSchedulesAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name, divisionId);
@@ -12827,6 +13390,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name of the Schedule to filter by. (optional)</param>
         /// <param name="divisionId">List of divisionIds on which to filter. (optional)</param>
         /// <returns>Task of ApiResponse (ScheduleEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ScheduleEntityListing>> GetArchitectSchedulesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, List<string> divisionId = null)
         { 
 
@@ -12912,6 +13476,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">promptId</param>
         /// <returns>SystemPrompt</returns>
+        
         public SystemPrompt GetArchitectSystemprompt (string promptId)
         {
              ApiResponse<SystemPrompt> localVarResponse = GetArchitectSystempromptWithHttpInfo(promptId);
@@ -12924,6 +13489,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">promptId</param>
         /// <returns>ApiResponse of SystemPrompt</returns>
+        
         public ApiResponse< SystemPrompt > GetArchitectSystempromptWithHttpInfo (string promptId)
         { 
             // verify the required parameter 'promptId' is set
@@ -13006,6 +13572,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">promptId</param>
         /// <returns>Task of SystemPrompt</returns>
+        
         public async System.Threading.Tasks.Task<SystemPrompt> GetArchitectSystempromptAsync (string promptId)
         {
              ApiResponse<SystemPrompt> localVarResponse = await GetArchitectSystempromptAsyncWithHttpInfo(promptId);
@@ -13019,6 +13586,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">promptId</param>
         /// <returns>Task of ApiResponse (SystemPrompt)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<SystemPrompt>> GetArchitectSystempromptAsyncWithHttpInfo (string promptId)
         { 
             // verify the required parameter 'promptId' is set
@@ -13109,6 +13677,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>HistoryListing</returns>
+        
         public HistoryListing GetArchitectSystempromptHistoryHistoryId (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null)
         {
              ApiResponse<HistoryListing> localVarResponse = GetArchitectSystempromptHistoryHistoryIdWithHttpInfo(promptId, historyId, pageNumber, pageSize, sortOrder, sortBy, action);
@@ -13127,6 +13696,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>ApiResponse of HistoryListing</returns>
+        
         public ApiResponse< HistoryListing > GetArchitectSystempromptHistoryHistoryIdWithHttpInfo (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null)
         { 
             // verify the required parameter 'promptId' is set
@@ -13224,6 +13794,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>Task of HistoryListing</returns>
+        
         public async System.Threading.Tasks.Task<HistoryListing> GetArchitectSystempromptHistoryHistoryIdAsync (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null)
         {
              ApiResponse<HistoryListing> localVarResponse = await GetArchitectSystempromptHistoryHistoryIdAsyncWithHttpInfo(promptId, historyId, pageNumber, pageSize, sortOrder, sortBy, action);
@@ -13243,6 +13814,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>Task of ApiResponse (HistoryListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<HistoryListing>> GetArchitectSystempromptHistoryHistoryIdAsyncWithHttpInfo (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null)
         { 
             // verify the required parameter 'promptId' is set
@@ -13338,6 +13910,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns>SystemPromptAsset</returns>
+        
         public SystemPromptAsset GetArchitectSystempromptResource (string promptId, string languageCode)
         {
              ApiResponse<SystemPromptAsset> localVarResponse = GetArchitectSystempromptResourceWithHttpInfo(promptId, languageCode);
@@ -13351,6 +13924,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns>ApiResponse of SystemPromptAsset</returns>
+        
         public ApiResponse< SystemPromptAsset > GetArchitectSystempromptResourceWithHttpInfo (string promptId, string languageCode)
         { 
             // verify the required parameter 'promptId' is set
@@ -13438,6 +14012,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns>Task of SystemPromptAsset</returns>
+        
         public async System.Threading.Tasks.Task<SystemPromptAsset> GetArchitectSystempromptResourceAsync (string promptId, string languageCode)
         {
              ApiResponse<SystemPromptAsset> localVarResponse = await GetArchitectSystempromptResourceAsyncWithHttpInfo(promptId, languageCode);
@@ -13452,6 +14027,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
         /// <returns>Task of ApiResponse (SystemPromptAsset)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<SystemPromptAsset>> GetArchitectSystempromptResourceAsyncWithHttpInfo (string promptId, string languageCode)
         { 
             // verify the required parameter 'promptId' is set
@@ -13545,6 +14121,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "id")</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>SystemPromptAssetEntityListing</returns>
+        
         public SystemPromptAssetEntityListing GetArchitectSystempromptResources (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<SystemPromptAssetEntityListing> localVarResponse = GetArchitectSystempromptResourcesWithHttpInfo(promptId, pageNumber, pageSize, sortBy, sortOrder);
@@ -13561,6 +14138,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "id")</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>ApiResponse of SystemPromptAssetEntityListing</returns>
+        
         public ApiResponse< SystemPromptAssetEntityListing > GetArchitectSystempromptResourcesWithHttpInfo (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
         { 
             // verify the required parameter 'promptId' is set
@@ -13651,6 +14229,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "id")</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>Task of SystemPromptAssetEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<SystemPromptAssetEntityListing> GetArchitectSystempromptResourcesAsync (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
         {
              ApiResponse<SystemPromptAssetEntityListing> localVarResponse = await GetArchitectSystempromptResourcesAsyncWithHttpInfo(promptId, pageNumber, pageSize, sortBy, sortOrder);
@@ -13668,6 +14247,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to "id")</param>
         /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>Task of ApiResponse (SystemPromptAssetEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<SystemPromptAssetEntityListing>> GetArchitectSystempromptResourcesAsyncWithHttpInfo (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
         { 
             // verify the required parameter 'promptId' is set
@@ -13762,6 +14342,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <returns>SystemPromptEntityListing</returns>
+        
         public SystemPromptEntityListing GetArchitectSystemprompts (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string nameOrDescription = null)
         {
              ApiResponse<SystemPromptEntityListing> localVarResponse = GetArchitectSystempromptsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name, description, nameOrDescription);
@@ -13780,6 +14361,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <returns>ApiResponse of SystemPromptEntityListing</returns>
+        
         public ApiResponse< SystemPromptEntityListing > GetArchitectSystempromptsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string nameOrDescription = null)
         { 
 
@@ -13871,6 +14453,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <returns>Task of SystemPromptEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<SystemPromptEntityListing> GetArchitectSystempromptsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string nameOrDescription = null)
         {
              ApiResponse<SystemPromptEntityListing> localVarResponse = await GetArchitectSystempromptsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name, description, nameOrDescription);
@@ -13890,6 +14473,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <returns>Task of ApiResponse (SystemPromptEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<SystemPromptEntityListing>> GetArchitectSystempromptsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string nameOrDescription = null)
         { 
 
@@ -13977,6 +14561,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="deleted">Deleted flows (optional, default to false)</param>
         /// <returns>Flow</returns>
+        
         public Flow GetFlow (string flowId, bool? deleted = null)
         {
              ApiResponse<Flow> localVarResponse = GetFlowWithHttpInfo(flowId, deleted);
@@ -13990,6 +14575,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="deleted">Deleted flows (optional, default to false)</param>
         /// <returns>ApiResponse of Flow</returns>
+        
         public ApiResponse< Flow > GetFlowWithHttpInfo (string flowId, bool? deleted = null)
         { 
             // verify the required parameter 'flowId' is set
@@ -14074,6 +14660,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="deleted">Deleted flows (optional, default to false)</param>
         /// <returns>Task of Flow</returns>
+        
         public async System.Threading.Tasks.Task<Flow> GetFlowAsync (string flowId, bool? deleted = null)
         {
              ApiResponse<Flow> localVarResponse = await GetFlowAsyncWithHttpInfo(flowId, deleted);
@@ -14088,6 +14675,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="deleted">Deleted flows (optional, default to false)</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Flow>> GetFlowAsyncWithHttpInfo (string flowId, bool? deleted = null)
         { 
             // verify the required parameter 'flowId' is set
@@ -14179,6 +14767,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>HistoryListing</returns>
+        
         public HistoryListing GetFlowHistoryHistoryId (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null)
         {
              ApiResponse<HistoryListing> localVarResponse = GetFlowHistoryHistoryIdWithHttpInfo(flowId, historyId, pageNumber, pageSize, sortOrder, sortBy, action);
@@ -14197,6 +14786,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>ApiResponse of HistoryListing</returns>
+        
         public ApiResponse< HistoryListing > GetFlowHistoryHistoryIdWithHttpInfo (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null)
         { 
             // verify the required parameter 'flowId' is set
@@ -14294,6 +14884,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>Task of HistoryListing</returns>
+        
         public async System.Threading.Tasks.Task<HistoryListing> GetFlowHistoryHistoryIdAsync (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null)
         {
              ApiResponse<HistoryListing> localVarResponse = await GetFlowHistoryHistoryIdAsyncWithHttpInfo(flowId, historyId, pageNumber, pageSize, sortOrder, sortBy, action);
@@ -14313,6 +14904,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>Task of ApiResponse (HistoryListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<HistoryListing>> GetFlowHistoryHistoryIdAsyncWithHttpInfo (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null)
         { 
             // verify the required parameter 'flowId' is set
@@ -14408,6 +15000,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="deleted">Deleted flows (optional, default to false)</param>
         /// <returns>Object</returns>
+        
         public Object GetFlowLatestconfiguration (string flowId, bool? deleted = null)
         {
              ApiResponse<Object> localVarResponse = GetFlowLatestconfigurationWithHttpInfo(flowId, deleted);
@@ -14421,6 +15014,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="deleted">Deleted flows (optional, default to false)</param>
         /// <returns>ApiResponse of Object</returns>
+        
         public ApiResponse< Object > GetFlowLatestconfigurationWithHttpInfo (string flowId, bool? deleted = null)
         { 
             // verify the required parameter 'flowId' is set
@@ -14505,6 +15099,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="deleted">Deleted flows (optional, default to false)</param>
         /// <returns>Task of Object</returns>
+        
         public async System.Threading.Tasks.Task<Object> GetFlowLatestconfigurationAsync (string flowId, bool? deleted = null)
         {
              ApiResponse<Object> localVarResponse = await GetFlowLatestconfigurationAsyncWithHttpInfo(flowId, deleted);
@@ -14519,6 +15114,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="deleted">Deleted flows (optional, default to false)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> GetFlowLatestconfigurationAsyncWithHttpInfo (string flowId, bool? deleted = null)
         { 
             // verify the required parameter 'flowId' is set
@@ -14606,6 +15202,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="versionId">Version ID</param>
         /// <param name="deleted">Deleted flows (optional)</param>
         /// <returns>FlowVersion</returns>
+        
         public FlowVersion GetFlowVersion (string flowId, string versionId, string deleted = null)
         {
              ApiResponse<FlowVersion> localVarResponse = GetFlowVersionWithHttpInfo(flowId, versionId, deleted);
@@ -14620,6 +15217,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="versionId">Version ID</param>
         /// <param name="deleted">Deleted flows (optional)</param>
         /// <returns>ApiResponse of FlowVersion</returns>
+        
         public ApiResponse< FlowVersion > GetFlowVersionWithHttpInfo (string flowId, string versionId, string deleted = null)
         { 
             // verify the required parameter 'flowId' is set
@@ -14709,6 +15307,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="versionId">Version ID</param>
         /// <param name="deleted">Deleted flows (optional)</param>
         /// <returns>Task of FlowVersion</returns>
+        
         public async System.Threading.Tasks.Task<FlowVersion> GetFlowVersionAsync (string flowId, string versionId, string deleted = null)
         {
              ApiResponse<FlowVersion> localVarResponse = await GetFlowVersionAsyncWithHttpInfo(flowId, versionId, deleted);
@@ -14724,6 +15323,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="versionId">Version ID</param>
         /// <param name="deleted">Deleted flows (optional)</param>
         /// <returns>Task of ApiResponse (FlowVersion)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<FlowVersion>> GetFlowVersionAsyncWithHttpInfo (string flowId, string versionId, string deleted = null)
         { 
             // verify the required parameter 'flowId' is set
@@ -14816,6 +15416,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="versionId">Version ID</param>
         /// <param name="deleted">Deleted flows (optional)</param>
         /// <returns>Object</returns>
+        
         public Object GetFlowVersionConfiguration (string flowId, string versionId, string deleted = null)
         {
              ApiResponse<Object> localVarResponse = GetFlowVersionConfigurationWithHttpInfo(flowId, versionId, deleted);
@@ -14830,6 +15431,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="versionId">Version ID</param>
         /// <param name="deleted">Deleted flows (optional)</param>
         /// <returns>ApiResponse of Object</returns>
+        
         public ApiResponse< Object > GetFlowVersionConfigurationWithHttpInfo (string flowId, string versionId, string deleted = null)
         { 
             // verify the required parameter 'flowId' is set
@@ -14919,6 +15521,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="versionId">Version ID</param>
         /// <param name="deleted">Deleted flows (optional)</param>
         /// <returns>Task of Object</returns>
+        
         public async System.Threading.Tasks.Task<Object> GetFlowVersionConfigurationAsync (string flowId, string versionId, string deleted = null)
         {
              ApiResponse<Object> localVarResponse = await GetFlowVersionConfigurationAsyncWithHttpInfo(flowId, versionId, deleted);
@@ -14934,6 +15537,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="versionId">Version ID</param>
         /// <param name="deleted">Deleted flows (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> GetFlowVersionConfigurationAsyncWithHttpInfo (string flowId, string versionId, string deleted = null)
         { 
             // verify the required parameter 'flowId' is set
@@ -15027,6 +15631,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="deleted">Include Deleted flows (optional)</param>
         /// <returns>FlowVersionEntityListing</returns>
+        
         public FlowVersionEntityListing GetFlowVersions (string flowId, int? pageNumber = null, int? pageSize = null, bool? deleted = null)
         {
              ApiResponse<FlowVersionEntityListing> localVarResponse = GetFlowVersionsWithHttpInfo(flowId, pageNumber, pageSize, deleted);
@@ -15042,6 +15647,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="deleted">Include Deleted flows (optional)</param>
         /// <returns>ApiResponse of FlowVersionEntityListing</returns>
+        
         public ApiResponse< FlowVersionEntityListing > GetFlowVersionsWithHttpInfo (string flowId, int? pageNumber = null, int? pageSize = null, bool? deleted = null)
         { 
             // verify the required parameter 'flowId' is set
@@ -15130,6 +15736,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="deleted">Include Deleted flows (optional)</param>
         /// <returns>Task of FlowVersionEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<FlowVersionEntityListing> GetFlowVersionsAsync (string flowId, int? pageNumber = null, int? pageSize = null, bool? deleted = null)
         {
              ApiResponse<FlowVersionEntityListing> localVarResponse = await GetFlowVersionsAsyncWithHttpInfo(flowId, pageNumber, pageSize, deleted);
@@ -15146,6 +15753,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="deleted">Include Deleted flows (optional)</param>
         /// <returns>Task of ApiResponse (FlowVersionEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<FlowVersionEntityListing>> GetFlowVersionsAsyncWithHttpInfo (string flowId, int? pageNumber = null, int? pageSize = null, bool? deleted = null)
         { 
             // verify the required parameter 'flowId' is set
@@ -15251,6 +15859,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="publishedBefore">Published before (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>FlowEntityListing</returns>
+        
         public FlowEntityListing GetFlows (List<string> type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string lockedByClientId = null, string secure = null, bool? deleted = null, bool? includeSchemas = null, string publishedAfter = null, string publishedBefore = null, List<string> divisionId = null)
         {
              ApiResponse<FlowEntityListing> localVarResponse = GetFlowsWithHttpInfo(type, pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, publishVersionId, editableBy, lockedBy, lockedByClientId, secure, deleted, includeSchemas, publishedAfter, publishedBefore, divisionId);
@@ -15281,6 +15890,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="publishedBefore">Published before (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>ApiResponse of FlowEntityListing</returns>
+        
         public ApiResponse< FlowEntityListing > GetFlowsWithHttpInfo (List<string> type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string lockedByClientId = null, string secure = null, bool? deleted = null, bool? includeSchemas = null, string publishedAfter = null, string publishedBefore = null, List<string> divisionId = null)
         { 
 
@@ -15396,6 +16006,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="publishedBefore">Published before (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>Task of FlowEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<FlowEntityListing> GetFlowsAsync (List<string> type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string lockedByClientId = null, string secure = null, bool? deleted = null, bool? includeSchemas = null, string publishedAfter = null, string publishedBefore = null, List<string> divisionId = null)
         {
              ApiResponse<FlowEntityListing> localVarResponse = await GetFlowsAsyncWithHttpInfo(type, pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, publishVersionId, editableBy, lockedBy, lockedByClientId, secure, deleted, includeSchemas, publishedAfter, publishedBefore, divisionId);
@@ -15427,6 +16038,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="publishedBefore">Published before (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (FlowEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<FlowEntityListing>> GetFlowsAsyncWithHttpInfo (List<string> type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string lockedByClientId = null, string secure = null, bool? deleted = null, bool? includeSchemas = null, string publishedAfter = null, string publishedBefore = null, List<string> divisionId = null)
         { 
 
@@ -15526,6 +16138,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <returns>DataTable</returns>
+        
         public DataTable GetFlowsDatatable (string datatableId, string expand = null)
         {
              ApiResponse<DataTable> localVarResponse = GetFlowsDatatableWithHttpInfo(datatableId, expand);
@@ -15539,6 +16152,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <returns>ApiResponse of DataTable</returns>
+        
         public ApiResponse< DataTable > GetFlowsDatatableWithHttpInfo (string datatableId, string expand = null)
         { 
             // verify the required parameter 'datatableId' is set
@@ -15623,6 +16237,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <returns>Task of DataTable</returns>
+        
         public async System.Threading.Tasks.Task<DataTable> GetFlowsDatatableAsync (string datatableId, string expand = null)
         {
              ApiResponse<DataTable> localVarResponse = await GetFlowsDatatableAsyncWithHttpInfo(datatableId, expand);
@@ -15637,6 +16252,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <returns>Task of ApiResponse (DataTable)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DataTable>> GetFlowsDatatableAsyncWithHttpInfo (string datatableId, string expand = null)
         { 
             // verify the required parameter 'datatableId' is set
@@ -15723,6 +16339,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="exportJobId">id of export job</param>
         /// <returns>DataTableExportJob</returns>
+        
         public DataTableExportJob GetFlowsDatatableExportJob (string datatableId, string exportJobId)
         {
              ApiResponse<DataTableExportJob> localVarResponse = GetFlowsDatatableExportJobWithHttpInfo(datatableId, exportJobId);
@@ -15736,6 +16353,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="exportJobId">id of export job</param>
         /// <returns>ApiResponse of DataTableExportJob</returns>
+        
         public ApiResponse< DataTableExportJob > GetFlowsDatatableExportJobWithHttpInfo (string datatableId, string exportJobId)
         { 
             // verify the required parameter 'datatableId' is set
@@ -15823,6 +16441,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="exportJobId">id of export job</param>
         /// <returns>Task of DataTableExportJob</returns>
+        
         public async System.Threading.Tasks.Task<DataTableExportJob> GetFlowsDatatableExportJobAsync (string datatableId, string exportJobId)
         {
              ApiResponse<DataTableExportJob> localVarResponse = await GetFlowsDatatableExportJobAsyncWithHttpInfo(datatableId, exportJobId);
@@ -15837,6 +16456,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="exportJobId">id of export job</param>
         /// <returns>Task of ApiResponse (DataTableExportJob)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DataTableExportJob>> GetFlowsDatatableExportJobAsyncWithHttpInfo (string datatableId, string exportJobId)
         { 
             // verify the required parameter 'datatableId' is set
@@ -15927,6 +16547,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="importJobId">id of import job</param>
         /// <returns>DataTableImportJob</returns>
+        
         public DataTableImportJob GetFlowsDatatableImportJob (string datatableId, string importJobId)
         {
              ApiResponse<DataTableImportJob> localVarResponse = GetFlowsDatatableImportJobWithHttpInfo(datatableId, importJobId);
@@ -15940,6 +16561,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="importJobId">id of import job</param>
         /// <returns>ApiResponse of DataTableImportJob</returns>
+        
         public ApiResponse< DataTableImportJob > GetFlowsDatatableImportJobWithHttpInfo (string datatableId, string importJobId)
         { 
             // verify the required parameter 'datatableId' is set
@@ -16027,6 +16649,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="importJobId">id of import job</param>
         /// <returns>Task of DataTableImportJob</returns>
+        
         public async System.Threading.Tasks.Task<DataTableImportJob> GetFlowsDatatableImportJobAsync (string datatableId, string importJobId)
         {
              ApiResponse<DataTableImportJob> localVarResponse = await GetFlowsDatatableImportJobAsyncWithHttpInfo(datatableId, importJobId);
@@ -16041,6 +16664,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="importJobId">id of import job</param>
         /// <returns>Task of ApiResponse (DataTableImportJob)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DataTableImportJob>> GetFlowsDatatableImportJobAsyncWithHttpInfo (string datatableId, string importJobId)
         { 
             // verify the required parameter 'datatableId' is set
@@ -16132,6 +16756,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>DataTableImportEntityListing</returns>
+        
         public DataTableImportEntityListing GetFlowsDatatableImportJobs (string datatableId, int? pageNumber = null, int? pageSize = null)
         {
              ApiResponse<DataTableImportEntityListing> localVarResponse = GetFlowsDatatableImportJobsWithHttpInfo(datatableId, pageNumber, pageSize);
@@ -16146,6 +16771,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of DataTableImportEntityListing</returns>
+        
         public ApiResponse< DataTableImportEntityListing > GetFlowsDatatableImportJobsWithHttpInfo (string datatableId, int? pageNumber = null, int? pageSize = null)
         { 
             // verify the required parameter 'datatableId' is set
@@ -16232,6 +16858,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of DataTableImportEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<DataTableImportEntityListing> GetFlowsDatatableImportJobsAsync (string datatableId, int? pageNumber = null, int? pageSize = null)
         {
              ApiResponse<DataTableImportEntityListing> localVarResponse = await GetFlowsDatatableImportJobsAsyncWithHttpInfo(datatableId, pageNumber, pageSize);
@@ -16247,6 +16874,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (DataTableImportEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DataTableImportEntityListing>> GetFlowsDatatableImportJobsAsyncWithHttpInfo (string datatableId, int? pageNumber = null, int? pageSize = null)
         { 
             // verify the required parameter 'datatableId' is set
@@ -16335,6 +16963,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="rowId">The key for the row</param>
         /// <param name="showbrief">if true returns just the key field for the row (optional, default to true)</param>
         /// <returns>Dictionary&lt;string, Object&gt;</returns>
+        
         public Dictionary<string, Object> GetFlowsDatatableRow (string datatableId, string rowId, bool? showbrief = null)
         {
              ApiResponse<Dictionary<string, Object>> localVarResponse = GetFlowsDatatableRowWithHttpInfo(datatableId, rowId, showbrief);
@@ -16349,6 +16978,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="rowId">The key for the row</param>
         /// <param name="showbrief">if true returns just the key field for the row (optional, default to true)</param>
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        
         public ApiResponse< Dictionary<string, Object> > GetFlowsDatatableRowWithHttpInfo (string datatableId, string rowId, bool? showbrief = null)
         { 
             // verify the required parameter 'datatableId' is set
@@ -16438,6 +17068,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="rowId">The key for the row</param>
         /// <param name="showbrief">if true returns just the key field for the row (optional, default to true)</param>
         /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
+        
         public async System.Threading.Tasks.Task<Dictionary<string, Object>> GetFlowsDatatableRowAsync (string datatableId, string rowId, bool? showbrief = null)
         {
              ApiResponse<Dictionary<string, Object>> localVarResponse = await GetFlowsDatatableRowAsyncWithHttpInfo(datatableId, rowId, showbrief);
@@ -16453,6 +17084,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="rowId">The key for the row</param>
         /// <param name="showbrief">if true returns just the key field for the row (optional, default to true)</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> GetFlowsDatatableRowAsyncWithHttpInfo (string datatableId, string rowId, bool? showbrief = null)
         { 
             // verify the required parameter 'datatableId' is set
@@ -16547,6 +17179,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="showbrief">If true returns just the key value of the row (optional, default to true)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
         /// <returns>DataTableRowEntityListing</returns>
+        
         public DataTableRowEntityListing GetFlowsDatatableRows (string datatableId, int? pageNumber = null, int? pageSize = null, bool? showbrief = null, string sortOrder = null)
         {
              ApiResponse<DataTableRowEntityListing> localVarResponse = GetFlowsDatatableRowsWithHttpInfo(datatableId, pageNumber, pageSize, showbrief, sortOrder);
@@ -16563,6 +17196,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="showbrief">If true returns just the key value of the row (optional, default to true)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
         /// <returns>ApiResponse of DataTableRowEntityListing</returns>
+        
         public ApiResponse< DataTableRowEntityListing > GetFlowsDatatableRowsWithHttpInfo (string datatableId, int? pageNumber = null, int? pageSize = null, bool? showbrief = null, string sortOrder = null)
         { 
             // verify the required parameter 'datatableId' is set
@@ -16653,6 +17287,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="showbrief">If true returns just the key value of the row (optional, default to true)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
         /// <returns>Task of DataTableRowEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<DataTableRowEntityListing> GetFlowsDatatableRowsAsync (string datatableId, int? pageNumber = null, int? pageSize = null, bool? showbrief = null, string sortOrder = null)
         {
              ApiResponse<DataTableRowEntityListing> localVarResponse = await GetFlowsDatatableRowsAsyncWithHttpInfo(datatableId, pageNumber, pageSize, showbrief, sortOrder);
@@ -16670,6 +17305,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="showbrief">If true returns just the key value of the row (optional, default to true)</param>
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
         /// <returns>Task of ApiResponse (DataTableRowEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DataTableRowEntityListing>> GetFlowsDatatableRowsAsyncWithHttpInfo (string datatableId, int? pageNumber = null, int? pageSize = null, bool? showbrief = null, string sortOrder = null)
         { 
             // verify the required parameter 'datatableId' is set
@@ -16764,6 +17400,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="name">Filter by Name. The wildcard character * is supported within the filter. Matches are case-insensitive. (optional)</param>
         /// <returns>DataTablesDomainEntityListing</returns>
+        
         public DataTablesDomainEntityListing GetFlowsDatatables (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null)
         {
              ApiResponse<DataTablesDomainEntityListing> localVarResponse = GetFlowsDatatablesWithHttpInfo(expand, pageNumber, pageSize, sortBy, sortOrder, divisionId, name);
@@ -16782,6 +17419,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="name">Filter by Name. The wildcard character * is supported within the filter. Matches are case-insensitive. (optional)</param>
         /// <returns>ApiResponse of DataTablesDomainEntityListing</returns>
+        
         public ApiResponse< DataTablesDomainEntityListing > GetFlowsDatatablesWithHttpInfo (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null)
         { 
 
@@ -16873,6 +17511,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="name">Filter by Name. The wildcard character * is supported within the filter. Matches are case-insensitive. (optional)</param>
         /// <returns>Task of DataTablesDomainEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<DataTablesDomainEntityListing> GetFlowsDatatablesAsync (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null)
         {
              ApiResponse<DataTablesDomainEntityListing> localVarResponse = await GetFlowsDatatablesAsyncWithHttpInfo(expand, pageNumber, pageSize, sortBy, sortOrder, divisionId, name);
@@ -16892,6 +17531,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="name">Filter by Name. The wildcard character * is supported within the filter. Matches are case-insensitive. (optional)</param>
         /// <returns>Task of ApiResponse (DataTablesDomainEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DataTablesDomainEntityListing>> GetFlowsDatatablesAsyncWithHttpInfo (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null)
         { 
 
@@ -16979,6 +17619,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <returns>DataTable</returns>
+        
         public DataTable GetFlowsDatatablesDivisionview (string datatableId, string expand = null)
         {
              ApiResponse<DataTable> localVarResponse = GetFlowsDatatablesDivisionviewWithHttpInfo(datatableId, expand);
@@ -16992,6 +17633,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <returns>ApiResponse of DataTable</returns>
+        
         public ApiResponse< DataTable > GetFlowsDatatablesDivisionviewWithHttpInfo (string datatableId, string expand = null)
         { 
             // verify the required parameter 'datatableId' is set
@@ -17076,6 +17718,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <returns>Task of DataTable</returns>
+        
         public async System.Threading.Tasks.Task<DataTable> GetFlowsDatatablesDivisionviewAsync (string datatableId, string expand = null)
         {
              ApiResponse<DataTable> localVarResponse = await GetFlowsDatatablesDivisionviewAsyncWithHttpInfo(datatableId, expand);
@@ -17090,6 +17733,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <returns>Task of ApiResponse (DataTable)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DataTable>> GetFlowsDatatablesDivisionviewAsyncWithHttpInfo (string datatableId, string expand = null)
         { 
             // verify the required parameter 'datatableId' is set
@@ -17181,6 +17825,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="name">Filter by Name. The wildcard character * is supported within the filter. Matches are case-insensitive. (optional)</param>
         /// <returns>DataTablesDomainEntityListing</returns>
+        
         public DataTablesDomainEntityListing GetFlowsDatatablesDivisionviews (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null)
         {
              ApiResponse<DataTablesDomainEntityListing> localVarResponse = GetFlowsDatatablesDivisionviewsWithHttpInfo(expand, pageNumber, pageSize, sortBy, sortOrder, divisionId, name);
@@ -17199,6 +17844,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="name">Filter by Name. The wildcard character * is supported within the filter. Matches are case-insensitive. (optional)</param>
         /// <returns>ApiResponse of DataTablesDomainEntityListing</returns>
+        
         public ApiResponse< DataTablesDomainEntityListing > GetFlowsDatatablesDivisionviewsWithHttpInfo (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null)
         { 
 
@@ -17290,6 +17936,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="name">Filter by Name. The wildcard character * is supported within the filter. Matches are case-insensitive. (optional)</param>
         /// <returns>Task of DataTablesDomainEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<DataTablesDomainEntityListing> GetFlowsDatatablesDivisionviewsAsync (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null)
         {
              ApiResponse<DataTablesDomainEntityListing> localVarResponse = await GetFlowsDatatablesDivisionviewsAsyncWithHttpInfo(expand, pageNumber, pageSize, sortBy, sortOrder, divisionId, name);
@@ -17309,6 +17956,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="name">Filter by Name. The wildcard character * is supported within the filter. Matches are case-insensitive. (optional)</param>
         /// <returns>Task of ApiResponse (DataTablesDomainEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DataTablesDomainEntityListing>> GetFlowsDatatablesDivisionviewsAsyncWithHttpInfo (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null)
         { 
 
@@ -17406,6 +18054,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="includeSchemas">Include variable schemas (optional, default to false)</param>
         /// <returns>FlowDivisionViewEntityListing</returns>
+        
         public FlowDivisionViewEntityListing GetFlowsDivisionviews (List<string> type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string publishVersionId = null, string publishedAfter = null, string publishedBefore = null, List<string> divisionId = null, bool? includeSchemas = null)
         {
              ApiResponse<FlowDivisionViewEntityListing> localVarResponse = GetFlowsDivisionviewsWithHttpInfo(type, pageNumber, pageSize, sortBy, sortOrder, id, name, publishVersionId, publishedAfter, publishedBefore, divisionId, includeSchemas);
@@ -17429,6 +18078,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="includeSchemas">Include variable schemas (optional, default to false)</param>
         /// <returns>ApiResponse of FlowDivisionViewEntityListing</returns>
+        
         public ApiResponse< FlowDivisionViewEntityListing > GetFlowsDivisionviewsWithHttpInfo (List<string> type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string publishVersionId = null, string publishedAfter = null, string publishedBefore = null, List<string> divisionId = null, bool? includeSchemas = null)
         { 
 
@@ -17530,6 +18180,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="includeSchemas">Include variable schemas (optional, default to false)</param>
         /// <returns>Task of FlowDivisionViewEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<FlowDivisionViewEntityListing> GetFlowsDivisionviewsAsync (List<string> type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string publishVersionId = null, string publishedAfter = null, string publishedBefore = null, List<string> divisionId = null, bool? includeSchemas = null)
         {
              ApiResponse<FlowDivisionViewEntityListing> localVarResponse = await GetFlowsDivisionviewsAsyncWithHttpInfo(type, pageNumber, pageSize, sortBy, sortOrder, id, name, publishVersionId, publishedAfter, publishedBefore, divisionId, includeSchemas);
@@ -17554,6 +18205,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <param name="includeSchemas">Include variable schemas (optional, default to false)</param>
         /// <returns>Task of ApiResponse (FlowDivisionViewEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<FlowDivisionViewEntityListing>> GetFlowsDivisionviewsAsyncWithHttpInfo (List<string> type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string publishVersionId = null, string publishedAfter = null, string publishedBefore = null, List<string> divisionId = null, bool? includeSchemas = null)
         { 
 
@@ -17645,6 +18297,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowExecutionId">flow execution ID</param>
         /// <returns>FlowRuntimeExecution</returns>
+        
         public FlowRuntimeExecution GetFlowsExecution (string flowExecutionId)
         {
              ApiResponse<FlowRuntimeExecution> localVarResponse = GetFlowsExecutionWithHttpInfo(flowExecutionId);
@@ -17657,6 +18310,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowExecutionId">flow execution ID</param>
         /// <returns>ApiResponse of FlowRuntimeExecution</returns>
+        
         public ApiResponse< FlowRuntimeExecution > GetFlowsExecutionWithHttpInfo (string flowExecutionId)
         { 
             // verify the required parameter 'flowExecutionId' is set
@@ -17739,6 +18393,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowExecutionId">flow execution ID</param>
         /// <returns>Task of FlowRuntimeExecution</returns>
+        
         public async System.Threading.Tasks.Task<FlowRuntimeExecution> GetFlowsExecutionAsync (string flowExecutionId)
         {
              ApiResponse<FlowRuntimeExecution> localVarResponse = await GetFlowsExecutionAsyncWithHttpInfo(flowExecutionId);
@@ -17752,6 +18407,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowExecutionId">flow execution ID</param>
         /// <returns>Task of ApiResponse (FlowRuntimeExecution)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<FlowRuntimeExecution>> GetFlowsExecutionAsyncWithHttpInfo (string flowExecutionId)
         { 
             // verify the required parameter 'flowExecutionId' is set
@@ -17837,6 +18493,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">Job ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ArchitectJobStateResponse</returns>
+        
         public ArchitectJobStateResponse GetFlowsJob (string jobId, List<string> expand = null)
         {
              ApiResponse<ArchitectJobStateResponse> localVarResponse = GetFlowsJobWithHttpInfo(jobId, expand);
@@ -17850,6 +18507,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">Job ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of ArchitectJobStateResponse</returns>
+        
         public ApiResponse< ArchitectJobStateResponse > GetFlowsJobWithHttpInfo (string jobId, List<string> expand = null)
         { 
             // verify the required parameter 'jobId' is set
@@ -17934,6 +18592,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">Job ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ArchitectJobStateResponse</returns>
+        
         public async System.Threading.Tasks.Task<ArchitectJobStateResponse> GetFlowsJobAsync (string jobId, List<string> expand = null)
         {
              ApiResponse<ArchitectJobStateResponse> localVarResponse = await GetFlowsJobAsyncWithHttpInfo(jobId, expand);
@@ -17948,6 +18607,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="jobId">Job ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (ArchitectJobStateResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ArchitectJobStateResponse>> GetFlowsJobAsyncWithHttpInfo (string jobId, List<string> expand = null)
         { 
             // verify the required parameter 'jobId' is set
@@ -18033,6 +18693,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="milestoneId">flow milestone ID</param>
         /// <returns>FlowMilestone</returns>
+        
         public FlowMilestone GetFlowsMilestone (string milestoneId)
         {
              ApiResponse<FlowMilestone> localVarResponse = GetFlowsMilestoneWithHttpInfo(milestoneId);
@@ -18045,6 +18706,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="milestoneId">flow milestone ID</param>
         /// <returns>ApiResponse of FlowMilestone</returns>
+        
         public ApiResponse< FlowMilestone > GetFlowsMilestoneWithHttpInfo (string milestoneId)
         { 
             // verify the required parameter 'milestoneId' is set
@@ -18127,6 +18789,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="milestoneId">flow milestone ID</param>
         /// <returns>Task of FlowMilestone</returns>
+        
         public async System.Threading.Tasks.Task<FlowMilestone> GetFlowsMilestoneAsync (string milestoneId)
         {
              ApiResponse<FlowMilestone> localVarResponse = await GetFlowsMilestoneAsyncWithHttpInfo(milestoneId);
@@ -18140,6 +18803,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="milestoneId">flow milestone ID</param>
         /// <returns>Task of ApiResponse (FlowMilestone)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<FlowMilestone>> GetFlowsMilestoneAsyncWithHttpInfo (string milestoneId)
         { 
             // verify the required parameter 'milestoneId' is set
@@ -18232,6 +18896,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>FlowMilestoneListing</returns>
+        
         public FlowMilestoneListing GetFlowsMilestones (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, List<string> divisionId = null)
         {
              ApiResponse<FlowMilestoneListing> localVarResponse = GetFlowsMilestonesWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, divisionId);
@@ -18252,6 +18917,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>ApiResponse of FlowMilestoneListing</returns>
+        
         public ApiResponse< FlowMilestoneListing > GetFlowsMilestonesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, List<string> divisionId = null)
         { 
 
@@ -18347,6 +19013,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>Task of FlowMilestoneListing</returns>
+        
         public async System.Threading.Tasks.Task<FlowMilestoneListing> GetFlowsMilestonesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, List<string> divisionId = null)
         {
              ApiResponse<FlowMilestoneListing> localVarResponse = await GetFlowsMilestonesAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, divisionId);
@@ -18368,6 +19035,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (FlowMilestoneListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<FlowMilestoneListing>> GetFlowsMilestonesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, List<string> divisionId = null)
         { 
 
@@ -18462,6 +19130,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>FlowMilestoneDivisionViewEntityListing</returns>
+        
         public FlowMilestoneDivisionViewEntityListing GetFlowsMilestonesDivisionviews (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
         {
              ApiResponse<FlowMilestoneDivisionViewEntityListing> localVarResponse = GetFlowsMilestonesDivisionviewsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, id, name, divisionId);
@@ -18480,6 +19149,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>ApiResponse of FlowMilestoneDivisionViewEntityListing</returns>
+        
         public ApiResponse< FlowMilestoneDivisionViewEntityListing > GetFlowsMilestonesDivisionviewsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
         { 
 
@@ -18571,6 +19241,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>Task of FlowMilestoneDivisionViewEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<FlowMilestoneDivisionViewEntityListing> GetFlowsMilestonesDivisionviewsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
         {
              ApiResponse<FlowMilestoneDivisionViewEntityListing> localVarResponse = await GetFlowsMilestonesDivisionviewsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, id, name, divisionId);
@@ -18590,6 +19261,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (FlowMilestoneDivisionViewEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<FlowMilestoneDivisionViewEntityListing>> GetFlowsMilestonesDivisionviewsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
         { 
 
@@ -18676,6 +19348,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowOutcomeId">flow outcome ID</param>
         /// <returns>FlowOutcome</returns>
+        
         public FlowOutcome GetFlowsOutcome (string flowOutcomeId)
         {
              ApiResponse<FlowOutcome> localVarResponse = GetFlowsOutcomeWithHttpInfo(flowOutcomeId);
@@ -18688,6 +19361,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowOutcomeId">flow outcome ID</param>
         /// <returns>ApiResponse of FlowOutcome</returns>
+        
         public ApiResponse< FlowOutcome > GetFlowsOutcomeWithHttpInfo (string flowOutcomeId)
         { 
             // verify the required parameter 'flowOutcomeId' is set
@@ -18770,6 +19444,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowOutcomeId">flow outcome ID</param>
         /// <returns>Task of FlowOutcome</returns>
+        
         public async System.Threading.Tasks.Task<FlowOutcome> GetFlowsOutcomeAsync (string flowOutcomeId)
         {
              ApiResponse<FlowOutcome> localVarResponse = await GetFlowsOutcomeAsyncWithHttpInfo(flowOutcomeId);
@@ -18783,6 +19458,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowOutcomeId">flow outcome ID</param>
         /// <returns>Task of ApiResponse (FlowOutcome)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<FlowOutcome>> GetFlowsOutcomeAsyncWithHttpInfo (string flowOutcomeId)
         { 
             // verify the required parameter 'flowOutcomeId' is set
@@ -18875,6 +19551,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>FlowOutcomeListing</returns>
+        
         public FlowOutcomeListing GetFlowsOutcomes (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, List<string> divisionId = null)
         {
              ApiResponse<FlowOutcomeListing> localVarResponse = GetFlowsOutcomesWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, divisionId);
@@ -18895,6 +19572,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>ApiResponse of FlowOutcomeListing</returns>
+        
         public ApiResponse< FlowOutcomeListing > GetFlowsOutcomesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, List<string> divisionId = null)
         { 
 
@@ -18990,6 +19668,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>Task of FlowOutcomeListing</returns>
+        
         public async System.Threading.Tasks.Task<FlowOutcomeListing> GetFlowsOutcomesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, List<string> divisionId = null)
         {
              ApiResponse<FlowOutcomeListing> localVarResponse = await GetFlowsOutcomesAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, divisionId);
@@ -19011,6 +19690,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (FlowOutcomeListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<FlowOutcomeListing>> GetFlowsOutcomesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, List<string> divisionId = null)
         { 
 
@@ -19105,6 +19785,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>FlowOutcomeDivisionViewEntityListing</returns>
+        
         public FlowOutcomeDivisionViewEntityListing GetFlowsOutcomesDivisionviews (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
         {
              ApiResponse<FlowOutcomeDivisionViewEntityListing> localVarResponse = GetFlowsOutcomesDivisionviewsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, id, name, divisionId);
@@ -19123,6 +19804,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>ApiResponse of FlowOutcomeDivisionViewEntityListing</returns>
+        
         public ApiResponse< FlowOutcomeDivisionViewEntityListing > GetFlowsOutcomesDivisionviewsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
         { 
 
@@ -19214,6 +19896,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>Task of FlowOutcomeDivisionViewEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<FlowOutcomeDivisionViewEntityListing> GetFlowsOutcomesDivisionviewsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
         {
              ApiResponse<FlowOutcomeDivisionViewEntityListing> localVarResponse = await GetFlowsOutcomesDivisionviewsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, id, name, divisionId);
@@ -19233,6 +19916,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="divisionId">division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (FlowOutcomeDivisionViewEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<FlowOutcomeDivisionViewEntityListing>> GetFlowsOutcomesDivisionviewsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
         { 
 
@@ -19318,6 +20002,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
+        
         public void PostArchitectDependencytrackingBuild ()
         {
              PostArchitectDependencytrackingBuildWithHttpInfo();
@@ -19328,6 +20013,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> PostArchitectDependencytrackingBuildWithHttpInfo ()
         { 
 
@@ -19405,6 +20091,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task PostArchitectDependencytrackingBuildAsync ()
         {
              await PostArchitectDependencytrackingBuildAsyncWithHttpInfo();
@@ -19416,6 +20103,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostArchitectDependencytrackingBuildAsyncWithHttpInfo ()
         { 
 
@@ -19495,6 +20183,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>EmergencyGroup</returns>
+        
         public EmergencyGroup PostArchitectEmergencygroups (EmergencyGroup body)
         {
              ApiResponse<EmergencyGroup> localVarResponse = PostArchitectEmergencygroupsWithHttpInfo(body);
@@ -19507,6 +20196,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of EmergencyGroup</returns>
+        
         public ApiResponse< EmergencyGroup > PostArchitectEmergencygroupsWithHttpInfo (EmergencyGroup body)
         { 
             // verify the required parameter 'body' is set
@@ -19594,6 +20284,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of EmergencyGroup</returns>
+        
         public async System.Threading.Tasks.Task<EmergencyGroup> PostArchitectEmergencygroupsAsync (EmergencyGroup body)
         {
              ApiResponse<EmergencyGroup> localVarResponse = await PostArchitectEmergencygroupsAsyncWithHttpInfo(body);
@@ -19607,6 +20298,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (EmergencyGroup)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<EmergencyGroup>> PostArchitectEmergencygroupsAsyncWithHttpInfo (EmergencyGroup body)
         { 
             // verify the required parameter 'body' is set
@@ -19696,6 +20388,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>IVR</returns>
+        
         public IVR PostArchitectIvrs (IVR body)
         {
              ApiResponse<IVR> localVarResponse = PostArchitectIvrsWithHttpInfo(body);
@@ -19708,6 +20401,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of IVR</returns>
+        
         public ApiResponse< IVR > PostArchitectIvrsWithHttpInfo (IVR body)
         { 
             // verify the required parameter 'body' is set
@@ -19795,6 +20489,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of IVR</returns>
+        
         public async System.Threading.Tasks.Task<IVR> PostArchitectIvrsAsync (IVR body)
         {
              ApiResponse<IVR> localVarResponse = await PostArchitectIvrsAsyncWithHttpInfo(body);
@@ -19808,6 +20503,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (IVR)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<IVR>> PostArchitectIvrsAsyncWithHttpInfo (IVR body)
         { 
             // verify the required parameter 'body' is set
@@ -19897,6 +20593,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <returns>Operation</returns>
+        
         public Operation PostArchitectPromptHistory (string promptId)
         {
              ApiResponse<Operation> localVarResponse = PostArchitectPromptHistoryWithHttpInfo(promptId);
@@ -19909,6 +20606,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <returns>ApiResponse of Operation</returns>
+        
         public ApiResponse< Operation > PostArchitectPromptHistoryWithHttpInfo (string promptId)
         { 
             // verify the required parameter 'promptId' is set
@@ -19991,6 +20689,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <returns>Task of Operation</returns>
+        
         public async System.Threading.Tasks.Task<Operation> PostArchitectPromptHistoryAsync (string promptId)
         {
              ApiResponse<Operation> localVarResponse = await PostArchitectPromptHistoryAsyncWithHttpInfo(promptId);
@@ -20004,6 +20703,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <returns>Task of ApiResponse (Operation)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Operation>> PostArchitectPromptHistoryAsyncWithHttpInfo (string promptId)
         { 
             // verify the required parameter 'promptId' is set
@@ -20089,6 +20789,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>PromptAsset</returns>
+        
         public PromptAsset PostArchitectPromptResources (string promptId, PromptAssetCreate body)
         {
              ApiResponse<PromptAsset> localVarResponse = PostArchitectPromptResourcesWithHttpInfo(promptId, body);
@@ -20102,6 +20803,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of PromptAsset</returns>
+        
         public ApiResponse< PromptAsset > PostArchitectPromptResourcesWithHttpInfo (string promptId, PromptAssetCreate body)
         { 
             // verify the required parameter 'promptId' is set
@@ -20194,6 +20896,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>Task of PromptAsset</returns>
+        
         public async System.Threading.Tasks.Task<PromptAsset> PostArchitectPromptResourcesAsync (string promptId, PromptAssetCreate body)
         {
              ApiResponse<PromptAsset> localVarResponse = await PostArchitectPromptResourcesAsyncWithHttpInfo(promptId, body);
@@ -20208,6 +20911,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (PromptAsset)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<PromptAsset>> PostArchitectPromptResourcesAsyncWithHttpInfo (string promptId, PromptAssetCreate body)
         { 
             // verify the required parameter 'promptId' is set
@@ -20302,6 +21006,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Prompt</returns>
+        
         public Prompt PostArchitectPrompts (Prompt body)
         {
              ApiResponse<Prompt> localVarResponse = PostArchitectPromptsWithHttpInfo(body);
@@ -20314,6 +21019,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Prompt</returns>
+        
         public ApiResponse< Prompt > PostArchitectPromptsWithHttpInfo (Prompt body)
         { 
             // verify the required parameter 'body' is set
@@ -20401,6 +21107,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of Prompt</returns>
+        
         public async System.Threading.Tasks.Task<Prompt> PostArchitectPromptsAsync (Prompt body)
         {
              ApiResponse<Prompt> localVarResponse = await PostArchitectPromptsAsyncWithHttpInfo(body);
@@ -20414,6 +21121,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Prompt)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Prompt>> PostArchitectPromptsAsyncWithHttpInfo (Prompt body)
         { 
             // verify the required parameter 'body' is set
@@ -20503,6 +21211,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ScheduleGroup</returns>
+        
         public ScheduleGroup PostArchitectSchedulegroups (ScheduleGroup body)
         {
              ApiResponse<ScheduleGroup> localVarResponse = PostArchitectSchedulegroupsWithHttpInfo(body);
@@ -20515,6 +21224,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of ScheduleGroup</returns>
+        
         public ApiResponse< ScheduleGroup > PostArchitectSchedulegroupsWithHttpInfo (ScheduleGroup body)
         { 
             // verify the required parameter 'body' is set
@@ -20602,6 +21312,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ScheduleGroup</returns>
+        
         public async System.Threading.Tasks.Task<ScheduleGroup> PostArchitectSchedulegroupsAsync (ScheduleGroup body)
         {
              ApiResponse<ScheduleGroup> localVarResponse = await PostArchitectSchedulegroupsAsyncWithHttpInfo(body);
@@ -20615,6 +21326,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (ScheduleGroup)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ScheduleGroup>> PostArchitectSchedulegroupsAsyncWithHttpInfo (ScheduleGroup body)
         { 
             // verify the required parameter 'body' is set
@@ -20704,6 +21416,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Schedule</returns>
+        
         public Schedule PostArchitectSchedules (Schedule body)
         {
              ApiResponse<Schedule> localVarResponse = PostArchitectSchedulesWithHttpInfo(body);
@@ -20716,6 +21429,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Schedule</returns>
+        
         public ApiResponse< Schedule > PostArchitectSchedulesWithHttpInfo (Schedule body)
         { 
             // verify the required parameter 'body' is set
@@ -20803,6 +21517,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of Schedule</returns>
+        
         public async System.Threading.Tasks.Task<Schedule> PostArchitectSchedulesAsync (Schedule body)
         {
              ApiResponse<Schedule> localVarResponse = await PostArchitectSchedulesAsyncWithHttpInfo(body);
@@ -20816,6 +21531,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Schedule)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Schedule>> PostArchitectSchedulesAsyncWithHttpInfo (Schedule body)
         { 
             // verify the required parameter 'body' is set
@@ -20905,6 +21621,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">promptId</param>
         /// <returns>Operation</returns>
+        
         public Operation PostArchitectSystempromptHistory (string promptId)
         {
              ApiResponse<Operation> localVarResponse = PostArchitectSystempromptHistoryWithHttpInfo(promptId);
@@ -20917,6 +21634,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">promptId</param>
         /// <returns>ApiResponse of Operation</returns>
+        
         public ApiResponse< Operation > PostArchitectSystempromptHistoryWithHttpInfo (string promptId)
         { 
             // verify the required parameter 'promptId' is set
@@ -20999,6 +21717,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">promptId</param>
         /// <returns>Task of Operation</returns>
+        
         public async System.Threading.Tasks.Task<Operation> PostArchitectSystempromptHistoryAsync (string promptId)
         {
              ApiResponse<Operation> localVarResponse = await PostArchitectSystempromptHistoryAsyncWithHttpInfo(promptId);
@@ -21012,6 +21731,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">promptId</param>
         /// <returns>Task of ApiResponse (Operation)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Operation>> PostArchitectSystempromptHistoryAsyncWithHttpInfo (string promptId)
         { 
             // verify the required parameter 'promptId' is set
@@ -21097,6 +21817,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>SystemPromptAsset</returns>
+        
         public SystemPromptAsset PostArchitectSystempromptResources (string promptId, SystemPromptAsset body)
         {
              ApiResponse<SystemPromptAsset> localVarResponse = PostArchitectSystempromptResourcesWithHttpInfo(promptId, body);
@@ -21110,6 +21831,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of SystemPromptAsset</returns>
+        
         public ApiResponse< SystemPromptAsset > PostArchitectSystempromptResourcesWithHttpInfo (string promptId, SystemPromptAsset body)
         { 
             // verify the required parameter 'promptId' is set
@@ -21202,6 +21924,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>Task of SystemPromptAsset</returns>
+        
         public async System.Threading.Tasks.Task<SystemPromptAsset> PostArchitectSystempromptResourcesAsync (string promptId, SystemPromptAsset body)
         {
              ApiResponse<SystemPromptAsset> localVarResponse = await PostArchitectSystempromptResourcesAsyncWithHttpInfo(promptId, body);
@@ -21216,6 +21939,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (SystemPromptAsset)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<SystemPromptAsset>> PostArchitectSystempromptResourcesAsyncWithHttpInfo (string promptId, SystemPromptAsset body)
         { 
             // verify the required parameter 'promptId' is set
@@ -21310,6 +22034,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
         /// <returns>Operation</returns>
+        
         public Operation PostFlowHistory (string flowId)
         {
              ApiResponse<Operation> localVarResponse = PostFlowHistoryWithHttpInfo(flowId);
@@ -21322,6 +22047,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
         /// <returns>ApiResponse of Operation</returns>
+        
         public ApiResponse< Operation > PostFlowHistoryWithHttpInfo (string flowId)
         { 
             // verify the required parameter 'flowId' is set
@@ -21404,6 +22130,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
         /// <returns>Task of Operation</returns>
+        
         public async System.Threading.Tasks.Task<Operation> PostFlowHistoryAsync (string flowId)
         {
              ApiResponse<Operation> localVarResponse = await PostFlowHistoryAsyncWithHttpInfo(flowId);
@@ -21417,6 +22144,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
         /// <returns>Task of ApiResponse (Operation)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Operation>> PostFlowHistoryAsyncWithHttpInfo (string flowId)
         { 
             // verify the required parameter 'flowId' is set
@@ -21502,6 +22230,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="body"></param>
         /// <returns>FlowVersion</returns>
+        
         public FlowVersion PostFlowVersions (string flowId, Object body)
         {
              ApiResponse<FlowVersion> localVarResponse = PostFlowVersionsWithHttpInfo(flowId, body);
@@ -21515,6 +22244,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of FlowVersion</returns>
+        
         public ApiResponse< FlowVersion > PostFlowVersionsWithHttpInfo (string flowId, Object body)
         { 
             // verify the required parameter 'flowId' is set
@@ -21607,6 +22337,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="body"></param>
         /// <returns>Task of FlowVersion</returns>
+        
         public async System.Threading.Tasks.Task<FlowVersion> PostFlowVersionsAsync (string flowId, Object body)
         {
              ApiResponse<FlowVersion> localVarResponse = await PostFlowVersionsAsyncWithHttpInfo(flowId, body);
@@ -21621,6 +22352,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (FlowVersion)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<FlowVersion>> PostFlowVersionsAsyncWithHttpInfo (string flowId, Object body)
         { 
             // verify the required parameter 'flowId' is set
@@ -21716,6 +22448,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <param name="language">Language (optional)</param>
         /// <returns>Flow</returns>
+        
         public Flow PostFlows (Flow body, string language = null)
         {
              ApiResponse<Flow> localVarResponse = PostFlowsWithHttpInfo(body, language);
@@ -21729,6 +22462,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <param name="language">Language (optional)</param>
         /// <returns>ApiResponse of Flow</returns>
+        
         public ApiResponse< Flow > PostFlowsWithHttpInfo (Flow body, string language = null)
         { 
             // verify the required parameter 'body' is set
@@ -21818,6 +22552,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <param name="language">Language (optional)</param>
         /// <returns>Task of Flow</returns>
+        
         public async System.Threading.Tasks.Task<Flow> PostFlowsAsync (Flow body, string language = null)
         {
              ApiResponse<Flow> localVarResponse = await PostFlowsAsyncWithHttpInfo(body, language);
@@ -21832,6 +22567,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"></param>
         /// <param name="language">Language (optional)</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsAsyncWithHttpInfo (Flow body, string language = null)
         { 
             // verify the required parameter 'body' is set
@@ -21922,6 +22658,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>Operation</returns>
+        
         public Operation PostFlowsActionsCheckin (string flow)
         {
              ApiResponse<Operation> localVarResponse = PostFlowsActionsCheckinWithHttpInfo(flow);
@@ -21934,6 +22671,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>ApiResponse of Operation</returns>
+        
         public ApiResponse< Operation > PostFlowsActionsCheckinWithHttpInfo (string flow)
         { 
             // verify the required parameter 'flow' is set
@@ -22016,6 +22754,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>Task of Operation</returns>
+        
         public async System.Threading.Tasks.Task<Operation> PostFlowsActionsCheckinAsync (string flow)
         {
              ApiResponse<Operation> localVarResponse = await PostFlowsActionsCheckinAsyncWithHttpInfo(flow);
@@ -22029,6 +22768,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>Task of ApiResponse (Operation)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Operation>> PostFlowsActionsCheckinAsyncWithHttpInfo (string flow)
         { 
             // verify the required parameter 'flow' is set
@@ -22113,6 +22853,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>Flow</returns>
+        
         public Flow PostFlowsActionsCheckout (string flow)
         {
              ApiResponse<Flow> localVarResponse = PostFlowsActionsCheckoutWithHttpInfo(flow);
@@ -22125,6 +22866,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>ApiResponse of Flow</returns>
+        
         public ApiResponse< Flow > PostFlowsActionsCheckoutWithHttpInfo (string flow)
         { 
             // verify the required parameter 'flow' is set
@@ -22207,6 +22949,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>Task of Flow</returns>
+        
         public async System.Threading.Tasks.Task<Flow> PostFlowsActionsCheckoutAsync (string flow)
         {
              ApiResponse<Flow> localVarResponse = await PostFlowsActionsCheckoutAsyncWithHttpInfo(flow);
@@ -22220,6 +22963,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsActionsCheckoutAsyncWithHttpInfo (string flow)
         { 
             // verify the required parameter 'flow' is set
@@ -22304,6 +23048,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>Flow</returns>
+        
         public Flow PostFlowsActionsDeactivate (string flow)
         {
              ApiResponse<Flow> localVarResponse = PostFlowsActionsDeactivateWithHttpInfo(flow);
@@ -22316,6 +23061,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>ApiResponse of Flow</returns>
+        
         public ApiResponse< Flow > PostFlowsActionsDeactivateWithHttpInfo (string flow)
         { 
             // verify the required parameter 'flow' is set
@@ -22398,6 +23144,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>Task of Flow</returns>
+        
         public async System.Threading.Tasks.Task<Flow> PostFlowsActionsDeactivateAsync (string flow)
         {
              ApiResponse<Flow> localVarResponse = await PostFlowsActionsDeactivateAsyncWithHttpInfo(flow);
@@ -22411,6 +23158,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsActionsDeactivateAsyncWithHttpInfo (string flow)
         { 
             // verify the required parameter 'flow' is set
@@ -22496,6 +23244,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flow">Flow ID</param>
         /// <param name="version">version (optional)</param>
         /// <returns>Operation</returns>
+        
         public Operation PostFlowsActionsPublish (string flow, string version = null)
         {
              ApiResponse<Operation> localVarResponse = PostFlowsActionsPublishWithHttpInfo(flow, version);
@@ -22509,6 +23258,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flow">Flow ID</param>
         /// <param name="version">version (optional)</param>
         /// <returns>ApiResponse of Operation</returns>
+        
         public ApiResponse< Operation > PostFlowsActionsPublishWithHttpInfo (string flow, string version = null)
         { 
             // verify the required parameter 'flow' is set
@@ -22593,6 +23343,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flow">Flow ID</param>
         /// <param name="version">version (optional)</param>
         /// <returns>Task of Operation</returns>
+        
         public async System.Threading.Tasks.Task<Operation> PostFlowsActionsPublishAsync (string flow, string version = null)
         {
              ApiResponse<Operation> localVarResponse = await PostFlowsActionsPublishAsyncWithHttpInfo(flow, version);
@@ -22607,6 +23358,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flow">Flow ID</param>
         /// <param name="version">version (optional)</param>
         /// <returns>Task of ApiResponse (Operation)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Operation>> PostFlowsActionsPublishAsyncWithHttpInfo (string flow, string version = null)
         { 
             // verify the required parameter 'flow' is set
@@ -22692,6 +23444,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>Flow</returns>
+        
         public Flow PostFlowsActionsRevert (string flow)
         {
              ApiResponse<Flow> localVarResponse = PostFlowsActionsRevertWithHttpInfo(flow);
@@ -22704,6 +23457,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>ApiResponse of Flow</returns>
+        
         public ApiResponse< Flow > PostFlowsActionsRevertWithHttpInfo (string flow)
         { 
             // verify the required parameter 'flow' is set
@@ -22786,6 +23540,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>Task of Flow</returns>
+        
         public async System.Threading.Tasks.Task<Flow> PostFlowsActionsRevertAsync (string flow)
         {
              ApiResponse<Flow> localVarResponse = await PostFlowsActionsRevertAsyncWithHttpInfo(flow);
@@ -22799,6 +23554,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsActionsRevertAsyncWithHttpInfo (string flow)
         { 
             // verify the required parameter 'flow' is set
@@ -22883,6 +23639,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>Flow</returns>
+        
         public Flow PostFlowsActionsUnlock (string flow)
         {
              ApiResponse<Flow> localVarResponse = PostFlowsActionsUnlockWithHttpInfo(flow);
@@ -22895,6 +23652,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>ApiResponse of Flow</returns>
+        
         public ApiResponse< Flow > PostFlowsActionsUnlockWithHttpInfo (string flow)
         { 
             // verify the required parameter 'flow' is set
@@ -22977,6 +23735,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>Task of Flow</returns>
+        
         public async System.Threading.Tasks.Task<Flow> PostFlowsActionsUnlockAsync (string flow)
         {
              ApiResponse<Flow> localVarResponse = await PostFlowsActionsUnlockAsyncWithHttpInfo(flow);
@@ -22990,6 +23749,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsActionsUnlockAsyncWithHttpInfo (string flow)
         { 
             // verify the required parameter 'flow' is set
@@ -23074,6 +23834,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
         /// <returns>DataTableExportJob</returns>
+        
         public DataTableExportJob PostFlowsDatatableExportJobs (string datatableId)
         {
              ApiResponse<DataTableExportJob> localVarResponse = PostFlowsDatatableExportJobsWithHttpInfo(datatableId);
@@ -23086,6 +23847,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
         /// <returns>ApiResponse of DataTableExportJob</returns>
+        
         public ApiResponse< DataTableExportJob > PostFlowsDatatableExportJobsWithHttpInfo (string datatableId)
         { 
             // verify the required parameter 'datatableId' is set
@@ -23168,6 +23930,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
         /// <returns>Task of DataTableExportJob</returns>
+        
         public async System.Threading.Tasks.Task<DataTableExportJob> PostFlowsDatatableExportJobsAsync (string datatableId)
         {
              ApiResponse<DataTableExportJob> localVarResponse = await PostFlowsDatatableExportJobsAsyncWithHttpInfo(datatableId);
@@ -23181,6 +23944,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
         /// <returns>Task of ApiResponse (DataTableExportJob)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DataTableExportJob>> PostFlowsDatatableExportJobsAsyncWithHttpInfo (string datatableId)
         { 
             // verify the required parameter 'datatableId' is set
@@ -23266,6 +24030,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="body">import job information</param>
         /// <returns>DataTableImportJob</returns>
+        
         public DataTableImportJob PostFlowsDatatableImportJobs (string datatableId, DataTableImportJob body)
         {
              ApiResponse<DataTableImportJob> localVarResponse = PostFlowsDatatableImportJobsWithHttpInfo(datatableId, body);
@@ -23279,6 +24044,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="body">import job information</param>
         /// <returns>ApiResponse of DataTableImportJob</returns>
+        
         public ApiResponse< DataTableImportJob > PostFlowsDatatableImportJobsWithHttpInfo (string datatableId, DataTableImportJob body)
         { 
             // verify the required parameter 'datatableId' is set
@@ -23371,6 +24137,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="body">import job information</param>
         /// <returns>Task of DataTableImportJob</returns>
+        
         public async System.Threading.Tasks.Task<DataTableImportJob> PostFlowsDatatableImportJobsAsync (string datatableId, DataTableImportJob body)
         {
              ApiResponse<DataTableImportJob> localVarResponse = await PostFlowsDatatableImportJobsAsyncWithHttpInfo(datatableId, body);
@@ -23385,6 +24152,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="body">import job information</param>
         /// <returns>Task of ApiResponse (DataTableImportJob)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DataTableImportJob>> PostFlowsDatatableImportJobsAsyncWithHttpInfo (string datatableId, DataTableImportJob body)
         { 
             // verify the required parameter 'datatableId' is set
@@ -23480,6 +24248,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="dataTableRow"></param>
         /// <returns>Dictionary&lt;string, Object&gt;</returns>
+        
         public Dictionary<string, Object> PostFlowsDatatableRows (string datatableId, Object dataTableRow)
         {
              ApiResponse<Dictionary<string, Object>> localVarResponse = PostFlowsDatatableRowsWithHttpInfo(datatableId, dataTableRow);
@@ -23493,6 +24262,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="dataTableRow"></param>
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        
         public ApiResponse< Dictionary<string, Object> > PostFlowsDatatableRowsWithHttpInfo (string datatableId, Object dataTableRow)
         { 
             // verify the required parameter 'datatableId' is set
@@ -23585,6 +24355,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="dataTableRow"></param>
         /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
+        
         public async System.Threading.Tasks.Task<Dictionary<string, Object>> PostFlowsDatatableRowsAsync (string datatableId, Object dataTableRow)
         {
              ApiResponse<Dictionary<string, Object>> localVarResponse = await PostFlowsDatatableRowsAsyncWithHttpInfo(datatableId, dataTableRow);
@@ -23599,6 +24370,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="dataTableRow"></param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> PostFlowsDatatableRowsAsyncWithHttpInfo (string datatableId, Object dataTableRow)
         { 
             // verify the required parameter 'datatableId' is set
@@ -23693,6 +24465,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">datatable json-schema</param>
         /// <returns>DataTable</returns>
+        
         public DataTable PostFlowsDatatables (DataTable body)
         {
              ApiResponse<DataTable> localVarResponse = PostFlowsDatatablesWithHttpInfo(body);
@@ -23705,6 +24478,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">datatable json-schema</param>
         /// <returns>ApiResponse of DataTable</returns>
+        
         public ApiResponse< DataTable > PostFlowsDatatablesWithHttpInfo (DataTable body)
         { 
             // verify the required parameter 'body' is set
@@ -23792,6 +24566,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">datatable json-schema</param>
         /// <returns>Task of DataTable</returns>
+        
         public async System.Threading.Tasks.Task<DataTable> PostFlowsDatatablesAsync (DataTable body)
         {
              ApiResponse<DataTable> localVarResponse = await PostFlowsDatatablesAsyncWithHttpInfo(body);
@@ -23805,6 +24580,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">datatable json-schema</param>
         /// <returns>Task of ApiResponse (DataTable)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DataTable>> PostFlowsDatatablesAsyncWithHttpInfo (DataTable body)
         { 
             // verify the required parameter 'body' is set
@@ -23894,6 +24670,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowLaunchRequest"></param>
         /// <returns>FlowExecutionLaunchResponse</returns>
+        
         public FlowExecutionLaunchResponse PostFlowsExecutions (FlowExecutionLaunchRequest flowLaunchRequest)
         {
              ApiResponse<FlowExecutionLaunchResponse> localVarResponse = PostFlowsExecutionsWithHttpInfo(flowLaunchRequest);
@@ -23906,6 +24683,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowLaunchRequest"></param>
         /// <returns>ApiResponse of FlowExecutionLaunchResponse</returns>
+        
         public ApiResponse< FlowExecutionLaunchResponse > PostFlowsExecutionsWithHttpInfo (FlowExecutionLaunchRequest flowLaunchRequest)
         { 
             // verify the required parameter 'flowLaunchRequest' is set
@@ -23993,6 +24771,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowLaunchRequest"></param>
         /// <returns>Task of FlowExecutionLaunchResponse</returns>
+        
         public async System.Threading.Tasks.Task<FlowExecutionLaunchResponse> PostFlowsExecutionsAsync (FlowExecutionLaunchRequest flowLaunchRequest)
         {
              ApiResponse<FlowExecutionLaunchResponse> localVarResponse = await PostFlowsExecutionsAsyncWithHttpInfo(flowLaunchRequest);
@@ -24006,6 +24785,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowLaunchRequest"></param>
         /// <returns>Task of ApiResponse (FlowExecutionLaunchResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<FlowExecutionLaunchResponse>> PostFlowsExecutionsAsyncWithHttpInfo (FlowExecutionLaunchRequest flowLaunchRequest)
         { 
             // verify the required parameter 'flowLaunchRequest' is set
@@ -24094,6 +24874,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>RegisterArchitectJobResponse</returns>
+        
         public RegisterArchitectJobResponse PostFlowsJobs ()
         {
              ApiResponse<RegisterArchitectJobResponse> localVarResponse = PostFlowsJobsWithHttpInfo();
@@ -24105,6 +24886,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of RegisterArchitectJobResponse</returns>
+        
         public ApiResponse< RegisterArchitectJobResponse > PostFlowsJobsWithHttpInfo ()
         { 
 
@@ -24182,6 +24964,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of RegisterArchitectJobResponse</returns>
+        
         public async System.Threading.Tasks.Task<RegisterArchitectJobResponse> PostFlowsJobsAsync ()
         {
              ApiResponse<RegisterArchitectJobResponse> localVarResponse = await PostFlowsJobsAsyncWithHttpInfo();
@@ -24194,6 +24977,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (RegisterArchitectJobResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<RegisterArchitectJobResponse>> PostFlowsJobsAsyncWithHttpInfo ()
         { 
 
@@ -24273,6 +25057,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>FlowMilestone</returns>
+        
         public FlowMilestone PostFlowsMilestones (FlowMilestone body = null)
         {
              ApiResponse<FlowMilestone> localVarResponse = PostFlowsMilestonesWithHttpInfo(body);
@@ -24285,6 +25070,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of FlowMilestone</returns>
+        
         public ApiResponse< FlowMilestone > PostFlowsMilestonesWithHttpInfo (FlowMilestone body = null)
         { 
 
@@ -24369,6 +25155,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of FlowMilestone</returns>
+        
         public async System.Threading.Tasks.Task<FlowMilestone> PostFlowsMilestonesAsync (FlowMilestone body = null)
         {
              ApiResponse<FlowMilestone> localVarResponse = await PostFlowsMilestonesAsyncWithHttpInfo(body);
@@ -24382,6 +25169,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (FlowMilestone)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<FlowMilestone>> PostFlowsMilestonesAsyncWithHttpInfo (FlowMilestone body = null)
         { 
 
@@ -24467,6 +25255,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>FlowOutcome</returns>
+        
         public FlowOutcome PostFlowsOutcomes (FlowOutcome body = null)
         {
              ApiResponse<FlowOutcome> localVarResponse = PostFlowsOutcomesWithHttpInfo(body);
@@ -24479,6 +25268,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of FlowOutcome</returns>
+        
         public ApiResponse< FlowOutcome > PostFlowsOutcomesWithHttpInfo (FlowOutcome body = null)
         { 
 
@@ -24563,6 +25353,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of FlowOutcome</returns>
+        
         public async System.Threading.Tasks.Task<FlowOutcome> PostFlowsOutcomesAsync (FlowOutcome body = null)
         {
              ApiResponse<FlowOutcome> localVarResponse = await PostFlowsOutcomesAsyncWithHttpInfo(body);
@@ -24576,6 +25367,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (FlowOutcome)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<FlowOutcome>> PostFlowsOutcomesAsyncWithHttpInfo (FlowOutcome body = null)
         { 
 
@@ -24662,6 +25454,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="emergencyGroupId">Emergency group ID</param>
         /// <param name="body"></param>
         /// <returns>EmergencyGroup</returns>
+        
         public EmergencyGroup PutArchitectEmergencygroup (string emergencyGroupId, EmergencyGroup body)
         {
              ApiResponse<EmergencyGroup> localVarResponse = PutArchitectEmergencygroupWithHttpInfo(emergencyGroupId, body);
@@ -24675,6 +25468,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="emergencyGroupId">Emergency group ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of EmergencyGroup</returns>
+        
         public ApiResponse< EmergencyGroup > PutArchitectEmergencygroupWithHttpInfo (string emergencyGroupId, EmergencyGroup body)
         { 
             // verify the required parameter 'emergencyGroupId' is set
@@ -24767,6 +25561,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="emergencyGroupId">Emergency group ID</param>
         /// <param name="body"></param>
         /// <returns>Task of EmergencyGroup</returns>
+        
         public async System.Threading.Tasks.Task<EmergencyGroup> PutArchitectEmergencygroupAsync (string emergencyGroupId, EmergencyGroup body)
         {
              ApiResponse<EmergencyGroup> localVarResponse = await PutArchitectEmergencygroupAsyncWithHttpInfo(emergencyGroupId, body);
@@ -24781,6 +25576,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="emergencyGroupId">Emergency group ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (EmergencyGroup)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<EmergencyGroup>> PutArchitectEmergencygroupAsyncWithHttpInfo (string emergencyGroupId, EmergencyGroup body)
         { 
             // verify the required parameter 'emergencyGroupId' is set
@@ -24876,6 +25672,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ivrId">IVR id</param>
         /// <param name="body"></param>
         /// <returns>IVR</returns>
+        
         public IVR PutArchitectIvr (string ivrId, IVR body)
         {
              ApiResponse<IVR> localVarResponse = PutArchitectIvrWithHttpInfo(ivrId, body);
@@ -24889,6 +25686,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ivrId">IVR id</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of IVR</returns>
+        
         public ApiResponse< IVR > PutArchitectIvrWithHttpInfo (string ivrId, IVR body)
         { 
             // verify the required parameter 'ivrId' is set
@@ -24981,6 +25779,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ivrId">IVR id</param>
         /// <param name="body"></param>
         /// <returns>Task of IVR</returns>
+        
         public async System.Threading.Tasks.Task<IVR> PutArchitectIvrAsync (string ivrId, IVR body)
         {
              ApiResponse<IVR> localVarResponse = await PutArchitectIvrAsyncWithHttpInfo(ivrId, body);
@@ -24995,6 +25794,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ivrId">IVR id</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (IVR)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<IVR>> PutArchitectIvrAsyncWithHttpInfo (string ivrId, IVR body)
         { 
             // verify the required parameter 'ivrId' is set
@@ -25090,6 +25890,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>Prompt</returns>
+        
         public Prompt PutArchitectPrompt (string promptId, Prompt body)
         {
              ApiResponse<Prompt> localVarResponse = PutArchitectPromptWithHttpInfo(promptId, body);
@@ -25103,6 +25904,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Prompt</returns>
+        
         public ApiResponse< Prompt > PutArchitectPromptWithHttpInfo (string promptId, Prompt body)
         { 
             // verify the required parameter 'promptId' is set
@@ -25195,6 +25997,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>Task of Prompt</returns>
+        
         public async System.Threading.Tasks.Task<Prompt> PutArchitectPromptAsync (string promptId, Prompt body)
         {
              ApiResponse<Prompt> localVarResponse = await PutArchitectPromptAsyncWithHttpInfo(promptId, body);
@@ -25209,6 +26012,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Prompt)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Prompt>> PutArchitectPromptAsyncWithHttpInfo (string promptId, Prompt body)
         { 
             // verify the required parameter 'promptId' is set
@@ -25305,6 +26109,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language</param>
         /// <param name="body"></param>
         /// <returns>PromptAsset</returns>
+        
         public PromptAsset PutArchitectPromptResource (string promptId, string languageCode, PromptAsset body)
         {
              ApiResponse<PromptAsset> localVarResponse = PutArchitectPromptResourceWithHttpInfo(promptId, languageCode, body);
@@ -25319,6 +26124,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of PromptAsset</returns>
+        
         public ApiResponse< PromptAsset > PutArchitectPromptResourceWithHttpInfo (string promptId, string languageCode, PromptAsset body)
         { 
             // verify the required parameter 'promptId' is set
@@ -25416,6 +26222,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language</param>
         /// <param name="body"></param>
         /// <returns>Task of PromptAsset</returns>
+        
         public async System.Threading.Tasks.Task<PromptAsset> PutArchitectPromptResourceAsync (string promptId, string languageCode, PromptAsset body)
         {
              ApiResponse<PromptAsset> localVarResponse = await PutArchitectPromptResourceAsyncWithHttpInfo(promptId, languageCode, body);
@@ -25431,6 +26238,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (PromptAsset)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<PromptAsset>> PutArchitectPromptResourceAsyncWithHttpInfo (string promptId, string languageCode, PromptAsset body)
         { 
             // verify the required parameter 'promptId' is set
@@ -25531,6 +26339,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body"></param>
         /// <returns>Schedule</returns>
+        
         public Schedule PutArchitectSchedule (string scheduleId, Schedule body)
         {
              ApiResponse<Schedule> localVarResponse = PutArchitectScheduleWithHttpInfo(scheduleId, body);
@@ -25544,6 +26353,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Schedule</returns>
+        
         public ApiResponse< Schedule > PutArchitectScheduleWithHttpInfo (string scheduleId, Schedule body)
         { 
             // verify the required parameter 'scheduleId' is set
@@ -25636,6 +26446,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body"></param>
         /// <returns>Task of Schedule</returns>
+        
         public async System.Threading.Tasks.Task<Schedule> PutArchitectScheduleAsync (string scheduleId, Schedule body)
         {
              ApiResponse<Schedule> localVarResponse = await PutArchitectScheduleAsyncWithHttpInfo(scheduleId, body);
@@ -25650,6 +26461,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Schedule)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Schedule>> PutArchitectScheduleAsyncWithHttpInfo (string scheduleId, Schedule body)
         { 
             // verify the required parameter 'scheduleId' is set
@@ -25745,6 +26557,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <param name="body"></param>
         /// <returns>ScheduleGroup</returns>
+        
         public ScheduleGroup PutArchitectSchedulegroup (string scheduleGroupId, ScheduleGroup body)
         {
              ApiResponse<ScheduleGroup> localVarResponse = PutArchitectSchedulegroupWithHttpInfo(scheduleGroupId, body);
@@ -25758,6 +26571,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of ScheduleGroup</returns>
+        
         public ApiResponse< ScheduleGroup > PutArchitectSchedulegroupWithHttpInfo (string scheduleGroupId, ScheduleGroup body)
         { 
             // verify the required parameter 'scheduleGroupId' is set
@@ -25850,6 +26664,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ScheduleGroup</returns>
+        
         public async System.Threading.Tasks.Task<ScheduleGroup> PutArchitectSchedulegroupAsync (string scheduleGroupId, ScheduleGroup body)
         {
              ApiResponse<ScheduleGroup> localVarResponse = await PutArchitectSchedulegroupAsyncWithHttpInfo(scheduleGroupId, body);
@@ -25864,6 +26679,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (ScheduleGroup)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ScheduleGroup>> PutArchitectSchedulegroupAsyncWithHttpInfo (string scheduleGroupId, ScheduleGroup body)
         { 
             // verify the required parameter 'scheduleGroupId' is set
@@ -25960,6 +26776,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language</param>
         /// <param name="body"></param>
         /// <returns>SystemPromptAsset</returns>
+        
         public SystemPromptAsset PutArchitectSystempromptResource (string promptId, string languageCode, SystemPromptAsset body)
         {
              ApiResponse<SystemPromptAsset> localVarResponse = PutArchitectSystempromptResourceWithHttpInfo(promptId, languageCode, body);
@@ -25974,6 +26791,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of SystemPromptAsset</returns>
+        
         public ApiResponse< SystemPromptAsset > PutArchitectSystempromptResourceWithHttpInfo (string promptId, string languageCode, SystemPromptAsset body)
         { 
             // verify the required parameter 'promptId' is set
@@ -26071,6 +26889,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language</param>
         /// <param name="body"></param>
         /// <returns>Task of SystemPromptAsset</returns>
+        
         public async System.Threading.Tasks.Task<SystemPromptAsset> PutArchitectSystempromptResourceAsync (string promptId, string languageCode, SystemPromptAsset body)
         {
              ApiResponse<SystemPromptAsset> localVarResponse = await PutArchitectSystempromptResourceAsyncWithHttpInfo(promptId, languageCode, body);
@@ -26086,6 +26905,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (SystemPromptAsset)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<SystemPromptAsset>> PutArchitectSystempromptResourceAsyncWithHttpInfo (string promptId, string languageCode, SystemPromptAsset body)
         { 
             // verify the required parameter 'promptId' is set
@@ -26186,6 +27006,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="body"></param>
         /// <returns>Flow</returns>
+        
         public Flow PutFlow (string flowId, Flow body)
         {
              ApiResponse<Flow> localVarResponse = PutFlowWithHttpInfo(flowId, body);
@@ -26199,6 +27020,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Flow</returns>
+        
         public ApiResponse< Flow > PutFlowWithHttpInfo (string flowId, Flow body)
         { 
             // verify the required parameter 'flowId' is set
@@ -26291,6 +27113,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="body"></param>
         /// <returns>Task of Flow</returns>
+        
         public async System.Threading.Tasks.Task<Flow> PutFlowAsync (string flowId, Flow body)
         {
              ApiResponse<Flow> localVarResponse = await PutFlowAsyncWithHttpInfo(flowId, body);
@@ -26305,6 +27128,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Flow)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Flow>> PutFlowAsyncWithHttpInfo (string flowId, Flow body)
         { 
             // verify the required parameter 'flowId' is set
@@ -26401,6 +27225,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">datatable json-schema</param>
         /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <returns>DataTable</returns>
+        
         public DataTable PutFlowsDatatable (string datatableId, DataTable body, string expand = null)
         {
              ApiResponse<DataTable> localVarResponse = PutFlowsDatatableWithHttpInfo(datatableId, body, expand);
@@ -26415,6 +27240,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">datatable json-schema</param>
         /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <returns>ApiResponse of DataTable</returns>
+        
         public ApiResponse< DataTable > PutFlowsDatatableWithHttpInfo (string datatableId, DataTable body, string expand = null)
         { 
             // verify the required parameter 'datatableId' is set
@@ -26509,6 +27335,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">datatable json-schema</param>
         /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <returns>Task of DataTable</returns>
+        
         public async System.Threading.Tasks.Task<DataTable> PutFlowsDatatableAsync (string datatableId, DataTable body, string expand = null)
         {
              ApiResponse<DataTable> localVarResponse = await PutFlowsDatatableAsyncWithHttpInfo(datatableId, body, expand);
@@ -26524,6 +27351,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">datatable json-schema</param>
         /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <returns>Task of ApiResponse (DataTable)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DataTable>> PutFlowsDatatableAsyncWithHttpInfo (string datatableId, DataTable body, string expand = null)
         { 
             // verify the required parameter 'datatableId' is set
@@ -26621,6 +27449,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="rowId">the key for the row</param>
         /// <param name="body">datatable row (optional)</param>
         /// <returns>Dictionary&lt;string, Object&gt;</returns>
+        
         public Dictionary<string, Object> PutFlowsDatatableRow (string datatableId, string rowId, Object body = null)
         {
              ApiResponse<Dictionary<string, Object>> localVarResponse = PutFlowsDatatableRowWithHttpInfo(datatableId, rowId, body);
@@ -26635,6 +27464,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="rowId">the key for the row</param>
         /// <param name="body">datatable row (optional)</param>
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        
         public ApiResponse< Dictionary<string, Object> > PutFlowsDatatableRowWithHttpInfo (string datatableId, string rowId, Object body = null)
         { 
             // verify the required parameter 'datatableId' is set
@@ -26729,6 +27559,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="rowId">the key for the row</param>
         /// <param name="body">datatable row (optional)</param>
         /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
+        
         public async System.Threading.Tasks.Task<Dictionary<string, Object>> PutFlowsDatatableRowAsync (string datatableId, string rowId, Object body = null)
         {
              ApiResponse<Dictionary<string, Object>> localVarResponse = await PutFlowsDatatableRowAsyncWithHttpInfo(datatableId, rowId, body);
@@ -26744,6 +27575,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="rowId">the key for the row</param>
         /// <param name="body">datatable row (optional)</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> PutFlowsDatatableRowAsyncWithHttpInfo (string datatableId, string rowId, Object body = null)
         { 
             // verify the required parameter 'datatableId' is set
@@ -26840,6 +27672,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="milestoneId">flow milestone ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>FlowMilestone</returns>
+        
         public FlowMilestone PutFlowsMilestone (string milestoneId, FlowMilestone body = null)
         {
              ApiResponse<FlowMilestone> localVarResponse = PutFlowsMilestoneWithHttpInfo(milestoneId, body);
@@ -26853,6 +27686,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="milestoneId">flow milestone ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of FlowMilestone</returns>
+        
         public ApiResponse< FlowMilestone > PutFlowsMilestoneWithHttpInfo (string milestoneId, FlowMilestone body = null)
         { 
             // verify the required parameter 'milestoneId' is set
@@ -26942,6 +27776,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="milestoneId">flow milestone ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of FlowMilestone</returns>
+        
         public async System.Threading.Tasks.Task<FlowMilestone> PutFlowsMilestoneAsync (string milestoneId, FlowMilestone body = null)
         {
              ApiResponse<FlowMilestone> localVarResponse = await PutFlowsMilestoneAsyncWithHttpInfo(milestoneId, body);
@@ -26956,6 +27791,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="milestoneId">flow milestone ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (FlowMilestone)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<FlowMilestone>> PutFlowsMilestoneAsyncWithHttpInfo (string milestoneId, FlowMilestone body = null)
         { 
             // verify the required parameter 'milestoneId' is set
@@ -27047,6 +27883,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowOutcomeId">flow outcome ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Operation</returns>
+        
         public Operation PutFlowsOutcome (string flowOutcomeId, FlowOutcome body = null)
         {
              ApiResponse<Operation> localVarResponse = PutFlowsOutcomeWithHttpInfo(flowOutcomeId, body);
@@ -27060,6 +27897,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowOutcomeId">flow outcome ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Operation</returns>
+        
         public ApiResponse< Operation > PutFlowsOutcomeWithHttpInfo (string flowOutcomeId, FlowOutcome body = null)
         { 
             // verify the required parameter 'flowOutcomeId' is set
@@ -27149,6 +27987,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowOutcomeId">flow outcome ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of Operation</returns>
+        
         public async System.Threading.Tasks.Task<Operation> PutFlowsOutcomeAsync (string flowOutcomeId, FlowOutcome body = null)
         {
              ApiResponse<Operation> localVarResponse = await PutFlowsOutcomeAsyncWithHttpInfo(flowOutcomeId, body);
@@ -27163,6 +28002,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowOutcomeId">flow outcome ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (Operation)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Operation>> PutFlowsOutcomeAsyncWithHttpInfo (string flowOutcomeId, FlowOutcome body = null)
         { 
             // verify the required parameter 'flowOutcomeId' is set

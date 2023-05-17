@@ -1,13 +1,13 @@
 ---
-title: WfmAgentScheduleUpdateTopicWfmAgentScheduleUpdate
+title: WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate
 ---
-## ININ.PureCloudApi.Model.WfmAgentScheduleUpdateTopicWfmAgentScheduleUpdate
+## ININ.PureCloudApi.Model.WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **UpdateType** | **string** |  | [optional] |
+| **Type** | **string** |  | [optional] |
 | **ShiftStartDates** | **List&lt;DateTime?&gt;** |  | [optional] |
 {: class="table table-striped"}
 

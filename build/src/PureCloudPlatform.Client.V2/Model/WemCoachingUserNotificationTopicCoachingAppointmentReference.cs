@@ -13,57 +13,18 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// WemCoachingAppointmentTopicCoachingAppointmentDocument
+    /// WemCoachingUserNotificationTopicCoachingAppointmentReference
     /// </summary>
     [DataContract]
-    public partial class WemCoachingAppointmentTopicCoachingAppointmentDocument :  IEquatable<WemCoachingAppointmentTopicCoachingAppointmentDocument>
+    public partial class WemCoachingUserNotificationTopicCoachingAppointmentReference :  IEquatable<WemCoachingUserNotificationTopicCoachingAppointmentReference>
     {
         /// <summary>
-        /// Gets or Sets Action
-        /// </summary>
-        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
-        public enum ActionEnum
-        {
-            /// <summary>
-            /// Your SDK version is out of date and an unknown enum value was encountered. 
-            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
-            /// in the Package Manager Console
-            /// </summary>
-            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
-            OutdatedSdkVersion,
-            
-            /// <summary>
-            /// Enum Add for "Add"
-            /// </summary>
-            [EnumMember(Value = "Add")]
-            Add,
-            
-            /// <summary>
-            /// Enum Remove for "Remove"
-            /// </summary>
-            [EnumMember(Value = "Remove")]
-            Remove,
-            
-            /// <summary>
-            /// Enum None for "None"
-            /// </summary>
-            [EnumMember(Value = "None")]
-            None
-        }
-        /// <summary>
-        /// Gets or Sets Action
-        /// </summary>
-        [DataMember(Name="action", EmitDefaultValue=false)]
-        public ActionEnum? Action { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WemCoachingAppointmentTopicCoachingAppointmentDocument" /> class.
+        /// Initializes a new instance of the <see cref="WemCoachingUserNotificationTopicCoachingAppointmentReference" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
-        /// <param name="Action">Action.</param>
-        public WemCoachingAppointmentTopicCoachingAppointmentDocument(string Id = null, ActionEnum? Action = null)
+        public WemCoachingUserNotificationTopicCoachingAppointmentReference(string Id = null)
         {
             this.Id = Id;
-            this.Action = Action;
             
         }
         
@@ -76,8 +37,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Id { get; set; }
 
 
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -85,10 +44,9 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class WemCoachingAppointmentTopicCoachingAppointmentDocument {\n");
+            sb.Append("class WemCoachingUserNotificationTopicCoachingAppointmentReference {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -114,15 +72,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as WemCoachingAppointmentTopicCoachingAppointmentDocument);
+            return this.Equals(obj as WemCoachingUserNotificationTopicCoachingAppointmentReference);
         }
 
         /// <summary>
-        /// Returns true if WemCoachingAppointmentTopicCoachingAppointmentDocument instances are equal
+        /// Returns true if WemCoachingUserNotificationTopicCoachingAppointmentReference instances are equal
         /// </summary>
-        /// <param name="other">Instance of WemCoachingAppointmentTopicCoachingAppointmentDocument to be compared</param>
+        /// <param name="other">Instance of WemCoachingUserNotificationTopicCoachingAppointmentReference to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(WemCoachingAppointmentTopicCoachingAppointmentDocument other)
+        public bool Equals(WemCoachingUserNotificationTopicCoachingAppointmentReference other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -133,11 +91,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) &&
-                (
-                    this.Action == other.Action ||
-                    this.Action != null &&
-                    this.Action.Equals(other.Action)
                 );
         }
 
@@ -154,9 +107,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-
-                if (this.Action != null)
-                    hash = hash * 59 + this.Action.GetHashCode();
 
                 return hash;
             }

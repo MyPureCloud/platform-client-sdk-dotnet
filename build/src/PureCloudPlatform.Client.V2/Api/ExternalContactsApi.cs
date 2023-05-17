@@ -25,6 +25,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>Object</returns>
+        
         Object DeleteExternalcontactsContact (string contactId);
 
         /// <summary>
@@ -36,6 +37,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>ApiResponse of Object</returns>
+        
         ApiResponse<Object> DeleteExternalcontactsContactWithHttpInfo (string contactId);
 
         /// <summary>
@@ -48,6 +50,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>Object</returns>
+        
         Object DeleteExternalcontactsContactNote (string contactId, string noteId);
 
         /// <summary>
@@ -60,6 +63,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>ApiResponse of Object</returns>
+        
         ApiResponse<Object> DeleteExternalcontactsContactNoteWithHttpInfo (string contactId, string noteId);
 
         /// <summary>
@@ -71,6 +75,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns></returns>
+        
         void DeleteExternalcontactsContactsSchema (string schemaId);
 
         /// <summary>
@@ -82,6 +87,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> DeleteExternalcontactsContactsSchemaWithHttpInfo (string schemaId);
 
         /// <summary>
@@ -93,6 +99,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns>Object</returns>
+        
         Object DeleteExternalcontactsOrganization (string externalOrganizationId);
 
         /// <summary>
@@ -104,6 +111,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns>ApiResponse of Object</returns>
+        
         ApiResponse<Object> DeleteExternalcontactsOrganizationWithHttpInfo (string externalOrganizationId);
 
         /// <summary>
@@ -116,6 +124,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>Object</returns>
+        
         Object DeleteExternalcontactsOrganizationNote (string externalOrganizationId, string noteId);
 
         /// <summary>
@@ -128,6 +137,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>ApiResponse of Object</returns>
+        
         ApiResponse<Object> DeleteExternalcontactsOrganizationNoteWithHttpInfo (string externalOrganizationId, string noteId);
 
         /// <summary>
@@ -139,6 +149,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns></returns>
+        
         void DeleteExternalcontactsOrganizationTrustor (string externalOrganizationId);
 
         /// <summary>
@@ -150,6 +161,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> DeleteExternalcontactsOrganizationTrustorWithHttpInfo (string externalOrganizationId);
 
         /// <summary>
@@ -161,6 +173,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
         /// <returns>Object</returns>
+        
         Object DeleteExternalcontactsRelationship (string relationshipId);
 
         /// <summary>
@@ -172,6 +185,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
         /// <returns>ApiResponse of Object</returns>
+        
         ApiResponse<Object> DeleteExternalcontactsRelationshipWithHttpInfo (string relationshipId);
 
         /// <summary>
@@ -184,6 +198,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources) (optional)</param>
         /// <returns>ExternalContact</returns>
+        
         ExternalContact GetExternalcontactsContact (string contactId, List<string> expand = null);
 
         /// <summary>
@@ -196,6 +211,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources) (optional)</param>
         /// <returns>ApiResponse of ExternalContact</returns>
+        
         ApiResponse<ExternalContact> GetExternalcontactsContactWithHttpInfo (string contactId, List<string> expand = null);
 
         /// <summary>
@@ -207,6 +223,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>EntityListing</returns>
+        
         EntityListing GetExternalcontactsContactIdentifiers (string contactId);
 
         /// <summary>
@@ -218,6 +235,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>ApiResponse of EntityListing</returns>
+        
         ApiResponse<EntityListing> GetExternalcontactsContactIdentifiersWithHttpInfo (string contactId);
 
         /// <summary>
@@ -232,6 +250,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="includeMerged">Indicates whether to return sessions from all external contacts in the merge-set of the given one. (optional)</param>
         /// <returns>SessionListing</returns>
+        
         SessionListing GetExternalcontactsContactJourneySessions (string contactId, string pageSize = null, string after = null, bool? includeMerged = null);
 
         /// <summary>
@@ -246,6 +265,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="includeMerged">Indicates whether to return sessions from all external contacts in the merge-set of the given one. (optional)</param>
         /// <returns>ApiResponse of SessionListing</returns>
+        
         ApiResponse<SessionListing> GetExternalcontactsContactJourneySessionsWithHttpInfo (string contactId, string pageSize = null, string after = null, bool? includeMerged = null);
 
         /// <summary>
@@ -259,6 +279,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Note</returns>
+        
         Note GetExternalcontactsContactNote (string contactId, string noteId, List<string> expand = null);
 
         /// <summary>
@@ -272,6 +293,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of Note</returns>
+        
         ApiResponse<Note> GetExternalcontactsContactNoteWithHttpInfo (string contactId, string noteId, List<string> expand = null);
 
         /// <summary>
@@ -287,6 +309,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>NoteListing</returns>
+        
         NoteListing GetExternalcontactsContactNotes (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
@@ -302,6 +325,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of NoteListing</returns>
+        
         ApiResponse<NoteListing> GetExternalcontactsContactNotesWithHttpInfo (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
@@ -314,6 +338,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources) (optional)</param>
         /// <returns>ExternalContact</returns>
+        
         ExternalContact GetExternalcontactsContactUnresolved (string contactId, List<string> expand = null);
 
         /// <summary>
@@ -326,6 +351,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources) (optional)</param>
         /// <returns>ApiResponse of ExternalContact</returns>
+        
         ApiResponse<ExternalContact> GetExternalcontactsContactUnresolvedWithHttpInfo (string contactId, List<string> expand = null);
 
         /// <summary>
@@ -341,6 +367,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ContactListing</returns>
+        
         ContactListing GetExternalcontactsContacts (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
@@ -356,6 +383,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of ContactListing</returns>
+        
         ApiResponse<ContactListing> GetExternalcontactsContactsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
@@ -367,6 +395,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>DataSchema</returns>
+        
         DataSchema GetExternalcontactsContactsSchema (string schemaId);
 
         /// <summary>
@@ -378,6 +407,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>ApiResponse of DataSchema</returns>
+        
         ApiResponse<DataSchema> GetExternalcontactsContactsSchemaWithHttpInfo (string schemaId);
 
         /// <summary>
@@ -390,6 +420,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <param name="versionId">Schema version</param>
         /// <returns>DataSchema</returns>
+        
         DataSchema GetExternalcontactsContactsSchemaVersion (string schemaId, string versionId);
 
         /// <summary>
@@ -402,6 +433,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <param name="versionId">Schema version</param>
         /// <returns>ApiResponse of DataSchema</returns>
+        
         ApiResponse<DataSchema> GetExternalcontactsContactsSchemaVersionWithHttpInfo (string schemaId, string versionId);
 
         /// <summary>
@@ -413,6 +445,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>DataSchema</returns>
+        
         DataSchema GetExternalcontactsContactsSchemaVersions (string schemaId);
 
         /// <summary>
@@ -424,6 +457,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>ApiResponse of DataSchema</returns>
+        
         ApiResponse<DataSchema> GetExternalcontactsContactsSchemaVersionsWithHttpInfo (string schemaId);
 
         /// <summary>
@@ -434,6 +468,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>DataSchemaListing</returns>
+        
         DataSchemaListing GetExternalcontactsContactsSchemas ();
 
         /// <summary>
@@ -444,6 +479,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of DataSchemaListing</returns>
+        
         ApiResponse<DataSchemaListing> GetExternalcontactsContactsSchemasWithHttpInfo ();
 
         /// <summary>
@@ -457,6 +493,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (externalDataSources) (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>ExternalOrganization</returns>
+        
         ExternalOrganization GetExternalcontactsOrganization (string externalOrganizationId, string expand = null, bool? includeTrustors = null);
 
         /// <summary>
@@ -470,6 +507,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (externalDataSources) (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>ApiResponse of ExternalOrganization</returns>
+        
         ApiResponse<ExternalOrganization> GetExternalcontactsOrganizationWithHttpInfo (string externalOrganizationId, string expand = null, bool? includeTrustors = null);
 
         /// <summary>
@@ -486,6 +524,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ContactListing</returns>
+        
         ContactListing GetExternalcontactsOrganizationContacts (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
@@ -502,6 +541,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of ContactListing</returns>
+        
         ApiResponse<ContactListing> GetExternalcontactsOrganizationContactsWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
@@ -515,6 +555,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Note</returns>
+        
         Note GetExternalcontactsOrganizationNote (string externalOrganizationId, string noteId, List<string> expand = null);
 
         /// <summary>
@@ -528,6 +569,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of Note</returns>
+        
         ApiResponse<Note> GetExternalcontactsOrganizationNoteWithHttpInfo (string externalOrganizationId, string noteId, List<string> expand = null);
 
         /// <summary>
@@ -543,6 +585,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>NoteListing</returns>
+        
         NoteListing GetExternalcontactsOrganizationNotes (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
@@ -558,6 +601,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of NoteListing</returns>
+        
         ApiResponse<NoteListing> GetExternalcontactsOrganizationNotesWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
@@ -573,6 +617,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>RelationshipListing</returns>
+        
         RelationshipListing GetExternalcontactsOrganizationRelationships (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string expand = null, string sortOrder = null);
 
         /// <summary>
@@ -588,6 +633,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>ApiResponse of RelationshipListing</returns>
+        
         ApiResponse<RelationshipListing> GetExternalcontactsOrganizationRelationshipsWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string expand = null, string sortOrder = null);
 
         /// <summary>
@@ -605,6 +651,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>ExternalOrganizationListing</returns>
+        
         ExternalOrganizationListing GetExternalcontactsOrganizations (int? pageSize = null, int? pageNumber = null, string q = null, List<string> trustorId = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null);
 
         /// <summary>
@@ -622,6 +669,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>ApiResponse of ExternalOrganizationListing</returns>
+        
         ApiResponse<ExternalOrganizationListing> GetExternalcontactsOrganizationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, List<string> trustorId = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null);
 
         /// <summary>
@@ -633,6 +681,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>DataSchema</returns>
+        
         DataSchema GetExternalcontactsOrganizationsSchema (string schemaId);
 
         /// <summary>
@@ -644,6 +693,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>ApiResponse of DataSchema</returns>
+        
         ApiResponse<DataSchema> GetExternalcontactsOrganizationsSchemaWithHttpInfo (string schemaId);
 
         /// <summary>
@@ -656,6 +706,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <param name="versionId">Schema version</param>
         /// <returns>DataSchema</returns>
+        
         DataSchema GetExternalcontactsOrganizationsSchemaVersion (string schemaId, string versionId);
 
         /// <summary>
@@ -668,6 +719,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <param name="versionId">Schema version</param>
         /// <returns>ApiResponse of DataSchema</returns>
+        
         ApiResponse<DataSchema> GetExternalcontactsOrganizationsSchemaVersionWithHttpInfo (string schemaId, string versionId);
 
         /// <summary>
@@ -679,6 +731,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>DataSchema</returns>
+        
         DataSchema GetExternalcontactsOrganizationsSchemaVersions (string schemaId);
 
         /// <summary>
@@ -690,6 +743,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>ApiResponse of DataSchema</returns>
+        
         ApiResponse<DataSchema> GetExternalcontactsOrganizationsSchemaVersionsWithHttpInfo (string schemaId);
 
         /// <summary>
@@ -700,6 +754,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>DataSchemaListing</returns>
+        
         DataSchemaListing GetExternalcontactsOrganizationsSchemas ();
 
         /// <summary>
@@ -710,6 +765,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of DataSchemaListing</returns>
+        
         ApiResponse<DataSchemaListing> GetExternalcontactsOrganizationsSchemasWithHttpInfo ();
 
         /// <summary>
@@ -722,6 +778,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationshipId">Relationship Id</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Relationship</returns>
+        
         Relationship GetExternalcontactsRelationship (string relationshipId, string expand = null);
 
         /// <summary>
@@ -734,6 +791,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationshipId">Relationship Id</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of Relationship</returns>
+        
         ApiResponse<Relationship> GetExternalcontactsRelationshipWithHttpInfo (string relationshipId, string expand = null);
 
         /// <summary>
@@ -746,6 +804,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="lookupVal">User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names)</param>
         /// <param name="expand">which field, if any, to expand (optional)</param>
         /// <returns>ReverseWhitepagesLookupResult</returns>
+        
         ReverseWhitepagesLookupResult GetExternalcontactsReversewhitepageslookup (string lookupVal, List<string> expand = null);
 
         /// <summary>
@@ -758,6 +817,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="lookupVal">User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names)</param>
         /// <param name="expand">which field, if any, to expand (optional)</param>
         /// <returns>ApiResponse of ReverseWhitepagesLookupResult</returns>
+        
         ApiResponse<ReverseWhitepagesLookupResult> GetExternalcontactsReversewhitepageslookupWithHttpInfo (string lookupVal, List<string> expand = null);
 
         /// <summary>
@@ -770,6 +830,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100) (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>CursorContactListing</returns>
+        
         CursorContactListing GetExternalcontactsScanContacts (int? limit = null, string cursor = null);
 
         /// <summary>
@@ -782,6 +843,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100) (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>ApiResponse of CursorContactListing</returns>
+        
         ApiResponse<CursorContactListing> GetExternalcontactsScanContactsWithHttpInfo (int? limit = null, string cursor = null);
 
         /// <summary>
@@ -794,6 +856,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100) (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>CursorNoteListing</returns>
+        
         CursorNoteListing GetExternalcontactsScanNotes (int? limit = null, string cursor = null);
 
         /// <summary>
@@ -806,6 +869,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100) (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>ApiResponse of CursorNoteListing</returns>
+        
         ApiResponse<CursorNoteListing> GetExternalcontactsScanNotesWithHttpInfo (int? limit = null, string cursor = null);
 
         /// <summary>
@@ -818,6 +882,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100) (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>CursorOrganizationListing</returns>
+        
         CursorOrganizationListing GetExternalcontactsScanOrganizations (int? limit = null, string cursor = null);
 
         /// <summary>
@@ -830,6 +895,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100) (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>ApiResponse of CursorOrganizationListing</returns>
+        
         ApiResponse<CursorOrganizationListing> GetExternalcontactsScanOrganizationsWithHttpInfo (int? limit = null, string cursor = null);
 
         /// <summary>
@@ -842,6 +908,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100) (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>CursorRelationshipListing</returns>
+        
         CursorRelationshipListing GetExternalcontactsScanRelationships (int? limit = null, string cursor = null);
 
         /// <summary>
@@ -854,6 +921,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100) (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>ApiResponse of CursorRelationshipListing</returns>
+        
         ApiResponse<CursorRelationshipListing> GetExternalcontactsScanRelationshipsWithHttpInfo (int? limit = null, string cursor = null);
 
         /// <summary>
@@ -866,6 +934,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="body">ClaimRequest</param>
         /// <returns>ContactIdentifier</returns>
+        
         ContactIdentifier PatchExternalcontactsContactIdentifiers (string contactId, IdentifierClaimRequest body);
 
         /// <summary>
@@ -878,6 +947,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="body">ClaimRequest</param>
         /// <returns>ApiResponse of ContactIdentifier</returns>
+        
         ApiResponse<ContactIdentifier> PatchExternalcontactsContactIdentifiersWithHttpInfo (string contactId, IdentifierClaimRequest body);
 
         /// <summary>
@@ -889,6 +959,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contact ids</param>
         /// <returns>BulkFetchContactsResponse</returns>
+        
         BulkFetchContactsResponse PostExternalcontactsBulkContacts (BulkIdsRequest body);
 
         /// <summary>
@@ -900,6 +971,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contact ids</param>
         /// <returns>ApiResponse of BulkFetchContactsResponse</returns>
+        
         ApiResponse<BulkFetchContactsResponse> PostExternalcontactsBulkContactsWithHttpInfo (BulkIdsRequest body);
 
         /// <summary>
@@ -911,6 +983,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contacts</param>
         /// <returns>BulkContactsResponse</returns>
+        
         BulkContactsResponse PostExternalcontactsBulkContactsAdd (BulkContactsRequest body);
 
         /// <summary>
@@ -922,6 +995,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contacts</param>
         /// <returns>ApiResponse of BulkContactsResponse</returns>
+        
         ApiResponse<BulkContactsResponse> PostExternalcontactsBulkContactsAddWithHttpInfo (BulkContactsRequest body);
 
         /// <summary>
@@ -933,6 +1007,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contact ids</param>
         /// <returns>BulkDeleteResponse</returns>
+        
         BulkDeleteResponse PostExternalcontactsBulkContactsRemove (BulkIdsRequest body);
 
         /// <summary>
@@ -944,6 +1019,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contact ids</param>
         /// <returns>ApiResponse of BulkDeleteResponse</returns>
+        
         ApiResponse<BulkDeleteResponse> PostExternalcontactsBulkContactsRemoveWithHttpInfo (BulkIdsRequest body);
 
         /// <summary>
@@ -955,6 +1031,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contact ids</param>
         /// <returns>BulkFetchContactsResponse</returns>
+        
         BulkFetchContactsResponse PostExternalcontactsBulkContactsUnresolved (BulkIdsRequest body);
 
         /// <summary>
@@ -966,6 +1043,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contact ids</param>
         /// <returns>ApiResponse of BulkFetchContactsResponse</returns>
+        
         ApiResponse<BulkFetchContactsResponse> PostExternalcontactsBulkContactsUnresolvedWithHttpInfo (BulkIdsRequest body);
 
         /// <summary>
@@ -977,6 +1055,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contacts</param>
         /// <returns>BulkContactsResponse</returns>
+        
         BulkContactsResponse PostExternalcontactsBulkContactsUpdate (BulkContactsRequest body);
 
         /// <summary>
@@ -988,6 +1067,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contacts</param>
         /// <returns>ApiResponse of BulkContactsResponse</returns>
+        
         ApiResponse<BulkContactsResponse> PostExternalcontactsBulkContactsUpdateWithHttpInfo (BulkContactsRequest body);
 
         /// <summary>
@@ -999,6 +1079,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Note ids</param>
         /// <returns>BulkFetchNotesResponse</returns>
+        
         BulkFetchNotesResponse PostExternalcontactsBulkNotes (BulkIdsRequest body);
 
         /// <summary>
@@ -1010,6 +1091,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Note ids</param>
         /// <returns>ApiResponse of BulkFetchNotesResponse</returns>
+        
         ApiResponse<BulkFetchNotesResponse> PostExternalcontactsBulkNotesWithHttpInfo (BulkIdsRequest body);
 
         /// <summary>
@@ -1021,6 +1103,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Notes</param>
         /// <returns>BulkNotesResponse</returns>
+        
         BulkNotesResponse PostExternalcontactsBulkNotesAdd (BulkNotesRequest body);
 
         /// <summary>
@@ -1032,6 +1115,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Notes</param>
         /// <returns>ApiResponse of BulkNotesResponse</returns>
+        
         ApiResponse<BulkNotesResponse> PostExternalcontactsBulkNotesAddWithHttpInfo (BulkNotesRequest body);
 
         /// <summary>
@@ -1043,6 +1127,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Note ids</param>
         /// <returns>BulkDeleteResponse</returns>
+        
         BulkDeleteResponse PostExternalcontactsBulkNotesRemove (BulkIdsRequest body);
 
         /// <summary>
@@ -1054,6 +1139,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Note ids</param>
         /// <returns>ApiResponse of BulkDeleteResponse</returns>
+        
         ApiResponse<BulkDeleteResponse> PostExternalcontactsBulkNotesRemoveWithHttpInfo (BulkIdsRequest body);
 
         /// <summary>
@@ -1065,6 +1151,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Notes</param>
         /// <returns>BulkNotesResponse</returns>
+        
         BulkNotesResponse PostExternalcontactsBulkNotesUpdate (BulkNotesRequest body);
 
         /// <summary>
@@ -1076,6 +1163,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Notes</param>
         /// <returns>ApiResponse of BulkNotesResponse</returns>
+        
         ApiResponse<BulkNotesResponse> PostExternalcontactsBulkNotesUpdateWithHttpInfo (BulkNotesRequest body);
 
         /// <summary>
@@ -1087,6 +1175,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organizations ids</param>
         /// <returns>BulkFetchOrganizationsResponse</returns>
+        
         BulkFetchOrganizationsResponse PostExternalcontactsBulkOrganizations (BulkIdsRequest body);
 
         /// <summary>
@@ -1098,6 +1187,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organizations ids</param>
         /// <returns>ApiResponse of BulkFetchOrganizationsResponse</returns>
+        
         ApiResponse<BulkFetchOrganizationsResponse> PostExternalcontactsBulkOrganizationsWithHttpInfo (BulkIdsRequest body);
 
         /// <summary>
@@ -1109,6 +1199,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organizations</param>
         /// <returns>BulkOrganizationsResponse</returns>
+        
         BulkOrganizationsResponse PostExternalcontactsBulkOrganizationsAdd (BulkOrganizationsRequest body);
 
         /// <summary>
@@ -1120,6 +1211,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organizations</param>
         /// <returns>ApiResponse of BulkOrganizationsResponse</returns>
+        
         ApiResponse<BulkOrganizationsResponse> PostExternalcontactsBulkOrganizationsAddWithHttpInfo (BulkOrganizationsRequest body);
 
         /// <summary>
@@ -1131,6 +1223,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization ids</param>
         /// <returns>BulkDeleteResponse</returns>
+        
         BulkDeleteResponse PostExternalcontactsBulkOrganizationsRemove (BulkIdsRequest body);
 
         /// <summary>
@@ -1142,6 +1235,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization ids</param>
         /// <returns>ApiResponse of BulkDeleteResponse</returns>
+        
         ApiResponse<BulkDeleteResponse> PostExternalcontactsBulkOrganizationsRemoveWithHttpInfo (BulkIdsRequest body);
 
         /// <summary>
@@ -1153,6 +1247,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organizations</param>
         /// <returns>BulkOrganizationsResponse</returns>
+        
         BulkOrganizationsResponse PostExternalcontactsBulkOrganizationsUpdate (BulkOrganizationsRequest body);
 
         /// <summary>
@@ -1164,6 +1259,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organizations</param>
         /// <returns>ApiResponse of BulkOrganizationsResponse</returns>
+        
         ApiResponse<BulkOrganizationsResponse> PostExternalcontactsBulkOrganizationsUpdateWithHttpInfo (BulkOrganizationsRequest body);
 
         /// <summary>
@@ -1175,6 +1271,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationships ids</param>
         /// <returns>BulkFetchRelationshipsResponse</returns>
+        
         BulkFetchRelationshipsResponse PostExternalcontactsBulkRelationships (BulkIdsRequest body);
 
         /// <summary>
@@ -1186,6 +1283,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationships ids</param>
         /// <returns>ApiResponse of BulkFetchRelationshipsResponse</returns>
+        
         ApiResponse<BulkFetchRelationshipsResponse> PostExternalcontactsBulkRelationshipsWithHttpInfo (BulkIdsRequest body);
 
         /// <summary>
@@ -1197,6 +1295,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationships</param>
         /// <returns>BulkRelationshipsResponse</returns>
+        
         BulkRelationshipsResponse PostExternalcontactsBulkRelationshipsAdd (BulkRelationshipsRequest body);
 
         /// <summary>
@@ -1208,6 +1307,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationships</param>
         /// <returns>ApiResponse of BulkRelationshipsResponse</returns>
+        
         ApiResponse<BulkRelationshipsResponse> PostExternalcontactsBulkRelationshipsAddWithHttpInfo (BulkRelationshipsRequest body);
 
         /// <summary>
@@ -1219,6 +1319,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationships ids</param>
         /// <returns>BulkDeleteResponse</returns>
+        
         BulkDeleteResponse PostExternalcontactsBulkRelationshipsRemove (BulkIdsRequest body);
 
         /// <summary>
@@ -1230,6 +1331,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationships ids</param>
         /// <returns>ApiResponse of BulkDeleteResponse</returns>
+        
         ApiResponse<BulkDeleteResponse> PostExternalcontactsBulkRelationshipsRemoveWithHttpInfo (BulkIdsRequest body);
 
         /// <summary>
@@ -1241,6 +1343,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationships</param>
         /// <returns>BulkRelationshipsResponse</returns>
+        
         BulkRelationshipsResponse PostExternalcontactsBulkRelationshipsUpdate (BulkRelationshipsRequest body);
 
         /// <summary>
@@ -1252,6 +1355,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationships</param>
         /// <returns>ApiResponse of BulkRelationshipsResponse</returns>
+        
         ApiResponse<BulkRelationshipsResponse> PostExternalcontactsBulkRelationshipsUpdateWithHttpInfo (BulkRelationshipsRequest body);
 
         /// <summary>
@@ -1264,6 +1368,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>Note</returns>
+        
         Note PostExternalcontactsContactNotes (string contactId, Note body);
 
         /// <summary>
@@ -1276,6 +1381,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>ApiResponse of Note</returns>
+        
         ApiResponse<Note> PostExternalcontactsContactNotesWithHttpInfo (string contactId, Note body);
 
         /// <summary>
@@ -1287,6 +1393,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>ExternalContact</returns>
+        
         ExternalContact PostExternalcontactsContactPromotion (string contactId);
 
         /// <summary>
@@ -1298,6 +1405,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>ApiResponse of ExternalContact</returns>
+        
         ApiResponse<ExternalContact> PostExternalcontactsContactPromotionWithHttpInfo (string contactId);
 
         /// <summary>
@@ -1309,6 +1417,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ExternalContact</param>
         /// <returns>ExternalContact</returns>
+        
         ExternalContact PostExternalcontactsContacts (ExternalContact body);
 
         /// <summary>
@@ -1320,6 +1429,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ExternalContact</param>
         /// <returns>ApiResponse of ExternalContact</returns>
+        
         ApiResponse<ExternalContact> PostExternalcontactsContactsWithHttpInfo (ExternalContact body);
 
         /// <summary>
@@ -1331,6 +1441,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Schema</param>
         /// <returns>DataSchema</returns>
+        
         DataSchema PostExternalcontactsContactsSchemas (DataSchema body);
 
         /// <summary>
@@ -1342,6 +1453,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Schema</param>
         /// <returns>ApiResponse of DataSchema</returns>
+        
         ApiResponse<DataSchema> PostExternalcontactsContactsSchemasWithHttpInfo (DataSchema body);
 
         /// <summary>
@@ -1353,6 +1465,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier"></param>
         /// <returns>ExternalContact</returns>
+        
         ExternalContact PostExternalcontactsIdentifierlookup (ContactIdentifier identifier);
 
         /// <summary>
@@ -1364,6 +1477,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier"></param>
         /// <returns>ApiResponse of ExternalContact</returns>
+        
         ApiResponse<ExternalContact> PostExternalcontactsIdentifierlookupWithHttpInfo (ContactIdentifier identifier);
 
         /// <summary>
@@ -1375,6 +1489,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">MergeRequest</param>
         /// <returns>ExternalContact</returns>
+        
         ExternalContact PostExternalcontactsMergeContacts (MergeRequest body);
 
         /// <summary>
@@ -1386,6 +1501,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">MergeRequest</param>
         /// <returns>ApiResponse of ExternalContact</returns>
+        
         ApiResponse<ExternalContact> PostExternalcontactsMergeContactsWithHttpInfo (MergeRequest body);
 
         /// <summary>
@@ -1398,6 +1514,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>Note</returns>
+        
         Note PostExternalcontactsOrganizationNotes (string externalOrganizationId, Note body);
 
         /// <summary>
@@ -1410,6 +1527,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>ApiResponse of Note</returns>
+        
         ApiResponse<Note> PostExternalcontactsOrganizationNotesWithHttpInfo (string externalOrganizationId, Note body);
 
         /// <summary>
@@ -1421,6 +1539,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ExternalOrganization</param>
         /// <returns>ExternalOrganization</returns>
+        
         ExternalOrganization PostExternalcontactsOrganizations (ExternalOrganization body);
 
         /// <summary>
@@ -1432,6 +1551,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ExternalOrganization</param>
         /// <returns>ApiResponse of ExternalOrganization</returns>
+        
         ApiResponse<ExternalOrganization> PostExternalcontactsOrganizationsWithHttpInfo (ExternalOrganization body);
 
         /// <summary>
@@ -1443,6 +1563,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Schema</param>
         /// <returns>DataSchema</returns>
+        
         DataSchema PostExternalcontactsOrganizationsSchemas (DataSchema body);
 
         /// <summary>
@@ -1454,6 +1575,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Schema</param>
         /// <returns>ApiResponse of DataSchema</returns>
+        
         ApiResponse<DataSchema> PostExternalcontactsOrganizationsSchemasWithHttpInfo (DataSchema body);
 
         /// <summary>
@@ -1465,6 +1587,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationship</param>
         /// <returns>Relationship</returns>
+        
         Relationship PostExternalcontactsRelationships (Relationship body);
 
         /// <summary>
@@ -1476,6 +1599,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationship</param>
         /// <returns>ApiResponse of Relationship</returns>
+        
         ApiResponse<Relationship> PostExternalcontactsRelationshipsWithHttpInfo (Relationship body);
 
         /// <summary>
@@ -1488,6 +1612,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>ExternalContact</returns>
+        
         ExternalContact PutExternalcontactsContact (string contactId, ExternalContact body);
 
         /// <summary>
@@ -1500,6 +1625,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>ApiResponse of ExternalContact</returns>
+        
         ApiResponse<ExternalContact> PutExternalcontactsContactWithHttpInfo (string contactId, ExternalContact body);
 
         /// <summary>
@@ -1513,6 +1639,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="body">Note</param>
         /// <returns>Note</returns>
+        
         Note PutExternalcontactsContactNote (string contactId, string noteId, Note body);
 
         /// <summary>
@@ -1526,6 +1653,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="body">Note</param>
         /// <returns>ApiResponse of Note</returns>
+        
         ApiResponse<Note> PutExternalcontactsContactNoteWithHttpInfo (string contactId, string noteId, Note body);
 
         /// <summary>
@@ -1538,6 +1666,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <param name="body">Data Schema</param>
         /// <returns>DataSchema</returns>
+        
         DataSchema PutExternalcontactsContactsSchema (string schemaId, DataSchema body);
 
         /// <summary>
@@ -1550,6 +1679,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <param name="body">Data Schema</param>
         /// <returns>ApiResponse of DataSchema</returns>
+        
         ApiResponse<DataSchema> PutExternalcontactsContactsSchemaWithHttpInfo (string schemaId, DataSchema body);
 
         /// <summary>
@@ -1562,6 +1692,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="body">ConversationAssociation</param>
         /// <returns></returns>
+        
         void PutExternalcontactsConversation (string conversationId, ConversationAssociation body);
 
         /// <summary>
@@ -1574,6 +1705,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="body">ConversationAssociation</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> PutExternalcontactsConversationWithHttpInfo (string conversationId, ConversationAssociation body);
 
         /// <summary>
@@ -1586,6 +1718,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="body">ExternalOrganization</param>
         /// <returns>ExternalOrganization</returns>
+        
         ExternalOrganization PutExternalcontactsOrganization (string externalOrganizationId, ExternalOrganization body);
 
         /// <summary>
@@ -1598,6 +1731,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="body">ExternalOrganization</param>
         /// <returns>ApiResponse of ExternalOrganization</returns>
+        
         ApiResponse<ExternalOrganization> PutExternalcontactsOrganizationWithHttpInfo (string externalOrganizationId, ExternalOrganization body);
 
         /// <summary>
@@ -1611,6 +1745,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="body">Note</param>
         /// <returns>Note</returns>
+        
         Note PutExternalcontactsOrganizationNote (string externalOrganizationId, string noteId, Note body);
 
         /// <summary>
@@ -1624,6 +1759,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="body">Note</param>
         /// <returns>ApiResponse of Note</returns>
+        
         ApiResponse<Note> PutExternalcontactsOrganizationNoteWithHttpInfo (string externalOrganizationId, string noteId, Note body);
 
         /// <summary>
@@ -1636,6 +1772,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="trustorId">Trustor ID</param>
         /// <returns>ExternalOrganizationTrustorLink</returns>
+        
         ExternalOrganizationTrustorLink PutExternalcontactsOrganizationTrustorTrustorId (string externalOrganizationId, string trustorId);
 
         /// <summary>
@@ -1648,6 +1785,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="trustorId">Trustor ID</param>
         /// <returns>ApiResponse of ExternalOrganizationTrustorLink</returns>
+        
         ApiResponse<ExternalOrganizationTrustorLink> PutExternalcontactsOrganizationTrustorTrustorIdWithHttpInfo (string externalOrganizationId, string trustorId);
 
         /// <summary>
@@ -1660,6 +1798,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <param name="body">Data Schema</param>
         /// <returns>DataSchema</returns>
+        
         DataSchema PutExternalcontactsOrganizationsSchema (string schemaId, DataSchema body);
 
         /// <summary>
@@ -1672,6 +1811,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <param name="body">Data Schema</param>
         /// <returns>ApiResponse of DataSchema</returns>
+        
         ApiResponse<DataSchema> PutExternalcontactsOrganizationsSchemaWithHttpInfo (string schemaId, DataSchema body);
 
         /// <summary>
@@ -1684,6 +1824,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationshipId">Relationship Id</param>
         /// <param name="body">Relationship</param>
         /// <returns>Relationship</returns>
+        
         Relationship PutExternalcontactsRelationship (string relationshipId, Relationship body);
 
         /// <summary>
@@ -1696,6 +1837,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationshipId">Relationship Id</param>
         /// <param name="body">Relationship</param>
         /// <returns>ApiResponse of Relationship</returns>
+        
         ApiResponse<Relationship> PutExternalcontactsRelationshipWithHttpInfo (string relationshipId, Relationship body);
 
         #endregion Synchronous Operations
@@ -1711,6 +1853,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>Task of Object</returns>
+        
         System.Threading.Tasks.Task<Object> DeleteExternalcontactsContactAsync (string contactId);
 
         /// <summary>
@@ -1722,6 +1865,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsContactAsyncWithHttpInfo (string contactId);
 
         /// <summary>
@@ -1734,6 +1878,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>Task of Object</returns>
+        
         System.Threading.Tasks.Task<Object> DeleteExternalcontactsContactNoteAsync (string contactId, string noteId);
 
         /// <summary>
@@ -1746,6 +1891,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsContactNoteAsyncWithHttpInfo (string contactId, string noteId);
 
         /// <summary>
@@ -1757,6 +1903,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task DeleteExternalcontactsContactsSchemaAsync (string schemaId);
 
         /// <summary>
@@ -1768,6 +1915,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsContactsSchemaAsyncWithHttpInfo (string schemaId);
 
         /// <summary>
@@ -1779,6 +1927,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns>Task of Object</returns>
+        
         System.Threading.Tasks.Task<Object> DeleteExternalcontactsOrganizationAsync (string externalOrganizationId);
 
         /// <summary>
@@ -1790,6 +1939,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsOrganizationAsyncWithHttpInfo (string externalOrganizationId);
 
         /// <summary>
@@ -1802,6 +1952,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>Task of Object</returns>
+        
         System.Threading.Tasks.Task<Object> DeleteExternalcontactsOrganizationNoteAsync (string externalOrganizationId, string noteId);
 
         /// <summary>
@@ -1814,6 +1965,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsOrganizationNoteAsyncWithHttpInfo (string externalOrganizationId, string noteId);
 
         /// <summary>
@@ -1825,6 +1977,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task DeleteExternalcontactsOrganizationTrustorAsync (string externalOrganizationId);
 
         /// <summary>
@@ -1836,6 +1989,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsOrganizationTrustorAsyncWithHttpInfo (string externalOrganizationId);
 
         /// <summary>
@@ -1847,6 +2001,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
         /// <returns>Task of Object</returns>
+        
         System.Threading.Tasks.Task<Object> DeleteExternalcontactsRelationshipAsync (string relationshipId);
 
         /// <summary>
@@ -1858,6 +2013,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsRelationshipAsyncWithHttpInfo (string relationshipId);
 
         /// <summary>
@@ -1870,6 +2026,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources) (optional)</param>
         /// <returns>Task of ExternalContact</returns>
+        
         System.Threading.Tasks.Task<ExternalContact> GetExternalcontactsContactAsync (string contactId, List<string> expand = null);
 
         /// <summary>
@@ -1882,6 +2039,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources) (optional)</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ExternalContact>> GetExternalcontactsContactAsyncWithHttpInfo (string contactId, List<string> expand = null);
 
         /// <summary>
@@ -1893,6 +2051,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>Task of EntityListing</returns>
+        
         System.Threading.Tasks.Task<EntityListing> GetExternalcontactsContactIdentifiersAsync (string contactId);
 
         /// <summary>
@@ -1904,6 +2063,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>Task of ApiResponse (EntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<EntityListing>> GetExternalcontactsContactIdentifiersAsyncWithHttpInfo (string contactId);
 
         /// <summary>
@@ -1918,6 +2078,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="includeMerged">Indicates whether to return sessions from all external contacts in the merge-set of the given one. (optional)</param>
         /// <returns>Task of SessionListing</returns>
+        
         System.Threading.Tasks.Task<SessionListing> GetExternalcontactsContactJourneySessionsAsync (string contactId, string pageSize = null, string after = null, bool? includeMerged = null);
 
         /// <summary>
@@ -1932,6 +2093,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="includeMerged">Indicates whether to return sessions from all external contacts in the merge-set of the given one. (optional)</param>
         /// <returns>Task of ApiResponse (SessionListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<SessionListing>> GetExternalcontactsContactJourneySessionsAsyncWithHttpInfo (string contactId, string pageSize = null, string after = null, bool? includeMerged = null);
 
         /// <summary>
@@ -1945,6 +2107,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of Note</returns>
+        
         System.Threading.Tasks.Task<Note> GetExternalcontactsContactNoteAsync (string contactId, string noteId, List<string> expand = null);
 
         /// <summary>
@@ -1958,6 +2121,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (Note)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Note>> GetExternalcontactsContactNoteAsyncWithHttpInfo (string contactId, string noteId, List<string> expand = null);
 
         /// <summary>
@@ -1973,6 +2137,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of NoteListing</returns>
+        
         System.Threading.Tasks.Task<NoteListing> GetExternalcontactsContactNotesAsync (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
@@ -1988,6 +2153,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (NoteListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<NoteListing>> GetExternalcontactsContactNotesAsyncWithHttpInfo (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
@@ -2000,6 +2166,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources) (optional)</param>
         /// <returns>Task of ExternalContact</returns>
+        
         System.Threading.Tasks.Task<ExternalContact> GetExternalcontactsContactUnresolvedAsync (string contactId, List<string> expand = null);
 
         /// <summary>
@@ -2012,6 +2179,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources) (optional)</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ExternalContact>> GetExternalcontactsContactUnresolvedAsyncWithHttpInfo (string contactId, List<string> expand = null);
 
         /// <summary>
@@ -2027,6 +2195,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ContactListing</returns>
+        
         System.Threading.Tasks.Task<ContactListing> GetExternalcontactsContactsAsync (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
@@ -2042,6 +2211,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (ContactListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ContactListing>> GetExternalcontactsContactsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
@@ -2053,6 +2223,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of DataSchema</returns>
+        
         System.Threading.Tasks.Task<DataSchema> GetExternalcontactsContactsSchemaAsync (string schemaId);
 
         /// <summary>
@@ -2064,6 +2235,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsContactsSchemaAsyncWithHttpInfo (string schemaId);
 
         /// <summary>
@@ -2076,6 +2248,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <param name="versionId">Schema version</param>
         /// <returns>Task of DataSchema</returns>
+        
         System.Threading.Tasks.Task<DataSchema> GetExternalcontactsContactsSchemaVersionAsync (string schemaId, string versionId);
 
         /// <summary>
@@ -2088,6 +2261,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <param name="versionId">Schema version</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsContactsSchemaVersionAsyncWithHttpInfo (string schemaId, string versionId);
 
         /// <summary>
@@ -2099,6 +2273,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of DataSchema</returns>
+        
         System.Threading.Tasks.Task<DataSchema> GetExternalcontactsContactsSchemaVersionsAsync (string schemaId);
 
         /// <summary>
@@ -2110,6 +2285,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsContactsSchemaVersionsAsyncWithHttpInfo (string schemaId);
 
         /// <summary>
@@ -2120,6 +2296,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of DataSchemaListing</returns>
+        
         System.Threading.Tasks.Task<DataSchemaListing> GetExternalcontactsContactsSchemasAsync ();
 
         /// <summary>
@@ -2130,6 +2307,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (DataSchemaListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DataSchemaListing>> GetExternalcontactsContactsSchemasAsyncWithHttpInfo ();
 
         /// <summary>
@@ -2143,6 +2321,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (externalDataSources) (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>Task of ExternalOrganization</returns>
+        
         System.Threading.Tasks.Task<ExternalOrganization> GetExternalcontactsOrganizationAsync (string externalOrganizationId, string expand = null, bool? includeTrustors = null);
 
         /// <summary>
@@ -2156,6 +2335,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (externalDataSources) (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>Task of ApiResponse (ExternalOrganization)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> GetExternalcontactsOrganizationAsyncWithHttpInfo (string externalOrganizationId, string expand = null, bool? includeTrustors = null);
 
         /// <summary>
@@ -2172,6 +2352,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ContactListing</returns>
+        
         System.Threading.Tasks.Task<ContactListing> GetExternalcontactsOrganizationContactsAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
@@ -2188,6 +2369,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (ContactListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ContactListing>> GetExternalcontactsOrganizationContactsAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
@@ -2201,6 +2383,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of Note</returns>
+        
         System.Threading.Tasks.Task<Note> GetExternalcontactsOrganizationNoteAsync (string externalOrganizationId, string noteId, List<string> expand = null);
 
         /// <summary>
@@ -2214,6 +2397,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (Note)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Note>> GetExternalcontactsOrganizationNoteAsyncWithHttpInfo (string externalOrganizationId, string noteId, List<string> expand = null);
 
         /// <summary>
@@ -2229,6 +2413,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of NoteListing</returns>
+        
         System.Threading.Tasks.Task<NoteListing> GetExternalcontactsOrganizationNotesAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
@@ -2244,6 +2429,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (NoteListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<NoteListing>> GetExternalcontactsOrganizationNotesAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
@@ -2259,6 +2445,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of RelationshipListing</returns>
+        
         System.Threading.Tasks.Task<RelationshipListing> GetExternalcontactsOrganizationRelationshipsAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string expand = null, string sortOrder = null);
 
         /// <summary>
@@ -2274,6 +2461,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of ApiResponse (RelationshipListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<RelationshipListing>> GetExternalcontactsOrganizationRelationshipsAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string expand = null, string sortOrder = null);
 
         /// <summary>
@@ -2291,6 +2479,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>Task of ExternalOrganizationListing</returns>
+        
         System.Threading.Tasks.Task<ExternalOrganizationListing> GetExternalcontactsOrganizationsAsync (int? pageSize = null, int? pageNumber = null, string q = null, List<string> trustorId = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null);
 
         /// <summary>
@@ -2308,6 +2497,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>Task of ApiResponse (ExternalOrganizationListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ExternalOrganizationListing>> GetExternalcontactsOrganizationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, List<string> trustorId = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null);
 
         /// <summary>
@@ -2319,6 +2509,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of DataSchema</returns>
+        
         System.Threading.Tasks.Task<DataSchema> GetExternalcontactsOrganizationsSchemaAsync (string schemaId);
 
         /// <summary>
@@ -2330,6 +2521,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsOrganizationsSchemaAsyncWithHttpInfo (string schemaId);
 
         /// <summary>
@@ -2342,6 +2534,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <param name="versionId">Schema version</param>
         /// <returns>Task of DataSchema</returns>
+        
         System.Threading.Tasks.Task<DataSchema> GetExternalcontactsOrganizationsSchemaVersionAsync (string schemaId, string versionId);
 
         /// <summary>
@@ -2354,6 +2547,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <param name="versionId">Schema version</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsOrganizationsSchemaVersionAsyncWithHttpInfo (string schemaId, string versionId);
 
         /// <summary>
@@ -2365,6 +2559,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of DataSchema</returns>
+        
         System.Threading.Tasks.Task<DataSchema> GetExternalcontactsOrganizationsSchemaVersionsAsync (string schemaId);
 
         /// <summary>
@@ -2376,6 +2571,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsOrganizationsSchemaVersionsAsyncWithHttpInfo (string schemaId);
 
         /// <summary>
@@ -2386,6 +2582,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of DataSchemaListing</returns>
+        
         System.Threading.Tasks.Task<DataSchemaListing> GetExternalcontactsOrganizationsSchemasAsync ();
 
         /// <summary>
@@ -2396,6 +2593,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (DataSchemaListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DataSchemaListing>> GetExternalcontactsOrganizationsSchemasAsyncWithHttpInfo ();
 
         /// <summary>
@@ -2408,6 +2606,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationshipId">Relationship Id</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of Relationship</returns>
+        
         System.Threading.Tasks.Task<Relationship> GetExternalcontactsRelationshipAsync (string relationshipId, string expand = null);
 
         /// <summary>
@@ -2420,6 +2619,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationshipId">Relationship Id</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (Relationship)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Relationship>> GetExternalcontactsRelationshipAsyncWithHttpInfo (string relationshipId, string expand = null);
 
         /// <summary>
@@ -2432,6 +2632,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="lookupVal">User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names)</param>
         /// <param name="expand">which field, if any, to expand (optional)</param>
         /// <returns>Task of ReverseWhitepagesLookupResult</returns>
+        
         System.Threading.Tasks.Task<ReverseWhitepagesLookupResult> GetExternalcontactsReversewhitepageslookupAsync (string lookupVal, List<string> expand = null);
 
         /// <summary>
@@ -2444,6 +2645,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="lookupVal">User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names)</param>
         /// <param name="expand">which field, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (ReverseWhitepagesLookupResult)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ReverseWhitepagesLookupResult>> GetExternalcontactsReversewhitepageslookupAsyncWithHttpInfo (string lookupVal, List<string> expand = null);
 
         /// <summary>
@@ -2456,6 +2658,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100) (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of CursorContactListing</returns>
+        
         System.Threading.Tasks.Task<CursorContactListing> GetExternalcontactsScanContactsAsync (int? limit = null, string cursor = null);
 
         /// <summary>
@@ -2468,6 +2671,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100) (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of ApiResponse (CursorContactListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<CursorContactListing>> GetExternalcontactsScanContactsAsyncWithHttpInfo (int? limit = null, string cursor = null);
 
         /// <summary>
@@ -2480,6 +2684,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100) (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of CursorNoteListing</returns>
+        
         System.Threading.Tasks.Task<CursorNoteListing> GetExternalcontactsScanNotesAsync (int? limit = null, string cursor = null);
 
         /// <summary>
@@ -2492,6 +2697,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100) (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of ApiResponse (CursorNoteListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<CursorNoteListing>> GetExternalcontactsScanNotesAsyncWithHttpInfo (int? limit = null, string cursor = null);
 
         /// <summary>
@@ -2504,6 +2710,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100) (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of CursorOrganizationListing</returns>
+        
         System.Threading.Tasks.Task<CursorOrganizationListing> GetExternalcontactsScanOrganizationsAsync (int? limit = null, string cursor = null);
 
         /// <summary>
@@ -2516,6 +2723,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100) (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of ApiResponse (CursorOrganizationListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<CursorOrganizationListing>> GetExternalcontactsScanOrganizationsAsyncWithHttpInfo (int? limit = null, string cursor = null);
 
         /// <summary>
@@ -2528,6 +2736,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100) (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of CursorRelationshipListing</returns>
+        
         System.Threading.Tasks.Task<CursorRelationshipListing> GetExternalcontactsScanRelationshipsAsync (int? limit = null, string cursor = null);
 
         /// <summary>
@@ -2540,6 +2749,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100) (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of ApiResponse (CursorRelationshipListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<CursorRelationshipListing>> GetExternalcontactsScanRelationshipsAsyncWithHttpInfo (int? limit = null, string cursor = null);
 
         /// <summary>
@@ -2552,6 +2762,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="body">ClaimRequest</param>
         /// <returns>Task of ContactIdentifier</returns>
+        
         System.Threading.Tasks.Task<ContactIdentifier> PatchExternalcontactsContactIdentifiersAsync (string contactId, IdentifierClaimRequest body);
 
         /// <summary>
@@ -2564,6 +2775,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="body">ClaimRequest</param>
         /// <returns>Task of ApiResponse (ContactIdentifier)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ContactIdentifier>> PatchExternalcontactsContactIdentifiersAsyncWithHttpInfo (string contactId, IdentifierClaimRequest body);
 
         /// <summary>
@@ -2575,6 +2787,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contact ids</param>
         /// <returns>Task of BulkFetchContactsResponse</returns>
+        
         System.Threading.Tasks.Task<BulkFetchContactsResponse> PostExternalcontactsBulkContactsAsync (BulkIdsRequest body);
 
         /// <summary>
@@ -2586,6 +2799,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contact ids</param>
         /// <returns>Task of ApiResponse (BulkFetchContactsResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<BulkFetchContactsResponse>> PostExternalcontactsBulkContactsAsyncWithHttpInfo (BulkIdsRequest body);
 
         /// <summary>
@@ -2597,6 +2811,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contacts</param>
         /// <returns>Task of BulkContactsResponse</returns>
+        
         System.Threading.Tasks.Task<BulkContactsResponse> PostExternalcontactsBulkContactsAddAsync (BulkContactsRequest body);
 
         /// <summary>
@@ -2608,6 +2823,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contacts</param>
         /// <returns>Task of ApiResponse (BulkContactsResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<BulkContactsResponse>> PostExternalcontactsBulkContactsAddAsyncWithHttpInfo (BulkContactsRequest body);
 
         /// <summary>
@@ -2619,6 +2835,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contact ids</param>
         /// <returns>Task of BulkDeleteResponse</returns>
+        
         System.Threading.Tasks.Task<BulkDeleteResponse> PostExternalcontactsBulkContactsRemoveAsync (BulkIdsRequest body);
 
         /// <summary>
@@ -2630,6 +2847,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contact ids</param>
         /// <returns>Task of ApiResponse (BulkDeleteResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<BulkDeleteResponse>> PostExternalcontactsBulkContactsRemoveAsyncWithHttpInfo (BulkIdsRequest body);
 
         /// <summary>
@@ -2641,6 +2859,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contact ids</param>
         /// <returns>Task of BulkFetchContactsResponse</returns>
+        
         System.Threading.Tasks.Task<BulkFetchContactsResponse> PostExternalcontactsBulkContactsUnresolvedAsync (BulkIdsRequest body);
 
         /// <summary>
@@ -2652,6 +2871,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contact ids</param>
         /// <returns>Task of ApiResponse (BulkFetchContactsResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<BulkFetchContactsResponse>> PostExternalcontactsBulkContactsUnresolvedAsyncWithHttpInfo (BulkIdsRequest body);
 
         /// <summary>
@@ -2663,6 +2883,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contacts</param>
         /// <returns>Task of BulkContactsResponse</returns>
+        
         System.Threading.Tasks.Task<BulkContactsResponse> PostExternalcontactsBulkContactsUpdateAsync (BulkContactsRequest body);
 
         /// <summary>
@@ -2674,6 +2895,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contacts</param>
         /// <returns>Task of ApiResponse (BulkContactsResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<BulkContactsResponse>> PostExternalcontactsBulkContactsUpdateAsyncWithHttpInfo (BulkContactsRequest body);
 
         /// <summary>
@@ -2685,6 +2907,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Note ids</param>
         /// <returns>Task of BulkFetchNotesResponse</returns>
+        
         System.Threading.Tasks.Task<BulkFetchNotesResponse> PostExternalcontactsBulkNotesAsync (BulkIdsRequest body);
 
         /// <summary>
@@ -2696,6 +2919,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Note ids</param>
         /// <returns>Task of ApiResponse (BulkFetchNotesResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<BulkFetchNotesResponse>> PostExternalcontactsBulkNotesAsyncWithHttpInfo (BulkIdsRequest body);
 
         /// <summary>
@@ -2707,6 +2931,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Notes</param>
         /// <returns>Task of BulkNotesResponse</returns>
+        
         System.Threading.Tasks.Task<BulkNotesResponse> PostExternalcontactsBulkNotesAddAsync (BulkNotesRequest body);
 
         /// <summary>
@@ -2718,6 +2943,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Notes</param>
         /// <returns>Task of ApiResponse (BulkNotesResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<BulkNotesResponse>> PostExternalcontactsBulkNotesAddAsyncWithHttpInfo (BulkNotesRequest body);
 
         /// <summary>
@@ -2729,6 +2955,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Note ids</param>
         /// <returns>Task of BulkDeleteResponse</returns>
+        
         System.Threading.Tasks.Task<BulkDeleteResponse> PostExternalcontactsBulkNotesRemoveAsync (BulkIdsRequest body);
 
         /// <summary>
@@ -2740,6 +2967,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Note ids</param>
         /// <returns>Task of ApiResponse (BulkDeleteResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<BulkDeleteResponse>> PostExternalcontactsBulkNotesRemoveAsyncWithHttpInfo (BulkIdsRequest body);
 
         /// <summary>
@@ -2751,6 +2979,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Notes</param>
         /// <returns>Task of BulkNotesResponse</returns>
+        
         System.Threading.Tasks.Task<BulkNotesResponse> PostExternalcontactsBulkNotesUpdateAsync (BulkNotesRequest body);
 
         /// <summary>
@@ -2762,6 +2991,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Notes</param>
         /// <returns>Task of ApiResponse (BulkNotesResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<BulkNotesResponse>> PostExternalcontactsBulkNotesUpdateAsyncWithHttpInfo (BulkNotesRequest body);
 
         /// <summary>
@@ -2773,6 +3003,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organizations ids</param>
         /// <returns>Task of BulkFetchOrganizationsResponse</returns>
+        
         System.Threading.Tasks.Task<BulkFetchOrganizationsResponse> PostExternalcontactsBulkOrganizationsAsync (BulkIdsRequest body);
 
         /// <summary>
@@ -2784,6 +3015,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organizations ids</param>
         /// <returns>Task of ApiResponse (BulkFetchOrganizationsResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<BulkFetchOrganizationsResponse>> PostExternalcontactsBulkOrganizationsAsyncWithHttpInfo (BulkIdsRequest body);
 
         /// <summary>
@@ -2795,6 +3027,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organizations</param>
         /// <returns>Task of BulkOrganizationsResponse</returns>
+        
         System.Threading.Tasks.Task<BulkOrganizationsResponse> PostExternalcontactsBulkOrganizationsAddAsync (BulkOrganizationsRequest body);
 
         /// <summary>
@@ -2806,6 +3039,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organizations</param>
         /// <returns>Task of ApiResponse (BulkOrganizationsResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<BulkOrganizationsResponse>> PostExternalcontactsBulkOrganizationsAddAsyncWithHttpInfo (BulkOrganizationsRequest body);
 
         /// <summary>
@@ -2817,6 +3051,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization ids</param>
         /// <returns>Task of BulkDeleteResponse</returns>
+        
         System.Threading.Tasks.Task<BulkDeleteResponse> PostExternalcontactsBulkOrganizationsRemoveAsync (BulkIdsRequest body);
 
         /// <summary>
@@ -2828,6 +3063,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization ids</param>
         /// <returns>Task of ApiResponse (BulkDeleteResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<BulkDeleteResponse>> PostExternalcontactsBulkOrganizationsRemoveAsyncWithHttpInfo (BulkIdsRequest body);
 
         /// <summary>
@@ -2839,6 +3075,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organizations</param>
         /// <returns>Task of BulkOrganizationsResponse</returns>
+        
         System.Threading.Tasks.Task<BulkOrganizationsResponse> PostExternalcontactsBulkOrganizationsUpdateAsync (BulkOrganizationsRequest body);
 
         /// <summary>
@@ -2850,6 +3087,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organizations</param>
         /// <returns>Task of ApiResponse (BulkOrganizationsResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<BulkOrganizationsResponse>> PostExternalcontactsBulkOrganizationsUpdateAsyncWithHttpInfo (BulkOrganizationsRequest body);
 
         /// <summary>
@@ -2861,6 +3099,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationships ids</param>
         /// <returns>Task of BulkFetchRelationshipsResponse</returns>
+        
         System.Threading.Tasks.Task<BulkFetchRelationshipsResponse> PostExternalcontactsBulkRelationshipsAsync (BulkIdsRequest body);
 
         /// <summary>
@@ -2872,6 +3111,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationships ids</param>
         /// <returns>Task of ApiResponse (BulkFetchRelationshipsResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<BulkFetchRelationshipsResponse>> PostExternalcontactsBulkRelationshipsAsyncWithHttpInfo (BulkIdsRequest body);
 
         /// <summary>
@@ -2883,6 +3123,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationships</param>
         /// <returns>Task of BulkRelationshipsResponse</returns>
+        
         System.Threading.Tasks.Task<BulkRelationshipsResponse> PostExternalcontactsBulkRelationshipsAddAsync (BulkRelationshipsRequest body);
 
         /// <summary>
@@ -2894,6 +3135,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationships</param>
         /// <returns>Task of ApiResponse (BulkRelationshipsResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<BulkRelationshipsResponse>> PostExternalcontactsBulkRelationshipsAddAsyncWithHttpInfo (BulkRelationshipsRequest body);
 
         /// <summary>
@@ -2905,6 +3147,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationships ids</param>
         /// <returns>Task of BulkDeleteResponse</returns>
+        
         System.Threading.Tasks.Task<BulkDeleteResponse> PostExternalcontactsBulkRelationshipsRemoveAsync (BulkIdsRequest body);
 
         /// <summary>
@@ -2916,6 +3159,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationships ids</param>
         /// <returns>Task of ApiResponse (BulkDeleteResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<BulkDeleteResponse>> PostExternalcontactsBulkRelationshipsRemoveAsyncWithHttpInfo (BulkIdsRequest body);
 
         /// <summary>
@@ -2927,6 +3171,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationships</param>
         /// <returns>Task of BulkRelationshipsResponse</returns>
+        
         System.Threading.Tasks.Task<BulkRelationshipsResponse> PostExternalcontactsBulkRelationshipsUpdateAsync (BulkRelationshipsRequest body);
 
         /// <summary>
@@ -2938,6 +3183,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationships</param>
         /// <returns>Task of ApiResponse (BulkRelationshipsResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<BulkRelationshipsResponse>> PostExternalcontactsBulkRelationshipsUpdateAsyncWithHttpInfo (BulkRelationshipsRequest body);
 
         /// <summary>
@@ -2950,6 +3196,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of Note</returns>
+        
         System.Threading.Tasks.Task<Note> PostExternalcontactsContactNotesAsync (string contactId, Note body);
 
         /// <summary>
@@ -2962,6 +3209,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of ApiResponse (Note)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Note>> PostExternalcontactsContactNotesAsyncWithHttpInfo (string contactId, Note body);
 
         /// <summary>
@@ -2973,6 +3221,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>Task of ExternalContact</returns>
+        
         System.Threading.Tasks.Task<ExternalContact> PostExternalcontactsContactPromotionAsync (string contactId);
 
         /// <summary>
@@ -2984,6 +3233,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PostExternalcontactsContactPromotionAsyncWithHttpInfo (string contactId);
 
         /// <summary>
@@ -2995,6 +3245,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of ExternalContact</returns>
+        
         System.Threading.Tasks.Task<ExternalContact> PostExternalcontactsContactsAsync (ExternalContact body);
 
         /// <summary>
@@ -3006,6 +3257,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PostExternalcontactsContactsAsyncWithHttpInfo (ExternalContact body);
 
         /// <summary>
@@ -3017,6 +3269,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Schema</param>
         /// <returns>Task of DataSchema</returns>
+        
         System.Threading.Tasks.Task<DataSchema> PostExternalcontactsContactsSchemasAsync (DataSchema body);
 
         /// <summary>
@@ -3028,6 +3281,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Schema</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DataSchema>> PostExternalcontactsContactsSchemasAsyncWithHttpInfo (DataSchema body);
 
         /// <summary>
@@ -3039,6 +3293,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier"></param>
         /// <returns>Task of ExternalContact</returns>
+        
         System.Threading.Tasks.Task<ExternalContact> PostExternalcontactsIdentifierlookupAsync (ContactIdentifier identifier);
 
         /// <summary>
@@ -3050,6 +3305,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier"></param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PostExternalcontactsIdentifierlookupAsyncWithHttpInfo (ContactIdentifier identifier);
 
         /// <summary>
@@ -3061,6 +3317,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">MergeRequest</param>
         /// <returns>Task of ExternalContact</returns>
+        
         System.Threading.Tasks.Task<ExternalContact> PostExternalcontactsMergeContactsAsync (MergeRequest body);
 
         /// <summary>
@@ -3072,6 +3329,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">MergeRequest</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PostExternalcontactsMergeContactsAsyncWithHttpInfo (MergeRequest body);
 
         /// <summary>
@@ -3084,6 +3342,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of Note</returns>
+        
         System.Threading.Tasks.Task<Note> PostExternalcontactsOrganizationNotesAsync (string externalOrganizationId, Note body);
 
         /// <summary>
@@ -3096,6 +3355,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of ApiResponse (Note)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Note>> PostExternalcontactsOrganizationNotesAsyncWithHttpInfo (string externalOrganizationId, Note body);
 
         /// <summary>
@@ -3107,6 +3367,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ExternalOrganization</param>
         /// <returns>Task of ExternalOrganization</returns>
+        
         System.Threading.Tasks.Task<ExternalOrganization> PostExternalcontactsOrganizationsAsync (ExternalOrganization body);
 
         /// <summary>
@@ -3118,6 +3379,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ExternalOrganization</param>
         /// <returns>Task of ApiResponse (ExternalOrganization)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> PostExternalcontactsOrganizationsAsyncWithHttpInfo (ExternalOrganization body);
 
         /// <summary>
@@ -3129,6 +3391,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Schema</param>
         /// <returns>Task of DataSchema</returns>
+        
         System.Threading.Tasks.Task<DataSchema> PostExternalcontactsOrganizationsSchemasAsync (DataSchema body);
 
         /// <summary>
@@ -3140,6 +3403,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Schema</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DataSchema>> PostExternalcontactsOrganizationsSchemasAsyncWithHttpInfo (DataSchema body);
 
         /// <summary>
@@ -3151,6 +3415,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationship</param>
         /// <returns>Task of Relationship</returns>
+        
         System.Threading.Tasks.Task<Relationship> PostExternalcontactsRelationshipsAsync (Relationship body);
 
         /// <summary>
@@ -3162,6 +3427,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationship</param>
         /// <returns>Task of ApiResponse (Relationship)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Relationship>> PostExternalcontactsRelationshipsAsyncWithHttpInfo (Relationship body);
 
         /// <summary>
@@ -3174,6 +3440,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of ExternalContact</returns>
+        
         System.Threading.Tasks.Task<ExternalContact> PutExternalcontactsContactAsync (string contactId, ExternalContact body);
 
         /// <summary>
@@ -3186,6 +3453,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PutExternalcontactsContactAsyncWithHttpInfo (string contactId, ExternalContact body);
 
         /// <summary>
@@ -3199,6 +3467,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="body">Note</param>
         /// <returns>Task of Note</returns>
+        
         System.Threading.Tasks.Task<Note> PutExternalcontactsContactNoteAsync (string contactId, string noteId, Note body);
 
         /// <summary>
@@ -3212,6 +3481,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="body">Note</param>
         /// <returns>Task of ApiResponse (Note)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Note>> PutExternalcontactsContactNoteAsyncWithHttpInfo (string contactId, string noteId, Note body);
 
         /// <summary>
@@ -3224,6 +3494,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <param name="body">Data Schema</param>
         /// <returns>Task of DataSchema</returns>
+        
         System.Threading.Tasks.Task<DataSchema> PutExternalcontactsContactsSchemaAsync (string schemaId, DataSchema body);
 
         /// <summary>
@@ -3236,6 +3507,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <param name="body">Data Schema</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DataSchema>> PutExternalcontactsContactsSchemaAsyncWithHttpInfo (string schemaId, DataSchema body);
 
         /// <summary>
@@ -3248,6 +3520,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="body">ConversationAssociation</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task PutExternalcontactsConversationAsync (string conversationId, ConversationAssociation body);
 
         /// <summary>
@@ -3260,6 +3533,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="body">ConversationAssociation</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> PutExternalcontactsConversationAsyncWithHttpInfo (string conversationId, ConversationAssociation body);
 
         /// <summary>
@@ -3272,6 +3546,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="body">ExternalOrganization</param>
         /// <returns>Task of ExternalOrganization</returns>
+        
         System.Threading.Tasks.Task<ExternalOrganization> PutExternalcontactsOrganizationAsync (string externalOrganizationId, ExternalOrganization body);
 
         /// <summary>
@@ -3284,6 +3559,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="body">ExternalOrganization</param>
         /// <returns>Task of ApiResponse (ExternalOrganization)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> PutExternalcontactsOrganizationAsyncWithHttpInfo (string externalOrganizationId, ExternalOrganization body);
 
         /// <summary>
@@ -3297,6 +3573,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="body">Note</param>
         /// <returns>Task of Note</returns>
+        
         System.Threading.Tasks.Task<Note> PutExternalcontactsOrganizationNoteAsync (string externalOrganizationId, string noteId, Note body);
 
         /// <summary>
@@ -3310,6 +3587,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="body">Note</param>
         /// <returns>Task of ApiResponse (Note)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Note>> PutExternalcontactsOrganizationNoteAsyncWithHttpInfo (string externalOrganizationId, string noteId, Note body);
 
         /// <summary>
@@ -3322,6 +3600,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="trustorId">Trustor ID</param>
         /// <returns>Task of ExternalOrganizationTrustorLink</returns>
+        
         System.Threading.Tasks.Task<ExternalOrganizationTrustorLink> PutExternalcontactsOrganizationTrustorTrustorIdAsync (string externalOrganizationId, string trustorId);
 
         /// <summary>
@@ -3334,6 +3613,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="trustorId">Trustor ID</param>
         /// <returns>Task of ApiResponse (ExternalOrganizationTrustorLink)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ExternalOrganizationTrustorLink>> PutExternalcontactsOrganizationTrustorTrustorIdAsyncWithHttpInfo (string externalOrganizationId, string trustorId);
 
         /// <summary>
@@ -3346,6 +3626,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <param name="body">Data Schema</param>
         /// <returns>Task of DataSchema</returns>
+        
         System.Threading.Tasks.Task<DataSchema> PutExternalcontactsOrganizationsSchemaAsync (string schemaId, DataSchema body);
 
         /// <summary>
@@ -3358,6 +3639,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <param name="body">Data Schema</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DataSchema>> PutExternalcontactsOrganizationsSchemaAsyncWithHttpInfo (string schemaId, DataSchema body);
 
         /// <summary>
@@ -3370,6 +3652,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationshipId">Relationship Id</param>
         /// <param name="body">Relationship</param>
         /// <returns>Task of Relationship</returns>
+        
         System.Threading.Tasks.Task<Relationship> PutExternalcontactsRelationshipAsync (string relationshipId, Relationship body);
 
         /// <summary>
@@ -3382,6 +3665,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationshipId">Relationship Id</param>
         /// <param name="body">Relationship</param>
         /// <returns>Task of ApiResponse (Relationship)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Relationship>> PutExternalcontactsRelationshipAsyncWithHttpInfo (string relationshipId, Relationship body);
 
         #endregion Asynchronous Operations
@@ -3482,6 +3766,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>Object</returns>
+        
         public Object DeleteExternalcontactsContact (string contactId)
         {
              ApiResponse<Object> localVarResponse = DeleteExternalcontactsContactWithHttpInfo(contactId);
@@ -3494,6 +3779,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>ApiResponse of Object</returns>
+        
         public ApiResponse< Object > DeleteExternalcontactsContactWithHttpInfo (string contactId)
         { 
             // verify the required parameter 'contactId' is set
@@ -3576,6 +3862,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>Task of Object</returns>
+        
         public async System.Threading.Tasks.Task<Object> DeleteExternalcontactsContactAsync (string contactId)
         {
              ApiResponse<Object> localVarResponse = await DeleteExternalcontactsContactAsyncWithHttpInfo(contactId);
@@ -3589,6 +3876,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsContactAsyncWithHttpInfo (string contactId)
         { 
             // verify the required parameter 'contactId' is set
@@ -3674,6 +3962,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>Object</returns>
+        
         public Object DeleteExternalcontactsContactNote (string contactId, string noteId)
         {
              ApiResponse<Object> localVarResponse = DeleteExternalcontactsContactNoteWithHttpInfo(contactId, noteId);
@@ -3687,6 +3976,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>ApiResponse of Object</returns>
+        
         public ApiResponse< Object > DeleteExternalcontactsContactNoteWithHttpInfo (string contactId, string noteId)
         { 
             // verify the required parameter 'contactId' is set
@@ -3774,6 +4064,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>Task of Object</returns>
+        
         public async System.Threading.Tasks.Task<Object> DeleteExternalcontactsContactNoteAsync (string contactId, string noteId)
         {
              ApiResponse<Object> localVarResponse = await DeleteExternalcontactsContactNoteAsyncWithHttpInfo(contactId, noteId);
@@ -3788,6 +4079,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsContactNoteAsyncWithHttpInfo (string contactId, string noteId)
         { 
             // verify the required parameter 'contactId' is set
@@ -3877,6 +4169,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns></returns>
+        
         public void DeleteExternalcontactsContactsSchema (string schemaId)
         {
              DeleteExternalcontactsContactsSchemaWithHttpInfo(schemaId);
@@ -3888,6 +4181,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> DeleteExternalcontactsContactsSchemaWithHttpInfo (string schemaId)
         { 
             // verify the required parameter 'schemaId' is set
@@ -3970,6 +4264,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task DeleteExternalcontactsContactsSchemaAsync (string schemaId)
         {
              await DeleteExternalcontactsContactsSchemaAsyncWithHttpInfo(schemaId);
@@ -3982,6 +4277,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsContactsSchemaAsyncWithHttpInfo (string schemaId)
         { 
             // verify the required parameter 'schemaId' is set
@@ -4066,6 +4362,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns>Object</returns>
+        
         public Object DeleteExternalcontactsOrganization (string externalOrganizationId)
         {
              ApiResponse<Object> localVarResponse = DeleteExternalcontactsOrganizationWithHttpInfo(externalOrganizationId);
@@ -4078,6 +4375,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns>ApiResponse of Object</returns>
+        
         public ApiResponse< Object > DeleteExternalcontactsOrganizationWithHttpInfo (string externalOrganizationId)
         { 
             // verify the required parameter 'externalOrganizationId' is set
@@ -4160,6 +4458,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns>Task of Object</returns>
+        
         public async System.Threading.Tasks.Task<Object> DeleteExternalcontactsOrganizationAsync (string externalOrganizationId)
         {
              ApiResponse<Object> localVarResponse = await DeleteExternalcontactsOrganizationAsyncWithHttpInfo(externalOrganizationId);
@@ -4173,6 +4472,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsOrganizationAsyncWithHttpInfo (string externalOrganizationId)
         { 
             // verify the required parameter 'externalOrganizationId' is set
@@ -4258,6 +4558,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>Object</returns>
+        
         public Object DeleteExternalcontactsOrganizationNote (string externalOrganizationId, string noteId)
         {
              ApiResponse<Object> localVarResponse = DeleteExternalcontactsOrganizationNoteWithHttpInfo(externalOrganizationId, noteId);
@@ -4271,6 +4572,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>ApiResponse of Object</returns>
+        
         public ApiResponse< Object > DeleteExternalcontactsOrganizationNoteWithHttpInfo (string externalOrganizationId, string noteId)
         { 
             // verify the required parameter 'externalOrganizationId' is set
@@ -4358,6 +4660,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>Task of Object</returns>
+        
         public async System.Threading.Tasks.Task<Object> DeleteExternalcontactsOrganizationNoteAsync (string externalOrganizationId, string noteId)
         {
              ApiResponse<Object> localVarResponse = await DeleteExternalcontactsOrganizationNoteAsyncWithHttpInfo(externalOrganizationId, noteId);
@@ -4372,6 +4675,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsOrganizationNoteAsyncWithHttpInfo (string externalOrganizationId, string noteId)
         { 
             // verify the required parameter 'externalOrganizationId' is set
@@ -4461,6 +4765,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns></returns>
+        
         public void DeleteExternalcontactsOrganizationTrustor (string externalOrganizationId)
         {
              DeleteExternalcontactsOrganizationTrustorWithHttpInfo(externalOrganizationId);
@@ -4472,6 +4777,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> DeleteExternalcontactsOrganizationTrustorWithHttpInfo (string externalOrganizationId)
         { 
             // verify the required parameter 'externalOrganizationId' is set
@@ -4554,6 +4860,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task DeleteExternalcontactsOrganizationTrustorAsync (string externalOrganizationId)
         {
              await DeleteExternalcontactsOrganizationTrustorAsyncWithHttpInfo(externalOrganizationId);
@@ -4566,6 +4873,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsOrganizationTrustorAsyncWithHttpInfo (string externalOrganizationId)
         { 
             // verify the required parameter 'externalOrganizationId' is set
@@ -4650,6 +4958,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
         /// <returns>Object</returns>
+        
         public Object DeleteExternalcontactsRelationship (string relationshipId)
         {
              ApiResponse<Object> localVarResponse = DeleteExternalcontactsRelationshipWithHttpInfo(relationshipId);
@@ -4662,6 +4971,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
         /// <returns>ApiResponse of Object</returns>
+        
         public ApiResponse< Object > DeleteExternalcontactsRelationshipWithHttpInfo (string relationshipId)
         { 
             // verify the required parameter 'relationshipId' is set
@@ -4744,6 +5054,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
         /// <returns>Task of Object</returns>
+        
         public async System.Threading.Tasks.Task<Object> DeleteExternalcontactsRelationshipAsync (string relationshipId)
         {
              ApiResponse<Object> localVarResponse = await DeleteExternalcontactsRelationshipAsyncWithHttpInfo(relationshipId);
@@ -4757,6 +5068,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsRelationshipAsyncWithHttpInfo (string relationshipId)
         { 
             // verify the required parameter 'relationshipId' is set
@@ -4842,6 +5154,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources) (optional)</param>
         /// <returns>ExternalContact</returns>
+        
         public ExternalContact GetExternalcontactsContact (string contactId, List<string> expand = null)
         {
              ApiResponse<ExternalContact> localVarResponse = GetExternalcontactsContactWithHttpInfo(contactId, expand);
@@ -4855,6 +5168,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources) (optional)</param>
         /// <returns>ApiResponse of ExternalContact</returns>
+        
         public ApiResponse< ExternalContact > GetExternalcontactsContactWithHttpInfo (string contactId, List<string> expand = null)
         { 
             // verify the required parameter 'contactId' is set
@@ -4939,6 +5253,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources) (optional)</param>
         /// <returns>Task of ExternalContact</returns>
+        
         public async System.Threading.Tasks.Task<ExternalContact> GetExternalcontactsContactAsync (string contactId, List<string> expand = null)
         {
              ApiResponse<ExternalContact> localVarResponse = await GetExternalcontactsContactAsyncWithHttpInfo(contactId, expand);
@@ -4953,6 +5268,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources) (optional)</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ExternalContact>> GetExternalcontactsContactAsyncWithHttpInfo (string contactId, List<string> expand = null)
         { 
             // verify the required parameter 'contactId' is set
@@ -5038,6 +5354,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>EntityListing</returns>
+        
         public EntityListing GetExternalcontactsContactIdentifiers (string contactId)
         {
              ApiResponse<EntityListing> localVarResponse = GetExternalcontactsContactIdentifiersWithHttpInfo(contactId);
@@ -5050,6 +5367,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>ApiResponse of EntityListing</returns>
+        
         public ApiResponse< EntityListing > GetExternalcontactsContactIdentifiersWithHttpInfo (string contactId)
         { 
             // verify the required parameter 'contactId' is set
@@ -5132,6 +5450,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>Task of EntityListing</returns>
+        
         public async System.Threading.Tasks.Task<EntityListing> GetExternalcontactsContactIdentifiersAsync (string contactId)
         {
              ApiResponse<EntityListing> localVarResponse = await GetExternalcontactsContactIdentifiersAsyncWithHttpInfo(contactId);
@@ -5145,6 +5464,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>Task of ApiResponse (EntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<EntityListing>> GetExternalcontactsContactIdentifiersAsyncWithHttpInfo (string contactId)
         { 
             // verify the required parameter 'contactId' is set
@@ -5232,6 +5552,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="includeMerged">Indicates whether to return sessions from all external contacts in the merge-set of the given one. (optional)</param>
         /// <returns>SessionListing</returns>
+        
         public SessionListing GetExternalcontactsContactJourneySessions (string contactId, string pageSize = null, string after = null, bool? includeMerged = null)
         {
              ApiResponse<SessionListing> localVarResponse = GetExternalcontactsContactJourneySessionsWithHttpInfo(contactId, pageSize, after, includeMerged);
@@ -5247,6 +5568,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="includeMerged">Indicates whether to return sessions from all external contacts in the merge-set of the given one. (optional)</param>
         /// <returns>ApiResponse of SessionListing</returns>
+        
         public ApiResponse< SessionListing > GetExternalcontactsContactJourneySessionsWithHttpInfo (string contactId, string pageSize = null, string after = null, bool? includeMerged = null)
         { 
             // verify the required parameter 'contactId' is set
@@ -5335,6 +5657,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="includeMerged">Indicates whether to return sessions from all external contacts in the merge-set of the given one. (optional)</param>
         /// <returns>Task of SessionListing</returns>
+        
         public async System.Threading.Tasks.Task<SessionListing> GetExternalcontactsContactJourneySessionsAsync (string contactId, string pageSize = null, string after = null, bool? includeMerged = null)
         {
              ApiResponse<SessionListing> localVarResponse = await GetExternalcontactsContactJourneySessionsAsyncWithHttpInfo(contactId, pageSize, after, includeMerged);
@@ -5351,6 +5674,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="includeMerged">Indicates whether to return sessions from all external contacts in the merge-set of the given one. (optional)</param>
         /// <returns>Task of ApiResponse (SessionListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<SessionListing>> GetExternalcontactsContactJourneySessionsAsyncWithHttpInfo (string contactId, string pageSize = null, string after = null, bool? includeMerged = null)
         { 
             // verify the required parameter 'contactId' is set
@@ -5440,6 +5764,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Note</returns>
+        
         public Note GetExternalcontactsContactNote (string contactId, string noteId, List<string> expand = null)
         {
              ApiResponse<Note> localVarResponse = GetExternalcontactsContactNoteWithHttpInfo(contactId, noteId, expand);
@@ -5454,6 +5779,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of Note</returns>
+        
         public ApiResponse< Note > GetExternalcontactsContactNoteWithHttpInfo (string contactId, string noteId, List<string> expand = null)
         { 
             // verify the required parameter 'contactId' is set
@@ -5543,6 +5869,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of Note</returns>
+        
         public async System.Threading.Tasks.Task<Note> GetExternalcontactsContactNoteAsync (string contactId, string noteId, List<string> expand = null)
         {
              ApiResponse<Note> localVarResponse = await GetExternalcontactsContactNoteAsyncWithHttpInfo(contactId, noteId, expand);
@@ -5558,6 +5885,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (Note)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Note>> GetExternalcontactsContactNoteAsyncWithHttpInfo (string contactId, string noteId, List<string> expand = null)
         { 
             // verify the required parameter 'contactId' is set
@@ -5652,6 +5980,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>NoteListing</returns>
+        
         public NoteListing GetExternalcontactsContactNotes (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
         {
              ApiResponse<NoteListing> localVarResponse = GetExternalcontactsContactNotesWithHttpInfo(contactId, pageSize, pageNumber, sortOrder, expand);
@@ -5668,6 +5997,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of NoteListing</returns>
+        
         public ApiResponse< NoteListing > GetExternalcontactsContactNotesWithHttpInfo (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
         { 
             // verify the required parameter 'contactId' is set
@@ -5758,6 +6088,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of NoteListing</returns>
+        
         public async System.Threading.Tasks.Task<NoteListing> GetExternalcontactsContactNotesAsync (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
         {
              ApiResponse<NoteListing> localVarResponse = await GetExternalcontactsContactNotesAsyncWithHttpInfo(contactId, pageSize, pageNumber, sortOrder, expand);
@@ -5775,6 +6106,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (NoteListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<NoteListing>> GetExternalcontactsContactNotesAsyncWithHttpInfo (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
         { 
             // verify the required parameter 'contactId' is set
@@ -5864,6 +6196,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources) (optional)</param>
         /// <returns>ExternalContact</returns>
+        
         public ExternalContact GetExternalcontactsContactUnresolved (string contactId, List<string> expand = null)
         {
              ApiResponse<ExternalContact> localVarResponse = GetExternalcontactsContactUnresolvedWithHttpInfo(contactId, expand);
@@ -5877,6 +6210,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources) (optional)</param>
         /// <returns>ApiResponse of ExternalContact</returns>
+        
         public ApiResponse< ExternalContact > GetExternalcontactsContactUnresolvedWithHttpInfo (string contactId, List<string> expand = null)
         { 
             // verify the required parameter 'contactId' is set
@@ -5961,6 +6295,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources) (optional)</param>
         /// <returns>Task of ExternalContact</returns>
+        
         public async System.Threading.Tasks.Task<ExternalContact> GetExternalcontactsContactUnresolvedAsync (string contactId, List<string> expand = null)
         {
              ApiResponse<ExternalContact> localVarResponse = await GetExternalcontactsContactUnresolvedAsyncWithHttpInfo(contactId, expand);
@@ -5975,6 +6310,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="expand">which fields, if any, to expand (externalOrganization,externalDataSources) (optional)</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ExternalContact>> GetExternalcontactsContactUnresolvedAsyncWithHttpInfo (string contactId, List<string> expand = null)
         { 
             // verify the required parameter 'contactId' is set
@@ -6064,6 +6400,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ContactListing</returns>
+        
         public ContactListing GetExternalcontactsContacts (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
         {
              ApiResponse<ContactListing> localVarResponse = GetExternalcontactsContactsWithHttpInfo(pageSize, pageNumber, q, sortOrder, expand);
@@ -6080,6 +6417,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of ContactListing</returns>
+        
         public ApiResponse< ContactListing > GetExternalcontactsContactsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
         { 
 
@@ -6167,6 +6505,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ContactListing</returns>
+        
         public async System.Threading.Tasks.Task<ContactListing> GetExternalcontactsContactsAsync (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
         {
              ApiResponse<ContactListing> localVarResponse = await GetExternalcontactsContactsAsyncWithHttpInfo(pageSize, pageNumber, q, sortOrder, expand);
@@ -6184,6 +6523,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (ContactListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ContactListing>> GetExternalcontactsContactsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
         { 
 
@@ -6268,6 +6608,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>DataSchema</returns>
+        
         public DataSchema GetExternalcontactsContactsSchema (string schemaId)
         {
              ApiResponse<DataSchema> localVarResponse = GetExternalcontactsContactsSchemaWithHttpInfo(schemaId);
@@ -6280,6 +6621,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>ApiResponse of DataSchema</returns>
+        
         public ApiResponse< DataSchema > GetExternalcontactsContactsSchemaWithHttpInfo (string schemaId)
         { 
             // verify the required parameter 'schemaId' is set
@@ -6362,6 +6704,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of DataSchema</returns>
+        
         public async System.Threading.Tasks.Task<DataSchema> GetExternalcontactsContactsSchemaAsync (string schemaId)
         {
              ApiResponse<DataSchema> localVarResponse = await GetExternalcontactsContactsSchemaAsyncWithHttpInfo(schemaId);
@@ -6375,6 +6718,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsContactsSchemaAsyncWithHttpInfo (string schemaId)
         { 
             // verify the required parameter 'schemaId' is set
@@ -6460,6 +6804,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <param name="versionId">Schema version</param>
         /// <returns>DataSchema</returns>
+        
         public DataSchema GetExternalcontactsContactsSchemaVersion (string schemaId, string versionId)
         {
              ApiResponse<DataSchema> localVarResponse = GetExternalcontactsContactsSchemaVersionWithHttpInfo(schemaId, versionId);
@@ -6473,6 +6818,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <param name="versionId">Schema version</param>
         /// <returns>ApiResponse of DataSchema</returns>
+        
         public ApiResponse< DataSchema > GetExternalcontactsContactsSchemaVersionWithHttpInfo (string schemaId, string versionId)
         { 
             // verify the required parameter 'schemaId' is set
@@ -6560,6 +6906,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <param name="versionId">Schema version</param>
         /// <returns>Task of DataSchema</returns>
+        
         public async System.Threading.Tasks.Task<DataSchema> GetExternalcontactsContactsSchemaVersionAsync (string schemaId, string versionId)
         {
              ApiResponse<DataSchema> localVarResponse = await GetExternalcontactsContactsSchemaVersionAsyncWithHttpInfo(schemaId, versionId);
@@ -6574,6 +6921,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <param name="versionId">Schema version</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsContactsSchemaVersionAsyncWithHttpInfo (string schemaId, string versionId)
         { 
             // verify the required parameter 'schemaId' is set
@@ -6663,6 +7011,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>DataSchema</returns>
+        
         public DataSchema GetExternalcontactsContactsSchemaVersions (string schemaId)
         {
              ApiResponse<DataSchema> localVarResponse = GetExternalcontactsContactsSchemaVersionsWithHttpInfo(schemaId);
@@ -6675,6 +7024,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>ApiResponse of DataSchema</returns>
+        
         public ApiResponse< DataSchema > GetExternalcontactsContactsSchemaVersionsWithHttpInfo (string schemaId)
         { 
             // verify the required parameter 'schemaId' is set
@@ -6757,6 +7107,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of DataSchema</returns>
+        
         public async System.Threading.Tasks.Task<DataSchema> GetExternalcontactsContactsSchemaVersionsAsync (string schemaId)
         {
              ApiResponse<DataSchema> localVarResponse = await GetExternalcontactsContactsSchemaVersionsAsyncWithHttpInfo(schemaId);
@@ -6770,6 +7121,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsContactsSchemaVersionsAsyncWithHttpInfo (string schemaId)
         { 
             // verify the required parameter 'schemaId' is set
@@ -6853,6 +7205,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>DataSchemaListing</returns>
+        
         public DataSchemaListing GetExternalcontactsContactsSchemas ()
         {
              ApiResponse<DataSchemaListing> localVarResponse = GetExternalcontactsContactsSchemasWithHttpInfo();
@@ -6864,6 +7217,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of DataSchemaListing</returns>
+        
         public ApiResponse< DataSchemaListing > GetExternalcontactsContactsSchemasWithHttpInfo ()
         { 
 
@@ -6941,6 +7295,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of DataSchemaListing</returns>
+        
         public async System.Threading.Tasks.Task<DataSchemaListing> GetExternalcontactsContactsSchemasAsync ()
         {
              ApiResponse<DataSchemaListing> localVarResponse = await GetExternalcontactsContactsSchemasAsyncWithHttpInfo();
@@ -6953,6 +7308,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (DataSchemaListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DataSchemaListing>> GetExternalcontactsContactsSchemasAsyncWithHttpInfo ()
         { 
 
@@ -7034,6 +7390,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (externalDataSources) (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>ExternalOrganization</returns>
+        
         public ExternalOrganization GetExternalcontactsOrganization (string externalOrganizationId, string expand = null, bool? includeTrustors = null)
         {
              ApiResponse<ExternalOrganization> localVarResponse = GetExternalcontactsOrganizationWithHttpInfo(externalOrganizationId, expand, includeTrustors);
@@ -7048,6 +7405,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (externalDataSources) (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>ApiResponse of ExternalOrganization</returns>
+        
         public ApiResponse< ExternalOrganization > GetExternalcontactsOrganizationWithHttpInfo (string externalOrganizationId, string expand = null, bool? includeTrustors = null)
         { 
             // verify the required parameter 'externalOrganizationId' is set
@@ -7134,6 +7492,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (externalDataSources) (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>Task of ExternalOrganization</returns>
+        
         public async System.Threading.Tasks.Task<ExternalOrganization> GetExternalcontactsOrganizationAsync (string externalOrganizationId, string expand = null, bool? includeTrustors = null)
         {
              ApiResponse<ExternalOrganization> localVarResponse = await GetExternalcontactsOrganizationAsyncWithHttpInfo(externalOrganizationId, expand, includeTrustors);
@@ -7149,6 +7508,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (externalDataSources) (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>Task of ApiResponse (ExternalOrganization)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> GetExternalcontactsOrganizationAsyncWithHttpInfo (string externalOrganizationId, string expand = null, bool? includeTrustors = null)
         { 
             // verify the required parameter 'externalOrganizationId' is set
@@ -7240,6 +7600,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ContactListing</returns>
+        
         public ContactListing GetExternalcontactsOrganizationContacts (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
         {
              ApiResponse<ContactListing> localVarResponse = GetExternalcontactsOrganizationContactsWithHttpInfo(externalOrganizationId, pageSize, pageNumber, q, sortOrder, expand);
@@ -7257,6 +7618,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of ContactListing</returns>
+        
         public ApiResponse< ContactListing > GetExternalcontactsOrganizationContactsWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
         { 
             // verify the required parameter 'externalOrganizationId' is set
@@ -7349,6 +7711,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ContactListing</returns>
+        
         public async System.Threading.Tasks.Task<ContactListing> GetExternalcontactsOrganizationContactsAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
         {
              ApiResponse<ContactListing> localVarResponse = await GetExternalcontactsOrganizationContactsAsyncWithHttpInfo(externalOrganizationId, pageSize, pageNumber, q, sortOrder, expand);
@@ -7367,6 +7730,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (ContactListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ContactListing>> GetExternalcontactsOrganizationContactsAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
         { 
             // verify the required parameter 'externalOrganizationId' is set
@@ -7458,6 +7822,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Note</returns>
+        
         public Note GetExternalcontactsOrganizationNote (string externalOrganizationId, string noteId, List<string> expand = null)
         {
              ApiResponse<Note> localVarResponse = GetExternalcontactsOrganizationNoteWithHttpInfo(externalOrganizationId, noteId, expand);
@@ -7472,6 +7837,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of Note</returns>
+        
         public ApiResponse< Note > GetExternalcontactsOrganizationNoteWithHttpInfo (string externalOrganizationId, string noteId, List<string> expand = null)
         { 
             // verify the required parameter 'externalOrganizationId' is set
@@ -7561,6 +7927,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of Note</returns>
+        
         public async System.Threading.Tasks.Task<Note> GetExternalcontactsOrganizationNoteAsync (string externalOrganizationId, string noteId, List<string> expand = null)
         {
              ApiResponse<Note> localVarResponse = await GetExternalcontactsOrganizationNoteAsyncWithHttpInfo(externalOrganizationId, noteId, expand);
@@ -7576,6 +7943,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (Note)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Note>> GetExternalcontactsOrganizationNoteAsyncWithHttpInfo (string externalOrganizationId, string noteId, List<string> expand = null)
         { 
             // verify the required parameter 'externalOrganizationId' is set
@@ -7670,6 +8038,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>NoteListing</returns>
+        
         public NoteListing GetExternalcontactsOrganizationNotes (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
         {
              ApiResponse<NoteListing> localVarResponse = GetExternalcontactsOrganizationNotesWithHttpInfo(externalOrganizationId, pageSize, pageNumber, sortOrder, expand);
@@ -7686,6 +8055,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of NoteListing</returns>
+        
         public ApiResponse< NoteListing > GetExternalcontactsOrganizationNotesWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
         { 
             // verify the required parameter 'externalOrganizationId' is set
@@ -7776,6 +8146,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of NoteListing</returns>
+        
         public async System.Threading.Tasks.Task<NoteListing> GetExternalcontactsOrganizationNotesAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
         {
              ApiResponse<NoteListing> localVarResponse = await GetExternalcontactsOrganizationNotesAsyncWithHttpInfo(externalOrganizationId, pageSize, pageNumber, sortOrder, expand);
@@ -7793,6 +8164,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (NoteListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<NoteListing>> GetExternalcontactsOrganizationNotesAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
         { 
             // verify the required parameter 'externalOrganizationId' is set
@@ -7885,6 +8257,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>RelationshipListing</returns>
+        
         public RelationshipListing GetExternalcontactsOrganizationRelationships (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string expand = null, string sortOrder = null)
         {
              ApiResponse<RelationshipListing> localVarResponse = GetExternalcontactsOrganizationRelationshipsWithHttpInfo(externalOrganizationId, pageSize, pageNumber, expand, sortOrder);
@@ -7901,6 +8274,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>ApiResponse of RelationshipListing</returns>
+        
         public ApiResponse< RelationshipListing > GetExternalcontactsOrganizationRelationshipsWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string expand = null, string sortOrder = null)
         { 
             // verify the required parameter 'externalOrganizationId' is set
@@ -7991,6 +8365,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of RelationshipListing</returns>
+        
         public async System.Threading.Tasks.Task<RelationshipListing> GetExternalcontactsOrganizationRelationshipsAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string expand = null, string sortOrder = null)
         {
              ApiResponse<RelationshipListing> localVarResponse = await GetExternalcontactsOrganizationRelationshipsAsyncWithHttpInfo(externalOrganizationId, pageSize, pageNumber, expand, sortOrder);
@@ -8008,6 +8383,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of ApiResponse (RelationshipListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<RelationshipListing>> GetExternalcontactsOrganizationRelationshipsAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string expand = null, string sortOrder = null)
         { 
             // verify the required parameter 'externalOrganizationId' is set
@@ -8102,6 +8478,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>ExternalOrganizationListing</returns>
+        
         public ExternalOrganizationListing GetExternalcontactsOrganizations (int? pageSize = null, int? pageNumber = null, string q = null, List<string> trustorId = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null)
         {
              ApiResponse<ExternalOrganizationListing> localVarResponse = GetExternalcontactsOrganizationsWithHttpInfo(pageSize, pageNumber, q, trustorId, sortOrder, expand, includeTrustors);
@@ -8120,6 +8497,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>ApiResponse of ExternalOrganizationListing</returns>
+        
         public ApiResponse< ExternalOrganizationListing > GetExternalcontactsOrganizationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, List<string> trustorId = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null)
         { 
 
@@ -8211,6 +8589,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>Task of ExternalOrganizationListing</returns>
+        
         public async System.Threading.Tasks.Task<ExternalOrganizationListing> GetExternalcontactsOrganizationsAsync (int? pageSize = null, int? pageNumber = null, string q = null, List<string> trustorId = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null)
         {
              ApiResponse<ExternalOrganizationListing> localVarResponse = await GetExternalcontactsOrganizationsAsyncWithHttpInfo(pageSize, pageNumber, q, trustorId, sortOrder, expand, includeTrustors);
@@ -8230,6 +8609,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>Task of ApiResponse (ExternalOrganizationListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ExternalOrganizationListing>> GetExternalcontactsOrganizationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, List<string> trustorId = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null)
         { 
 
@@ -8316,6 +8696,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>DataSchema</returns>
+        
         public DataSchema GetExternalcontactsOrganizationsSchema (string schemaId)
         {
              ApiResponse<DataSchema> localVarResponse = GetExternalcontactsOrganizationsSchemaWithHttpInfo(schemaId);
@@ -8328,6 +8709,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>ApiResponse of DataSchema</returns>
+        
         public ApiResponse< DataSchema > GetExternalcontactsOrganizationsSchemaWithHttpInfo (string schemaId)
         { 
             // verify the required parameter 'schemaId' is set
@@ -8410,6 +8792,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of DataSchema</returns>
+        
         public async System.Threading.Tasks.Task<DataSchema> GetExternalcontactsOrganizationsSchemaAsync (string schemaId)
         {
              ApiResponse<DataSchema> localVarResponse = await GetExternalcontactsOrganizationsSchemaAsyncWithHttpInfo(schemaId);
@@ -8423,6 +8806,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsOrganizationsSchemaAsyncWithHttpInfo (string schemaId)
         { 
             // verify the required parameter 'schemaId' is set
@@ -8508,6 +8892,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <param name="versionId">Schema version</param>
         /// <returns>DataSchema</returns>
+        
         public DataSchema GetExternalcontactsOrganizationsSchemaVersion (string schemaId, string versionId)
         {
              ApiResponse<DataSchema> localVarResponse = GetExternalcontactsOrganizationsSchemaVersionWithHttpInfo(schemaId, versionId);
@@ -8521,6 +8906,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <param name="versionId">Schema version</param>
         /// <returns>ApiResponse of DataSchema</returns>
+        
         public ApiResponse< DataSchema > GetExternalcontactsOrganizationsSchemaVersionWithHttpInfo (string schemaId, string versionId)
         { 
             // verify the required parameter 'schemaId' is set
@@ -8608,6 +8994,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <param name="versionId">Schema version</param>
         /// <returns>Task of DataSchema</returns>
+        
         public async System.Threading.Tasks.Task<DataSchema> GetExternalcontactsOrganizationsSchemaVersionAsync (string schemaId, string versionId)
         {
              ApiResponse<DataSchema> localVarResponse = await GetExternalcontactsOrganizationsSchemaVersionAsyncWithHttpInfo(schemaId, versionId);
@@ -8622,6 +9009,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <param name="versionId">Schema version</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsOrganizationsSchemaVersionAsyncWithHttpInfo (string schemaId, string versionId)
         { 
             // verify the required parameter 'schemaId' is set
@@ -8711,6 +9099,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>DataSchema</returns>
+        
         public DataSchema GetExternalcontactsOrganizationsSchemaVersions (string schemaId)
         {
              ApiResponse<DataSchema> localVarResponse = GetExternalcontactsOrganizationsSchemaVersionsWithHttpInfo(schemaId);
@@ -8723,6 +9112,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>ApiResponse of DataSchema</returns>
+        
         public ApiResponse< DataSchema > GetExternalcontactsOrganizationsSchemaVersionsWithHttpInfo (string schemaId)
         { 
             // verify the required parameter 'schemaId' is set
@@ -8805,6 +9195,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of DataSchema</returns>
+        
         public async System.Threading.Tasks.Task<DataSchema> GetExternalcontactsOrganizationsSchemaVersionsAsync (string schemaId)
         {
              ApiResponse<DataSchema> localVarResponse = await GetExternalcontactsOrganizationsSchemaVersionsAsyncWithHttpInfo(schemaId);
@@ -8818,6 +9209,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsOrganizationsSchemaVersionsAsyncWithHttpInfo (string schemaId)
         { 
             // verify the required parameter 'schemaId' is set
@@ -8901,6 +9293,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>DataSchemaListing</returns>
+        
         public DataSchemaListing GetExternalcontactsOrganizationsSchemas ()
         {
              ApiResponse<DataSchemaListing> localVarResponse = GetExternalcontactsOrganizationsSchemasWithHttpInfo();
@@ -8912,6 +9305,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of DataSchemaListing</returns>
+        
         public ApiResponse< DataSchemaListing > GetExternalcontactsOrganizationsSchemasWithHttpInfo ()
         { 
 
@@ -8989,6 +9383,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of DataSchemaListing</returns>
+        
         public async System.Threading.Tasks.Task<DataSchemaListing> GetExternalcontactsOrganizationsSchemasAsync ()
         {
              ApiResponse<DataSchemaListing> localVarResponse = await GetExternalcontactsOrganizationsSchemasAsyncWithHttpInfo();
@@ -9001,6 +9396,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (DataSchemaListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DataSchemaListing>> GetExternalcontactsOrganizationsSchemasAsyncWithHttpInfo ()
         { 
 
@@ -9081,6 +9477,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationshipId">Relationship Id</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Relationship</returns>
+        
         public Relationship GetExternalcontactsRelationship (string relationshipId, string expand = null)
         {
              ApiResponse<Relationship> localVarResponse = GetExternalcontactsRelationshipWithHttpInfo(relationshipId, expand);
@@ -9094,6 +9491,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationshipId">Relationship Id</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of Relationship</returns>
+        
         public ApiResponse< Relationship > GetExternalcontactsRelationshipWithHttpInfo (string relationshipId, string expand = null)
         { 
             // verify the required parameter 'relationshipId' is set
@@ -9178,6 +9576,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationshipId">Relationship Id</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of Relationship</returns>
+        
         public async System.Threading.Tasks.Task<Relationship> GetExternalcontactsRelationshipAsync (string relationshipId, string expand = null)
         {
              ApiResponse<Relationship> localVarResponse = await GetExternalcontactsRelationshipAsyncWithHttpInfo(relationshipId, expand);
@@ -9192,6 +9591,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationshipId">Relationship Id</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (Relationship)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Relationship>> GetExternalcontactsRelationshipAsyncWithHttpInfo (string relationshipId, string expand = null)
         { 
             // verify the required parameter 'relationshipId' is set
@@ -9278,6 +9678,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="lookupVal">User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names)</param>
         /// <param name="expand">which field, if any, to expand (optional)</param>
         /// <returns>ReverseWhitepagesLookupResult</returns>
+        
         public ReverseWhitepagesLookupResult GetExternalcontactsReversewhitepageslookup (string lookupVal, List<string> expand = null)
         {
              ApiResponse<ReverseWhitepagesLookupResult> localVarResponse = GetExternalcontactsReversewhitepageslookupWithHttpInfo(lookupVal, expand);
@@ -9291,6 +9692,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="lookupVal">User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names)</param>
         /// <param name="expand">which field, if any, to expand (optional)</param>
         /// <returns>ApiResponse of ReverseWhitepagesLookupResult</returns>
+        
         public ApiResponse< ReverseWhitepagesLookupResult > GetExternalcontactsReversewhitepageslookupWithHttpInfo (string lookupVal, List<string> expand = null)
         { 
             // verify the required parameter 'lookupVal' is set
@@ -9375,6 +9777,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="lookupVal">User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names)</param>
         /// <param name="expand">which field, if any, to expand (optional)</param>
         /// <returns>Task of ReverseWhitepagesLookupResult</returns>
+        
         public async System.Threading.Tasks.Task<ReverseWhitepagesLookupResult> GetExternalcontactsReversewhitepageslookupAsync (string lookupVal, List<string> expand = null)
         {
              ApiResponse<ReverseWhitepagesLookupResult> localVarResponse = await GetExternalcontactsReversewhitepageslookupAsyncWithHttpInfo(lookupVal, expand);
@@ -9389,6 +9792,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="lookupVal">User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names)</param>
         /// <param name="expand">which field, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (ReverseWhitepagesLookupResult)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ReverseWhitepagesLookupResult>> GetExternalcontactsReversewhitepageslookupAsyncWithHttpInfo (string lookupVal, List<string> expand = null)
         { 
             // verify the required parameter 'lookupVal' is set
@@ -9475,6 +9879,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100) (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>CursorContactListing</returns>
+        
         public CursorContactListing GetExternalcontactsScanContacts (int? limit = null, string cursor = null)
         {
              ApiResponse<CursorContactListing> localVarResponse = GetExternalcontactsScanContactsWithHttpInfo(limit, cursor);
@@ -9488,6 +9893,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100) (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>ApiResponse of CursorContactListing</returns>
+        
         public ApiResponse< CursorContactListing > GetExternalcontactsScanContactsWithHttpInfo (int? limit = null, string cursor = null)
         { 
 
@@ -9569,6 +9975,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100) (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of CursorContactListing</returns>
+        
         public async System.Threading.Tasks.Task<CursorContactListing> GetExternalcontactsScanContactsAsync (int? limit = null, string cursor = null)
         {
              ApiResponse<CursorContactListing> localVarResponse = await GetExternalcontactsScanContactsAsyncWithHttpInfo(limit, cursor);
@@ -9583,6 +9990,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The number of contacts per page; must be between 10 and 200, default is 100) (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of ApiResponse (CursorContactListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<CursorContactListing>> GetExternalcontactsScanContactsAsyncWithHttpInfo (int? limit = null, string cursor = null)
         { 
 
@@ -9665,6 +10073,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100) (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>CursorNoteListing</returns>
+        
         public CursorNoteListing GetExternalcontactsScanNotes (int? limit = null, string cursor = null)
         {
              ApiResponse<CursorNoteListing> localVarResponse = GetExternalcontactsScanNotesWithHttpInfo(limit, cursor);
@@ -9678,6 +10087,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100) (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>ApiResponse of CursorNoteListing</returns>
+        
         public ApiResponse< CursorNoteListing > GetExternalcontactsScanNotesWithHttpInfo (int? limit = null, string cursor = null)
         { 
 
@@ -9759,6 +10169,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100) (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of CursorNoteListing</returns>
+        
         public async System.Threading.Tasks.Task<CursorNoteListing> GetExternalcontactsScanNotesAsync (int? limit = null, string cursor = null)
         {
              ApiResponse<CursorNoteListing> localVarResponse = await GetExternalcontactsScanNotesAsyncWithHttpInfo(limit, cursor);
@@ -9773,6 +10184,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The number of notes per page; must be between 10 and 200, default is 100) (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of ApiResponse (CursorNoteListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<CursorNoteListing>> GetExternalcontactsScanNotesAsyncWithHttpInfo (int? limit = null, string cursor = null)
         { 
 
@@ -9855,6 +10267,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100) (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>CursorOrganizationListing</returns>
+        
         public CursorOrganizationListing GetExternalcontactsScanOrganizations (int? limit = null, string cursor = null)
         {
              ApiResponse<CursorOrganizationListing> localVarResponse = GetExternalcontactsScanOrganizationsWithHttpInfo(limit, cursor);
@@ -9868,6 +10281,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100) (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>ApiResponse of CursorOrganizationListing</returns>
+        
         public ApiResponse< CursorOrganizationListing > GetExternalcontactsScanOrganizationsWithHttpInfo (int? limit = null, string cursor = null)
         { 
 
@@ -9949,6 +10363,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100) (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of CursorOrganizationListing</returns>
+        
         public async System.Threading.Tasks.Task<CursorOrganizationListing> GetExternalcontactsScanOrganizationsAsync (int? limit = null, string cursor = null)
         {
              ApiResponse<CursorOrganizationListing> localVarResponse = await GetExternalcontactsScanOrganizationsAsyncWithHttpInfo(limit, cursor);
@@ -9963,6 +10378,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The number of organizations per page; must be between 10 and 200, default is 100) (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of ApiResponse (CursorOrganizationListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<CursorOrganizationListing>> GetExternalcontactsScanOrganizationsAsyncWithHttpInfo (int? limit = null, string cursor = null)
         { 
 
@@ -10045,6 +10461,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100) (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>CursorRelationshipListing</returns>
+        
         public CursorRelationshipListing GetExternalcontactsScanRelationships (int? limit = null, string cursor = null)
         {
              ApiResponse<CursorRelationshipListing> localVarResponse = GetExternalcontactsScanRelationshipsWithHttpInfo(limit, cursor);
@@ -10058,6 +10475,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100) (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>ApiResponse of CursorRelationshipListing</returns>
+        
         public ApiResponse< CursorRelationshipListing > GetExternalcontactsScanRelationshipsWithHttpInfo (int? limit = null, string cursor = null)
         { 
 
@@ -10139,6 +10557,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100) (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of CursorRelationshipListing</returns>
+        
         public async System.Threading.Tasks.Task<CursorRelationshipListing> GetExternalcontactsScanRelationshipsAsync (int? limit = null, string cursor = null)
         {
              ApiResponse<CursorRelationshipListing> localVarResponse = await GetExternalcontactsScanRelationshipsAsyncWithHttpInfo(limit, cursor);
@@ -10153,6 +10572,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The number of relationships per page; must be between 10 and 200, default is 100) (optional)</param>
         /// <param name="cursor">Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)</param>
         /// <returns>Task of ApiResponse (CursorRelationshipListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<CursorRelationshipListing>> GetExternalcontactsScanRelationshipsAsyncWithHttpInfo (int? limit = null, string cursor = null)
         { 
 
@@ -10235,6 +10655,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="body">ClaimRequest</param>
         /// <returns>ContactIdentifier</returns>
+        
         public ContactIdentifier PatchExternalcontactsContactIdentifiers (string contactId, IdentifierClaimRequest body)
         {
              ApiResponse<ContactIdentifier> localVarResponse = PatchExternalcontactsContactIdentifiersWithHttpInfo(contactId, body);
@@ -10248,6 +10669,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="body">ClaimRequest</param>
         /// <returns>ApiResponse of ContactIdentifier</returns>
+        
         public ApiResponse< ContactIdentifier > PatchExternalcontactsContactIdentifiersWithHttpInfo (string contactId, IdentifierClaimRequest body)
         { 
             // verify the required parameter 'contactId' is set
@@ -10340,6 +10762,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="body">ClaimRequest</param>
         /// <returns>Task of ContactIdentifier</returns>
+        
         public async System.Threading.Tasks.Task<ContactIdentifier> PatchExternalcontactsContactIdentifiersAsync (string contactId, IdentifierClaimRequest body)
         {
              ApiResponse<ContactIdentifier> localVarResponse = await PatchExternalcontactsContactIdentifiersAsyncWithHttpInfo(contactId, body);
@@ -10354,6 +10777,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="body">ClaimRequest</param>
         /// <returns>Task of ApiResponse (ContactIdentifier)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ContactIdentifier>> PatchExternalcontactsContactIdentifiersAsyncWithHttpInfo (string contactId, IdentifierClaimRequest body)
         { 
             // verify the required parameter 'contactId' is set
@@ -10448,6 +10872,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contact ids</param>
         /// <returns>BulkFetchContactsResponse</returns>
+        
         public BulkFetchContactsResponse PostExternalcontactsBulkContacts (BulkIdsRequest body)
         {
              ApiResponse<BulkFetchContactsResponse> localVarResponse = PostExternalcontactsBulkContactsWithHttpInfo(body);
@@ -10460,6 +10885,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contact ids</param>
         /// <returns>ApiResponse of BulkFetchContactsResponse</returns>
+        
         public ApiResponse< BulkFetchContactsResponse > PostExternalcontactsBulkContactsWithHttpInfo (BulkIdsRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -10547,6 +10973,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contact ids</param>
         /// <returns>Task of BulkFetchContactsResponse</returns>
+        
         public async System.Threading.Tasks.Task<BulkFetchContactsResponse> PostExternalcontactsBulkContactsAsync (BulkIdsRequest body)
         {
              ApiResponse<BulkFetchContactsResponse> localVarResponse = await PostExternalcontactsBulkContactsAsyncWithHttpInfo(body);
@@ -10560,6 +10987,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contact ids</param>
         /// <returns>Task of ApiResponse (BulkFetchContactsResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<BulkFetchContactsResponse>> PostExternalcontactsBulkContactsAsyncWithHttpInfo (BulkIdsRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -10649,6 +11077,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contacts</param>
         /// <returns>BulkContactsResponse</returns>
+        
         public BulkContactsResponse PostExternalcontactsBulkContactsAdd (BulkContactsRequest body)
         {
              ApiResponse<BulkContactsResponse> localVarResponse = PostExternalcontactsBulkContactsAddWithHttpInfo(body);
@@ -10661,6 +11090,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contacts</param>
         /// <returns>ApiResponse of BulkContactsResponse</returns>
+        
         public ApiResponse< BulkContactsResponse > PostExternalcontactsBulkContactsAddWithHttpInfo (BulkContactsRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -10748,6 +11178,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contacts</param>
         /// <returns>Task of BulkContactsResponse</returns>
+        
         public async System.Threading.Tasks.Task<BulkContactsResponse> PostExternalcontactsBulkContactsAddAsync (BulkContactsRequest body)
         {
              ApiResponse<BulkContactsResponse> localVarResponse = await PostExternalcontactsBulkContactsAddAsyncWithHttpInfo(body);
@@ -10761,6 +11192,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contacts</param>
         /// <returns>Task of ApiResponse (BulkContactsResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<BulkContactsResponse>> PostExternalcontactsBulkContactsAddAsyncWithHttpInfo (BulkContactsRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -10850,6 +11282,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contact ids</param>
         /// <returns>BulkDeleteResponse</returns>
+        
         public BulkDeleteResponse PostExternalcontactsBulkContactsRemove (BulkIdsRequest body)
         {
              ApiResponse<BulkDeleteResponse> localVarResponse = PostExternalcontactsBulkContactsRemoveWithHttpInfo(body);
@@ -10862,6 +11295,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contact ids</param>
         /// <returns>ApiResponse of BulkDeleteResponse</returns>
+        
         public ApiResponse< BulkDeleteResponse > PostExternalcontactsBulkContactsRemoveWithHttpInfo (BulkIdsRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -10949,6 +11383,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contact ids</param>
         /// <returns>Task of BulkDeleteResponse</returns>
+        
         public async System.Threading.Tasks.Task<BulkDeleteResponse> PostExternalcontactsBulkContactsRemoveAsync (BulkIdsRequest body)
         {
              ApiResponse<BulkDeleteResponse> localVarResponse = await PostExternalcontactsBulkContactsRemoveAsyncWithHttpInfo(body);
@@ -10962,6 +11397,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contact ids</param>
         /// <returns>Task of ApiResponse (BulkDeleteResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<BulkDeleteResponse>> PostExternalcontactsBulkContactsRemoveAsyncWithHttpInfo (BulkIdsRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -11051,6 +11487,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contact ids</param>
         /// <returns>BulkFetchContactsResponse</returns>
+        
         public BulkFetchContactsResponse PostExternalcontactsBulkContactsUnresolved (BulkIdsRequest body)
         {
              ApiResponse<BulkFetchContactsResponse> localVarResponse = PostExternalcontactsBulkContactsUnresolvedWithHttpInfo(body);
@@ -11063,6 +11500,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contact ids</param>
         /// <returns>ApiResponse of BulkFetchContactsResponse</returns>
+        
         public ApiResponse< BulkFetchContactsResponse > PostExternalcontactsBulkContactsUnresolvedWithHttpInfo (BulkIdsRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -11150,6 +11588,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contact ids</param>
         /// <returns>Task of BulkFetchContactsResponse</returns>
+        
         public async System.Threading.Tasks.Task<BulkFetchContactsResponse> PostExternalcontactsBulkContactsUnresolvedAsync (BulkIdsRequest body)
         {
              ApiResponse<BulkFetchContactsResponse> localVarResponse = await PostExternalcontactsBulkContactsUnresolvedAsyncWithHttpInfo(body);
@@ -11163,6 +11602,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contact ids</param>
         /// <returns>Task of ApiResponse (BulkFetchContactsResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<BulkFetchContactsResponse>> PostExternalcontactsBulkContactsUnresolvedAsyncWithHttpInfo (BulkIdsRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -11252,6 +11692,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contacts</param>
         /// <returns>BulkContactsResponse</returns>
+        
         public BulkContactsResponse PostExternalcontactsBulkContactsUpdate (BulkContactsRequest body)
         {
              ApiResponse<BulkContactsResponse> localVarResponse = PostExternalcontactsBulkContactsUpdateWithHttpInfo(body);
@@ -11264,6 +11705,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contacts</param>
         /// <returns>ApiResponse of BulkContactsResponse</returns>
+        
         public ApiResponse< BulkContactsResponse > PostExternalcontactsBulkContactsUpdateWithHttpInfo (BulkContactsRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -11351,6 +11793,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contacts</param>
         /// <returns>Task of BulkContactsResponse</returns>
+        
         public async System.Threading.Tasks.Task<BulkContactsResponse> PostExternalcontactsBulkContactsUpdateAsync (BulkContactsRequest body)
         {
              ApiResponse<BulkContactsResponse> localVarResponse = await PostExternalcontactsBulkContactsUpdateAsyncWithHttpInfo(body);
@@ -11364,6 +11807,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Contacts</param>
         /// <returns>Task of ApiResponse (BulkContactsResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<BulkContactsResponse>> PostExternalcontactsBulkContactsUpdateAsyncWithHttpInfo (BulkContactsRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -11453,6 +11897,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Note ids</param>
         /// <returns>BulkFetchNotesResponse</returns>
+        
         public BulkFetchNotesResponse PostExternalcontactsBulkNotes (BulkIdsRequest body)
         {
              ApiResponse<BulkFetchNotesResponse> localVarResponse = PostExternalcontactsBulkNotesWithHttpInfo(body);
@@ -11465,6 +11910,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Note ids</param>
         /// <returns>ApiResponse of BulkFetchNotesResponse</returns>
+        
         public ApiResponse< BulkFetchNotesResponse > PostExternalcontactsBulkNotesWithHttpInfo (BulkIdsRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -11552,6 +11998,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Note ids</param>
         /// <returns>Task of BulkFetchNotesResponse</returns>
+        
         public async System.Threading.Tasks.Task<BulkFetchNotesResponse> PostExternalcontactsBulkNotesAsync (BulkIdsRequest body)
         {
              ApiResponse<BulkFetchNotesResponse> localVarResponse = await PostExternalcontactsBulkNotesAsyncWithHttpInfo(body);
@@ -11565,6 +12012,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Note ids</param>
         /// <returns>Task of ApiResponse (BulkFetchNotesResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<BulkFetchNotesResponse>> PostExternalcontactsBulkNotesAsyncWithHttpInfo (BulkIdsRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -11654,6 +12102,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Notes</param>
         /// <returns>BulkNotesResponse</returns>
+        
         public BulkNotesResponse PostExternalcontactsBulkNotesAdd (BulkNotesRequest body)
         {
              ApiResponse<BulkNotesResponse> localVarResponse = PostExternalcontactsBulkNotesAddWithHttpInfo(body);
@@ -11666,6 +12115,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Notes</param>
         /// <returns>ApiResponse of BulkNotesResponse</returns>
+        
         public ApiResponse< BulkNotesResponse > PostExternalcontactsBulkNotesAddWithHttpInfo (BulkNotesRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -11753,6 +12203,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Notes</param>
         /// <returns>Task of BulkNotesResponse</returns>
+        
         public async System.Threading.Tasks.Task<BulkNotesResponse> PostExternalcontactsBulkNotesAddAsync (BulkNotesRequest body)
         {
              ApiResponse<BulkNotesResponse> localVarResponse = await PostExternalcontactsBulkNotesAddAsyncWithHttpInfo(body);
@@ -11766,6 +12217,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Notes</param>
         /// <returns>Task of ApiResponse (BulkNotesResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<BulkNotesResponse>> PostExternalcontactsBulkNotesAddAsyncWithHttpInfo (BulkNotesRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -11855,6 +12307,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Note ids</param>
         /// <returns>BulkDeleteResponse</returns>
+        
         public BulkDeleteResponse PostExternalcontactsBulkNotesRemove (BulkIdsRequest body)
         {
              ApiResponse<BulkDeleteResponse> localVarResponse = PostExternalcontactsBulkNotesRemoveWithHttpInfo(body);
@@ -11867,6 +12320,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Note ids</param>
         /// <returns>ApiResponse of BulkDeleteResponse</returns>
+        
         public ApiResponse< BulkDeleteResponse > PostExternalcontactsBulkNotesRemoveWithHttpInfo (BulkIdsRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -11954,6 +12408,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Note ids</param>
         /// <returns>Task of BulkDeleteResponse</returns>
+        
         public async System.Threading.Tasks.Task<BulkDeleteResponse> PostExternalcontactsBulkNotesRemoveAsync (BulkIdsRequest body)
         {
              ApiResponse<BulkDeleteResponse> localVarResponse = await PostExternalcontactsBulkNotesRemoveAsyncWithHttpInfo(body);
@@ -11967,6 +12422,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Note ids</param>
         /// <returns>Task of ApiResponse (BulkDeleteResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<BulkDeleteResponse>> PostExternalcontactsBulkNotesRemoveAsyncWithHttpInfo (BulkIdsRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -12056,6 +12512,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Notes</param>
         /// <returns>BulkNotesResponse</returns>
+        
         public BulkNotesResponse PostExternalcontactsBulkNotesUpdate (BulkNotesRequest body)
         {
              ApiResponse<BulkNotesResponse> localVarResponse = PostExternalcontactsBulkNotesUpdateWithHttpInfo(body);
@@ -12068,6 +12525,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Notes</param>
         /// <returns>ApiResponse of BulkNotesResponse</returns>
+        
         public ApiResponse< BulkNotesResponse > PostExternalcontactsBulkNotesUpdateWithHttpInfo (BulkNotesRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -12155,6 +12613,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Notes</param>
         /// <returns>Task of BulkNotesResponse</returns>
+        
         public async System.Threading.Tasks.Task<BulkNotesResponse> PostExternalcontactsBulkNotesUpdateAsync (BulkNotesRequest body)
         {
              ApiResponse<BulkNotesResponse> localVarResponse = await PostExternalcontactsBulkNotesUpdateAsyncWithHttpInfo(body);
@@ -12168,6 +12627,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Notes</param>
         /// <returns>Task of ApiResponse (BulkNotesResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<BulkNotesResponse>> PostExternalcontactsBulkNotesUpdateAsyncWithHttpInfo (BulkNotesRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -12257,6 +12717,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organizations ids</param>
         /// <returns>BulkFetchOrganizationsResponse</returns>
+        
         public BulkFetchOrganizationsResponse PostExternalcontactsBulkOrganizations (BulkIdsRequest body)
         {
              ApiResponse<BulkFetchOrganizationsResponse> localVarResponse = PostExternalcontactsBulkOrganizationsWithHttpInfo(body);
@@ -12269,6 +12730,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organizations ids</param>
         /// <returns>ApiResponse of BulkFetchOrganizationsResponse</returns>
+        
         public ApiResponse< BulkFetchOrganizationsResponse > PostExternalcontactsBulkOrganizationsWithHttpInfo (BulkIdsRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -12356,6 +12818,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organizations ids</param>
         /// <returns>Task of BulkFetchOrganizationsResponse</returns>
+        
         public async System.Threading.Tasks.Task<BulkFetchOrganizationsResponse> PostExternalcontactsBulkOrganizationsAsync (BulkIdsRequest body)
         {
              ApiResponse<BulkFetchOrganizationsResponse> localVarResponse = await PostExternalcontactsBulkOrganizationsAsyncWithHttpInfo(body);
@@ -12369,6 +12832,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organizations ids</param>
         /// <returns>Task of ApiResponse (BulkFetchOrganizationsResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<BulkFetchOrganizationsResponse>> PostExternalcontactsBulkOrganizationsAsyncWithHttpInfo (BulkIdsRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -12458,6 +12922,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organizations</param>
         /// <returns>BulkOrganizationsResponse</returns>
+        
         public BulkOrganizationsResponse PostExternalcontactsBulkOrganizationsAdd (BulkOrganizationsRequest body)
         {
              ApiResponse<BulkOrganizationsResponse> localVarResponse = PostExternalcontactsBulkOrganizationsAddWithHttpInfo(body);
@@ -12470,6 +12935,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organizations</param>
         /// <returns>ApiResponse of BulkOrganizationsResponse</returns>
+        
         public ApiResponse< BulkOrganizationsResponse > PostExternalcontactsBulkOrganizationsAddWithHttpInfo (BulkOrganizationsRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -12557,6 +13023,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organizations</param>
         /// <returns>Task of BulkOrganizationsResponse</returns>
+        
         public async System.Threading.Tasks.Task<BulkOrganizationsResponse> PostExternalcontactsBulkOrganizationsAddAsync (BulkOrganizationsRequest body)
         {
              ApiResponse<BulkOrganizationsResponse> localVarResponse = await PostExternalcontactsBulkOrganizationsAddAsyncWithHttpInfo(body);
@@ -12570,6 +13037,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organizations</param>
         /// <returns>Task of ApiResponse (BulkOrganizationsResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<BulkOrganizationsResponse>> PostExternalcontactsBulkOrganizationsAddAsyncWithHttpInfo (BulkOrganizationsRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -12659,6 +13127,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization ids</param>
         /// <returns>BulkDeleteResponse</returns>
+        
         public BulkDeleteResponse PostExternalcontactsBulkOrganizationsRemove (BulkIdsRequest body)
         {
              ApiResponse<BulkDeleteResponse> localVarResponse = PostExternalcontactsBulkOrganizationsRemoveWithHttpInfo(body);
@@ -12671,6 +13140,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization ids</param>
         /// <returns>ApiResponse of BulkDeleteResponse</returns>
+        
         public ApiResponse< BulkDeleteResponse > PostExternalcontactsBulkOrganizationsRemoveWithHttpInfo (BulkIdsRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -12758,6 +13228,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization ids</param>
         /// <returns>Task of BulkDeleteResponse</returns>
+        
         public async System.Threading.Tasks.Task<BulkDeleteResponse> PostExternalcontactsBulkOrganizationsRemoveAsync (BulkIdsRequest body)
         {
              ApiResponse<BulkDeleteResponse> localVarResponse = await PostExternalcontactsBulkOrganizationsRemoveAsyncWithHttpInfo(body);
@@ -12771,6 +13242,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organization ids</param>
         /// <returns>Task of ApiResponse (BulkDeleteResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<BulkDeleteResponse>> PostExternalcontactsBulkOrganizationsRemoveAsyncWithHttpInfo (BulkIdsRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -12860,6 +13332,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organizations</param>
         /// <returns>BulkOrganizationsResponse</returns>
+        
         public BulkOrganizationsResponse PostExternalcontactsBulkOrganizationsUpdate (BulkOrganizationsRequest body)
         {
              ApiResponse<BulkOrganizationsResponse> localVarResponse = PostExternalcontactsBulkOrganizationsUpdateWithHttpInfo(body);
@@ -12872,6 +13345,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organizations</param>
         /// <returns>ApiResponse of BulkOrganizationsResponse</returns>
+        
         public ApiResponse< BulkOrganizationsResponse > PostExternalcontactsBulkOrganizationsUpdateWithHttpInfo (BulkOrganizationsRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -12959,6 +13433,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organizations</param>
         /// <returns>Task of BulkOrganizationsResponse</returns>
+        
         public async System.Threading.Tasks.Task<BulkOrganizationsResponse> PostExternalcontactsBulkOrganizationsUpdateAsync (BulkOrganizationsRequest body)
         {
              ApiResponse<BulkOrganizationsResponse> localVarResponse = await PostExternalcontactsBulkOrganizationsUpdateAsyncWithHttpInfo(body);
@@ -12972,6 +13447,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Organizations</param>
         /// <returns>Task of ApiResponse (BulkOrganizationsResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<BulkOrganizationsResponse>> PostExternalcontactsBulkOrganizationsUpdateAsyncWithHttpInfo (BulkOrganizationsRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -13061,6 +13537,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationships ids</param>
         /// <returns>BulkFetchRelationshipsResponse</returns>
+        
         public BulkFetchRelationshipsResponse PostExternalcontactsBulkRelationships (BulkIdsRequest body)
         {
              ApiResponse<BulkFetchRelationshipsResponse> localVarResponse = PostExternalcontactsBulkRelationshipsWithHttpInfo(body);
@@ -13073,6 +13550,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationships ids</param>
         /// <returns>ApiResponse of BulkFetchRelationshipsResponse</returns>
+        
         public ApiResponse< BulkFetchRelationshipsResponse > PostExternalcontactsBulkRelationshipsWithHttpInfo (BulkIdsRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -13160,6 +13638,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationships ids</param>
         /// <returns>Task of BulkFetchRelationshipsResponse</returns>
+        
         public async System.Threading.Tasks.Task<BulkFetchRelationshipsResponse> PostExternalcontactsBulkRelationshipsAsync (BulkIdsRequest body)
         {
              ApiResponse<BulkFetchRelationshipsResponse> localVarResponse = await PostExternalcontactsBulkRelationshipsAsyncWithHttpInfo(body);
@@ -13173,6 +13652,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationships ids</param>
         /// <returns>Task of ApiResponse (BulkFetchRelationshipsResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<BulkFetchRelationshipsResponse>> PostExternalcontactsBulkRelationshipsAsyncWithHttpInfo (BulkIdsRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -13262,6 +13742,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationships</param>
         /// <returns>BulkRelationshipsResponse</returns>
+        
         public BulkRelationshipsResponse PostExternalcontactsBulkRelationshipsAdd (BulkRelationshipsRequest body)
         {
              ApiResponse<BulkRelationshipsResponse> localVarResponse = PostExternalcontactsBulkRelationshipsAddWithHttpInfo(body);
@@ -13274,6 +13755,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationships</param>
         /// <returns>ApiResponse of BulkRelationshipsResponse</returns>
+        
         public ApiResponse< BulkRelationshipsResponse > PostExternalcontactsBulkRelationshipsAddWithHttpInfo (BulkRelationshipsRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -13361,6 +13843,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationships</param>
         /// <returns>Task of BulkRelationshipsResponse</returns>
+        
         public async System.Threading.Tasks.Task<BulkRelationshipsResponse> PostExternalcontactsBulkRelationshipsAddAsync (BulkRelationshipsRequest body)
         {
              ApiResponse<BulkRelationshipsResponse> localVarResponse = await PostExternalcontactsBulkRelationshipsAddAsyncWithHttpInfo(body);
@@ -13374,6 +13857,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationships</param>
         /// <returns>Task of ApiResponse (BulkRelationshipsResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<BulkRelationshipsResponse>> PostExternalcontactsBulkRelationshipsAddAsyncWithHttpInfo (BulkRelationshipsRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -13463,6 +13947,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationships ids</param>
         /// <returns>BulkDeleteResponse</returns>
+        
         public BulkDeleteResponse PostExternalcontactsBulkRelationshipsRemove (BulkIdsRequest body)
         {
              ApiResponse<BulkDeleteResponse> localVarResponse = PostExternalcontactsBulkRelationshipsRemoveWithHttpInfo(body);
@@ -13475,6 +13960,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationships ids</param>
         /// <returns>ApiResponse of BulkDeleteResponse</returns>
+        
         public ApiResponse< BulkDeleteResponse > PostExternalcontactsBulkRelationshipsRemoveWithHttpInfo (BulkIdsRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -13562,6 +14048,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationships ids</param>
         /// <returns>Task of BulkDeleteResponse</returns>
+        
         public async System.Threading.Tasks.Task<BulkDeleteResponse> PostExternalcontactsBulkRelationshipsRemoveAsync (BulkIdsRequest body)
         {
              ApiResponse<BulkDeleteResponse> localVarResponse = await PostExternalcontactsBulkRelationshipsRemoveAsyncWithHttpInfo(body);
@@ -13575,6 +14062,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationships ids</param>
         /// <returns>Task of ApiResponse (BulkDeleteResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<BulkDeleteResponse>> PostExternalcontactsBulkRelationshipsRemoveAsyncWithHttpInfo (BulkIdsRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -13664,6 +14152,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationships</param>
         /// <returns>BulkRelationshipsResponse</returns>
+        
         public BulkRelationshipsResponse PostExternalcontactsBulkRelationshipsUpdate (BulkRelationshipsRequest body)
         {
              ApiResponse<BulkRelationshipsResponse> localVarResponse = PostExternalcontactsBulkRelationshipsUpdateWithHttpInfo(body);
@@ -13676,6 +14165,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationships</param>
         /// <returns>ApiResponse of BulkRelationshipsResponse</returns>
+        
         public ApiResponse< BulkRelationshipsResponse > PostExternalcontactsBulkRelationshipsUpdateWithHttpInfo (BulkRelationshipsRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -13763,6 +14253,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationships</param>
         /// <returns>Task of BulkRelationshipsResponse</returns>
+        
         public async System.Threading.Tasks.Task<BulkRelationshipsResponse> PostExternalcontactsBulkRelationshipsUpdateAsync (BulkRelationshipsRequest body)
         {
              ApiResponse<BulkRelationshipsResponse> localVarResponse = await PostExternalcontactsBulkRelationshipsUpdateAsyncWithHttpInfo(body);
@@ -13776,6 +14267,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationships</param>
         /// <returns>Task of ApiResponse (BulkRelationshipsResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<BulkRelationshipsResponse>> PostExternalcontactsBulkRelationshipsUpdateAsyncWithHttpInfo (BulkRelationshipsRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -13866,6 +14358,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>Note</returns>
+        
         public Note PostExternalcontactsContactNotes (string contactId, Note body)
         {
              ApiResponse<Note> localVarResponse = PostExternalcontactsContactNotesWithHttpInfo(contactId, body);
@@ -13879,6 +14372,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>ApiResponse of Note</returns>
+        
         public ApiResponse< Note > PostExternalcontactsContactNotesWithHttpInfo (string contactId, Note body)
         { 
             // verify the required parameter 'contactId' is set
@@ -13971,6 +14465,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of Note</returns>
+        
         public async System.Threading.Tasks.Task<Note> PostExternalcontactsContactNotesAsync (string contactId, Note body)
         {
              ApiResponse<Note> localVarResponse = await PostExternalcontactsContactNotesAsyncWithHttpInfo(contactId, body);
@@ -13985,6 +14480,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of ApiResponse (Note)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Note>> PostExternalcontactsContactNotesAsyncWithHttpInfo (string contactId, Note body)
         { 
             // verify the required parameter 'contactId' is set
@@ -14079,6 +14575,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>ExternalContact</returns>
+        
         public ExternalContact PostExternalcontactsContactPromotion (string contactId)
         {
              ApiResponse<ExternalContact> localVarResponse = PostExternalcontactsContactPromotionWithHttpInfo(contactId);
@@ -14091,6 +14588,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>ApiResponse of ExternalContact</returns>
+        
         public ApiResponse< ExternalContact > PostExternalcontactsContactPromotionWithHttpInfo (string contactId)
         { 
             // verify the required parameter 'contactId' is set
@@ -14173,6 +14671,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>Task of ExternalContact</returns>
+        
         public async System.Threading.Tasks.Task<ExternalContact> PostExternalcontactsContactPromotionAsync (string contactId)
         {
              ApiResponse<ExternalContact> localVarResponse = await PostExternalcontactsContactPromotionAsyncWithHttpInfo(contactId);
@@ -14186,6 +14685,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PostExternalcontactsContactPromotionAsyncWithHttpInfo (string contactId)
         { 
             // verify the required parameter 'contactId' is set
@@ -14270,6 +14770,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ExternalContact</param>
         /// <returns>ExternalContact</returns>
+        
         public ExternalContact PostExternalcontactsContacts (ExternalContact body)
         {
              ApiResponse<ExternalContact> localVarResponse = PostExternalcontactsContactsWithHttpInfo(body);
@@ -14282,6 +14783,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ExternalContact</param>
         /// <returns>ApiResponse of ExternalContact</returns>
+        
         public ApiResponse< ExternalContact > PostExternalcontactsContactsWithHttpInfo (ExternalContact body)
         { 
             // verify the required parameter 'body' is set
@@ -14369,6 +14871,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of ExternalContact</returns>
+        
         public async System.Threading.Tasks.Task<ExternalContact> PostExternalcontactsContactsAsync (ExternalContact body)
         {
              ApiResponse<ExternalContact> localVarResponse = await PostExternalcontactsContactsAsyncWithHttpInfo(body);
@@ -14382,6 +14885,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PostExternalcontactsContactsAsyncWithHttpInfo (ExternalContact body)
         { 
             // verify the required parameter 'body' is set
@@ -14471,6 +14975,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Schema</param>
         /// <returns>DataSchema</returns>
+        
         public DataSchema PostExternalcontactsContactsSchemas (DataSchema body)
         {
              ApiResponse<DataSchema> localVarResponse = PostExternalcontactsContactsSchemasWithHttpInfo(body);
@@ -14483,6 +14988,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Schema</param>
         /// <returns>ApiResponse of DataSchema</returns>
+        
         public ApiResponse< DataSchema > PostExternalcontactsContactsSchemasWithHttpInfo (DataSchema body)
         { 
             // verify the required parameter 'body' is set
@@ -14570,6 +15076,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Schema</param>
         /// <returns>Task of DataSchema</returns>
+        
         public async System.Threading.Tasks.Task<DataSchema> PostExternalcontactsContactsSchemasAsync (DataSchema body)
         {
              ApiResponse<DataSchema> localVarResponse = await PostExternalcontactsContactsSchemasAsyncWithHttpInfo(body);
@@ -14583,6 +15090,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Schema</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DataSchema>> PostExternalcontactsContactsSchemasAsyncWithHttpInfo (DataSchema body)
         { 
             // verify the required parameter 'body' is set
@@ -14672,6 +15180,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier"></param>
         /// <returns>ExternalContact</returns>
+        
         public ExternalContact PostExternalcontactsIdentifierlookup (ContactIdentifier identifier)
         {
              ApiResponse<ExternalContact> localVarResponse = PostExternalcontactsIdentifierlookupWithHttpInfo(identifier);
@@ -14684,6 +15193,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier"></param>
         /// <returns>ApiResponse of ExternalContact</returns>
+        
         public ApiResponse< ExternalContact > PostExternalcontactsIdentifierlookupWithHttpInfo (ContactIdentifier identifier)
         { 
             // verify the required parameter 'identifier' is set
@@ -14771,6 +15281,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier"></param>
         /// <returns>Task of ExternalContact</returns>
+        
         public async System.Threading.Tasks.Task<ExternalContact> PostExternalcontactsIdentifierlookupAsync (ContactIdentifier identifier)
         {
              ApiResponse<ExternalContact> localVarResponse = await PostExternalcontactsIdentifierlookupAsyncWithHttpInfo(identifier);
@@ -14784,6 +15295,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="identifier"></param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PostExternalcontactsIdentifierlookupAsyncWithHttpInfo (ContactIdentifier identifier)
         { 
             // verify the required parameter 'identifier' is set
@@ -14873,6 +15385,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">MergeRequest</param>
         /// <returns>ExternalContact</returns>
+        
         public ExternalContact PostExternalcontactsMergeContacts (MergeRequest body)
         {
              ApiResponse<ExternalContact> localVarResponse = PostExternalcontactsMergeContactsWithHttpInfo(body);
@@ -14885,6 +15398,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">MergeRequest</param>
         /// <returns>ApiResponse of ExternalContact</returns>
+        
         public ApiResponse< ExternalContact > PostExternalcontactsMergeContactsWithHttpInfo (MergeRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -14972,6 +15486,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">MergeRequest</param>
         /// <returns>Task of ExternalContact</returns>
+        
         public async System.Threading.Tasks.Task<ExternalContact> PostExternalcontactsMergeContactsAsync (MergeRequest body)
         {
              ApiResponse<ExternalContact> localVarResponse = await PostExternalcontactsMergeContactsAsyncWithHttpInfo(body);
@@ -14985,6 +15500,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">MergeRequest</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PostExternalcontactsMergeContactsAsyncWithHttpInfo (MergeRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -15075,6 +15591,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>Note</returns>
+        
         public Note PostExternalcontactsOrganizationNotes (string externalOrganizationId, Note body)
         {
              ApiResponse<Note> localVarResponse = PostExternalcontactsOrganizationNotesWithHttpInfo(externalOrganizationId, body);
@@ -15088,6 +15605,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>ApiResponse of Note</returns>
+        
         public ApiResponse< Note > PostExternalcontactsOrganizationNotesWithHttpInfo (string externalOrganizationId, Note body)
         { 
             // verify the required parameter 'externalOrganizationId' is set
@@ -15180,6 +15698,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of Note</returns>
+        
         public async System.Threading.Tasks.Task<Note> PostExternalcontactsOrganizationNotesAsync (string externalOrganizationId, Note body)
         {
              ApiResponse<Note> localVarResponse = await PostExternalcontactsOrganizationNotesAsyncWithHttpInfo(externalOrganizationId, body);
@@ -15194,6 +15713,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of ApiResponse (Note)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Note>> PostExternalcontactsOrganizationNotesAsyncWithHttpInfo (string externalOrganizationId, Note body)
         { 
             // verify the required parameter 'externalOrganizationId' is set
@@ -15288,6 +15808,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ExternalOrganization</param>
         /// <returns>ExternalOrganization</returns>
+        
         public ExternalOrganization PostExternalcontactsOrganizations (ExternalOrganization body)
         {
              ApiResponse<ExternalOrganization> localVarResponse = PostExternalcontactsOrganizationsWithHttpInfo(body);
@@ -15300,6 +15821,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ExternalOrganization</param>
         /// <returns>ApiResponse of ExternalOrganization</returns>
+        
         public ApiResponse< ExternalOrganization > PostExternalcontactsOrganizationsWithHttpInfo (ExternalOrganization body)
         { 
             // verify the required parameter 'body' is set
@@ -15387,6 +15909,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ExternalOrganization</param>
         /// <returns>Task of ExternalOrganization</returns>
+        
         public async System.Threading.Tasks.Task<ExternalOrganization> PostExternalcontactsOrganizationsAsync (ExternalOrganization body)
         {
              ApiResponse<ExternalOrganization> localVarResponse = await PostExternalcontactsOrganizationsAsyncWithHttpInfo(body);
@@ -15400,6 +15923,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">ExternalOrganization</param>
         /// <returns>Task of ApiResponse (ExternalOrganization)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> PostExternalcontactsOrganizationsAsyncWithHttpInfo (ExternalOrganization body)
         { 
             // verify the required parameter 'body' is set
@@ -15489,6 +16013,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Schema</param>
         /// <returns>DataSchema</returns>
+        
         public DataSchema PostExternalcontactsOrganizationsSchemas (DataSchema body)
         {
              ApiResponse<DataSchema> localVarResponse = PostExternalcontactsOrganizationsSchemasWithHttpInfo(body);
@@ -15501,6 +16026,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Schema</param>
         /// <returns>ApiResponse of DataSchema</returns>
+        
         public ApiResponse< DataSchema > PostExternalcontactsOrganizationsSchemasWithHttpInfo (DataSchema body)
         { 
             // verify the required parameter 'body' is set
@@ -15588,6 +16114,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Schema</param>
         /// <returns>Task of DataSchema</returns>
+        
         public async System.Threading.Tasks.Task<DataSchema> PostExternalcontactsOrganizationsSchemasAsync (DataSchema body)
         {
              ApiResponse<DataSchema> localVarResponse = await PostExternalcontactsOrganizationsSchemasAsyncWithHttpInfo(body);
@@ -15601,6 +16128,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Schema</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DataSchema>> PostExternalcontactsOrganizationsSchemasAsyncWithHttpInfo (DataSchema body)
         { 
             // verify the required parameter 'body' is set
@@ -15690,6 +16218,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationship</param>
         /// <returns>Relationship</returns>
+        
         public Relationship PostExternalcontactsRelationships (Relationship body)
         {
              ApiResponse<Relationship> localVarResponse = PostExternalcontactsRelationshipsWithHttpInfo(body);
@@ -15702,6 +16231,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationship</param>
         /// <returns>ApiResponse of Relationship</returns>
+        
         public ApiResponse< Relationship > PostExternalcontactsRelationshipsWithHttpInfo (Relationship body)
         { 
             // verify the required parameter 'body' is set
@@ -15789,6 +16319,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationship</param>
         /// <returns>Task of Relationship</returns>
+        
         public async System.Threading.Tasks.Task<Relationship> PostExternalcontactsRelationshipsAsync (Relationship body)
         {
              ApiResponse<Relationship> localVarResponse = await PostExternalcontactsRelationshipsAsyncWithHttpInfo(body);
@@ -15802,6 +16333,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Relationship</param>
         /// <returns>Task of ApiResponse (Relationship)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Relationship>> PostExternalcontactsRelationshipsAsyncWithHttpInfo (Relationship body)
         { 
             // verify the required parameter 'body' is set
@@ -15892,6 +16424,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>ExternalContact</returns>
+        
         public ExternalContact PutExternalcontactsContact (string contactId, ExternalContact body)
         {
              ApiResponse<ExternalContact> localVarResponse = PutExternalcontactsContactWithHttpInfo(contactId, body);
@@ -15905,6 +16438,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>ApiResponse of ExternalContact</returns>
+        
         public ApiResponse< ExternalContact > PutExternalcontactsContactWithHttpInfo (string contactId, ExternalContact body)
         { 
             // verify the required parameter 'contactId' is set
@@ -15997,6 +16531,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of ExternalContact</returns>
+        
         public async System.Threading.Tasks.Task<ExternalContact> PutExternalcontactsContactAsync (string contactId, ExternalContact body)
         {
              ApiResponse<ExternalContact> localVarResponse = await PutExternalcontactsContactAsyncWithHttpInfo(contactId, body);
@@ -16011,6 +16546,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PutExternalcontactsContactAsyncWithHttpInfo (string contactId, ExternalContact body)
         { 
             // verify the required parameter 'contactId' is set
@@ -16107,6 +16643,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="body">Note</param>
         /// <returns>Note</returns>
+        
         public Note PutExternalcontactsContactNote (string contactId, string noteId, Note body)
         {
              ApiResponse<Note> localVarResponse = PutExternalcontactsContactNoteWithHttpInfo(contactId, noteId, body);
@@ -16121,6 +16658,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="body">Note</param>
         /// <returns>ApiResponse of Note</returns>
+        
         public ApiResponse< Note > PutExternalcontactsContactNoteWithHttpInfo (string contactId, string noteId, Note body)
         { 
             // verify the required parameter 'contactId' is set
@@ -16218,6 +16756,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="body">Note</param>
         /// <returns>Task of Note</returns>
+        
         public async System.Threading.Tasks.Task<Note> PutExternalcontactsContactNoteAsync (string contactId, string noteId, Note body)
         {
              ApiResponse<Note> localVarResponse = await PutExternalcontactsContactNoteAsyncWithHttpInfo(contactId, noteId, body);
@@ -16233,6 +16772,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="body">Note</param>
         /// <returns>Task of ApiResponse (Note)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Note>> PutExternalcontactsContactNoteAsyncWithHttpInfo (string contactId, string noteId, Note body)
         { 
             // verify the required parameter 'contactId' is set
@@ -16333,6 +16873,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <param name="body">Data Schema</param>
         /// <returns>DataSchema</returns>
+        
         public DataSchema PutExternalcontactsContactsSchema (string schemaId, DataSchema body)
         {
              ApiResponse<DataSchema> localVarResponse = PutExternalcontactsContactsSchemaWithHttpInfo(schemaId, body);
@@ -16346,6 +16887,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <param name="body">Data Schema</param>
         /// <returns>ApiResponse of DataSchema</returns>
+        
         public ApiResponse< DataSchema > PutExternalcontactsContactsSchemaWithHttpInfo (string schemaId, DataSchema body)
         { 
             // verify the required parameter 'schemaId' is set
@@ -16438,6 +16980,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <param name="body">Data Schema</param>
         /// <returns>Task of DataSchema</returns>
+        
         public async System.Threading.Tasks.Task<DataSchema> PutExternalcontactsContactsSchemaAsync (string schemaId, DataSchema body)
         {
              ApiResponse<DataSchema> localVarResponse = await PutExternalcontactsContactsSchemaAsyncWithHttpInfo(schemaId, body);
@@ -16452,6 +16995,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <param name="body">Data Schema</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DataSchema>> PutExternalcontactsContactsSchemaAsyncWithHttpInfo (string schemaId, DataSchema body)
         { 
             // verify the required parameter 'schemaId' is set
@@ -16547,6 +17091,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="body">ConversationAssociation</param>
         /// <returns></returns>
+        
         public void PutExternalcontactsConversation (string conversationId, ConversationAssociation body)
         {
              PutExternalcontactsConversationWithHttpInfo(conversationId, body);
@@ -16559,6 +17104,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="body">ConversationAssociation</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> PutExternalcontactsConversationWithHttpInfo (string conversationId, ConversationAssociation body)
         { 
             // verify the required parameter 'conversationId' is set
@@ -16651,6 +17197,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="body">ConversationAssociation</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task PutExternalcontactsConversationAsync (string conversationId, ConversationAssociation body)
         {
              await PutExternalcontactsConversationAsyncWithHttpInfo(conversationId, body);
@@ -16664,6 +17211,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="body">ConversationAssociation</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PutExternalcontactsConversationAsyncWithHttpInfo (string conversationId, ConversationAssociation body)
         { 
             // verify the required parameter 'conversationId' is set
@@ -16759,6 +17307,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="body">ExternalOrganization</param>
         /// <returns>ExternalOrganization</returns>
+        
         public ExternalOrganization PutExternalcontactsOrganization (string externalOrganizationId, ExternalOrganization body)
         {
              ApiResponse<ExternalOrganization> localVarResponse = PutExternalcontactsOrganizationWithHttpInfo(externalOrganizationId, body);
@@ -16772,6 +17321,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="body">ExternalOrganization</param>
         /// <returns>ApiResponse of ExternalOrganization</returns>
+        
         public ApiResponse< ExternalOrganization > PutExternalcontactsOrganizationWithHttpInfo (string externalOrganizationId, ExternalOrganization body)
         { 
             // verify the required parameter 'externalOrganizationId' is set
@@ -16864,6 +17414,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="body">ExternalOrganization</param>
         /// <returns>Task of ExternalOrganization</returns>
+        
         public async System.Threading.Tasks.Task<ExternalOrganization> PutExternalcontactsOrganizationAsync (string externalOrganizationId, ExternalOrganization body)
         {
              ApiResponse<ExternalOrganization> localVarResponse = await PutExternalcontactsOrganizationAsyncWithHttpInfo(externalOrganizationId, body);
@@ -16878,6 +17429,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="body">ExternalOrganization</param>
         /// <returns>Task of ApiResponse (ExternalOrganization)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> PutExternalcontactsOrganizationAsyncWithHttpInfo (string externalOrganizationId, ExternalOrganization body)
         { 
             // verify the required parameter 'externalOrganizationId' is set
@@ -16974,6 +17526,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="body">Note</param>
         /// <returns>Note</returns>
+        
         public Note PutExternalcontactsOrganizationNote (string externalOrganizationId, string noteId, Note body)
         {
              ApiResponse<Note> localVarResponse = PutExternalcontactsOrganizationNoteWithHttpInfo(externalOrganizationId, noteId, body);
@@ -16988,6 +17541,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="body">Note</param>
         /// <returns>ApiResponse of Note</returns>
+        
         public ApiResponse< Note > PutExternalcontactsOrganizationNoteWithHttpInfo (string externalOrganizationId, string noteId, Note body)
         { 
             // verify the required parameter 'externalOrganizationId' is set
@@ -17085,6 +17639,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="body">Note</param>
         /// <returns>Task of Note</returns>
+        
         public async System.Threading.Tasks.Task<Note> PutExternalcontactsOrganizationNoteAsync (string externalOrganizationId, string noteId, Note body)
         {
              ApiResponse<Note> localVarResponse = await PutExternalcontactsOrganizationNoteAsyncWithHttpInfo(externalOrganizationId, noteId, body);
@@ -17100,6 +17655,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="body">Note</param>
         /// <returns>Task of ApiResponse (Note)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Note>> PutExternalcontactsOrganizationNoteAsyncWithHttpInfo (string externalOrganizationId, string noteId, Note body)
         { 
             // verify the required parameter 'externalOrganizationId' is set
@@ -17200,6 +17756,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="trustorId">Trustor ID</param>
         /// <returns>ExternalOrganizationTrustorLink</returns>
+        
         public ExternalOrganizationTrustorLink PutExternalcontactsOrganizationTrustorTrustorId (string externalOrganizationId, string trustorId)
         {
              ApiResponse<ExternalOrganizationTrustorLink> localVarResponse = PutExternalcontactsOrganizationTrustorTrustorIdWithHttpInfo(externalOrganizationId, trustorId);
@@ -17213,6 +17770,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="trustorId">Trustor ID</param>
         /// <returns>ApiResponse of ExternalOrganizationTrustorLink</returns>
+        
         public ApiResponse< ExternalOrganizationTrustorLink > PutExternalcontactsOrganizationTrustorTrustorIdWithHttpInfo (string externalOrganizationId, string trustorId)
         { 
             // verify the required parameter 'externalOrganizationId' is set
@@ -17300,6 +17858,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="trustorId">Trustor ID</param>
         /// <returns>Task of ExternalOrganizationTrustorLink</returns>
+        
         public async System.Threading.Tasks.Task<ExternalOrganizationTrustorLink> PutExternalcontactsOrganizationTrustorTrustorIdAsync (string externalOrganizationId, string trustorId)
         {
              ApiResponse<ExternalOrganizationTrustorLink> localVarResponse = await PutExternalcontactsOrganizationTrustorTrustorIdAsyncWithHttpInfo(externalOrganizationId, trustorId);
@@ -17314,6 +17873,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="trustorId">Trustor ID</param>
         /// <returns>Task of ApiResponse (ExternalOrganizationTrustorLink)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ExternalOrganizationTrustorLink>> PutExternalcontactsOrganizationTrustorTrustorIdAsyncWithHttpInfo (string externalOrganizationId, string trustorId)
         { 
             // verify the required parameter 'externalOrganizationId' is set
@@ -17404,6 +17964,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <param name="body">Data Schema</param>
         /// <returns>DataSchema</returns>
+        
         public DataSchema PutExternalcontactsOrganizationsSchema (string schemaId, DataSchema body)
         {
              ApiResponse<DataSchema> localVarResponse = PutExternalcontactsOrganizationsSchemaWithHttpInfo(schemaId, body);
@@ -17417,6 +17978,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <param name="body">Data Schema</param>
         /// <returns>ApiResponse of DataSchema</returns>
+        
         public ApiResponse< DataSchema > PutExternalcontactsOrganizationsSchemaWithHttpInfo (string schemaId, DataSchema body)
         { 
             // verify the required parameter 'schemaId' is set
@@ -17509,6 +18071,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <param name="body">Data Schema</param>
         /// <returns>Task of DataSchema</returns>
+        
         public async System.Threading.Tasks.Task<DataSchema> PutExternalcontactsOrganizationsSchemaAsync (string schemaId, DataSchema body)
         {
              ApiResponse<DataSchema> localVarResponse = await PutExternalcontactsOrganizationsSchemaAsyncWithHttpInfo(schemaId, body);
@@ -17523,6 +18086,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="schemaId">Schema ID</param>
         /// <param name="body">Data Schema</param>
         /// <returns>Task of ApiResponse (DataSchema)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DataSchema>> PutExternalcontactsOrganizationsSchemaAsyncWithHttpInfo (string schemaId, DataSchema body)
         { 
             // verify the required parameter 'schemaId' is set
@@ -17618,6 +18182,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationshipId">Relationship Id</param>
         /// <param name="body">Relationship</param>
         /// <returns>Relationship</returns>
+        
         public Relationship PutExternalcontactsRelationship (string relationshipId, Relationship body)
         {
              ApiResponse<Relationship> localVarResponse = PutExternalcontactsRelationshipWithHttpInfo(relationshipId, body);
@@ -17631,6 +18196,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationshipId">Relationship Id</param>
         /// <param name="body">Relationship</param>
         /// <returns>ApiResponse of Relationship</returns>
+        
         public ApiResponse< Relationship > PutExternalcontactsRelationshipWithHttpInfo (string relationshipId, Relationship body)
         { 
             // verify the required parameter 'relationshipId' is set
@@ -17723,6 +18289,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationshipId">Relationship Id</param>
         /// <param name="body">Relationship</param>
         /// <returns>Task of Relationship</returns>
+        
         public async System.Threading.Tasks.Task<Relationship> PutExternalcontactsRelationshipAsync (string relationshipId, Relationship body)
         {
              ApiResponse<Relationship> localVarResponse = await PutExternalcontactsRelationshipAsyncWithHttpInfo(relationshipId, body);
@@ -17737,6 +18304,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="relationshipId">Relationship Id</param>
         /// <param name="body">Relationship</param>
         /// <returns>Task of ApiResponse (Relationship)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Relationship>> PutExternalcontactsRelationshipAsyncWithHttpInfo (string relationshipId, Relationship body)
         { 
             // verify the required parameter 'relationshipId' is set

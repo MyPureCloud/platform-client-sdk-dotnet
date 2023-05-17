@@ -25,6 +25,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <returns>GKNDocumentationSearchResponse</returns>
+        
         GKNDocumentationSearchResponse GetDocumentationGknSearch (string q64);
 
         /// <summary>
@@ -36,6 +37,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <returns>ApiResponse of GKNDocumentationSearchResponse</returns>
+        
         ApiResponse<GKNDocumentationSearchResponse> GetDocumentationGknSearchWithHttpInfo (string q64);
 
         /// <summary>
@@ -47,6 +49,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <returns>DocumentationSearchResponse</returns>
+        
         DocumentationSearchResponse GetDocumentationSearch (string q64);
 
         /// <summary>
@@ -58,6 +61,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <returns>ApiResponse of DocumentationSearchResponse</returns>
+        
         ApiResponse<DocumentationSearchResponse> GetDocumentationSearchWithHttpInfo (string q64);
 
         /// <summary>
@@ -70,6 +74,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>GroupsSearchResponse</returns>
+        
         GroupsSearchResponse GetGroupsSearch (string q64, List<string> expand = null);
 
         /// <summary>
@@ -82,6 +87,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>ApiResponse of GroupsSearchResponse</returns>
+        
         ApiResponse<GroupsSearchResponse> GetGroupsSearchWithHttpInfo (string q64, List<string> expand = null);
 
         /// <summary>
@@ -94,6 +100,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q64">q64</param>
         /// <param name="expand">Provides more details about a specified resource (optional)</param>
         /// <returns>LocationsSearchResponse</returns>
+        
         LocationsSearchResponse GetLocationsSearch (string q64, List<string> expand = null);
 
         /// <summary>
@@ -106,6 +113,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q64">q64</param>
         /// <param name="expand">Provides more details about a specified resource (optional)</param>
         /// <returns>ApiResponse of LocationsSearchResponse</returns>
+        
         ApiResponse<LocationsSearchResponse> GetLocationsSearchWithHttpInfo (string q64, List<string> expand = null);
 
         /// <summary>
@@ -119,6 +127,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
+        
         JsonNodeSearchResponse GetSearch (string q64, List<string> expand = null, bool? profile = null);
 
         /// <summary>
@@ -132,6 +141,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
+        
         ApiResponse<JsonNodeSearchResponse> GetSearchWithHttpInfo (string q64, List<string> expand = null, bool? profile = null);
 
         /// <summary>
@@ -145,6 +155,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
+        
         JsonNodeSearchResponse GetSearchSuggest (string q64, List<string> expand = null, bool? profile = null);
 
         /// <summary>
@@ -158,6 +169,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
+        
         ApiResponse<JsonNodeSearchResponse> GetSearchSuggestWithHttpInfo (string q64, List<string> expand = null, bool? profile = null);
 
         /// <summary>
@@ -171,6 +183,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">expand (optional)</param>
         /// <param name="integrationPresenceSource">integrationPresenceSource (optional)</param>
         /// <returns>UsersSearchResponse</returns>
+        
         UsersSearchResponse GetUsersSearch (string q64, List<string> expand = null, string integrationPresenceSource = null);
 
         /// <summary>
@@ -184,6 +197,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">expand (optional)</param>
         /// <param name="integrationPresenceSource">integrationPresenceSource (optional)</param>
         /// <returns>ApiResponse of UsersSearchResponse</returns>
+        
         ApiResponse<UsersSearchResponse> GetUsersSearchWithHttpInfo (string q64, List<string> expand = null, string integrationPresenceSource = null);
 
         /// <summary>
@@ -196,6 +210,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>VoicemailsSearchResponse</returns>
+        
         VoicemailsSearchResponse GetVoicemailSearch (string q64, List<string> expand = null);
 
         /// <summary>
@@ -208,6 +223,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>ApiResponse of VoicemailsSearchResponse</returns>
+        
         ApiResponse<VoicemailsSearchResponse> GetVoicemailSearchWithHttpInfo (string q64, List<string> expand = null);
 
         /// <summary>
@@ -219,6 +235,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>AnalyticsConversationWithoutAttributesMultiGetResponse</returns>
+        
         AnalyticsConversationWithoutAttributesMultiGetResponse PostAnalyticsConversationsTranscriptsQuery (TranscriptConversationDetailSearchRequest body);
 
         /// <summary>
@@ -230,6 +247,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of AnalyticsConversationWithoutAttributesMultiGetResponse</returns>
+        
         ApiResponse<AnalyticsConversationWithoutAttributesMultiGetResponse> PostAnalyticsConversationsTranscriptsQueryWithHttpInfo (TranscriptConversationDetailSearchRequest body);
 
         /// <summary>
@@ -241,6 +259,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>JsonCursorSearchResponse</returns>
+        
         JsonCursorSearchResponse PostConversationsParticipantsAttributesSearch (ConversationParticipantSearchRequest body);
 
         /// <summary>
@@ -252,6 +271,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of JsonCursorSearchResponse</returns>
+        
         ApiResponse<JsonCursorSearchResponse> PostConversationsParticipantsAttributesSearchWithHttpInfo (ConversationParticipantSearchRequest body);
 
         /// <summary>
@@ -263,6 +283,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>GKNDocumentationSearchResponse</returns>
+        
         GKNDocumentationSearchResponse PostDocumentationGknSearch (GKNDocumentationSearchRequest body);
 
         /// <summary>
@@ -274,6 +295,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of GKNDocumentationSearchResponse</returns>
+        
         ApiResponse<GKNDocumentationSearchResponse> PostDocumentationGknSearchWithHttpInfo (GKNDocumentationSearchRequest body);
 
         /// <summary>
@@ -285,6 +307,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>DocumentationSearchResponse</returns>
+        
         DocumentationSearchResponse PostDocumentationSearch (DocumentationSearchRequest body);
 
         /// <summary>
@@ -296,6 +319,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of DocumentationSearchResponse</returns>
+        
         ApiResponse<DocumentationSearchResponse> PostDocumentationSearchWithHttpInfo (DocumentationSearchRequest body);
 
         /// <summary>
@@ -307,6 +331,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>GroupsSearchResponse</returns>
+        
         GroupsSearchResponse PostGroupsSearch (GroupSearchRequest body);
 
         /// <summary>
@@ -318,6 +343,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of GroupsSearchResponse</returns>
+        
         ApiResponse<GroupsSearchResponse> PostGroupsSearchWithHttpInfo (GroupSearchRequest body);
 
         /// <summary>
@@ -330,6 +356,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>KnowledgeSearchResponse</returns>
+        
         KnowledgeSearchResponse PostKnowledgeKnowledgebaseSearch (string knowledgeBaseId, KnowledgeSearchRequest body = null);
 
         /// <summary>
@@ -342,6 +369,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of KnowledgeSearchResponse</returns>
+        
         ApiResponse<KnowledgeSearchResponse> PostKnowledgeKnowledgebaseSearchWithHttpInfo (string knowledgeBaseId, KnowledgeSearchRequest body = null);
 
         /// <summary>
@@ -353,6 +381,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>LocationsSearchResponse</returns>
+        
         LocationsSearchResponse PostLocationsSearch (LocationSearchRequest body);
 
         /// <summary>
@@ -364,6 +393,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of LocationsSearchResponse</returns>
+        
         ApiResponse<LocationsSearchResponse> PostLocationsSearchWithHttpInfo (LocationSearchRequest body);
 
         /// <summary>
@@ -376,6 +406,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
+        
         JsonNodeSearchResponse PostSearch (SearchRequest body, bool? profile = null);
 
         /// <summary>
@@ -388,6 +419,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
+        
         ApiResponse<JsonNodeSearchResponse> PostSearchWithHttpInfo (SearchRequest body, bool? profile = null);
 
         /// <summary>
@@ -400,6 +432,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
+        
         JsonNodeSearchResponse PostSearchSuggest (SuggestSearchRequest body, bool? profile = null);
 
         /// <summary>
@@ -412,6 +445,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
+        
         ApiResponse<JsonNodeSearchResponse> PostSearchSuggestWithHttpInfo (SuggestSearchRequest body, bool? profile = null);
 
         /// <summary>
@@ -423,6 +457,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>JsonSearchResponse</returns>
+        
         JsonSearchResponse PostSpeechandtextanalyticsTranscriptsSearch (TranscriptSearchRequest body);
 
         /// <summary>
@@ -434,6 +469,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of JsonSearchResponse</returns>
+        
         ApiResponse<JsonSearchResponse> PostSpeechandtextanalyticsTranscriptsSearchWithHttpInfo (TranscriptSearchRequest body);
 
         /// <summary>
@@ -445,6 +481,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>TeamsSearchResponse</returns>
+        
         TeamsSearchResponse PostTeamsSearch (TeamSearchRequest body);
 
         /// <summary>
@@ -456,6 +493,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of TeamsSearchResponse</returns>
+        
         ApiResponse<TeamsSearchResponse> PostTeamsSearchWithHttpInfo (TeamSearchRequest body);
 
         /// <summary>
@@ -467,6 +505,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>UsersSearchResponse</returns>
+        
         UsersSearchResponse PostUsersSearch (UserSearchRequest body);
 
         /// <summary>
@@ -478,6 +517,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of UsersSearchResponse</returns>
+        
         ApiResponse<UsersSearchResponse> PostUsersSearchWithHttpInfo (UserSearchRequest body);
 
         /// <summary>
@@ -489,6 +529,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>UsersSearchResponse</returns>
+        
         UsersSearchResponse PostUsersSearchTeamsAssign (UserSearchRequest body);
 
         /// <summary>
@@ -500,6 +541,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of UsersSearchResponse</returns>
+        
         ApiResponse<UsersSearchResponse> PostUsersSearchTeamsAssignWithHttpInfo (UserSearchRequest body);
 
         /// <summary>
@@ -511,6 +553,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>VoicemailsSearchResponse</returns>
+        
         VoicemailsSearchResponse PostVoicemailSearch (VoicemailSearchRequest body);
 
         /// <summary>
@@ -522,6 +565,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of VoicemailsSearchResponse</returns>
+        
         ApiResponse<VoicemailsSearchResponse> PostVoicemailSearchWithHttpInfo (VoicemailSearchRequest body);
 
         #endregion Synchronous Operations
@@ -537,6 +581,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <returns>Task of GKNDocumentationSearchResponse</returns>
+        
         System.Threading.Tasks.Task<GKNDocumentationSearchResponse> GetDocumentationGknSearchAsync (string q64);
 
         /// <summary>
@@ -548,6 +593,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <returns>Task of ApiResponse (GKNDocumentationSearchResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<GKNDocumentationSearchResponse>> GetDocumentationGknSearchAsyncWithHttpInfo (string q64);
 
         /// <summary>
@@ -559,6 +605,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <returns>Task of DocumentationSearchResponse</returns>
+        
         System.Threading.Tasks.Task<DocumentationSearchResponse> GetDocumentationSearchAsync (string q64);
 
         /// <summary>
@@ -570,6 +617,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <returns>Task of ApiResponse (DocumentationSearchResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DocumentationSearchResponse>> GetDocumentationSearchAsyncWithHttpInfo (string q64);
 
         /// <summary>
@@ -582,6 +630,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of GroupsSearchResponse</returns>
+        
         System.Threading.Tasks.Task<GroupsSearchResponse> GetGroupsSearchAsync (string q64, List<string> expand = null);
 
         /// <summary>
@@ -594,6 +643,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of ApiResponse (GroupsSearchResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<GroupsSearchResponse>> GetGroupsSearchAsyncWithHttpInfo (string q64, List<string> expand = null);
 
         /// <summary>
@@ -606,6 +656,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q64">q64</param>
         /// <param name="expand">Provides more details about a specified resource (optional)</param>
         /// <returns>Task of LocationsSearchResponse</returns>
+        
         System.Threading.Tasks.Task<LocationsSearchResponse> GetLocationsSearchAsync (string q64, List<string> expand = null);
 
         /// <summary>
@@ -618,6 +669,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q64">q64</param>
         /// <param name="expand">Provides more details about a specified resource (optional)</param>
         /// <returns>Task of ApiResponse (LocationsSearchResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<LocationsSearchResponse>> GetLocationsSearchAsyncWithHttpInfo (string q64, List<string> expand = null);
 
         /// <summary>
@@ -631,6 +683,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
+        
         System.Threading.Tasks.Task<JsonNodeSearchResponse> GetSearchAsync (string q64, List<string> expand = null, bool? profile = null);
 
         /// <summary>
@@ -644,6 +697,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> GetSearchAsyncWithHttpInfo (string q64, List<string> expand = null, bool? profile = null);
 
         /// <summary>
@@ -657,6 +711,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
+        
         System.Threading.Tasks.Task<JsonNodeSearchResponse> GetSearchSuggestAsync (string q64, List<string> expand = null, bool? profile = null);
 
         /// <summary>
@@ -670,6 +725,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> GetSearchSuggestAsyncWithHttpInfo (string q64, List<string> expand = null, bool? profile = null);
 
         /// <summary>
@@ -683,6 +739,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">expand (optional)</param>
         /// <param name="integrationPresenceSource">integrationPresenceSource (optional)</param>
         /// <returns>Task of UsersSearchResponse</returns>
+        
         System.Threading.Tasks.Task<UsersSearchResponse> GetUsersSearchAsync (string q64, List<string> expand = null, string integrationPresenceSource = null);
 
         /// <summary>
@@ -696,6 +753,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">expand (optional)</param>
         /// <param name="integrationPresenceSource">integrationPresenceSource (optional)</param>
         /// <returns>Task of ApiResponse (UsersSearchResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> GetUsersSearchAsyncWithHttpInfo (string q64, List<string> expand = null, string integrationPresenceSource = null);
 
         /// <summary>
@@ -708,6 +766,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of VoicemailsSearchResponse</returns>
+        
         System.Threading.Tasks.Task<VoicemailsSearchResponse> GetVoicemailSearchAsync (string q64, List<string> expand = null);
 
         /// <summary>
@@ -720,6 +779,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of ApiResponse (VoicemailsSearchResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<VoicemailsSearchResponse>> GetVoicemailSearchAsyncWithHttpInfo (string q64, List<string> expand = null);
 
         /// <summary>
@@ -731,6 +791,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of AnalyticsConversationWithoutAttributesMultiGetResponse</returns>
+        
         System.Threading.Tasks.Task<AnalyticsConversationWithoutAttributesMultiGetResponse> PostAnalyticsConversationsTranscriptsQueryAsync (TranscriptConversationDetailSearchRequest body);
 
         /// <summary>
@@ -742,6 +803,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (AnalyticsConversationWithoutAttributesMultiGetResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<AnalyticsConversationWithoutAttributesMultiGetResponse>> PostAnalyticsConversationsTranscriptsQueryAsyncWithHttpInfo (TranscriptConversationDetailSearchRequest body);
 
         /// <summary>
@@ -753,6 +815,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of JsonCursorSearchResponse</returns>
+        
         System.Threading.Tasks.Task<JsonCursorSearchResponse> PostConversationsParticipantsAttributesSearchAsync (ConversationParticipantSearchRequest body);
 
         /// <summary>
@@ -764,6 +827,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (JsonCursorSearchResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<JsonCursorSearchResponse>> PostConversationsParticipantsAttributesSearchAsyncWithHttpInfo (ConversationParticipantSearchRequest body);
 
         /// <summary>
@@ -775,6 +839,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of GKNDocumentationSearchResponse</returns>
+        
         System.Threading.Tasks.Task<GKNDocumentationSearchResponse> PostDocumentationGknSearchAsync (GKNDocumentationSearchRequest body);
 
         /// <summary>
@@ -786,6 +851,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (GKNDocumentationSearchResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<GKNDocumentationSearchResponse>> PostDocumentationGknSearchAsyncWithHttpInfo (GKNDocumentationSearchRequest body);
 
         /// <summary>
@@ -797,6 +863,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of DocumentationSearchResponse</returns>
+        
         System.Threading.Tasks.Task<DocumentationSearchResponse> PostDocumentationSearchAsync (DocumentationSearchRequest body);
 
         /// <summary>
@@ -808,6 +875,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (DocumentationSearchResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<DocumentationSearchResponse>> PostDocumentationSearchAsyncWithHttpInfo (DocumentationSearchRequest body);
 
         /// <summary>
@@ -819,6 +887,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of GroupsSearchResponse</returns>
+        
         System.Threading.Tasks.Task<GroupsSearchResponse> PostGroupsSearchAsync (GroupSearchRequest body);
 
         /// <summary>
@@ -830,6 +899,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (GroupsSearchResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<GroupsSearchResponse>> PostGroupsSearchAsyncWithHttpInfo (GroupSearchRequest body);
 
         /// <summary>
@@ -842,6 +912,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of KnowledgeSearchResponse</returns>
+        
         System.Threading.Tasks.Task<KnowledgeSearchResponse> PostKnowledgeKnowledgebaseSearchAsync (string knowledgeBaseId, KnowledgeSearchRequest body = null);
 
         /// <summary>
@@ -854,6 +925,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (KnowledgeSearchResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<KnowledgeSearchResponse>> PostKnowledgeKnowledgebaseSearchAsyncWithHttpInfo (string knowledgeBaseId, KnowledgeSearchRequest body = null);
 
         /// <summary>
@@ -865,6 +937,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of LocationsSearchResponse</returns>
+        
         System.Threading.Tasks.Task<LocationsSearchResponse> PostLocationsSearchAsync (LocationSearchRequest body);
 
         /// <summary>
@@ -876,6 +949,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (LocationsSearchResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<LocationsSearchResponse>> PostLocationsSearchAsyncWithHttpInfo (LocationSearchRequest body);
 
         /// <summary>
@@ -888,6 +962,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
+        
         System.Threading.Tasks.Task<JsonNodeSearchResponse> PostSearchAsync (SearchRequest body, bool? profile = null);
 
         /// <summary>
@@ -900,6 +975,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> PostSearchAsyncWithHttpInfo (SearchRequest body, bool? profile = null);
 
         /// <summary>
@@ -912,6 +988,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
+        
         System.Threading.Tasks.Task<JsonNodeSearchResponse> PostSearchSuggestAsync (SuggestSearchRequest body, bool? profile = null);
 
         /// <summary>
@@ -924,6 +1001,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> PostSearchSuggestAsyncWithHttpInfo (SuggestSearchRequest body, bool? profile = null);
 
         /// <summary>
@@ -935,6 +1013,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of JsonSearchResponse</returns>
+        
         System.Threading.Tasks.Task<JsonSearchResponse> PostSpeechandtextanalyticsTranscriptsSearchAsync (TranscriptSearchRequest body);
 
         /// <summary>
@@ -946,6 +1025,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (JsonSearchResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<JsonSearchResponse>> PostSpeechandtextanalyticsTranscriptsSearchAsyncWithHttpInfo (TranscriptSearchRequest body);
 
         /// <summary>
@@ -957,6 +1037,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of TeamsSearchResponse</returns>
+        
         System.Threading.Tasks.Task<TeamsSearchResponse> PostTeamsSearchAsync (TeamSearchRequest body);
 
         /// <summary>
@@ -968,6 +1049,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (TeamsSearchResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<TeamsSearchResponse>> PostTeamsSearchAsyncWithHttpInfo (TeamSearchRequest body);
 
         /// <summary>
@@ -979,6 +1061,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of UsersSearchResponse</returns>
+        
         System.Threading.Tasks.Task<UsersSearchResponse> PostUsersSearchAsync (UserSearchRequest body);
 
         /// <summary>
@@ -990,6 +1073,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (UsersSearchResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> PostUsersSearchAsyncWithHttpInfo (UserSearchRequest body);
 
         /// <summary>
@@ -1001,6 +1085,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of UsersSearchResponse</returns>
+        
         System.Threading.Tasks.Task<UsersSearchResponse> PostUsersSearchTeamsAssignAsync (UserSearchRequest body);
 
         /// <summary>
@@ -1012,6 +1097,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (UsersSearchResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> PostUsersSearchTeamsAssignAsyncWithHttpInfo (UserSearchRequest body);
 
         /// <summary>
@@ -1023,6 +1109,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of VoicemailsSearchResponse</returns>
+        
         System.Threading.Tasks.Task<VoicemailsSearchResponse> PostVoicemailSearchAsync (VoicemailSearchRequest body);
 
         /// <summary>
@@ -1034,6 +1121,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (VoicemailsSearchResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<VoicemailsSearchResponse>> PostVoicemailSearchAsyncWithHttpInfo (VoicemailSearchRequest body);
 
         #endregion Asynchronous Operations
@@ -1134,6 +1222,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <returns>GKNDocumentationSearchResponse</returns>
+        
         public GKNDocumentationSearchResponse GetDocumentationGknSearch (string q64)
         {
              ApiResponse<GKNDocumentationSearchResponse> localVarResponse = GetDocumentationGknSearchWithHttpInfo(q64);
@@ -1146,6 +1235,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <returns>ApiResponse of GKNDocumentationSearchResponse</returns>
+        
         public ApiResponse< GKNDocumentationSearchResponse > GetDocumentationGknSearchWithHttpInfo (string q64)
         { 
             // verify the required parameter 'q64' is set
@@ -1221,6 +1311,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <returns>Task of GKNDocumentationSearchResponse</returns>
+        
         public async System.Threading.Tasks.Task<GKNDocumentationSearchResponse> GetDocumentationGknSearchAsync (string q64)
         {
              ApiResponse<GKNDocumentationSearchResponse> localVarResponse = await GetDocumentationGknSearchAsyncWithHttpInfo(q64);
@@ -1234,6 +1325,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <returns>Task of ApiResponse (GKNDocumentationSearchResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<GKNDocumentationSearchResponse>> GetDocumentationGknSearchAsyncWithHttpInfo (string q64)
         { 
             // verify the required parameter 'q64' is set
@@ -1311,6 +1403,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <returns>DocumentationSearchResponse</returns>
+        
         public DocumentationSearchResponse GetDocumentationSearch (string q64)
         {
              ApiResponse<DocumentationSearchResponse> localVarResponse = GetDocumentationSearchWithHttpInfo(q64);
@@ -1323,6 +1416,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <returns>ApiResponse of DocumentationSearchResponse</returns>
+        
         public ApiResponse< DocumentationSearchResponse > GetDocumentationSearchWithHttpInfo (string q64)
         { 
             // verify the required parameter 'q64' is set
@@ -1398,6 +1492,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <returns>Task of DocumentationSearchResponse</returns>
+        
         public async System.Threading.Tasks.Task<DocumentationSearchResponse> GetDocumentationSearchAsync (string q64)
         {
              ApiResponse<DocumentationSearchResponse> localVarResponse = await GetDocumentationSearchAsyncWithHttpInfo(q64);
@@ -1411,6 +1506,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="q64">q64</param>
         /// <returns>Task of ApiResponse (DocumentationSearchResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DocumentationSearchResponse>> GetDocumentationSearchAsyncWithHttpInfo (string q64)
         { 
             // verify the required parameter 'q64' is set
@@ -1489,6 +1585,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>GroupsSearchResponse</returns>
+        
         public GroupsSearchResponse GetGroupsSearch (string q64, List<string> expand = null)
         {
              ApiResponse<GroupsSearchResponse> localVarResponse = GetGroupsSearchWithHttpInfo(q64, expand);
@@ -1502,6 +1599,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>ApiResponse of GroupsSearchResponse</returns>
+        
         public ApiResponse< GroupsSearchResponse > GetGroupsSearchWithHttpInfo (string q64, List<string> expand = null)
         { 
             // verify the required parameter 'q64' is set
@@ -1586,6 +1684,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of GroupsSearchResponse</returns>
+        
         public async System.Threading.Tasks.Task<GroupsSearchResponse> GetGroupsSearchAsync (string q64, List<string> expand = null)
         {
              ApiResponse<GroupsSearchResponse> localVarResponse = await GetGroupsSearchAsyncWithHttpInfo(q64, expand);
@@ -1600,6 +1699,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of ApiResponse (GroupsSearchResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<GroupsSearchResponse>> GetGroupsSearchAsyncWithHttpInfo (string q64, List<string> expand = null)
         { 
             // verify the required parameter 'q64' is set
@@ -1686,6 +1786,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q64">q64</param>
         /// <param name="expand">Provides more details about a specified resource (optional)</param>
         /// <returns>LocationsSearchResponse</returns>
+        
         public LocationsSearchResponse GetLocationsSearch (string q64, List<string> expand = null)
         {
              ApiResponse<LocationsSearchResponse> localVarResponse = GetLocationsSearchWithHttpInfo(q64, expand);
@@ -1699,6 +1800,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q64">q64</param>
         /// <param name="expand">Provides more details about a specified resource (optional)</param>
         /// <returns>ApiResponse of LocationsSearchResponse</returns>
+        
         public ApiResponse< LocationsSearchResponse > GetLocationsSearchWithHttpInfo (string q64, List<string> expand = null)
         { 
             // verify the required parameter 'q64' is set
@@ -1783,6 +1885,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q64">q64</param>
         /// <param name="expand">Provides more details about a specified resource (optional)</param>
         /// <returns>Task of LocationsSearchResponse</returns>
+        
         public async System.Threading.Tasks.Task<LocationsSearchResponse> GetLocationsSearchAsync (string q64, List<string> expand = null)
         {
              ApiResponse<LocationsSearchResponse> localVarResponse = await GetLocationsSearchAsyncWithHttpInfo(q64, expand);
@@ -1797,6 +1900,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q64">q64</param>
         /// <param name="expand">Provides more details about a specified resource (optional)</param>
         /// <returns>Task of ApiResponse (LocationsSearchResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<LocationsSearchResponse>> GetLocationsSearchAsyncWithHttpInfo (string q64, List<string> expand = null)
         { 
             // verify the required parameter 'q64' is set
@@ -1884,6 +1988,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
+        
         public JsonNodeSearchResponse GetSearch (string q64, List<string> expand = null, bool? profile = null)
         {
              ApiResponse<JsonNodeSearchResponse> localVarResponse = GetSearchWithHttpInfo(q64, expand, profile);
@@ -1898,6 +2003,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
+        
         public ApiResponse< JsonNodeSearchResponse > GetSearchWithHttpInfo (string q64, List<string> expand = null, bool? profile = null)
         { 
             // verify the required parameter 'q64' is set
@@ -1984,6 +2090,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
+        
         public async System.Threading.Tasks.Task<JsonNodeSearchResponse> GetSearchAsync (string q64, List<string> expand = null, bool? profile = null)
         {
              ApiResponse<JsonNodeSearchResponse> localVarResponse = await GetSearchAsyncWithHttpInfo(q64, expand, profile);
@@ -1999,6 +2106,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> GetSearchAsyncWithHttpInfo (string q64, List<string> expand = null, bool? profile = null)
         { 
             // verify the required parameter 'q64' is set
@@ -2087,6 +2195,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
+        
         public JsonNodeSearchResponse GetSearchSuggest (string q64, List<string> expand = null, bool? profile = null)
         {
              ApiResponse<JsonNodeSearchResponse> localVarResponse = GetSearchSuggestWithHttpInfo(q64, expand, profile);
@@ -2101,6 +2210,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
+        
         public ApiResponse< JsonNodeSearchResponse > GetSearchSuggestWithHttpInfo (string q64, List<string> expand = null, bool? profile = null)
         { 
             // verify the required parameter 'q64' is set
@@ -2187,6 +2297,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
+        
         public async System.Threading.Tasks.Task<JsonNodeSearchResponse> GetSearchSuggestAsync (string q64, List<string> expand = null, bool? profile = null)
         {
              ApiResponse<JsonNodeSearchResponse> localVarResponse = await GetSearchSuggestAsyncWithHttpInfo(q64, expand, profile);
@@ -2202,6 +2313,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> GetSearchSuggestAsyncWithHttpInfo (string q64, List<string> expand = null, bool? profile = null)
         { 
             // verify the required parameter 'q64' is set
@@ -2290,6 +2402,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">expand (optional)</param>
         /// <param name="integrationPresenceSource">integrationPresenceSource (optional)</param>
         /// <returns>UsersSearchResponse</returns>
+        
         public UsersSearchResponse GetUsersSearch (string q64, List<string> expand = null, string integrationPresenceSource = null)
         {
              ApiResponse<UsersSearchResponse> localVarResponse = GetUsersSearchWithHttpInfo(q64, expand, integrationPresenceSource);
@@ -2304,6 +2417,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">expand (optional)</param>
         /// <param name="integrationPresenceSource">integrationPresenceSource (optional)</param>
         /// <returns>ApiResponse of UsersSearchResponse</returns>
+        
         public ApiResponse< UsersSearchResponse > GetUsersSearchWithHttpInfo (string q64, List<string> expand = null, string integrationPresenceSource = null)
         { 
             // verify the required parameter 'q64' is set
@@ -2390,6 +2504,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">expand (optional)</param>
         /// <param name="integrationPresenceSource">integrationPresenceSource (optional)</param>
         /// <returns>Task of UsersSearchResponse</returns>
+        
         public async System.Threading.Tasks.Task<UsersSearchResponse> GetUsersSearchAsync (string q64, List<string> expand = null, string integrationPresenceSource = null)
         {
              ApiResponse<UsersSearchResponse> localVarResponse = await GetUsersSearchAsyncWithHttpInfo(q64, expand, integrationPresenceSource);
@@ -2405,6 +2520,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">expand (optional)</param>
         /// <param name="integrationPresenceSource">integrationPresenceSource (optional)</param>
         /// <returns>Task of ApiResponse (UsersSearchResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> GetUsersSearchAsyncWithHttpInfo (string q64, List<string> expand = null, string integrationPresenceSource = null)
         { 
             // verify the required parameter 'q64' is set
@@ -2492,6 +2608,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>VoicemailsSearchResponse</returns>
+        
         public VoicemailsSearchResponse GetVoicemailSearch (string q64, List<string> expand = null)
         {
              ApiResponse<VoicemailsSearchResponse> localVarResponse = GetVoicemailSearchWithHttpInfo(q64, expand);
@@ -2505,6 +2622,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>ApiResponse of VoicemailsSearchResponse</returns>
+        
         public ApiResponse< VoicemailsSearchResponse > GetVoicemailSearchWithHttpInfo (string q64, List<string> expand = null)
         { 
             // verify the required parameter 'q64' is set
@@ -2589,6 +2707,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of VoicemailsSearchResponse</returns>
+        
         public async System.Threading.Tasks.Task<VoicemailsSearchResponse> GetVoicemailSearchAsync (string q64, List<string> expand = null)
         {
              ApiResponse<VoicemailsSearchResponse> localVarResponse = await GetVoicemailSearchAsyncWithHttpInfo(q64, expand);
@@ -2603,6 +2722,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q64">q64</param>
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of ApiResponse (VoicemailsSearchResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailsSearchResponse>> GetVoicemailSearchAsyncWithHttpInfo (string q64, List<string> expand = null)
         { 
             // verify the required parameter 'q64' is set
@@ -2688,6 +2808,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>AnalyticsConversationWithoutAttributesMultiGetResponse</returns>
+        
         public AnalyticsConversationWithoutAttributesMultiGetResponse PostAnalyticsConversationsTranscriptsQuery (TranscriptConversationDetailSearchRequest body)
         {
              ApiResponse<AnalyticsConversationWithoutAttributesMultiGetResponse> localVarResponse = PostAnalyticsConversationsTranscriptsQueryWithHttpInfo(body);
@@ -2700,6 +2821,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of AnalyticsConversationWithoutAttributesMultiGetResponse</returns>
+        
         public ApiResponse< AnalyticsConversationWithoutAttributesMultiGetResponse > PostAnalyticsConversationsTranscriptsQueryWithHttpInfo (TranscriptConversationDetailSearchRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -2787,6 +2909,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of AnalyticsConversationWithoutAttributesMultiGetResponse</returns>
+        
         public async System.Threading.Tasks.Task<AnalyticsConversationWithoutAttributesMultiGetResponse> PostAnalyticsConversationsTranscriptsQueryAsync (TranscriptConversationDetailSearchRequest body)
         {
              ApiResponse<AnalyticsConversationWithoutAttributesMultiGetResponse> localVarResponse = await PostAnalyticsConversationsTranscriptsQueryAsyncWithHttpInfo(body);
@@ -2800,6 +2923,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (AnalyticsConversationWithoutAttributesMultiGetResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<AnalyticsConversationWithoutAttributesMultiGetResponse>> PostAnalyticsConversationsTranscriptsQueryAsyncWithHttpInfo (TranscriptConversationDetailSearchRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -2889,6 +3013,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>JsonCursorSearchResponse</returns>
+        
         public JsonCursorSearchResponse PostConversationsParticipantsAttributesSearch (ConversationParticipantSearchRequest body)
         {
              ApiResponse<JsonCursorSearchResponse> localVarResponse = PostConversationsParticipantsAttributesSearchWithHttpInfo(body);
@@ -2901,6 +3026,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of JsonCursorSearchResponse</returns>
+        
         public ApiResponse< JsonCursorSearchResponse > PostConversationsParticipantsAttributesSearchWithHttpInfo (ConversationParticipantSearchRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -2988,6 +3114,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of JsonCursorSearchResponse</returns>
+        
         public async System.Threading.Tasks.Task<JsonCursorSearchResponse> PostConversationsParticipantsAttributesSearchAsync (ConversationParticipantSearchRequest body)
         {
              ApiResponse<JsonCursorSearchResponse> localVarResponse = await PostConversationsParticipantsAttributesSearchAsyncWithHttpInfo(body);
@@ -3001,6 +3128,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (JsonCursorSearchResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<JsonCursorSearchResponse>> PostConversationsParticipantsAttributesSearchAsyncWithHttpInfo (ConversationParticipantSearchRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -3090,6 +3218,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>GKNDocumentationSearchResponse</returns>
+        
         public GKNDocumentationSearchResponse PostDocumentationGknSearch (GKNDocumentationSearchRequest body)
         {
              ApiResponse<GKNDocumentationSearchResponse> localVarResponse = PostDocumentationGknSearchWithHttpInfo(body);
@@ -3102,6 +3231,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of GKNDocumentationSearchResponse</returns>
+        
         public ApiResponse< GKNDocumentationSearchResponse > PostDocumentationGknSearchWithHttpInfo (GKNDocumentationSearchRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -3182,6 +3312,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of GKNDocumentationSearchResponse</returns>
+        
         public async System.Threading.Tasks.Task<GKNDocumentationSearchResponse> PostDocumentationGknSearchAsync (GKNDocumentationSearchRequest body)
         {
              ApiResponse<GKNDocumentationSearchResponse> localVarResponse = await PostDocumentationGknSearchAsyncWithHttpInfo(body);
@@ -3195,6 +3326,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (GKNDocumentationSearchResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<GKNDocumentationSearchResponse>> PostDocumentationGknSearchAsyncWithHttpInfo (GKNDocumentationSearchRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -3277,6 +3409,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>DocumentationSearchResponse</returns>
+        
         public DocumentationSearchResponse PostDocumentationSearch (DocumentationSearchRequest body)
         {
              ApiResponse<DocumentationSearchResponse> localVarResponse = PostDocumentationSearchWithHttpInfo(body);
@@ -3289,6 +3422,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of DocumentationSearchResponse</returns>
+        
         public ApiResponse< DocumentationSearchResponse > PostDocumentationSearchWithHttpInfo (DocumentationSearchRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -3369,6 +3503,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of DocumentationSearchResponse</returns>
+        
         public async System.Threading.Tasks.Task<DocumentationSearchResponse> PostDocumentationSearchAsync (DocumentationSearchRequest body)
         {
              ApiResponse<DocumentationSearchResponse> localVarResponse = await PostDocumentationSearchAsyncWithHttpInfo(body);
@@ -3382,6 +3517,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (DocumentationSearchResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<DocumentationSearchResponse>> PostDocumentationSearchAsyncWithHttpInfo (DocumentationSearchRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -3464,6 +3600,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>GroupsSearchResponse</returns>
+        
         public GroupsSearchResponse PostGroupsSearch (GroupSearchRequest body)
         {
              ApiResponse<GroupsSearchResponse> localVarResponse = PostGroupsSearchWithHttpInfo(body);
@@ -3476,6 +3613,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of GroupsSearchResponse</returns>
+        
         public ApiResponse< GroupsSearchResponse > PostGroupsSearchWithHttpInfo (GroupSearchRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -3563,6 +3701,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of GroupsSearchResponse</returns>
+        
         public async System.Threading.Tasks.Task<GroupsSearchResponse> PostGroupsSearchAsync (GroupSearchRequest body)
         {
              ApiResponse<GroupsSearchResponse> localVarResponse = await PostGroupsSearchAsyncWithHttpInfo(body);
@@ -3576,6 +3715,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (GroupsSearchResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<GroupsSearchResponse>> PostGroupsSearchAsyncWithHttpInfo (GroupSearchRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -3666,6 +3806,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>KnowledgeSearchResponse</returns>
+        
         public KnowledgeSearchResponse PostKnowledgeKnowledgebaseSearch (string knowledgeBaseId, KnowledgeSearchRequest body = null)
         {
              ApiResponse<KnowledgeSearchResponse> localVarResponse = PostKnowledgeKnowledgebaseSearchWithHttpInfo(knowledgeBaseId, body);
@@ -3679,6 +3820,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of KnowledgeSearchResponse</returns>
+        
         public ApiResponse< KnowledgeSearchResponse > PostKnowledgeKnowledgebaseSearchWithHttpInfo (string knowledgeBaseId, KnowledgeSearchRequest body = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
@@ -3768,6 +3910,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of KnowledgeSearchResponse</returns>
+        
         public async System.Threading.Tasks.Task<KnowledgeSearchResponse> PostKnowledgeKnowledgebaseSearchAsync (string knowledgeBaseId, KnowledgeSearchRequest body = null)
         {
              ApiResponse<KnowledgeSearchResponse> localVarResponse = await PostKnowledgeKnowledgebaseSearchAsyncWithHttpInfo(knowledgeBaseId, body);
@@ -3782,6 +3925,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (KnowledgeSearchResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<KnowledgeSearchResponse>> PostKnowledgeKnowledgebaseSearchAsyncWithHttpInfo (string knowledgeBaseId, KnowledgeSearchRequest body = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
@@ -3872,6 +4016,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>LocationsSearchResponse</returns>
+        
         public LocationsSearchResponse PostLocationsSearch (LocationSearchRequest body)
         {
              ApiResponse<LocationsSearchResponse> localVarResponse = PostLocationsSearchWithHttpInfo(body);
@@ -3884,6 +4029,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of LocationsSearchResponse</returns>
+        
         public ApiResponse< LocationsSearchResponse > PostLocationsSearchWithHttpInfo (LocationSearchRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -3971,6 +4117,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of LocationsSearchResponse</returns>
+        
         public async System.Threading.Tasks.Task<LocationsSearchResponse> PostLocationsSearchAsync (LocationSearchRequest body)
         {
              ApiResponse<LocationsSearchResponse> localVarResponse = await PostLocationsSearchAsyncWithHttpInfo(body);
@@ -3984,6 +4131,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (LocationsSearchResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<LocationsSearchResponse>> PostLocationsSearchAsyncWithHttpInfo (LocationSearchRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -4074,6 +4222,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
+        
         public JsonNodeSearchResponse PostSearch (SearchRequest body, bool? profile = null)
         {
              ApiResponse<JsonNodeSearchResponse> localVarResponse = PostSearchWithHttpInfo(body, profile);
@@ -4087,6 +4236,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
+        
         public ApiResponse< JsonNodeSearchResponse > PostSearchWithHttpInfo (SearchRequest body, bool? profile = null)
         { 
             // verify the required parameter 'body' is set
@@ -4176,6 +4326,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
+        
         public async System.Threading.Tasks.Task<JsonNodeSearchResponse> PostSearchAsync (SearchRequest body, bool? profile = null)
         {
              ApiResponse<JsonNodeSearchResponse> localVarResponse = await PostSearchAsyncWithHttpInfo(body, profile);
@@ -4190,6 +4341,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> PostSearchAsyncWithHttpInfo (SearchRequest body, bool? profile = null)
         { 
             // verify the required parameter 'body' is set
@@ -4281,6 +4433,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>JsonNodeSearchResponse</returns>
+        
         public JsonNodeSearchResponse PostSearchSuggest (SuggestSearchRequest body, bool? profile = null)
         {
              ApiResponse<JsonNodeSearchResponse> localVarResponse = PostSearchSuggestWithHttpInfo(body, profile);
@@ -4294,6 +4447,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
+        
         public ApiResponse< JsonNodeSearchResponse > PostSearchSuggestWithHttpInfo (SuggestSearchRequest body, bool? profile = null)
         { 
             // verify the required parameter 'body' is set
@@ -4383,6 +4537,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of JsonNodeSearchResponse</returns>
+        
         public async System.Threading.Tasks.Task<JsonNodeSearchResponse> PostSearchSuggestAsync (SuggestSearchRequest body, bool? profile = null)
         {
              ApiResponse<JsonNodeSearchResponse> localVarResponse = await PostSearchSuggestAsyncWithHttpInfo(body, profile);
@@ -4397,6 +4552,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> PostSearchSuggestAsyncWithHttpInfo (SuggestSearchRequest body, bool? profile = null)
         { 
             // verify the required parameter 'body' is set
@@ -4487,6 +4643,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>JsonSearchResponse</returns>
+        
         public JsonSearchResponse PostSpeechandtextanalyticsTranscriptsSearch (TranscriptSearchRequest body)
         {
              ApiResponse<JsonSearchResponse> localVarResponse = PostSpeechandtextanalyticsTranscriptsSearchWithHttpInfo(body);
@@ -4499,6 +4656,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of JsonSearchResponse</returns>
+        
         public ApiResponse< JsonSearchResponse > PostSpeechandtextanalyticsTranscriptsSearchWithHttpInfo (TranscriptSearchRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -4586,6 +4744,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of JsonSearchResponse</returns>
+        
         public async System.Threading.Tasks.Task<JsonSearchResponse> PostSpeechandtextanalyticsTranscriptsSearchAsync (TranscriptSearchRequest body)
         {
              ApiResponse<JsonSearchResponse> localVarResponse = await PostSpeechandtextanalyticsTranscriptsSearchAsyncWithHttpInfo(body);
@@ -4599,6 +4758,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (JsonSearchResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<JsonSearchResponse>> PostSpeechandtextanalyticsTranscriptsSearchAsyncWithHttpInfo (TranscriptSearchRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -4688,6 +4848,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>TeamsSearchResponse</returns>
+        
         public TeamsSearchResponse PostTeamsSearch (TeamSearchRequest body)
         {
              ApiResponse<TeamsSearchResponse> localVarResponse = PostTeamsSearchWithHttpInfo(body);
@@ -4700,6 +4861,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of TeamsSearchResponse</returns>
+        
         public ApiResponse< TeamsSearchResponse > PostTeamsSearchWithHttpInfo (TeamSearchRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -4787,6 +4949,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of TeamsSearchResponse</returns>
+        
         public async System.Threading.Tasks.Task<TeamsSearchResponse> PostTeamsSearchAsync (TeamSearchRequest body)
         {
              ApiResponse<TeamsSearchResponse> localVarResponse = await PostTeamsSearchAsyncWithHttpInfo(body);
@@ -4800,6 +4963,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (TeamsSearchResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<TeamsSearchResponse>> PostTeamsSearchAsyncWithHttpInfo (TeamSearchRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -4889,6 +5053,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>UsersSearchResponse</returns>
+        
         public UsersSearchResponse PostUsersSearch (UserSearchRequest body)
         {
              ApiResponse<UsersSearchResponse> localVarResponse = PostUsersSearchWithHttpInfo(body);
@@ -4901,6 +5066,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of UsersSearchResponse</returns>
+        
         public ApiResponse< UsersSearchResponse > PostUsersSearchWithHttpInfo (UserSearchRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -4988,6 +5154,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of UsersSearchResponse</returns>
+        
         public async System.Threading.Tasks.Task<UsersSearchResponse> PostUsersSearchAsync (UserSearchRequest body)
         {
              ApiResponse<UsersSearchResponse> localVarResponse = await PostUsersSearchAsyncWithHttpInfo(body);
@@ -5001,6 +5168,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (UsersSearchResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> PostUsersSearchAsyncWithHttpInfo (UserSearchRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -5090,6 +5258,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>UsersSearchResponse</returns>
+        
         public UsersSearchResponse PostUsersSearchTeamsAssign (UserSearchRequest body)
         {
              ApiResponse<UsersSearchResponse> localVarResponse = PostUsersSearchTeamsAssignWithHttpInfo(body);
@@ -5102,6 +5271,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of UsersSearchResponse</returns>
+        
         public ApiResponse< UsersSearchResponse > PostUsersSearchTeamsAssignWithHttpInfo (UserSearchRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -5189,6 +5359,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of UsersSearchResponse</returns>
+        
         public async System.Threading.Tasks.Task<UsersSearchResponse> PostUsersSearchTeamsAssignAsync (UserSearchRequest body)
         {
              ApiResponse<UsersSearchResponse> localVarResponse = await PostUsersSearchTeamsAssignAsyncWithHttpInfo(body);
@@ -5202,6 +5373,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (UsersSearchResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> PostUsersSearchTeamsAssignAsyncWithHttpInfo (UserSearchRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -5291,6 +5463,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>VoicemailsSearchResponse</returns>
+        
         public VoicemailsSearchResponse PostVoicemailSearch (VoicemailSearchRequest body)
         {
              ApiResponse<VoicemailsSearchResponse> localVarResponse = PostVoicemailSearchWithHttpInfo(body);
@@ -5303,6 +5476,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of VoicemailsSearchResponse</returns>
+        
         public ApiResponse< VoicemailsSearchResponse > PostVoicemailSearchWithHttpInfo (VoicemailSearchRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -5390,6 +5564,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of VoicemailsSearchResponse</returns>
+        
         public async System.Threading.Tasks.Task<VoicemailsSearchResponse> PostVoicemailSearchAsync (VoicemailSearchRequest body)
         {
              ApiResponse<VoicemailsSearchResponse> localVarResponse = await PostVoicemailSearchAsyncWithHttpInfo(body);
@@ -5403,6 +5578,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (VoicemailsSearchResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailsSearchResponse>> PostVoicemailSearchAsyncWithHttpInfo (VoicemailSearchRequest body)
         { 
             // verify the required parameter 'body' is set

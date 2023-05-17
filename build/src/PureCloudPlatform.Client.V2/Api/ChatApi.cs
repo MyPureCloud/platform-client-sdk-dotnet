@@ -24,6 +24,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ChatSettings</returns>
+        [Obsolete]
         ChatSettings GetChatSettings ();
 
         /// <summary>
@@ -34,6 +35,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ChatSettings</returns>
+        [Obsolete]
         ApiResponse<ChatSettings> GetChatSettingsWithHttpInfo ();
 
         /// <summary>
@@ -44,6 +46,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ChatSettings</returns>
+        
         ChatSettings GetChatsSettings ();
 
         /// <summary>
@@ -54,6 +57,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ChatSettings</returns>
+        
         ApiResponse<ChatSettings> GetChatsSettingsWithHttpInfo ();
 
         /// <summary>
@@ -65,6 +69,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
         /// <returns>ChatSettings</returns>
+        [Obsolete]
         ChatSettings PatchChatSettings (ChatSettings body);
 
         /// <summary>
@@ -76,6 +81,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
         /// <returns>ApiResponse of ChatSettings</returns>
+        [Obsolete]
         ApiResponse<ChatSettings> PatchChatSettingsWithHttpInfo (ChatSettings body);
 
         /// <summary>
@@ -87,6 +93,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
         /// <returns>ChatSettings</returns>
+        
         ChatSettings PatchChatsSettings (ChatSettings body);
 
         /// <summary>
@@ -98,6 +105,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
         /// <returns>ApiResponse of ChatSettings</returns>
+        
         ApiResponse<ChatSettings> PatchChatsSettingsWithHttpInfo (ChatSettings body);
 
         /// <summary>
@@ -109,6 +117,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
         /// <returns>ChatSettings</returns>
+        [Obsolete]
         ChatSettings PutChatSettings (ChatSettings body);
 
         /// <summary>
@@ -120,6 +129,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
         /// <returns>ApiResponse of ChatSettings</returns>
+        [Obsolete]
         ApiResponse<ChatSettings> PutChatSettingsWithHttpInfo (ChatSettings body);
 
         /// <summary>
@@ -131,6 +141,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
         /// <returns>ChatSettings</returns>
+        
         ChatSettings PutChatsSettings (ChatSettings body);
 
         /// <summary>
@@ -142,6 +153,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
         /// <returns>ApiResponse of ChatSettings</returns>
+        
         ApiResponse<ChatSettings> PutChatsSettingsWithHttpInfo (ChatSettings body);
 
         #endregion Synchronous Operations
@@ -156,6 +168,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ChatSettings</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<ChatSettings> GetChatSettingsAsync ();
 
         /// <summary>
@@ -166,6 +179,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ChatSettings)</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<ChatSettings>> GetChatSettingsAsyncWithHttpInfo ();
 
         /// <summary>
@@ -176,6 +190,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ChatSettings</returns>
+        
         System.Threading.Tasks.Task<ChatSettings> GetChatsSettingsAsync ();
 
         /// <summary>
@@ -186,6 +201,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ChatSettings)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ChatSettings>> GetChatsSettingsAsyncWithHttpInfo ();
 
         /// <summary>
@@ -197,6 +213,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
         /// <returns>Task of ChatSettings</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<ChatSettings> PatchChatSettingsAsync (ChatSettings body);
 
         /// <summary>
@@ -208,6 +225,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
         /// <returns>Task of ApiResponse (ChatSettings)</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<ChatSettings>> PatchChatSettingsAsyncWithHttpInfo (ChatSettings body);
 
         /// <summary>
@@ -219,6 +237,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
         /// <returns>Task of ChatSettings</returns>
+        
         System.Threading.Tasks.Task<ChatSettings> PatchChatsSettingsAsync (ChatSettings body);
 
         /// <summary>
@@ -230,6 +249,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
         /// <returns>Task of ApiResponse (ChatSettings)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ChatSettings>> PatchChatsSettingsAsyncWithHttpInfo (ChatSettings body);
 
         /// <summary>
@@ -241,6 +261,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
         /// <returns>Task of ChatSettings</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<ChatSettings> PutChatSettingsAsync (ChatSettings body);
 
         /// <summary>
@@ -252,6 +273,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
         /// <returns>Task of ApiResponse (ChatSettings)</returns>
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<ChatSettings>> PutChatSettingsAsyncWithHttpInfo (ChatSettings body);
 
         /// <summary>
@@ -263,6 +285,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
         /// <returns>Task of ChatSettings</returns>
+        
         System.Threading.Tasks.Task<ChatSettings> PutChatsSettingsAsync (ChatSettings body);
 
         /// <summary>
@@ -274,6 +297,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
         /// <returns>Task of ApiResponse (ChatSettings)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ChatSettings>> PutChatsSettingsAsyncWithHttpInfo (ChatSettings body);
 
         #endregion Asynchronous Operations
@@ -373,6 +397,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ChatSettings</returns>
+        [Obsolete]
         public ChatSettings GetChatSettings ()
         {
              ApiResponse<ChatSettings> localVarResponse = GetChatSettingsWithHttpInfo();
@@ -384,6 +409,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ChatSettings</returns>
+        [Obsolete]
         public ApiResponse< ChatSettings > GetChatSettingsWithHttpInfo ()
         { 
 
@@ -461,6 +487,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ChatSettings</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<ChatSettings> GetChatSettingsAsync ()
         {
              ApiResponse<ChatSettings> localVarResponse = await GetChatSettingsAsyncWithHttpInfo();
@@ -473,6 +500,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ChatSettings)</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<ChatSettings>> GetChatSettingsAsyncWithHttpInfo ()
         { 
 
@@ -551,6 +579,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ChatSettings</returns>
+        
         public ChatSettings GetChatsSettings ()
         {
              ApiResponse<ChatSettings> localVarResponse = GetChatsSettingsWithHttpInfo();
@@ -562,6 +591,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ChatSettings</returns>
+        
         public ApiResponse< ChatSettings > GetChatsSettingsWithHttpInfo ()
         { 
 
@@ -639,6 +669,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ChatSettings</returns>
+        
         public async System.Threading.Tasks.Task<ChatSettings> GetChatsSettingsAsync ()
         {
              ApiResponse<ChatSettings> localVarResponse = await GetChatsSettingsAsyncWithHttpInfo();
@@ -651,6 +682,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ChatSettings)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ChatSettings>> GetChatsSettingsAsyncWithHttpInfo ()
         { 
 
@@ -730,6 +762,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
         /// <returns>ChatSettings</returns>
+        [Obsolete]
         public ChatSettings PatchChatSettings (ChatSettings body)
         {
              ApiResponse<ChatSettings> localVarResponse = PatchChatSettingsWithHttpInfo(body);
@@ -742,6 +775,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
         /// <returns>ApiResponse of ChatSettings</returns>
+        [Obsolete]
         public ApiResponse< ChatSettings > PatchChatSettingsWithHttpInfo (ChatSettings body)
         { 
             // verify the required parameter 'body' is set
@@ -829,6 +863,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
         /// <returns>Task of ChatSettings</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<ChatSettings> PatchChatSettingsAsync (ChatSettings body)
         {
              ApiResponse<ChatSettings> localVarResponse = await PatchChatSettingsAsyncWithHttpInfo(body);
@@ -842,6 +877,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
         /// <returns>Task of ApiResponse (ChatSettings)</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<ChatSettings>> PatchChatSettingsAsyncWithHttpInfo (ChatSettings body)
         { 
             // verify the required parameter 'body' is set
@@ -931,6 +967,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
         /// <returns>ChatSettings</returns>
+        
         public ChatSettings PatchChatsSettings (ChatSettings body)
         {
              ApiResponse<ChatSettings> localVarResponse = PatchChatsSettingsWithHttpInfo(body);
@@ -943,6 +980,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
         /// <returns>ApiResponse of ChatSettings</returns>
+        
         public ApiResponse< ChatSettings > PatchChatsSettingsWithHttpInfo (ChatSettings body)
         { 
             // verify the required parameter 'body' is set
@@ -1030,6 +1068,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
         /// <returns>Task of ChatSettings</returns>
+        
         public async System.Threading.Tasks.Task<ChatSettings> PatchChatsSettingsAsync (ChatSettings body)
         {
              ApiResponse<ChatSettings> localVarResponse = await PatchChatsSettingsAsyncWithHttpInfo(body);
@@ -1043,6 +1082,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
         /// <returns>Task of ApiResponse (ChatSettings)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ChatSettings>> PatchChatsSettingsAsyncWithHttpInfo (ChatSettings body)
         { 
             // verify the required parameter 'body' is set
@@ -1132,6 +1172,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
         /// <returns>ChatSettings</returns>
+        [Obsolete]
         public ChatSettings PutChatSettings (ChatSettings body)
         {
              ApiResponse<ChatSettings> localVarResponse = PutChatSettingsWithHttpInfo(body);
@@ -1144,6 +1185,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
         /// <returns>ApiResponse of ChatSettings</returns>
+        [Obsolete]
         public ApiResponse< ChatSettings > PutChatSettingsWithHttpInfo (ChatSettings body)
         { 
             // verify the required parameter 'body' is set
@@ -1231,6 +1273,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
         /// <returns>Task of ChatSettings</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<ChatSettings> PutChatSettingsAsync (ChatSettings body)
         {
              ApiResponse<ChatSettings> localVarResponse = await PutChatSettingsAsyncWithHttpInfo(body);
@@ -1244,6 +1287,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
         /// <returns>Task of ApiResponse (ChatSettings)</returns>
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<ChatSettings>> PutChatSettingsAsyncWithHttpInfo (ChatSettings body)
         { 
             // verify the required parameter 'body' is set
@@ -1333,6 +1377,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
         /// <returns>ChatSettings</returns>
+        
         public ChatSettings PutChatsSettings (ChatSettings body)
         {
              ApiResponse<ChatSettings> localVarResponse = PutChatsSettingsWithHttpInfo(body);
@@ -1345,6 +1390,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
         /// <returns>ApiResponse of ChatSettings</returns>
+        
         public ApiResponse< ChatSettings > PutChatsSettingsWithHttpInfo (ChatSettings body)
         { 
             // verify the required parameter 'body' is set
@@ -1432,6 +1478,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
         /// <returns>Task of ChatSettings</returns>
+        
         public async System.Threading.Tasks.Task<ChatSettings> PutChatsSettingsAsync (ChatSettings body)
         {
              ApiResponse<ChatSettings> localVarResponse = await PutChatsSettingsAsyncWithHttpInfo(body);
@@ -1445,6 +1492,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Chat</param>
         /// <returns>Task of ApiResponse (ChatSettings)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ChatSettings>> PutChatsSettingsAsyncWithHttpInfo (ChatSettings body)
         { 
             // verify the required parameter 'body' is set

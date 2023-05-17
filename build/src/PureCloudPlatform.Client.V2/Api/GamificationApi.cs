@@ -25,6 +25,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">Specifies the External Metric Definition ID</param>
         /// <returns></returns>
+        
         void DeleteEmployeeperformanceExternalmetricsDefinition (string metricId);
 
         /// <summary>
@@ -36,6 +37,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">Specifies the External Metric Definition ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> DeleteEmployeeperformanceExternalmetricsDefinitionWithHttpInfo (string metricId);
 
         /// <summary>
@@ -47,6 +49,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">Specifies the External Metric Definition ID</param>
         /// <returns>ExternalMetricDefinition</returns>
+        
         ExternalMetricDefinition GetEmployeeperformanceExternalmetricsDefinition (string metricId);
 
         /// <summary>
@@ -58,6 +61,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">Specifies the External Metric Definition ID</param>
         /// <returns>ApiResponse of ExternalMetricDefinition</returns>
+        
         ApiResponse<ExternalMetricDefinition> GetEmployeeperformanceExternalmetricsDefinitionWithHttpInfo (string metricId);
 
         /// <summary>
@@ -70,6 +74,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ExternalMetricDefinitionListing</returns>
+        
         ExternalMetricDefinitionListing GetEmployeeperformanceExternalmetricsDefinitions (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -82,6 +87,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of ExternalMetricDefinitionListing</returns>
+        
         ApiResponse<ExternalMetricDefinitionListing> GetEmployeeperformanceExternalmetricsDefinitionsWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -103,6 +109,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <param name="userIds">A list of up to 100 comma-separated user Ids (optional)</param>
         /// <returns>InsightsSummary</returns>
+        
         InsightsSummary GetGamificationInsights (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, int? pageSize = null, int? pageNumber = null, string sortKey = null, string sortMetricId = null, string sortOrder = null, string userIds = null);
 
         /// <summary>
@@ -124,6 +131,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <param name="userIds">A list of up to 100 comma-separated user Ids (optional)</param>
         /// <returns>ApiResponse of InsightsSummary</returns>
+        
         ApiResponse<InsightsSummary> GetGamificationInsightsWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, int? pageSize = null, int? pageNumber = null, string sortKey = null, string sortMetricId = null, string sortOrder = null, string userIds = null);
 
         /// <summary>
@@ -139,6 +147,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="comparativePeriodStartWorkday">The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>InsightsDetails</returns>
+        
         InsightsDetails GetGamificationInsightsDetails (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday);
 
         /// <summary>
@@ -154,6 +163,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="comparativePeriodStartWorkday">The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of InsightsDetails</returns>
+        
         ApiResponse<InsightsDetails> GetGamificationInsightsDetailsWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday);
 
         /// <summary>
@@ -171,6 +181,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodEndWorkday">The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>InsightsTrend</returns>
+        
         InsightsTrend GetGamificationInsightsGroupsTrends (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday);
 
         /// <summary>
@@ -188,6 +199,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodEndWorkday">The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of InsightsTrend</returns>
+        
         ApiResponse<InsightsTrend> GetGamificationInsightsGroupsTrendsWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday);
 
         /// <summary>
@@ -205,6 +217,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodEndWorkday">The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>InsightsTrend</returns>
+        
         InsightsTrend GetGamificationInsightsGroupsTrendsAll (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday);
 
         /// <summary>
@@ -222,6 +235,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodEndWorkday">The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of InsightsTrend</returns>
+        
         ApiResponse<InsightsTrend> GetGamificationInsightsGroupsTrendsAllWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday);
 
         /// <summary>
@@ -236,6 +250,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="granularity">Granularity</param>
         /// <param name="startWorkday">The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>InsightsAgents</returns>
+        
         InsightsAgents GetGamificationInsightsMembers (string filterType, string filterId, string granularity, String startWorkday);
 
         /// <summary>
@@ -250,6 +265,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="granularity">Granularity</param>
         /// <param name="startWorkday">The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of InsightsAgents</returns>
+        
         ApiResponse<InsightsAgents> GetGamificationInsightsMembersWithHttpInfo (string filterType, string filterId, string granularity, String startWorkday);
 
         /// <summary>
@@ -267,6 +283,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodEndWorkday">The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>UserInsightsTrend</returns>
+        
         UserInsightsTrend GetGamificationInsightsTrends (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday);
 
         /// <summary>
@@ -284,6 +301,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodEndWorkday">The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of UserInsightsTrend</returns>
+        
         ApiResponse<UserInsightsTrend> GetGamificationInsightsTrendsWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday);
 
         /// <summary>
@@ -300,6 +318,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="comparativePeriodStartWorkday">The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>InsightsDetails</returns>
+        
         InsightsDetails GetGamificationInsightsUserDetails (string userId, string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday);
 
         /// <summary>
@@ -316,6 +335,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="comparativePeriodStartWorkday">The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of InsightsDetails</returns>
+        
         ApiResponse<InsightsDetails> GetGamificationInsightsUserDetailsWithHttpInfo (string userId, string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday);
 
         /// <summary>
@@ -334,6 +354,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodEndWorkday">The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>UserInsightsTrend</returns>
+        
         UserInsightsTrend GetGamificationInsightsUserTrends (string userId, string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday);
 
         /// <summary>
@@ -352,6 +373,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodEndWorkday">The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of UserInsightsTrend</returns>
+        
         ApiResponse<UserInsightsTrend> GetGamificationInsightsUserTrendsWithHttpInfo (string userId, string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday);
 
         /// <summary>
@@ -365,6 +387,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="metricId">Metric Id for which the leaderboard is to be generated. The total points is used if nothing is given. (optional)</param>
         /// <returns>Leaderboard</returns>
+        
         Leaderboard GetGamificationLeaderboard (String startWorkday, String endWorkday, string metricId = null);
 
         /// <summary>
@@ -378,6 +401,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="metricId">Metric Id for which the leaderboard is to be generated. The total points is used if nothing is given. (optional)</param>
         /// <returns>ApiResponse of Leaderboard</returns>
+        
         ApiResponse<Leaderboard> GetGamificationLeaderboardWithHttpInfo (String startWorkday, String endWorkday, string metricId = null);
 
         /// <summary>
@@ -393,6 +417,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="metricId">Metric Id for which the leaderboard is to be generated. The total points is used if nothing is given. (optional)</param>
         /// <returns>Leaderboard</returns>
+        
         Leaderboard GetGamificationLeaderboardAll (string filterType, string filterId, String startWorkday, String endWorkday, string metricId = null);
 
         /// <summary>
@@ -408,6 +433,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="metricId">Metric Id for which the leaderboard is to be generated. The total points is used if nothing is given. (optional)</param>
         /// <returns>ApiResponse of Leaderboard</returns>
+        
         ApiResponse<Leaderboard> GetGamificationLeaderboardAllWithHttpInfo (string filterType, string filterId, String startWorkday, String endWorkday, string metricId = null);
 
         /// <summary>
@@ -420,6 +446,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterType">Filter type for the query request.</param>
         /// <param name="filterId">ID for the filter type. For example, division or performance profile Id</param>
         /// <returns>OverallBestPoints</returns>
+        
         OverallBestPoints GetGamificationLeaderboardAllBestpoints (string filterType, string filterId);
 
         /// <summary>
@@ -432,6 +459,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterType">Filter type for the query request.</param>
         /// <param name="filterId">ID for the filter type. For example, division or performance profile Id</param>
         /// <returns>ApiResponse of OverallBestPoints</returns>
+        
         ApiResponse<OverallBestPoints> GetGamificationLeaderboardAllBestpointsWithHttpInfo (string filterType, string filterId);
 
         /// <summary>
@@ -442,6 +470,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>OverallBestPoints</returns>
+        
         OverallBestPoints GetGamificationLeaderboardBestpoints ();
 
         /// <summary>
@@ -452,6 +481,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of OverallBestPoints</returns>
+        
         ApiResponse<OverallBestPoints> GetGamificationLeaderboardBestpointsWithHttpInfo ();
 
         /// <summary>
@@ -463,6 +493,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricDefinitionId">metric definition id</param>
         /// <returns>MetricDefinition</returns>
+        
         MetricDefinition GetGamificationMetricdefinition (string metricDefinitionId);
 
         /// <summary>
@@ -474,6 +505,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricDefinitionId">metric definition id</param>
         /// <returns>ApiResponse of MetricDefinition</returns>
+        
         ApiResponse<MetricDefinition> GetGamificationMetricdefinitionWithHttpInfo (string metricDefinitionId);
 
         /// <summary>
@@ -484,6 +516,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>GetMetricDefinitionsResponse</returns>
+        
         GetMetricDefinitionsResponse GetGamificationMetricdefinitions ();
 
         /// <summary>
@@ -494,6 +527,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of GetMetricDefinitionsResponse</returns>
+        
         ApiResponse<GetMetricDefinitionsResponse> GetGamificationMetricdefinitionsWithHttpInfo ();
 
         /// <summary>
@@ -505,6 +539,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId">performanceProfileId</param>
         /// <returns>PerformanceProfile</returns>
+        
         PerformanceProfile GetGamificationProfile (string profileId);
 
         /// <summary>
@@ -516,6 +551,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId">performanceProfileId</param>
         /// <returns>ApiResponse of PerformanceProfile</returns>
+        
         ApiResponse<PerformanceProfile> GetGamificationProfileWithHttpInfo (string profileId);
 
         /// <summary>
@@ -527,6 +563,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId">Profile Id</param>
         /// <returns>MemberListing</returns>
+        
         MemberListing GetGamificationProfileMembers (string profileId);
 
         /// <summary>
@@ -538,6 +575,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId">Profile Id</param>
         /// <returns>ApiResponse of MemberListing</returns>
+        
         ApiResponse<MemberListing> GetGamificationProfileMembersWithHttpInfo (string profileId);
 
         /// <summary>
@@ -551,6 +589,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="metricId">Metric Id</param>
         /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Metric</returns>
+        
         Metric GetGamificationProfileMetric (string profileId, string metricId, String workday = null);
 
         /// <summary>
@@ -564,6 +603,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="metricId">Metric Id</param>
         /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>ApiResponse of Metric</returns>
+        
         ApiResponse<Metric> GetGamificationProfileMetricWithHttpInfo (string profileId, string metricId, String workday = null);
 
         /// <summary>
@@ -578,6 +618,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="metricIds">List of metric ids to filter the response (Optional, comma-separated). (optional)</param>
         /// <returns>GetMetricResponse</returns>
+        
         GetMetricResponse GetGamificationProfileMetrics (string profileId, List<string> expand = null, String workday = null, string metricIds = null);
 
         /// <summary>
@@ -592,6 +633,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="metricIds">List of metric ids to filter the response (Optional, comma-separated). (optional)</param>
         /// <returns>ApiResponse of GetMetricResponse</returns>
+        
         ApiResponse<GetMetricResponse> GetGamificationProfileMetricsWithHttpInfo (string profileId, List<string> expand = null, String workday = null, string metricIds = null);
 
         /// <summary>
@@ -604,6 +646,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">Performance Profile Id</param>
         /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>GetMetricsResponse</returns>
+        
         GetMetricsResponse GetGamificationProfileMetricsObjectivedetails (string profileId, String workday = null);
 
         /// <summary>
@@ -616,6 +659,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">Performance Profile Id</param>
         /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>ApiResponse of GetMetricsResponse</returns>
+        
         ApiResponse<GetMetricsResponse> GetGamificationProfileMetricsObjectivedetailsWithHttpInfo (string profileId, String workday = null);
 
         /// <summary>
@@ -626,6 +670,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>GetProfilesResponse</returns>
+        
         GetProfilesResponse GetGamificationProfiles ();
 
         /// <summary>
@@ -636,6 +681,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of GetProfilesResponse</returns>
+        
         ApiResponse<GetProfilesResponse> GetGamificationProfilesWithHttpInfo ();
 
         /// <summary>
@@ -648,6 +694,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId"></param>
         /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>PerformanceProfile</returns>
+        
         PerformanceProfile GetGamificationProfilesUser (string userId, String workday = null);
 
         /// <summary>
@@ -660,6 +707,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId"></param>
         /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>ApiResponse of PerformanceProfile</returns>
+        
         ApiResponse<PerformanceProfile> GetGamificationProfilesUserWithHttpInfo (string userId, String workday = null);
 
         /// <summary>
@@ -671,6 +719,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>PerformanceProfile</returns>
+        
         PerformanceProfile GetGamificationProfilesUsersMe (String workday = null);
 
         /// <summary>
@@ -682,6 +731,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>ApiResponse of PerformanceProfile</returns>
+        
         ApiResponse<PerformanceProfile> GetGamificationProfilesUsersMeWithHttpInfo (String workday = null);
 
         /// <summary>
@@ -694,6 +744,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>WorkdayMetricListing</returns>
+        
         WorkdayMetricListing GetGamificationScorecards (String workday, List<string> expand = null);
 
         /// <summary>
@@ -706,6 +757,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of WorkdayMetricListing</returns>
+        
         ApiResponse<WorkdayMetricListing> GetGamificationScorecardsWithHttpInfo (String workday, List<string> expand = null);
 
         /// <summary>
@@ -718,6 +770,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>AttendanceStatusListing</returns>
+        
         AttendanceStatusListing GetGamificationScorecardsAttendance (String startWorkday, String endWorkday);
 
         /// <summary>
@@ -730,6 +783,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of AttendanceStatusListing</returns>
+        
         ApiResponse<AttendanceStatusListing> GetGamificationScorecardsAttendanceWithHttpInfo (String startWorkday, String endWorkday);
 
         /// <summary>
@@ -740,6 +794,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>UserBestPoints</returns>
+        
         UserBestPoints GetGamificationScorecardsBestpoints ();
 
         /// <summary>
@@ -750,6 +805,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of UserBestPoints</returns>
+        
         ApiResponse<UserBestPoints> GetGamificationScorecardsBestpointsWithHttpInfo ();
 
         /// <summary>
@@ -761,6 +817,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>AllTimePoints</returns>
+        
         AllTimePoints GetGamificationScorecardsPointsAlltime (String endWorkday);
 
         /// <summary>
@@ -772,6 +829,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of AllTimePoints</returns>
+        
         ApiResponse<AllTimePoints> GetGamificationScorecardsPointsAlltimeWithHttpInfo (String endWorkday);
 
         /// <summary>
@@ -783,6 +841,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>SingleWorkdayAveragePoints</returns>
+        
         SingleWorkdayAveragePoints GetGamificationScorecardsPointsAverage (String workday);
 
         /// <summary>
@@ -794,6 +853,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of SingleWorkdayAveragePoints</returns>
+        
         ApiResponse<SingleWorkdayAveragePoints> GetGamificationScorecardsPointsAverageWithHttpInfo (String workday);
 
         /// <summary>
@@ -807,6 +867,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>WorkdayPointsTrend</returns>
+        
         WorkdayPointsTrend GetGamificationScorecardsPointsTrends (String startWorkday, String endWorkday, string dayOfWeek = null);
 
         /// <summary>
@@ -820,6 +881,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>ApiResponse of WorkdayPointsTrend</returns>
+        
         ApiResponse<WorkdayPointsTrend> GetGamificationScorecardsPointsTrendsWithHttpInfo (String startWorkday, String endWorkday, string dayOfWeek = null);
 
         /// <summary>
@@ -837,6 +899,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>MetricValueTrendAverage</returns>
+        
         MetricValueTrendAverage GetGamificationScorecardsProfileMetricUserValuesTrends (string profileId, string metricId, string userId, String startWorkday, String endWorkday, String referenceWorkday = null, string timeZone = null);
 
         /// <summary>
@@ -854,6 +917,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>ApiResponse of MetricValueTrendAverage</returns>
+        
         ApiResponse<MetricValueTrendAverage> GetGamificationScorecardsProfileMetricUserValuesTrendsWithHttpInfo (string profileId, string metricId, string userId, String startWorkday, String endWorkday, String referenceWorkday = null, string timeZone = null);
 
         /// <summary>
@@ -872,6 +936,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>MetricValueTrendAverage</returns>
+        
         MetricValueTrendAverage GetGamificationScorecardsProfileMetricUsersValuesTrends (string profileId, string metricId, string filterType, String startWorkday, String endWorkday, string filterId = null, String referenceWorkday = null, string timeZone = null);
 
         /// <summary>
@@ -890,6 +955,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>ApiResponse of MetricValueTrendAverage</returns>
+        
         ApiResponse<MetricValueTrendAverage> GetGamificationScorecardsProfileMetricUsersValuesTrendsWithHttpInfo (string profileId, string metricId, string filterType, String startWorkday, String endWorkday, string filterId = null, String referenceWorkday = null, string timeZone = null);
 
         /// <summary>
@@ -907,6 +973,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>MetricValueTrendAverage</returns>
+        
         MetricValueTrendAverage GetGamificationScorecardsProfileMetricValuesTrends (string profileId, string metricId, String startWorkday, String endWorkday, string filterType = null, String referenceWorkday = null, string timeZone = null);
 
         /// <summary>
@@ -924,6 +991,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>ApiResponse of MetricValueTrendAverage</returns>
+        
         ApiResponse<MetricValueTrendAverage> GetGamificationScorecardsProfileMetricValuesTrendsWithHttpInfo (string profileId, string metricId, String startWorkday, String endWorkday, string filterType = null, String referenceWorkday = null, string timeZone = null);
 
         /// <summary>
@@ -937,6 +1005,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>WorkdayMetricListing</returns>
+        
         WorkdayMetricListing GetGamificationScorecardsUser (string userId, String workday, List<string> expand = null);
 
         /// <summary>
@@ -950,6 +1019,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of WorkdayMetricListing</returns>
+        
         ApiResponse<WorkdayMetricListing> GetGamificationScorecardsUserWithHttpInfo (string userId, String workday, List<string> expand = null);
 
         /// <summary>
@@ -963,6 +1033,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>AttendanceStatusListing</returns>
+        
         AttendanceStatusListing GetGamificationScorecardsUserAttendance (string userId, String startWorkday, String endWorkday);
 
         /// <summary>
@@ -976,6 +1047,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of AttendanceStatusListing</returns>
+        
         ApiResponse<AttendanceStatusListing> GetGamificationScorecardsUserAttendanceWithHttpInfo (string userId, String startWorkday, String endWorkday);
 
         /// <summary>
@@ -987,6 +1059,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <returns>UserBestPoints</returns>
+        
         UserBestPoints GetGamificationScorecardsUserBestpoints (string userId);
 
         /// <summary>
@@ -998,6 +1071,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <returns>ApiResponse of UserBestPoints</returns>
+        
         ApiResponse<UserBestPoints> GetGamificationScorecardsUserBestpointsWithHttpInfo (string userId);
 
         /// <summary>
@@ -1010,6 +1084,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId"></param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>AllTimePoints</returns>
+        
         AllTimePoints GetGamificationScorecardsUserPointsAlltime (string userId, String endWorkday);
 
         /// <summary>
@@ -1022,6 +1097,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId"></param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of AllTimePoints</returns>
+        
         ApiResponse<AllTimePoints> GetGamificationScorecardsUserPointsAlltimeWithHttpInfo (string userId, String endWorkday);
 
         /// <summary>
@@ -1036,6 +1112,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>WorkdayPointsTrend</returns>
+        
         WorkdayPointsTrend GetGamificationScorecardsUserPointsTrends (string userId, String startWorkday, String endWorkday, string dayOfWeek = null);
 
         /// <summary>
@@ -1050,6 +1127,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>ApiResponse of WorkdayPointsTrend</returns>
+        
         ApiResponse<WorkdayPointsTrend> GetGamificationScorecardsUserPointsTrendsWithHttpInfo (string userId, String startWorkday, String endWorkday, string dayOfWeek = null);
 
         /// <summary>
@@ -1064,6 +1142,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>WorkdayValuesTrend</returns>
+        
         WorkdayValuesTrend GetGamificationScorecardsUserValuesTrends (string userId, String startWorkday, String endWorkday, string timeZone = null);
 
         /// <summary>
@@ -1078,6 +1157,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>ApiResponse of WorkdayValuesTrend</returns>
+        
         ApiResponse<WorkdayValuesTrend> GetGamificationScorecardsUserValuesTrendsWithHttpInfo (string userId, String startWorkday, String endWorkday, string timeZone = null);
 
         /// <summary>
@@ -1091,6 +1171,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterId">ID for the filter type.</param>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>SingleWorkdayAveragePoints</returns>
+        
         SingleWorkdayAveragePoints GetGamificationScorecardsUsersPointsAverage (string filterType, string filterId, String workday);
 
         /// <summary>
@@ -1104,6 +1185,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterId">ID for the filter type.</param>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of SingleWorkdayAveragePoints</returns>
+        
         ApiResponse<SingleWorkdayAveragePoints> GetGamificationScorecardsUsersPointsAverageWithHttpInfo (string filterType, string filterId, String workday);
 
         /// <summary>
@@ -1118,6 +1200,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>SingleWorkdayAverageValues</returns>
+        
         SingleWorkdayAverageValues GetGamificationScorecardsUsersValuesAverage (string filterType, string filterId, String workday, string timeZone = null);
 
         /// <summary>
@@ -1132,6 +1215,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>ApiResponse of SingleWorkdayAverageValues</returns>
+        
         ApiResponse<SingleWorkdayAverageValues> GetGamificationScorecardsUsersValuesAverageWithHttpInfo (string filterType, string filterId, String workday, string timeZone = null);
 
         /// <summary>
@@ -1147,6 +1231,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>WorkdayValuesTrend</returns>
+        
         WorkdayValuesTrend GetGamificationScorecardsUsersValuesTrends (string filterType, string filterId, String startWorkday, String endWorkday, string timeZone = null);
 
         /// <summary>
@@ -1162,6 +1247,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>ApiResponse of WorkdayValuesTrend</returns>
+        
         ApiResponse<WorkdayValuesTrend> GetGamificationScorecardsUsersValuesTrendsWithHttpInfo (string filterType, string filterId, String startWorkday, String endWorkday, string timeZone = null);
 
         /// <summary>
@@ -1174,6 +1260,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>SingleWorkdayAverageValues</returns>
+        
         SingleWorkdayAverageValues GetGamificationScorecardsValuesAverage (String workday, string timeZone = null);
 
         /// <summary>
@@ -1186,6 +1273,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>ApiResponse of SingleWorkdayAverageValues</returns>
+        
         ApiResponse<SingleWorkdayAverageValues> GetGamificationScorecardsValuesAverageWithHttpInfo (String workday, string timeZone = null);
 
         /// <summary>
@@ -1201,6 +1289,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the profile of the user as of this date. If not set, then the user&#39;s current profile will be used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>WorkdayValuesTrend</returns>
+        
         WorkdayValuesTrend GetGamificationScorecardsValuesTrends (String startWorkday, String endWorkday, string filterType = null, String referenceWorkday = null, string timeZone = null);
 
         /// <summary>
@@ -1216,6 +1305,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the profile of the user as of this date. If not set, then the user&#39;s current profile will be used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>ApiResponse of WorkdayValuesTrend</returns>
+        
         ApiResponse<WorkdayValuesTrend> GetGamificationScorecardsValuesTrendsWithHttpInfo (String startWorkday, String endWorkday, string filterType = null, String referenceWorkday = null, string timeZone = null);
 
         /// <summary>
@@ -1226,6 +1316,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>GamificationStatus</returns>
+        
         GamificationStatus GetGamificationStatus ();
 
         /// <summary>
@@ -1236,6 +1327,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of GamificationStatus</returns>
+        
         ApiResponse<GamificationStatus> GetGamificationStatusWithHttpInfo ();
 
         /// <summary>
@@ -1247,6 +1339,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">template id</param>
         /// <returns>ObjectiveTemplate</returns>
+        
         ObjectiveTemplate GetGamificationTemplate (string templateId);
 
         /// <summary>
@@ -1258,6 +1351,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">template id</param>
         /// <returns>ApiResponse of ObjectiveTemplate</returns>
+        
         ApiResponse<ObjectiveTemplate> GetGamificationTemplateWithHttpInfo (string templateId);
 
         /// <summary>
@@ -1268,6 +1362,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>GetTemplatesResponse</returns>
+        
         GetTemplatesResponse GetGamificationTemplates ();
 
         /// <summary>
@@ -1278,6 +1373,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of GetTemplatesResponse</returns>
+        
         ApiResponse<GetTemplatesResponse> GetGamificationTemplatesWithHttpInfo ();
 
         /// <summary>
@@ -1290,6 +1386,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="metricId">Specifies the metric definition ID</param>
         /// <param name="body">The External Metric Definition parameters to be updated</param>
         /// <returns>ExternalMetricDefinition</returns>
+        
         ExternalMetricDefinition PatchEmployeeperformanceExternalmetricsDefinition (string metricId, ExternalMetricDefinitionUpdateRequest body);
 
         /// <summary>
@@ -1302,6 +1399,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="metricId">Specifies the metric definition ID</param>
         /// <param name="body">The External Metric Definition parameters to be updated</param>
         /// <returns>ApiResponse of ExternalMetricDefinition</returns>
+        
         ApiResponse<ExternalMetricDefinition> PatchEmployeeperformanceExternalmetricsDefinitionWithHttpInfo (string metricId, ExternalMetricDefinitionUpdateRequest body);
 
         /// <summary>
@@ -1313,6 +1411,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The External Metric Data to be added (optional)</param>
         /// <returns>ExternalMetricDataWriteResponse</returns>
+        
         ExternalMetricDataWriteResponse PostEmployeeperformanceExternalmetricsData (ExternalMetricDataWriteRequest body = null);
 
         /// <summary>
@@ -1324,6 +1423,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The External Metric Data to be added (optional)</param>
         /// <returns>ApiResponse of ExternalMetricDataWriteResponse</returns>
+        
         ApiResponse<ExternalMetricDataWriteResponse> PostEmployeeperformanceExternalmetricsDataWithHttpInfo (ExternalMetricDataWriteRequest body = null);
 
         /// <summary>
@@ -1335,6 +1435,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The External Metric Definition to be created (optional)</param>
         /// <returns>ExternalMetricDefinition</returns>
+        
         ExternalMetricDefinition PostEmployeeperformanceExternalmetricsDefinitions (ExternalMetricDefinitionCreateRequest body = null);
 
         /// <summary>
@@ -1346,6 +1447,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The External Metric Definition to be created (optional)</param>
         /// <returns>ApiResponse of ExternalMetricDefinition</returns>
+        
         ApiResponse<ExternalMetricDefinition> PostEmployeeperformanceExternalmetricsDefinitionsWithHttpInfo (ExternalMetricDefinitionCreateRequest body = null);
 
         /// <summary>
@@ -1357,6 +1459,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId">performanceProfileId</param>
         /// <returns>PerformanceProfile</returns>
+        
         PerformanceProfile PostGamificationProfileActivate (string profileId);
 
         /// <summary>
@@ -1368,6 +1471,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId">performanceProfileId</param>
         /// <returns>ApiResponse of PerformanceProfile</returns>
+        
         ApiResponse<PerformanceProfile> PostGamificationProfileActivateWithHttpInfo (string profileId);
 
         /// <summary>
@@ -1379,6 +1483,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId">performanceProfileId</param>
         /// <returns>PerformanceProfile</returns>
+        
         PerformanceProfile PostGamificationProfileDeactivate (string profileId);
 
         /// <summary>
@@ -1390,6 +1495,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId">performanceProfileId</param>
         /// <returns>ApiResponse of PerformanceProfile</returns>
+        
         ApiResponse<PerformanceProfile> PostGamificationProfileDeactivateWithHttpInfo (string profileId);
 
         /// <summary>
@@ -1402,6 +1508,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">Profile Id</param>
         /// <param name="body">assignUsers</param>
         /// <returns>Assignment</returns>
+        
         Assignment PostGamificationProfileMembers (string profileId, AssignUsers body);
 
         /// <summary>
@@ -1414,6 +1521,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">Profile Id</param>
         /// <param name="body">assignUsers</param>
         /// <returns>ApiResponse of Assignment</returns>
+        
         ApiResponse<Assignment> PostGamificationProfileMembersWithHttpInfo (string profileId, AssignUsers body);
 
         /// <summary>
@@ -1426,6 +1534,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">Profile Id</param>
         /// <param name="body">memberAssignments</param>
         /// <returns>AssignmentValidation</returns>
+        
         AssignmentValidation PostGamificationProfileMembersValidate (string profileId, ValidateAssignUsers body);
 
         /// <summary>
@@ -1438,6 +1547,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">Profile Id</param>
         /// <param name="body">memberAssignments</param>
         /// <returns>ApiResponse of AssignmentValidation</returns>
+        
         ApiResponse<AssignmentValidation> PostGamificationProfileMembersValidateWithHttpInfo (string profileId, ValidateAssignUsers body);
 
         /// <summary>
@@ -1451,6 +1561,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sourceMetricId">Source Metric Id</param>
         /// <param name="body">linkedMetric</param>
         /// <returns>Metric</returns>
+        
         Metric PostGamificationProfileMetricLink (string sourceProfileId, string sourceMetricId, TargetPerformanceProfile body);
 
         /// <summary>
@@ -1464,6 +1575,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sourceMetricId">Source Metric Id</param>
         /// <param name="body">linkedMetric</param>
         /// <returns>ApiResponse of Metric</returns>
+        
         ApiResponse<Metric> PostGamificationProfileMetricLinkWithHttpInfo (string sourceProfileId, string sourceMetricId, TargetPerformanceProfile body);
 
         /// <summary>
@@ -1476,6 +1588,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">Performance Profile Id</param>
         /// <param name="body">Metric</param>
         /// <returns>Metric</returns>
+        
         Metric PostGamificationProfileMetrics (string profileId, CreateMetric body);
 
         /// <summary>
@@ -1488,6 +1601,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">Performance Profile Id</param>
         /// <param name="body">Metric</param>
         /// <returns>ApiResponse of Metric</returns>
+        
         ApiResponse<Metric> PostGamificationProfileMetricsWithHttpInfo (string profileId, CreateMetric body);
 
         /// <summary>
@@ -1500,6 +1614,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">performanceProfile</param>
         /// <param name="copyMetrics">Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile. (optional, default to true)</param>
         /// <returns>PerformanceProfile</returns>
+        
         PerformanceProfile PostGamificationProfiles (CreatePerformanceProfile body, bool? copyMetrics = null);
 
         /// <summary>
@@ -1512,6 +1627,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">performanceProfile</param>
         /// <param name="copyMetrics">Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile. (optional, default to true)</param>
         /// <returns>ApiResponse of PerformanceProfile</returns>
+        
         ApiResponse<PerformanceProfile> PostGamificationProfilesWithHttpInfo (CreatePerformanceProfile body, bool? copyMetrics = null);
 
         /// <summary>
@@ -1524,6 +1640,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">The ID of a user.</param>
         /// <param name="body">The date range of work day.</param>
         /// <returns>UserProfilesInDateRange</returns>
+        
         UserProfilesInDateRange PostGamificationProfilesUserQuery (string userId, UserProfilesInDateRangeRequest body);
 
         /// <summary>
@@ -1536,6 +1653,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">The ID of a user.</param>
         /// <param name="body">The date range of work day.</param>
         /// <returns>ApiResponse of UserProfilesInDateRange</returns>
+        
         ApiResponse<UserProfilesInDateRange> PostGamificationProfilesUserQueryWithHttpInfo (string userId, UserProfilesInDateRangeRequest body);
 
         /// <summary>
@@ -1547,6 +1665,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The date range of work day.</param>
         /// <returns>UserProfilesInDateRange</returns>
+        
         UserProfilesInDateRange PostGamificationProfilesUsersMeQuery (UserProfilesInDateRangeRequest body);
 
         /// <summary>
@@ -1558,6 +1677,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The date range of work day.</param>
         /// <returns>ApiResponse of UserProfilesInDateRange</returns>
+        
         ApiResponse<UserProfilesInDateRange> PostGamificationProfilesUsersMeQueryWithHttpInfo (UserProfilesInDateRangeRequest body);
 
         /// <summary>
@@ -1570,6 +1690,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">performanceProfileId</param>
         /// <param name="body">performanceProfile (optional)</param>
         /// <returns>PerformanceProfile</returns>
+        
         PerformanceProfile PutGamificationProfile (string profileId, PerformanceProfile body = null);
 
         /// <summary>
@@ -1582,6 +1703,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">performanceProfileId</param>
         /// <param name="body">performanceProfile (optional)</param>
         /// <returns>ApiResponse of PerformanceProfile</returns>
+        
         ApiResponse<PerformanceProfile> PutGamificationProfileWithHttpInfo (string profileId, PerformanceProfile body = null);
 
         /// <summary>
@@ -1595,6 +1717,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="metricId">Metric Id</param>
         /// <param name="body">Metric</param>
         /// <returns>Metric</returns>
+        
         Metric PutGamificationProfileMetric (string profileId, string metricId, CreateMetric body);
 
         /// <summary>
@@ -1608,6 +1731,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="metricId">Metric Id</param>
         /// <param name="body">Metric</param>
         /// <returns>ApiResponse of Metric</returns>
+        
         ApiResponse<Metric> PutGamificationProfileMetricWithHttpInfo (string profileId, string metricId, CreateMetric body);
 
         /// <summary>
@@ -1619,6 +1743,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="status">Gamification status</param>
         /// <returns>GamificationStatus</returns>
+        
         GamificationStatus PutGamificationStatus (GamificationStatus status);
 
         /// <summary>
@@ -1630,6 +1755,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="status">Gamification status</param>
         /// <returns>ApiResponse of GamificationStatus</returns>
+        
         ApiResponse<GamificationStatus> PutGamificationStatusWithHttpInfo (GamificationStatus status);
 
         #endregion Synchronous Operations
@@ -1645,6 +1771,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">Specifies the External Metric Definition ID</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task DeleteEmployeeperformanceExternalmetricsDefinitionAsync (string metricId);
 
         /// <summary>
@@ -1656,6 +1783,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">Specifies the External Metric Definition ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteEmployeeperformanceExternalmetricsDefinitionAsyncWithHttpInfo (string metricId);
 
         /// <summary>
@@ -1667,6 +1795,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">Specifies the External Metric Definition ID</param>
         /// <returns>Task of ExternalMetricDefinition</returns>
+        
         System.Threading.Tasks.Task<ExternalMetricDefinition> GetEmployeeperformanceExternalmetricsDefinitionAsync (string metricId);
 
         /// <summary>
@@ -1678,6 +1807,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">Specifies the External Metric Definition ID</param>
         /// <returns>Task of ApiResponse (ExternalMetricDefinition)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ExternalMetricDefinition>> GetEmployeeperformanceExternalmetricsDefinitionAsyncWithHttpInfo (string metricId);
 
         /// <summary>
@@ -1690,6 +1820,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ExternalMetricDefinitionListing</returns>
+        
         System.Threading.Tasks.Task<ExternalMetricDefinitionListing> GetEmployeeperformanceExternalmetricsDefinitionsAsync (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -1702,6 +1833,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (ExternalMetricDefinitionListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ExternalMetricDefinitionListing>> GetEmployeeperformanceExternalmetricsDefinitionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
@@ -1723,6 +1855,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <param name="userIds">A list of up to 100 comma-separated user Ids (optional)</param>
         /// <returns>Task of InsightsSummary</returns>
+        
         System.Threading.Tasks.Task<InsightsSummary> GetGamificationInsightsAsync (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, int? pageSize = null, int? pageNumber = null, string sortKey = null, string sortMetricId = null, string sortOrder = null, string userIds = null);
 
         /// <summary>
@@ -1744,6 +1877,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <param name="userIds">A list of up to 100 comma-separated user Ids (optional)</param>
         /// <returns>Task of ApiResponse (InsightsSummary)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<InsightsSummary>> GetGamificationInsightsAsyncWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, int? pageSize = null, int? pageNumber = null, string sortKey = null, string sortMetricId = null, string sortOrder = null, string userIds = null);
 
         /// <summary>
@@ -1759,6 +1893,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="comparativePeriodStartWorkday">The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of InsightsDetails</returns>
+        
         System.Threading.Tasks.Task<InsightsDetails> GetGamificationInsightsDetailsAsync (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday);
 
         /// <summary>
@@ -1774,6 +1909,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="comparativePeriodStartWorkday">The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (InsightsDetails)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<InsightsDetails>> GetGamificationInsightsDetailsAsyncWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday);
 
         /// <summary>
@@ -1791,6 +1927,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodEndWorkday">The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of InsightsTrend</returns>
+        
         System.Threading.Tasks.Task<InsightsTrend> GetGamificationInsightsGroupsTrendsAsync (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday);
 
         /// <summary>
@@ -1808,6 +1945,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodEndWorkday">The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (InsightsTrend)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<InsightsTrend>> GetGamificationInsightsGroupsTrendsAsyncWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday);
 
         /// <summary>
@@ -1825,6 +1963,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodEndWorkday">The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of InsightsTrend</returns>
+        
         System.Threading.Tasks.Task<InsightsTrend> GetGamificationInsightsGroupsTrendsAllAsync (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday);
 
         /// <summary>
@@ -1842,6 +1981,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodEndWorkday">The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (InsightsTrend)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<InsightsTrend>> GetGamificationInsightsGroupsTrendsAllAsyncWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday);
 
         /// <summary>
@@ -1856,6 +1996,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="granularity">Granularity</param>
         /// <param name="startWorkday">The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of InsightsAgents</returns>
+        
         System.Threading.Tasks.Task<InsightsAgents> GetGamificationInsightsMembersAsync (string filterType, string filterId, string granularity, String startWorkday);
 
         /// <summary>
@@ -1870,6 +2011,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="granularity">Granularity</param>
         /// <param name="startWorkday">The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (InsightsAgents)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<InsightsAgents>> GetGamificationInsightsMembersAsyncWithHttpInfo (string filterType, string filterId, string granularity, String startWorkday);
 
         /// <summary>
@@ -1887,6 +2029,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodEndWorkday">The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of UserInsightsTrend</returns>
+        
         System.Threading.Tasks.Task<UserInsightsTrend> GetGamificationInsightsTrendsAsync (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday);
 
         /// <summary>
@@ -1904,6 +2047,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodEndWorkday">The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (UserInsightsTrend)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<UserInsightsTrend>> GetGamificationInsightsTrendsAsyncWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday);
 
         /// <summary>
@@ -1920,6 +2064,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="comparativePeriodStartWorkday">The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of InsightsDetails</returns>
+        
         System.Threading.Tasks.Task<InsightsDetails> GetGamificationInsightsUserDetailsAsync (string userId, string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday);
 
         /// <summary>
@@ -1936,6 +2081,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="comparativePeriodStartWorkday">The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (InsightsDetails)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<InsightsDetails>> GetGamificationInsightsUserDetailsAsyncWithHttpInfo (string userId, string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday);
 
         /// <summary>
@@ -1954,6 +2100,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodEndWorkday">The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of UserInsightsTrend</returns>
+        
         System.Threading.Tasks.Task<UserInsightsTrend> GetGamificationInsightsUserTrendsAsync (string userId, string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday);
 
         /// <summary>
@@ -1972,6 +2119,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodEndWorkday">The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (UserInsightsTrend)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<UserInsightsTrend>> GetGamificationInsightsUserTrendsAsyncWithHttpInfo (string userId, string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday);
 
         /// <summary>
@@ -1985,6 +2133,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="metricId">Metric Id for which the leaderboard is to be generated. The total points is used if nothing is given. (optional)</param>
         /// <returns>Task of Leaderboard</returns>
+        
         System.Threading.Tasks.Task<Leaderboard> GetGamificationLeaderboardAsync (String startWorkday, String endWorkday, string metricId = null);
 
         /// <summary>
@@ -1998,6 +2147,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="metricId">Metric Id for which the leaderboard is to be generated. The total points is used if nothing is given. (optional)</param>
         /// <returns>Task of ApiResponse (Leaderboard)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Leaderboard>> GetGamificationLeaderboardAsyncWithHttpInfo (String startWorkday, String endWorkday, string metricId = null);
 
         /// <summary>
@@ -2013,6 +2163,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="metricId">Metric Id for which the leaderboard is to be generated. The total points is used if nothing is given. (optional)</param>
         /// <returns>Task of Leaderboard</returns>
+        
         System.Threading.Tasks.Task<Leaderboard> GetGamificationLeaderboardAllAsync (string filterType, string filterId, String startWorkday, String endWorkday, string metricId = null);
 
         /// <summary>
@@ -2028,6 +2179,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="metricId">Metric Id for which the leaderboard is to be generated. The total points is used if nothing is given. (optional)</param>
         /// <returns>Task of ApiResponse (Leaderboard)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Leaderboard>> GetGamificationLeaderboardAllAsyncWithHttpInfo (string filterType, string filterId, String startWorkday, String endWorkday, string metricId = null);
 
         /// <summary>
@@ -2040,6 +2192,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterType">Filter type for the query request.</param>
         /// <param name="filterId">ID for the filter type. For example, division or performance profile Id</param>
         /// <returns>Task of OverallBestPoints</returns>
+        
         System.Threading.Tasks.Task<OverallBestPoints> GetGamificationLeaderboardAllBestpointsAsync (string filterType, string filterId);
 
         /// <summary>
@@ -2052,6 +2205,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterType">Filter type for the query request.</param>
         /// <param name="filterId">ID for the filter type. For example, division or performance profile Id</param>
         /// <returns>Task of ApiResponse (OverallBestPoints)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<OverallBestPoints>> GetGamificationLeaderboardAllBestpointsAsyncWithHttpInfo (string filterType, string filterId);
 
         /// <summary>
@@ -2062,6 +2216,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of OverallBestPoints</returns>
+        
         System.Threading.Tasks.Task<OverallBestPoints> GetGamificationLeaderboardBestpointsAsync ();
 
         /// <summary>
@@ -2072,6 +2227,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (OverallBestPoints)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<OverallBestPoints>> GetGamificationLeaderboardBestpointsAsyncWithHttpInfo ();
 
         /// <summary>
@@ -2083,6 +2239,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricDefinitionId">metric definition id</param>
         /// <returns>Task of MetricDefinition</returns>
+        
         System.Threading.Tasks.Task<MetricDefinition> GetGamificationMetricdefinitionAsync (string metricDefinitionId);
 
         /// <summary>
@@ -2094,6 +2251,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricDefinitionId">metric definition id</param>
         /// <returns>Task of ApiResponse (MetricDefinition)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<MetricDefinition>> GetGamificationMetricdefinitionAsyncWithHttpInfo (string metricDefinitionId);
 
         /// <summary>
@@ -2104,6 +2262,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of GetMetricDefinitionsResponse</returns>
+        
         System.Threading.Tasks.Task<GetMetricDefinitionsResponse> GetGamificationMetricdefinitionsAsync ();
 
         /// <summary>
@@ -2114,6 +2273,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (GetMetricDefinitionsResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<GetMetricDefinitionsResponse>> GetGamificationMetricdefinitionsAsyncWithHttpInfo ();
 
         /// <summary>
@@ -2125,6 +2285,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId">performanceProfileId</param>
         /// <returns>Task of PerformanceProfile</returns>
+        
         System.Threading.Tasks.Task<PerformanceProfile> GetGamificationProfileAsync (string profileId);
 
         /// <summary>
@@ -2136,6 +2297,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId">performanceProfileId</param>
         /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> GetGamificationProfileAsyncWithHttpInfo (string profileId);
 
         /// <summary>
@@ -2147,6 +2309,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId">Profile Id</param>
         /// <returns>Task of MemberListing</returns>
+        
         System.Threading.Tasks.Task<MemberListing> GetGamificationProfileMembersAsync (string profileId);
 
         /// <summary>
@@ -2158,6 +2321,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId">Profile Id</param>
         /// <returns>Task of ApiResponse (MemberListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<MemberListing>> GetGamificationProfileMembersAsyncWithHttpInfo (string profileId);
 
         /// <summary>
@@ -2171,6 +2335,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="metricId">Metric Id</param>
         /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of Metric</returns>
+        
         System.Threading.Tasks.Task<Metric> GetGamificationProfileMetricAsync (string profileId, string metricId, String workday = null);
 
         /// <summary>
@@ -2184,6 +2349,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="metricId">Metric Id</param>
         /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of ApiResponse (Metric)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Metric>> GetGamificationProfileMetricAsyncWithHttpInfo (string profileId, string metricId, String workday = null);
 
         /// <summary>
@@ -2198,6 +2364,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="metricIds">List of metric ids to filter the response (Optional, comma-separated). (optional)</param>
         /// <returns>Task of GetMetricResponse</returns>
+        
         System.Threading.Tasks.Task<GetMetricResponse> GetGamificationProfileMetricsAsync (string profileId, List<string> expand = null, String workday = null, string metricIds = null);
 
         /// <summary>
@@ -2212,6 +2379,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="metricIds">List of metric ids to filter the response (Optional, comma-separated). (optional)</param>
         /// <returns>Task of ApiResponse (GetMetricResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<GetMetricResponse>> GetGamificationProfileMetricsAsyncWithHttpInfo (string profileId, List<string> expand = null, String workday = null, string metricIds = null);
 
         /// <summary>
@@ -2224,6 +2392,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">Performance Profile Id</param>
         /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of GetMetricsResponse</returns>
+        
         System.Threading.Tasks.Task<GetMetricsResponse> GetGamificationProfileMetricsObjectivedetailsAsync (string profileId, String workday = null);
 
         /// <summary>
@@ -2236,6 +2405,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">Performance Profile Id</param>
         /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of ApiResponse (GetMetricsResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<GetMetricsResponse>> GetGamificationProfileMetricsObjectivedetailsAsyncWithHttpInfo (string profileId, String workday = null);
 
         /// <summary>
@@ -2246,6 +2416,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of GetProfilesResponse</returns>
+        
         System.Threading.Tasks.Task<GetProfilesResponse> GetGamificationProfilesAsync ();
 
         /// <summary>
@@ -2256,6 +2427,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (GetProfilesResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<GetProfilesResponse>> GetGamificationProfilesAsyncWithHttpInfo ();
 
         /// <summary>
@@ -2268,6 +2440,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId"></param>
         /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of PerformanceProfile</returns>
+        
         System.Threading.Tasks.Task<PerformanceProfile> GetGamificationProfilesUserAsync (string userId, String workday = null);
 
         /// <summary>
@@ -2280,6 +2453,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId"></param>
         /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> GetGamificationProfilesUserAsyncWithHttpInfo (string userId, String workday = null);
 
         /// <summary>
@@ -2291,6 +2465,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of PerformanceProfile</returns>
+        
         System.Threading.Tasks.Task<PerformanceProfile> GetGamificationProfilesUsersMeAsync (String workday = null);
 
         /// <summary>
@@ -2302,6 +2477,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> GetGamificationProfilesUsersMeAsyncWithHttpInfo (String workday = null);
 
         /// <summary>
@@ -2314,6 +2490,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of WorkdayMetricListing</returns>
+        
         System.Threading.Tasks.Task<WorkdayMetricListing> GetGamificationScorecardsAsync (String workday, List<string> expand = null);
 
         /// <summary>
@@ -2326,6 +2503,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (WorkdayMetricListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<WorkdayMetricListing>> GetGamificationScorecardsAsyncWithHttpInfo (String workday, List<string> expand = null);
 
         /// <summary>
@@ -2338,6 +2516,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of AttendanceStatusListing</returns>
+        
         System.Threading.Tasks.Task<AttendanceStatusListing> GetGamificationScorecardsAttendanceAsync (String startWorkday, String endWorkday);
 
         /// <summary>
@@ -2350,6 +2529,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (AttendanceStatusListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<AttendanceStatusListing>> GetGamificationScorecardsAttendanceAsyncWithHttpInfo (String startWorkday, String endWorkday);
 
         /// <summary>
@@ -2360,6 +2540,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of UserBestPoints</returns>
+        
         System.Threading.Tasks.Task<UserBestPoints> GetGamificationScorecardsBestpointsAsync ();
 
         /// <summary>
@@ -2370,6 +2551,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (UserBestPoints)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<UserBestPoints>> GetGamificationScorecardsBestpointsAsyncWithHttpInfo ();
 
         /// <summary>
@@ -2381,6 +2563,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of AllTimePoints</returns>
+        
         System.Threading.Tasks.Task<AllTimePoints> GetGamificationScorecardsPointsAlltimeAsync (String endWorkday);
 
         /// <summary>
@@ -2392,6 +2575,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (AllTimePoints)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<AllTimePoints>> GetGamificationScorecardsPointsAlltimeAsyncWithHttpInfo (String endWorkday);
 
         /// <summary>
@@ -2403,6 +2587,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of SingleWorkdayAveragePoints</returns>
+        
         System.Threading.Tasks.Task<SingleWorkdayAveragePoints> GetGamificationScorecardsPointsAverageAsync (String workday);
 
         /// <summary>
@@ -2414,6 +2599,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (SingleWorkdayAveragePoints)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<SingleWorkdayAveragePoints>> GetGamificationScorecardsPointsAverageAsyncWithHttpInfo (String workday);
 
         /// <summary>
@@ -2427,6 +2613,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>Task of WorkdayPointsTrend</returns>
+        
         System.Threading.Tasks.Task<WorkdayPointsTrend> GetGamificationScorecardsPointsTrendsAsync (String startWorkday, String endWorkday, string dayOfWeek = null);
 
         /// <summary>
@@ -2440,6 +2627,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>Task of ApiResponse (WorkdayPointsTrend)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<WorkdayPointsTrend>> GetGamificationScorecardsPointsTrendsAsyncWithHttpInfo (String startWorkday, String endWorkday, string dayOfWeek = null);
 
         /// <summary>
@@ -2457,6 +2645,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of MetricValueTrendAverage</returns>
+        
         System.Threading.Tasks.Task<MetricValueTrendAverage> GetGamificationScorecardsProfileMetricUserValuesTrendsAsync (string profileId, string metricId, string userId, String startWorkday, String endWorkday, String referenceWorkday = null, string timeZone = null);
 
         /// <summary>
@@ -2474,6 +2663,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of ApiResponse (MetricValueTrendAverage)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<MetricValueTrendAverage>> GetGamificationScorecardsProfileMetricUserValuesTrendsAsyncWithHttpInfo (string profileId, string metricId, string userId, String startWorkday, String endWorkday, String referenceWorkday = null, string timeZone = null);
 
         /// <summary>
@@ -2492,6 +2682,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of MetricValueTrendAverage</returns>
+        
         System.Threading.Tasks.Task<MetricValueTrendAverage> GetGamificationScorecardsProfileMetricUsersValuesTrendsAsync (string profileId, string metricId, string filterType, String startWorkday, String endWorkday, string filterId = null, String referenceWorkday = null, string timeZone = null);
 
         /// <summary>
@@ -2510,6 +2701,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of ApiResponse (MetricValueTrendAverage)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<MetricValueTrendAverage>> GetGamificationScorecardsProfileMetricUsersValuesTrendsAsyncWithHttpInfo (string profileId, string metricId, string filterType, String startWorkday, String endWorkday, string filterId = null, String referenceWorkday = null, string timeZone = null);
 
         /// <summary>
@@ -2527,6 +2719,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of MetricValueTrendAverage</returns>
+        
         System.Threading.Tasks.Task<MetricValueTrendAverage> GetGamificationScorecardsProfileMetricValuesTrendsAsync (string profileId, string metricId, String startWorkday, String endWorkday, string filterType = null, String referenceWorkday = null, string timeZone = null);
 
         /// <summary>
@@ -2544,6 +2737,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of ApiResponse (MetricValueTrendAverage)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<MetricValueTrendAverage>> GetGamificationScorecardsProfileMetricValuesTrendsAsyncWithHttpInfo (string profileId, string metricId, String startWorkday, String endWorkday, string filterType = null, String referenceWorkday = null, string timeZone = null);
 
         /// <summary>
@@ -2557,6 +2751,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of WorkdayMetricListing</returns>
+        
         System.Threading.Tasks.Task<WorkdayMetricListing> GetGamificationScorecardsUserAsync (string userId, String workday, List<string> expand = null);
 
         /// <summary>
@@ -2570,6 +2765,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (WorkdayMetricListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<WorkdayMetricListing>> GetGamificationScorecardsUserAsyncWithHttpInfo (string userId, String workday, List<string> expand = null);
 
         /// <summary>
@@ -2583,6 +2779,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of AttendanceStatusListing</returns>
+        
         System.Threading.Tasks.Task<AttendanceStatusListing> GetGamificationScorecardsUserAttendanceAsync (string userId, String startWorkday, String endWorkday);
 
         /// <summary>
@@ -2596,6 +2793,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (AttendanceStatusListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<AttendanceStatusListing>> GetGamificationScorecardsUserAttendanceAsyncWithHttpInfo (string userId, String startWorkday, String endWorkday);
 
         /// <summary>
@@ -2607,6 +2805,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <returns>Task of UserBestPoints</returns>
+        
         System.Threading.Tasks.Task<UserBestPoints> GetGamificationScorecardsUserBestpointsAsync (string userId);
 
         /// <summary>
@@ -2618,6 +2817,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <returns>Task of ApiResponse (UserBestPoints)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<UserBestPoints>> GetGamificationScorecardsUserBestpointsAsyncWithHttpInfo (string userId);
 
         /// <summary>
@@ -2630,6 +2830,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId"></param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of AllTimePoints</returns>
+        
         System.Threading.Tasks.Task<AllTimePoints> GetGamificationScorecardsUserPointsAlltimeAsync (string userId, String endWorkday);
 
         /// <summary>
@@ -2642,6 +2843,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId"></param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (AllTimePoints)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<AllTimePoints>> GetGamificationScorecardsUserPointsAlltimeAsyncWithHttpInfo (string userId, String endWorkday);
 
         /// <summary>
@@ -2656,6 +2858,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>Task of WorkdayPointsTrend</returns>
+        
         System.Threading.Tasks.Task<WorkdayPointsTrend> GetGamificationScorecardsUserPointsTrendsAsync (string userId, String startWorkday, String endWorkday, string dayOfWeek = null);
 
         /// <summary>
@@ -2670,6 +2873,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>Task of ApiResponse (WorkdayPointsTrend)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<WorkdayPointsTrend>> GetGamificationScorecardsUserPointsTrendsAsyncWithHttpInfo (string userId, String startWorkday, String endWorkday, string dayOfWeek = null);
 
         /// <summary>
@@ -2684,6 +2888,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of WorkdayValuesTrend</returns>
+        
         System.Threading.Tasks.Task<WorkdayValuesTrend> GetGamificationScorecardsUserValuesTrendsAsync (string userId, String startWorkday, String endWorkday, string timeZone = null);
 
         /// <summary>
@@ -2698,6 +2903,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of ApiResponse (WorkdayValuesTrend)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<WorkdayValuesTrend>> GetGamificationScorecardsUserValuesTrendsAsyncWithHttpInfo (string userId, String startWorkday, String endWorkday, string timeZone = null);
 
         /// <summary>
@@ -2711,6 +2917,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterId">ID for the filter type.</param>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of SingleWorkdayAveragePoints</returns>
+        
         System.Threading.Tasks.Task<SingleWorkdayAveragePoints> GetGamificationScorecardsUsersPointsAverageAsync (string filterType, string filterId, String workday);
 
         /// <summary>
@@ -2724,6 +2931,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterId">ID for the filter type.</param>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (SingleWorkdayAveragePoints)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<SingleWorkdayAveragePoints>> GetGamificationScorecardsUsersPointsAverageAsyncWithHttpInfo (string filterType, string filterId, String workday);
 
         /// <summary>
@@ -2738,6 +2946,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of SingleWorkdayAverageValues</returns>
+        
         System.Threading.Tasks.Task<SingleWorkdayAverageValues> GetGamificationScorecardsUsersValuesAverageAsync (string filterType, string filterId, String workday, string timeZone = null);
 
         /// <summary>
@@ -2752,6 +2961,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of ApiResponse (SingleWorkdayAverageValues)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<SingleWorkdayAverageValues>> GetGamificationScorecardsUsersValuesAverageAsyncWithHttpInfo (string filterType, string filterId, String workday, string timeZone = null);
 
         /// <summary>
@@ -2767,6 +2977,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of WorkdayValuesTrend</returns>
+        
         System.Threading.Tasks.Task<WorkdayValuesTrend> GetGamificationScorecardsUsersValuesTrendsAsync (string filterType, string filterId, String startWorkday, String endWorkday, string timeZone = null);
 
         /// <summary>
@@ -2782,6 +2993,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of ApiResponse (WorkdayValuesTrend)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<WorkdayValuesTrend>> GetGamificationScorecardsUsersValuesTrendsAsyncWithHttpInfo (string filterType, string filterId, String startWorkday, String endWorkday, string timeZone = null);
 
         /// <summary>
@@ -2794,6 +3006,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of SingleWorkdayAverageValues</returns>
+        
         System.Threading.Tasks.Task<SingleWorkdayAverageValues> GetGamificationScorecardsValuesAverageAsync (String workday, string timeZone = null);
 
         /// <summary>
@@ -2806,6 +3019,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of ApiResponse (SingleWorkdayAverageValues)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<SingleWorkdayAverageValues>> GetGamificationScorecardsValuesAverageAsyncWithHttpInfo (String workday, string timeZone = null);
 
         /// <summary>
@@ -2821,6 +3035,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the profile of the user as of this date. If not set, then the user&#39;s current profile will be used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of WorkdayValuesTrend</returns>
+        
         System.Threading.Tasks.Task<WorkdayValuesTrend> GetGamificationScorecardsValuesTrendsAsync (String startWorkday, String endWorkday, string filterType = null, String referenceWorkday = null, string timeZone = null);
 
         /// <summary>
@@ -2836,6 +3051,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the profile of the user as of this date. If not set, then the user&#39;s current profile will be used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of ApiResponse (WorkdayValuesTrend)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<WorkdayValuesTrend>> GetGamificationScorecardsValuesTrendsAsyncWithHttpInfo (String startWorkday, String endWorkday, string filterType = null, String referenceWorkday = null, string timeZone = null);
 
         /// <summary>
@@ -2846,6 +3062,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of GamificationStatus</returns>
+        
         System.Threading.Tasks.Task<GamificationStatus> GetGamificationStatusAsync ();
 
         /// <summary>
@@ -2856,6 +3073,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (GamificationStatus)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<GamificationStatus>> GetGamificationStatusAsyncWithHttpInfo ();
 
         /// <summary>
@@ -2867,6 +3085,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">template id</param>
         /// <returns>Task of ObjectiveTemplate</returns>
+        
         System.Threading.Tasks.Task<ObjectiveTemplate> GetGamificationTemplateAsync (string templateId);
 
         /// <summary>
@@ -2878,6 +3097,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">template id</param>
         /// <returns>Task of ApiResponse (ObjectiveTemplate)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ObjectiveTemplate>> GetGamificationTemplateAsyncWithHttpInfo (string templateId);
 
         /// <summary>
@@ -2888,6 +3108,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of GetTemplatesResponse</returns>
+        
         System.Threading.Tasks.Task<GetTemplatesResponse> GetGamificationTemplatesAsync ();
 
         /// <summary>
@@ -2898,6 +3119,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (GetTemplatesResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<GetTemplatesResponse>> GetGamificationTemplatesAsyncWithHttpInfo ();
 
         /// <summary>
@@ -2910,6 +3132,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="metricId">Specifies the metric definition ID</param>
         /// <param name="body">The External Metric Definition parameters to be updated</param>
         /// <returns>Task of ExternalMetricDefinition</returns>
+        
         System.Threading.Tasks.Task<ExternalMetricDefinition> PatchEmployeeperformanceExternalmetricsDefinitionAsync (string metricId, ExternalMetricDefinitionUpdateRequest body);
 
         /// <summary>
@@ -2922,6 +3145,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="metricId">Specifies the metric definition ID</param>
         /// <param name="body">The External Metric Definition parameters to be updated</param>
         /// <returns>Task of ApiResponse (ExternalMetricDefinition)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ExternalMetricDefinition>> PatchEmployeeperformanceExternalmetricsDefinitionAsyncWithHttpInfo (string metricId, ExternalMetricDefinitionUpdateRequest body);
 
         /// <summary>
@@ -2933,6 +3157,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The External Metric Data to be added (optional)</param>
         /// <returns>Task of ExternalMetricDataWriteResponse</returns>
+        
         System.Threading.Tasks.Task<ExternalMetricDataWriteResponse> PostEmployeeperformanceExternalmetricsDataAsync (ExternalMetricDataWriteRequest body = null);
 
         /// <summary>
@@ -2944,6 +3169,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The External Metric Data to be added (optional)</param>
         /// <returns>Task of ApiResponse (ExternalMetricDataWriteResponse)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ExternalMetricDataWriteResponse>> PostEmployeeperformanceExternalmetricsDataAsyncWithHttpInfo (ExternalMetricDataWriteRequest body = null);
 
         /// <summary>
@@ -2955,6 +3181,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The External Metric Definition to be created (optional)</param>
         /// <returns>Task of ExternalMetricDefinition</returns>
+        
         System.Threading.Tasks.Task<ExternalMetricDefinition> PostEmployeeperformanceExternalmetricsDefinitionsAsync (ExternalMetricDefinitionCreateRequest body = null);
 
         /// <summary>
@@ -2966,6 +3193,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The External Metric Definition to be created (optional)</param>
         /// <returns>Task of ApiResponse (ExternalMetricDefinition)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ExternalMetricDefinition>> PostEmployeeperformanceExternalmetricsDefinitionsAsyncWithHttpInfo (ExternalMetricDefinitionCreateRequest body = null);
 
         /// <summary>
@@ -2977,6 +3205,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId">performanceProfileId</param>
         /// <returns>Task of PerformanceProfile</returns>
+        
         System.Threading.Tasks.Task<PerformanceProfile> PostGamificationProfileActivateAsync (string profileId);
 
         /// <summary>
@@ -2988,6 +3217,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId">performanceProfileId</param>
         /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> PostGamificationProfileActivateAsyncWithHttpInfo (string profileId);
 
         /// <summary>
@@ -2999,6 +3229,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId">performanceProfileId</param>
         /// <returns>Task of PerformanceProfile</returns>
+        
         System.Threading.Tasks.Task<PerformanceProfile> PostGamificationProfileDeactivateAsync (string profileId);
 
         /// <summary>
@@ -3010,6 +3241,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId">performanceProfileId</param>
         /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> PostGamificationProfileDeactivateAsyncWithHttpInfo (string profileId);
 
         /// <summary>
@@ -3022,6 +3254,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">Profile Id</param>
         /// <param name="body">assignUsers</param>
         /// <returns>Task of Assignment</returns>
+        
         System.Threading.Tasks.Task<Assignment> PostGamificationProfileMembersAsync (string profileId, AssignUsers body);
 
         /// <summary>
@@ -3034,6 +3267,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">Profile Id</param>
         /// <param name="body">assignUsers</param>
         /// <returns>Task of ApiResponse (Assignment)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Assignment>> PostGamificationProfileMembersAsyncWithHttpInfo (string profileId, AssignUsers body);
 
         /// <summary>
@@ -3046,6 +3280,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">Profile Id</param>
         /// <param name="body">memberAssignments</param>
         /// <returns>Task of AssignmentValidation</returns>
+        
         System.Threading.Tasks.Task<AssignmentValidation> PostGamificationProfileMembersValidateAsync (string profileId, ValidateAssignUsers body);
 
         /// <summary>
@@ -3058,6 +3293,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">Profile Id</param>
         /// <param name="body">memberAssignments</param>
         /// <returns>Task of ApiResponse (AssignmentValidation)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<AssignmentValidation>> PostGamificationProfileMembersValidateAsyncWithHttpInfo (string profileId, ValidateAssignUsers body);
 
         /// <summary>
@@ -3071,6 +3307,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sourceMetricId">Source Metric Id</param>
         /// <param name="body">linkedMetric</param>
         /// <returns>Task of Metric</returns>
+        
         System.Threading.Tasks.Task<Metric> PostGamificationProfileMetricLinkAsync (string sourceProfileId, string sourceMetricId, TargetPerformanceProfile body);
 
         /// <summary>
@@ -3084,6 +3321,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sourceMetricId">Source Metric Id</param>
         /// <param name="body">linkedMetric</param>
         /// <returns>Task of ApiResponse (Metric)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Metric>> PostGamificationProfileMetricLinkAsyncWithHttpInfo (string sourceProfileId, string sourceMetricId, TargetPerformanceProfile body);
 
         /// <summary>
@@ -3096,6 +3334,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">Performance Profile Id</param>
         /// <param name="body">Metric</param>
         /// <returns>Task of Metric</returns>
+        
         System.Threading.Tasks.Task<Metric> PostGamificationProfileMetricsAsync (string profileId, CreateMetric body);
 
         /// <summary>
@@ -3108,6 +3347,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">Performance Profile Id</param>
         /// <param name="body">Metric</param>
         /// <returns>Task of ApiResponse (Metric)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Metric>> PostGamificationProfileMetricsAsyncWithHttpInfo (string profileId, CreateMetric body);
 
         /// <summary>
@@ -3120,6 +3360,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">performanceProfile</param>
         /// <param name="copyMetrics">Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile. (optional, default to true)</param>
         /// <returns>Task of PerformanceProfile</returns>
+        
         System.Threading.Tasks.Task<PerformanceProfile> PostGamificationProfilesAsync (CreatePerformanceProfile body, bool? copyMetrics = null);
 
         /// <summary>
@@ -3132,6 +3373,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">performanceProfile</param>
         /// <param name="copyMetrics">Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile. (optional, default to true)</param>
         /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> PostGamificationProfilesAsyncWithHttpInfo (CreatePerformanceProfile body, bool? copyMetrics = null);
 
         /// <summary>
@@ -3144,6 +3386,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">The ID of a user.</param>
         /// <param name="body">The date range of work day.</param>
         /// <returns>Task of UserProfilesInDateRange</returns>
+        
         System.Threading.Tasks.Task<UserProfilesInDateRange> PostGamificationProfilesUserQueryAsync (string userId, UserProfilesInDateRangeRequest body);
 
         /// <summary>
@@ -3156,6 +3399,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">The ID of a user.</param>
         /// <param name="body">The date range of work day.</param>
         /// <returns>Task of ApiResponse (UserProfilesInDateRange)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<UserProfilesInDateRange>> PostGamificationProfilesUserQueryAsyncWithHttpInfo (string userId, UserProfilesInDateRangeRequest body);
 
         /// <summary>
@@ -3167,6 +3411,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The date range of work day.</param>
         /// <returns>Task of UserProfilesInDateRange</returns>
+        
         System.Threading.Tasks.Task<UserProfilesInDateRange> PostGamificationProfilesUsersMeQueryAsync (UserProfilesInDateRangeRequest body);
 
         /// <summary>
@@ -3178,6 +3423,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The date range of work day.</param>
         /// <returns>Task of ApiResponse (UserProfilesInDateRange)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<UserProfilesInDateRange>> PostGamificationProfilesUsersMeQueryAsyncWithHttpInfo (UserProfilesInDateRangeRequest body);
 
         /// <summary>
@@ -3190,6 +3436,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">performanceProfileId</param>
         /// <param name="body">performanceProfile (optional)</param>
         /// <returns>Task of PerformanceProfile</returns>
+        
         System.Threading.Tasks.Task<PerformanceProfile> PutGamificationProfileAsync (string profileId, PerformanceProfile body = null);
 
         /// <summary>
@@ -3202,6 +3449,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">performanceProfileId</param>
         /// <param name="body">performanceProfile (optional)</param>
         /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> PutGamificationProfileAsyncWithHttpInfo (string profileId, PerformanceProfile body = null);
 
         /// <summary>
@@ -3215,6 +3463,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="metricId">Metric Id</param>
         /// <param name="body">Metric</param>
         /// <returns>Task of Metric</returns>
+        
         System.Threading.Tasks.Task<Metric> PutGamificationProfileMetricAsync (string profileId, string metricId, CreateMetric body);
 
         /// <summary>
@@ -3228,6 +3477,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="metricId">Metric Id</param>
         /// <param name="body">Metric</param>
         /// <returns>Task of ApiResponse (Metric)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Metric>> PutGamificationProfileMetricAsyncWithHttpInfo (string profileId, string metricId, CreateMetric body);
 
         /// <summary>
@@ -3239,6 +3489,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="status">Gamification status</param>
         /// <returns>Task of GamificationStatus</returns>
+        
         System.Threading.Tasks.Task<GamificationStatus> PutGamificationStatusAsync (GamificationStatus status);
 
         /// <summary>
@@ -3250,6 +3501,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="status">Gamification status</param>
         /// <returns>Task of ApiResponse (GamificationStatus)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<GamificationStatus>> PutGamificationStatusAsyncWithHttpInfo (GamificationStatus status);
 
         #endregion Asynchronous Operations
@@ -3350,6 +3602,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">Specifies the External Metric Definition ID</param>
         /// <returns></returns>
+        
         public void DeleteEmployeeperformanceExternalmetricsDefinition (string metricId)
         {
              DeleteEmployeeperformanceExternalmetricsDefinitionWithHttpInfo(metricId);
@@ -3361,6 +3614,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">Specifies the External Metric Definition ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> DeleteEmployeeperformanceExternalmetricsDefinitionWithHttpInfo (string metricId)
         { 
             // verify the required parameter 'metricId' is set
@@ -3443,6 +3697,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">Specifies the External Metric Definition ID</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task DeleteEmployeeperformanceExternalmetricsDefinitionAsync (string metricId)
         {
              await DeleteEmployeeperformanceExternalmetricsDefinitionAsyncWithHttpInfo(metricId);
@@ -3455,6 +3710,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">Specifies the External Metric Definition ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteEmployeeperformanceExternalmetricsDefinitionAsyncWithHttpInfo (string metricId)
         { 
             // verify the required parameter 'metricId' is set
@@ -3539,6 +3795,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">Specifies the External Metric Definition ID</param>
         /// <returns>ExternalMetricDefinition</returns>
+        
         public ExternalMetricDefinition GetEmployeeperformanceExternalmetricsDefinition (string metricId)
         {
              ApiResponse<ExternalMetricDefinition> localVarResponse = GetEmployeeperformanceExternalmetricsDefinitionWithHttpInfo(metricId);
@@ -3551,6 +3808,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">Specifies the External Metric Definition ID</param>
         /// <returns>ApiResponse of ExternalMetricDefinition</returns>
+        
         public ApiResponse< ExternalMetricDefinition > GetEmployeeperformanceExternalmetricsDefinitionWithHttpInfo (string metricId)
         { 
             // verify the required parameter 'metricId' is set
@@ -3633,6 +3891,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">Specifies the External Metric Definition ID</param>
         /// <returns>Task of ExternalMetricDefinition</returns>
+        
         public async System.Threading.Tasks.Task<ExternalMetricDefinition> GetEmployeeperformanceExternalmetricsDefinitionAsync (string metricId)
         {
              ApiResponse<ExternalMetricDefinition> localVarResponse = await GetEmployeeperformanceExternalmetricsDefinitionAsyncWithHttpInfo(metricId);
@@ -3646,6 +3905,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricId">Specifies the External Metric Definition ID</param>
         /// <returns>Task of ApiResponse (ExternalMetricDefinition)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ExternalMetricDefinition>> GetEmployeeperformanceExternalmetricsDefinitionAsyncWithHttpInfo (string metricId)
         { 
             // verify the required parameter 'metricId' is set
@@ -3731,6 +3991,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ExternalMetricDefinitionListing</returns>
+        
         public ExternalMetricDefinitionListing GetEmployeeperformanceExternalmetricsDefinitions (int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<ExternalMetricDefinitionListing> localVarResponse = GetEmployeeperformanceExternalmetricsDefinitionsWithHttpInfo(pageSize, pageNumber);
@@ -3744,6 +4005,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of ExternalMetricDefinitionListing</returns>
+        
         public ApiResponse< ExternalMetricDefinitionListing > GetEmployeeperformanceExternalmetricsDefinitionsWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
 
@@ -3825,6 +4087,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ExternalMetricDefinitionListing</returns>
+        
         public async System.Threading.Tasks.Task<ExternalMetricDefinitionListing> GetEmployeeperformanceExternalmetricsDefinitionsAsync (int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<ExternalMetricDefinitionListing> localVarResponse = await GetEmployeeperformanceExternalmetricsDefinitionsAsyncWithHttpInfo(pageSize, pageNumber);
@@ -3839,6 +4102,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (ExternalMetricDefinitionListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ExternalMetricDefinitionListing>> GetEmployeeperformanceExternalmetricsDefinitionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
 
@@ -3930,6 +4194,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <param name="userIds">A list of up to 100 comma-separated user Ids (optional)</param>
         /// <returns>InsightsSummary</returns>
+        
         public InsightsSummary GetGamificationInsights (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, int? pageSize = null, int? pageNumber = null, string sortKey = null, string sortMetricId = null, string sortOrder = null, string userIds = null)
         {
              ApiResponse<InsightsSummary> localVarResponse = GetGamificationInsightsWithHttpInfo(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday, pageSize, pageNumber, sortKey, sortMetricId, sortOrder, userIds);
@@ -3952,6 +4217,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <param name="userIds">A list of up to 100 comma-separated user Ids (optional)</param>
         /// <returns>ApiResponse of InsightsSummary</returns>
+        
         public ApiResponse< InsightsSummary > GetGamificationInsightsWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, int? pageSize = null, int? pageNumber = null, string sortKey = null, string sortMetricId = null, string sortOrder = null, string userIds = null)
         { 
             // verify the required parameter 'filterType' is set
@@ -4066,6 +4332,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <param name="userIds">A list of up to 100 comma-separated user Ids (optional)</param>
         /// <returns>Task of InsightsSummary</returns>
+        
         public async System.Threading.Tasks.Task<InsightsSummary> GetGamificationInsightsAsync (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, int? pageSize = null, int? pageNumber = null, string sortKey = null, string sortMetricId = null, string sortOrder = null, string userIds = null)
         {
              ApiResponse<InsightsSummary> localVarResponse = await GetGamificationInsightsAsyncWithHttpInfo(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday, pageSize, pageNumber, sortKey, sortMetricId, sortOrder, userIds);
@@ -4089,6 +4356,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <param name="userIds">A list of up to 100 comma-separated user Ids (optional)</param>
         /// <returns>Task of ApiResponse (InsightsSummary)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<InsightsSummary>> GetGamificationInsightsAsyncWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, int? pageSize = null, int? pageNumber = null, string sortKey = null, string sortMetricId = null, string sortOrder = null, string userIds = null)
         { 
             // verify the required parameter 'filterType' is set
@@ -4203,6 +4471,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="comparativePeriodStartWorkday">The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>InsightsDetails</returns>
+        
         public InsightsDetails GetGamificationInsightsDetails (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday)
         {
              ApiResponse<InsightsDetails> localVarResponse = GetGamificationInsightsDetailsWithHttpInfo(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday);
@@ -4219,6 +4488,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="comparativePeriodStartWorkday">The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of InsightsDetails</returns>
+        
         public ApiResponse< InsightsDetails > GetGamificationInsightsDetailsWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday)
         { 
             // verify the required parameter 'filterType' is set
@@ -4321,6 +4591,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="comparativePeriodStartWorkday">The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of InsightsDetails</returns>
+        
         public async System.Threading.Tasks.Task<InsightsDetails> GetGamificationInsightsDetailsAsync (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday)
         {
              ApiResponse<InsightsDetails> localVarResponse = await GetGamificationInsightsDetailsAsyncWithHttpInfo(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday);
@@ -4338,6 +4609,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="comparativePeriodStartWorkday">The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (InsightsDetails)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<InsightsDetails>> GetGamificationInsightsDetailsAsyncWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday)
         { 
             // verify the required parameter 'filterType' is set
@@ -4448,6 +4720,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodEndWorkday">The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>InsightsTrend</returns>
+        
         public InsightsTrend GetGamificationInsightsGroupsTrends (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday)
         {
              ApiResponse<InsightsTrend> localVarResponse = GetGamificationInsightsGroupsTrendsWithHttpInfo(filterType, filterId, granularity, comparativePeriodStartWorkday, comparativePeriodEndWorkday, primaryPeriodStartWorkday, primaryPeriodEndWorkday);
@@ -4466,6 +4739,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodEndWorkday">The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of InsightsTrend</returns>
+        
         public ApiResponse< InsightsTrend > GetGamificationInsightsGroupsTrendsWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday)
         { 
             // verify the required parameter 'filterType' is set
@@ -4578,6 +4852,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodEndWorkday">The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of InsightsTrend</returns>
+        
         public async System.Threading.Tasks.Task<InsightsTrend> GetGamificationInsightsGroupsTrendsAsync (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday)
         {
              ApiResponse<InsightsTrend> localVarResponse = await GetGamificationInsightsGroupsTrendsAsyncWithHttpInfo(filterType, filterId, granularity, comparativePeriodStartWorkday, comparativePeriodEndWorkday, primaryPeriodStartWorkday, primaryPeriodEndWorkday);
@@ -4597,6 +4872,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodEndWorkday">The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (InsightsTrend)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<InsightsTrend>> GetGamificationInsightsGroupsTrendsAsyncWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday)
         { 
             // verify the required parameter 'filterType' is set
@@ -4717,6 +4993,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodEndWorkday">The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>InsightsTrend</returns>
+        
         public InsightsTrend GetGamificationInsightsGroupsTrendsAll (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday)
         {
              ApiResponse<InsightsTrend> localVarResponse = GetGamificationInsightsGroupsTrendsAllWithHttpInfo(filterType, filterId, granularity, comparativePeriodStartWorkday, comparativePeriodEndWorkday, primaryPeriodStartWorkday, primaryPeriodEndWorkday);
@@ -4735,6 +5012,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodEndWorkday">The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of InsightsTrend</returns>
+        
         public ApiResponse< InsightsTrend > GetGamificationInsightsGroupsTrendsAllWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday)
         { 
             // verify the required parameter 'filterType' is set
@@ -4847,6 +5125,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodEndWorkday">The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of InsightsTrend</returns>
+        
         public async System.Threading.Tasks.Task<InsightsTrend> GetGamificationInsightsGroupsTrendsAllAsync (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday)
         {
              ApiResponse<InsightsTrend> localVarResponse = await GetGamificationInsightsGroupsTrendsAllAsyncWithHttpInfo(filterType, filterId, granularity, comparativePeriodStartWorkday, comparativePeriodEndWorkday, primaryPeriodStartWorkday, primaryPeriodEndWorkday);
@@ -4866,6 +5145,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodEndWorkday">The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (InsightsTrend)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<InsightsTrend>> GetGamificationInsightsGroupsTrendsAllAsyncWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday)
         { 
             // verify the required parameter 'filterType' is set
@@ -4983,6 +5263,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="granularity">Granularity</param>
         /// <param name="startWorkday">The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>InsightsAgents</returns>
+        
         public InsightsAgents GetGamificationInsightsMembers (string filterType, string filterId, string granularity, String startWorkday)
         {
              ApiResponse<InsightsAgents> localVarResponse = GetGamificationInsightsMembersWithHttpInfo(filterType, filterId, granularity, startWorkday);
@@ -4998,6 +5279,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="granularity">Granularity</param>
         /// <param name="startWorkday">The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of InsightsAgents</returns>
+        
         public ApiResponse< InsightsAgents > GetGamificationInsightsMembersWithHttpInfo (string filterType, string filterId, string granularity, String startWorkday)
         { 
             // verify the required parameter 'filterType' is set
@@ -5095,6 +5377,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="granularity">Granularity</param>
         /// <param name="startWorkday">The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of InsightsAgents</returns>
+        
         public async System.Threading.Tasks.Task<InsightsAgents> GetGamificationInsightsMembersAsync (string filterType, string filterId, string granularity, String startWorkday)
         {
              ApiResponse<InsightsAgents> localVarResponse = await GetGamificationInsightsMembersAsyncWithHttpInfo(filterType, filterId, granularity, startWorkday);
@@ -5111,6 +5394,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="granularity">Granularity</param>
         /// <param name="startWorkday">The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (InsightsAgents)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<InsightsAgents>> GetGamificationInsightsMembersAsyncWithHttpInfo (string filterType, string filterId, string granularity, String startWorkday)
         { 
             // verify the required parameter 'filterType' is set
@@ -5216,6 +5500,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodEndWorkday">The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>UserInsightsTrend</returns>
+        
         public UserInsightsTrend GetGamificationInsightsTrends (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday)
         {
              ApiResponse<UserInsightsTrend> localVarResponse = GetGamificationInsightsTrendsWithHttpInfo(filterType, filterId, granularity, comparativePeriodStartWorkday, comparativePeriodEndWorkday, primaryPeriodStartWorkday, primaryPeriodEndWorkday);
@@ -5234,6 +5519,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodEndWorkday">The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of UserInsightsTrend</returns>
+        
         public ApiResponse< UserInsightsTrend > GetGamificationInsightsTrendsWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday)
         { 
             // verify the required parameter 'filterType' is set
@@ -5346,6 +5632,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodEndWorkday">The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of UserInsightsTrend</returns>
+        
         public async System.Threading.Tasks.Task<UserInsightsTrend> GetGamificationInsightsTrendsAsync (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday)
         {
              ApiResponse<UserInsightsTrend> localVarResponse = await GetGamificationInsightsTrendsAsyncWithHttpInfo(filterType, filterId, granularity, comparativePeriodStartWorkday, comparativePeriodEndWorkday, primaryPeriodStartWorkday, primaryPeriodEndWorkday);
@@ -5365,6 +5652,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodEndWorkday">The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (UserInsightsTrend)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<UserInsightsTrend>> GetGamificationInsightsTrendsAsyncWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday)
         { 
             // verify the required parameter 'filterType' is set
@@ -5484,6 +5772,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="comparativePeriodStartWorkday">The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>InsightsDetails</returns>
+        
         public InsightsDetails GetGamificationInsightsUserDetails (string userId, string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday)
         {
              ApiResponse<InsightsDetails> localVarResponse = GetGamificationInsightsUserDetailsWithHttpInfo(userId, filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday);
@@ -5501,6 +5790,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="comparativePeriodStartWorkday">The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of InsightsDetails</returns>
+        
         public ApiResponse< InsightsDetails > GetGamificationInsightsUserDetailsWithHttpInfo (string userId, string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday)
         { 
             // verify the required parameter 'userId' is set
@@ -5608,6 +5898,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="comparativePeriodStartWorkday">The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of InsightsDetails</returns>
+        
         public async System.Threading.Tasks.Task<InsightsDetails> GetGamificationInsightsUserDetailsAsync (string userId, string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday)
         {
              ApiResponse<InsightsDetails> localVarResponse = await GetGamificationInsightsUserDetailsAsyncWithHttpInfo(userId, filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday);
@@ -5626,6 +5917,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="comparativePeriodStartWorkday">The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (InsightsDetails)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<InsightsDetails>> GetGamificationInsightsUserDetailsAsyncWithHttpInfo (string userId, string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday)
         { 
             // verify the required parameter 'userId' is set
@@ -5742,6 +6034,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodEndWorkday">The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>UserInsightsTrend</returns>
+        
         public UserInsightsTrend GetGamificationInsightsUserTrends (string userId, string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday)
         {
              ApiResponse<UserInsightsTrend> localVarResponse = GetGamificationInsightsUserTrendsWithHttpInfo(userId, filterType, filterId, granularity, comparativePeriodStartWorkday, comparativePeriodEndWorkday, primaryPeriodStartWorkday, primaryPeriodEndWorkday);
@@ -5761,6 +6054,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodEndWorkday">The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of UserInsightsTrend</returns>
+        
         public ApiResponse< UserInsightsTrend > GetGamificationInsightsUserTrendsWithHttpInfo (string userId, string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday)
         { 
             // verify the required parameter 'userId' is set
@@ -5878,6 +6172,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodEndWorkday">The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of UserInsightsTrend</returns>
+        
         public async System.Threading.Tasks.Task<UserInsightsTrend> GetGamificationInsightsUserTrendsAsync (string userId, string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday)
         {
              ApiResponse<UserInsightsTrend> localVarResponse = await GetGamificationInsightsUserTrendsAsyncWithHttpInfo(userId, filterType, filterId, granularity, comparativePeriodStartWorkday, comparativePeriodEndWorkday, primaryPeriodStartWorkday, primaryPeriodEndWorkday);
@@ -5898,6 +6193,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="primaryPeriodStartWorkday">The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="primaryPeriodEndWorkday">The end work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (UserInsightsTrend)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<UserInsightsTrend>> GetGamificationInsightsUserTrendsAsyncWithHttpInfo (string userId, string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday)
         { 
             // verify the required parameter 'userId' is set
@@ -6019,6 +6315,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="metricId">Metric Id for which the leaderboard is to be generated. The total points is used if nothing is given. (optional)</param>
         /// <returns>Leaderboard</returns>
+        
         public Leaderboard GetGamificationLeaderboard (String startWorkday, String endWorkday, string metricId = null)
         {
              ApiResponse<Leaderboard> localVarResponse = GetGamificationLeaderboardWithHttpInfo(startWorkday, endWorkday, metricId);
@@ -6033,6 +6330,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="metricId">Metric Id for which the leaderboard is to be generated. The total points is used if nothing is given. (optional)</param>
         /// <returns>ApiResponse of Leaderboard</returns>
+        
         public ApiResponse< Leaderboard > GetGamificationLeaderboardWithHttpInfo (String startWorkday, String endWorkday, string metricId = null)
         { 
             // verify the required parameter 'startWorkday' is set
@@ -6122,6 +6420,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="metricId">Metric Id for which the leaderboard is to be generated. The total points is used if nothing is given. (optional)</param>
         /// <returns>Task of Leaderboard</returns>
+        
         public async System.Threading.Tasks.Task<Leaderboard> GetGamificationLeaderboardAsync (String startWorkday, String endWorkday, string metricId = null)
         {
              ApiResponse<Leaderboard> localVarResponse = await GetGamificationLeaderboardAsyncWithHttpInfo(startWorkday, endWorkday, metricId);
@@ -6137,6 +6436,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="metricId">Metric Id for which the leaderboard is to be generated. The total points is used if nothing is given. (optional)</param>
         /// <returns>Task of ApiResponse (Leaderboard)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Leaderboard>> GetGamificationLeaderboardAsyncWithHttpInfo (String startWorkday, String endWorkday, string metricId = null)
         { 
             // verify the required parameter 'startWorkday' is set
@@ -6231,6 +6531,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="metricId">Metric Id for which the leaderboard is to be generated. The total points is used if nothing is given. (optional)</param>
         /// <returns>Leaderboard</returns>
+        
         public Leaderboard GetGamificationLeaderboardAll (string filterType, string filterId, String startWorkday, String endWorkday, string metricId = null)
         {
              ApiResponse<Leaderboard> localVarResponse = GetGamificationLeaderboardAllWithHttpInfo(filterType, filterId, startWorkday, endWorkday, metricId);
@@ -6247,6 +6548,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="metricId">Metric Id for which the leaderboard is to be generated. The total points is used if nothing is given. (optional)</param>
         /// <returns>ApiResponse of Leaderboard</returns>
+        
         public ApiResponse< Leaderboard > GetGamificationLeaderboardAllWithHttpInfo (string filterType, string filterId, String startWorkday, String endWorkday, string metricId = null)
         { 
             // verify the required parameter 'filterType' is set
@@ -6346,6 +6648,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="metricId">Metric Id for which the leaderboard is to be generated. The total points is used if nothing is given. (optional)</param>
         /// <returns>Task of Leaderboard</returns>
+        
         public async System.Threading.Tasks.Task<Leaderboard> GetGamificationLeaderboardAllAsync (string filterType, string filterId, String startWorkday, String endWorkday, string metricId = null)
         {
              ApiResponse<Leaderboard> localVarResponse = await GetGamificationLeaderboardAllAsyncWithHttpInfo(filterType, filterId, startWorkday, endWorkday, metricId);
@@ -6363,6 +6666,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="metricId">Metric Id for which the leaderboard is to be generated. The total points is used if nothing is given. (optional)</param>
         /// <returns>Task of ApiResponse (Leaderboard)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Leaderboard>> GetGamificationLeaderboardAllAsyncWithHttpInfo (string filterType, string filterId, String startWorkday, String endWorkday, string metricId = null)
         { 
             // verify the required parameter 'filterType' is set
@@ -6464,6 +6768,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterType">Filter type for the query request.</param>
         /// <param name="filterId">ID for the filter type. For example, division or performance profile Id</param>
         /// <returns>OverallBestPoints</returns>
+        
         public OverallBestPoints GetGamificationLeaderboardAllBestpoints (string filterType, string filterId)
         {
              ApiResponse<OverallBestPoints> localVarResponse = GetGamificationLeaderboardAllBestpointsWithHttpInfo(filterType, filterId);
@@ -6477,6 +6782,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterType">Filter type for the query request.</param>
         /// <param name="filterId">ID for the filter type. For example, division or performance profile Id</param>
         /// <returns>ApiResponse of OverallBestPoints</returns>
+        
         public ApiResponse< OverallBestPoints > GetGamificationLeaderboardAllBestpointsWithHttpInfo (string filterType, string filterId)
         { 
             // verify the required parameter 'filterType' is set
@@ -6564,6 +6870,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterType">Filter type for the query request.</param>
         /// <param name="filterId">ID for the filter type. For example, division or performance profile Id</param>
         /// <returns>Task of OverallBestPoints</returns>
+        
         public async System.Threading.Tasks.Task<OverallBestPoints> GetGamificationLeaderboardAllBestpointsAsync (string filterType, string filterId)
         {
              ApiResponse<OverallBestPoints> localVarResponse = await GetGamificationLeaderboardAllBestpointsAsyncWithHttpInfo(filterType, filterId);
@@ -6578,6 +6885,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterType">Filter type for the query request.</param>
         /// <param name="filterId">ID for the filter type. For example, division or performance profile Id</param>
         /// <returns>Task of ApiResponse (OverallBestPoints)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<OverallBestPoints>> GetGamificationLeaderboardAllBestpointsAsyncWithHttpInfo (string filterType, string filterId)
         { 
             // verify the required parameter 'filterType' is set
@@ -6666,6 +6974,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>OverallBestPoints</returns>
+        
         public OverallBestPoints GetGamificationLeaderboardBestpoints ()
         {
              ApiResponse<OverallBestPoints> localVarResponse = GetGamificationLeaderboardBestpointsWithHttpInfo();
@@ -6677,6 +6986,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of OverallBestPoints</returns>
+        
         public ApiResponse< OverallBestPoints > GetGamificationLeaderboardBestpointsWithHttpInfo ()
         { 
 
@@ -6754,6 +7064,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of OverallBestPoints</returns>
+        
         public async System.Threading.Tasks.Task<OverallBestPoints> GetGamificationLeaderboardBestpointsAsync ()
         {
              ApiResponse<OverallBestPoints> localVarResponse = await GetGamificationLeaderboardBestpointsAsyncWithHttpInfo();
@@ -6766,6 +7077,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (OverallBestPoints)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<OverallBestPoints>> GetGamificationLeaderboardBestpointsAsyncWithHttpInfo ()
         { 
 
@@ -6845,6 +7157,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricDefinitionId">metric definition id</param>
         /// <returns>MetricDefinition</returns>
+        
         public MetricDefinition GetGamificationMetricdefinition (string metricDefinitionId)
         {
              ApiResponse<MetricDefinition> localVarResponse = GetGamificationMetricdefinitionWithHttpInfo(metricDefinitionId);
@@ -6857,6 +7170,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricDefinitionId">metric definition id</param>
         /// <returns>ApiResponse of MetricDefinition</returns>
+        
         public ApiResponse< MetricDefinition > GetGamificationMetricdefinitionWithHttpInfo (string metricDefinitionId)
         { 
             // verify the required parameter 'metricDefinitionId' is set
@@ -6939,6 +7253,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricDefinitionId">metric definition id</param>
         /// <returns>Task of MetricDefinition</returns>
+        
         public async System.Threading.Tasks.Task<MetricDefinition> GetGamificationMetricdefinitionAsync (string metricDefinitionId)
         {
              ApiResponse<MetricDefinition> localVarResponse = await GetGamificationMetricdefinitionAsyncWithHttpInfo(metricDefinitionId);
@@ -6952,6 +7267,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="metricDefinitionId">metric definition id</param>
         /// <returns>Task of ApiResponse (MetricDefinition)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<MetricDefinition>> GetGamificationMetricdefinitionAsyncWithHttpInfo (string metricDefinitionId)
         { 
             // verify the required parameter 'metricDefinitionId' is set
@@ -7035,6 +7351,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>GetMetricDefinitionsResponse</returns>
+        
         public GetMetricDefinitionsResponse GetGamificationMetricdefinitions ()
         {
              ApiResponse<GetMetricDefinitionsResponse> localVarResponse = GetGamificationMetricdefinitionsWithHttpInfo();
@@ -7046,6 +7363,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of GetMetricDefinitionsResponse</returns>
+        
         public ApiResponse< GetMetricDefinitionsResponse > GetGamificationMetricdefinitionsWithHttpInfo ()
         { 
 
@@ -7123,6 +7441,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of GetMetricDefinitionsResponse</returns>
+        
         public async System.Threading.Tasks.Task<GetMetricDefinitionsResponse> GetGamificationMetricdefinitionsAsync ()
         {
              ApiResponse<GetMetricDefinitionsResponse> localVarResponse = await GetGamificationMetricdefinitionsAsyncWithHttpInfo();
@@ -7135,6 +7454,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (GetMetricDefinitionsResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<GetMetricDefinitionsResponse>> GetGamificationMetricdefinitionsAsyncWithHttpInfo ()
         { 
 
@@ -7214,6 +7534,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId">performanceProfileId</param>
         /// <returns>PerformanceProfile</returns>
+        
         public PerformanceProfile GetGamificationProfile (string profileId)
         {
              ApiResponse<PerformanceProfile> localVarResponse = GetGamificationProfileWithHttpInfo(profileId);
@@ -7226,6 +7547,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId">performanceProfileId</param>
         /// <returns>ApiResponse of PerformanceProfile</returns>
+        
         public ApiResponse< PerformanceProfile > GetGamificationProfileWithHttpInfo (string profileId)
         { 
             // verify the required parameter 'profileId' is set
@@ -7308,6 +7630,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId">performanceProfileId</param>
         /// <returns>Task of PerformanceProfile</returns>
+        
         public async System.Threading.Tasks.Task<PerformanceProfile> GetGamificationProfileAsync (string profileId)
         {
              ApiResponse<PerformanceProfile> localVarResponse = await GetGamificationProfileAsyncWithHttpInfo(profileId);
@@ -7321,6 +7644,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId">performanceProfileId</param>
         /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> GetGamificationProfileAsyncWithHttpInfo (string profileId)
         { 
             // verify the required parameter 'profileId' is set
@@ -7405,6 +7729,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId">Profile Id</param>
         /// <returns>MemberListing</returns>
+        
         public MemberListing GetGamificationProfileMembers (string profileId)
         {
              ApiResponse<MemberListing> localVarResponse = GetGamificationProfileMembersWithHttpInfo(profileId);
@@ -7417,6 +7742,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId">Profile Id</param>
         /// <returns>ApiResponse of MemberListing</returns>
+        
         public ApiResponse< MemberListing > GetGamificationProfileMembersWithHttpInfo (string profileId)
         { 
             // verify the required parameter 'profileId' is set
@@ -7499,6 +7825,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId">Profile Id</param>
         /// <returns>Task of MemberListing</returns>
+        
         public async System.Threading.Tasks.Task<MemberListing> GetGamificationProfileMembersAsync (string profileId)
         {
              ApiResponse<MemberListing> localVarResponse = await GetGamificationProfileMembersAsyncWithHttpInfo(profileId);
@@ -7512,6 +7839,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId">Profile Id</param>
         /// <returns>Task of ApiResponse (MemberListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<MemberListing>> GetGamificationProfileMembersAsyncWithHttpInfo (string profileId)
         { 
             // verify the required parameter 'profileId' is set
@@ -7598,6 +7926,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="metricId">Metric Id</param>
         /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Metric</returns>
+        
         public Metric GetGamificationProfileMetric (string profileId, string metricId, String workday = null)
         {
              ApiResponse<Metric> localVarResponse = GetGamificationProfileMetricWithHttpInfo(profileId, metricId, workday);
@@ -7612,6 +7941,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="metricId">Metric Id</param>
         /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>ApiResponse of Metric</returns>
+        
         public ApiResponse< Metric > GetGamificationProfileMetricWithHttpInfo (string profileId, string metricId, String workday = null)
         { 
             // verify the required parameter 'profileId' is set
@@ -7701,6 +8031,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="metricId">Metric Id</param>
         /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of Metric</returns>
+        
         public async System.Threading.Tasks.Task<Metric> GetGamificationProfileMetricAsync (string profileId, string metricId, String workday = null)
         {
              ApiResponse<Metric> localVarResponse = await GetGamificationProfileMetricAsyncWithHttpInfo(profileId, metricId, workday);
@@ -7716,6 +8047,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="metricId">Metric Id</param>
         /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of ApiResponse (Metric)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Metric>> GetGamificationProfileMetricAsyncWithHttpInfo (string profileId, string metricId, String workday = null)
         { 
             // verify the required parameter 'profileId' is set
@@ -7809,6 +8141,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="metricIds">List of metric ids to filter the response (Optional, comma-separated). (optional)</param>
         /// <returns>GetMetricResponse</returns>
+        
         public GetMetricResponse GetGamificationProfileMetrics (string profileId, List<string> expand = null, String workday = null, string metricIds = null)
         {
              ApiResponse<GetMetricResponse> localVarResponse = GetGamificationProfileMetricsWithHttpInfo(profileId, expand, workday, metricIds);
@@ -7824,6 +8157,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="metricIds">List of metric ids to filter the response (Optional, comma-separated). (optional)</param>
         /// <returns>ApiResponse of GetMetricResponse</returns>
+        
         public ApiResponse< GetMetricResponse > GetGamificationProfileMetricsWithHttpInfo (string profileId, List<string> expand = null, String workday = null, string metricIds = null)
         { 
             // verify the required parameter 'profileId' is set
@@ -7912,6 +8246,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="metricIds">List of metric ids to filter the response (Optional, comma-separated). (optional)</param>
         /// <returns>Task of GetMetricResponse</returns>
+        
         public async System.Threading.Tasks.Task<GetMetricResponse> GetGamificationProfileMetricsAsync (string profileId, List<string> expand = null, String workday = null, string metricIds = null)
         {
              ApiResponse<GetMetricResponse> localVarResponse = await GetGamificationProfileMetricsAsyncWithHttpInfo(profileId, expand, workday, metricIds);
@@ -7928,6 +8263,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="metricIds">List of metric ids to filter the response (Optional, comma-separated). (optional)</param>
         /// <returns>Task of ApiResponse (GetMetricResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<GetMetricResponse>> GetGamificationProfileMetricsAsyncWithHttpInfo (string profileId, List<string> expand = null, String workday = null, string metricIds = null)
         { 
             // verify the required parameter 'profileId' is set
@@ -8016,6 +8352,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">Performance Profile Id</param>
         /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>GetMetricsResponse</returns>
+        
         public GetMetricsResponse GetGamificationProfileMetricsObjectivedetails (string profileId, String workday = null)
         {
              ApiResponse<GetMetricsResponse> localVarResponse = GetGamificationProfileMetricsObjectivedetailsWithHttpInfo(profileId, workday);
@@ -8029,6 +8366,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">Performance Profile Id</param>
         /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>ApiResponse of GetMetricsResponse</returns>
+        
         public ApiResponse< GetMetricsResponse > GetGamificationProfileMetricsObjectivedetailsWithHttpInfo (string profileId, String workday = null)
         { 
             // verify the required parameter 'profileId' is set
@@ -8113,6 +8451,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">Performance Profile Id</param>
         /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of GetMetricsResponse</returns>
+        
         public async System.Threading.Tasks.Task<GetMetricsResponse> GetGamificationProfileMetricsObjectivedetailsAsync (string profileId, String workday = null)
         {
              ApiResponse<GetMetricsResponse> localVarResponse = await GetGamificationProfileMetricsObjectivedetailsAsyncWithHttpInfo(profileId, workday);
@@ -8127,6 +8466,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">Performance Profile Id</param>
         /// <param name="workday">The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of ApiResponse (GetMetricsResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<GetMetricsResponse>> GetGamificationProfileMetricsObjectivedetailsAsyncWithHttpInfo (string profileId, String workday = null)
         { 
             // verify the required parameter 'profileId' is set
@@ -8211,6 +8551,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>GetProfilesResponse</returns>
+        
         public GetProfilesResponse GetGamificationProfiles ()
         {
              ApiResponse<GetProfilesResponse> localVarResponse = GetGamificationProfilesWithHttpInfo();
@@ -8222,6 +8563,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of GetProfilesResponse</returns>
+        
         public ApiResponse< GetProfilesResponse > GetGamificationProfilesWithHttpInfo ()
         { 
 
@@ -8299,6 +8641,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of GetProfilesResponse</returns>
+        
         public async System.Threading.Tasks.Task<GetProfilesResponse> GetGamificationProfilesAsync ()
         {
              ApiResponse<GetProfilesResponse> localVarResponse = await GetGamificationProfilesAsyncWithHttpInfo();
@@ -8311,6 +8654,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (GetProfilesResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<GetProfilesResponse>> GetGamificationProfilesAsyncWithHttpInfo ()
         { 
 
@@ -8391,6 +8735,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId"></param>
         /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>PerformanceProfile</returns>
+        
         public PerformanceProfile GetGamificationProfilesUser (string userId, String workday = null)
         {
              ApiResponse<PerformanceProfile> localVarResponse = GetGamificationProfilesUserWithHttpInfo(userId, workday);
@@ -8404,6 +8749,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId"></param>
         /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>ApiResponse of PerformanceProfile</returns>
+        
         public ApiResponse< PerformanceProfile > GetGamificationProfilesUserWithHttpInfo (string userId, String workday = null)
         { 
             // verify the required parameter 'userId' is set
@@ -8488,6 +8834,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId"></param>
         /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of PerformanceProfile</returns>
+        
         public async System.Threading.Tasks.Task<PerformanceProfile> GetGamificationProfilesUserAsync (string userId, String workday = null)
         {
              ApiResponse<PerformanceProfile> localVarResponse = await GetGamificationProfilesUserAsyncWithHttpInfo(userId, workday);
@@ -8502,6 +8849,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId"></param>
         /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> GetGamificationProfilesUserAsyncWithHttpInfo (string userId, String workday = null)
         { 
             // verify the required parameter 'userId' is set
@@ -8587,6 +8935,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>PerformanceProfile</returns>
+        
         public PerformanceProfile GetGamificationProfilesUsersMe (String workday = null)
         {
              ApiResponse<PerformanceProfile> localVarResponse = GetGamificationProfilesUsersMeWithHttpInfo(workday);
@@ -8599,6 +8948,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>ApiResponse of PerformanceProfile</returns>
+        
         public ApiResponse< PerformanceProfile > GetGamificationProfilesUsersMeWithHttpInfo (String workday = null)
         { 
 
@@ -8678,6 +9028,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of PerformanceProfile</returns>
+        
         public async System.Threading.Tasks.Task<PerformanceProfile> GetGamificationProfilesUsersMeAsync (String workday = null)
         {
              ApiResponse<PerformanceProfile> localVarResponse = await GetGamificationProfilesUsersMeAsyncWithHttpInfo(workday);
@@ -8691,6 +9042,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workday">Target querying workday. If not provided, then queries the current performance profile. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> GetGamificationProfilesUsersMeAsyncWithHttpInfo (String workday = null)
         { 
 
@@ -8772,6 +9124,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>WorkdayMetricListing</returns>
+        
         public WorkdayMetricListing GetGamificationScorecards (String workday, List<string> expand = null)
         {
              ApiResponse<WorkdayMetricListing> localVarResponse = GetGamificationScorecardsWithHttpInfo(workday, expand);
@@ -8785,6 +9138,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of WorkdayMetricListing</returns>
+        
         public ApiResponse< WorkdayMetricListing > GetGamificationScorecardsWithHttpInfo (String workday, List<string> expand = null)
         { 
             // verify the required parameter 'workday' is set
@@ -8869,6 +9223,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of WorkdayMetricListing</returns>
+        
         public async System.Threading.Tasks.Task<WorkdayMetricListing> GetGamificationScorecardsAsync (String workday, List<string> expand = null)
         {
              ApiResponse<WorkdayMetricListing> localVarResponse = await GetGamificationScorecardsAsyncWithHttpInfo(workday, expand);
@@ -8883,6 +9238,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (WorkdayMetricListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<WorkdayMetricListing>> GetGamificationScorecardsAsyncWithHttpInfo (String workday, List<string> expand = null)
         { 
             // verify the required parameter 'workday' is set
@@ -8969,6 +9325,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>AttendanceStatusListing</returns>
+        
         public AttendanceStatusListing GetGamificationScorecardsAttendance (String startWorkday, String endWorkday)
         {
              ApiResponse<AttendanceStatusListing> localVarResponse = GetGamificationScorecardsAttendanceWithHttpInfo(startWorkday, endWorkday);
@@ -8982,6 +9339,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of AttendanceStatusListing</returns>
+        
         public ApiResponse< AttendanceStatusListing > GetGamificationScorecardsAttendanceWithHttpInfo (String startWorkday, String endWorkday)
         { 
             // verify the required parameter 'startWorkday' is set
@@ -9069,6 +9427,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of AttendanceStatusListing</returns>
+        
         public async System.Threading.Tasks.Task<AttendanceStatusListing> GetGamificationScorecardsAttendanceAsync (String startWorkday, String endWorkday)
         {
              ApiResponse<AttendanceStatusListing> localVarResponse = await GetGamificationScorecardsAttendanceAsyncWithHttpInfo(startWorkday, endWorkday);
@@ -9083,6 +9442,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (AttendanceStatusListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<AttendanceStatusListing>> GetGamificationScorecardsAttendanceAsyncWithHttpInfo (String startWorkday, String endWorkday)
         { 
             // verify the required parameter 'startWorkday' is set
@@ -9171,6 +9531,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>UserBestPoints</returns>
+        
         public UserBestPoints GetGamificationScorecardsBestpoints ()
         {
              ApiResponse<UserBestPoints> localVarResponse = GetGamificationScorecardsBestpointsWithHttpInfo();
@@ -9182,6 +9543,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of UserBestPoints</returns>
+        
         public ApiResponse< UserBestPoints > GetGamificationScorecardsBestpointsWithHttpInfo ()
         { 
 
@@ -9259,6 +9621,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of UserBestPoints</returns>
+        
         public async System.Threading.Tasks.Task<UserBestPoints> GetGamificationScorecardsBestpointsAsync ()
         {
              ApiResponse<UserBestPoints> localVarResponse = await GetGamificationScorecardsBestpointsAsyncWithHttpInfo();
@@ -9271,6 +9634,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (UserBestPoints)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<UserBestPoints>> GetGamificationScorecardsBestpointsAsyncWithHttpInfo ()
         { 
 
@@ -9350,6 +9714,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>AllTimePoints</returns>
+        
         public AllTimePoints GetGamificationScorecardsPointsAlltime (String endWorkday)
         {
              ApiResponse<AllTimePoints> localVarResponse = GetGamificationScorecardsPointsAlltimeWithHttpInfo(endWorkday);
@@ -9362,6 +9727,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of AllTimePoints</returns>
+        
         public ApiResponse< AllTimePoints > GetGamificationScorecardsPointsAlltimeWithHttpInfo (String endWorkday)
         { 
             // verify the required parameter 'endWorkday' is set
@@ -9444,6 +9810,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of AllTimePoints</returns>
+        
         public async System.Threading.Tasks.Task<AllTimePoints> GetGamificationScorecardsPointsAlltimeAsync (String endWorkday)
         {
              ApiResponse<AllTimePoints> localVarResponse = await GetGamificationScorecardsPointsAlltimeAsyncWithHttpInfo(endWorkday);
@@ -9457,6 +9824,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (AllTimePoints)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<AllTimePoints>> GetGamificationScorecardsPointsAlltimeAsyncWithHttpInfo (String endWorkday)
         { 
             // verify the required parameter 'endWorkday' is set
@@ -9541,6 +9909,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>SingleWorkdayAveragePoints</returns>
+        
         public SingleWorkdayAveragePoints GetGamificationScorecardsPointsAverage (String workday)
         {
              ApiResponse<SingleWorkdayAveragePoints> localVarResponse = GetGamificationScorecardsPointsAverageWithHttpInfo(workday);
@@ -9553,6 +9922,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of SingleWorkdayAveragePoints</returns>
+        
         public ApiResponse< SingleWorkdayAveragePoints > GetGamificationScorecardsPointsAverageWithHttpInfo (String workday)
         { 
             // verify the required parameter 'workday' is set
@@ -9635,6 +10005,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of SingleWorkdayAveragePoints</returns>
+        
         public async System.Threading.Tasks.Task<SingleWorkdayAveragePoints> GetGamificationScorecardsPointsAverageAsync (String workday)
         {
              ApiResponse<SingleWorkdayAveragePoints> localVarResponse = await GetGamificationScorecardsPointsAverageAsyncWithHttpInfo(workday);
@@ -9648,6 +10019,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (SingleWorkdayAveragePoints)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<SingleWorkdayAveragePoints>> GetGamificationScorecardsPointsAverageAsyncWithHttpInfo (String workday)
         { 
             // verify the required parameter 'workday' is set
@@ -9734,6 +10106,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>WorkdayPointsTrend</returns>
+        
         public WorkdayPointsTrend GetGamificationScorecardsPointsTrends (String startWorkday, String endWorkday, string dayOfWeek = null)
         {
              ApiResponse<WorkdayPointsTrend> localVarResponse = GetGamificationScorecardsPointsTrendsWithHttpInfo(startWorkday, endWorkday, dayOfWeek);
@@ -9748,6 +10121,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>ApiResponse of WorkdayPointsTrend</returns>
+        
         public ApiResponse< WorkdayPointsTrend > GetGamificationScorecardsPointsTrendsWithHttpInfo (String startWorkday, String endWorkday, string dayOfWeek = null)
         { 
             // verify the required parameter 'startWorkday' is set
@@ -9837,6 +10211,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>Task of WorkdayPointsTrend</returns>
+        
         public async System.Threading.Tasks.Task<WorkdayPointsTrend> GetGamificationScorecardsPointsTrendsAsync (String startWorkday, String endWorkday, string dayOfWeek = null)
         {
              ApiResponse<WorkdayPointsTrend> localVarResponse = await GetGamificationScorecardsPointsTrendsAsyncWithHttpInfo(startWorkday, endWorkday, dayOfWeek);
@@ -9852,6 +10227,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>Task of ApiResponse (WorkdayPointsTrend)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<WorkdayPointsTrend>> GetGamificationScorecardsPointsTrendsAsyncWithHttpInfo (String startWorkday, String endWorkday, string dayOfWeek = null)
         { 
             // verify the required parameter 'startWorkday' is set
@@ -9948,6 +10324,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>MetricValueTrendAverage</returns>
+        
         public MetricValueTrendAverage GetGamificationScorecardsProfileMetricUserValuesTrends (string profileId, string metricId, string userId, String startWorkday, String endWorkday, String referenceWorkday = null, string timeZone = null)
         {
              ApiResponse<MetricValueTrendAverage> localVarResponse = GetGamificationScorecardsProfileMetricUserValuesTrendsWithHttpInfo(profileId, metricId, userId, startWorkday, endWorkday, referenceWorkday, timeZone);
@@ -9966,6 +10343,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>ApiResponse of MetricValueTrendAverage</returns>
+        
         public ApiResponse< MetricValueTrendAverage > GetGamificationScorecardsProfileMetricUserValuesTrendsWithHttpInfo (string profileId, string metricId, string userId, String startWorkday, String endWorkday, String referenceWorkday = null, string timeZone = null)
         { 
             // verify the required parameter 'profileId' is set
@@ -10072,6 +10450,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of MetricValueTrendAverage</returns>
+        
         public async System.Threading.Tasks.Task<MetricValueTrendAverage> GetGamificationScorecardsProfileMetricUserValuesTrendsAsync (string profileId, string metricId, string userId, String startWorkday, String endWorkday, String referenceWorkday = null, string timeZone = null)
         {
              ApiResponse<MetricValueTrendAverage> localVarResponse = await GetGamificationScorecardsProfileMetricUserValuesTrendsAsyncWithHttpInfo(profileId, metricId, userId, startWorkday, endWorkday, referenceWorkday, timeZone);
@@ -10091,6 +10470,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of ApiResponse (MetricValueTrendAverage)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<MetricValueTrendAverage>> GetGamificationScorecardsProfileMetricUserValuesTrendsAsyncWithHttpInfo (string profileId, string metricId, string userId, String startWorkday, String endWorkday, String referenceWorkday = null, string timeZone = null)
         { 
             // verify the required parameter 'profileId' is set
@@ -10204,6 +10584,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>MetricValueTrendAverage</returns>
+        
         public MetricValueTrendAverage GetGamificationScorecardsProfileMetricUsersValuesTrends (string profileId, string metricId, string filterType, String startWorkday, String endWorkday, string filterId = null, String referenceWorkday = null, string timeZone = null)
         {
              ApiResponse<MetricValueTrendAverage> localVarResponse = GetGamificationScorecardsProfileMetricUsersValuesTrendsWithHttpInfo(profileId, metricId, filterType, startWorkday, endWorkday, filterId, referenceWorkday, timeZone);
@@ -10223,6 +10604,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>ApiResponse of MetricValueTrendAverage</returns>
+        
         public ApiResponse< MetricValueTrendAverage > GetGamificationScorecardsProfileMetricUsersValuesTrendsWithHttpInfo (string profileId, string metricId, string filterType, String startWorkday, String endWorkday, string filterId = null, String referenceWorkday = null, string timeZone = null)
         { 
             // verify the required parameter 'profileId' is set
@@ -10331,6 +10713,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of MetricValueTrendAverage</returns>
+        
         public async System.Threading.Tasks.Task<MetricValueTrendAverage> GetGamificationScorecardsProfileMetricUsersValuesTrendsAsync (string profileId, string metricId, string filterType, String startWorkday, String endWorkday, string filterId = null, String referenceWorkday = null, string timeZone = null)
         {
              ApiResponse<MetricValueTrendAverage> localVarResponse = await GetGamificationScorecardsProfileMetricUsersValuesTrendsAsyncWithHttpInfo(profileId, metricId, filterType, startWorkday, endWorkday, filterId, referenceWorkday, timeZone);
@@ -10351,6 +10734,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of ApiResponse (MetricValueTrendAverage)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<MetricValueTrendAverage>> GetGamificationScorecardsProfileMetricUsersValuesTrendsAsyncWithHttpInfo (string profileId, string metricId, string filterType, String startWorkday, String endWorkday, string filterId = null, String referenceWorkday = null, string timeZone = null)
         { 
             // verify the required parameter 'profileId' is set
@@ -10464,6 +10848,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>MetricValueTrendAverage</returns>
+        
         public MetricValueTrendAverage GetGamificationScorecardsProfileMetricValuesTrends (string profileId, string metricId, String startWorkday, String endWorkday, string filterType = null, String referenceWorkday = null, string timeZone = null)
         {
              ApiResponse<MetricValueTrendAverage> localVarResponse = GetGamificationScorecardsProfileMetricValuesTrendsWithHttpInfo(profileId, metricId, startWorkday, endWorkday, filterType, referenceWorkday, timeZone);
@@ -10482,6 +10867,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>ApiResponse of MetricValueTrendAverage</returns>
+        
         public ApiResponse< MetricValueTrendAverage > GetGamificationScorecardsProfileMetricValuesTrendsWithHttpInfo (string profileId, string metricId, String startWorkday, String endWorkday, string filterType = null, String referenceWorkday = null, string timeZone = null)
         { 
             // verify the required parameter 'profileId' is set
@@ -10585,6 +10971,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of MetricValueTrendAverage</returns>
+        
         public async System.Threading.Tasks.Task<MetricValueTrendAverage> GetGamificationScorecardsProfileMetricValuesTrendsAsync (string profileId, string metricId, String startWorkday, String endWorkday, string filterType = null, String referenceWorkday = null, string timeZone = null)
         {
              ApiResponse<MetricValueTrendAverage> localVarResponse = await GetGamificationScorecardsProfileMetricValuesTrendsAsyncWithHttpInfo(profileId, metricId, startWorkday, endWorkday, filterType, referenceWorkday, timeZone);
@@ -10604,6 +10991,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of ApiResponse (MetricValueTrendAverage)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<MetricValueTrendAverage>> GetGamificationScorecardsProfileMetricValuesTrendsAsyncWithHttpInfo (string profileId, string metricId, String startWorkday, String endWorkday, string filterType = null, String referenceWorkday = null, string timeZone = null)
         { 
             // verify the required parameter 'profileId' is set
@@ -10708,6 +11096,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>WorkdayMetricListing</returns>
+        
         public WorkdayMetricListing GetGamificationScorecardsUser (string userId, String workday, List<string> expand = null)
         {
              ApiResponse<WorkdayMetricListing> localVarResponse = GetGamificationScorecardsUserWithHttpInfo(userId, workday, expand);
@@ -10722,6 +11111,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of WorkdayMetricListing</returns>
+        
         public ApiResponse< WorkdayMetricListing > GetGamificationScorecardsUserWithHttpInfo (string userId, String workday, List<string> expand = null)
         { 
             // verify the required parameter 'userId' is set
@@ -10811,6 +11201,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of WorkdayMetricListing</returns>
+        
         public async System.Threading.Tasks.Task<WorkdayMetricListing> GetGamificationScorecardsUserAsync (string userId, String workday, List<string> expand = null)
         {
              ApiResponse<WorkdayMetricListing> localVarResponse = await GetGamificationScorecardsUserAsyncWithHttpInfo(userId, workday, expand);
@@ -10826,6 +11217,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">Target querying workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (WorkdayMetricListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<WorkdayMetricListing>> GetGamificationScorecardsUserAsyncWithHttpInfo (string userId, String workday, List<string> expand = null)
         { 
             // verify the required parameter 'userId' is set
@@ -10918,6 +11310,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>AttendanceStatusListing</returns>
+        
         public AttendanceStatusListing GetGamificationScorecardsUserAttendance (string userId, String startWorkday, String endWorkday)
         {
              ApiResponse<AttendanceStatusListing> localVarResponse = GetGamificationScorecardsUserAttendanceWithHttpInfo(userId, startWorkday, endWorkday);
@@ -10932,6 +11325,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of AttendanceStatusListing</returns>
+        
         public ApiResponse< AttendanceStatusListing > GetGamificationScorecardsUserAttendanceWithHttpInfo (string userId, String startWorkday, String endWorkday)
         { 
             // verify the required parameter 'userId' is set
@@ -11024,6 +11418,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of AttendanceStatusListing</returns>
+        
         public async System.Threading.Tasks.Task<AttendanceStatusListing> GetGamificationScorecardsUserAttendanceAsync (string userId, String startWorkday, String endWorkday)
         {
              ApiResponse<AttendanceStatusListing> localVarResponse = await GetGamificationScorecardsUserAttendanceAsyncWithHttpInfo(userId, startWorkday, endWorkday);
@@ -11039,6 +11434,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="startWorkday">Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (AttendanceStatusListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<AttendanceStatusListing>> GetGamificationScorecardsUserAttendanceAsyncWithHttpInfo (string userId, String startWorkday, String endWorkday)
         { 
             // verify the required parameter 'userId' is set
@@ -11133,6 +11529,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <returns>UserBestPoints</returns>
+        
         public UserBestPoints GetGamificationScorecardsUserBestpoints (string userId)
         {
              ApiResponse<UserBestPoints> localVarResponse = GetGamificationScorecardsUserBestpointsWithHttpInfo(userId);
@@ -11145,6 +11542,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <returns>ApiResponse of UserBestPoints</returns>
+        
         public ApiResponse< UserBestPoints > GetGamificationScorecardsUserBestpointsWithHttpInfo (string userId)
         { 
             // verify the required parameter 'userId' is set
@@ -11227,6 +11625,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <returns>Task of UserBestPoints</returns>
+        
         public async System.Threading.Tasks.Task<UserBestPoints> GetGamificationScorecardsUserBestpointsAsync (string userId)
         {
              ApiResponse<UserBestPoints> localVarResponse = await GetGamificationScorecardsUserBestpointsAsyncWithHttpInfo(userId);
@@ -11240,6 +11639,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <returns>Task of ApiResponse (UserBestPoints)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<UserBestPoints>> GetGamificationScorecardsUserBestpointsAsyncWithHttpInfo (string userId)
         { 
             // verify the required parameter 'userId' is set
@@ -11325,6 +11725,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId"></param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>AllTimePoints</returns>
+        
         public AllTimePoints GetGamificationScorecardsUserPointsAlltime (string userId, String endWorkday)
         {
              ApiResponse<AllTimePoints> localVarResponse = GetGamificationScorecardsUserPointsAlltimeWithHttpInfo(userId, endWorkday);
@@ -11338,6 +11739,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId"></param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of AllTimePoints</returns>
+        
         public ApiResponse< AllTimePoints > GetGamificationScorecardsUserPointsAlltimeWithHttpInfo (string userId, String endWorkday)
         { 
             // verify the required parameter 'userId' is set
@@ -11425,6 +11827,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId"></param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of AllTimePoints</returns>
+        
         public async System.Threading.Tasks.Task<AllTimePoints> GetGamificationScorecardsUserPointsAlltimeAsync (string userId, String endWorkday)
         {
              ApiResponse<AllTimePoints> localVarResponse = await GetGamificationScorecardsUserPointsAlltimeAsyncWithHttpInfo(userId, endWorkday);
@@ -11439,6 +11842,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId"></param>
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (AllTimePoints)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<AllTimePoints>> GetGamificationScorecardsUserPointsAlltimeAsyncWithHttpInfo (string userId, String endWorkday)
         { 
             // verify the required parameter 'userId' is set
@@ -11531,6 +11935,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>WorkdayPointsTrend</returns>
+        
         public WorkdayPointsTrend GetGamificationScorecardsUserPointsTrends (string userId, String startWorkday, String endWorkday, string dayOfWeek = null)
         {
              ApiResponse<WorkdayPointsTrend> localVarResponse = GetGamificationScorecardsUserPointsTrendsWithHttpInfo(userId, startWorkday, endWorkday, dayOfWeek);
@@ -11546,6 +11951,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>ApiResponse of WorkdayPointsTrend</returns>
+        
         public ApiResponse< WorkdayPointsTrend > GetGamificationScorecardsUserPointsTrendsWithHttpInfo (string userId, String startWorkday, String endWorkday, string dayOfWeek = null)
         { 
             // verify the required parameter 'userId' is set
@@ -11640,6 +12046,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>Task of WorkdayPointsTrend</returns>
+        
         public async System.Threading.Tasks.Task<WorkdayPointsTrend> GetGamificationScorecardsUserPointsTrendsAsync (string userId, String startWorkday, String endWorkday, string dayOfWeek = null)
         {
              ApiResponse<WorkdayPointsTrend> localVarResponse = await GetGamificationScorecardsUserPointsTrendsAsyncWithHttpInfo(userId, startWorkday, endWorkday, dayOfWeek);
@@ -11656,6 +12063,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="dayOfWeek">Optional filter to specify which day of weeks to be included in the response (optional)</param>
         /// <returns>Task of ApiResponse (WorkdayPointsTrend)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<WorkdayPointsTrend>> GetGamificationScorecardsUserPointsTrendsAsyncWithHttpInfo (string userId, String startWorkday, String endWorkday, string dayOfWeek = null)
         { 
             // verify the required parameter 'userId' is set
@@ -11754,6 +12162,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>WorkdayValuesTrend</returns>
+        
         public WorkdayValuesTrend GetGamificationScorecardsUserValuesTrends (string userId, String startWorkday, String endWorkday, string timeZone = null)
         {
              ApiResponse<WorkdayValuesTrend> localVarResponse = GetGamificationScorecardsUserValuesTrendsWithHttpInfo(userId, startWorkday, endWorkday, timeZone);
@@ -11769,6 +12178,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>ApiResponse of WorkdayValuesTrend</returns>
+        
         public ApiResponse< WorkdayValuesTrend > GetGamificationScorecardsUserValuesTrendsWithHttpInfo (string userId, String startWorkday, String endWorkday, string timeZone = null)
         { 
             // verify the required parameter 'userId' is set
@@ -11863,6 +12273,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of WorkdayValuesTrend</returns>
+        
         public async System.Threading.Tasks.Task<WorkdayValuesTrend> GetGamificationScorecardsUserValuesTrendsAsync (string userId, String startWorkday, String endWorkday, string timeZone = null)
         {
              ApiResponse<WorkdayValuesTrend> localVarResponse = await GetGamificationScorecardsUserValuesTrendsAsyncWithHttpInfo(userId, startWorkday, endWorkday, timeZone);
@@ -11879,6 +12290,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of ApiResponse (WorkdayValuesTrend)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<WorkdayValuesTrend>> GetGamificationScorecardsUserValuesTrendsAsyncWithHttpInfo (string userId, String startWorkday, String endWorkday, string timeZone = null)
         { 
             // verify the required parameter 'userId' is set
@@ -11976,6 +12388,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterId">ID for the filter type.</param>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>SingleWorkdayAveragePoints</returns>
+        
         public SingleWorkdayAveragePoints GetGamificationScorecardsUsersPointsAverage (string filterType, string filterId, String workday)
         {
              ApiResponse<SingleWorkdayAveragePoints> localVarResponse = GetGamificationScorecardsUsersPointsAverageWithHttpInfo(filterType, filterId, workday);
@@ -11990,6 +12403,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterId">ID for the filter type.</param>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>ApiResponse of SingleWorkdayAveragePoints</returns>
+        
         public ApiResponse< SingleWorkdayAveragePoints > GetGamificationScorecardsUsersPointsAverageWithHttpInfo (string filterType, string filterId, String workday)
         { 
             // verify the required parameter 'filterType' is set
@@ -12082,6 +12496,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterId">ID for the filter type.</param>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of SingleWorkdayAveragePoints</returns>
+        
         public async System.Threading.Tasks.Task<SingleWorkdayAveragePoints> GetGamificationScorecardsUsersPointsAverageAsync (string filterType, string filterId, String workday)
         {
              ApiResponse<SingleWorkdayAveragePoints> localVarResponse = await GetGamificationScorecardsUsersPointsAverageAsyncWithHttpInfo(filterType, filterId, workday);
@@ -12097,6 +12512,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterId">ID for the filter type.</param>
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <returns>Task of ApiResponse (SingleWorkdayAveragePoints)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<SingleWorkdayAveragePoints>> GetGamificationScorecardsUsersPointsAverageAsyncWithHttpInfo (string filterType, string filterId, String workday)
         { 
             // verify the required parameter 'filterType' is set
@@ -12194,6 +12610,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>SingleWorkdayAverageValues</returns>
+        
         public SingleWorkdayAverageValues GetGamificationScorecardsUsersValuesAverage (string filterType, string filterId, String workday, string timeZone = null)
         {
              ApiResponse<SingleWorkdayAverageValues> localVarResponse = GetGamificationScorecardsUsersValuesAverageWithHttpInfo(filterType, filterId, workday, timeZone);
@@ -12209,6 +12626,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>ApiResponse of SingleWorkdayAverageValues</returns>
+        
         public ApiResponse< SingleWorkdayAverageValues > GetGamificationScorecardsUsersValuesAverageWithHttpInfo (string filterType, string filterId, String workday, string timeZone = null)
         { 
             // verify the required parameter 'filterType' is set
@@ -12303,6 +12721,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of SingleWorkdayAverageValues</returns>
+        
         public async System.Threading.Tasks.Task<SingleWorkdayAverageValues> GetGamificationScorecardsUsersValuesAverageAsync (string filterType, string filterId, String workday, string timeZone = null)
         {
              ApiResponse<SingleWorkdayAverageValues> localVarResponse = await GetGamificationScorecardsUsersValuesAverageAsyncWithHttpInfo(filterType, filterId, workday, timeZone);
@@ -12319,6 +12738,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of ApiResponse (SingleWorkdayAverageValues)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<SingleWorkdayAverageValues>> GetGamificationScorecardsUsersValuesAverageAsyncWithHttpInfo (string filterType, string filterId, String workday, string timeZone = null)
         { 
             // verify the required parameter 'filterType' is set
@@ -12418,6 +12838,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>WorkdayValuesTrend</returns>
+        
         public WorkdayValuesTrend GetGamificationScorecardsUsersValuesTrends (string filterType, string filterId, String startWorkday, String endWorkday, string timeZone = null)
         {
              ApiResponse<WorkdayValuesTrend> localVarResponse = GetGamificationScorecardsUsersValuesTrendsWithHttpInfo(filterType, filterId, startWorkday, endWorkday, timeZone);
@@ -12434,6 +12855,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>ApiResponse of WorkdayValuesTrend</returns>
+        
         public ApiResponse< WorkdayValuesTrend > GetGamificationScorecardsUsersValuesTrendsWithHttpInfo (string filterType, string filterId, String startWorkday, String endWorkday, string timeZone = null)
         { 
             // verify the required parameter 'filterType' is set
@@ -12533,6 +12955,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of WorkdayValuesTrend</returns>
+        
         public async System.Threading.Tasks.Task<WorkdayValuesTrend> GetGamificationScorecardsUsersValuesTrendsAsync (string filterType, string filterId, String startWorkday, String endWorkday, string timeZone = null)
         {
              ApiResponse<WorkdayValuesTrend> localVarResponse = await GetGamificationScorecardsUsersValuesTrendsAsyncWithHttpInfo(filterType, filterId, startWorkday, endWorkday, timeZone);
@@ -12550,6 +12973,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="endWorkday">End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of ApiResponse (WorkdayValuesTrend)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<WorkdayValuesTrend>> GetGamificationScorecardsUsersValuesTrendsAsyncWithHttpInfo (string filterType, string filterId, String startWorkday, String endWorkday, string timeZone = null)
         { 
             // verify the required parameter 'filterType' is set
@@ -12651,6 +13075,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>SingleWorkdayAverageValues</returns>
+        
         public SingleWorkdayAverageValues GetGamificationScorecardsValuesAverage (String workday, string timeZone = null)
         {
              ApiResponse<SingleWorkdayAverageValues> localVarResponse = GetGamificationScorecardsValuesAverageWithHttpInfo(workday, timeZone);
@@ -12664,6 +13089,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>ApiResponse of SingleWorkdayAverageValues</returns>
+        
         public ApiResponse< SingleWorkdayAverageValues > GetGamificationScorecardsValuesAverageWithHttpInfo (String workday, string timeZone = null)
         { 
             // verify the required parameter 'workday' is set
@@ -12748,6 +13174,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of SingleWorkdayAverageValues</returns>
+        
         public async System.Threading.Tasks.Task<SingleWorkdayAverageValues> GetGamificationScorecardsValuesAverageAsync (String workday, string timeZone = null)
         {
              ApiResponse<SingleWorkdayAverageValues> localVarResponse = await GetGamificationScorecardsValuesAverageAsyncWithHttpInfo(workday, timeZone);
@@ -12762,6 +13189,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="workday">The target workday. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of ApiResponse (SingleWorkdayAverageValues)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<SingleWorkdayAverageValues>> GetGamificationScorecardsValuesAverageAsyncWithHttpInfo (String workday, string timeZone = null)
         { 
             // verify the required parameter 'workday' is set
@@ -12851,6 +13279,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the profile of the user as of this date. If not set, then the user&#39;s current profile will be used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>WorkdayValuesTrend</returns>
+        
         public WorkdayValuesTrend GetGamificationScorecardsValuesTrends (String startWorkday, String endWorkday, string filterType = null, String referenceWorkday = null, string timeZone = null)
         {
              ApiResponse<WorkdayValuesTrend> localVarResponse = GetGamificationScorecardsValuesTrendsWithHttpInfo(startWorkday, endWorkday, filterType, referenceWorkday, timeZone);
@@ -12867,6 +13296,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the profile of the user as of this date. If not set, then the user&#39;s current profile will be used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>ApiResponse of WorkdayValuesTrend</returns>
+        
         public ApiResponse< WorkdayValuesTrend > GetGamificationScorecardsValuesTrendsWithHttpInfo (String startWorkday, String endWorkday, string filterType = null, String referenceWorkday = null, string timeZone = null)
         { 
             // verify the required parameter 'startWorkday' is set
@@ -12960,6 +13390,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the profile of the user as of this date. If not set, then the user&#39;s current profile will be used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of WorkdayValuesTrend</returns>
+        
         public async System.Threading.Tasks.Task<WorkdayValuesTrend> GetGamificationScorecardsValuesTrendsAsync (String startWorkday, String endWorkday, string filterType = null, String referenceWorkday = null, string timeZone = null)
         {
              ApiResponse<WorkdayValuesTrend> localVarResponse = await GetGamificationScorecardsValuesTrendsAsyncWithHttpInfo(startWorkday, endWorkday, filterType, referenceWorkday, timeZone);
@@ -12977,6 +13408,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="referenceWorkday">Reference workday for the trend. Used to determine the profile of the user as of this date. If not set, then the user&#39;s current profile will be used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional)</param>
         /// <param name="timeZone">Timezone for the workday. Defaults to UTC (optional, default to "UTC")</param>
         /// <returns>Task of ApiResponse (WorkdayValuesTrend)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<WorkdayValuesTrend>> GetGamificationScorecardsValuesTrendsAsyncWithHttpInfo (String startWorkday, String endWorkday, string filterType = null, String referenceWorkday = null, string timeZone = null)
         { 
             // verify the required parameter 'startWorkday' is set
@@ -13068,6 +13500,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>GamificationStatus</returns>
+        
         public GamificationStatus GetGamificationStatus ()
         {
              ApiResponse<GamificationStatus> localVarResponse = GetGamificationStatusWithHttpInfo();
@@ -13079,6 +13512,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of GamificationStatus</returns>
+        
         public ApiResponse< GamificationStatus > GetGamificationStatusWithHttpInfo ()
         { 
 
@@ -13156,6 +13590,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of GamificationStatus</returns>
+        
         public async System.Threading.Tasks.Task<GamificationStatus> GetGamificationStatusAsync ()
         {
              ApiResponse<GamificationStatus> localVarResponse = await GetGamificationStatusAsyncWithHttpInfo();
@@ -13168,6 +13603,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (GamificationStatus)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<GamificationStatus>> GetGamificationStatusAsyncWithHttpInfo ()
         { 
 
@@ -13247,6 +13683,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">template id</param>
         /// <returns>ObjectiveTemplate</returns>
+        
         public ObjectiveTemplate GetGamificationTemplate (string templateId)
         {
              ApiResponse<ObjectiveTemplate> localVarResponse = GetGamificationTemplateWithHttpInfo(templateId);
@@ -13259,6 +13696,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">template id</param>
         /// <returns>ApiResponse of ObjectiveTemplate</returns>
+        
         public ApiResponse< ObjectiveTemplate > GetGamificationTemplateWithHttpInfo (string templateId)
         { 
             // verify the required parameter 'templateId' is set
@@ -13341,6 +13779,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">template id</param>
         /// <returns>Task of ObjectiveTemplate</returns>
+        
         public async System.Threading.Tasks.Task<ObjectiveTemplate> GetGamificationTemplateAsync (string templateId)
         {
              ApiResponse<ObjectiveTemplate> localVarResponse = await GetGamificationTemplateAsyncWithHttpInfo(templateId);
@@ -13354,6 +13793,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">template id</param>
         /// <returns>Task of ApiResponse (ObjectiveTemplate)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ObjectiveTemplate>> GetGamificationTemplateAsyncWithHttpInfo (string templateId)
         { 
             // verify the required parameter 'templateId' is set
@@ -13437,6 +13877,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>GetTemplatesResponse</returns>
+        
         public GetTemplatesResponse GetGamificationTemplates ()
         {
              ApiResponse<GetTemplatesResponse> localVarResponse = GetGamificationTemplatesWithHttpInfo();
@@ -13448,6 +13889,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of GetTemplatesResponse</returns>
+        
         public ApiResponse< GetTemplatesResponse > GetGamificationTemplatesWithHttpInfo ()
         { 
 
@@ -13525,6 +13967,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of GetTemplatesResponse</returns>
+        
         public async System.Threading.Tasks.Task<GetTemplatesResponse> GetGamificationTemplatesAsync ()
         {
              ApiResponse<GetTemplatesResponse> localVarResponse = await GetGamificationTemplatesAsyncWithHttpInfo();
@@ -13537,6 +13980,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (GetTemplatesResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<GetTemplatesResponse>> GetGamificationTemplatesAsyncWithHttpInfo ()
         { 
 
@@ -13617,6 +14061,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="metricId">Specifies the metric definition ID</param>
         /// <param name="body">The External Metric Definition parameters to be updated</param>
         /// <returns>ExternalMetricDefinition</returns>
+        
         public ExternalMetricDefinition PatchEmployeeperformanceExternalmetricsDefinition (string metricId, ExternalMetricDefinitionUpdateRequest body)
         {
              ApiResponse<ExternalMetricDefinition> localVarResponse = PatchEmployeeperformanceExternalmetricsDefinitionWithHttpInfo(metricId, body);
@@ -13630,6 +14075,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="metricId">Specifies the metric definition ID</param>
         /// <param name="body">The External Metric Definition parameters to be updated</param>
         /// <returns>ApiResponse of ExternalMetricDefinition</returns>
+        
         public ApiResponse< ExternalMetricDefinition > PatchEmployeeperformanceExternalmetricsDefinitionWithHttpInfo (string metricId, ExternalMetricDefinitionUpdateRequest body)
         { 
             // verify the required parameter 'metricId' is set
@@ -13722,6 +14168,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="metricId">Specifies the metric definition ID</param>
         /// <param name="body">The External Metric Definition parameters to be updated</param>
         /// <returns>Task of ExternalMetricDefinition</returns>
+        
         public async System.Threading.Tasks.Task<ExternalMetricDefinition> PatchEmployeeperformanceExternalmetricsDefinitionAsync (string metricId, ExternalMetricDefinitionUpdateRequest body)
         {
              ApiResponse<ExternalMetricDefinition> localVarResponse = await PatchEmployeeperformanceExternalmetricsDefinitionAsyncWithHttpInfo(metricId, body);
@@ -13736,6 +14183,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="metricId">Specifies the metric definition ID</param>
         /// <param name="body">The External Metric Definition parameters to be updated</param>
         /// <returns>Task of ApiResponse (ExternalMetricDefinition)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ExternalMetricDefinition>> PatchEmployeeperformanceExternalmetricsDefinitionAsyncWithHttpInfo (string metricId, ExternalMetricDefinitionUpdateRequest body)
         { 
             // verify the required parameter 'metricId' is set
@@ -13830,6 +14278,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The External Metric Data to be added (optional)</param>
         /// <returns>ExternalMetricDataWriteResponse</returns>
+        
         public ExternalMetricDataWriteResponse PostEmployeeperformanceExternalmetricsData (ExternalMetricDataWriteRequest body = null)
         {
              ApiResponse<ExternalMetricDataWriteResponse> localVarResponse = PostEmployeeperformanceExternalmetricsDataWithHttpInfo(body);
@@ -13842,6 +14291,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The External Metric Data to be added (optional)</param>
         /// <returns>ApiResponse of ExternalMetricDataWriteResponse</returns>
+        
         public ApiResponse< ExternalMetricDataWriteResponse > PostEmployeeperformanceExternalmetricsDataWithHttpInfo (ExternalMetricDataWriteRequest body = null)
         { 
 
@@ -13926,6 +14376,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The External Metric Data to be added (optional)</param>
         /// <returns>Task of ExternalMetricDataWriteResponse</returns>
+        
         public async System.Threading.Tasks.Task<ExternalMetricDataWriteResponse> PostEmployeeperformanceExternalmetricsDataAsync (ExternalMetricDataWriteRequest body = null)
         {
              ApiResponse<ExternalMetricDataWriteResponse> localVarResponse = await PostEmployeeperformanceExternalmetricsDataAsyncWithHttpInfo(body);
@@ -13939,6 +14390,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The External Metric Data to be added (optional)</param>
         /// <returns>Task of ApiResponse (ExternalMetricDataWriteResponse)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ExternalMetricDataWriteResponse>> PostEmployeeperformanceExternalmetricsDataAsyncWithHttpInfo (ExternalMetricDataWriteRequest body = null)
         { 
 
@@ -14024,6 +14476,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The External Metric Definition to be created (optional)</param>
         /// <returns>ExternalMetricDefinition</returns>
+        
         public ExternalMetricDefinition PostEmployeeperformanceExternalmetricsDefinitions (ExternalMetricDefinitionCreateRequest body = null)
         {
              ApiResponse<ExternalMetricDefinition> localVarResponse = PostEmployeeperformanceExternalmetricsDefinitionsWithHttpInfo(body);
@@ -14036,6 +14489,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The External Metric Definition to be created (optional)</param>
         /// <returns>ApiResponse of ExternalMetricDefinition</returns>
+        
         public ApiResponse< ExternalMetricDefinition > PostEmployeeperformanceExternalmetricsDefinitionsWithHttpInfo (ExternalMetricDefinitionCreateRequest body = null)
         { 
 
@@ -14120,6 +14574,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The External Metric Definition to be created (optional)</param>
         /// <returns>Task of ExternalMetricDefinition</returns>
+        
         public async System.Threading.Tasks.Task<ExternalMetricDefinition> PostEmployeeperformanceExternalmetricsDefinitionsAsync (ExternalMetricDefinitionCreateRequest body = null)
         {
              ApiResponse<ExternalMetricDefinition> localVarResponse = await PostEmployeeperformanceExternalmetricsDefinitionsAsyncWithHttpInfo(body);
@@ -14133,6 +14588,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The External Metric Definition to be created (optional)</param>
         /// <returns>Task of ApiResponse (ExternalMetricDefinition)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ExternalMetricDefinition>> PostEmployeeperformanceExternalmetricsDefinitionsAsyncWithHttpInfo (ExternalMetricDefinitionCreateRequest body = null)
         { 
 
@@ -14218,6 +14674,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId">performanceProfileId</param>
         /// <returns>PerformanceProfile</returns>
+        
         public PerformanceProfile PostGamificationProfileActivate (string profileId)
         {
              ApiResponse<PerformanceProfile> localVarResponse = PostGamificationProfileActivateWithHttpInfo(profileId);
@@ -14230,6 +14687,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId">performanceProfileId</param>
         /// <returns>ApiResponse of PerformanceProfile</returns>
+        
         public ApiResponse< PerformanceProfile > PostGamificationProfileActivateWithHttpInfo (string profileId)
         { 
             // verify the required parameter 'profileId' is set
@@ -14312,6 +14770,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId">performanceProfileId</param>
         /// <returns>Task of PerformanceProfile</returns>
+        
         public async System.Threading.Tasks.Task<PerformanceProfile> PostGamificationProfileActivateAsync (string profileId)
         {
              ApiResponse<PerformanceProfile> localVarResponse = await PostGamificationProfileActivateAsyncWithHttpInfo(profileId);
@@ -14325,6 +14784,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId">performanceProfileId</param>
         /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> PostGamificationProfileActivateAsyncWithHttpInfo (string profileId)
         { 
             // verify the required parameter 'profileId' is set
@@ -14409,6 +14869,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId">performanceProfileId</param>
         /// <returns>PerformanceProfile</returns>
+        
         public PerformanceProfile PostGamificationProfileDeactivate (string profileId)
         {
              ApiResponse<PerformanceProfile> localVarResponse = PostGamificationProfileDeactivateWithHttpInfo(profileId);
@@ -14421,6 +14882,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId">performanceProfileId</param>
         /// <returns>ApiResponse of PerformanceProfile</returns>
+        
         public ApiResponse< PerformanceProfile > PostGamificationProfileDeactivateWithHttpInfo (string profileId)
         { 
             // verify the required parameter 'profileId' is set
@@ -14503,6 +14965,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId">performanceProfileId</param>
         /// <returns>Task of PerformanceProfile</returns>
+        
         public async System.Threading.Tasks.Task<PerformanceProfile> PostGamificationProfileDeactivateAsync (string profileId)
         {
              ApiResponse<PerformanceProfile> localVarResponse = await PostGamificationProfileDeactivateAsyncWithHttpInfo(profileId);
@@ -14516,6 +14979,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="profileId">performanceProfileId</param>
         /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> PostGamificationProfileDeactivateAsyncWithHttpInfo (string profileId)
         { 
             // verify the required parameter 'profileId' is set
@@ -14601,6 +15065,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">Profile Id</param>
         /// <param name="body">assignUsers</param>
         /// <returns>Assignment</returns>
+        
         public Assignment PostGamificationProfileMembers (string profileId, AssignUsers body)
         {
              ApiResponse<Assignment> localVarResponse = PostGamificationProfileMembersWithHttpInfo(profileId, body);
@@ -14614,6 +15079,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">Profile Id</param>
         /// <param name="body">assignUsers</param>
         /// <returns>ApiResponse of Assignment</returns>
+        
         public ApiResponse< Assignment > PostGamificationProfileMembersWithHttpInfo (string profileId, AssignUsers body)
         { 
             // verify the required parameter 'profileId' is set
@@ -14706,6 +15172,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">Profile Id</param>
         /// <param name="body">assignUsers</param>
         /// <returns>Task of Assignment</returns>
+        
         public async System.Threading.Tasks.Task<Assignment> PostGamificationProfileMembersAsync (string profileId, AssignUsers body)
         {
              ApiResponse<Assignment> localVarResponse = await PostGamificationProfileMembersAsyncWithHttpInfo(profileId, body);
@@ -14720,6 +15187,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">Profile Id</param>
         /// <param name="body">assignUsers</param>
         /// <returns>Task of ApiResponse (Assignment)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Assignment>> PostGamificationProfileMembersAsyncWithHttpInfo (string profileId, AssignUsers body)
         { 
             // verify the required parameter 'profileId' is set
@@ -14815,6 +15283,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">Profile Id</param>
         /// <param name="body">memberAssignments</param>
         /// <returns>AssignmentValidation</returns>
+        
         public AssignmentValidation PostGamificationProfileMembersValidate (string profileId, ValidateAssignUsers body)
         {
              ApiResponse<AssignmentValidation> localVarResponse = PostGamificationProfileMembersValidateWithHttpInfo(profileId, body);
@@ -14828,6 +15297,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">Profile Id</param>
         /// <param name="body">memberAssignments</param>
         /// <returns>ApiResponse of AssignmentValidation</returns>
+        
         public ApiResponse< AssignmentValidation > PostGamificationProfileMembersValidateWithHttpInfo (string profileId, ValidateAssignUsers body)
         { 
             // verify the required parameter 'profileId' is set
@@ -14920,6 +15390,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">Profile Id</param>
         /// <param name="body">memberAssignments</param>
         /// <returns>Task of AssignmentValidation</returns>
+        
         public async System.Threading.Tasks.Task<AssignmentValidation> PostGamificationProfileMembersValidateAsync (string profileId, ValidateAssignUsers body)
         {
              ApiResponse<AssignmentValidation> localVarResponse = await PostGamificationProfileMembersValidateAsyncWithHttpInfo(profileId, body);
@@ -14934,6 +15405,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">Profile Id</param>
         /// <param name="body">memberAssignments</param>
         /// <returns>Task of ApiResponse (AssignmentValidation)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<AssignmentValidation>> PostGamificationProfileMembersValidateAsyncWithHttpInfo (string profileId, ValidateAssignUsers body)
         { 
             // verify the required parameter 'profileId' is set
@@ -15030,6 +15502,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sourceMetricId">Source Metric Id</param>
         /// <param name="body">linkedMetric</param>
         /// <returns>Metric</returns>
+        
         public Metric PostGamificationProfileMetricLink (string sourceProfileId, string sourceMetricId, TargetPerformanceProfile body)
         {
              ApiResponse<Metric> localVarResponse = PostGamificationProfileMetricLinkWithHttpInfo(sourceProfileId, sourceMetricId, body);
@@ -15044,6 +15517,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sourceMetricId">Source Metric Id</param>
         /// <param name="body">linkedMetric</param>
         /// <returns>ApiResponse of Metric</returns>
+        
         public ApiResponse< Metric > PostGamificationProfileMetricLinkWithHttpInfo (string sourceProfileId, string sourceMetricId, TargetPerformanceProfile body)
         { 
             // verify the required parameter 'sourceProfileId' is set
@@ -15141,6 +15615,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sourceMetricId">Source Metric Id</param>
         /// <param name="body">linkedMetric</param>
         /// <returns>Task of Metric</returns>
+        
         public async System.Threading.Tasks.Task<Metric> PostGamificationProfileMetricLinkAsync (string sourceProfileId, string sourceMetricId, TargetPerformanceProfile body)
         {
              ApiResponse<Metric> localVarResponse = await PostGamificationProfileMetricLinkAsyncWithHttpInfo(sourceProfileId, sourceMetricId, body);
@@ -15156,6 +15631,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sourceMetricId">Source Metric Id</param>
         /// <param name="body">linkedMetric</param>
         /// <returns>Task of ApiResponse (Metric)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Metric>> PostGamificationProfileMetricLinkAsyncWithHttpInfo (string sourceProfileId, string sourceMetricId, TargetPerformanceProfile body)
         { 
             // verify the required parameter 'sourceProfileId' is set
@@ -15256,6 +15732,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">Performance Profile Id</param>
         /// <param name="body">Metric</param>
         /// <returns>Metric</returns>
+        
         public Metric PostGamificationProfileMetrics (string profileId, CreateMetric body)
         {
              ApiResponse<Metric> localVarResponse = PostGamificationProfileMetricsWithHttpInfo(profileId, body);
@@ -15269,6 +15746,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">Performance Profile Id</param>
         /// <param name="body">Metric</param>
         /// <returns>ApiResponse of Metric</returns>
+        
         public ApiResponse< Metric > PostGamificationProfileMetricsWithHttpInfo (string profileId, CreateMetric body)
         { 
             // verify the required parameter 'profileId' is set
@@ -15361,6 +15839,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">Performance Profile Id</param>
         /// <param name="body">Metric</param>
         /// <returns>Task of Metric</returns>
+        
         public async System.Threading.Tasks.Task<Metric> PostGamificationProfileMetricsAsync (string profileId, CreateMetric body)
         {
              ApiResponse<Metric> localVarResponse = await PostGamificationProfileMetricsAsyncWithHttpInfo(profileId, body);
@@ -15375,6 +15854,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">Performance Profile Id</param>
         /// <param name="body">Metric</param>
         /// <returns>Task of ApiResponse (Metric)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Metric>> PostGamificationProfileMetricsAsyncWithHttpInfo (string profileId, CreateMetric body)
         { 
             // verify the required parameter 'profileId' is set
@@ -15470,6 +15950,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">performanceProfile</param>
         /// <param name="copyMetrics">Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile. (optional, default to true)</param>
         /// <returns>PerformanceProfile</returns>
+        
         public PerformanceProfile PostGamificationProfiles (CreatePerformanceProfile body, bool? copyMetrics = null)
         {
              ApiResponse<PerformanceProfile> localVarResponse = PostGamificationProfilesWithHttpInfo(body, copyMetrics);
@@ -15483,6 +15964,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">performanceProfile</param>
         /// <param name="copyMetrics">Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile. (optional, default to true)</param>
         /// <returns>ApiResponse of PerformanceProfile</returns>
+        
         public ApiResponse< PerformanceProfile > PostGamificationProfilesWithHttpInfo (CreatePerformanceProfile body, bool? copyMetrics = null)
         { 
             // verify the required parameter 'body' is set
@@ -15572,6 +16054,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">performanceProfile</param>
         /// <param name="copyMetrics">Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile. (optional, default to true)</param>
         /// <returns>Task of PerformanceProfile</returns>
+        
         public async System.Threading.Tasks.Task<PerformanceProfile> PostGamificationProfilesAsync (CreatePerformanceProfile body, bool? copyMetrics = null)
         {
              ApiResponse<PerformanceProfile> localVarResponse = await PostGamificationProfilesAsyncWithHttpInfo(body, copyMetrics);
@@ -15586,6 +16069,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">performanceProfile</param>
         /// <param name="copyMetrics">Flag to copy metrics. If set to false, there will be no metrics associated with the new profile. If set to true or is absent (the default behavior), all metrics from the default profile will be copied over into the new profile. (optional, default to true)</param>
         /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> PostGamificationProfilesAsyncWithHttpInfo (CreatePerformanceProfile body, bool? copyMetrics = null)
         { 
             // verify the required parameter 'body' is set
@@ -15677,6 +16161,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">The ID of a user.</param>
         /// <param name="body">The date range of work day.</param>
         /// <returns>UserProfilesInDateRange</returns>
+        
         public UserProfilesInDateRange PostGamificationProfilesUserQuery (string userId, UserProfilesInDateRangeRequest body)
         {
              ApiResponse<UserProfilesInDateRange> localVarResponse = PostGamificationProfilesUserQueryWithHttpInfo(userId, body);
@@ -15690,6 +16175,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">The ID of a user.</param>
         /// <param name="body">The date range of work day.</param>
         /// <returns>ApiResponse of UserProfilesInDateRange</returns>
+        
         public ApiResponse< UserProfilesInDateRange > PostGamificationProfilesUserQueryWithHttpInfo (string userId, UserProfilesInDateRangeRequest body)
         { 
             // verify the required parameter 'userId' is set
@@ -15782,6 +16268,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">The ID of a user.</param>
         /// <param name="body">The date range of work day.</param>
         /// <returns>Task of UserProfilesInDateRange</returns>
+        
         public async System.Threading.Tasks.Task<UserProfilesInDateRange> PostGamificationProfilesUserQueryAsync (string userId, UserProfilesInDateRangeRequest body)
         {
              ApiResponse<UserProfilesInDateRange> localVarResponse = await PostGamificationProfilesUserQueryAsyncWithHttpInfo(userId, body);
@@ -15796,6 +16283,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">The ID of a user.</param>
         /// <param name="body">The date range of work day.</param>
         /// <returns>Task of ApiResponse (UserProfilesInDateRange)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<UserProfilesInDateRange>> PostGamificationProfilesUserQueryAsyncWithHttpInfo (string userId, UserProfilesInDateRangeRequest body)
         { 
             // verify the required parameter 'userId' is set
@@ -15890,6 +16378,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The date range of work day.</param>
         /// <returns>UserProfilesInDateRange</returns>
+        
         public UserProfilesInDateRange PostGamificationProfilesUsersMeQuery (UserProfilesInDateRangeRequest body)
         {
              ApiResponse<UserProfilesInDateRange> localVarResponse = PostGamificationProfilesUsersMeQueryWithHttpInfo(body);
@@ -15902,6 +16391,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The date range of work day.</param>
         /// <returns>ApiResponse of UserProfilesInDateRange</returns>
+        
         public ApiResponse< UserProfilesInDateRange > PostGamificationProfilesUsersMeQueryWithHttpInfo (UserProfilesInDateRangeRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -15989,6 +16479,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The date range of work day.</param>
         /// <returns>Task of UserProfilesInDateRange</returns>
+        
         public async System.Threading.Tasks.Task<UserProfilesInDateRange> PostGamificationProfilesUsersMeQueryAsync (UserProfilesInDateRangeRequest body)
         {
              ApiResponse<UserProfilesInDateRange> localVarResponse = await PostGamificationProfilesUsersMeQueryAsyncWithHttpInfo(body);
@@ -16002,6 +16493,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The date range of work day.</param>
         /// <returns>Task of ApiResponse (UserProfilesInDateRange)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<UserProfilesInDateRange>> PostGamificationProfilesUsersMeQueryAsyncWithHttpInfo (UserProfilesInDateRangeRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -16092,6 +16584,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">performanceProfileId</param>
         /// <param name="body">performanceProfile (optional)</param>
         /// <returns>PerformanceProfile</returns>
+        
         public PerformanceProfile PutGamificationProfile (string profileId, PerformanceProfile body = null)
         {
              ApiResponse<PerformanceProfile> localVarResponse = PutGamificationProfileWithHttpInfo(profileId, body);
@@ -16105,6 +16598,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">performanceProfileId</param>
         /// <param name="body">performanceProfile (optional)</param>
         /// <returns>ApiResponse of PerformanceProfile</returns>
+        
         public ApiResponse< PerformanceProfile > PutGamificationProfileWithHttpInfo (string profileId, PerformanceProfile body = null)
         { 
             // verify the required parameter 'profileId' is set
@@ -16194,6 +16688,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">performanceProfileId</param>
         /// <param name="body">performanceProfile (optional)</param>
         /// <returns>Task of PerformanceProfile</returns>
+        
         public async System.Threading.Tasks.Task<PerformanceProfile> PutGamificationProfileAsync (string profileId, PerformanceProfile body = null)
         {
              ApiResponse<PerformanceProfile> localVarResponse = await PutGamificationProfileAsyncWithHttpInfo(profileId, body);
@@ -16208,6 +16703,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profileId">performanceProfileId</param>
         /// <param name="body">performanceProfile (optional)</param>
         /// <returns>Task of ApiResponse (PerformanceProfile)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> PutGamificationProfileAsyncWithHttpInfo (string profileId, PerformanceProfile body = null)
         { 
             // verify the required parameter 'profileId' is set
@@ -16300,6 +16796,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="metricId">Metric Id</param>
         /// <param name="body">Metric</param>
         /// <returns>Metric</returns>
+        
         public Metric PutGamificationProfileMetric (string profileId, string metricId, CreateMetric body)
         {
              ApiResponse<Metric> localVarResponse = PutGamificationProfileMetricWithHttpInfo(profileId, metricId, body);
@@ -16314,6 +16811,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="metricId">Metric Id</param>
         /// <param name="body">Metric</param>
         /// <returns>ApiResponse of Metric</returns>
+        
         public ApiResponse< Metric > PutGamificationProfileMetricWithHttpInfo (string profileId, string metricId, CreateMetric body)
         { 
             // verify the required parameter 'profileId' is set
@@ -16411,6 +16909,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="metricId">Metric Id</param>
         /// <param name="body">Metric</param>
         /// <returns>Task of Metric</returns>
+        
         public async System.Threading.Tasks.Task<Metric> PutGamificationProfileMetricAsync (string profileId, string metricId, CreateMetric body)
         {
              ApiResponse<Metric> localVarResponse = await PutGamificationProfileMetricAsyncWithHttpInfo(profileId, metricId, body);
@@ -16426,6 +16925,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="metricId">Metric Id</param>
         /// <param name="body">Metric</param>
         /// <returns>Task of ApiResponse (Metric)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Metric>> PutGamificationProfileMetricAsyncWithHttpInfo (string profileId, string metricId, CreateMetric body)
         { 
             // verify the required parameter 'profileId' is set
@@ -16525,6 +17025,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="status">Gamification status</param>
         /// <returns>GamificationStatus</returns>
+        
         public GamificationStatus PutGamificationStatus (GamificationStatus status)
         {
              ApiResponse<GamificationStatus> localVarResponse = PutGamificationStatusWithHttpInfo(status);
@@ -16537,6 +17038,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="status">Gamification status</param>
         /// <returns>ApiResponse of GamificationStatus</returns>
+        
         public ApiResponse< GamificationStatus > PutGamificationStatusWithHttpInfo (GamificationStatus status)
         { 
             // verify the required parameter 'status' is set
@@ -16624,6 +17126,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="status">Gamification status</param>
         /// <returns>Task of GamificationStatus</returns>
+        
         public async System.Threading.Tasks.Task<GamificationStatus> PutGamificationStatusAsync (GamificationStatus status)
         {
              ApiResponse<GamificationStatus> localVarResponse = await PutGamificationStatusAsyncWithHttpInfo(status);
@@ -16637,6 +17140,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="status">Gamification status</param>
         /// <returns>Task of ApiResponse (GamificationStatus)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<GamificationStatus>> PutGamificationStatusAsyncWithHttpInfo (GamificationStatus status)
         { 
             // verify the required parameter 'status' is set

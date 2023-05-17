@@ -358,7 +358,7 @@ Full example:
 ```csharp
 var handler = new NotificationHandler();
 handler.AddSubscription($"v2.users.{_me.Id}.presence", typeof(PresenceEventUserPresence));
-handler.AddSubscription($"v2.users.{_me.Id}.conversations", typeof(ConversationNotification));
+handler.AddSubscription($"v2.users.{_me.Id}.conversations", typeof(ConversationEventTopicConversation));
 handler.NotificationReceived += (data) =>
 {
     Console.WriteLine(JsonConvert.SerializeObject(data, Formatting.Indented));
@@ -368,9 +368,9 @@ handler.NotificationReceived += (data) =>
         var presence = (NotificationData<PresenceEventUserPresence>) data;
         Console.WriteLine($"New presence: {presence.EventBody.PresenceDefinition.SystemPresence}");
     }
-    else if (data.GetType() == typeof (NotificationData<ConversationNotification>))
+    else if (data.GetType() == typeof (NotificationData<ConversationEventTopicConversation>))
     {
-        var conversation = (NotificationData<ConversationNotification>) data;
+        var conversation = (NotificationData<ConversationEventTopicConversation>) data;
         Console.WriteLine($"Conversation: {conversation.EventBody.Id}");
     }
 };

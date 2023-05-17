@@ -35,7 +35,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ForwardPrefix">A translation for the subject prefix \"Forward\", for the expected language (required).</param>
         /// <param name="Sent">A translation for the word \"sent\", for the expected language (required).</param>
         /// <param name="Language">The code of the expected language (required).</param>
-        public HistoryHeadersTranslation(string From = null, string To = null, string Cc = null, string Subject = null, string ReplyPrefix = null, string ForwardPrefix = null, string Sent = null, string Language = null)
+        /// <param name="TimeZone">Timezone used by the agent, used to format the sent email date and time. If not defined, will default to UTC. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London.</param>
+        public HistoryHeadersTranslation(string From = null, string To = null, string Cc = null, string Subject = null, string ReplyPrefix = null, string ForwardPrefix = null, string Sent = null, string Language = null, string TimeZone = null)
         {
             this.From = From;
             this.To = To;
@@ -45,6 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ForwardPrefix = ForwardPrefix;
             this.Sent = Sent;
             this.Language = Language;
+            this.TimeZone = TimeZone;
             
         }
         
@@ -121,6 +123,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Language { get; set; }
 
 
+
+        /// <summary>
+        /// Timezone used by the agent, used to format the sent email date and time. If not defined, will default to UTC. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London
+        /// </summary>
+        /// <value>Timezone used by the agent, used to format the sent email date and time. If not defined, will default to UTC. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London</value>
+        [DataMember(Name="timeZone", EmitDefaultValue=false)]
+        public string TimeZone { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -138,6 +149,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ForwardPrefix: ").Append(ForwardPrefix).Append("\n");
             sb.Append("  Sent: ").Append(Sent).Append("\n");
             sb.Append("  Language: ").Append(Language).Append("\n");
+            sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -217,6 +229,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Language == other.Language ||
                     this.Language != null &&
                     this.Language.Equals(other.Language)
+                ) &&
+                (
+                    this.TimeZone == other.TimeZone ||
+                    this.TimeZone != null &&
+                    this.TimeZone.Equals(other.TimeZone)
                 );
         }
 
@@ -254,6 +271,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Language != null)
                     hash = hash * 59 + this.Language.GetHashCode();
+
+                if (this.TimeZone != null)
+                    hash = hash * 59 + this.TimeZone.GetHashCode();
 
                 return hash;
             }

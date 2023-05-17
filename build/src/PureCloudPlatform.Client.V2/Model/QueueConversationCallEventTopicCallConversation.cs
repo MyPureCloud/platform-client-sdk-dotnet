@@ -63,14 +63,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Participants">Participants.</param>
         /// <param name="OtherMediaUris">OtherMediaUris.</param>
         /// <param name="RecordingState">RecordingState.</param>
+        /// <param name="SecurePause">SecurePause.</param>
         /// <param name="MaxParticipants">MaxParticipants.</param>
-        public QueueConversationCallEventTopicCallConversation(string Id = null, string Name = null, List<QueueConversationCallEventTopicCallMediaParticipant> Participants = null, List<string> OtherMediaUris = null, RecordingStateEnum? RecordingState = null, int? MaxParticipants = null)
+        public QueueConversationCallEventTopicCallConversation(string Id = null, string Name = null, List<QueueConversationCallEventTopicCallMediaParticipant> Participants = null, List<string> OtherMediaUris = null, RecordingStateEnum? RecordingState = null, bool? SecurePause = null, int? MaxParticipants = null)
         {
             this.Id = Id;
             this.Name = Name;
             this.Participants = Participants;
             this.OtherMediaUris = OtherMediaUris;
             this.RecordingState = RecordingState;
+            this.SecurePause = SecurePause;
             this.MaxParticipants = MaxParticipants;
             
         }
@@ -112,6 +114,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets SecurePause
+        /// </summary>
+        [DataMember(Name="securePause", EmitDefaultValue=false)]
+        public bool? SecurePause { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets MaxParticipants
         /// </summary>
         [DataMember(Name="maxParticipants", EmitDefaultValue=false)]
@@ -132,6 +142,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Participants: ").Append(Participants).Append("\n");
             sb.Append("  OtherMediaUris: ").Append(OtherMediaUris).Append("\n");
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
+            sb.Append("  SecurePause: ").Append(SecurePause).Append("\n");
             sb.Append("  MaxParticipants: ").Append(MaxParticipants).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -199,6 +210,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RecordingState.Equals(other.RecordingState)
                 ) &&
                 (
+                    this.SecurePause == other.SecurePause ||
+                    this.SecurePause != null &&
+                    this.SecurePause.Equals(other.SecurePause)
+                ) &&
+                (
                     this.MaxParticipants == other.MaxParticipants ||
                     this.MaxParticipants != null &&
                     this.MaxParticipants.Equals(other.MaxParticipants)
@@ -230,6 +246,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.RecordingState != null)
                     hash = hash * 59 + this.RecordingState.GetHashCode();
+
+                if (this.SecurePause != null)
+                    hash = hash * 59 + this.SecurePause.GetHashCode();
 
                 if (this.MaxParticipants != null)
                     hash = hash * 59 + this.MaxParticipants.GetHashCode();

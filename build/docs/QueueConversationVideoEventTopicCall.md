@@ -15,6 +15,7 @@ title: QueueConversationVideoEventTopicCall
 | **Muted** | **bool?** | True if this call is muted so that remote participants can&#39;t hear any audio from this end. | [optional] |
 | **Confined** | **bool?** | True if this call is held and the person on this side hears hold music. | [optional] |
 | **Held** | **bool?** | True if this call is held and the person on this side hears silence. | [optional] |
+| **SecurePause** | **bool?** | True when the recording of this call is in secure pause status. | [optional] |
 | **ErrorInfo** | [**QueueConversationVideoEventTopicErrorDetails**](QueueConversationVideoEventTopicErrorDetails.html) |  | [optional] |
 | **DisconnectType** | **string** | System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. | [optional] |
 | **StartHoldTime** | **DateTime?** | The timestamp the call was placed on hold in the cloud clock if the call is currently on hold. | [optional] |

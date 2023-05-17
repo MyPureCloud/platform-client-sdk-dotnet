@@ -26,6 +26,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="force">Force delete this division as well as the grants and objects associated with it (optional, default to false)</param>
         /// <returns></returns>
+        
         void DeleteAuthorizationDivision (string divisionId, bool? force = null);
 
         /// <summary>
@@ -38,6 +39,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="force">Force delete this division as well as the grants and objects associated with it (optional, default to false)</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> DeleteAuthorizationDivisionWithHttpInfo (string divisionId, bool? force = null);
 
         /// <summary>
@@ -50,6 +52,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="objectCount">Get count of objects in this division, grouped by type (optional, default to false)</param>
         /// <returns>AuthzDivision</returns>
+        
         AuthzDivision GetAuthorizationDivision (string divisionId, bool? objectCount = null);
 
         /// <summary>
@@ -62,6 +65,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="objectCount">Get count of objects in this division, grouped by type (optional, default to false)</param>
         /// <returns>ApiResponse of AuthzDivision</returns>
+        
         ApiResponse<AuthzDivision> GetAuthorizationDivisionWithHttpInfo (string divisionId, bool? objectCount = null);
 
         /// <summary>
@@ -81,6 +85,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Optionally request specific divisions by their IDs (optional)</param>
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>AuthzDivisionEntityListing</returns>
+        
         AuthzDivisionEntityListing GetAuthorizationDivisions (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null);
 
         /// <summary>
@@ -100,6 +105,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Optionally request specific divisions by their IDs (optional)</param>
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>ApiResponse of AuthzDivisionEntityListing</returns>
+        
         ApiResponse<AuthzDivisionEntityListing> GetAuthorizationDivisionsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null);
 
         /// <summary>
@@ -110,6 +116,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>AuthzDivision</returns>
+        
         AuthzDivision GetAuthorizationDivisionsHome ();
 
         /// <summary>
@@ -120,6 +127,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of AuthzDivision</returns>
+        
         ApiResponse<AuthzDivision> GetAuthorizationDivisionsHomeWithHttpInfo ();
 
         /// <summary>
@@ -130,6 +138,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>int?</returns>
+        
         int? GetAuthorizationDivisionsLimit ();
 
         /// <summary>
@@ -140,6 +149,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of int?</returns>
+        
         ApiResponse<int?> GetAuthorizationDivisionsLimitWithHttpInfo ();
 
         /// <summary>
@@ -153,6 +163,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="objectType">The type of the objects. Must be one of the valid object types</param>
         /// <param name="body">Object Id List</param>
         /// <returns></returns>
+        
         void PostAuthorizationDivisionObject (string divisionId, string objectType, List<string> body);
 
         /// <summary>
@@ -166,6 +177,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="objectType">The type of the objects. Must be one of the valid object types</param>
         /// <param name="body">Object Id List</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> PostAuthorizationDivisionObjectWithHttpInfo (string divisionId, string objectType, List<string> body);
 
         /// <summary>
@@ -178,6 +190,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="body">Recreated division data</param>
         /// <returns>AuthzDivision</returns>
+        
         AuthzDivision PostAuthorizationDivisionRestore (string divisionId, AuthzDivision body);
 
         /// <summary>
@@ -190,6 +203,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="body">Recreated division data</param>
         /// <returns>ApiResponse of AuthzDivision</returns>
+        
         ApiResponse<AuthzDivision> PostAuthorizationDivisionRestoreWithHttpInfo (string divisionId, AuthzDivision body);
 
         /// <summary>
@@ -201,6 +215,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Division</param>
         /// <returns>AuthzDivision</returns>
+        
         AuthzDivision PostAuthorizationDivisions (AuthzDivision body);
 
         /// <summary>
@@ -212,6 +227,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Division</param>
         /// <returns>ApiResponse of AuthzDivision</returns>
+        
         ApiResponse<AuthzDivision> PostAuthorizationDivisionsWithHttpInfo (AuthzDivision body);
 
         /// <summary>
@@ -224,6 +240,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="body">Updated division data</param>
         /// <returns>AuthzDivision</returns>
+        
         AuthzDivision PutAuthorizationDivision (string divisionId, AuthzDivision body);
 
         /// <summary>
@@ -236,6 +253,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="body">Updated division data</param>
         /// <returns>ApiResponse of AuthzDivision</returns>
+        
         ApiResponse<AuthzDivision> PutAuthorizationDivisionWithHttpInfo (string divisionId, AuthzDivision body);
 
         #endregion Synchronous Operations
@@ -252,6 +270,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="force">Force delete this division as well as the grants and objects associated with it (optional, default to false)</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task DeleteAuthorizationDivisionAsync (string divisionId, bool? force = null);
 
         /// <summary>
@@ -264,6 +283,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="force">Force delete this division as well as the grants and objects associated with it (optional, default to false)</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAuthorizationDivisionAsyncWithHttpInfo (string divisionId, bool? force = null);
 
         /// <summary>
@@ -276,6 +296,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="objectCount">Get count of objects in this division, grouped by type (optional, default to false)</param>
         /// <returns>Task of AuthzDivision</returns>
+        
         System.Threading.Tasks.Task<AuthzDivision> GetAuthorizationDivisionAsync (string divisionId, bool? objectCount = null);
 
         /// <summary>
@@ -288,6 +309,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="objectCount">Get count of objects in this division, grouped by type (optional, default to false)</param>
         /// <returns>Task of ApiResponse (AuthzDivision)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> GetAuthorizationDivisionAsyncWithHttpInfo (string divisionId, bool? objectCount = null);
 
         /// <summary>
@@ -307,6 +329,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Optionally request specific divisions by their IDs (optional)</param>
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>Task of AuthzDivisionEntityListing</returns>
+        
         System.Threading.Tasks.Task<AuthzDivisionEntityListing> GetAuthorizationDivisionsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null);
 
         /// <summary>
@@ -326,6 +349,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Optionally request specific divisions by their IDs (optional)</param>
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>Task of ApiResponse (AuthzDivisionEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<AuthzDivisionEntityListing>> GetAuthorizationDivisionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null);
 
         /// <summary>
@@ -336,6 +360,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of AuthzDivision</returns>
+        
         System.Threading.Tasks.Task<AuthzDivision> GetAuthorizationDivisionsHomeAsync ();
 
         /// <summary>
@@ -346,6 +371,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (AuthzDivision)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> GetAuthorizationDivisionsHomeAsyncWithHttpInfo ();
 
         /// <summary>
@@ -356,6 +382,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of int?</returns>
+        
         System.Threading.Tasks.Task<int?> GetAuthorizationDivisionsLimitAsync ();
 
         /// <summary>
@@ -366,6 +393,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (int?)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<int?>> GetAuthorizationDivisionsLimitAsyncWithHttpInfo ();
 
         /// <summary>
@@ -379,6 +407,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="objectType">The type of the objects. Must be one of the valid object types</param>
         /// <param name="body">Object Id List</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task PostAuthorizationDivisionObjectAsync (string divisionId, string objectType, List<string> body);
 
         /// <summary>
@@ -392,6 +421,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="objectType">The type of the objects. Must be one of the valid object types</param>
         /// <param name="body">Object Id List</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationDivisionObjectAsyncWithHttpInfo (string divisionId, string objectType, List<string> body);
 
         /// <summary>
@@ -404,6 +434,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="body">Recreated division data</param>
         /// <returns>Task of AuthzDivision</returns>
+        
         System.Threading.Tasks.Task<AuthzDivision> PostAuthorizationDivisionRestoreAsync (string divisionId, AuthzDivision body);
 
         /// <summary>
@@ -416,6 +447,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="body">Recreated division data</param>
         /// <returns>Task of ApiResponse (AuthzDivision)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> PostAuthorizationDivisionRestoreAsyncWithHttpInfo (string divisionId, AuthzDivision body);
 
         /// <summary>
@@ -427,6 +459,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Division</param>
         /// <returns>Task of AuthzDivision</returns>
+        
         System.Threading.Tasks.Task<AuthzDivision> PostAuthorizationDivisionsAsync (AuthzDivision body);
 
         /// <summary>
@@ -438,6 +471,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Division</param>
         /// <returns>Task of ApiResponse (AuthzDivision)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> PostAuthorizationDivisionsAsyncWithHttpInfo (AuthzDivision body);
 
         /// <summary>
@@ -450,6 +484,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="body">Updated division data</param>
         /// <returns>Task of AuthzDivision</returns>
+        
         System.Threading.Tasks.Task<AuthzDivision> PutAuthorizationDivisionAsync (string divisionId, AuthzDivision body);
 
         /// <summary>
@@ -462,6 +497,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="body">Updated division data</param>
         /// <returns>Task of ApiResponse (AuthzDivision)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> PutAuthorizationDivisionAsyncWithHttpInfo (string divisionId, AuthzDivision body);
 
         #endregion Asynchronous Operations
@@ -563,6 +599,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="force">Force delete this division as well as the grants and objects associated with it (optional, default to false)</param>
         /// <returns></returns>
+        
         public void DeleteAuthorizationDivision (string divisionId, bool? force = null)
         {
              DeleteAuthorizationDivisionWithHttpInfo(divisionId, force);
@@ -575,6 +612,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="force">Force delete this division as well as the grants and objects associated with it (optional, default to false)</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> DeleteAuthorizationDivisionWithHttpInfo (string divisionId, bool? force = null)
         { 
             // verify the required parameter 'divisionId' is set
@@ -659,6 +697,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="force">Force delete this division as well as the grants and objects associated with it (optional, default to false)</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task DeleteAuthorizationDivisionAsync (string divisionId, bool? force = null)
         {
              await DeleteAuthorizationDivisionAsyncWithHttpInfo(divisionId, force);
@@ -672,6 +711,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="force">Force delete this division as well as the grants and objects associated with it (optional, default to false)</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAuthorizationDivisionAsyncWithHttpInfo (string divisionId, bool? force = null)
         { 
             // verify the required parameter 'divisionId' is set
@@ -758,6 +798,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="objectCount">Get count of objects in this division, grouped by type (optional, default to false)</param>
         /// <returns>AuthzDivision</returns>
+        
         public AuthzDivision GetAuthorizationDivision (string divisionId, bool? objectCount = null)
         {
              ApiResponse<AuthzDivision> localVarResponse = GetAuthorizationDivisionWithHttpInfo(divisionId, objectCount);
@@ -771,6 +812,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="objectCount">Get count of objects in this division, grouped by type (optional, default to false)</param>
         /// <returns>ApiResponse of AuthzDivision</returns>
+        
         public ApiResponse< AuthzDivision > GetAuthorizationDivisionWithHttpInfo (string divisionId, bool? objectCount = null)
         { 
             // verify the required parameter 'divisionId' is set
@@ -855,6 +897,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="objectCount">Get count of objects in this division, grouped by type (optional, default to false)</param>
         /// <returns>Task of AuthzDivision</returns>
+        
         public async System.Threading.Tasks.Task<AuthzDivision> GetAuthorizationDivisionAsync (string divisionId, bool? objectCount = null)
         {
              ApiResponse<AuthzDivision> localVarResponse = await GetAuthorizationDivisionAsyncWithHttpInfo(divisionId, objectCount);
@@ -869,6 +912,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="objectCount">Get count of objects in this division, grouped by type (optional, default to false)</param>
         /// <returns>Task of ApiResponse (AuthzDivision)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> GetAuthorizationDivisionAsyncWithHttpInfo (string divisionId, bool? objectCount = null)
         { 
             // verify the required parameter 'divisionId' is set
@@ -962,6 +1006,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Optionally request specific divisions by their IDs (optional)</param>
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>AuthzDivisionEntityListing</returns>
+        
         public AuthzDivisionEntityListing GetAuthorizationDivisions (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null)
         {
              ApiResponse<AuthzDivisionEntityListing> localVarResponse = GetAuthorizationDivisionsWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, objectCount, id, name);
@@ -982,6 +1027,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Optionally request specific divisions by their IDs (optional)</param>
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>ApiResponse of AuthzDivisionEntityListing</returns>
+        
         public ApiResponse< AuthzDivisionEntityListing > GetAuthorizationDivisionsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null)
         { 
 
@@ -1077,6 +1123,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Optionally request specific divisions by their IDs (optional)</param>
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>Task of AuthzDivisionEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<AuthzDivisionEntityListing> GetAuthorizationDivisionsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null)
         {
              ApiResponse<AuthzDivisionEntityListing> localVarResponse = await GetAuthorizationDivisionsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, objectCount, id, name);
@@ -1098,6 +1145,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Optionally request specific divisions by their IDs (optional)</param>
         /// <param name="name">Search term to filter by division name (optional)</param>
         /// <returns>Task of ApiResponse (AuthzDivisionEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<AuthzDivisionEntityListing>> GetAuthorizationDivisionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null)
         { 
 
@@ -1185,6 +1233,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>AuthzDivision</returns>
+        
         public AuthzDivision GetAuthorizationDivisionsHome ()
         {
              ApiResponse<AuthzDivision> localVarResponse = GetAuthorizationDivisionsHomeWithHttpInfo();
@@ -1196,6 +1245,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of AuthzDivision</returns>
+        
         public ApiResponse< AuthzDivision > GetAuthorizationDivisionsHomeWithHttpInfo ()
         { 
 
@@ -1273,6 +1323,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of AuthzDivision</returns>
+        
         public async System.Threading.Tasks.Task<AuthzDivision> GetAuthorizationDivisionsHomeAsync ()
         {
              ApiResponse<AuthzDivision> localVarResponse = await GetAuthorizationDivisionsHomeAsyncWithHttpInfo();
@@ -1285,6 +1336,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (AuthzDivision)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> GetAuthorizationDivisionsHomeAsyncWithHttpInfo ()
         { 
 
@@ -1363,6 +1415,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>int?</returns>
+        
         public int? GetAuthorizationDivisionsLimit ()
         {
              ApiResponse<int?> localVarResponse = GetAuthorizationDivisionsLimitWithHttpInfo();
@@ -1374,6 +1427,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of int?</returns>
+        
         public ApiResponse< int? > GetAuthorizationDivisionsLimitWithHttpInfo ()
         { 
 
@@ -1451,6 +1505,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of int?</returns>
+        
         public async System.Threading.Tasks.Task<int?> GetAuthorizationDivisionsLimitAsync ()
         {
              ApiResponse<int?> localVarResponse = await GetAuthorizationDivisionsLimitAsyncWithHttpInfo();
@@ -1463,6 +1518,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (int?)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<int?>> GetAuthorizationDivisionsLimitAsyncWithHttpInfo ()
         { 
 
@@ -1544,6 +1600,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="objectType">The type of the objects. Must be one of the valid object types</param>
         /// <param name="body">Object Id List</param>
         /// <returns></returns>
+        
         public void PostAuthorizationDivisionObject (string divisionId, string objectType, List<string> body)
         {
              PostAuthorizationDivisionObjectWithHttpInfo(divisionId, objectType, body);
@@ -1557,6 +1614,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="objectType">The type of the objects. Must be one of the valid object types</param>
         /// <param name="body">Object Id List</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> PostAuthorizationDivisionObjectWithHttpInfo (string divisionId, string objectType, List<string> body)
         { 
             // verify the required parameter 'divisionId' is set
@@ -1654,6 +1712,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="objectType">The type of the objects. Must be one of the valid object types</param>
         /// <param name="body">Object Id List</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task PostAuthorizationDivisionObjectAsync (string divisionId, string objectType, List<string> body)
         {
              await PostAuthorizationDivisionObjectAsyncWithHttpInfo(divisionId, objectType, body);
@@ -1668,6 +1727,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="objectType">The type of the objects. Must be one of the valid object types</param>
         /// <param name="body">Object Id List</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostAuthorizationDivisionObjectAsyncWithHttpInfo (string divisionId, string objectType, List<string> body)
         { 
             // verify the required parameter 'divisionId' is set
@@ -1768,6 +1828,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="body">Recreated division data</param>
         /// <returns>AuthzDivision</returns>
+        
         public AuthzDivision PostAuthorizationDivisionRestore (string divisionId, AuthzDivision body)
         {
              ApiResponse<AuthzDivision> localVarResponse = PostAuthorizationDivisionRestoreWithHttpInfo(divisionId, body);
@@ -1781,6 +1842,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="body">Recreated division data</param>
         /// <returns>ApiResponse of AuthzDivision</returns>
+        
         public ApiResponse< AuthzDivision > PostAuthorizationDivisionRestoreWithHttpInfo (string divisionId, AuthzDivision body)
         { 
             // verify the required parameter 'divisionId' is set
@@ -1873,6 +1935,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="body">Recreated division data</param>
         /// <returns>Task of AuthzDivision</returns>
+        
         public async System.Threading.Tasks.Task<AuthzDivision> PostAuthorizationDivisionRestoreAsync (string divisionId, AuthzDivision body)
         {
              ApiResponse<AuthzDivision> localVarResponse = await PostAuthorizationDivisionRestoreAsyncWithHttpInfo(divisionId, body);
@@ -1887,6 +1950,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="body">Recreated division data</param>
         /// <returns>Task of ApiResponse (AuthzDivision)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> PostAuthorizationDivisionRestoreAsyncWithHttpInfo (string divisionId, AuthzDivision body)
         { 
             // verify the required parameter 'divisionId' is set
@@ -1981,6 +2045,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Division</param>
         /// <returns>AuthzDivision</returns>
+        
         public AuthzDivision PostAuthorizationDivisions (AuthzDivision body)
         {
              ApiResponse<AuthzDivision> localVarResponse = PostAuthorizationDivisionsWithHttpInfo(body);
@@ -1993,6 +2058,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Division</param>
         /// <returns>ApiResponse of AuthzDivision</returns>
+        
         public ApiResponse< AuthzDivision > PostAuthorizationDivisionsWithHttpInfo (AuthzDivision body)
         { 
             // verify the required parameter 'body' is set
@@ -2080,6 +2146,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Division</param>
         /// <returns>Task of AuthzDivision</returns>
+        
         public async System.Threading.Tasks.Task<AuthzDivision> PostAuthorizationDivisionsAsync (AuthzDivision body)
         {
              ApiResponse<AuthzDivision> localVarResponse = await PostAuthorizationDivisionsAsyncWithHttpInfo(body);
@@ -2093,6 +2160,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Division</param>
         /// <returns>Task of ApiResponse (AuthzDivision)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> PostAuthorizationDivisionsAsyncWithHttpInfo (AuthzDivision body)
         { 
             // verify the required parameter 'body' is set
@@ -2183,6 +2251,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="body">Updated division data</param>
         /// <returns>AuthzDivision</returns>
+        
         public AuthzDivision PutAuthorizationDivision (string divisionId, AuthzDivision body)
         {
              ApiResponse<AuthzDivision> localVarResponse = PutAuthorizationDivisionWithHttpInfo(divisionId, body);
@@ -2196,6 +2265,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="body">Updated division data</param>
         /// <returns>ApiResponse of AuthzDivision</returns>
+        
         public ApiResponse< AuthzDivision > PutAuthorizationDivisionWithHttpInfo (string divisionId, AuthzDivision body)
         { 
             // verify the required parameter 'divisionId' is set
@@ -2288,6 +2358,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="body">Updated division data</param>
         /// <returns>Task of AuthzDivision</returns>
+        
         public async System.Threading.Tasks.Task<AuthzDivision> PutAuthorizationDivisionAsync (string divisionId, AuthzDivision body)
         {
              ApiResponse<AuthzDivision> localVarResponse = await PutAuthorizationDivisionAsyncWithHttpInfo(divisionId, body);
@@ -2302,6 +2373,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID</param>
         /// <param name="body">Updated division data</param>
         /// <returns>Task of ApiResponse (AuthzDivision)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> PutAuthorizationDivisionAsyncWithHttpInfo (string divisionId, AuthzDivision body)
         { 
             // verify the required parameter 'divisionId' is set

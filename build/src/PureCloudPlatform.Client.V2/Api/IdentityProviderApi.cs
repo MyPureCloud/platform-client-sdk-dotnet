@@ -24,6 +24,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Object</returns>
+        
         Object DeleteIdentityprovidersAdfs ();
 
         /// <summary>
@@ -34,6 +35,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object</returns>
+        
         ApiResponse<Object> DeleteIdentityprovidersAdfsWithHttpInfo ();
 
         /// <summary>
@@ -44,6 +46,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Object</returns>
+        
         Object DeleteIdentityprovidersCic ();
 
         /// <summary>
@@ -54,6 +57,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object</returns>
+        
         ApiResponse<Object> DeleteIdentityprovidersCicWithHttpInfo ();
 
         /// <summary>
@@ -64,6 +68,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Object</returns>
+        
         Object DeleteIdentityprovidersGeneric ();
 
         /// <summary>
@@ -74,6 +79,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object</returns>
+        
         ApiResponse<Object> DeleteIdentityprovidersGenericWithHttpInfo ();
 
         /// <summary>
@@ -84,6 +90,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Object</returns>
+        
         Object DeleteIdentityprovidersGsuite ();
 
         /// <summary>
@@ -94,6 +101,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object</returns>
+        
         ApiResponse<Object> DeleteIdentityprovidersGsuiteWithHttpInfo ();
 
         /// <summary>
@@ -104,6 +112,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Object</returns>
+        
         Object DeleteIdentityprovidersIdentitynow ();
 
         /// <summary>
@@ -114,6 +123,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object</returns>
+        
         ApiResponse<Object> DeleteIdentityprovidersIdentitynowWithHttpInfo ();
 
         /// <summary>
@@ -124,6 +134,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Object</returns>
+        
         Object DeleteIdentityprovidersOkta ();
 
         /// <summary>
@@ -134,6 +145,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object</returns>
+        
         ApiResponse<Object> DeleteIdentityprovidersOktaWithHttpInfo ();
 
         /// <summary>
@@ -144,6 +156,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Object</returns>
+        
         Object DeleteIdentityprovidersOnelogin ();
 
         /// <summary>
@@ -154,6 +167,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object</returns>
+        
         ApiResponse<Object> DeleteIdentityprovidersOneloginWithHttpInfo ();
 
         /// <summary>
@@ -164,6 +178,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Object</returns>
+        
         Object DeleteIdentityprovidersPing ();
 
         /// <summary>
@@ -174,6 +189,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object</returns>
+        
         ApiResponse<Object> DeleteIdentityprovidersPingWithHttpInfo ();
 
         /// <summary>
@@ -184,6 +200,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Object</returns>
+        
         Object DeleteIdentityprovidersPurecloud ();
 
         /// <summary>
@@ -194,6 +211,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object</returns>
+        
         ApiResponse<Object> DeleteIdentityprovidersPurecloudWithHttpInfo ();
 
         /// <summary>
@@ -204,6 +222,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Object</returns>
+        
         Object DeleteIdentityprovidersPureengage ();
 
         /// <summary>
@@ -214,6 +233,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object</returns>
+        
         ApiResponse<Object> DeleteIdentityprovidersPureengageWithHttpInfo ();
 
         /// <summary>
@@ -224,6 +244,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Object</returns>
+        
         Object DeleteIdentityprovidersSalesforce ();
 
         /// <summary>
@@ -234,6 +255,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object</returns>
+        
         ApiResponse<Object> DeleteIdentityprovidersSalesforceWithHttpInfo ();
 
         /// <summary>
@@ -244,6 +266,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>OAuthProviderEntityListing</returns>
+        
         OAuthProviderEntityListing GetIdentityproviders ();
 
         /// <summary>
@@ -254,6 +277,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of OAuthProviderEntityListing</returns>
+        
         ApiResponse<OAuthProviderEntityListing> GetIdentityprovidersWithHttpInfo ();
 
         /// <summary>
@@ -264,6 +288,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ADFS</returns>
+        
         ADFS GetIdentityprovidersAdfs ();
 
         /// <summary>
@@ -274,6 +299,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ADFS</returns>
+        
         ApiResponse<ADFS> GetIdentityprovidersAdfsWithHttpInfo ();
 
         /// <summary>
@@ -284,6 +310,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>CustomerInteractionCenter</returns>
+        
         CustomerInteractionCenter GetIdentityprovidersCic ();
 
         /// <summary>
@@ -294,6 +321,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of CustomerInteractionCenter</returns>
+        
         ApiResponse<CustomerInteractionCenter> GetIdentityprovidersCicWithHttpInfo ();
 
         /// <summary>
@@ -304,6 +332,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>GenericSAML</returns>
+        
         GenericSAML GetIdentityprovidersGeneric ();
 
         /// <summary>
@@ -314,6 +343,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of GenericSAML</returns>
+        
         ApiResponse<GenericSAML> GetIdentityprovidersGenericWithHttpInfo ();
 
         /// <summary>
@@ -324,6 +354,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>GSuite</returns>
+        
         GSuite GetIdentityprovidersGsuite ();
 
         /// <summary>
@@ -334,6 +365,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of GSuite</returns>
+        
         ApiResponse<GSuite> GetIdentityprovidersGsuiteWithHttpInfo ();
 
         /// <summary>
@@ -344,6 +376,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>IdentityNow</returns>
+        
         IdentityNow GetIdentityprovidersIdentitynow ();
 
         /// <summary>
@@ -354,6 +387,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of IdentityNow</returns>
+        
         ApiResponse<IdentityNow> GetIdentityprovidersIdentitynowWithHttpInfo ();
 
         /// <summary>
@@ -364,6 +398,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Okta</returns>
+        
         Okta GetIdentityprovidersOkta ();
 
         /// <summary>
@@ -374,6 +409,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Okta</returns>
+        
         ApiResponse<Okta> GetIdentityprovidersOktaWithHttpInfo ();
 
         /// <summary>
@@ -384,6 +420,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>OneLogin</returns>
+        
         OneLogin GetIdentityprovidersOnelogin ();
 
         /// <summary>
@@ -394,6 +431,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of OneLogin</returns>
+        
         ApiResponse<OneLogin> GetIdentityprovidersOneloginWithHttpInfo ();
 
         /// <summary>
@@ -404,6 +442,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>PingIdentity</returns>
+        
         PingIdentity GetIdentityprovidersPing ();
 
         /// <summary>
@@ -414,6 +453,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of PingIdentity</returns>
+        
         ApiResponse<PingIdentity> GetIdentityprovidersPingWithHttpInfo ();
 
         /// <summary>
@@ -424,6 +464,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>PureCloudPlatform.Client.V2.Model.PureCloud</returns>
+        
         PureCloudPlatform.Client.V2.Model.PureCloud GetIdentityprovidersPurecloud ();
 
         /// <summary>
@@ -434,6 +475,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of PureCloudPlatform.Client.V2.Model.PureCloud</returns>
+        
         ApiResponse<PureCloudPlatform.Client.V2.Model.PureCloud> GetIdentityprovidersPurecloudWithHttpInfo ();
 
         /// <summary>
@@ -444,6 +486,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>PureEngage</returns>
+        
         PureEngage GetIdentityprovidersPureengage ();
 
         /// <summary>
@@ -454,6 +497,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of PureEngage</returns>
+        
         ApiResponse<PureEngage> GetIdentityprovidersPureengageWithHttpInfo ();
 
         /// <summary>
@@ -464,6 +508,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Salesforce</returns>
+        
         Salesforce GetIdentityprovidersSalesforce ();
 
         /// <summary>
@@ -474,6 +519,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Salesforce</returns>
+        
         ApiResponse<Salesforce> GetIdentityprovidersSalesforceWithHttpInfo ();
 
         /// <summary>
@@ -485,6 +531,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>OAuthProvider</returns>
+        
         OAuthProvider PutIdentityprovidersAdfs (ADFS body);
 
         /// <summary>
@@ -496,6 +543,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>ApiResponse of OAuthProvider</returns>
+        
         ApiResponse<OAuthProvider> PutIdentityprovidersAdfsWithHttpInfo (ADFS body);
 
         /// <summary>
@@ -507,6 +555,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>OAuthProvider</returns>
+        
         OAuthProvider PutIdentityprovidersCic (CustomerInteractionCenter body);
 
         /// <summary>
@@ -518,6 +567,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>ApiResponse of OAuthProvider</returns>
+        
         ApiResponse<OAuthProvider> PutIdentityprovidersCicWithHttpInfo (CustomerInteractionCenter body);
 
         /// <summary>
@@ -529,6 +579,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>OAuthProvider</returns>
+        
         OAuthProvider PutIdentityprovidersGeneric (GenericSAML body);
 
         /// <summary>
@@ -540,6 +591,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>ApiResponse of OAuthProvider</returns>
+        
         ApiResponse<OAuthProvider> PutIdentityprovidersGenericWithHttpInfo (GenericSAML body);
 
         /// <summary>
@@ -551,6 +603,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>OAuthProvider</returns>
+        
         OAuthProvider PutIdentityprovidersGsuite (GSuite body);
 
         /// <summary>
@@ -562,6 +615,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>ApiResponse of OAuthProvider</returns>
+        
         ApiResponse<OAuthProvider> PutIdentityprovidersGsuiteWithHttpInfo (GSuite body);
 
         /// <summary>
@@ -573,6 +627,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>IdentityNow</returns>
+        
         IdentityNow PutIdentityprovidersIdentitynow (IdentityNow body);
 
         /// <summary>
@@ -584,6 +639,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>ApiResponse of IdentityNow</returns>
+        
         ApiResponse<IdentityNow> PutIdentityprovidersIdentitynowWithHttpInfo (IdentityNow body);
 
         /// <summary>
@@ -595,6 +651,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>OAuthProvider</returns>
+        
         OAuthProvider PutIdentityprovidersOkta (Okta body);
 
         /// <summary>
@@ -606,6 +663,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>ApiResponse of OAuthProvider</returns>
+        
         ApiResponse<OAuthProvider> PutIdentityprovidersOktaWithHttpInfo (Okta body);
 
         /// <summary>
@@ -617,6 +675,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>OAuthProvider</returns>
+        
         OAuthProvider PutIdentityprovidersOnelogin (OneLogin body);
 
         /// <summary>
@@ -628,6 +687,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>ApiResponse of OAuthProvider</returns>
+        
         ApiResponse<OAuthProvider> PutIdentityprovidersOneloginWithHttpInfo (OneLogin body);
 
         /// <summary>
@@ -639,6 +699,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>OAuthProvider</returns>
+        
         OAuthProvider PutIdentityprovidersPing (PingIdentity body);
 
         /// <summary>
@@ -650,6 +711,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>ApiResponse of OAuthProvider</returns>
+        
         ApiResponse<OAuthProvider> PutIdentityprovidersPingWithHttpInfo (PingIdentity body);
 
         /// <summary>
@@ -661,6 +723,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>OAuthProvider</returns>
+        
         OAuthProvider PutIdentityprovidersPurecloud (PureCloud body);
 
         /// <summary>
@@ -672,6 +735,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>ApiResponse of OAuthProvider</returns>
+        
         ApiResponse<OAuthProvider> PutIdentityprovidersPurecloudWithHttpInfo (PureCloud body);
 
         /// <summary>
@@ -683,6 +747,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>OAuthProvider</returns>
+        
         OAuthProvider PutIdentityprovidersPureengage (PureEngage body);
 
         /// <summary>
@@ -694,6 +759,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>ApiResponse of OAuthProvider</returns>
+        
         ApiResponse<OAuthProvider> PutIdentityprovidersPureengageWithHttpInfo (PureEngage body);
 
         /// <summary>
@@ -705,6 +771,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>OAuthProvider</returns>
+        
         OAuthProvider PutIdentityprovidersSalesforce (Salesforce body);
 
         /// <summary>
@@ -716,6 +783,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>ApiResponse of OAuthProvider</returns>
+        
         ApiResponse<OAuthProvider> PutIdentityprovidersSalesforceWithHttpInfo (Salesforce body);
 
         #endregion Synchronous Operations
@@ -730,6 +798,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Object</returns>
+        
         System.Threading.Tasks.Task<Object> DeleteIdentityprovidersAdfsAsync ();
 
         /// <summary>
@@ -740,6 +809,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityprovidersAdfsAsyncWithHttpInfo ();
 
         /// <summary>
@@ -750,6 +820,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Object</returns>
+        
         System.Threading.Tasks.Task<Object> DeleteIdentityprovidersCicAsync ();
 
         /// <summary>
@@ -760,6 +831,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityprovidersCicAsyncWithHttpInfo ();
 
         /// <summary>
@@ -770,6 +842,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Object</returns>
+        
         System.Threading.Tasks.Task<Object> DeleteIdentityprovidersGenericAsync ();
 
         /// <summary>
@@ -780,6 +853,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityprovidersGenericAsyncWithHttpInfo ();
 
         /// <summary>
@@ -790,6 +864,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Object</returns>
+        
         System.Threading.Tasks.Task<Object> DeleteIdentityprovidersGsuiteAsync ();
 
         /// <summary>
@@ -800,6 +875,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityprovidersGsuiteAsyncWithHttpInfo ();
 
         /// <summary>
@@ -810,6 +886,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Object</returns>
+        
         System.Threading.Tasks.Task<Object> DeleteIdentityprovidersIdentitynowAsync ();
 
         /// <summary>
@@ -820,6 +897,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityprovidersIdentitynowAsyncWithHttpInfo ();
 
         /// <summary>
@@ -830,6 +908,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Object</returns>
+        
         System.Threading.Tasks.Task<Object> DeleteIdentityprovidersOktaAsync ();
 
         /// <summary>
@@ -840,6 +919,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityprovidersOktaAsyncWithHttpInfo ();
 
         /// <summary>
@@ -850,6 +930,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Object</returns>
+        
         System.Threading.Tasks.Task<Object> DeleteIdentityprovidersOneloginAsync ();
 
         /// <summary>
@@ -860,6 +941,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityprovidersOneloginAsyncWithHttpInfo ();
 
         /// <summary>
@@ -870,6 +952,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Object</returns>
+        
         System.Threading.Tasks.Task<Object> DeleteIdentityprovidersPingAsync ();
 
         /// <summary>
@@ -880,6 +963,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityprovidersPingAsyncWithHttpInfo ();
 
         /// <summary>
@@ -890,6 +974,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Object</returns>
+        
         System.Threading.Tasks.Task<Object> DeleteIdentityprovidersPurecloudAsync ();
 
         /// <summary>
@@ -900,6 +985,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityprovidersPurecloudAsyncWithHttpInfo ();
 
         /// <summary>
@@ -910,6 +996,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Object</returns>
+        
         System.Threading.Tasks.Task<Object> DeleteIdentityprovidersPureengageAsync ();
 
         /// <summary>
@@ -920,6 +1007,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityprovidersPureengageAsyncWithHttpInfo ();
 
         /// <summary>
@@ -930,6 +1018,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Object</returns>
+        
         System.Threading.Tasks.Task<Object> DeleteIdentityprovidersSalesforceAsync ();
 
         /// <summary>
@@ -940,6 +1029,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityprovidersSalesforceAsyncWithHttpInfo ();
 
         /// <summary>
@@ -950,6 +1040,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of OAuthProviderEntityListing</returns>
+        
         System.Threading.Tasks.Task<OAuthProviderEntityListing> GetIdentityprovidersAsync ();
 
         /// <summary>
@@ -960,6 +1051,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (OAuthProviderEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<OAuthProviderEntityListing>> GetIdentityprovidersAsyncWithHttpInfo ();
 
         /// <summary>
@@ -970,6 +1062,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ADFS</returns>
+        
         System.Threading.Tasks.Task<ADFS> GetIdentityprovidersAdfsAsync ();
 
         /// <summary>
@@ -980,6 +1073,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ADFS)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<ADFS>> GetIdentityprovidersAdfsAsyncWithHttpInfo ();
 
         /// <summary>
@@ -990,6 +1084,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of CustomerInteractionCenter</returns>
+        
         System.Threading.Tasks.Task<CustomerInteractionCenter> GetIdentityprovidersCicAsync ();
 
         /// <summary>
@@ -1000,6 +1095,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (CustomerInteractionCenter)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<CustomerInteractionCenter>> GetIdentityprovidersCicAsyncWithHttpInfo ();
 
         /// <summary>
@@ -1010,6 +1106,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of GenericSAML</returns>
+        
         System.Threading.Tasks.Task<GenericSAML> GetIdentityprovidersGenericAsync ();
 
         /// <summary>
@@ -1020,6 +1117,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (GenericSAML)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<GenericSAML>> GetIdentityprovidersGenericAsyncWithHttpInfo ();
 
         /// <summary>
@@ -1030,6 +1128,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of GSuite</returns>
+        
         System.Threading.Tasks.Task<GSuite> GetIdentityprovidersGsuiteAsync ();
 
         /// <summary>
@@ -1040,6 +1139,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (GSuite)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<GSuite>> GetIdentityprovidersGsuiteAsyncWithHttpInfo ();
 
         /// <summary>
@@ -1050,6 +1150,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of IdentityNow</returns>
+        
         System.Threading.Tasks.Task<IdentityNow> GetIdentityprovidersIdentitynowAsync ();
 
         /// <summary>
@@ -1060,6 +1161,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (IdentityNow)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<IdentityNow>> GetIdentityprovidersIdentitynowAsyncWithHttpInfo ();
 
         /// <summary>
@@ -1070,6 +1172,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Okta</returns>
+        
         System.Threading.Tasks.Task<Okta> GetIdentityprovidersOktaAsync ();
 
         /// <summary>
@@ -1080,6 +1183,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Okta)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Okta>> GetIdentityprovidersOktaAsyncWithHttpInfo ();
 
         /// <summary>
@@ -1090,6 +1194,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of OneLogin</returns>
+        
         System.Threading.Tasks.Task<OneLogin> GetIdentityprovidersOneloginAsync ();
 
         /// <summary>
@@ -1100,6 +1205,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (OneLogin)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<OneLogin>> GetIdentityprovidersOneloginAsyncWithHttpInfo ();
 
         /// <summary>
@@ -1110,6 +1216,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of PingIdentity</returns>
+        
         System.Threading.Tasks.Task<PingIdentity> GetIdentityprovidersPingAsync ();
 
         /// <summary>
@@ -1120,6 +1227,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (PingIdentity)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<PingIdentity>> GetIdentityprovidersPingAsyncWithHttpInfo ();
 
         /// <summary>
@@ -1130,6 +1238,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of PureCloudPlatform.Client.V2.Model.PureCloud</returns>
+        
         System.Threading.Tasks.Task<PureCloudPlatform.Client.V2.Model.PureCloud> GetIdentityprovidersPurecloudAsync ();
 
         /// <summary>
@@ -1140,6 +1249,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (PureCloudPlatform.Client.V2.Model.PureCloud)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.PureCloud>> GetIdentityprovidersPurecloudAsyncWithHttpInfo ();
 
         /// <summary>
@@ -1150,6 +1260,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of PureEngage</returns>
+        
         System.Threading.Tasks.Task<PureEngage> GetIdentityprovidersPureengageAsync ();
 
         /// <summary>
@@ -1160,6 +1271,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (PureEngage)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<PureEngage>> GetIdentityprovidersPureengageAsyncWithHttpInfo ();
 
         /// <summary>
@@ -1170,6 +1282,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Salesforce</returns>
+        
         System.Threading.Tasks.Task<Salesforce> GetIdentityprovidersSalesforceAsync ();
 
         /// <summary>
@@ -1180,6 +1293,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Salesforce)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Salesforce>> GetIdentityprovidersSalesforceAsyncWithHttpInfo ();
 
         /// <summary>
@@ -1191,6 +1305,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of OAuthProvider</returns>
+        
         System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersAdfsAsync (ADFS body);
 
         /// <summary>
@@ -1202,6 +1317,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersAdfsAsyncWithHttpInfo (ADFS body);
 
         /// <summary>
@@ -1213,6 +1329,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of OAuthProvider</returns>
+        
         System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersCicAsync (CustomerInteractionCenter body);
 
         /// <summary>
@@ -1224,6 +1341,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersCicAsyncWithHttpInfo (CustomerInteractionCenter body);
 
         /// <summary>
@@ -1235,6 +1353,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of OAuthProvider</returns>
+        
         System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersGenericAsync (GenericSAML body);
 
         /// <summary>
@@ -1246,6 +1365,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersGenericAsyncWithHttpInfo (GenericSAML body);
 
         /// <summary>
@@ -1257,6 +1377,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of OAuthProvider</returns>
+        
         System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersGsuiteAsync (GSuite body);
 
         /// <summary>
@@ -1268,6 +1389,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersGsuiteAsyncWithHttpInfo (GSuite body);
 
         /// <summary>
@@ -1279,6 +1401,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of IdentityNow</returns>
+        
         System.Threading.Tasks.Task<IdentityNow> PutIdentityprovidersIdentitynowAsync (IdentityNow body);
 
         /// <summary>
@@ -1290,6 +1413,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse (IdentityNow)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<IdentityNow>> PutIdentityprovidersIdentitynowAsyncWithHttpInfo (IdentityNow body);
 
         /// <summary>
@@ -1301,6 +1425,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of OAuthProvider</returns>
+        
         System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersOktaAsync (Okta body);
 
         /// <summary>
@@ -1312,6 +1437,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersOktaAsyncWithHttpInfo (Okta body);
 
         /// <summary>
@@ -1323,6 +1449,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of OAuthProvider</returns>
+        
         System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersOneloginAsync (OneLogin body);
 
         /// <summary>
@@ -1334,6 +1461,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersOneloginAsyncWithHttpInfo (OneLogin body);
 
         /// <summary>
@@ -1345,6 +1473,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of OAuthProvider</returns>
+        
         System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersPingAsync (PingIdentity body);
 
         /// <summary>
@@ -1356,6 +1485,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersPingAsyncWithHttpInfo (PingIdentity body);
 
         /// <summary>
@@ -1367,6 +1497,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of OAuthProvider</returns>
+        
         System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersPurecloudAsync (PureCloud body);
 
         /// <summary>
@@ -1378,6 +1509,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersPurecloudAsyncWithHttpInfo (PureCloud body);
 
         /// <summary>
@@ -1389,6 +1521,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of OAuthProvider</returns>
+        
         System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersPureengageAsync (PureEngage body);
 
         /// <summary>
@@ -1400,6 +1533,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersPureengageAsyncWithHttpInfo (PureEngage body);
 
         /// <summary>
@@ -1411,6 +1545,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of OAuthProvider</returns>
+        
         System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersSalesforceAsync (Salesforce body);
 
         /// <summary>
@@ -1422,6 +1557,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersSalesforceAsyncWithHttpInfo (Salesforce body);
 
         #endregion Asynchronous Operations
@@ -1521,6 +1657,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Object</returns>
+        
         public Object DeleteIdentityprovidersAdfs ()
         {
              ApiResponse<Object> localVarResponse = DeleteIdentityprovidersAdfsWithHttpInfo();
@@ -1532,6 +1669,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object</returns>
+        
         public ApiResponse< Object > DeleteIdentityprovidersAdfsWithHttpInfo ()
         { 
 
@@ -1609,6 +1747,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Object</returns>
+        
         public async System.Threading.Tasks.Task<Object> DeleteIdentityprovidersAdfsAsync ()
         {
              ApiResponse<Object> localVarResponse = await DeleteIdentityprovidersAdfsAsyncWithHttpInfo();
@@ -1621,6 +1760,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityprovidersAdfsAsyncWithHttpInfo ()
         { 
 
@@ -1699,6 +1839,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Object</returns>
+        
         public Object DeleteIdentityprovidersCic ()
         {
              ApiResponse<Object> localVarResponse = DeleteIdentityprovidersCicWithHttpInfo();
@@ -1710,6 +1851,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object</returns>
+        
         public ApiResponse< Object > DeleteIdentityprovidersCicWithHttpInfo ()
         { 
 
@@ -1787,6 +1929,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Object</returns>
+        
         public async System.Threading.Tasks.Task<Object> DeleteIdentityprovidersCicAsync ()
         {
              ApiResponse<Object> localVarResponse = await DeleteIdentityprovidersCicAsyncWithHttpInfo();
@@ -1799,6 +1942,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityprovidersCicAsyncWithHttpInfo ()
         { 
 
@@ -1877,6 +2021,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Object</returns>
+        
         public Object DeleteIdentityprovidersGeneric ()
         {
              ApiResponse<Object> localVarResponse = DeleteIdentityprovidersGenericWithHttpInfo();
@@ -1888,6 +2033,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object</returns>
+        
         public ApiResponse< Object > DeleteIdentityprovidersGenericWithHttpInfo ()
         { 
 
@@ -1965,6 +2111,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Object</returns>
+        
         public async System.Threading.Tasks.Task<Object> DeleteIdentityprovidersGenericAsync ()
         {
              ApiResponse<Object> localVarResponse = await DeleteIdentityprovidersGenericAsyncWithHttpInfo();
@@ -1977,6 +2124,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityprovidersGenericAsyncWithHttpInfo ()
         { 
 
@@ -2055,6 +2203,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Object</returns>
+        
         public Object DeleteIdentityprovidersGsuite ()
         {
              ApiResponse<Object> localVarResponse = DeleteIdentityprovidersGsuiteWithHttpInfo();
@@ -2066,6 +2215,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object</returns>
+        
         public ApiResponse< Object > DeleteIdentityprovidersGsuiteWithHttpInfo ()
         { 
 
@@ -2143,6 +2293,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Object</returns>
+        
         public async System.Threading.Tasks.Task<Object> DeleteIdentityprovidersGsuiteAsync ()
         {
              ApiResponse<Object> localVarResponse = await DeleteIdentityprovidersGsuiteAsyncWithHttpInfo();
@@ -2155,6 +2306,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityprovidersGsuiteAsyncWithHttpInfo ()
         { 
 
@@ -2233,6 +2385,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Object</returns>
+        
         public Object DeleteIdentityprovidersIdentitynow ()
         {
              ApiResponse<Object> localVarResponse = DeleteIdentityprovidersIdentitynowWithHttpInfo();
@@ -2244,6 +2397,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object</returns>
+        
         public ApiResponse< Object > DeleteIdentityprovidersIdentitynowWithHttpInfo ()
         { 
 
@@ -2321,6 +2475,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Object</returns>
+        
         public async System.Threading.Tasks.Task<Object> DeleteIdentityprovidersIdentitynowAsync ()
         {
              ApiResponse<Object> localVarResponse = await DeleteIdentityprovidersIdentitynowAsyncWithHttpInfo();
@@ -2333,6 +2488,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityprovidersIdentitynowAsyncWithHttpInfo ()
         { 
 
@@ -2411,6 +2567,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Object</returns>
+        
         public Object DeleteIdentityprovidersOkta ()
         {
              ApiResponse<Object> localVarResponse = DeleteIdentityprovidersOktaWithHttpInfo();
@@ -2422,6 +2579,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object</returns>
+        
         public ApiResponse< Object > DeleteIdentityprovidersOktaWithHttpInfo ()
         { 
 
@@ -2499,6 +2657,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Object</returns>
+        
         public async System.Threading.Tasks.Task<Object> DeleteIdentityprovidersOktaAsync ()
         {
              ApiResponse<Object> localVarResponse = await DeleteIdentityprovidersOktaAsyncWithHttpInfo();
@@ -2511,6 +2670,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityprovidersOktaAsyncWithHttpInfo ()
         { 
 
@@ -2589,6 +2749,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Object</returns>
+        
         public Object DeleteIdentityprovidersOnelogin ()
         {
              ApiResponse<Object> localVarResponse = DeleteIdentityprovidersOneloginWithHttpInfo();
@@ -2600,6 +2761,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object</returns>
+        
         public ApiResponse< Object > DeleteIdentityprovidersOneloginWithHttpInfo ()
         { 
 
@@ -2677,6 +2839,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Object</returns>
+        
         public async System.Threading.Tasks.Task<Object> DeleteIdentityprovidersOneloginAsync ()
         {
              ApiResponse<Object> localVarResponse = await DeleteIdentityprovidersOneloginAsyncWithHttpInfo();
@@ -2689,6 +2852,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityprovidersOneloginAsyncWithHttpInfo ()
         { 
 
@@ -2767,6 +2931,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Object</returns>
+        
         public Object DeleteIdentityprovidersPing ()
         {
              ApiResponse<Object> localVarResponse = DeleteIdentityprovidersPingWithHttpInfo();
@@ -2778,6 +2943,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object</returns>
+        
         public ApiResponse< Object > DeleteIdentityprovidersPingWithHttpInfo ()
         { 
 
@@ -2855,6 +3021,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Object</returns>
+        
         public async System.Threading.Tasks.Task<Object> DeleteIdentityprovidersPingAsync ()
         {
              ApiResponse<Object> localVarResponse = await DeleteIdentityprovidersPingAsyncWithHttpInfo();
@@ -2867,6 +3034,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityprovidersPingAsyncWithHttpInfo ()
         { 
 
@@ -2945,6 +3113,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Object</returns>
+        
         public Object DeleteIdentityprovidersPurecloud ()
         {
              ApiResponse<Object> localVarResponse = DeleteIdentityprovidersPurecloudWithHttpInfo();
@@ -2956,6 +3125,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object</returns>
+        
         public ApiResponse< Object > DeleteIdentityprovidersPurecloudWithHttpInfo ()
         { 
 
@@ -3033,6 +3203,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Object</returns>
+        
         public async System.Threading.Tasks.Task<Object> DeleteIdentityprovidersPurecloudAsync ()
         {
              ApiResponse<Object> localVarResponse = await DeleteIdentityprovidersPurecloudAsyncWithHttpInfo();
@@ -3045,6 +3216,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityprovidersPurecloudAsyncWithHttpInfo ()
         { 
 
@@ -3123,6 +3295,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Object</returns>
+        
         public Object DeleteIdentityprovidersPureengage ()
         {
              ApiResponse<Object> localVarResponse = DeleteIdentityprovidersPureengageWithHttpInfo();
@@ -3134,6 +3307,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object</returns>
+        
         public ApiResponse< Object > DeleteIdentityprovidersPureengageWithHttpInfo ()
         { 
 
@@ -3211,6 +3385,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Object</returns>
+        
         public async System.Threading.Tasks.Task<Object> DeleteIdentityprovidersPureengageAsync ()
         {
              ApiResponse<Object> localVarResponse = await DeleteIdentityprovidersPureengageAsyncWithHttpInfo();
@@ -3223,6 +3398,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityprovidersPureengageAsyncWithHttpInfo ()
         { 
 
@@ -3301,6 +3477,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Object</returns>
+        
         public Object DeleteIdentityprovidersSalesforce ()
         {
              ApiResponse<Object> localVarResponse = DeleteIdentityprovidersSalesforceWithHttpInfo();
@@ -3312,6 +3489,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object</returns>
+        
         public ApiResponse< Object > DeleteIdentityprovidersSalesforceWithHttpInfo ()
         { 
 
@@ -3389,6 +3567,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Object</returns>
+        
         public async System.Threading.Tasks.Task<Object> DeleteIdentityprovidersSalesforceAsync ()
         {
              ApiResponse<Object> localVarResponse = await DeleteIdentityprovidersSalesforceAsyncWithHttpInfo();
@@ -3401,6 +3580,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Object)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityprovidersSalesforceAsyncWithHttpInfo ()
         { 
 
@@ -3479,6 +3659,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>OAuthProviderEntityListing</returns>
+        
         public OAuthProviderEntityListing GetIdentityproviders ()
         {
              ApiResponse<OAuthProviderEntityListing> localVarResponse = GetIdentityprovidersWithHttpInfo();
@@ -3490,6 +3671,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of OAuthProviderEntityListing</returns>
+        
         public ApiResponse< OAuthProviderEntityListing > GetIdentityprovidersWithHttpInfo ()
         { 
 
@@ -3567,6 +3749,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of OAuthProviderEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<OAuthProviderEntityListing> GetIdentityprovidersAsync ()
         {
              ApiResponse<OAuthProviderEntityListing> localVarResponse = await GetIdentityprovidersAsyncWithHttpInfo();
@@ -3579,6 +3762,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (OAuthProviderEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<OAuthProviderEntityListing>> GetIdentityprovidersAsyncWithHttpInfo ()
         { 
 
@@ -3657,6 +3841,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ADFS</returns>
+        
         public ADFS GetIdentityprovidersAdfs ()
         {
              ApiResponse<ADFS> localVarResponse = GetIdentityprovidersAdfsWithHttpInfo();
@@ -3668,6 +3853,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ADFS</returns>
+        
         public ApiResponse< ADFS > GetIdentityprovidersAdfsWithHttpInfo ()
         { 
 
@@ -3745,6 +3931,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ADFS</returns>
+        
         public async System.Threading.Tasks.Task<ADFS> GetIdentityprovidersAdfsAsync ()
         {
              ApiResponse<ADFS> localVarResponse = await GetIdentityprovidersAdfsAsyncWithHttpInfo();
@@ -3757,6 +3944,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ADFS)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<ADFS>> GetIdentityprovidersAdfsAsyncWithHttpInfo ()
         { 
 
@@ -3835,6 +4023,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>CustomerInteractionCenter</returns>
+        
         public CustomerInteractionCenter GetIdentityprovidersCic ()
         {
              ApiResponse<CustomerInteractionCenter> localVarResponse = GetIdentityprovidersCicWithHttpInfo();
@@ -3846,6 +4035,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of CustomerInteractionCenter</returns>
+        
         public ApiResponse< CustomerInteractionCenter > GetIdentityprovidersCicWithHttpInfo ()
         { 
 
@@ -3923,6 +4113,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of CustomerInteractionCenter</returns>
+        
         public async System.Threading.Tasks.Task<CustomerInteractionCenter> GetIdentityprovidersCicAsync ()
         {
              ApiResponse<CustomerInteractionCenter> localVarResponse = await GetIdentityprovidersCicAsyncWithHttpInfo();
@@ -3935,6 +4126,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (CustomerInteractionCenter)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<CustomerInteractionCenter>> GetIdentityprovidersCicAsyncWithHttpInfo ()
         { 
 
@@ -4013,6 +4205,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>GenericSAML</returns>
+        
         public GenericSAML GetIdentityprovidersGeneric ()
         {
              ApiResponse<GenericSAML> localVarResponse = GetIdentityprovidersGenericWithHttpInfo();
@@ -4024,6 +4217,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of GenericSAML</returns>
+        
         public ApiResponse< GenericSAML > GetIdentityprovidersGenericWithHttpInfo ()
         { 
 
@@ -4101,6 +4295,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of GenericSAML</returns>
+        
         public async System.Threading.Tasks.Task<GenericSAML> GetIdentityprovidersGenericAsync ()
         {
              ApiResponse<GenericSAML> localVarResponse = await GetIdentityprovidersGenericAsyncWithHttpInfo();
@@ -4113,6 +4308,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (GenericSAML)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<GenericSAML>> GetIdentityprovidersGenericAsyncWithHttpInfo ()
         { 
 
@@ -4191,6 +4387,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>GSuite</returns>
+        
         public GSuite GetIdentityprovidersGsuite ()
         {
              ApiResponse<GSuite> localVarResponse = GetIdentityprovidersGsuiteWithHttpInfo();
@@ -4202,6 +4399,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of GSuite</returns>
+        
         public ApiResponse< GSuite > GetIdentityprovidersGsuiteWithHttpInfo ()
         { 
 
@@ -4279,6 +4477,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of GSuite</returns>
+        
         public async System.Threading.Tasks.Task<GSuite> GetIdentityprovidersGsuiteAsync ()
         {
              ApiResponse<GSuite> localVarResponse = await GetIdentityprovidersGsuiteAsyncWithHttpInfo();
@@ -4291,6 +4490,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (GSuite)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<GSuite>> GetIdentityprovidersGsuiteAsyncWithHttpInfo ()
         { 
 
@@ -4369,6 +4569,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>IdentityNow</returns>
+        
         public IdentityNow GetIdentityprovidersIdentitynow ()
         {
              ApiResponse<IdentityNow> localVarResponse = GetIdentityprovidersIdentitynowWithHttpInfo();
@@ -4380,6 +4581,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of IdentityNow</returns>
+        
         public ApiResponse< IdentityNow > GetIdentityprovidersIdentitynowWithHttpInfo ()
         { 
 
@@ -4457,6 +4659,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of IdentityNow</returns>
+        
         public async System.Threading.Tasks.Task<IdentityNow> GetIdentityprovidersIdentitynowAsync ()
         {
              ApiResponse<IdentityNow> localVarResponse = await GetIdentityprovidersIdentitynowAsyncWithHttpInfo();
@@ -4469,6 +4672,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (IdentityNow)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<IdentityNow>> GetIdentityprovidersIdentitynowAsyncWithHttpInfo ()
         { 
 
@@ -4547,6 +4751,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Okta</returns>
+        
         public Okta GetIdentityprovidersOkta ()
         {
              ApiResponse<Okta> localVarResponse = GetIdentityprovidersOktaWithHttpInfo();
@@ -4558,6 +4763,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Okta</returns>
+        
         public ApiResponse< Okta > GetIdentityprovidersOktaWithHttpInfo ()
         { 
 
@@ -4635,6 +4841,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Okta</returns>
+        
         public async System.Threading.Tasks.Task<Okta> GetIdentityprovidersOktaAsync ()
         {
              ApiResponse<Okta> localVarResponse = await GetIdentityprovidersOktaAsyncWithHttpInfo();
@@ -4647,6 +4854,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Okta)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Okta>> GetIdentityprovidersOktaAsyncWithHttpInfo ()
         { 
 
@@ -4725,6 +4933,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>OneLogin</returns>
+        
         public OneLogin GetIdentityprovidersOnelogin ()
         {
              ApiResponse<OneLogin> localVarResponse = GetIdentityprovidersOneloginWithHttpInfo();
@@ -4736,6 +4945,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of OneLogin</returns>
+        
         public ApiResponse< OneLogin > GetIdentityprovidersOneloginWithHttpInfo ()
         { 
 
@@ -4813,6 +5023,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of OneLogin</returns>
+        
         public async System.Threading.Tasks.Task<OneLogin> GetIdentityprovidersOneloginAsync ()
         {
              ApiResponse<OneLogin> localVarResponse = await GetIdentityprovidersOneloginAsyncWithHttpInfo();
@@ -4825,6 +5036,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (OneLogin)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<OneLogin>> GetIdentityprovidersOneloginAsyncWithHttpInfo ()
         { 
 
@@ -4903,6 +5115,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>PingIdentity</returns>
+        
         public PingIdentity GetIdentityprovidersPing ()
         {
              ApiResponse<PingIdentity> localVarResponse = GetIdentityprovidersPingWithHttpInfo();
@@ -4914,6 +5127,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of PingIdentity</returns>
+        
         public ApiResponse< PingIdentity > GetIdentityprovidersPingWithHttpInfo ()
         { 
 
@@ -4991,6 +5205,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of PingIdentity</returns>
+        
         public async System.Threading.Tasks.Task<PingIdentity> GetIdentityprovidersPingAsync ()
         {
              ApiResponse<PingIdentity> localVarResponse = await GetIdentityprovidersPingAsyncWithHttpInfo();
@@ -5003,6 +5218,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (PingIdentity)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<PingIdentity>> GetIdentityprovidersPingAsyncWithHttpInfo ()
         { 
 
@@ -5081,6 +5297,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>PureCloudPlatform.Client.V2.Model.PureCloud</returns>
+        
         public PureCloudPlatform.Client.V2.Model.PureCloud GetIdentityprovidersPurecloud ()
         {
              ApiResponse<PureCloudPlatform.Client.V2.Model.PureCloud> localVarResponse = GetIdentityprovidersPurecloudWithHttpInfo();
@@ -5092,6 +5309,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of PureCloudPlatform.Client.V2.Model.PureCloud</returns>
+        
         public ApiResponse< PureCloudPlatform.Client.V2.Model.PureCloud > GetIdentityprovidersPurecloudWithHttpInfo ()
         { 
 
@@ -5169,6 +5387,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of PureCloudPlatform.Client.V2.Model.PureCloud</returns>
+        
         public async System.Threading.Tasks.Task<PureCloudPlatform.Client.V2.Model.PureCloud> GetIdentityprovidersPurecloudAsync ()
         {
              ApiResponse<PureCloudPlatform.Client.V2.Model.PureCloud> localVarResponse = await GetIdentityprovidersPurecloudAsyncWithHttpInfo();
@@ -5181,6 +5400,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (PureCloudPlatform.Client.V2.Model.PureCloud)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.PureCloud>> GetIdentityprovidersPurecloudAsyncWithHttpInfo ()
         { 
 
@@ -5259,6 +5479,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>PureEngage</returns>
+        
         public PureEngage GetIdentityprovidersPureengage ()
         {
              ApiResponse<PureEngage> localVarResponse = GetIdentityprovidersPureengageWithHttpInfo();
@@ -5270,6 +5491,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of PureEngage</returns>
+        
         public ApiResponse< PureEngage > GetIdentityprovidersPureengageWithHttpInfo ()
         { 
 
@@ -5347,6 +5569,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of PureEngage</returns>
+        
         public async System.Threading.Tasks.Task<PureEngage> GetIdentityprovidersPureengageAsync ()
         {
              ApiResponse<PureEngage> localVarResponse = await GetIdentityprovidersPureengageAsyncWithHttpInfo();
@@ -5359,6 +5582,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (PureEngage)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<PureEngage>> GetIdentityprovidersPureengageAsyncWithHttpInfo ()
         { 
 
@@ -5437,6 +5661,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Salesforce</returns>
+        
         public Salesforce GetIdentityprovidersSalesforce ()
         {
              ApiResponse<Salesforce> localVarResponse = GetIdentityprovidersSalesforceWithHttpInfo();
@@ -5448,6 +5673,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Salesforce</returns>
+        
         public ApiResponse< Salesforce > GetIdentityprovidersSalesforceWithHttpInfo ()
         { 
 
@@ -5525,6 +5751,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Salesforce</returns>
+        
         public async System.Threading.Tasks.Task<Salesforce> GetIdentityprovidersSalesforceAsync ()
         {
              ApiResponse<Salesforce> localVarResponse = await GetIdentityprovidersSalesforceAsyncWithHttpInfo();
@@ -5537,6 +5764,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Salesforce)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Salesforce>> GetIdentityprovidersSalesforceAsyncWithHttpInfo ()
         { 
 
@@ -5616,6 +5844,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>OAuthProvider</returns>
+        
         public OAuthProvider PutIdentityprovidersAdfs (ADFS body)
         {
              ApiResponse<OAuthProvider> localVarResponse = PutIdentityprovidersAdfsWithHttpInfo(body);
@@ -5628,6 +5857,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>ApiResponse of OAuthProvider</returns>
+        
         public ApiResponse< OAuthProvider > PutIdentityprovidersAdfsWithHttpInfo (ADFS body)
         { 
             // verify the required parameter 'body' is set
@@ -5715,6 +5945,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of OAuthProvider</returns>
+        
         public async System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersAdfsAsync (ADFS body)
         {
              ApiResponse<OAuthProvider> localVarResponse = await PutIdentityprovidersAdfsAsyncWithHttpInfo(body);
@@ -5728,6 +5959,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersAdfsAsyncWithHttpInfo (ADFS body)
         { 
             // verify the required parameter 'body' is set
@@ -5817,6 +6049,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>OAuthProvider</returns>
+        
         public OAuthProvider PutIdentityprovidersCic (CustomerInteractionCenter body)
         {
              ApiResponse<OAuthProvider> localVarResponse = PutIdentityprovidersCicWithHttpInfo(body);
@@ -5829,6 +6062,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>ApiResponse of OAuthProvider</returns>
+        
         public ApiResponse< OAuthProvider > PutIdentityprovidersCicWithHttpInfo (CustomerInteractionCenter body)
         { 
             // verify the required parameter 'body' is set
@@ -5916,6 +6150,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of OAuthProvider</returns>
+        
         public async System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersCicAsync (CustomerInteractionCenter body)
         {
              ApiResponse<OAuthProvider> localVarResponse = await PutIdentityprovidersCicAsyncWithHttpInfo(body);
@@ -5929,6 +6164,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersCicAsyncWithHttpInfo (CustomerInteractionCenter body)
         { 
             // verify the required parameter 'body' is set
@@ -6018,6 +6254,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>OAuthProvider</returns>
+        
         public OAuthProvider PutIdentityprovidersGeneric (GenericSAML body)
         {
              ApiResponse<OAuthProvider> localVarResponse = PutIdentityprovidersGenericWithHttpInfo(body);
@@ -6030,6 +6267,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>ApiResponse of OAuthProvider</returns>
+        
         public ApiResponse< OAuthProvider > PutIdentityprovidersGenericWithHttpInfo (GenericSAML body)
         { 
             // verify the required parameter 'body' is set
@@ -6117,6 +6355,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of OAuthProvider</returns>
+        
         public async System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersGenericAsync (GenericSAML body)
         {
              ApiResponse<OAuthProvider> localVarResponse = await PutIdentityprovidersGenericAsyncWithHttpInfo(body);
@@ -6130,6 +6369,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersGenericAsyncWithHttpInfo (GenericSAML body)
         { 
             // verify the required parameter 'body' is set
@@ -6219,6 +6459,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>OAuthProvider</returns>
+        
         public OAuthProvider PutIdentityprovidersGsuite (GSuite body)
         {
              ApiResponse<OAuthProvider> localVarResponse = PutIdentityprovidersGsuiteWithHttpInfo(body);
@@ -6231,6 +6472,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>ApiResponse of OAuthProvider</returns>
+        
         public ApiResponse< OAuthProvider > PutIdentityprovidersGsuiteWithHttpInfo (GSuite body)
         { 
             // verify the required parameter 'body' is set
@@ -6318,6 +6560,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of OAuthProvider</returns>
+        
         public async System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersGsuiteAsync (GSuite body)
         {
              ApiResponse<OAuthProvider> localVarResponse = await PutIdentityprovidersGsuiteAsyncWithHttpInfo(body);
@@ -6331,6 +6574,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersGsuiteAsyncWithHttpInfo (GSuite body)
         { 
             // verify the required parameter 'body' is set
@@ -6420,6 +6664,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>IdentityNow</returns>
+        
         public IdentityNow PutIdentityprovidersIdentitynow (IdentityNow body)
         {
              ApiResponse<IdentityNow> localVarResponse = PutIdentityprovidersIdentitynowWithHttpInfo(body);
@@ -6432,6 +6677,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>ApiResponse of IdentityNow</returns>
+        
         public ApiResponse< IdentityNow > PutIdentityprovidersIdentitynowWithHttpInfo (IdentityNow body)
         { 
             // verify the required parameter 'body' is set
@@ -6519,6 +6765,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of IdentityNow</returns>
+        
         public async System.Threading.Tasks.Task<IdentityNow> PutIdentityprovidersIdentitynowAsync (IdentityNow body)
         {
              ApiResponse<IdentityNow> localVarResponse = await PutIdentityprovidersIdentitynowAsyncWithHttpInfo(body);
@@ -6532,6 +6779,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse (IdentityNow)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<IdentityNow>> PutIdentityprovidersIdentitynowAsyncWithHttpInfo (IdentityNow body)
         { 
             // verify the required parameter 'body' is set
@@ -6621,6 +6869,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>OAuthProvider</returns>
+        
         public OAuthProvider PutIdentityprovidersOkta (Okta body)
         {
              ApiResponse<OAuthProvider> localVarResponse = PutIdentityprovidersOktaWithHttpInfo(body);
@@ -6633,6 +6882,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>ApiResponse of OAuthProvider</returns>
+        
         public ApiResponse< OAuthProvider > PutIdentityprovidersOktaWithHttpInfo (Okta body)
         { 
             // verify the required parameter 'body' is set
@@ -6720,6 +6970,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of OAuthProvider</returns>
+        
         public async System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersOktaAsync (Okta body)
         {
              ApiResponse<OAuthProvider> localVarResponse = await PutIdentityprovidersOktaAsyncWithHttpInfo(body);
@@ -6733,6 +6984,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersOktaAsyncWithHttpInfo (Okta body)
         { 
             // verify the required parameter 'body' is set
@@ -6822,6 +7074,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>OAuthProvider</returns>
+        
         public OAuthProvider PutIdentityprovidersOnelogin (OneLogin body)
         {
              ApiResponse<OAuthProvider> localVarResponse = PutIdentityprovidersOneloginWithHttpInfo(body);
@@ -6834,6 +7087,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>ApiResponse of OAuthProvider</returns>
+        
         public ApiResponse< OAuthProvider > PutIdentityprovidersOneloginWithHttpInfo (OneLogin body)
         { 
             // verify the required parameter 'body' is set
@@ -6921,6 +7175,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of OAuthProvider</returns>
+        
         public async System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersOneloginAsync (OneLogin body)
         {
              ApiResponse<OAuthProvider> localVarResponse = await PutIdentityprovidersOneloginAsyncWithHttpInfo(body);
@@ -6934,6 +7189,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersOneloginAsyncWithHttpInfo (OneLogin body)
         { 
             // verify the required parameter 'body' is set
@@ -7023,6 +7279,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>OAuthProvider</returns>
+        
         public OAuthProvider PutIdentityprovidersPing (PingIdentity body)
         {
              ApiResponse<OAuthProvider> localVarResponse = PutIdentityprovidersPingWithHttpInfo(body);
@@ -7035,6 +7292,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>ApiResponse of OAuthProvider</returns>
+        
         public ApiResponse< OAuthProvider > PutIdentityprovidersPingWithHttpInfo (PingIdentity body)
         { 
             // verify the required parameter 'body' is set
@@ -7122,6 +7380,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of OAuthProvider</returns>
+        
         public async System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersPingAsync (PingIdentity body)
         {
              ApiResponse<OAuthProvider> localVarResponse = await PutIdentityprovidersPingAsyncWithHttpInfo(body);
@@ -7135,6 +7394,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersPingAsyncWithHttpInfo (PingIdentity body)
         { 
             // verify the required parameter 'body' is set
@@ -7224,6 +7484,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>OAuthProvider</returns>
+        
         public OAuthProvider PutIdentityprovidersPurecloud (PureCloud body)
         {
              ApiResponse<OAuthProvider> localVarResponse = PutIdentityprovidersPurecloudWithHttpInfo(body);
@@ -7236,6 +7497,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>ApiResponse of OAuthProvider</returns>
+        
         public ApiResponse< OAuthProvider > PutIdentityprovidersPurecloudWithHttpInfo (PureCloud body)
         { 
             // verify the required parameter 'body' is set
@@ -7323,6 +7585,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of OAuthProvider</returns>
+        
         public async System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersPurecloudAsync (PureCloud body)
         {
              ApiResponse<OAuthProvider> localVarResponse = await PutIdentityprovidersPurecloudAsyncWithHttpInfo(body);
@@ -7336,6 +7599,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersPurecloudAsyncWithHttpInfo (PureCloud body)
         { 
             // verify the required parameter 'body' is set
@@ -7425,6 +7689,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>OAuthProvider</returns>
+        
         public OAuthProvider PutIdentityprovidersPureengage (PureEngage body)
         {
              ApiResponse<OAuthProvider> localVarResponse = PutIdentityprovidersPureengageWithHttpInfo(body);
@@ -7437,6 +7702,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>ApiResponse of OAuthProvider</returns>
+        
         public ApiResponse< OAuthProvider > PutIdentityprovidersPureengageWithHttpInfo (PureEngage body)
         { 
             // verify the required parameter 'body' is set
@@ -7524,6 +7790,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of OAuthProvider</returns>
+        
         public async System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersPureengageAsync (PureEngage body)
         {
              ApiResponse<OAuthProvider> localVarResponse = await PutIdentityprovidersPureengageAsyncWithHttpInfo(body);
@@ -7537,6 +7804,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersPureengageAsyncWithHttpInfo (PureEngage body)
         { 
             // verify the required parameter 'body' is set
@@ -7626,6 +7894,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>OAuthProvider</returns>
+        
         public OAuthProvider PutIdentityprovidersSalesforce (Salesforce body)
         {
              ApiResponse<OAuthProvider> localVarResponse = PutIdentityprovidersSalesforceWithHttpInfo(body);
@@ -7638,6 +7907,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>ApiResponse of OAuthProvider</returns>
+        
         public ApiResponse< OAuthProvider > PutIdentityprovidersSalesforceWithHttpInfo (Salesforce body)
         { 
             // verify the required parameter 'body' is set
@@ -7725,6 +7995,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of OAuthProvider</returns>
+        
         public async System.Threading.Tasks.Task<OAuthProvider> PutIdentityprovidersSalesforceAsync (Salesforce body)
         {
              ApiResponse<OAuthProvider> localVarResponse = await PutIdentityprovidersSalesforceAsyncWithHttpInfo(body);
@@ -7738,6 +8009,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse (OAuthProvider)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> PutIdentityprovidersSalesforceAsyncWithHttpInfo (Salesforce body)
         { 
             // verify the required parameter 'body' is set

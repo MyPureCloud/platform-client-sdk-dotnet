@@ -49,7 +49,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Both for "BOTH"
             /// </summary>
             [EnumMember(Value = "BOTH")]
-            Both
+            Both,
+            
+            /// <summary>
+            /// Enum Conference for "CONFERENCE"
+            /// </summary>
+            [EnumMember(Value = "CONFERENCE")]
+            Conference
         }
         /// <summary>
         /// Determines to whom the initiating participant is speaking.

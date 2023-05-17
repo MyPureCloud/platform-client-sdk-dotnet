@@ -13,16 +13,16 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// WemCoachingAppointmentTopicCoachingAppointmentExternalLink
+    /// WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate
     /// </summary>
     [DataContract]
-    public partial class WemCoachingAppointmentTopicCoachingAppointmentExternalLink :  IEquatable<WemCoachingAppointmentTopicCoachingAppointmentExternalLink>
+    public partial class WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate :  IEquatable<WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate>
     {
         /// <summary>
-        /// Gets or Sets Action
+        /// Gets or Sets Type
         /// </summary>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
-        public enum ActionEnum
+        public enum TypeEnum
         {
             /// <summary>
             /// Your SDK version is out of date and an unknown enum value was encountered. 
@@ -33,49 +33,49 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Add for "Add"
+            /// Enum Added for "Added"
             /// </summary>
-            [EnumMember(Value = "Add")]
-            Add,
+            [EnumMember(Value = "Added")]
+            Added,
             
             /// <summary>
-            /// Enum Remove for "Remove"
+            /// Enum Edited for "Edited"
             /// </summary>
-            [EnumMember(Value = "Remove")]
-            Remove,
+            [EnumMember(Value = "Edited")]
+            Edited,
             
             /// <summary>
-            /// Enum None for "None"
+            /// Enum Deleted for "Deleted"
             /// </summary>
-            [EnumMember(Value = "None")]
-            None
+            [EnumMember(Value = "Deleted")]
+            Deleted
         }
         /// <summary>
-        /// Gets or Sets Action
+        /// Gets or Sets Type
         /// </summary>
-        [DataMember(Name="action", EmitDefaultValue=false)]
-        public ActionEnum? Action { get; set; }
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="WemCoachingAppointmentTopicCoachingAppointmentExternalLink" /> class.
+        /// Initializes a new instance of the <see cref="WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate" /> class.
         /// </summary>
-        /// <param name="ExternalLink">ExternalLink.</param>
-        /// <param name="Action">Action.</param>
-        public WemCoachingAppointmentTopicCoachingAppointmentExternalLink(string ExternalLink = null, ActionEnum? Action = null)
+        /// <param name="Type">Type.</param>
+        /// <param name="ShiftStartDates">ShiftStartDates.</param>
+        public WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate(TypeEnum? Type = null, List<DateTime?> ShiftStartDates = null)
         {
-            this.ExternalLink = ExternalLink;
-            this.Action = Action;
+            this.Type = Type;
+            this.ShiftStartDates = ShiftStartDates;
             
         }
         
 
 
+
+
         /// <summary>
-        /// Gets or Sets ExternalLink
+        /// Gets or Sets ShiftStartDates
         /// </summary>
-        [DataMember(Name="externalLink", EmitDefaultValue=false)]
-        public string ExternalLink { get; set; }
-
-
+        [DataMember(Name="shiftStartDates", EmitDefaultValue=false)]
+        public List<DateTime?> ShiftStartDates { get; set; }
 
 
         /// <summary>
@@ -85,10 +85,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class WemCoachingAppointmentTopicCoachingAppointmentExternalLink {\n");
+            sb.Append("class WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate {\n");
 
-            sb.Append("  ExternalLink: ").Append(ExternalLink).Append("\n");
-            sb.Append("  Action: ").Append(Action).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  ShiftStartDates: ").Append(ShiftStartDates).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -114,15 +114,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as WemCoachingAppointmentTopicCoachingAppointmentExternalLink);
+            return this.Equals(obj as WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate);
         }
 
         /// <summary>
-        /// Returns true if WemCoachingAppointmentTopicCoachingAppointmentExternalLink instances are equal
+        /// Returns true if WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate instances are equal
         /// </summary>
-        /// <param name="other">Instance of WemCoachingAppointmentTopicCoachingAppointmentExternalLink to be compared</param>
+        /// <param name="other">Instance of WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(WemCoachingAppointmentTopicCoachingAppointmentExternalLink other)
+        public bool Equals(WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -130,14 +130,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.ExternalLink == other.ExternalLink ||
-                    this.ExternalLink != null &&
-                    this.ExternalLink.Equals(other.ExternalLink)
+                    this.Type == other.Type ||
+                    this.Type != null &&
+                    this.Type.Equals(other.Type)
                 ) &&
                 (
-                    this.Action == other.Action ||
-                    this.Action != null &&
-                    this.Action.Equals(other.Action)
+                    this.ShiftStartDates == other.ShiftStartDates ||
+                    this.ShiftStartDates != null &&
+                    this.ShiftStartDates.SequenceEqual(other.ShiftStartDates)
                 );
         }
 
@@ -152,11 +152,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.ExternalLink != null)
-                    hash = hash * 59 + this.ExternalLink.GetHashCode();
+                if (this.Type != null)
+                    hash = hash * 59 + this.Type.GetHashCode();
 
-                if (this.Action != null)
-                    hash = hash * 59 + this.Action.GetHashCode();
+                if (this.ShiftStartDates != null)
+                    hash = hash * 59 + this.ShiftStartDates.GetHashCode();
 
                 return hash;
             }

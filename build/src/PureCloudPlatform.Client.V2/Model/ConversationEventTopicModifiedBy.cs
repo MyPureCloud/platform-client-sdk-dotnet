@@ -13,69 +13,40 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// WemCoachingAppointmentTopicCoachingAppointmentConversation
+    /// Fields identifying the entity that updated the command.
     /// </summary>
     [DataContract]
-    public partial class WemCoachingAppointmentTopicCoachingAppointmentConversation :  IEquatable<WemCoachingAppointmentTopicCoachingAppointmentConversation>
+    public partial class ConversationEventTopicModifiedBy :  IEquatable<ConversationEventTopicModifiedBy>
     {
         /// <summary>
-        /// Gets or Sets Action
+        /// Initializes a new instance of the <see cref="ConversationEventTopicModifiedBy" /> class.
         /// </summary>
-        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
-        public enum ActionEnum
-        {
-            /// <summary>
-            /// Your SDK version is out of date and an unknown enum value was encountered. 
-            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
-            /// in the Package Manager Console
-            /// </summary>
-            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
-            OutdatedSdkVersion,
-            
-            /// <summary>
-            /// Enum Add for "Add"
-            /// </summary>
-            [EnumMember(Value = "Add")]
-            Add,
-            
-            /// <summary>
-            /// Enum Remove for "Remove"
-            /// </summary>
-            [EnumMember(Value = "Remove")]
-            Remove,
-            
-            /// <summary>
-            /// Enum None for "None"
-            /// </summary>
-            [EnumMember(Value = "None")]
-            None
-        }
-        /// <summary>
-        /// Gets or Sets Action
-        /// </summary>
-        [DataMember(Name="action", EmitDefaultValue=false)]
-        public ActionEnum? Action { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WemCoachingAppointmentTopicCoachingAppointmentConversation" /> class.
-        /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Action">Action.</param>
-        public WemCoachingAppointmentTopicCoachingAppointmentConversation(string Id = null, ActionEnum? Action = null)
+        /// <param name="Id">The id of the user if the updater is an internal user..</param>
+        /// <param name="SelfUri">The URI for the user if the updater is an internal user..</param>
+        public ConversationEventTopicModifiedBy(string Id = null, string SelfUri = null)
         {
             this.Id = Id;
-            this.Action = Action;
+            this.SelfUri = SelfUri;
             
         }
         
 
 
         /// <summary>
-        /// Gets or Sets Id
+        /// The id of the user if the updater is an internal user.
         /// </summary>
+        /// <value>The id of the user if the updater is an internal user.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
 
 
+
+        /// <summary>
+        /// The URI for the user if the updater is an internal user.
+        /// </summary>
+        /// <value>The URI for the user if the updater is an internal user.</value>
+        [DataMember(Name="selfUri", EmitDefaultValue=false)]
+        public string SelfUri { get; set; }
 
 
         /// <summary>
@@ -85,10 +56,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class WemCoachingAppointmentTopicCoachingAppointmentConversation {\n");
+            sb.Append("class ConversationEventTopicModifiedBy {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Action: ").Append(Action).Append("\n");
+            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -114,15 +85,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as WemCoachingAppointmentTopicCoachingAppointmentConversation);
+            return this.Equals(obj as ConversationEventTopicModifiedBy);
         }
 
         /// <summary>
-        /// Returns true if WemCoachingAppointmentTopicCoachingAppointmentConversation instances are equal
+        /// Returns true if ConversationEventTopicModifiedBy instances are equal
         /// </summary>
-        /// <param name="other">Instance of WemCoachingAppointmentTopicCoachingAppointmentConversation to be compared</param>
+        /// <param name="other">Instance of ConversationEventTopicModifiedBy to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(WemCoachingAppointmentTopicCoachingAppointmentConversation other)
+        public bool Equals(ConversationEventTopicModifiedBy other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -135,9 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
-                    this.Action == other.Action ||
-                    this.Action != null &&
-                    this.Action.Equals(other.Action)
+                    this.SelfUri == other.SelfUri ||
+                    this.SelfUri != null &&
+                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -155,8 +126,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
 
-                if (this.Action != null)
-                    hash = hash * 59 + this.Action.GetHashCode();
+                if (this.SelfUri != null)
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
 
                 return hash;
             }

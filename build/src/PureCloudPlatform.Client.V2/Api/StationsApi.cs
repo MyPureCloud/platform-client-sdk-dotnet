@@ -25,6 +25,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
         /// <returns></returns>
+        
         void DeleteStationAssociateduser (string stationId);
 
         /// <summary>
@@ -36,6 +37,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         ApiResponse<Object> DeleteStationAssociateduserWithHttpInfo (string stationId);
 
         /// <summary>
@@ -47,6 +49,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
         /// <returns>Station</returns>
+        
         Station GetStation (string stationId);
 
         /// <summary>
@@ -58,6 +61,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
         /// <returns>ApiResponse of Station</returns>
+        
         ApiResponse<Station> GetStationWithHttpInfo (string stationId);
 
         /// <summary>
@@ -76,6 +80,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Comma separated list of stationIds (optional)</param>
         /// <param name="lineAppearanceId">lineAppearanceId (optional)</param>
         /// <returns>StationEntityListing</returns>
+        
         StationEntityListing GetStations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string userSelectable = null, string webRtcUserId = null, string id = null, string lineAppearanceId = null);
 
         /// <summary>
@@ -94,6 +99,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Comma separated list of stationIds (optional)</param>
         /// <param name="lineAppearanceId">lineAppearanceId (optional)</param>
         /// <returns>ApiResponse of StationEntityListing</returns>
+        
         ApiResponse<StationEntityListing> GetStationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string userSelectable = null, string webRtcUserId = null, string id = null, string lineAppearanceId = null);
 
         #endregion Synchronous Operations
@@ -109,6 +115,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
         /// <returns>Task of void</returns>
+        
         System.Threading.Tasks.Task DeleteStationAssociateduserAsync (string stationId);
 
         /// <summary>
@@ -120,6 +127,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteStationAssociateduserAsyncWithHttpInfo (string stationId);
 
         /// <summary>
@@ -131,6 +139,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
         /// <returns>Task of Station</returns>
+        
         System.Threading.Tasks.Task<Station> GetStationAsync (string stationId);
 
         /// <summary>
@@ -142,6 +151,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
         /// <returns>Task of ApiResponse (Station)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<Station>> GetStationAsyncWithHttpInfo (string stationId);
 
         /// <summary>
@@ -160,6 +170,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Comma separated list of stationIds (optional)</param>
         /// <param name="lineAppearanceId">lineAppearanceId (optional)</param>
         /// <returns>Task of StationEntityListing</returns>
+        
         System.Threading.Tasks.Task<StationEntityListing> GetStationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string userSelectable = null, string webRtcUserId = null, string id = null, string lineAppearanceId = null);
 
         /// <summary>
@@ -178,6 +189,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Comma separated list of stationIds (optional)</param>
         /// <param name="lineAppearanceId">lineAppearanceId (optional)</param>
         /// <returns>Task of ApiResponse (StationEntityListing)</returns>
+        
         System.Threading.Tasks.Task<ApiResponse<StationEntityListing>> GetStationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string userSelectable = null, string webRtcUserId = null, string id = null, string lineAppearanceId = null);
 
         #endregion Asynchronous Operations
@@ -278,6 +290,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
         /// <returns></returns>
+        
         public void DeleteStationAssociateduser (string stationId)
         {
              DeleteStationAssociateduserWithHttpInfo(stationId);
@@ -289,6 +302,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
+        
         public ApiResponse<Object> DeleteStationAssociateduserWithHttpInfo (string stationId)
         { 
             // verify the required parameter 'stationId' is set
@@ -371,6 +385,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
         /// <returns>Task of void</returns>
+        
         public async System.Threading.Tasks.Task DeleteStationAssociateduserAsync (string stationId)
         {
              await DeleteStationAssociateduserAsyncWithHttpInfo(stationId);
@@ -383,6 +398,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
         /// <returns>Task of ApiResponse</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteStationAssociateduserAsyncWithHttpInfo (string stationId)
         { 
             // verify the required parameter 'stationId' is set
@@ -467,6 +483,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
         /// <returns>Station</returns>
+        
         public Station GetStation (string stationId)
         {
              ApiResponse<Station> localVarResponse = GetStationWithHttpInfo(stationId);
@@ -479,6 +496,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
         /// <returns>ApiResponse of Station</returns>
+        
         public ApiResponse< Station > GetStationWithHttpInfo (string stationId)
         { 
             // verify the required parameter 'stationId' is set
@@ -561,6 +579,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
         /// <returns>Task of Station</returns>
+        
         public async System.Threading.Tasks.Task<Station> GetStationAsync (string stationId)
         {
              ApiResponse<Station> localVarResponse = await GetStationAsyncWithHttpInfo(stationId);
@@ -574,6 +593,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
         /// <returns>Task of ApiResponse (Station)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<Station>> GetStationAsyncWithHttpInfo (string stationId)
         { 
             // verify the required parameter 'stationId' is set
@@ -665,6 +685,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Comma separated list of stationIds (optional)</param>
         /// <param name="lineAppearanceId">lineAppearanceId (optional)</param>
         /// <returns>StationEntityListing</returns>
+        
         public StationEntityListing GetStations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string userSelectable = null, string webRtcUserId = null, string id = null, string lineAppearanceId = null)
         {
              ApiResponse<StationEntityListing> localVarResponse = GetStationsWithHttpInfo(pageSize, pageNumber, sortBy, name, userSelectable, webRtcUserId, id, lineAppearanceId);
@@ -684,6 +705,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Comma separated list of stationIds (optional)</param>
         /// <param name="lineAppearanceId">lineAppearanceId (optional)</param>
         /// <returns>ApiResponse of StationEntityListing</returns>
+        
         public ApiResponse< StationEntityListing > GetStationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string userSelectable = null, string webRtcUserId = null, string id = null, string lineAppearanceId = null)
         { 
 
@@ -777,6 +799,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Comma separated list of stationIds (optional)</param>
         /// <param name="lineAppearanceId">lineAppearanceId (optional)</param>
         /// <returns>Task of StationEntityListing</returns>
+        
         public async System.Threading.Tasks.Task<StationEntityListing> GetStationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string userSelectable = null, string webRtcUserId = null, string id = null, string lineAppearanceId = null)
         {
              ApiResponse<StationEntityListing> localVarResponse = await GetStationsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, name, userSelectable, webRtcUserId, id, lineAppearanceId);
@@ -797,6 +820,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Comma separated list of stationIds (optional)</param>
         /// <param name="lineAppearanceId">lineAppearanceId (optional)</param>
         /// <returns>Task of ApiResponse (StationEntityListing)</returns>
+        
         public async System.Threading.Tasks.Task<ApiResponse<StationEntityListing>> GetStationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string userSelectable = null, string webRtcUserId = null, string id = null, string lineAppearanceId = null)
         { 
 

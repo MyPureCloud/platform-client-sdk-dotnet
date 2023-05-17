@@ -28,7 +28,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RecordingState">RecordingState.</param>
         /// <param name="Address">Address.</param>
         /// <param name="ExternalTag">ExternalTag.</param>
-        public QueueConversationSocialExpressionEventTopicConversation(string Id = null, int? MaxParticipants = null, List<QueueConversationSocialExpressionEventTopicParticipant> Participants = null, List<QueueConversationSocialExpressionEventTopicRecentTransfer> RecentTransfers = null, string RecordingState = null, string Address = null, string ExternalTag = null)
+        /// <param name="SecurePause">SecurePause.</param>
+        public QueueConversationSocialExpressionEventTopicConversation(string Id = null, int? MaxParticipants = null, List<QueueConversationSocialExpressionEventTopicParticipant> Participants = null, List<QueueConversationSocialExpressionEventTopicRecentTransfer> RecentTransfers = null, string RecordingState = null, string Address = null, string ExternalTag = null, bool? SecurePause = null)
         {
             this.Id = Id;
             this.MaxParticipants = MaxParticipants;
@@ -37,6 +38,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.RecordingState = RecordingState;
             this.Address = Address;
             this.ExternalTag = ExternalTag;
+            this.SecurePause = SecurePause;
             
         }
         
@@ -97,6 +99,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public string ExternalTag { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets SecurePause
+        /// </summary>
+        [DataMember(Name="securePause", EmitDefaultValue=false)]
+        public bool? SecurePause { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -113,6 +123,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  ExternalTag: ").Append(ExternalTag).Append("\n");
+            sb.Append("  SecurePause: ").Append(SecurePause).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -187,6 +198,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExternalTag == other.ExternalTag ||
                     this.ExternalTag != null &&
                     this.ExternalTag.Equals(other.ExternalTag)
+                ) &&
+                (
+                    this.SecurePause == other.SecurePause ||
+                    this.SecurePause != null &&
+                    this.SecurePause.Equals(other.SecurePause)
                 );
         }
 
@@ -221,6 +237,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ExternalTag != null)
                     hash = hash * 59 + this.ExternalTag.GetHashCode();
+
+                if (this.SecurePause != null)
+                    hash = hash * 59 + this.SecurePause.GetHashCode();
 
                 return hash;
             }

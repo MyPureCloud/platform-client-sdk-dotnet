@@ -54,6 +54,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationAppSettings" /> class.
         /// </summary>
+        /// <param name="Enabled">The toggle to enable or disable conversations.</param>
         /// <param name="ShowAgentTypingIndicator">The toggle to enable or disable typing indicator for messenger.</param>
         /// <param name="ShowUserTypingIndicator">The toggle to enable or disable typing indicator for messenger.</param>
         /// <param name="AutoStartType">Deprecated. The auto start type for the messenger conversation.</param>
@@ -62,8 +63,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationDisconnect">The conversation disconnect settings for the messenger app.</param>
         /// <param name="ConversationClear">The conversation clear settings for the messenger app.</param>
         /// <param name="Humanize">The humanize conversations settings for the messenger app.</param>
-        public ConversationAppSettings(bool? ShowAgentTypingIndicator = null, bool? ShowUserTypingIndicator = null, AutoStartTypeEnum? AutoStartType = null, AutoStart AutoStart = null, Markdown Markdown = null, ConversationDisconnectSettings ConversationDisconnect = null, ConversationClearSettings ConversationClear = null, Humanize Humanize = null)
+        public ConversationAppSettings(bool? Enabled = null, bool? ShowAgentTypingIndicator = null, bool? ShowUserTypingIndicator = null, AutoStartTypeEnum? AutoStartType = null, AutoStart AutoStart = null, Markdown Markdown = null, ConversationDisconnectSettings ConversationDisconnect = null, ConversationClearSettings ConversationClear = null, Humanize Humanize = null)
         {
+            this.Enabled = Enabled;
             this.ShowAgentTypingIndicator = ShowAgentTypingIndicator;
             this.ShowUserTypingIndicator = ShowUserTypingIndicator;
             this.AutoStartType = AutoStartType;
@@ -75,6 +77,15 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
+
+
+        /// <summary>
+        /// The toggle to enable or disable conversations
+        /// </summary>
+        /// <value>The toggle to enable or disable conversations</value>
+        [DataMember(Name="enabled", EmitDefaultValue=false)]
+        public bool? Enabled { get; set; }
+
 
 
         /// <summary>
@@ -150,6 +161,7 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class ConversationAppSettings {\n");
 
+            sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  ShowAgentTypingIndicator: ").Append(ShowAgentTypingIndicator).Append("\n");
             sb.Append("  ShowUserTypingIndicator: ").Append(ShowUserTypingIndicator).Append("\n");
             sb.Append("  AutoStartType: ").Append(AutoStartType).Append("\n");
@@ -198,6 +210,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 return false;
 
             return true &&
+                (
+                    this.Enabled == other.Enabled ||
+                    this.Enabled != null &&
+                    this.Enabled.Equals(other.Enabled)
+                ) &&
                 (
                     this.ShowAgentTypingIndicator == other.ShowAgentTypingIndicator ||
                     this.ShowAgentTypingIndicator != null &&
@@ -251,6 +268,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Enabled != null)
+                    hash = hash * 59 + this.Enabled.GetHashCode();
+
                 if (this.ShowAgentTypingIndicator != null)
                     hash = hash * 59 + this.ShowAgentTypingIndicator.GetHashCode();
 

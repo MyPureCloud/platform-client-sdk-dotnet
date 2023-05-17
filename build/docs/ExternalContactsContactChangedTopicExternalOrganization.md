@@ -1,14 +1,13 @@
 ---
-title: WemCoachingAppointmentTopicCoachingAppointmentConversation
+title: ExternalContactsContactChangedTopicExternalOrganization
 ---
-## ININ.PureCloudApi.Model.WemCoachingAppointmentTopicCoachingAppointmentConversation
+## ININ.PureCloudApi.Model.ExternalContactsContactChangedTopicExternalOrganization
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
-| **Action** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 
