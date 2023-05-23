@@ -666,7 +666,7 @@ namespace PureCloudPlatform.Client.V2.Client
             private long retryAfterMs;
             private Stopwatch stopwatch;
 
-            private readonly List<int> statusCodes = new List<int>() { 429, 502, 503, 504 };
+            private readonly List<int> statusCodes = new List<int>() { 429, 500, 502, 503, 504 };
 
             public Retry(RetryConfiguration retryConfiguration)
             {
