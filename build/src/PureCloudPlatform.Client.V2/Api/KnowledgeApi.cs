@@ -209,7 +209,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>KnowledgeCategory</returns>
-        
+        [Obsolete]
         KnowledgeCategory DeleteKnowledgeKnowledgebaseLanguageCategory (string categoryId, string knowledgeBaseId, string languageCode);
 
         /// <summary>
@@ -223,7 +223,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>ApiResponse of KnowledgeCategory</returns>
-        
+        [Obsolete]
         ApiResponse<KnowledgeCategory> DeleteKnowledgeKnowledgebaseLanguageCategoryWithHttpInfo (string categoryId, string knowledgeBaseId, string languageCode);
 
         /// <summary>
@@ -237,7 +237,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>KnowledgeDocument</returns>
-        
+        [Obsolete]
         KnowledgeDocument DeleteKnowledgeKnowledgebaseLanguageDocument (string documentId, string knowledgeBaseId, string languageCode);
 
         /// <summary>
@@ -251,7 +251,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>ApiResponse of KnowledgeDocument</returns>
-        
+        [Obsolete]
         ApiResponse<KnowledgeDocument> DeleteKnowledgeKnowledgebaseLanguageDocumentWithHttpInfo (string documentId, string knowledgeBaseId, string languageCode);
 
         /// <summary>
@@ -265,7 +265,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="importId">Import ID</param>
         /// <returns></returns>
-        
+        [Obsolete]
         void DeleteKnowledgeKnowledgebaseLanguageDocumentsImport (string knowledgeBaseId, string languageCode, string importId);
 
         /// <summary>
@@ -279,7 +279,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="importId">Import ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         ApiResponse<Object> DeleteKnowledgeKnowledgebaseLanguageDocumentsImportWithHttpInfo (string knowledgeBaseId, string languageCode, string importId);
 
         /// <summary>
@@ -863,7 +863,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="name">Filter to return the categories that starts with the given category name. (optional)</param>
         /// <returns>CategoryListing</returns>
-        
+        [Obsolete]
         CategoryListing GetKnowledgeKnowledgebaseLanguageCategories (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string name = null);
 
         /// <summary>
@@ -881,7 +881,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="name">Filter to return the categories that starts with the given category name. (optional)</param>
         /// <returns>ApiResponse of CategoryListing</returns>
-        
+        [Obsolete]
         ApiResponse<CategoryListing> GetKnowledgeKnowledgebaseLanguageCategoriesWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string name = null);
 
         /// <summary>
@@ -895,7 +895,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>KnowledgeExtendedCategory</returns>
-        
+        [Obsolete]
         KnowledgeExtendedCategory GetKnowledgeKnowledgebaseLanguageCategory (string categoryId, string knowledgeBaseId, string languageCode);
 
         /// <summary>
@@ -909,7 +909,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>ApiResponse of KnowledgeExtendedCategory</returns>
-        
+        [Obsolete]
         ApiResponse<KnowledgeExtendedCategory> GetKnowledgeKnowledgebaseLanguageCategoryWithHttpInfo (string categoryId, string knowledgeBaseId, string languageCode);
 
         /// <summary>
@@ -923,7 +923,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>KnowledgeDocument</returns>
-        
+        [Obsolete]
         KnowledgeDocument GetKnowledgeKnowledgebaseLanguageDocument (string documentId, string knowledgeBaseId, string languageCode);
 
         /// <summary>
@@ -937,7 +937,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>ApiResponse of KnowledgeDocument</returns>
-        
+        [Obsolete]
         ApiResponse<KnowledgeDocument> GetKnowledgeKnowledgebaseLanguageDocumentWithHttpInfo (string documentId, string knowledgeBaseId, string languageCode);
 
         /// <summary>
@@ -959,7 +959,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort Order. (optional)</param>
         /// <param name="documentIds">Comma-separated list of document identifiers to fetch by. (optional)</param>
         /// <returns>DocumentListing</returns>
-        
+        [Obsolete]
         DocumentListing GetKnowledgeKnowledgebaseLanguageDocuments (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null, string sortBy = null, string sortOrder = null, List<string> documentIds = null);
 
         /// <summary>
@@ -981,7 +981,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort Order. (optional)</param>
         /// <param name="documentIds">Comma-separated list of document identifiers to fetch by. (optional)</param>
         /// <returns>ApiResponse of DocumentListing</returns>
-        
+        [Obsolete]
         ApiResponse<DocumentListing> GetKnowledgeKnowledgebaseLanguageDocumentsWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null, string sortBy = null, string sortOrder = null, List<string> documentIds = null);
 
         /// <summary>
@@ -995,7 +995,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="importId">Import ID</param>
         /// <returns>KnowledgeImport</returns>
-        
+        [Obsolete]
         KnowledgeImport GetKnowledgeKnowledgebaseLanguageDocumentsImport (string knowledgeBaseId, string languageCode, string importId);
 
         /// <summary>
@@ -1009,7 +1009,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="importId">Import ID</param>
         /// <returns>ApiResponse of KnowledgeImport</returns>
-        
+        [Obsolete]
         ApiResponse<KnowledgeImport> GetKnowledgeKnowledgebaseLanguageDocumentsImportWithHttpInfo (string knowledgeBaseId, string languageCode, string importId);
 
         /// <summary>
@@ -1023,7 +1023,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="trainingId">Training ID</param>
         /// <returns>KnowledgeTraining</returns>
-        
+        [Obsolete]
         KnowledgeTraining GetKnowledgeKnowledgebaseLanguageTraining (string knowledgeBaseId, string languageCode, string trainingId);
 
         /// <summary>
@@ -1037,7 +1037,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="trainingId">Training ID</param>
         /// <returns>ApiResponse of KnowledgeTraining</returns>
-        
+        [Obsolete]
         ApiResponse<KnowledgeTraining> GetKnowledgeKnowledgebaseLanguageTrainingWithHttpInfo (string knowledgeBaseId, string languageCode, string trainingId);
 
         /// <summary>
@@ -1055,7 +1055,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="knowledgeDocumentsState">Return the training with the specified state of the trained documents. (optional)</param>
         /// <returns>TrainingListing</returns>
-        
+        [Obsolete]
         TrainingListing GetKnowledgeKnowledgebaseLanguageTrainings (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string knowledgeDocumentsState = null);
 
         /// <summary>
@@ -1073,7 +1073,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="knowledgeDocumentsState">Return the training with the specified state of the trained documents. (optional)</param>
         /// <returns>ApiResponse of TrainingListing</returns>
-        
+        [Obsolete]
         ApiResponse<TrainingListing> GetKnowledgeKnowledgebaseLanguageTrainingsWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string knowledgeDocumentsState = null);
 
         /// <summary>
@@ -1169,8 +1169,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 100. Deprecated in favour of pageSize (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="name">Filter by Name. (optional)</param>
         /// <param name="coreLanguage">Filter by core language. (optional)</param>
         /// <param name="published">Filter by published status. (optional)</param>
@@ -1189,8 +1189,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 100. Deprecated in favour of pageSize (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="name">Filter by Name. (optional)</param>
         /// <param name="coreLanguage">Filter by core language. (optional)</param>
         /// <param name="published">Filter by published status. (optional)</param>
@@ -1436,7 +1436,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>KnowledgeExtendedCategory</returns>
-        
+        [Obsolete]
         KnowledgeExtendedCategory PatchKnowledgeKnowledgebaseLanguageCategory (string categoryId, string knowledgeBaseId, string languageCode, KnowledgeCategoryRequest body);
 
         /// <summary>
@@ -1451,7 +1451,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of KnowledgeExtendedCategory</returns>
-        
+        [Obsolete]
         ApiResponse<KnowledgeExtendedCategory> PatchKnowledgeKnowledgebaseLanguageCategoryWithHttpInfo (string categoryId, string knowledgeBaseId, string languageCode, KnowledgeCategoryRequest body);
 
         /// <summary>
@@ -1466,7 +1466,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>KnowledgeDocument</returns>
-        
+        [Obsolete]
         KnowledgeDocument PatchKnowledgeKnowledgebaseLanguageDocument (string documentId, string knowledgeBaseId, string languageCode, KnowledgeDocumentRequest body);
 
         /// <summary>
@@ -1481,7 +1481,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of KnowledgeDocument</returns>
-        
+        [Obsolete]
         ApiResponse<KnowledgeDocument> PatchKnowledgeKnowledgebaseLanguageDocumentWithHttpInfo (string documentId, string knowledgeBaseId, string languageCode, KnowledgeDocumentRequest body);
 
         /// <summary>
@@ -1495,7 +1495,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>DocumentListing</returns>
-        
+        [Obsolete]
         DocumentListing PatchKnowledgeKnowledgebaseLanguageDocuments (string knowledgeBaseId, string languageCode, List<KnowledgeDocumentBulkRequest> body);
 
         /// <summary>
@@ -1509,7 +1509,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of DocumentListing</returns>
-        
+        [Obsolete]
         ApiResponse<DocumentListing> PatchKnowledgeKnowledgebaseLanguageDocumentsWithHttpInfo (string knowledgeBaseId, string languageCode, List<KnowledgeDocumentBulkRequest> body);
 
         /// <summary>
@@ -1524,7 +1524,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="importId">Import ID</param>
         /// <param name="body"></param>
         /// <returns>KnowledgeImport</returns>
-        
+        [Obsolete]
         KnowledgeImport PatchKnowledgeKnowledgebaseLanguageDocumentsImport (string knowledgeBaseId, string languageCode, string importId, ImportStatusRequest body);
 
         /// <summary>
@@ -1539,7 +1539,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="importId">Import ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of KnowledgeImport</returns>
-        
+        [Obsolete]
         ApiResponse<KnowledgeImport> PatchKnowledgeKnowledgebaseLanguageDocumentsImportWithHttpInfo (string knowledgeBaseId, string languageCode, string importId, ImportStatusRequest body);
 
         /// <summary>
@@ -1925,7 +1925,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>KnowledgeExtendedCategory</returns>
-        
+        [Obsolete]
         KnowledgeExtendedCategory PostKnowledgeKnowledgebaseLanguageCategories (string knowledgeBaseId, string languageCode, KnowledgeCategoryRequest body);
 
         /// <summary>
@@ -1939,7 +1939,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of KnowledgeExtendedCategory</returns>
-        
+        [Obsolete]
         ApiResponse<KnowledgeExtendedCategory> PostKnowledgeKnowledgebaseLanguageCategoriesWithHttpInfo (string knowledgeBaseId, string languageCode, KnowledgeCategoryRequest body);
 
         /// <summary>
@@ -1953,7 +1953,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>KnowledgeDocument</returns>
-        
+        [Obsolete]
         KnowledgeDocument PostKnowledgeKnowledgebaseLanguageDocuments (string knowledgeBaseId, string languageCode, KnowledgeDocumentRequest body);
 
         /// <summary>
@@ -1967,7 +1967,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of KnowledgeDocument</returns>
-        
+        [Obsolete]
         ApiResponse<KnowledgeDocument> PostKnowledgeKnowledgebaseLanguageDocumentsWithHttpInfo (string knowledgeBaseId, string languageCode, KnowledgeDocumentRequest body);
 
         /// <summary>
@@ -1981,7 +1981,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>KnowledgeImport</returns>
-        
+        [Obsolete]
         KnowledgeImport PostKnowledgeKnowledgebaseLanguageDocumentsImports (string knowledgeBaseId, string languageCode, KnowledgeImport body);
 
         /// <summary>
@@ -1995,7 +1995,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of KnowledgeImport</returns>
-        
+        [Obsolete]
         ApiResponse<KnowledgeImport> PostKnowledgeKnowledgebaseLanguageDocumentsImportsWithHttpInfo (string knowledgeBaseId, string languageCode, KnowledgeImport body);
 
         /// <summary>
@@ -2009,7 +2009,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="trainingId">Training ID</param>
         /// <returns>KnowledgeTraining</returns>
-        
+        [Obsolete]
         KnowledgeTraining PostKnowledgeKnowledgebaseLanguageTrainingPromote (string knowledgeBaseId, string languageCode, string trainingId);
 
         /// <summary>
@@ -2023,7 +2023,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="trainingId">Training ID</param>
         /// <returns>ApiResponse of KnowledgeTraining</returns>
-        
+        [Obsolete]
         ApiResponse<KnowledgeTraining> PostKnowledgeKnowledgebaseLanguageTrainingPromoteWithHttpInfo (string knowledgeBaseId, string languageCode, string trainingId);
 
         /// <summary>
@@ -2036,7 +2036,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>KnowledgeTraining</returns>
-        
+        [Obsolete]
         KnowledgeTraining PostKnowledgeKnowledgebaseLanguageTrainings (string knowledgeBaseId, string languageCode);
 
         /// <summary>
@@ -2049,7 +2049,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>ApiResponse of KnowledgeTraining</returns>
-        
+        [Obsolete]
         ApiResponse<KnowledgeTraining> PostKnowledgeKnowledgebaseLanguageTrainingsWithHttpInfo (string knowledgeBaseId, string languageCode);
 
         /// <summary>
@@ -2062,7 +2062,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>KnowledgeSearchResponse</returns>
-        
+        [Obsolete]
         KnowledgeSearchResponse PostKnowledgeKnowledgebaseSearch (string knowledgeBaseId, KnowledgeSearchRequest body = null);
 
         /// <summary>
@@ -2075,7 +2075,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of KnowledgeSearchResponse</returns>
-        
+        [Obsolete]
         ApiResponse<KnowledgeSearchResponse> PostKnowledgeKnowledgebaseSearchWithHttpInfo (string knowledgeBaseId, KnowledgeSearchRequest body = null);
 
         /// <summary>
@@ -2299,7 +2299,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>Task of KnowledgeCategory</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<KnowledgeCategory> DeleteKnowledgeKnowledgebaseLanguageCategoryAsync (string categoryId, string knowledgeBaseId, string languageCode);
 
         /// <summary>
@@ -2313,7 +2313,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>Task of ApiResponse (KnowledgeCategory)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<KnowledgeCategory>> DeleteKnowledgeKnowledgebaseLanguageCategoryAsyncWithHttpInfo (string categoryId, string knowledgeBaseId, string languageCode);
 
         /// <summary>
@@ -2327,7 +2327,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>Task of KnowledgeDocument</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<KnowledgeDocument> DeleteKnowledgeKnowledgebaseLanguageDocumentAsync (string documentId, string knowledgeBaseId, string languageCode);
 
         /// <summary>
@@ -2341,7 +2341,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>Task of ApiResponse (KnowledgeDocument)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<KnowledgeDocument>> DeleteKnowledgeKnowledgebaseLanguageDocumentAsyncWithHttpInfo (string documentId, string knowledgeBaseId, string languageCode);
 
         /// <summary>
@@ -2355,7 +2355,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="importId">Import ID</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task DeleteKnowledgeKnowledgebaseLanguageDocumentsImportAsync (string knowledgeBaseId, string languageCode, string importId);
 
         /// <summary>
@@ -2369,7 +2369,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="importId">Import ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteKnowledgeKnowledgebaseLanguageDocumentsImportAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, string importId);
 
         /// <summary>
@@ -2953,7 +2953,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="name">Filter to return the categories that starts with the given category name. (optional)</param>
         /// <returns>Task of CategoryListing</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<CategoryListing> GetKnowledgeKnowledgebaseLanguageCategoriesAsync (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string name = null);
 
         /// <summary>
@@ -2971,7 +2971,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="name">Filter to return the categories that starts with the given category name. (optional)</param>
         /// <returns>Task of ApiResponse (CategoryListing)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<CategoryListing>> GetKnowledgeKnowledgebaseLanguageCategoriesAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string name = null);
 
         /// <summary>
@@ -2985,7 +2985,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>Task of KnowledgeExtendedCategory</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<KnowledgeExtendedCategory> GetKnowledgeKnowledgebaseLanguageCategoryAsync (string categoryId, string knowledgeBaseId, string languageCode);
 
         /// <summary>
@@ -2999,7 +2999,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>Task of ApiResponse (KnowledgeExtendedCategory)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<KnowledgeExtendedCategory>> GetKnowledgeKnowledgebaseLanguageCategoryAsyncWithHttpInfo (string categoryId, string knowledgeBaseId, string languageCode);
 
         /// <summary>
@@ -3013,7 +3013,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>Task of KnowledgeDocument</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<KnowledgeDocument> GetKnowledgeKnowledgebaseLanguageDocumentAsync (string documentId, string knowledgeBaseId, string languageCode);
 
         /// <summary>
@@ -3027,7 +3027,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>Task of ApiResponse (KnowledgeDocument)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<KnowledgeDocument>> GetKnowledgeKnowledgebaseLanguageDocumentAsyncWithHttpInfo (string documentId, string knowledgeBaseId, string languageCode);
 
         /// <summary>
@@ -3049,7 +3049,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort Order. (optional)</param>
         /// <param name="documentIds">Comma-separated list of document identifiers to fetch by. (optional)</param>
         /// <returns>Task of DocumentListing</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<DocumentListing> GetKnowledgeKnowledgebaseLanguageDocumentsAsync (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null, string sortBy = null, string sortOrder = null, List<string> documentIds = null);
 
         /// <summary>
@@ -3071,7 +3071,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort Order. (optional)</param>
         /// <param name="documentIds">Comma-separated list of document identifiers to fetch by. (optional)</param>
         /// <returns>Task of ApiResponse (DocumentListing)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<DocumentListing>> GetKnowledgeKnowledgebaseLanguageDocumentsAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null, string sortBy = null, string sortOrder = null, List<string> documentIds = null);
 
         /// <summary>
@@ -3085,7 +3085,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="importId">Import ID</param>
         /// <returns>Task of KnowledgeImport</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<KnowledgeImport> GetKnowledgeKnowledgebaseLanguageDocumentsImportAsync (string knowledgeBaseId, string languageCode, string importId);
 
         /// <summary>
@@ -3099,7 +3099,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="importId">Import ID</param>
         /// <returns>Task of ApiResponse (KnowledgeImport)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<KnowledgeImport>> GetKnowledgeKnowledgebaseLanguageDocumentsImportAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, string importId);
 
         /// <summary>
@@ -3113,7 +3113,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="trainingId">Training ID</param>
         /// <returns>Task of KnowledgeTraining</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<KnowledgeTraining> GetKnowledgeKnowledgebaseLanguageTrainingAsync (string knowledgeBaseId, string languageCode, string trainingId);
 
         /// <summary>
@@ -3127,7 +3127,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="trainingId">Training ID</param>
         /// <returns>Task of ApiResponse (KnowledgeTraining)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<KnowledgeTraining>> GetKnowledgeKnowledgebaseLanguageTrainingAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, string trainingId);
 
         /// <summary>
@@ -3145,7 +3145,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="knowledgeDocumentsState">Return the training with the specified state of the trained documents. (optional)</param>
         /// <returns>Task of TrainingListing</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<TrainingListing> GetKnowledgeKnowledgebaseLanguageTrainingsAsync (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string knowledgeDocumentsState = null);
 
         /// <summary>
@@ -3163,7 +3163,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="knowledgeDocumentsState">Return the training with the specified state of the trained documents. (optional)</param>
         /// <returns>Task of ApiResponse (TrainingListing)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<TrainingListing>> GetKnowledgeKnowledgebaseLanguageTrainingsAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string knowledgeDocumentsState = null);
 
         /// <summary>
@@ -3259,8 +3259,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 100. Deprecated in favour of pageSize (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="name">Filter by Name. (optional)</param>
         /// <param name="coreLanguage">Filter by core language. (optional)</param>
         /// <param name="published">Filter by published status. (optional)</param>
@@ -3279,8 +3279,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 100. Deprecated in favour of pageSize (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="name">Filter by Name. (optional)</param>
         /// <param name="coreLanguage">Filter by core language. (optional)</param>
         /// <param name="published">Filter by published status. (optional)</param>
@@ -3526,7 +3526,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>Task of KnowledgeExtendedCategory</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<KnowledgeExtendedCategory> PatchKnowledgeKnowledgebaseLanguageCategoryAsync (string categoryId, string knowledgeBaseId, string languageCode, KnowledgeCategoryRequest body);
 
         /// <summary>
@@ -3541,7 +3541,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (KnowledgeExtendedCategory)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<KnowledgeExtendedCategory>> PatchKnowledgeKnowledgebaseLanguageCategoryAsyncWithHttpInfo (string categoryId, string knowledgeBaseId, string languageCode, KnowledgeCategoryRequest body);
 
         /// <summary>
@@ -3556,7 +3556,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>Task of KnowledgeDocument</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<KnowledgeDocument> PatchKnowledgeKnowledgebaseLanguageDocumentAsync (string documentId, string knowledgeBaseId, string languageCode, KnowledgeDocumentRequest body);
 
         /// <summary>
@@ -3571,7 +3571,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (KnowledgeDocument)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<KnowledgeDocument>> PatchKnowledgeKnowledgebaseLanguageDocumentAsyncWithHttpInfo (string documentId, string knowledgeBaseId, string languageCode, KnowledgeDocumentRequest body);
 
         /// <summary>
@@ -3585,7 +3585,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>Task of DocumentListing</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<DocumentListing> PatchKnowledgeKnowledgebaseLanguageDocumentsAsync (string knowledgeBaseId, string languageCode, List<KnowledgeDocumentBulkRequest> body);
 
         /// <summary>
@@ -3599,7 +3599,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (DocumentListing)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<DocumentListing>> PatchKnowledgeKnowledgebaseLanguageDocumentsAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, List<KnowledgeDocumentBulkRequest> body);
 
         /// <summary>
@@ -3614,7 +3614,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="importId">Import ID</param>
         /// <param name="body"></param>
         /// <returns>Task of KnowledgeImport</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<KnowledgeImport> PatchKnowledgeKnowledgebaseLanguageDocumentsImportAsync (string knowledgeBaseId, string languageCode, string importId, ImportStatusRequest body);
 
         /// <summary>
@@ -3629,7 +3629,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="importId">Import ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (KnowledgeImport)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<KnowledgeImport>> PatchKnowledgeKnowledgebaseLanguageDocumentsImportAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, string importId, ImportStatusRequest body);
 
         /// <summary>
@@ -4015,7 +4015,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>Task of KnowledgeExtendedCategory</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<KnowledgeExtendedCategory> PostKnowledgeKnowledgebaseLanguageCategoriesAsync (string knowledgeBaseId, string languageCode, KnowledgeCategoryRequest body);
 
         /// <summary>
@@ -4029,7 +4029,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (KnowledgeExtendedCategory)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<KnowledgeExtendedCategory>> PostKnowledgeKnowledgebaseLanguageCategoriesAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, KnowledgeCategoryRequest body);
 
         /// <summary>
@@ -4043,7 +4043,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>Task of KnowledgeDocument</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<KnowledgeDocument> PostKnowledgeKnowledgebaseLanguageDocumentsAsync (string knowledgeBaseId, string languageCode, KnowledgeDocumentRequest body);
 
         /// <summary>
@@ -4057,7 +4057,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (KnowledgeDocument)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<KnowledgeDocument>> PostKnowledgeKnowledgebaseLanguageDocumentsAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, KnowledgeDocumentRequest body);
 
         /// <summary>
@@ -4071,7 +4071,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>Task of KnowledgeImport</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<KnowledgeImport> PostKnowledgeKnowledgebaseLanguageDocumentsImportsAsync (string knowledgeBaseId, string languageCode, KnowledgeImport body);
 
         /// <summary>
@@ -4085,7 +4085,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (KnowledgeImport)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<KnowledgeImport>> PostKnowledgeKnowledgebaseLanguageDocumentsImportsAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, KnowledgeImport body);
 
         /// <summary>
@@ -4099,7 +4099,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="trainingId">Training ID</param>
         /// <returns>Task of KnowledgeTraining</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<KnowledgeTraining> PostKnowledgeKnowledgebaseLanguageTrainingPromoteAsync (string knowledgeBaseId, string languageCode, string trainingId);
 
         /// <summary>
@@ -4113,7 +4113,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="trainingId">Training ID</param>
         /// <returns>Task of ApiResponse (KnowledgeTraining)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<KnowledgeTraining>> PostKnowledgeKnowledgebaseLanguageTrainingPromoteAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, string trainingId);
 
         /// <summary>
@@ -4126,7 +4126,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>Task of KnowledgeTraining</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<KnowledgeTraining> PostKnowledgeKnowledgebaseLanguageTrainingsAsync (string knowledgeBaseId, string languageCode);
 
         /// <summary>
@@ -4139,7 +4139,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>Task of ApiResponse (KnowledgeTraining)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<KnowledgeTraining>> PostKnowledgeKnowledgebaseLanguageTrainingsAsyncWithHttpInfo (string knowledgeBaseId, string languageCode);
 
         /// <summary>
@@ -4152,7 +4152,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of KnowledgeSearchResponse</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<KnowledgeSearchResponse> PostKnowledgeKnowledgebaseSearchAsync (string knowledgeBaseId, KnowledgeSearchRequest body = null);
 
         /// <summary>
@@ -4165,7 +4165,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (KnowledgeSearchResponse)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<KnowledgeSearchResponse>> PostKnowledgeKnowledgebaseSearchAsyncWithHttpInfo (string knowledgeBaseId, KnowledgeSearchRequest body = null);
 
         /// <summary>
@@ -5740,7 +5740,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>KnowledgeCategory</returns>
-        
+        [Obsolete]
         public KnowledgeCategory DeleteKnowledgeKnowledgebaseLanguageCategory (string categoryId, string knowledgeBaseId, string languageCode)
         {
              ApiResponse<KnowledgeCategory> localVarResponse = DeleteKnowledgeKnowledgebaseLanguageCategoryWithHttpInfo(categoryId, knowledgeBaseId, languageCode);
@@ -5755,7 +5755,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>ApiResponse of KnowledgeCategory</returns>
-        
+        [Obsolete]
         public ApiResponse< KnowledgeCategory > DeleteKnowledgeKnowledgebaseLanguageCategoryWithHttpInfo (string categoryId, string knowledgeBaseId, string languageCode)
         { 
             // verify the required parameter 'categoryId' is set
@@ -5848,7 +5848,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>Task of KnowledgeCategory</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<KnowledgeCategory> DeleteKnowledgeKnowledgebaseLanguageCategoryAsync (string categoryId, string knowledgeBaseId, string languageCode)
         {
              ApiResponse<KnowledgeCategory> localVarResponse = await DeleteKnowledgeKnowledgebaseLanguageCategoryAsyncWithHttpInfo(categoryId, knowledgeBaseId, languageCode);
@@ -5864,7 +5864,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>Task of ApiResponse (KnowledgeCategory)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<KnowledgeCategory>> DeleteKnowledgeKnowledgebaseLanguageCategoryAsyncWithHttpInfo (string categoryId, string knowledgeBaseId, string languageCode)
         { 
             // verify the required parameter 'categoryId' is set
@@ -5961,7 +5961,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>KnowledgeDocument</returns>
-        
+        [Obsolete]
         public KnowledgeDocument DeleteKnowledgeKnowledgebaseLanguageDocument (string documentId, string knowledgeBaseId, string languageCode)
         {
              ApiResponse<KnowledgeDocument> localVarResponse = DeleteKnowledgeKnowledgebaseLanguageDocumentWithHttpInfo(documentId, knowledgeBaseId, languageCode);
@@ -5976,7 +5976,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>ApiResponse of KnowledgeDocument</returns>
-        
+        [Obsolete]
         public ApiResponse< KnowledgeDocument > DeleteKnowledgeKnowledgebaseLanguageDocumentWithHttpInfo (string documentId, string knowledgeBaseId, string languageCode)
         { 
             // verify the required parameter 'documentId' is set
@@ -6069,7 +6069,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>Task of KnowledgeDocument</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<KnowledgeDocument> DeleteKnowledgeKnowledgebaseLanguageDocumentAsync (string documentId, string knowledgeBaseId, string languageCode)
         {
              ApiResponse<KnowledgeDocument> localVarResponse = await DeleteKnowledgeKnowledgebaseLanguageDocumentAsyncWithHttpInfo(documentId, knowledgeBaseId, languageCode);
@@ -6085,7 +6085,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>Task of ApiResponse (KnowledgeDocument)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<KnowledgeDocument>> DeleteKnowledgeKnowledgebaseLanguageDocumentAsyncWithHttpInfo (string documentId, string knowledgeBaseId, string languageCode)
         { 
             // verify the required parameter 'documentId' is set
@@ -6182,7 +6182,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="importId">Import ID</param>
         /// <returns></returns>
-        
+        [Obsolete]
         public void DeleteKnowledgeKnowledgebaseLanguageDocumentsImport (string knowledgeBaseId, string languageCode, string importId)
         {
              DeleteKnowledgeKnowledgebaseLanguageDocumentsImportWithHttpInfo(knowledgeBaseId, languageCode, importId);
@@ -6196,7 +6196,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="importId">Import ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         public ApiResponse<Object> DeleteKnowledgeKnowledgebaseLanguageDocumentsImportWithHttpInfo (string knowledgeBaseId, string languageCode, string importId)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
@@ -6289,7 +6289,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="importId">Import ID</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task DeleteKnowledgeKnowledgebaseLanguageDocumentsImportAsync (string knowledgeBaseId, string languageCode, string importId)
         {
              await DeleteKnowledgeKnowledgebaseLanguageDocumentsImportAsyncWithHttpInfo(knowledgeBaseId, languageCode, importId);
@@ -6304,7 +6304,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="importId">Import ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteKnowledgeKnowledgebaseLanguageDocumentsImportAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, string importId)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
@@ -10394,7 +10394,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="name">Filter to return the categories that starts with the given category name. (optional)</param>
         /// <returns>CategoryListing</returns>
-        
+        [Obsolete]
         public CategoryListing GetKnowledgeKnowledgebaseLanguageCategories (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string name = null)
         {
              ApiResponse<CategoryListing> localVarResponse = GetKnowledgeKnowledgebaseLanguageCategoriesWithHttpInfo(knowledgeBaseId, languageCode, before, after, limit, pageSize, name);
@@ -10413,7 +10413,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="name">Filter to return the categories that starts with the given category name. (optional)</param>
         /// <returns>ApiResponse of CategoryListing</returns>
-        
+        [Obsolete]
         public ApiResponse< CategoryListing > GetKnowledgeKnowledgebaseLanguageCategoriesWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string name = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
@@ -10511,7 +10511,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="name">Filter to return the categories that starts with the given category name. (optional)</param>
         /// <returns>Task of CategoryListing</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<CategoryListing> GetKnowledgeKnowledgebaseLanguageCategoriesAsync (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string name = null)
         {
              ApiResponse<CategoryListing> localVarResponse = await GetKnowledgeKnowledgebaseLanguageCategoriesAsyncWithHttpInfo(knowledgeBaseId, languageCode, before, after, limit, pageSize, name);
@@ -10531,7 +10531,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="name">Filter to return the categories that starts with the given category name. (optional)</param>
         /// <returns>Task of ApiResponse (CategoryListing)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<CategoryListing>> GetKnowledgeKnowledgebaseLanguageCategoriesAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string name = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
@@ -10628,7 +10628,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>KnowledgeExtendedCategory</returns>
-        
+        [Obsolete]
         public KnowledgeExtendedCategory GetKnowledgeKnowledgebaseLanguageCategory (string categoryId, string knowledgeBaseId, string languageCode)
         {
              ApiResponse<KnowledgeExtendedCategory> localVarResponse = GetKnowledgeKnowledgebaseLanguageCategoryWithHttpInfo(categoryId, knowledgeBaseId, languageCode);
@@ -10643,7 +10643,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>ApiResponse of KnowledgeExtendedCategory</returns>
-        
+        [Obsolete]
         public ApiResponse< KnowledgeExtendedCategory > GetKnowledgeKnowledgebaseLanguageCategoryWithHttpInfo (string categoryId, string knowledgeBaseId, string languageCode)
         { 
             // verify the required parameter 'categoryId' is set
@@ -10736,7 +10736,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>Task of KnowledgeExtendedCategory</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<KnowledgeExtendedCategory> GetKnowledgeKnowledgebaseLanguageCategoryAsync (string categoryId, string knowledgeBaseId, string languageCode)
         {
              ApiResponse<KnowledgeExtendedCategory> localVarResponse = await GetKnowledgeKnowledgebaseLanguageCategoryAsyncWithHttpInfo(categoryId, knowledgeBaseId, languageCode);
@@ -10752,7 +10752,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>Task of ApiResponse (KnowledgeExtendedCategory)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<KnowledgeExtendedCategory>> GetKnowledgeKnowledgebaseLanguageCategoryAsyncWithHttpInfo (string categoryId, string knowledgeBaseId, string languageCode)
         { 
             // verify the required parameter 'categoryId' is set
@@ -10849,7 +10849,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>KnowledgeDocument</returns>
-        
+        [Obsolete]
         public KnowledgeDocument GetKnowledgeKnowledgebaseLanguageDocument (string documentId, string knowledgeBaseId, string languageCode)
         {
              ApiResponse<KnowledgeDocument> localVarResponse = GetKnowledgeKnowledgebaseLanguageDocumentWithHttpInfo(documentId, knowledgeBaseId, languageCode);
@@ -10864,7 +10864,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>ApiResponse of KnowledgeDocument</returns>
-        
+        [Obsolete]
         public ApiResponse< KnowledgeDocument > GetKnowledgeKnowledgebaseLanguageDocumentWithHttpInfo (string documentId, string knowledgeBaseId, string languageCode)
         { 
             // verify the required parameter 'documentId' is set
@@ -10957,7 +10957,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>Task of KnowledgeDocument</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<KnowledgeDocument> GetKnowledgeKnowledgebaseLanguageDocumentAsync (string documentId, string knowledgeBaseId, string languageCode)
         {
              ApiResponse<KnowledgeDocument> localVarResponse = await GetKnowledgeKnowledgebaseLanguageDocumentAsyncWithHttpInfo(documentId, knowledgeBaseId, languageCode);
@@ -10973,7 +10973,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>Task of ApiResponse (KnowledgeDocument)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<KnowledgeDocument>> GetKnowledgeKnowledgebaseLanguageDocumentAsyncWithHttpInfo (string documentId, string knowledgeBaseId, string languageCode)
         { 
             // verify the required parameter 'documentId' is set
@@ -11078,7 +11078,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort Order. (optional)</param>
         /// <param name="documentIds">Comma-separated list of document identifiers to fetch by. (optional)</param>
         /// <returns>DocumentListing</returns>
-        
+        [Obsolete]
         public DocumentListing GetKnowledgeKnowledgebaseLanguageDocuments (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null, string sortBy = null, string sortOrder = null, List<string> documentIds = null)
         {
              ApiResponse<DocumentListing> localVarResponse = GetKnowledgeKnowledgebaseLanguageDocumentsWithHttpInfo(knowledgeBaseId, languageCode, before, after, limit, pageSize, categories, title, sortBy, sortOrder, documentIds);
@@ -11101,7 +11101,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort Order. (optional)</param>
         /// <param name="documentIds">Comma-separated list of document identifiers to fetch by. (optional)</param>
         /// <returns>ApiResponse of DocumentListing</returns>
-        
+        [Obsolete]
         public ApiResponse< DocumentListing > GetKnowledgeKnowledgebaseLanguageDocumentsWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null, string sortBy = null, string sortOrder = null, List<string> documentIds = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
@@ -11207,7 +11207,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort Order. (optional)</param>
         /// <param name="documentIds">Comma-separated list of document identifiers to fetch by. (optional)</param>
         /// <returns>Task of DocumentListing</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<DocumentListing> GetKnowledgeKnowledgebaseLanguageDocumentsAsync (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null, string sortBy = null, string sortOrder = null, List<string> documentIds = null)
         {
              ApiResponse<DocumentListing> localVarResponse = await GetKnowledgeKnowledgebaseLanguageDocumentsAsyncWithHttpInfo(knowledgeBaseId, languageCode, before, after, limit, pageSize, categories, title, sortBy, sortOrder, documentIds);
@@ -11231,7 +11231,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort Order. (optional)</param>
         /// <param name="documentIds">Comma-separated list of document identifiers to fetch by. (optional)</param>
         /// <returns>Task of ApiResponse (DocumentListing)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<DocumentListing>> GetKnowledgeKnowledgebaseLanguageDocumentsAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null, string sortBy = null, string sortOrder = null, List<string> documentIds = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
@@ -11332,7 +11332,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="importId">Import ID</param>
         /// <returns>KnowledgeImport</returns>
-        
+        [Obsolete]
         public KnowledgeImport GetKnowledgeKnowledgebaseLanguageDocumentsImport (string knowledgeBaseId, string languageCode, string importId)
         {
              ApiResponse<KnowledgeImport> localVarResponse = GetKnowledgeKnowledgebaseLanguageDocumentsImportWithHttpInfo(knowledgeBaseId, languageCode, importId);
@@ -11347,7 +11347,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="importId">Import ID</param>
         /// <returns>ApiResponse of KnowledgeImport</returns>
-        
+        [Obsolete]
         public ApiResponse< KnowledgeImport > GetKnowledgeKnowledgebaseLanguageDocumentsImportWithHttpInfo (string knowledgeBaseId, string languageCode, string importId)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
@@ -11440,7 +11440,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="importId">Import ID</param>
         /// <returns>Task of KnowledgeImport</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<KnowledgeImport> GetKnowledgeKnowledgebaseLanguageDocumentsImportAsync (string knowledgeBaseId, string languageCode, string importId)
         {
              ApiResponse<KnowledgeImport> localVarResponse = await GetKnowledgeKnowledgebaseLanguageDocumentsImportAsyncWithHttpInfo(knowledgeBaseId, languageCode, importId);
@@ -11456,7 +11456,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="importId">Import ID</param>
         /// <returns>Task of ApiResponse (KnowledgeImport)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<KnowledgeImport>> GetKnowledgeKnowledgebaseLanguageDocumentsImportAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, string importId)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
@@ -11553,7 +11553,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="trainingId">Training ID</param>
         /// <returns>KnowledgeTraining</returns>
-        
+        [Obsolete]
         public KnowledgeTraining GetKnowledgeKnowledgebaseLanguageTraining (string knowledgeBaseId, string languageCode, string trainingId)
         {
              ApiResponse<KnowledgeTraining> localVarResponse = GetKnowledgeKnowledgebaseLanguageTrainingWithHttpInfo(knowledgeBaseId, languageCode, trainingId);
@@ -11568,7 +11568,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="trainingId">Training ID</param>
         /// <returns>ApiResponse of KnowledgeTraining</returns>
-        
+        [Obsolete]
         public ApiResponse< KnowledgeTraining > GetKnowledgeKnowledgebaseLanguageTrainingWithHttpInfo (string knowledgeBaseId, string languageCode, string trainingId)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
@@ -11661,7 +11661,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="trainingId">Training ID</param>
         /// <returns>Task of KnowledgeTraining</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<KnowledgeTraining> GetKnowledgeKnowledgebaseLanguageTrainingAsync (string knowledgeBaseId, string languageCode, string trainingId)
         {
              ApiResponse<KnowledgeTraining> localVarResponse = await GetKnowledgeKnowledgebaseLanguageTrainingAsyncWithHttpInfo(knowledgeBaseId, languageCode, trainingId);
@@ -11677,7 +11677,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="trainingId">Training ID</param>
         /// <returns>Task of ApiResponse (KnowledgeTraining)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<KnowledgeTraining>> GetKnowledgeKnowledgebaseLanguageTrainingAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, string trainingId)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
@@ -11778,7 +11778,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="knowledgeDocumentsState">Return the training with the specified state of the trained documents. (optional)</param>
         /// <returns>TrainingListing</returns>
-        
+        [Obsolete]
         public TrainingListing GetKnowledgeKnowledgebaseLanguageTrainings (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string knowledgeDocumentsState = null)
         {
              ApiResponse<TrainingListing> localVarResponse = GetKnowledgeKnowledgebaseLanguageTrainingsWithHttpInfo(knowledgeBaseId, languageCode, before, after, limit, pageSize, knowledgeDocumentsState);
@@ -11797,7 +11797,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="knowledgeDocumentsState">Return the training with the specified state of the trained documents. (optional)</param>
         /// <returns>ApiResponse of TrainingListing</returns>
-        
+        [Obsolete]
         public ApiResponse< TrainingListing > GetKnowledgeKnowledgebaseLanguageTrainingsWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string knowledgeDocumentsState = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
@@ -11895,7 +11895,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="knowledgeDocumentsState">Return the training with the specified state of the trained documents. (optional)</param>
         /// <returns>Task of TrainingListing</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<TrainingListing> GetKnowledgeKnowledgebaseLanguageTrainingsAsync (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string knowledgeDocumentsState = null)
         {
              ApiResponse<TrainingListing> localVarResponse = await GetKnowledgeKnowledgebaseLanguageTrainingsAsyncWithHttpInfo(knowledgeBaseId, languageCode, before, after, limit, pageSize, knowledgeDocumentsState);
@@ -11915,7 +11915,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="knowledgeDocumentsState">Return the training with the specified state of the trained documents. (optional)</param>
         /// <returns>Task of ApiResponse (TrainingListing)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<TrainingListing>> GetKnowledgeKnowledgebaseLanguageTrainingsAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string knowledgeDocumentsState = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
@@ -12652,8 +12652,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 100. Deprecated in favour of pageSize (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="name">Filter by Name. (optional)</param>
         /// <param name="coreLanguage">Filter by core language. (optional)</param>
         /// <param name="published">Filter by published status. (optional)</param>
@@ -12673,8 +12673,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 100. Deprecated in favour of pageSize (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="name">Filter by Name. (optional)</param>
         /// <param name="coreLanguage">Filter by core language. (optional)</param>
         /// <param name="published">Filter by published status. (optional)</param>
@@ -12769,8 +12769,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 100. Deprecated in favour of pageSize (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="name">Filter by Name. (optional)</param>
         /// <param name="coreLanguage">Filter by core language. (optional)</param>
         /// <param name="published">Filter by published status. (optional)</param>
@@ -12791,8 +12791,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="limit">Number of entities to return. Maximum of 100. Deprecated in favour of pageSize (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="name">Filter by Name. (optional)</param>
         /// <param name="coreLanguage">Filter by core language. (optional)</param>
         /// <param name="published">Filter by published status. (optional)</param>
@@ -14714,7 +14714,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>KnowledgeExtendedCategory</returns>
-        
+        [Obsolete]
         public KnowledgeExtendedCategory PatchKnowledgeKnowledgebaseLanguageCategory (string categoryId, string knowledgeBaseId, string languageCode, KnowledgeCategoryRequest body)
         {
              ApiResponse<KnowledgeExtendedCategory> localVarResponse = PatchKnowledgeKnowledgebaseLanguageCategoryWithHttpInfo(categoryId, knowledgeBaseId, languageCode, body);
@@ -14730,7 +14730,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of KnowledgeExtendedCategory</returns>
-        
+        [Obsolete]
         public ApiResponse< KnowledgeExtendedCategory > PatchKnowledgeKnowledgebaseLanguageCategoryWithHttpInfo (string categoryId, string knowledgeBaseId, string languageCode, KnowledgeCategoryRequest body)
         { 
             // verify the required parameter 'categoryId' is set
@@ -14833,7 +14833,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>Task of KnowledgeExtendedCategory</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<KnowledgeExtendedCategory> PatchKnowledgeKnowledgebaseLanguageCategoryAsync (string categoryId, string knowledgeBaseId, string languageCode, KnowledgeCategoryRequest body)
         {
              ApiResponse<KnowledgeExtendedCategory> localVarResponse = await PatchKnowledgeKnowledgebaseLanguageCategoryAsyncWithHttpInfo(categoryId, knowledgeBaseId, languageCode, body);
@@ -14850,7 +14850,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (KnowledgeExtendedCategory)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<KnowledgeExtendedCategory>> PatchKnowledgeKnowledgebaseLanguageCategoryAsyncWithHttpInfo (string categoryId, string knowledgeBaseId, string languageCode, KnowledgeCategoryRequest body)
         { 
             // verify the required parameter 'categoryId' is set
@@ -14958,7 +14958,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>KnowledgeDocument</returns>
-        
+        [Obsolete]
         public KnowledgeDocument PatchKnowledgeKnowledgebaseLanguageDocument (string documentId, string knowledgeBaseId, string languageCode, KnowledgeDocumentRequest body)
         {
              ApiResponse<KnowledgeDocument> localVarResponse = PatchKnowledgeKnowledgebaseLanguageDocumentWithHttpInfo(documentId, knowledgeBaseId, languageCode, body);
@@ -14974,7 +14974,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of KnowledgeDocument</returns>
-        
+        [Obsolete]
         public ApiResponse< KnowledgeDocument > PatchKnowledgeKnowledgebaseLanguageDocumentWithHttpInfo (string documentId, string knowledgeBaseId, string languageCode, KnowledgeDocumentRequest body)
         { 
             // verify the required parameter 'documentId' is set
@@ -15077,7 +15077,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>Task of KnowledgeDocument</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<KnowledgeDocument> PatchKnowledgeKnowledgebaseLanguageDocumentAsync (string documentId, string knowledgeBaseId, string languageCode, KnowledgeDocumentRequest body)
         {
              ApiResponse<KnowledgeDocument> localVarResponse = await PatchKnowledgeKnowledgebaseLanguageDocumentAsyncWithHttpInfo(documentId, knowledgeBaseId, languageCode, body);
@@ -15094,7 +15094,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (KnowledgeDocument)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<KnowledgeDocument>> PatchKnowledgeKnowledgebaseLanguageDocumentAsyncWithHttpInfo (string documentId, string knowledgeBaseId, string languageCode, KnowledgeDocumentRequest body)
         { 
             // verify the required parameter 'documentId' is set
@@ -15201,7 +15201,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>DocumentListing</returns>
-        
+        [Obsolete]
         public DocumentListing PatchKnowledgeKnowledgebaseLanguageDocuments (string knowledgeBaseId, string languageCode, List<KnowledgeDocumentBulkRequest> body)
         {
              ApiResponse<DocumentListing> localVarResponse = PatchKnowledgeKnowledgebaseLanguageDocumentsWithHttpInfo(knowledgeBaseId, languageCode, body);
@@ -15216,7 +15216,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of DocumentListing</returns>
-        
+        [Obsolete]
         public ApiResponse< DocumentListing > PatchKnowledgeKnowledgebaseLanguageDocumentsWithHttpInfo (string knowledgeBaseId, string languageCode, List<KnowledgeDocumentBulkRequest> body)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
@@ -15314,7 +15314,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>Task of DocumentListing</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<DocumentListing> PatchKnowledgeKnowledgebaseLanguageDocumentsAsync (string knowledgeBaseId, string languageCode, List<KnowledgeDocumentBulkRequest> body)
         {
              ApiResponse<DocumentListing> localVarResponse = await PatchKnowledgeKnowledgebaseLanguageDocumentsAsyncWithHttpInfo(knowledgeBaseId, languageCode, body);
@@ -15330,7 +15330,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (DocumentListing)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<DocumentListing>> PatchKnowledgeKnowledgebaseLanguageDocumentsAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, List<KnowledgeDocumentBulkRequest> body)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
@@ -15433,7 +15433,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="importId">Import ID</param>
         /// <param name="body"></param>
         /// <returns>KnowledgeImport</returns>
-        
+        [Obsolete]
         public KnowledgeImport PatchKnowledgeKnowledgebaseLanguageDocumentsImport (string knowledgeBaseId, string languageCode, string importId, ImportStatusRequest body)
         {
              ApiResponse<KnowledgeImport> localVarResponse = PatchKnowledgeKnowledgebaseLanguageDocumentsImportWithHttpInfo(knowledgeBaseId, languageCode, importId, body);
@@ -15449,7 +15449,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="importId">Import ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of KnowledgeImport</returns>
-        
+        [Obsolete]
         public ApiResponse< KnowledgeImport > PatchKnowledgeKnowledgebaseLanguageDocumentsImportWithHttpInfo (string knowledgeBaseId, string languageCode, string importId, ImportStatusRequest body)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
@@ -15552,7 +15552,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="importId">Import ID</param>
         /// <param name="body"></param>
         /// <returns>Task of KnowledgeImport</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<KnowledgeImport> PatchKnowledgeKnowledgebaseLanguageDocumentsImportAsync (string knowledgeBaseId, string languageCode, string importId, ImportStatusRequest body)
         {
              ApiResponse<KnowledgeImport> localVarResponse = await PatchKnowledgeKnowledgebaseLanguageDocumentsImportAsyncWithHttpInfo(knowledgeBaseId, languageCode, importId, body);
@@ -15569,7 +15569,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="importId">Import ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (KnowledgeImport)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<KnowledgeImport>> PatchKnowledgeKnowledgebaseLanguageDocumentsImportAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, string importId, ImportStatusRequest body)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
@@ -18696,7 +18696,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>KnowledgeExtendedCategory</returns>
-        
+        [Obsolete]
         public KnowledgeExtendedCategory PostKnowledgeKnowledgebaseLanguageCategories (string knowledgeBaseId, string languageCode, KnowledgeCategoryRequest body)
         {
              ApiResponse<KnowledgeExtendedCategory> localVarResponse = PostKnowledgeKnowledgebaseLanguageCategoriesWithHttpInfo(knowledgeBaseId, languageCode, body);
@@ -18711,7 +18711,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of KnowledgeExtendedCategory</returns>
-        
+        [Obsolete]
         public ApiResponse< KnowledgeExtendedCategory > PostKnowledgeKnowledgebaseLanguageCategoriesWithHttpInfo (string knowledgeBaseId, string languageCode, KnowledgeCategoryRequest body)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
@@ -18809,7 +18809,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>Task of KnowledgeExtendedCategory</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<KnowledgeExtendedCategory> PostKnowledgeKnowledgebaseLanguageCategoriesAsync (string knowledgeBaseId, string languageCode, KnowledgeCategoryRequest body)
         {
              ApiResponse<KnowledgeExtendedCategory> localVarResponse = await PostKnowledgeKnowledgebaseLanguageCategoriesAsyncWithHttpInfo(knowledgeBaseId, languageCode, body);
@@ -18825,7 +18825,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (KnowledgeExtendedCategory)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<KnowledgeExtendedCategory>> PostKnowledgeKnowledgebaseLanguageCategoriesAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, KnowledgeCategoryRequest body)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
@@ -18927,7 +18927,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>KnowledgeDocument</returns>
-        
+        [Obsolete]
         public KnowledgeDocument PostKnowledgeKnowledgebaseLanguageDocuments (string knowledgeBaseId, string languageCode, KnowledgeDocumentRequest body)
         {
              ApiResponse<KnowledgeDocument> localVarResponse = PostKnowledgeKnowledgebaseLanguageDocumentsWithHttpInfo(knowledgeBaseId, languageCode, body);
@@ -18942,7 +18942,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of KnowledgeDocument</returns>
-        
+        [Obsolete]
         public ApiResponse< KnowledgeDocument > PostKnowledgeKnowledgebaseLanguageDocumentsWithHttpInfo (string knowledgeBaseId, string languageCode, KnowledgeDocumentRequest body)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
@@ -19040,7 +19040,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>Task of KnowledgeDocument</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<KnowledgeDocument> PostKnowledgeKnowledgebaseLanguageDocumentsAsync (string knowledgeBaseId, string languageCode, KnowledgeDocumentRequest body)
         {
              ApiResponse<KnowledgeDocument> localVarResponse = await PostKnowledgeKnowledgebaseLanguageDocumentsAsyncWithHttpInfo(knowledgeBaseId, languageCode, body);
@@ -19056,7 +19056,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (KnowledgeDocument)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<KnowledgeDocument>> PostKnowledgeKnowledgebaseLanguageDocumentsAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, KnowledgeDocumentRequest body)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
@@ -19158,7 +19158,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>KnowledgeImport</returns>
-        
+        [Obsolete]
         public KnowledgeImport PostKnowledgeKnowledgebaseLanguageDocumentsImports (string knowledgeBaseId, string languageCode, KnowledgeImport body)
         {
              ApiResponse<KnowledgeImport> localVarResponse = PostKnowledgeKnowledgebaseLanguageDocumentsImportsWithHttpInfo(knowledgeBaseId, languageCode, body);
@@ -19173,7 +19173,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of KnowledgeImport</returns>
-        
+        [Obsolete]
         public ApiResponse< KnowledgeImport > PostKnowledgeKnowledgebaseLanguageDocumentsImportsWithHttpInfo (string knowledgeBaseId, string languageCode, KnowledgeImport body)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
@@ -19271,7 +19271,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>Task of KnowledgeImport</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<KnowledgeImport> PostKnowledgeKnowledgebaseLanguageDocumentsImportsAsync (string knowledgeBaseId, string languageCode, KnowledgeImport body)
         {
              ApiResponse<KnowledgeImport> localVarResponse = await PostKnowledgeKnowledgebaseLanguageDocumentsImportsAsyncWithHttpInfo(knowledgeBaseId, languageCode, body);
@@ -19287,7 +19287,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (KnowledgeImport)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<KnowledgeImport>> PostKnowledgeKnowledgebaseLanguageDocumentsImportsAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, KnowledgeImport body)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
@@ -19389,7 +19389,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="trainingId">Training ID</param>
         /// <returns>KnowledgeTraining</returns>
-        
+        [Obsolete]
         public KnowledgeTraining PostKnowledgeKnowledgebaseLanguageTrainingPromote (string knowledgeBaseId, string languageCode, string trainingId)
         {
              ApiResponse<KnowledgeTraining> localVarResponse = PostKnowledgeKnowledgebaseLanguageTrainingPromoteWithHttpInfo(knowledgeBaseId, languageCode, trainingId);
@@ -19404,7 +19404,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="trainingId">Training ID</param>
         /// <returns>ApiResponse of KnowledgeTraining</returns>
-        
+        [Obsolete]
         public ApiResponse< KnowledgeTraining > PostKnowledgeKnowledgebaseLanguageTrainingPromoteWithHttpInfo (string knowledgeBaseId, string languageCode, string trainingId)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
@@ -19497,7 +19497,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="trainingId">Training ID</param>
         /// <returns>Task of KnowledgeTraining</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<KnowledgeTraining> PostKnowledgeKnowledgebaseLanguageTrainingPromoteAsync (string knowledgeBaseId, string languageCode, string trainingId)
         {
              ApiResponse<KnowledgeTraining> localVarResponse = await PostKnowledgeKnowledgebaseLanguageTrainingPromoteAsyncWithHttpInfo(knowledgeBaseId, languageCode, trainingId);
@@ -19513,7 +19513,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <param name="trainingId">Training ID</param>
         /// <returns>Task of ApiResponse (KnowledgeTraining)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<KnowledgeTraining>> PostKnowledgeKnowledgebaseLanguageTrainingPromoteAsyncWithHttpInfo (string knowledgeBaseId, string languageCode, string trainingId)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
@@ -19609,7 +19609,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>KnowledgeTraining</returns>
-        
+        [Obsolete]
         public KnowledgeTraining PostKnowledgeKnowledgebaseLanguageTrainings (string knowledgeBaseId, string languageCode)
         {
              ApiResponse<KnowledgeTraining> localVarResponse = PostKnowledgeKnowledgebaseLanguageTrainingsWithHttpInfo(knowledgeBaseId, languageCode);
@@ -19623,7 +19623,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>ApiResponse of KnowledgeTraining</returns>
-        
+        [Obsolete]
         public ApiResponse< KnowledgeTraining > PostKnowledgeKnowledgebaseLanguageTrainingsWithHttpInfo (string knowledgeBaseId, string languageCode)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
@@ -19711,7 +19711,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>Task of KnowledgeTraining</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<KnowledgeTraining> PostKnowledgeKnowledgebaseLanguageTrainingsAsync (string knowledgeBaseId, string languageCode)
         {
              ApiResponse<KnowledgeTraining> localVarResponse = await PostKnowledgeKnowledgebaseLanguageTrainingsAsyncWithHttpInfo(knowledgeBaseId, languageCode);
@@ -19726,7 +19726,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="languageCode">Language code, format: iso2-LOCALE</param>
         /// <returns>Task of ApiResponse (KnowledgeTraining)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<KnowledgeTraining>> PostKnowledgeKnowledgebaseLanguageTrainingsAsyncWithHttpInfo (string knowledgeBaseId, string languageCode)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
@@ -19817,7 +19817,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>KnowledgeSearchResponse</returns>
-        
+        [Obsolete]
         public KnowledgeSearchResponse PostKnowledgeKnowledgebaseSearch (string knowledgeBaseId, KnowledgeSearchRequest body = null)
         {
              ApiResponse<KnowledgeSearchResponse> localVarResponse = PostKnowledgeKnowledgebaseSearchWithHttpInfo(knowledgeBaseId, body);
@@ -19831,7 +19831,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of KnowledgeSearchResponse</returns>
-        
+        [Obsolete]
         public ApiResponse< KnowledgeSearchResponse > PostKnowledgeKnowledgebaseSearchWithHttpInfo (string knowledgeBaseId, KnowledgeSearchRequest body = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
@@ -19921,7 +19921,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of KnowledgeSearchResponse</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<KnowledgeSearchResponse> PostKnowledgeKnowledgebaseSearchAsync (string knowledgeBaseId, KnowledgeSearchRequest body = null)
         {
              ApiResponse<KnowledgeSearchResponse> localVarResponse = await PostKnowledgeKnowledgebaseSearchAsyncWithHttpInfo(knowledgeBaseId, body);
@@ -19936,7 +19936,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (KnowledgeSearchResponse)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<KnowledgeSearchResponse>> PostKnowledgeKnowledgebaseSearchAsyncWithHttpInfo (string knowledgeBaseId, KnowledgeSearchRequest body = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set

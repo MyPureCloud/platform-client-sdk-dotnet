@@ -28,9 +28,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="DocumentBodyVideo" /> class.
         /// </summary>
         /// <param name="Url">The URL for the video. (required).</param>
-        public DocumentBodyVideo(string Url = null)
+        /// <param name="Properties">The properties for the video..</param>
+        public DocumentBodyVideo(string Url = null, DocumentBodyVideoProperties Properties = null)
         {
             this.Url = Url;
+            this.Properties = Properties;
             
         }
         
@@ -44,6 +46,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Url { get; set; }
 
 
+
+        /// <summary>
+        /// The properties for the video.
+        /// </summary>
+        /// <value>The properties for the video.</value>
+        [DataMember(Name="properties", EmitDefaultValue=false)]
+        public DocumentBodyVideoProperties Properties { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,6 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class DocumentBodyVideo {\n");
 
             sb.Append("  Url: ").Append(Url).Append("\n");
+            sb.Append("  Properties: ").Append(Properties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -98,6 +110,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Url == other.Url ||
                     this.Url != null &&
                     this.Url.Equals(other.Url)
+                ) &&
+                (
+                    this.Properties == other.Properties ||
+                    this.Properties != null &&
+                    this.Properties.Equals(other.Properties)
                 );
         }
 
@@ -114,6 +131,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Url != null)
                     hash = hash * 59 + this.Url.GetHashCode();
+
+                if (this.Properties != null)
+                    hash = hash * 59 + this.Properties.GetHashCode();
 
                 return hash;
             }

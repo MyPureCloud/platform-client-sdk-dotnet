@@ -20,124 +20,124 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete a supported content profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated - use DELETE /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <returns></returns>
-        
+        [Obsolete]
         void DeleteMessagingSupportedcontentSupportedContentId (string supportedContentId);
 
         /// <summary>
         /// Delete a supported content profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated - use DELETE /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         ApiResponse<Object> DeleteMessagingSupportedcontentSupportedContentIdWithHttpInfo (string supportedContentId);
 
         /// <summary>
         /// Get a list of Supported Content profiles
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated - use GET /api/v2/conversations/messaging/supportedcontent as replacement
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>SupportedContentListing</returns>
-        
+        [Obsolete]
         SupportedContentListing GetMessagingSupportedcontent (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get a list of Supported Content profiles
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated - use GET /api/v2/conversations/messaging/supportedcontent as replacement
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of SupportedContentListing</returns>
-        
+        [Obsolete]
         ApiResponse<SupportedContentListing> GetMessagingSupportedcontentWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get a supported content profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated - use GET /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <returns>SupportedContent</returns>
-        
+        [Obsolete]
         SupportedContent GetMessagingSupportedcontentSupportedContentId (string supportedContentId);
 
         /// <summary>
         /// Get a supported content profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated - use GET /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <returns>ApiResponse of SupportedContent</returns>
-        
+        [Obsolete]
         ApiResponse<SupportedContent> GetMessagingSupportedcontentSupportedContentIdWithHttpInfo (string supportedContentId);
 
         /// <summary>
         /// Update a supported content profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated - use PATCH /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <param name="body">SupportedContent</param>
         /// <returns>SupportedContent</returns>
-        
+        [Obsolete]
         SupportedContent PatchMessagingSupportedcontentSupportedContentId (string supportedContentId, SupportedContent body);
 
         /// <summary>
         /// Update a supported content profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated - use PATCH /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <param name="body">SupportedContent</param>
         /// <returns>ApiResponse of SupportedContent</returns>
-        
+        [Obsolete]
         ApiResponse<SupportedContent> PatchMessagingSupportedcontentSupportedContentIdWithHttpInfo (string supportedContentId, SupportedContent body);
 
         /// <summary>
         /// Create a Supported Content profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated - use POST /api/v2/conversations/messaging/supportedcontent as replacement
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SupportedContent</param>
         /// <returns>SupportedContent</returns>
-        
+        [Obsolete]
         SupportedContent PostMessagingSupportedcontent (SupportedContent body);
 
         /// <summary>
         /// Create a Supported Content profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated - use POST /api/v2/conversations/messaging/supportedcontent as replacement
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SupportedContent</param>
         /// <returns>ApiResponse of SupportedContent</returns>
-        
+        [Obsolete]
         ApiResponse<SupportedContent> PostMessagingSupportedcontentWithHttpInfo (SupportedContent body);
 
         #endregion Synchronous Operations
@@ -148,124 +148,124 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete a supported content profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated - use DELETE /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task DeleteMessagingSupportedcontentSupportedContentIdAsync (string supportedContentId);
 
         /// <summary>
         /// Delete a supported content profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated - use DELETE /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMessagingSupportedcontentSupportedContentIdAsyncWithHttpInfo (string supportedContentId);
 
         /// <summary>
         /// Get a list of Supported Content profiles
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated - use GET /api/v2/conversations/messaging/supportedcontent as replacement
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of SupportedContentListing</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<SupportedContentListing> GetMessagingSupportedcontentAsync (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get a list of Supported Content profiles
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated - use GET /api/v2/conversations/messaging/supportedcontent as replacement
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (SupportedContentListing)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<SupportedContentListing>> GetMessagingSupportedcontentAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get a supported content profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated - use GET /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <returns>Task of SupportedContent</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<SupportedContent> GetMessagingSupportedcontentSupportedContentIdAsync (string supportedContentId);
 
         /// <summary>
         /// Get a supported content profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated - use GET /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <returns>Task of ApiResponse (SupportedContent)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<SupportedContent>> GetMessagingSupportedcontentSupportedContentIdAsyncWithHttpInfo (string supportedContentId);
 
         /// <summary>
         /// Update a supported content profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated - use PATCH /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <param name="body">SupportedContent</param>
         /// <returns>Task of SupportedContent</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<SupportedContent> PatchMessagingSupportedcontentSupportedContentIdAsync (string supportedContentId, SupportedContent body);
 
         /// <summary>
         /// Update a supported content profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated - use PATCH /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <param name="body">SupportedContent</param>
         /// <returns>Task of ApiResponse (SupportedContent)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<SupportedContent>> PatchMessagingSupportedcontentSupportedContentIdAsyncWithHttpInfo (string supportedContentId, SupportedContent body);
 
         /// <summary>
         /// Create a Supported Content profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated - use POST /api/v2/conversations/messaging/supportedcontent as replacement
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SupportedContent</param>
         /// <returns>Task of SupportedContent</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<SupportedContent> PostMessagingSupportedcontentAsync (SupportedContent body);
 
         /// <summary>
         /// Create a Supported Content profile
         /// </summary>
         /// <remarks>
-        /// 
+        /// Deprecated - use POST /api/v2/conversations/messaging/supportedcontent as replacement
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SupportedContent</param>
         /// <returns>Task of ApiResponse (SupportedContent)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<SupportedContent>> PostMessagingSupportedcontentAsyncWithHttpInfo (SupportedContent body);
 
         #endregion Asynchronous Operations
@@ -361,24 +361,24 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete a supported content profile 
+        /// Delete a supported content profile Deprecated - use DELETE /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <returns></returns>
-        
+        [Obsolete]
         public void DeleteMessagingSupportedcontentSupportedContentId (string supportedContentId)
         {
              DeleteMessagingSupportedcontentSupportedContentIdWithHttpInfo(supportedContentId);
         }
 
         /// <summary>
-        /// Delete a supported content profile 
+        /// Delete a supported content profile Deprecated - use DELETE /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         public ApiResponse<Object> DeleteMessagingSupportedcontentSupportedContentIdWithHttpInfo (string supportedContentId)
         { 
             // verify the required parameter 'supportedContentId' is set
@@ -456,12 +456,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete a supported content profile 
+        /// Delete a supported content profile Deprecated - use DELETE /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task DeleteMessagingSupportedcontentSupportedContentIdAsync (string supportedContentId)
         {
              await DeleteMessagingSupportedcontentSupportedContentIdAsyncWithHttpInfo(supportedContentId);
@@ -469,12 +469,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a supported content profile 
+        /// Delete a supported content profile Deprecated - use DELETE /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMessagingSupportedcontentSupportedContentIdAsyncWithHttpInfo (string supportedContentId)
         { 
             // verify the required parameter 'supportedContentId' is set
@@ -554,13 +554,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a list of Supported Content profiles 
+        /// Get a list of Supported Content profiles Deprecated - use GET /api/v2/conversations/messaging/supportedcontent as replacement
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>SupportedContentListing</returns>
-        
+        [Obsolete]
         public SupportedContentListing GetMessagingSupportedcontent (int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<SupportedContentListing> localVarResponse = GetMessagingSupportedcontentWithHttpInfo(pageSize, pageNumber);
@@ -568,13 +568,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of Supported Content profiles 
+        /// Get a list of Supported Content profiles Deprecated - use GET /api/v2/conversations/messaging/supportedcontent as replacement
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of SupportedContentListing</returns>
-        
+        [Obsolete]
         public ApiResponse< SupportedContentListing > GetMessagingSupportedcontentWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
 
@@ -650,13 +650,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a list of Supported Content profiles 
+        /// Get a list of Supported Content profiles Deprecated - use GET /api/v2/conversations/messaging/supportedcontent as replacement
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of SupportedContentListing</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<SupportedContentListing> GetMessagingSupportedcontentAsync (int? pageSize = null, int? pageNumber = null)
         {
              ApiResponse<SupportedContentListing> localVarResponse = await GetMessagingSupportedcontentAsyncWithHttpInfo(pageSize, pageNumber);
@@ -665,13 +665,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a list of Supported Content profiles 
+        /// Get a list of Supported Content profiles Deprecated - use GET /api/v2/conversations/messaging/supportedcontent as replacement
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (SupportedContentListing)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<SupportedContentListing>> GetMessagingSupportedcontentAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         { 
 
@@ -748,12 +748,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a supported content profile 
+        /// Get a supported content profile Deprecated - use GET /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <returns>SupportedContent</returns>
-        
+        [Obsolete]
         public SupportedContent GetMessagingSupportedcontentSupportedContentId (string supportedContentId)
         {
              ApiResponse<SupportedContent> localVarResponse = GetMessagingSupportedcontentSupportedContentIdWithHttpInfo(supportedContentId);
@@ -761,12 +761,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a supported content profile 
+        /// Get a supported content profile Deprecated - use GET /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <returns>ApiResponse of SupportedContent</returns>
-        
+        [Obsolete]
         public ApiResponse< SupportedContent > GetMessagingSupportedcontentSupportedContentIdWithHttpInfo (string supportedContentId)
         { 
             // verify the required parameter 'supportedContentId' is set
@@ -844,12 +844,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get a supported content profile 
+        /// Get a supported content profile Deprecated - use GET /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <returns>Task of SupportedContent</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<SupportedContent> GetMessagingSupportedcontentSupportedContentIdAsync (string supportedContentId)
         {
              ApiResponse<SupportedContent> localVarResponse = await GetMessagingSupportedcontentSupportedContentIdAsyncWithHttpInfo(supportedContentId);
@@ -858,12 +858,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get a supported content profile 
+        /// Get a supported content profile Deprecated - use GET /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <returns>Task of ApiResponse (SupportedContent)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<SupportedContent>> GetMessagingSupportedcontentSupportedContentIdAsyncWithHttpInfo (string supportedContentId)
         { 
             // verify the required parameter 'supportedContentId' is set
@@ -943,13 +943,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update a supported content profile 
+        /// Update a supported content profile Deprecated - use PATCH /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <param name="body">SupportedContent</param>
         /// <returns>SupportedContent</returns>
-        
+        [Obsolete]
         public SupportedContent PatchMessagingSupportedcontentSupportedContentId (string supportedContentId, SupportedContent body)
         {
              ApiResponse<SupportedContent> localVarResponse = PatchMessagingSupportedcontentSupportedContentIdWithHttpInfo(supportedContentId, body);
@@ -957,13 +957,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update a supported content profile 
+        /// Update a supported content profile Deprecated - use PATCH /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <param name="body">SupportedContent</param>
         /// <returns>ApiResponse of SupportedContent</returns>
-        
+        [Obsolete]
         public ApiResponse< SupportedContent > PatchMessagingSupportedcontentSupportedContentIdWithHttpInfo (string supportedContentId, SupportedContent body)
         { 
             // verify the required parameter 'supportedContentId' is set
@@ -1050,13 +1050,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update a supported content profile 
+        /// Update a supported content profile Deprecated - use PATCH /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <param name="body">SupportedContent</param>
         /// <returns>Task of SupportedContent</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<SupportedContent> PatchMessagingSupportedcontentSupportedContentIdAsync (string supportedContentId, SupportedContent body)
         {
              ApiResponse<SupportedContent> localVarResponse = await PatchMessagingSupportedcontentSupportedContentIdAsyncWithHttpInfo(supportedContentId, body);
@@ -1065,13 +1065,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update a supported content profile 
+        /// Update a supported content profile Deprecated - use PATCH /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="supportedContentId">Supported Content ID</param>
         /// <param name="body">SupportedContent</param>
         /// <returns>Task of ApiResponse (SupportedContent)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<SupportedContent>> PatchMessagingSupportedcontentSupportedContentIdAsyncWithHttpInfo (string supportedContentId, SupportedContent body)
         { 
             // verify the required parameter 'supportedContentId' is set
@@ -1161,12 +1161,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create a Supported Content profile 
+        /// Create a Supported Content profile Deprecated - use POST /api/v2/conversations/messaging/supportedcontent as replacement
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SupportedContent</param>
         /// <returns>SupportedContent</returns>
-        
+        [Obsolete]
         public SupportedContent PostMessagingSupportedcontent (SupportedContent body)
         {
              ApiResponse<SupportedContent> localVarResponse = PostMessagingSupportedcontentWithHttpInfo(body);
@@ -1174,12 +1174,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create a Supported Content profile 
+        /// Create a Supported Content profile Deprecated - use POST /api/v2/conversations/messaging/supportedcontent as replacement
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SupportedContent</param>
         /// <returns>ApiResponse of SupportedContent</returns>
-        
+        [Obsolete]
         public ApiResponse< SupportedContent > PostMessagingSupportedcontentWithHttpInfo (SupportedContent body)
         { 
             // verify the required parameter 'body' is set
@@ -1262,12 +1262,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create a Supported Content profile 
+        /// Create a Supported Content profile Deprecated - use POST /api/v2/conversations/messaging/supportedcontent as replacement
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SupportedContent</param>
         /// <returns>Task of SupportedContent</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<SupportedContent> PostMessagingSupportedcontentAsync (SupportedContent body)
         {
              ApiResponse<SupportedContent> localVarResponse = await PostMessagingSupportedcontentAsyncWithHttpInfo(body);
@@ -1276,12 +1276,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create a Supported Content profile 
+        /// Create a Supported Content profile Deprecated - use POST /api/v2/conversations/messaging/supportedcontent as replacement
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SupportedContent</param>
         /// <returns>Task of ApiResponse (SupportedContent)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<SupportedContent>> PostMessagingSupportedcontentAsyncWithHttpInfo (SupportedContent body)
         { 
             // verify the required parameter 'body' is set

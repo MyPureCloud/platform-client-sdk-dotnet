@@ -220,48 +220,6 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Agentassistant for "agent.assistant"
-            /// </summary>
-            [EnumMember(Value = "agent.assistant")]
-            Agentassistant,
-            
-            /// <summary>
-            /// Enum Analyticsalerting for "analytics.alerting"
-            /// </summary>
-            [EnumMember(Value = "analytics.alerting")]
-            Analyticsalerting,
-            
-            /// <summary>
-            /// Enum Analytics for "analytics"
-            /// </summary>
-            [EnumMember(Value = "analytics")]
-            Analytics,
-            
-            /// <summary>
-            /// Enum Analyticsrealtime for "analytics.realtime"
-            /// </summary>
-            [EnumMember(Value = "analytics.realtime")]
-            Analyticsrealtime,
-            
-            /// <summary>
-            /// Enum Analyticsreportingsettings for "analytics.reporting.settings"
-            /// </summary>
-            [EnumMember(Value = "analytics.reporting.settings")]
-            Analyticsreportingsettings,
-            
-            /// <summary>
-            /// Enum Architect for "architect"
-            /// </summary>
-            [EnumMember(Value = "architect")]
-            Architect,
-            
-            /// <summary>
-            /// Enum Audiohook for "audiohook"
-            /// </summary>
-            [EnumMember(Value = "audiohook")]
-            Audiohook,
-            
-            /// <summary>
             /// Enum Audit for "audit"
             /// </summary>
             [EnumMember(Value = "audit")]
@@ -550,16 +508,16 @@ namespace PureCloudPlatform.Client.V2.Model
             Telephonyconfiguration,
             
             /// <summary>
+            /// Enum Usage for "usage"
+            /// </summary>
+            [EnumMember(Value = "usage")]
+            Usage,
+            
+            /// <summary>
             /// Enum Users for "users"
             /// </summary>
             [EnumMember(Value = "users")]
             Users,
-            
-            /// <summary>
-            /// Enum Webdeployments for "web.deployments"
-            /// </summary>
-            [EnumMember(Value = "web.deployments")]
-            Webdeployments,
             
             /// <summary>
             /// Enum Webmessaging for "web.messaging"
@@ -574,16 +532,64 @@ namespace PureCloudPlatform.Client.V2.Model
             Webchat,
             
             /// <summary>
-            /// Enum Webhooks for "webhooks"
-            /// </summary>
-            [EnumMember(Value = "webhooks")]
-            Webhooks,
-            
-            /// <summary>
             /// Enum Workforcemanagement for "workforce.management"
             /// </summary>
             [EnumMember(Value = "workforce.management")]
-            Workforcemanagement
+            Workforcemanagement,
+            
+            /// <summary>
+            /// Enum Agentassistant for "agent.assistant"
+            /// </summary>
+            [EnumMember(Value = "agent.assistant")]
+            Agentassistant,
+            
+            /// <summary>
+            /// Enum Analyticsalerting for "analytics.alerting"
+            /// </summary>
+            [EnumMember(Value = "analytics.alerting")]
+            Analyticsalerting,
+            
+            /// <summary>
+            /// Enum Analytics for "analytics"
+            /// </summary>
+            [EnumMember(Value = "analytics")]
+            Analytics,
+            
+            /// <summary>
+            /// Enum Analyticsrealtime for "analytics.realtime"
+            /// </summary>
+            [EnumMember(Value = "analytics.realtime")]
+            Analyticsrealtime,
+            
+            /// <summary>
+            /// Enum Analyticsreportingsettings for "analytics.reporting.settings"
+            /// </summary>
+            [EnumMember(Value = "analytics.reporting.settings")]
+            Analyticsreportingsettings,
+            
+            /// <summary>
+            /// Enum Architect for "architect"
+            /// </summary>
+            [EnumMember(Value = "architect")]
+            Architect,
+            
+            /// <summary>
+            /// Enum Audiohook for "audiohook"
+            /// </summary>
+            [EnumMember(Value = "audiohook")]
+            Audiohook,
+            
+            /// <summary>
+            /// Enum Webdeployments for "web.deployments"
+            /// </summary>
+            [EnumMember(Value = "web.deployments")]
+            Webdeployments,
+            
+            /// <summary>
+            /// Enum Webhooks for "webhooks"
+            /// </summary>
+            [EnumMember(Value = "webhooks")]
+            Webhooks
         }
         /// <summary>
         /// The reason for rejecting the limit override request

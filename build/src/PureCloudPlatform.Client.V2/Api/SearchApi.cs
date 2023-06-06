@@ -356,7 +356,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>KnowledgeSearchResponse</returns>
-        
+        [Obsolete]
         KnowledgeSearchResponse PostKnowledgeKnowledgebaseSearch (string knowledgeBaseId, KnowledgeSearchRequest body = null);
 
         /// <summary>
@@ -369,7 +369,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of KnowledgeSearchResponse</returns>
-        
+        [Obsolete]
         ApiResponse<KnowledgeSearchResponse> PostKnowledgeKnowledgebaseSearchWithHttpInfo (string knowledgeBaseId, KnowledgeSearchRequest body = null);
 
         /// <summary>
@@ -912,7 +912,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of KnowledgeSearchResponse</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<KnowledgeSearchResponse> PostKnowledgeKnowledgebaseSearchAsync (string knowledgeBaseId, KnowledgeSearchRequest body = null);
 
         /// <summary>
@@ -925,7 +925,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (KnowledgeSearchResponse)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<KnowledgeSearchResponse>> PostKnowledgeKnowledgebaseSearchAsyncWithHttpInfo (string knowledgeBaseId, KnowledgeSearchRequest body = null);
 
         /// <summary>
@@ -3806,7 +3806,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>KnowledgeSearchResponse</returns>
-        
+        [Obsolete]
         public KnowledgeSearchResponse PostKnowledgeKnowledgebaseSearch (string knowledgeBaseId, KnowledgeSearchRequest body = null)
         {
              ApiResponse<KnowledgeSearchResponse> localVarResponse = PostKnowledgeKnowledgebaseSearchWithHttpInfo(knowledgeBaseId, body);
@@ -3820,7 +3820,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of KnowledgeSearchResponse</returns>
-        
+        [Obsolete]
         public ApiResponse< KnowledgeSearchResponse > PostKnowledgeKnowledgebaseSearchWithHttpInfo (string knowledgeBaseId, KnowledgeSearchRequest body = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set
@@ -3910,7 +3910,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of KnowledgeSearchResponse</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<KnowledgeSearchResponse> PostKnowledgeKnowledgebaseSearchAsync (string knowledgeBaseId, KnowledgeSearchRequest body = null)
         {
              ApiResponse<KnowledgeSearchResponse> localVarResponse = await PostKnowledgeKnowledgebaseSearchAsyncWithHttpInfo(knowledgeBaseId, body);
@@ -3925,7 +3925,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="knowledgeBaseId">Knowledge base ID</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (KnowledgeSearchResponse)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<KnowledgeSearchResponse>> PostKnowledgeKnowledgebaseSearchAsyncWithHttpInfo (string knowledgeBaseId, KnowledgeSearchRequest body = null)
         { 
             // verify the required parameter 'knowledgeBaseId' is set

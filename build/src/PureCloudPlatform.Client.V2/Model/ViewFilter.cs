@@ -1097,6 +1097,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Noinputconfirmation,
             
             /// <summary>
+            /// Enum Noinputdisambiguation for "NoInputDisambiguation"
+            /// </summary>
+            [EnumMember(Value = "NoInputDisambiguation")]
+            Noinputdisambiguation,
+            
+            /// <summary>
             /// Enum Nomatchcollection for "NoMatchCollection"
             /// </summary>
             [EnumMember(Value = "NoMatchCollection")]
@@ -1107,6 +1113,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "NoMatchConfirmation")]
             Nomatchconfirmation,
+            
+            /// <summary>
+            /// Enum Nomatchdisambiguation for "NoMatchDisambiguation"
+            /// </summary>
+            [EnumMember(Value = "NoMatchDisambiguation")]
+            Nomatchdisambiguation,
             
             /// <summary>
             /// Enum Maxwrongmatch for "MaxWrongMatch"

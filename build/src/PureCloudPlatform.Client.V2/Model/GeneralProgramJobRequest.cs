@@ -34,16 +34,52 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Enus for "en-US"
+            /// Enum Ar001 for "ar-001"
             /// </summary>
-            [EnumMember(Value = "en-US")]
-            Enus,
+            [EnumMember(Value = "ar-001")]
+            Ar001,
             
             /// <summary>
-            /// Enum Esus for "es-US"
+            /// Enum Arae for "ar-AE"
             /// </summary>
-            [EnumMember(Value = "es-US")]
-            Esus,
+            [EnumMember(Value = "ar-AE")]
+            Arae,
+            
+            /// <summary>
+            /// Enum Arbh for "ar-BH"
+            /// </summary>
+            [EnumMember(Value = "ar-BH")]
+            Arbh,
+            
+            /// <summary>
+            /// Enum Areg for "ar-EG"
+            /// </summary>
+            [EnumMember(Value = "ar-EG")]
+            Areg,
+            
+            /// <summary>
+            /// Enum Aril for "ar-IL"
+            /// </summary>
+            [EnumMember(Value = "ar-IL")]
+            Aril,
+            
+            /// <summary>
+            /// Enum Arsa for "ar-SA"
+            /// </summary>
+            [EnumMember(Value = "ar-SA")]
+            Arsa,
+            
+            /// <summary>
+            /// Enum Artn for "ar-TN"
+            /// </summary>
+            [EnumMember(Value = "ar-TN")]
+            Artn,
+            
+            /// <summary>
+            /// Enum Dede for "de-DE"
+            /// </summary>
+            [EnumMember(Value = "de-DE")]
+            Dede,
             
             /// <summary>
             /// Enum Enau for "en-AU"
@@ -58,6 +94,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Engb,
             
             /// <summary>
+            /// Enum Enin for "en-IN"
+            /// </summary>
+            [EnumMember(Value = "en-IN")]
+            Enin,
+            
+            /// <summary>
+            /// Enum Enus for "en-US"
+            /// </summary>
+            [EnumMember(Value = "en-US")]
+            Enus,
+            
+            /// <summary>
             /// Enum Enza for "en-ZA"
             /// </summary>
             [EnumMember(Value = "en-ZA")]
@@ -70,16 +118,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Eses,
             
             /// <summary>
-            /// Enum Enin for "en-IN"
+            /// Enum Esus for "es-US"
             /// </summary>
-            [EnumMember(Value = "en-IN")]
-            Enin,
-            
-            /// <summary>
-            /// Enum Frfr for "fr-FR"
-            /// </summary>
-            [EnumMember(Value = "fr-FR")]
-            Frfr,
+            [EnumMember(Value = "es-US")]
+            Esus,
             
             /// <summary>
             /// Enum Frca for "fr-CA"
@@ -88,40 +130,22 @@ namespace PureCloudPlatform.Client.V2.Model
             Frca,
             
             /// <summary>
+            /// Enum Frfr for "fr-FR"
+            /// </summary>
+            [EnumMember(Value = "fr-FR")]
+            Frfr,
+            
+            /// <summary>
             /// Enum Itit for "it-IT"
             /// </summary>
             [EnumMember(Value = "it-IT")]
             Itit,
             
             /// <summary>
-            /// Enum Dede for "de-DE"
+            /// Enum Jajp for "ja-JP"
             /// </summary>
-            [EnumMember(Value = "de-DE")]
-            Dede,
-            
-            /// <summary>
-            /// Enum Ptbr for "pt-BR"
-            /// </summary>
-            [EnumMember(Value = "pt-BR")]
-            Ptbr,
-            
-            /// <summary>
-            /// Enum Plpl for "pl-PL"
-            /// </summary>
-            [EnumMember(Value = "pl-PL")]
-            Plpl,
-            
-            /// <summary>
-            /// Enum Ptpt for "pt-PT"
-            /// </summary>
-            [EnumMember(Value = "pt-PT")]
-            Ptpt,
-            
-            /// <summary>
-            /// Enum Nlnl for "nl-NL"
-            /// </summary>
-            [EnumMember(Value = "nl-NL")]
-            Nlnl,
+            [EnumMember(Value = "ja-JP")]
+            Jajp,
             
             /// <summary>
             /// Enum Kokr for "ko-KR"
@@ -130,10 +154,28 @@ namespace PureCloudPlatform.Client.V2.Model
             Kokr,
             
             /// <summary>
-            /// Enum Jajp for "ja-JP"
+            /// Enum Nlnl for "nl-NL"
             /// </summary>
-            [EnumMember(Value = "ja-JP")]
-            Jajp
+            [EnumMember(Value = "nl-NL")]
+            Nlnl,
+            
+            /// <summary>
+            /// Enum Plpl for "pl-PL"
+            /// </summary>
+            [EnumMember(Value = "pl-PL")]
+            Plpl,
+            
+            /// <summary>
+            /// Enum Ptbr for "pt-BR"
+            /// </summary>
+            [EnumMember(Value = "pt-BR")]
+            Ptbr,
+            
+            /// <summary>
+            /// Enum Ptpt for "pt-PT"
+            /// </summary>
+            [EnumMember(Value = "pt-PT")]
+            Ptpt
         }
         /// <summary>
         /// The mode to use for the general program job, default value is Skip

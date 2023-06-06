@@ -18,9 +18,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## void DeleteMessagingSupportedcontentSupportedContentId (string supportedContentId)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Delete a supported content profile
+
+Deprecated - use DELETE /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
 
 
 
@@ -82,9 +84,11 @@ void (empty response body)
 
 ## [**SupportedContentListing**](SupportedContentListing.html) GetMessagingSupportedcontent (int? pageSize = null, int? pageNumber = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get a list of Supported Content profiles
+
+Deprecated - use GET /api/v2/conversations/messaging/supportedcontent as replacement
 
 
 
@@ -149,9 +153,11 @@ namespace Example
 
 ## [**SupportedContent**](SupportedContent.html) GetMessagingSupportedcontentSupportedContentId (string supportedContentId)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get a supported content profile
+
+Deprecated - use GET /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
 
 
 
@@ -214,9 +220,11 @@ namespace Example
 
 ## [**SupportedContent**](SupportedContent.html) PatchMessagingSupportedcontentSupportedContentId (string supportedContentId, SupportedContent body)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Update a supported content profile
+
+Deprecated - use PATCH /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
 
 
 
@@ -281,9 +289,11 @@ namespace Example
 
 ## [**SupportedContent**](SupportedContent.html) PostMessagingSupportedcontent (SupportedContent body)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Create a Supported Content profile
+
+Deprecated - use POST /api/v2/conversations/messaging/supportedcontent as replacement
 
 
 

@@ -37,7 +37,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Sms for "sms"
             /// </summary>
             [EnumMember(Value = "sms")]
-            Sms
+            Sms,
+            
+            /// <summary>
+            /// Enum Open for "open"
+            /// </summary>
+            [EnumMember(Value = "open")]
+            Open
         }
         /// <summary>
         /// The messaging address messenger type.
@@ -55,7 +61,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="CreateOutboundMessagingConversationRequest" /> class.
         /// </summary>
         /// <param name="QueueId">The ID of the queue to be associated with the message. This will determine the fromAddress of the message. (required).</param>
-        /// <param name="ToAddress">The messaging address of the recipient of the message. For an SMS messenger type, the phone number address must be in E.164 format. E.g. +13175555555 or +34234234234 (required).</param>
+        /// <param name="ToAddress">The messaging address of the recipient of the message. For an SMS messenger type, the phone number address must be in E.164 format. E.g. +13175555555 or +34234234234.  For open messenger type, any string within the outbound.open.messaging.to.address.characters.max limit can be used. (required).</param>
         /// <param name="ToAddressMessengerType">The messaging address messenger type. (required).</param>
         /// <param name="UseExistingConversation">An override to use an existing conversation.  If set to true, an existing conversation will be used if there is one within the conversation window.  If set to false, create request fails if there is a conversation within the conversation window..</param>
         /// <param name="ExternalContactId">The external contact with which the message will be associated..</param>
@@ -81,9 +87,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The messaging address of the recipient of the message. For an SMS messenger type, the phone number address must be in E.164 format. E.g. +13175555555 or +34234234234
+        /// The messaging address of the recipient of the message. For an SMS messenger type, the phone number address must be in E.164 format. E.g. +13175555555 or +34234234234.  For open messenger type, any string within the outbound.open.messaging.to.address.characters.max limit can be used.
         /// </summary>
-        /// <value>The messaging address of the recipient of the message. For an SMS messenger type, the phone number address must be in E.164 format. E.g. +13175555555 or +34234234234</value>
+        /// <value>The messaging address of the recipient of the message. For an SMS messenger type, the phone number address must be in E.164 format. E.g. +13175555555 or +34234234234.  For open messenger type, any string within the outbound.open.messaging.to.address.characters.max limit can be used.</value>
         [DataMember(Name="toAddress", EmitDefaultValue=false)]
         public string ToAddress { get; set; }
 

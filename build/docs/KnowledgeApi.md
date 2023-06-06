@@ -551,7 +551,7 @@ namespace Example
 
 ## [**KnowledgeCategory**](KnowledgeCategory.html) DeleteKnowledgeKnowledgebaseLanguageCategory (string categoryId, string knowledgeBaseId, string languageCode)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Delete category
 
@@ -620,7 +620,7 @@ namespace Example
 
 ## [**KnowledgeDocument**](KnowledgeDocument.html) DeleteKnowledgeKnowledgebaseLanguageDocument (string documentId, string knowledgeBaseId, string languageCode)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Delete document
 
@@ -689,7 +689,7 @@ namespace Example
 
 ## void DeleteKnowledgeKnowledgebaseLanguageDocumentsImport (string knowledgeBaseId, string languageCode, string importId)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Delete import operation
 
@@ -2040,7 +2040,7 @@ namespace Example
 
 ## [**CategoryListing**](CategoryListing.html) GetKnowledgeKnowledgebaseLanguageCategories (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string name = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get categories
 
@@ -2117,7 +2117,7 @@ namespace Example
 
 ## [**KnowledgeExtendedCategory**](KnowledgeExtendedCategory.html) GetKnowledgeKnowledgebaseLanguageCategory (string categoryId, string knowledgeBaseId, string languageCode)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get category
 
@@ -2186,7 +2186,7 @@ namespace Example
 
 ## [**KnowledgeDocument**](KnowledgeDocument.html) GetKnowledgeKnowledgebaseLanguageDocument (string documentId, string knowledgeBaseId, string languageCode)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get document
 
@@ -2255,7 +2255,7 @@ namespace Example
 
 ## [**DocumentListing**](DocumentListing.html) GetKnowledgeKnowledgebaseLanguageDocuments (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string categories = null, string title = null, string sortBy = null, string sortOrder = null, List<string> documentIds = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get documents
 
@@ -2340,7 +2340,7 @@ namespace Example
 
 ## [**KnowledgeImport**](KnowledgeImport.html) GetKnowledgeKnowledgebaseLanguageDocumentsImport (string knowledgeBaseId, string languageCode, string importId)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get import operation report
 
@@ -2409,7 +2409,7 @@ namespace Example
 
 ## [**KnowledgeTraining**](KnowledgeTraining.html) GetKnowledgeKnowledgebaseLanguageTraining (string knowledgeBaseId, string languageCode, string trainingId)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get training detail
 
@@ -2478,7 +2478,7 @@ namespace Example
 
 ## [**TrainingListing**](TrainingListing.html) GetKnowledgeKnowledgebaseLanguageTrainings (string knowledgeBaseId, string languageCode, string before = null, string after = null, string limit = null, string pageSize = null, string knowledgeDocumentsState = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get all trainings information for a knowledgebase
 
@@ -2796,8 +2796,8 @@ namespace Example
             var apiInstance = new KnowledgeApi();
             var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
             var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
-            var limit = limit_example;  // string | Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional) 
-            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+            var limit = limit_example;  // string | Number of entities to return. Maximum of 100. Deprecated in favour of pageSize (optional) 
+            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 100. (optional) 
             var name = name_example;  // string | Filter by Name. (optional) 
             var coreLanguage = coreLanguage_example;  // string | Filter by core language. (optional) 
             var published = true;  // bool? | Filter by published status. (optional) 
@@ -2826,8 +2826,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
-| **limit** | **string**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize | [optional]  |
-| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+| **limit** | **string**| Number of entities to return. Maximum of 100. Deprecated in favour of pageSize | [optional]  |
+| **pageSize** | **string**| Number of entities to return. Maximum of 100. | [optional]  |
 | **name** | **string**| Filter by Name. | [optional]  |
 | **coreLanguage** | **string**| Filter by core language. | [optional] <br />**Values**: en-US, en-UK, en-AU, en-CA, en-HK, en-IN, en-IE, en-NZ, en-PH, en-SG, en-ZA, de-DE, de-AT, de-CH, es-AR, es-CO, es-MX, es-US, es-ES, fr-FR, fr-BE, fr-CA, fr-CH, pt-BR, pt-PT, nl-NL, nl-BE, it-IT |
 | **published** | **bool?**| Filter by published status. | [optional]  |
@@ -3386,7 +3386,7 @@ namespace Example
 
 ## [**KnowledgeExtendedCategory**](KnowledgeExtendedCategory.html) PatchKnowledgeKnowledgebaseLanguageCategory (string categoryId, string knowledgeBaseId, string languageCode, KnowledgeCategoryRequest body)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Update category
 
@@ -3457,7 +3457,7 @@ namespace Example
 
 ## [**KnowledgeDocument**](KnowledgeDocument.html) PatchKnowledgeKnowledgebaseLanguageDocument (string documentId, string knowledgeBaseId, string languageCode, KnowledgeDocumentRequest body)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Update document
 
@@ -3528,7 +3528,7 @@ namespace Example
 
 ## [**DocumentListing**](DocumentListing.html) PatchKnowledgeKnowledgebaseLanguageDocuments (string knowledgeBaseId, string languageCode, List<KnowledgeDocumentBulkRequest> body)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Update documents collection
 
@@ -3597,7 +3597,7 @@ namespace Example
 
 ## [**KnowledgeImport**](KnowledgeImport.html) PatchKnowledgeKnowledgebaseLanguageDocumentsImport (string knowledgeBaseId, string languageCode, string importId, ImportStatusRequest body)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Start import operation
 
@@ -4596,7 +4596,7 @@ namespace Example
 
 ## [**KnowledgeExtendedCategory**](KnowledgeExtendedCategory.html) PostKnowledgeKnowledgebaseLanguageCategories (string knowledgeBaseId, string languageCode, KnowledgeCategoryRequest body)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Create new category
 
@@ -4665,7 +4665,7 @@ namespace Example
 
 ## [**KnowledgeDocument**](KnowledgeDocument.html) PostKnowledgeKnowledgebaseLanguageDocuments (string knowledgeBaseId, string languageCode, KnowledgeDocumentRequest body)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Create document
 
@@ -4734,7 +4734,7 @@ namespace Example
 
 ## [**KnowledgeImport**](KnowledgeImport.html) PostKnowledgeKnowledgebaseLanguageDocumentsImports (string knowledgeBaseId, string languageCode, KnowledgeImport body)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Create import operation
 
@@ -4803,7 +4803,7 @@ namespace Example
 
 ## [**KnowledgeTraining**](KnowledgeTraining.html) PostKnowledgeKnowledgebaseLanguageTrainingPromote (string knowledgeBaseId, string languageCode, string trainingId)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Promote trained documents from draft state to active.
 
@@ -4872,7 +4872,7 @@ namespace Example
 
 ## [**KnowledgeTraining**](KnowledgeTraining.html) PostKnowledgeKnowledgebaseLanguageTrainings (string knowledgeBaseId, string languageCode)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Trigger training
 
@@ -4939,7 +4939,7 @@ namespace Example
 
 ## [**KnowledgeSearchResponse**](KnowledgeSearchResponse.html) PostKnowledgeKnowledgebaseSearch (string knowledgeBaseId, KnowledgeSearchRequest body = null)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Search Documents
 

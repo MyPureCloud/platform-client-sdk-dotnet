@@ -11,6 +11,7 @@ title: ComparisonPeriod
 | **Kpi** | **string** | Key Performance Indicator optimised during the comparison period. | [optional] |
 | **DateStarted** | **DateTime?** | Start date of the comparison period. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DateEnded** | **DateTime?** | End date of the comparison period. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **PercentageBenefit** | **double?** | The percentage benefit on this queue for the duration of the comparison period | [optional] |
 | **KpiResults** | [**List&lt;KpiResult&gt;**](KpiResult.html) | KPI results for each metric | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

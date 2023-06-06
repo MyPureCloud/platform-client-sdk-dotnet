@@ -24,11 +24,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CommunicationBasedACW">Communication Based ACW.</param>
         /// <param name="IncludeNonAgentConversationSummary">Display communication summary.</param>
         /// <param name="AllowCallbackQueueSelection">Allow Callback Queue Selection.</param>
-        public Settings(bool? CommunicationBasedACW = null, bool? IncludeNonAgentConversationSummary = null, bool? AllowCallbackQueueSelection = null)
+        /// <param name="CompleteAcwWhenAgentTransitionsOffline">Complete ACW When Agent Transitions Offline.</param>
+        /// <param name="TotalActiveCallback">Exclude the 'interacting' duration from the handle calculations of callbacks.</param>
+        public Settings(bool? CommunicationBasedACW = null, bool? IncludeNonAgentConversationSummary = null, bool? AllowCallbackQueueSelection = null, bool? CompleteAcwWhenAgentTransitionsOffline = null, bool? TotalActiveCallback = null)
         {
             this.CommunicationBasedACW = CommunicationBasedACW;
             this.IncludeNonAgentConversationSummary = IncludeNonAgentConversationSummary;
             this.AllowCallbackQueueSelection = AllowCallbackQueueSelection;
+            this.CompleteAcwWhenAgentTransitionsOffline = CompleteAcwWhenAgentTransitionsOffline;
+            this.TotalActiveCallback = TotalActiveCallback;
             
         }
         
@@ -60,6 +64,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? AllowCallbackQueueSelection { get; set; }
 
 
+
+        /// <summary>
+        /// Complete ACW When Agent Transitions Offline
+        /// </summary>
+        /// <value>Complete ACW When Agent Transitions Offline</value>
+        [DataMember(Name="completeAcwWhenAgentTransitionsOffline", EmitDefaultValue=false)]
+        public bool? CompleteAcwWhenAgentTransitionsOffline { get; set; }
+
+
+
+        /// <summary>
+        /// Exclude the 'interacting' duration from the handle calculations of callbacks
+        /// </summary>
+        /// <value>Exclude the 'interacting' duration from the handle calculations of callbacks</value>
+        [DataMember(Name="totalActiveCallback", EmitDefaultValue=false)]
+        public bool? TotalActiveCallback { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -72,6 +94,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CommunicationBasedACW: ").Append(CommunicationBasedACW).Append("\n");
             sb.Append("  IncludeNonAgentConversationSummary: ").Append(IncludeNonAgentConversationSummary).Append("\n");
             sb.Append("  AllowCallbackQueueSelection: ").Append(AllowCallbackQueueSelection).Append("\n");
+            sb.Append("  CompleteAcwWhenAgentTransitionsOffline: ").Append(CompleteAcwWhenAgentTransitionsOffline).Append("\n");
+            sb.Append("  TotalActiveCallback: ").Append(TotalActiveCallback).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -126,6 +150,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AllowCallbackQueueSelection == other.AllowCallbackQueueSelection ||
                     this.AllowCallbackQueueSelection != null &&
                     this.AllowCallbackQueueSelection.Equals(other.AllowCallbackQueueSelection)
+                ) &&
+                (
+                    this.CompleteAcwWhenAgentTransitionsOffline == other.CompleteAcwWhenAgentTransitionsOffline ||
+                    this.CompleteAcwWhenAgentTransitionsOffline != null &&
+                    this.CompleteAcwWhenAgentTransitionsOffline.Equals(other.CompleteAcwWhenAgentTransitionsOffline)
+                ) &&
+                (
+                    this.TotalActiveCallback == other.TotalActiveCallback ||
+                    this.TotalActiveCallback != null &&
+                    this.TotalActiveCallback.Equals(other.TotalActiveCallback)
                 );
         }
 
@@ -148,6 +182,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AllowCallbackQueueSelection != null)
                     hash = hash * 59 + this.AllowCallbackQueueSelection.GetHashCode();
+
+                if (this.CompleteAcwWhenAgentTransitionsOffline != null)
+                    hash = hash * 59 + this.CompleteAcwWhenAgentTransitionsOffline.GetHashCode();
+
+                if (this.TotalActiveCallback != null)
+                    hash = hash * 59 + this.TotalActiveCallback.GetHashCode();
 
                 return hash;
             }

@@ -3363,7 +3363,7 @@ namespace Example
 | **pageNumber** | **int?**|  | [optional] [default to 1] |
 | **pageSize** | **int?**| Max value is 100 | [optional] [default to 25] |
 | **sortOrder** | **string**| Note: results are sorted by name. | [optional] [default to asc]<br />**Values**: asc, desc |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, dateLastLogin, authorization.unusedRoles, team, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, dateLastLogin, authorization.unusedRoles, team, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography |
 | **name** | **string**| Filter by queue member name | [optional]  |
 | **profileSkills** | [**List<string>**](string.html)| Filter by profile skill | [optional]  |
 | **skills** | [**List<string>**](string.html)| Filter by skill | [optional]  |
@@ -3452,7 +3452,7 @@ namespace Example
 | **pageNumber** | **int?**|  | [optional] [default to 1] |
 | **pageSize** | **int?**| Max value is 100 | [optional] [default to 25] |
 | **sortOrder** | **string**| Note: results are sorted by name. | [optional] [default to asc]<br />**Values**: asc, desc |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, dateLastLogin, authorization.unusedRoles, team, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, dateLastLogin, authorization.unusedRoles, team, profileSkills, certifications, locations, groups, skills, languages, languagePreference, employerInfo, biography |
 | **joined** | **bool?**| Filter by joined status | [optional]  |
 | **name** | **string**| Filter by queue member name | [optional]  |
 | **profileSkills** | [**List<string>**](string.html)| Filter by profile skill | [optional]  |

@@ -280,6 +280,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Tacd,
             
             /// <summary>
+            /// Enum Tactivecallback for "tActiveCallback"
+            /// </summary>
+            [EnumMember(Value = "tActiveCallback")]
+            Tactivecallback,
+            
+            /// <summary>
+            /// Enum Tactivecallbackcomplete for "tActiveCallbackComplete"
+            /// </summary>
+            [EnumMember(Value = "tActiveCallbackComplete")]
+            Tactivecallbackcomplete,
+            
+            /// <summary>
             /// Enum Tacw for "tAcw"
             /// </summary>
             [EnumMember(Value = "tAcw")]

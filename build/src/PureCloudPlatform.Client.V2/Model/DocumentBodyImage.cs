@@ -29,10 +29,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Url">The URL for the image. (required).</param>
         /// <param name="Hyperlink">The URL of the page that the hyperlink goes to..</param>
-        public DocumentBodyImage(string Url = null, string Hyperlink = null)
+        /// <param name="Properties">The properties for the image..</param>
+        public DocumentBodyImage(string Url = null, string Hyperlink = null, DocumentBodyImageProperties Properties = null)
         {
             this.Url = Url;
             this.Hyperlink = Hyperlink;
+            this.Properties = Properties;
             
         }
         
@@ -55,6 +57,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Hyperlink { get; set; }
 
 
+
+        /// <summary>
+        /// The properties for the image.
+        /// </summary>
+        /// <value>The properties for the image.</value>
+        [DataMember(Name="properties", EmitDefaultValue=false)]
+        public DocumentBodyImageProperties Properties { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -66,6 +77,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Url: ").Append(Url).Append("\n");
             sb.Append("  Hyperlink: ").Append(Hyperlink).Append("\n");
+            sb.Append("  Properties: ").Append(Properties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -115,6 +127,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Hyperlink == other.Hyperlink ||
                     this.Hyperlink != null &&
                     this.Hyperlink.Equals(other.Hyperlink)
+                ) &&
+                (
+                    this.Properties == other.Properties ||
+                    this.Properties != null &&
+                    this.Properties.Equals(other.Properties)
                 );
         }
 
@@ -134,6 +151,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Hyperlink != null)
                     hash = hash * 59 + this.Hyperlink.GetHashCode();
+
+                if (this.Properties != null)
+                    hash = hash * 59 + this.Properties.GetHashCode();
 
                 return hash;
             }

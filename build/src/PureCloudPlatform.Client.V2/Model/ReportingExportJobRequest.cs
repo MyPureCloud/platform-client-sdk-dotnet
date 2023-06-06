@@ -640,7 +640,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum WorkitemPerformanceSummaryView for "WORKITEM_PERFORMANCE_SUMMARY_VIEW"
             /// </summary>
             [EnumMember(Value = "WORKITEM_PERFORMANCE_SUMMARY_VIEW")]
-            WorkitemPerformanceSummaryView
+            WorkitemPerformanceSummaryView,
+            
+            /// <summary>
+            /// Enum AgentAssistPerformanceView for "AGENT_ASSIST_PERFORMANCE_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_ASSIST_PERFORMANCE_VIEW")]
+            AgentAssistPerformanceView,
+            
+            /// <summary>
+            /// Enum ContactCenterPerformanceView for "CONTACT_CENTER_PERFORMANCE_VIEW"
+            /// </summary>
+            [EnumMember(Value = "CONTACT_CENTER_PERFORMANCE_VIEW")]
+            ContactCenterPerformanceView
         }
         /// <summary>
         /// The user supplied csv delimiter string value either of type 'comma' or 'semicolon' permitted for the export request
@@ -670,6 +682,45 @@ namespace PureCloudPlatform.Client.V2.Model
             Comma
         }
         /// <summary>
+        /// Indicates the duration format for the exports
+        /// </summary>
+        /// <value>Indicates the duration format for the exports</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum DurationFormatEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Seconds for "Seconds"
+            /// </summary>
+            [EnumMember(Value = "Seconds")]
+            Seconds,
+            
+            /// <summary>
+            /// Enum Milliseconds for "Milliseconds"
+            /// </summary>
+            [EnumMember(Value = "Milliseconds")]
+            Milliseconds,
+            
+            /// <summary>
+            /// Enum Hhmmss for "Hhmmss"
+            /// </summary>
+            [EnumMember(Value = "Hhmmss")]
+            Hhmmss,
+            
+            /// <summary>
+            /// Enum Hms for "Hms"
+            /// </summary>
+            [EnumMember(Value = "Hms")]
+            Hms
+        }
+        /// <summary>
         /// The requested format of the exported data
         /// </summary>
         /// <value>The requested format of the exported data</value>
@@ -687,6 +738,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The user supplied csv delimiter string value either of type 'comma' or 'semicolon' permitted for the export request</value>
         [DataMember(Name="csvDelimiter", EmitDefaultValue=false)]
         public CsvDelimiterEnum? CsvDelimiter { get; set; }
+        /// <summary>
+        /// Indicates the duration format for the exports
+        /// </summary>
+        /// <value>Indicates the duration format for the exports</value>
+        [DataMember(Name="durationFormat", EmitDefaultValue=false)]
+        public DurationFormatEnum? DurationFormat { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportingExportJobRequest" /> class.
@@ -715,7 +772,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="HasCustomParticipantAttributes">Indicates if custom participant attributes will be exported.</param>
         /// <param name="RecipientEmails">The list of email recipients for the exports.</param>
         /// <param name="IncludeDurationFormatInHeader">Indicates whether to include selected duration format to the column headers.</param>
-        public ReportingExportJobRequest(string Name = null, string TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string Period = null, ViewTypeEnum? ViewType = null, ViewFilter Filter = null, bool? Read = null, string Locale = null, bool? HasFormatDurations = null, bool? HasSplitFilters = null, bool? ExcludeEmptyRows = null, bool? HasSplitByMedia = null, bool? HasSummaryRow = null, CsvDelimiterEnum? CsvDelimiter = null, List<SelectedColumns> SelectedColumns = null, bool? HasCustomParticipantAttributes = null, List<string> RecipientEmails = null, bool? IncludeDurationFormatInHeader = null)
+        /// <param name="DurationFormat">Indicates the duration format for the exports.</param>
+        public ReportingExportJobRequest(string Name = null, string TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string Period = null, ViewTypeEnum? ViewType = null, ViewFilter Filter = null, bool? Read = null, string Locale = null, bool? HasFormatDurations = null, bool? HasSplitFilters = null, bool? ExcludeEmptyRows = null, bool? HasSplitByMedia = null, bool? HasSummaryRow = null, CsvDelimiterEnum? CsvDelimiter = null, List<SelectedColumns> SelectedColumns = null, bool? HasCustomParticipantAttributes = null, List<string> RecipientEmails = null, bool? IncludeDurationFormatInHeader = null, DurationFormatEnum? DurationFormat = null)
         {
             this.Name = Name;
             this.TimeZone = TimeZone;
@@ -736,6 +794,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.HasCustomParticipantAttributes = HasCustomParticipantAttributes;
             this.RecipientEmails = RecipientEmails;
             this.IncludeDurationFormatInHeader = IncludeDurationFormatInHeader;
+            this.DurationFormat = DurationFormat;
             
         }
         
@@ -890,6 +949,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? IncludeDurationFormatInHeader { get; set; }
 
 
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -918,6 +979,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  HasCustomParticipantAttributes: ").Append(HasCustomParticipantAttributes).Append("\n");
             sb.Append("  RecipientEmails: ").Append(RecipientEmails).Append("\n");
             sb.Append("  IncludeDurationFormatInHeader: ").Append(IncludeDurationFormatInHeader).Append("\n");
+            sb.Append("  DurationFormat: ").Append(DurationFormat).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1052,6 +1114,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.IncludeDurationFormatInHeader == other.IncludeDurationFormatInHeader ||
                     this.IncludeDurationFormatInHeader != null &&
                     this.IncludeDurationFormatInHeader.Equals(other.IncludeDurationFormatInHeader)
+                ) &&
+                (
+                    this.DurationFormat == other.DurationFormat ||
+                    this.DurationFormat != null &&
+                    this.DurationFormat.Equals(other.DurationFormat)
                 );
         }
 
@@ -1122,6 +1189,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.IncludeDurationFormatInHeader != null)
                     hash = hash * 59 + this.IncludeDurationFormatInHeader.GetHashCode();
+
+                if (this.DurationFormat != null)
+                    hash = hash * 59 + this.DurationFormat.GetHashCode();
 
                 return hash;
             }

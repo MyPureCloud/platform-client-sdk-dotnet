@@ -353,6 +353,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The date this version became the published version of the flow. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The date this version became the published version of the flow. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="datePublished", EmitDefaultValue=false)]
+        public DateTime? DatePublished { get; private set; }
+
+
+
+        /// <summary>
+        /// The date this version was no longer the published version of the flow. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The date this version was no longer the published version of the flow. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="datePublishedEnd", EmitDefaultValue=false)]
+        public DateTime? DatePublishedEnd { get; private set; }
+
+
+
+        /// <summary>
         /// Information about the natural language understanding configuration for the flow version
         /// </summary>
         /// <value>Information about the natural language understanding configuration for the flow version</value>
@@ -413,6 +431,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PublishResultUri: ").Append(PublishResultUri).Append("\n");
             sb.Append("  InputSchema: ").Append(InputSchema).Append("\n");
             sb.Append("  OutputSchema: ").Append(OutputSchema).Append("\n");
+            sb.Append("  DatePublished: ").Append(DatePublished).Append("\n");
+            sb.Append("  DatePublishedEnd: ").Append(DatePublishedEnd).Append("\n");
             sb.Append("  NluInfo: ").Append(NluInfo).Append("\n");
             sb.Append("  SupportedLanguages: ").Append(SupportedLanguages).Append("\n");
             sb.Append("  CompatibleFlowTypes: ").Append(CompatibleFlowTypes).Append("\n");
@@ -543,6 +563,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.OutputSchema.Equals(other.OutputSchema)
                 ) &&
                 (
+                    this.DatePublished == other.DatePublished ||
+                    this.DatePublished != null &&
+                    this.DatePublished.Equals(other.DatePublished)
+                ) &&
+                (
+                    this.DatePublishedEnd == other.DatePublishedEnd ||
+                    this.DatePublishedEnd != null &&
+                    this.DatePublishedEnd.Equals(other.DatePublishedEnd)
+                ) &&
+                (
                     this.NluInfo == other.NluInfo ||
                     this.NluInfo != null &&
                     this.NluInfo.Equals(other.NluInfo)
@@ -625,6 +655,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.OutputSchema != null)
                     hash = hash * 59 + this.OutputSchema.GetHashCode();
+
+                if (this.DatePublished != null)
+                    hash = hash * 59 + this.DatePublished.GetHashCode();
+
+                if (this.DatePublishedEnd != null)
+                    hash = hash * 59 + this.DatePublishedEnd.GetHashCode();
 
                 if (this.NluInfo != null)
                     hash = hash * 59 + this.NluInfo.GetHashCode();

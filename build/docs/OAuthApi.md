@@ -680,7 +680,7 @@ namespace Example
 
 <a name="postoauthclientusagequery"></a>
 
-## [**UsageExecutionResult**](UsageExecutionResult.html) PostOauthClientUsageQuery (string clientId, ApiUsageQuery body)
+## [**UsageExecutionResult**](UsageExecutionResult.html) PostOauthClientUsageQuery (string clientId, ApiUsageClientQuery body)
 
 
 
@@ -718,7 +718,7 @@ namespace Example
 
             var apiInstance = new OAuthApi();
             var clientId = clientId_example;  // string | Client ID
-            var body = new ApiUsageQuery(); // ApiUsageQuery | Query
+            var body = new ApiUsageClientQuery(); // ApiUsageClientQuery | Query
 
             try
             { 
@@ -741,7 +741,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **clientId** | **string**| Client ID |  |
-| **body** | [**ApiUsageQuery**](ApiUsageQuery.html)| Query |  |
+| **body** | [**ApiUsageClientQuery**](ApiUsageClientQuery.html)| Query |  |
 {: class="table table-striped"}
 
 ### Return type

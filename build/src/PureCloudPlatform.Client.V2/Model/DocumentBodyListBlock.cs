@@ -56,10 +56,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Type">The type of the list block. (required).</param>
         /// <param name="Blocks">The list of items for an OrderedList or an UnorderedList. (required).</param>
-        public DocumentBodyListBlock(TypeEnum? Type = null, List<DocumentContentBlock> Blocks = null)
+        /// <param name="Properties">The properties for the list block..</param>
+        public DocumentBodyListBlock(TypeEnum? Type = null, List<DocumentListContentBlock> Blocks = null, DocumentBodyListItemProperties Properties = null)
         {
             this.Type = Type;
             this.Blocks = Blocks;
+            this.Properties = Properties;
             
         }
         
@@ -72,7 +74,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The list of items for an OrderedList or an UnorderedList.</value>
         [DataMember(Name="blocks", EmitDefaultValue=false)]
-        public List<DocumentContentBlock> Blocks { get; set; }
+        public List<DocumentListContentBlock> Blocks { get; set; }
+
+
+
+        /// <summary>
+        /// The properties for the list block.
+        /// </summary>
+        /// <value>The properties for the list block.</value>
+        [DataMember(Name="properties", EmitDefaultValue=false)]
+        public DocumentBodyListItemProperties Properties { get; set; }
 
 
         /// <summary>
@@ -86,6 +97,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Blocks: ").Append(Blocks).Append("\n");
+            sb.Append("  Properties: ").Append(Properties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -135,6 +147,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Blocks == other.Blocks ||
                     this.Blocks != null &&
                     this.Blocks.SequenceEqual(other.Blocks)
+                ) &&
+                (
+                    this.Properties == other.Properties ||
+                    this.Properties != null &&
+                    this.Properties.Equals(other.Properties)
                 );
         }
 
@@ -154,6 +171,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Blocks != null)
                     hash = hash * 59 + this.Blocks.GetHashCode();
+
+                if (this.Properties != null)
+                    hash = hash * 59 + this.Properties.GetHashCode();
 
                 return hash;
             }

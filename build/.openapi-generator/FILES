@@ -79,6 +79,7 @@ docs/AdhocRecordingTopicRecordingDataV2.md
 docs/AdhocRecordingTopicUserData.md
 docs/AdhocRecordingTopicWorkspaceData.md
 docs/Adjacents.md
+docs/AdjustableLiveSpeakerDetection.md
 docs/AdminTimeOffRequestPatch.md
 docs/AfterCallWork.md
 docs/AfterCallWorkUpdate.md
@@ -144,9 +145,11 @@ docs/AnalyticsUserDetailsQueryResponse.md
 docs/AnalyticsUserPresenceRecord.md
 docs/Annotation.md
 docs/AnswerOption.md
-docs/ApiUsageQuery.md
+docs/ApiUsageClientQuery.md
+docs/ApiUsageOrganizationQuery.md
 docs/ApiUsageQueryResult.md
 docs/ApiUsageRow.md
+docs/ApiUsageSimpleSearch.md
 docs/AppendToDncActionSettings.md
 docs/ApprovalNamespace.md
 docs/ArchitectApi.json
@@ -1340,6 +1343,8 @@ docs/DirectoryUserDevicesListing.md
 docs/DisallowedEntityLearningAssignmentItem.md
 docs/DisallowedEntityLearningAssignmentReference.md
 docs/DisconnectReason.md
+docs/Disposition.md
+docs/DispositionParameters.md
 docs/Division.md
 docs/DivisionReference.md
 docs/DivsPermittedEntityListing.md
@@ -1365,14 +1370,20 @@ docs/DocumentAuditEntityListing.md
 docs/DocumentBody.md
 docs/DocumentBodyBlock.md
 docs/DocumentBodyImage.md
+docs/DocumentBodyImageProperties.md
 docs/DocumentBodyList.md
 docs/DocumentBodyListBlock.md
+docs/DocumentBodyListBlockProperties.md
+docs/DocumentBodyListItemProperties.md
 docs/DocumentBodyParagraph.md
+docs/DocumentBodyParagraphProperties.md
 docs/DocumentBodyVideo.md
+docs/DocumentBodyVideoProperties.md
 docs/DocumentCategoryInput.md
 docs/DocumentContentBlock.md
 docs/DocumentEntityListing.md
 docs/DocumentFaq.md
+docs/DocumentListContentBlock.md
 docs/DocumentListing.md
 docs/DocumentQuery.md
 docs/DocumentQueryClause.md
@@ -1380,6 +1391,7 @@ docs/DocumentQueryInterval.md
 docs/DocumentQueryPredicate.md
 docs/DocumentReference.md
 docs/DocumentText.md
+docs/DocumentTextProperties.md
 docs/DocumentThumbnail.md
 docs/DocumentUpdate.md
 docs/DocumentUpload.md
@@ -2230,6 +2242,7 @@ docs/GetOauthClientUsageSummary-example.txt
 docs/GetOauthClients-example.txt
 docs/GetOauthScope-example.txt
 docs/GetOauthScopes-example.txt
+docs/GetOrganizationsAuthenticationSettings-example.txt
 docs/GetOrganizationsEmbeddedintegration-example.txt
 docs/GetOrganizationsIpaddressauthentication-example.txt
 docs/GetOrganizationsLimitsChangerequest-example.txt
@@ -2490,6 +2503,7 @@ docs/GetSpeechandtextanalyticsTopic-example.txt
 docs/GetSpeechandtextanalyticsTopics-example.txt
 docs/GetSpeechandtextanalyticsTopicsDialects-example.txt
 docs/GetSpeechandtextanalyticsTopicsGeneral-example.txt
+docs/GetSpeechandtextanalyticsTopicsGeneralStatus-example.txt
 docs/GetSpeechandtextanalyticsTopicsPublishjob-example.txt
 docs/GetStation-example.txt
 docs/GetStations-example.txt
@@ -2572,6 +2586,7 @@ docs/GetTextbotsBotsSearch-example.txt
 docs/GetTimezones-example.txt
 docs/GetTokensMe-example.txt
 docs/GetUsageQueryExecutionIdResults-example.txt
+docs/GetUsageSimplesearchExecutionIdResults-example.txt
 docs/GetUser-example.txt
 docs/GetUserAdjacents-example.txt
 docs/GetUserCallforwarding-example.txt
@@ -3336,6 +3351,7 @@ docs/OpenMessagingToRecipient.md
 docs/OpenNormalizedMessage.md
 docs/Operation.md
 docs/OptInSettings.md
+docs/OrgAuthSettings.md
 docs/OrgOAuthClient.md
 docs/OrgUser.md
 docs/OrgWhitelistSettings.md
@@ -3407,6 +3423,7 @@ docs/Participant.md
 docs/ParticipantAttributes.md
 docs/ParticipantBasic.md
 docs/ParticipantMetrics.md
+docs/PasswordRequirements.md
 docs/PatchAction.md
 docs/PatchActionMap.md
 docs/PatchActionMapScheduleGroups.md
@@ -3505,6 +3522,7 @@ docs/PatchLearningAssignment-example.txt
 docs/PatchLearningAssignmentReschedule-example.txt
 docs/PatchLocation-example.txt
 docs/PatchMessagingSupportedcontentSupportedContentId-example.txt
+docs/PatchOrganizationsAuthenticationSettings-example.txt
 docs/PatchOrganizationsFeature-example.txt
 docs/PatchOutboundDnclistCustomexclusioncolumns-example.txt
 docs/PatchOutboundDnclistEmailaddresses-example.txt
@@ -4045,6 +4063,7 @@ docs/PostUploadsPublicassetsImages-example.txt
 docs/PostUploadsRecordings-example.txt
 docs/PostUploadsWorkforcemanagementHistoricaldataCsv-example.txt
 docs/PostUsageQuery-example.txt
+docs/PostUsageSimplesearch-example.txt
 docs/PostUserExternalid-example.txt
 docs/PostUserGreetings-example.txt
 docs/PostUserInvite-example.txt
@@ -5243,6 +5262,8 @@ docs/UnansweredPhrase.md
 docs/UnansweredPhraseGroup.md
 docs/UnansweredPhraseGroupPatchRequestBody.md
 docs/UnansweredPhraseGroupUpdateResponse.md
+docs/UnifiedGeneralTopic.md
+docs/UnifiedGeneralTopicEntityListing.md
 docs/UnpublishedProgramsEntityListing.md
 docs/UnreadMetric.md
 docs/UnreadStatus.md
@@ -5919,6 +5940,7 @@ src/PureCloudPlatform.Client.V2/Model/AdhocRecordingTopicRecordingDataV2.cs
 src/PureCloudPlatform.Client.V2/Model/AdhocRecordingTopicUserData.cs
 src/PureCloudPlatform.Client.V2/Model/AdhocRecordingTopicWorkspaceData.cs
 src/PureCloudPlatform.Client.V2/Model/Adjacents.cs
+src/PureCloudPlatform.Client.V2/Model/AdjustableLiveSpeakerDetection.cs
 src/PureCloudPlatform.Client.V2/Model/AdminTimeOffRequestPatch.cs
 src/PureCloudPlatform.Client.V2/Model/AfterCallWork.cs
 src/PureCloudPlatform.Client.V2/Model/AfterCallWorkUpdate.cs
@@ -5980,9 +6002,11 @@ src/PureCloudPlatform.Client.V2/Model/AnalyticsUserDetailsQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AnalyticsUserPresenceRecord.cs
 src/PureCloudPlatform.Client.V2/Model/Annotation.cs
 src/PureCloudPlatform.Client.V2/Model/AnswerOption.cs
-src/PureCloudPlatform.Client.V2/Model/ApiUsageQuery.cs
+src/PureCloudPlatform.Client.V2/Model/ApiUsageClientQuery.cs
+src/PureCloudPlatform.Client.V2/Model/ApiUsageOrganizationQuery.cs
 src/PureCloudPlatform.Client.V2/Model/ApiUsageQueryResult.cs
 src/PureCloudPlatform.Client.V2/Model/ApiUsageRow.cs
+src/PureCloudPlatform.Client.V2/Model/ApiUsageSimpleSearch.cs
 src/PureCloudPlatform.Client.V2/Model/AppendToDncActionSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ApprovalNamespace.cs
 src/PureCloudPlatform.Client.V2/Model/ArchitectDependencyTrackingBuildNotificationClient.cs
@@ -6932,6 +6956,8 @@ src/PureCloudPlatform.Client.V2/Model/DirectoryUserDevicesListing.cs
 src/PureCloudPlatform.Client.V2/Model/DisallowedEntityLearningAssignmentItem.cs
 src/PureCloudPlatform.Client.V2/Model/DisallowedEntityLearningAssignmentReference.cs
 src/PureCloudPlatform.Client.V2/Model/DisconnectReason.cs
+src/PureCloudPlatform.Client.V2/Model/Disposition.cs
+src/PureCloudPlatform.Client.V2/Model/DispositionParameters.cs
 src/PureCloudPlatform.Client.V2/Model/Division.cs
 src/PureCloudPlatform.Client.V2/Model/DivisionReference.cs
 src/PureCloudPlatform.Client.V2/Model/DivsPermittedEntityListing.cs
@@ -6957,14 +6983,20 @@ src/PureCloudPlatform.Client.V2/Model/DocumentAuditEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBody.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyBlock.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyImage.cs
+src/PureCloudPlatform.Client.V2/Model/DocumentBodyImageProperties.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyList.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyListBlock.cs
+src/PureCloudPlatform.Client.V2/Model/DocumentBodyListBlockProperties.cs
+src/PureCloudPlatform.Client.V2/Model/DocumentBodyListItemProperties.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyParagraph.cs
+src/PureCloudPlatform.Client.V2/Model/DocumentBodyParagraphProperties.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyVideo.cs
+src/PureCloudPlatform.Client.V2/Model/DocumentBodyVideoProperties.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentCategoryInput.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentContentBlock.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentFaq.cs
+src/PureCloudPlatform.Client.V2/Model/DocumentListContentBlock.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentListing.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentQuery.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentQueryClause.cs
@@ -6972,6 +7004,7 @@ src/PureCloudPlatform.Client.V2/Model/DocumentQueryInterval.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentQueryPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentReference.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentText.cs
+src/PureCloudPlatform.Client.V2/Model/DocumentTextProperties.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentThumbnail.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentUpdate.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentUpload.cs
@@ -7900,6 +7933,7 @@ src/PureCloudPlatform.Client.V2/Model/OpenMessagingToRecipient.cs
 src/PureCloudPlatform.Client.V2/Model/OpenNormalizedMessage.cs
 src/PureCloudPlatform.Client.V2/Model/Operation.cs
 src/PureCloudPlatform.Client.V2/Model/OptInSettings.cs
+src/PureCloudPlatform.Client.V2/Model/OrgAuthSettings.cs
 src/PureCloudPlatform.Client.V2/Model/OrgOAuthClient.cs
 src/PureCloudPlatform.Client.V2/Model/OrgUser.cs
 src/PureCloudPlatform.Client.V2/Model/OrgWhitelistSettings.cs
@@ -7965,6 +7999,7 @@ src/PureCloudPlatform.Client.V2/Model/Participant.cs
 src/PureCloudPlatform.Client.V2/Model/ParticipantAttributes.cs
 src/PureCloudPlatform.Client.V2/Model/ParticipantBasic.cs
 src/PureCloudPlatform.Client.V2/Model/ParticipantMetrics.cs
+src/PureCloudPlatform.Client.V2/Model/PasswordRequirements.cs
 src/PureCloudPlatform.Client.V2/Model/PatchAction.cs
 src/PureCloudPlatform.Client.V2/Model/PatchActionMap.cs
 src/PureCloudPlatform.Client.V2/Model/PatchActionMapScheduleGroups.cs
@@ -8924,6 +8959,8 @@ src/PureCloudPlatform.Client.V2/Model/UnansweredPhrase.cs
 src/PureCloudPlatform.Client.V2/Model/UnansweredPhraseGroup.cs
 src/PureCloudPlatform.Client.V2/Model/UnansweredPhraseGroupPatchRequestBody.cs
 src/PureCloudPlatform.Client.V2/Model/UnansweredPhraseGroupUpdateResponse.cs
+src/PureCloudPlatform.Client.V2/Model/UnifiedGeneralTopic.cs
+src/PureCloudPlatform.Client.V2/Model/UnifiedGeneralTopicEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/UnpublishedProgramsEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/UnreadMetric.cs
 src/PureCloudPlatform.Client.V2/Model/UnreadStatus.cs

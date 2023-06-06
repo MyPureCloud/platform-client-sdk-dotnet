@@ -8,6 +8,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**GetFieldconfig**](OrganizationApi.html#getfieldconfig) | **GET** /api/v2/fieldconfig | Fetch field config for an entity type |
+| [**GetOrganizationsAuthenticationSettings**](OrganizationApi.html#getorganizationsauthenticationsettings) | **GET** /api/v2/organizations/authentication/settings | Gets the organization&#39;s settings |
 | [**GetOrganizationsEmbeddedintegration**](OrganizationApi.html#getorganizationsembeddedintegration) | **GET** /api/v2/organizations/embeddedintegration | Get the list of domains that will be allowed to embed PureCloud applications |
 | [**GetOrganizationsIpaddressauthentication**](OrganizationApi.html#getorganizationsipaddressauthentication) | **GET** /api/v2/organizations/ipaddressauthentication | Get organization IP address whitelist settings |
 | [**GetOrganizationsLimitsChangerequest**](OrganizationApi.html#getorganizationslimitschangerequest) | **GET** /api/v2/organizations/limits/changerequests/{requestId} | Get a limit change request |
@@ -17,12 +18,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOrganizationsLimitsNamespaceDefaults**](OrganizationApi.html#getorganizationslimitsnamespacedefaults) | **GET** /api/v2/organizations/limits/namespaces/{namespaceName}/defaults | Get the default limits in a namespace for an organization |
 | [**GetOrganizationsLimitsNamespaces**](OrganizationApi.html#getorganizationslimitsnamespaces) | **GET** /api/v2/organizations/limits/namespaces | Get the available limit namespaces |
 | [**GetOrganizationsMe**](OrganizationApi.html#getorganizationsme) | **GET** /api/v2/organizations/me | Get organization. |
-| [**GetOrganizationsWhitelist**](OrganizationApi.html#getorganizationswhitelist) | **GET** /api/v2/organizations/whitelist | Use PUT /api/v2/organizations/embeddedintegration instead |
+| [**GetOrganizationsWhitelist**](OrganizationApi.html#getorganizationswhitelist) | **GET** /api/v2/organizations/whitelist | This route is deprecated, please use /api/v2/organizations/authentication/settings instead |
+| [**PatchOrganizationsAuthenticationSettings**](OrganizationApi.html#patchorganizationsauthenticationsettings) | **PATCH** /api/v2/organizations/authentication/settings | Update the organization&#39;s settings |
 | [**PatchOrganizationsFeature**](OrganizationApi.html#patchorganizationsfeature) | **PATCH** /api/v2/organizations/features/{featureName} | Update organization |
 | [**PutOrganizationsEmbeddedintegration**](OrganizationApi.html#putorganizationsembeddedintegration) | **PUT** /api/v2/organizations/embeddedintegration | Update the list of domains that will be allowed to embed PureCloud applications |
 | [**PutOrganizationsIpaddressauthentication**](OrganizationApi.html#putorganizationsipaddressauthentication) | **PUT** /api/v2/organizations/ipaddressauthentication | Update organization IP address whitelist settings |
 | [**PutOrganizationsMe**](OrganizationApi.html#putorganizationsme) | **PUT** /api/v2/organizations/me | Update organization. |
-| [**PutOrganizationsWhitelist**](OrganizationApi.html#putorganizationswhitelist) | **PUT** /api/v2/organizations/whitelist | Use PUT /api/v2/organizations/embeddedintegration instead |
+| [**PutOrganizationsWhitelist**](OrganizationApi.html#putorganizationswhitelist) | **PUT** /api/v2/organizations/whitelist | This route is deprecated, please use /api/v2/organizations/authentication/settings instead |
 {: class="table table-striped"}
 
 <a name="getfieldconfig"></a>
@@ -89,13 +91,75 @@ namespace Example
 
 [**FieldConfig**](FieldConfig.html)
 
+<a name="getorganizationsauthenticationsettings"></a>
+
+## [**OrgAuthSettings**](OrgAuthSettings.html) GetOrganizationsAuthenticationSettings ()
+
+
+
+Gets the organization's settings
+
+
+
+Requires ANY permissions: 
+
+* directory:organization:admin
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOrganizationsAuthenticationSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OrganizationApi();
+
+            try
+            { 
+                // Gets the organization's settings
+                OrgAuthSettings result = apiInstance.GetOrganizationsAuthenticationSettings();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationApi.GetOrganizationsAuthenticationSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+
+### Return type
+
+[**OrgAuthSettings**](OrgAuthSettings.html)
+
 <a name="getorganizationsembeddedintegration"></a>
 
 ## [**EmbeddedIntegration**](EmbeddedIntegration.html) GetOrganizationsEmbeddedintegration ()
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get the list of domains that will be allowed to embed PureCloud applications
+
+This route is deprecated, please use /api/v2/organizations/authentication/settings instead
 
 
 
@@ -152,9 +216,11 @@ This endpoint does require any parameters.
 
 ## [**IpAddressAuthentication**](IpAddressAuthentication.html) GetOrganizationsIpaddressauthentication ()
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Get organization IP address whitelist settings
+
+This route is deprecated, please use /api/v2/organizations/authentication/settings instead
 
 
 
@@ -668,7 +734,7 @@ This endpoint does require any parameters.
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Use PUT /api/v2/organizations/embeddedintegration instead
+This route is deprecated, please use /api/v2/organizations/authentication/settings instead
 
 
 
@@ -700,7 +766,7 @@ namespace Example
 
             try
             { 
-                // Use PUT /api/v2/organizations/embeddedintegration instead
+                // This route is deprecated, please use /api/v2/organizations/authentication/settings instead
                 OrgWhitelistSettings result = apiInstance.GetOrganizationsWhitelist();
                 Debug.WriteLine(result);
             }
@@ -720,6 +786,71 @@ This endpoint does require any parameters.
 ### Return type
 
 [**OrgWhitelistSettings**](OrgWhitelistSettings.html)
+
+<a name="patchorganizationsauthenticationsettings"></a>
+
+## [**OrgAuthSettings**](OrgAuthSettings.html) PatchOrganizationsAuthenticationSettings (OrgAuthSettings body)
+
+
+
+Update the organization's settings
+
+
+
+Requires ANY permissions: 
+
+* directory:organization:admin
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchOrganizationsAuthenticationSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OrganizationApi();
+            var body = new OrgAuthSettings(); // OrgAuthSettings | Org settings
+
+            try
+            { 
+                // Update the organization's settings
+                OrgAuthSettings result = apiInstance.PatchOrganizationsAuthenticationSettings(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationApi.PatchOrganizationsAuthenticationSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**OrgAuthSettings**](OrgAuthSettings.html)| Org settings |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**OrgAuthSettings**](OrgAuthSettings.html)
 
 <a name="patchorganizationsfeature"></a>
 
@@ -792,9 +923,11 @@ namespace Example
 
 ## [**EmbeddedIntegration**](EmbeddedIntegration.html) PutOrganizationsEmbeddedintegration (EmbeddedIntegration body)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Update the list of domains that will be allowed to embed PureCloud applications
+
+This route is deprecated, please use /api/v2/organizations/authentication/settings instead
 
 
 
@@ -857,9 +990,11 @@ namespace Example
 
 ## [**IpAddressAuthentication**](IpAddressAuthentication.html) PutOrganizationsIpaddressauthentication (IpAddressAuthentication body)
 
-
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
 Update organization IP address whitelist settings
+
+This route is deprecated, please use /api/v2/organizations/authentication/settings instead
 
 
 
@@ -989,7 +1124,7 @@ namespace Example
 
 <span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
 
-Use PUT /api/v2/organizations/embeddedintegration instead
+This route is deprecated, please use /api/v2/organizations/authentication/settings instead
 
 
 
@@ -1023,7 +1158,7 @@ namespace Example
 
             try
             { 
-                // Use PUT /api/v2/organizations/embeddedintegration instead
+                // This route is deprecated, please use /api/v2/organizations/authentication/settings instead
                 OrgWhitelistSettings result = apiInstance.PutOrganizationsWhitelist(body);
                 Debug.WriteLine(result);
             }

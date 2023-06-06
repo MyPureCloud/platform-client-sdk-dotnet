@@ -46,6 +46,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Content,
             
             /// <summary>
+            /// Enum Genesysbuiltincourse for "GenesysBuiltInCourse"
+            /// </summary>
+            [EnumMember(Value = "GenesysBuiltInCourse")]
+            Genesysbuiltincourse,
+            
+            /// <summary>
             /// Enum Richtext for "RichText"
             /// </summary>
             [EnumMember(Value = "RichText")]

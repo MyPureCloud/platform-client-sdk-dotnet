@@ -613,7 +613,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum WorkitemPerformanceSummaryView for "WORKITEM_PERFORMANCE_SUMMARY_VIEW"
             /// </summary>
             [EnumMember(Value = "WORKITEM_PERFORMANCE_SUMMARY_VIEW")]
-            WorkitemPerformanceSummaryView
+            WorkitemPerformanceSummaryView,
+            
+            /// <summary>
+            /// Enum AgentAssistPerformanceView for "AGENT_ASSIST_PERFORMANCE_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_ASSIST_PERFORMANCE_VIEW")]
+            AgentAssistPerformanceView,
+            
+            /// <summary>
+            /// Enum ContactCenterPerformanceView for "CONTACT_CENTER_PERFORMANCE_VIEW"
+            /// </summary>
+            [EnumMember(Value = "CONTACT_CENTER_PERFORMANCE_VIEW")]
+            ContactCenterPerformanceView
         }
         /// <summary>
         /// The view type of the export metadata

@@ -22,9 +22,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="QueueMessagingAddresses" /> class.
         /// </summary>
         /// <param name="SmsAddress">SmsAddress.</param>
-        public QueueMessagingAddresses(DomainEntityRef SmsAddress = null)
+        /// <param name="OpenMessagingRecipient">OpenMessagingRecipient.</param>
+        public QueueMessagingAddresses(DomainEntityRef SmsAddress = null, DomainEntityRef OpenMessagingRecipient = null)
         {
             this.SmsAddress = SmsAddress;
+            this.OpenMessagingRecipient = OpenMessagingRecipient;
             
         }
         
@@ -37,6 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public DomainEntityRef SmsAddress { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets OpenMessagingRecipient
+        /// </summary>
+        [DataMember(Name="openMessagingRecipient", EmitDefaultValue=false)]
+        public DomainEntityRef OpenMessagingRecipient { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -47,6 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class QueueMessagingAddresses {\n");
 
             sb.Append("  SmsAddress: ").Append(SmsAddress).Append("\n");
+            sb.Append("  OpenMessagingRecipient: ").Append(OpenMessagingRecipient).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -91,6 +102,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SmsAddress == other.SmsAddress ||
                     this.SmsAddress != null &&
                     this.SmsAddress.Equals(other.SmsAddress)
+                ) &&
+                (
+                    this.OpenMessagingRecipient == other.OpenMessagingRecipient ||
+                    this.OpenMessagingRecipient != null &&
+                    this.OpenMessagingRecipient.Equals(other.OpenMessagingRecipient)
                 );
         }
 
@@ -107,6 +123,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.SmsAddress != null)
                     hash = hash * 59 + this.SmsAddress.GetHashCode();
+
+                if (this.OpenMessagingRecipient != null)
+                    hash = hash * 59 + this.OpenMessagingRecipient.GetHashCode();
 
                 return hash;
             }

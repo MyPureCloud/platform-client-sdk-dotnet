@@ -29,6 +29,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetSpeechandtextanalyticsTopics**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticstopics) | **GET** /api/v2/speechandtextanalytics/topics | Get the list of Speech &amp; Text Analytics topics |
 | [**GetSpeechandtextanalyticsTopicsDialects**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticstopicsdialects) | **GET** /api/v2/speechandtextanalytics/topics/dialects | Get list of supported Speech &amp; Text Analytics topics dialects |
 | [**GetSpeechandtextanalyticsTopicsGeneral**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticstopicsgeneral) | **GET** /api/v2/speechandtextanalytics/topics/general | Get the Speech &amp; Text Analytics general topics for a given dialect |
+| [**GetSpeechandtextanalyticsTopicsGeneralStatus**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticstopicsgeneralstatus) | **GET** /api/v2/speechandtextanalytics/topics/general/status | Get the list of general topics from the org and the system with their current status |
 | [**GetSpeechandtextanalyticsTopicsPublishjob**](SpeechTextAnalyticsApi.html#getspeechandtextanalyticstopicspublishjob) | **GET** /api/v2/speechandtextanalytics/topics/publishjobs/{jobId} | Get a Speech &amp; Text Analytics publish topics job by id |
 | [**PatchSpeechandtextanalyticsSettings**](SpeechTextAnalyticsApi.html#patchspeechandtextanalyticssettings) | **PATCH** /api/v2/speechandtextanalytics/settings | Patch Speech And Text Analytics Settings |
 | [**PostSpeechandtextanalyticsPrograms**](SpeechTextAnalyticsApi.html#postspeechandtextanalyticsprograms) | **POST** /api/v2/speechandtextanalytics/programs | Create new Speech &amp; Text Analytics program |
@@ -1463,12 +1464,77 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **dialect** | **string**| The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard | [optional] <br />**Values**: en-US, es-US, en-AU, en-GB, en-ZA, es-ES, en-IN, fr-FR, fr-CA, it-IT, de-DE, pt-BR, pl-PL, pt-PT, nl-NL, ko-KR, ja-JP |
+| **dialect** | **string**| The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard | [optional] <br />**Values**: ar-001, ar-AE, ar-BH, ar-EG, ar-IL, ar-SA, ar-TN, de-DE, en-AU, en-GB, en-IN, en-US, en-ZA, es-ES, es-US, fr-CA, fr-FR, it-IT, ja-JP, ko-KR, nl-NL, pl-PL, pt-BR, pt-PT |
 {: class="table table-striped"}
 
 ### Return type
 
 [**GeneralTopicsEntityListing**](GeneralTopicsEntityListing.html)
+
+<a name="getspeechandtextanalyticstopicsgeneralstatus"></a>
+
+## [**UnifiedGeneralTopicEntityListing**](UnifiedGeneralTopicEntityListing.html) GetSpeechandtextanalyticsTopicsGeneralStatus (string dialect = null)
+
+
+
+Get the list of general topics from the org and the system with their current status
+
+
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:topic:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetSpeechandtextanalyticsTopicsGeneralStatusExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+            var dialect = dialect_example;  // string | The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional) 
+
+            try
+            { 
+                // Get the list of general topics from the org and the system with their current status
+                UnifiedGeneralTopicEntityListing result = apiInstance.GetSpeechandtextanalyticsTopicsGeneralStatus(dialect);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalyticsApi.GetSpeechandtextanalyticsTopicsGeneralStatus: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **dialect** | **string**| The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard | [optional] <br />**Values**: ar-001, ar-AE, ar-BH, ar-EG, ar-IL, ar-SA, ar-TN, de-DE, en-AU, en-GB, en-IN, en-US, en-ZA, es-ES, es-US, fr-CA, fr-FR, it-IT, ja-JP, ko-KR, nl-NL, pl-PL, pt-BR, pt-PT |
+{: class="table table-striped"}
+
+### Return type
+
+[**UnifiedGeneralTopicEntityListing**](UnifiedGeneralTopicEntityListing.html)
 
 <a name="getspeechandtextanalyticstopicspublishjob"></a>
 

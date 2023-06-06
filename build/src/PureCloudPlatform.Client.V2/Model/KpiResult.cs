@@ -104,6 +104,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+        /// <summary>
+        /// The percentage benefit for this media type for the duration of the comparison period
+        /// </summary>
+        /// <value>The percentage benefit for this media type for the duration of the comparison period</value>
+        [DataMember(Name="percentageBenefit", EmitDefaultValue=false)]
+        public double? PercentageBenefit { get; private set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -118,6 +127,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  InteractionCountOn: ").Append(InteractionCountOn).Append("\n");
             sb.Append("  InteractionCountOff: ").Append(InteractionCountOff).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
+            sb.Append("  PercentageBenefit: ").Append(PercentageBenefit).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -182,6 +192,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MediaType == other.MediaType ||
                     this.MediaType != null &&
                     this.MediaType.Equals(other.MediaType)
+                ) &&
+                (
+                    this.PercentageBenefit == other.PercentageBenefit ||
+                    this.PercentageBenefit != null &&
+                    this.PercentageBenefit.Equals(other.PercentageBenefit)
                 );
         }
 
@@ -210,6 +225,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
+
+                if (this.PercentageBenefit != null)
+                    hash = hash * 59 + this.PercentageBenefit.GetHashCode();
 
                 return hash;
             }

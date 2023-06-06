@@ -65,6 +65,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The percentage benefit on this queue for the duration of the comparison period
+        /// </summary>
+        /// <value>The percentage benefit on this queue for the duration of the comparison period</value>
+        [DataMember(Name="percentageBenefit", EmitDefaultValue=false)]
+        public double? PercentageBenefit { get; private set; }
+
+
+
+        /// <summary>
         /// KPI results for each metric
         /// </summary>
         /// <value>KPI results for each metric</value>
@@ -94,6 +103,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Kpi: ").Append(Kpi).Append("\n");
             sb.Append("  DateStarted: ").Append(DateStarted).Append("\n");
             sb.Append("  DateEnded: ").Append(DateEnded).Append("\n");
+            sb.Append("  PercentageBenefit: ").Append(PercentageBenefit).Append("\n");
             sb.Append("  KpiResults: ").Append(KpiResults).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -157,6 +167,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateEnded.Equals(other.DateEnded)
                 ) &&
                 (
+                    this.PercentageBenefit == other.PercentageBenefit ||
+                    this.PercentageBenefit != null &&
+                    this.PercentageBenefit.Equals(other.PercentageBenefit)
+                ) &&
+                (
                     this.KpiResults == other.KpiResults ||
                     this.KpiResults != null &&
                     this.KpiResults.SequenceEqual(other.KpiResults)
@@ -190,6 +205,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DateEnded != null)
                     hash = hash * 59 + this.DateEnded.GetHashCode();
+
+                if (this.PercentageBenefit != null)
+                    hash = hash * 59 + this.PercentageBenefit.GetHashCode();
 
                 if (this.KpiResults != null)
                     hash = hash * 59 + this.KpiResults.GetHashCode();

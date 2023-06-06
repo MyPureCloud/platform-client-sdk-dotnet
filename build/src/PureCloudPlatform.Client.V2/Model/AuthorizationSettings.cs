@@ -21,8 +21,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AuthorizationSettings" /> class.
         /// </summary>
-        public AuthorizationSettings()
+        /// <param name="AnalysisEnabled">Boolean showing if organization is opted in or not to unused role/perm analysis.</param>
+        /// <param name="AnalysisDays">Integer number of days to analyze user usage.</param>
+        public AuthorizationSettings(bool? AnalysisEnabled = null, int? AnalysisDays = null)
         {
+            this.AnalysisEnabled = AnalysisEnabled;
+            this.AnalysisDays = AnalysisDays;
             
         }
         
@@ -42,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Boolean showing if organization is opted in or not to unused role/perm analysis</value>
         [DataMember(Name="analysisEnabled", EmitDefaultValue=false)]
-        public bool? AnalysisEnabled { get; private set; }
+        public bool? AnalysisEnabled { get; set; }
 
 
 
@@ -51,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Integer number of days to analyze user usage</value>
         [DataMember(Name="analysisDays", EmitDefaultValue=false)]
-        public int? AnalysisDays { get; private set; }
+        public int? AnalysisDays { get; set; }
 
 
 

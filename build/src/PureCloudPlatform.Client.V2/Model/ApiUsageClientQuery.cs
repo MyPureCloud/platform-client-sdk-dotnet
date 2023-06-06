@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// ApiUsageQuery
+    /// ApiUsageClientQuery
     /// </summary>
     [DataContract]
-    public partial class ApiUsageQuery :  IEquatable<ApiUsageQuery>
+    public partial class ApiUsageClientQuery :  IEquatable<ApiUsageClientQuery>
     {
         /// <summary>
         /// Date granularity of the results
@@ -50,50 +50,6 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Month")]
             Month
-        }
-        /// <summary>
-        /// Gets or Sets GroupBy
-        /// </summary>
-        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
-        public enum GroupByEnum
-        {
-            /// <summary>
-            /// Your SDK version is out of date and an unknown enum value was encountered. 
-            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
-            /// in the Package Manager Console
-            /// </summary>
-            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
-            OutdatedSdkVersion,
-            
-            /// <summary>
-            /// Enum Oauthclientid for "OAuthClientId"
-            /// </summary>
-            [EnumMember(Value = "OAuthClientId")]
-            Oauthclientid,
-            
-            /// <summary>
-            /// Enum Organizationid for "OrganizationId"
-            /// </summary>
-            [EnumMember(Value = "OrganizationId")]
-            Organizationid,
-            
-            /// <summary>
-            /// Enum Userid for "UserId"
-            /// </summary>
-            [EnumMember(Value = "UserId")]
-            Userid,
-            
-            /// <summary>
-            /// Enum Templateuri for "TemplateUri"
-            /// </summary>
-            [EnumMember(Value = "TemplateUri")]
-            Templateuri,
-            
-            /// <summary>
-            /// Enum Httpmethod for "HttpMethod"
-            /// </summary>
-            [EnumMember(Value = "HttpMethod")]
-            Httpmethod
         }
         /// <summary>
         /// Gets or Sets Metrics
@@ -146,6 +102,44 @@ namespace PureCloudPlatform.Client.V2.Model
             Requests
         }
         /// <summary>
+        /// Gets or Sets GroupBy
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum GroupByEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Oauthclientid for "OAuthClientId"
+            /// </summary>
+            [EnumMember(Value = "OAuthClientId")]
+            Oauthclientid,
+            
+            /// <summary>
+            /// Enum Organizationid for "OrganizationId"
+            /// </summary>
+            [EnumMember(Value = "OrganizationId")]
+            Organizationid,
+            
+            /// <summary>
+            /// Enum Templateuri for "TemplateUri"
+            /// </summary>
+            [EnumMember(Value = "TemplateUri")]
+            Templateuri,
+            
+            /// <summary>
+            /// Enum Httpmethod for "HttpMethod"
+            /// </summary>
+            [EnumMember(Value = "HttpMethod")]
+            Httpmethod
+        }
+        /// <summary>
         /// Date granularity of the results
         /// </summary>
         /// <value>Date granularity of the results</value>
@@ -153,23 +147,23 @@ namespace PureCloudPlatform.Client.V2.Model
         public GranularityEnum? Granularity { get; set; }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ApiUsageQuery" /> class.
+        /// Initializes a new instance of the <see cref="ApiUsageClientQuery" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected ApiUsageQuery() { }
+        protected ApiUsageClientQuery() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="ApiUsageQuery" /> class.
+        /// Initializes a new instance of the <see cref="ApiUsageClientQuery" /> class.
         /// </summary>
         /// <param name="Interval">Behaves like one clause in a SQL WHERE. Specifies the date and time range of data being queried. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (required).</param>
         /// <param name="Granularity">Date granularity of the results.</param>
-        /// <param name="GroupBy">Behaves like a SQL GROUPBY. Allows for multiple levels of grouping as a list of dimensions. Partitions resulting aggregate computations into distinct named subgroups rather than across the entire result set as if it were one group..</param>
         /// <param name="Metrics">Behaves like a SQL SELECT clause. Enables retrieving only named metrics. If omitted, all metrics that are available will be returned (like SELECT *)..</param>
-        public ApiUsageQuery(string Interval = null, GranularityEnum? Granularity = null, List<GroupByEnum> GroupBy = null, List<MetricsEnum> Metrics = null)
+        /// <param name="GroupBy">Behaves like a SQL GROUPBY. Allows for multiple levels of grouping as a list of dimensions. Partitions resulting aggregate computations into distinct named subgroups rather than across the entire result set as if it were one group..</param>
+        public ApiUsageClientQuery(string Interval = null, GranularityEnum? Granularity = null, List<MetricsEnum> Metrics = null, List<GroupByEnum> GroupBy = null)
         {
             this.Interval = Interval;
             this.Granularity = Granularity;
-            this.GroupBy = GroupBy;
             this.Metrics = Metrics;
+            this.GroupBy = GroupBy;
             
         }
         
@@ -187,20 +181,20 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Behaves like a SQL GROUPBY. Allows for multiple levels of grouping as a list of dimensions. Partitions resulting aggregate computations into distinct named subgroups rather than across the entire result set as if it were one group.
-        /// </summary>
-        /// <value>Behaves like a SQL GROUPBY. Allows for multiple levels of grouping as a list of dimensions. Partitions resulting aggregate computations into distinct named subgroups rather than across the entire result set as if it were one group.</value>
-        [DataMember(Name="groupBy", EmitDefaultValue=false)]
-        public List<GroupByEnum> GroupBy { get; set; }
-
-
-
-        /// <summary>
         /// Behaves like a SQL SELECT clause. Enables retrieving only named metrics. If omitted, all metrics that are available will be returned (like SELECT *).
         /// </summary>
         /// <value>Behaves like a SQL SELECT clause. Enables retrieving only named metrics. If omitted, all metrics that are available will be returned (like SELECT *).</value>
         [DataMember(Name="metrics", EmitDefaultValue=false)]
         public List<MetricsEnum> Metrics { get; set; }
+
+
+
+        /// <summary>
+        /// Behaves like a SQL GROUPBY. Allows for multiple levels of grouping as a list of dimensions. Partitions resulting aggregate computations into distinct named subgroups rather than across the entire result set as if it were one group.
+        /// </summary>
+        /// <value>Behaves like a SQL GROUPBY. Allows for multiple levels of grouping as a list of dimensions. Partitions resulting aggregate computations into distinct named subgroups rather than across the entire result set as if it were one group.</value>
+        [DataMember(Name="groupBy", EmitDefaultValue=false)]
+        public List<GroupByEnum> GroupBy { get; set; }
 
 
         /// <summary>
@@ -210,12 +204,12 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ApiUsageQuery {\n");
+            sb.Append("class ApiUsageClientQuery {\n");
 
             sb.Append("  Interval: ").Append(Interval).Append("\n");
             sb.Append("  Granularity: ").Append(Granularity).Append("\n");
-            sb.Append("  GroupBy: ").Append(GroupBy).Append("\n");
             sb.Append("  Metrics: ").Append(Metrics).Append("\n");
+            sb.Append("  GroupBy: ").Append(GroupBy).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -241,15 +235,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ApiUsageQuery);
+            return this.Equals(obj as ApiUsageClientQuery);
         }
 
         /// <summary>
-        /// Returns true if ApiUsageQuery instances are equal
+        /// Returns true if ApiUsageClientQuery instances are equal
         /// </summary>
-        /// <param name="other">Instance of ApiUsageQuery to be compared</param>
+        /// <param name="other">Instance of ApiUsageClientQuery to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ApiUsageQuery other)
+        public bool Equals(ApiUsageClientQuery other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -267,14 +261,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Granularity.Equals(other.Granularity)
                 ) &&
                 (
-                    this.GroupBy == other.GroupBy ||
-                    this.GroupBy != null &&
-                    this.GroupBy.SequenceEqual(other.GroupBy)
-                ) &&
-                (
                     this.Metrics == other.Metrics ||
                     this.Metrics != null &&
                     this.Metrics.SequenceEqual(other.Metrics)
+                ) &&
+                (
+                    this.GroupBy == other.GroupBy ||
+                    this.GroupBy != null &&
+                    this.GroupBy.SequenceEqual(other.GroupBy)
                 );
         }
 
@@ -295,11 +289,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Granularity != null)
                     hash = hash * 59 + this.Granularity.GetHashCode();
 
-                if (this.GroupBy != null)
-                    hash = hash * 59 + this.GroupBy.GetHashCode();
-
                 if (this.Metrics != null)
                     hash = hash * 59 + this.Metrics.GetHashCode();
+
+                if (this.GroupBy != null)
+                    hash = hash * 59 + this.GroupBy.GetHashCode();
 
                 return hash;
             }

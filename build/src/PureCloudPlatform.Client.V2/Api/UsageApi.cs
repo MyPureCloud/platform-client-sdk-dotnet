@@ -93,6 +93,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ApiUsageQueryResult> GetUsageQueryExecutionIdResultsWithHttpInfo (string executionId);
 
         /// <summary>
+        /// Get the results of a usage search
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="executionId">ID of the search execution</param>
+        /// <returns>ApiUsageQueryResult</returns>
+        
+        ApiUsageQueryResult GetUsageSimplesearchExecutionIdResults (string executionId);
+
+        /// <summary>
+        /// Get the results of a usage search
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="executionId">ID of the search execution</param>
+        /// <returns>ApiResponse of ApiUsageQueryResult</returns>
+        
+        ApiResponse<ApiUsageQueryResult> GetUsageSimplesearchExecutionIdResultsWithHttpInfo (string executionId);
+
+        /// <summary>
         /// Query for OAuth client API usage
         /// </summary>
         /// <remarks>
@@ -103,7 +127,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>UsageExecutionResult</returns>
         
-        UsageExecutionResult PostOauthClientUsageQuery (string clientId, ApiUsageQuery body);
+        UsageExecutionResult PostOauthClientUsageQuery (string clientId, ApiUsageClientQuery body);
 
         /// <summary>
         /// Query for OAuth client API usage
@@ -116,7 +140,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>ApiResponse of UsageExecutionResult</returns>
         
-        ApiResponse<UsageExecutionResult> PostOauthClientUsageQueryWithHttpInfo (string clientId, ApiUsageQuery body);
+        ApiResponse<UsageExecutionResult> PostOauthClientUsageQueryWithHttpInfo (string clientId, ApiUsageClientQuery body);
 
         /// <summary>
         /// Query organization API Usage - 
@@ -128,7 +152,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>UsageExecutionResult</returns>
         
-        UsageExecutionResult PostUsageQuery (ApiUsageQuery body);
+        UsageExecutionResult PostUsageQuery (ApiUsageOrganizationQuery body);
 
         /// <summary>
         /// Query organization API Usage - 
@@ -140,7 +164,31 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>ApiResponse of UsageExecutionResult</returns>
         
-        ApiResponse<UsageExecutionResult> PostUsageQueryWithHttpInfo (ApiUsageQuery body);
+        ApiResponse<UsageExecutionResult> PostUsageQueryWithHttpInfo (ApiUsageOrganizationQuery body);
+
+        /// <summary>
+        /// Search organization API Usage - 
+        /// </summary>
+        /// <remarks>
+        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SimpleSearch</param>
+        /// <returns>UsageExecutionResult</returns>
+        
+        UsageExecutionResult PostUsageSimplesearch (ApiUsageSimpleSearch body);
+
+        /// <summary>
+        /// Search organization API Usage - 
+        /// </summary>
+        /// <remarks>
+        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SimpleSearch</param>
+        /// <returns>ApiResponse of UsageExecutionResult</returns>
+        
+        ApiResponse<UsageExecutionResult> PostUsageSimplesearchWithHttpInfo (ApiUsageSimpleSearch body);
 
         #endregion Synchronous Operations
 
@@ -223,6 +271,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ApiUsageQueryResult>> GetUsageQueryExecutionIdResultsAsyncWithHttpInfo (string executionId);
 
         /// <summary>
+        /// Get the results of a usage search
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="executionId">ID of the search execution</param>
+        /// <returns>Task of ApiUsageQueryResult</returns>
+        
+        System.Threading.Tasks.Task<ApiUsageQueryResult> GetUsageSimplesearchExecutionIdResultsAsync (string executionId);
+
+        /// <summary>
+        /// Get the results of a usage search
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="executionId">ID of the search execution</param>
+        /// <returns>Task of ApiResponse (ApiUsageQueryResult)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ApiUsageQueryResult>> GetUsageSimplesearchExecutionIdResultsAsyncWithHttpInfo (string executionId);
+
+        /// <summary>
         /// Query for OAuth client API usage
         /// </summary>
         /// <remarks>
@@ -233,7 +305,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>Task of UsageExecutionResult</returns>
         
-        System.Threading.Tasks.Task<UsageExecutionResult> PostOauthClientUsageQueryAsync (string clientId, ApiUsageQuery body);
+        System.Threading.Tasks.Task<UsageExecutionResult> PostOauthClientUsageQueryAsync (string clientId, ApiUsageClientQuery body);
 
         /// <summary>
         /// Query for OAuth client API usage
@@ -246,7 +318,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>Task of ApiResponse (UsageExecutionResult)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> PostOauthClientUsageQueryAsyncWithHttpInfo (string clientId, ApiUsageQuery body);
+        System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> PostOauthClientUsageQueryAsyncWithHttpInfo (string clientId, ApiUsageClientQuery body);
 
         /// <summary>
         /// Query organization API Usage - 
@@ -258,7 +330,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>Task of UsageExecutionResult</returns>
         
-        System.Threading.Tasks.Task<UsageExecutionResult> PostUsageQueryAsync (ApiUsageQuery body);
+        System.Threading.Tasks.Task<UsageExecutionResult> PostUsageQueryAsync (ApiUsageOrganizationQuery body);
 
         /// <summary>
         /// Query organization API Usage - 
@@ -270,7 +342,31 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>Task of ApiResponse (UsageExecutionResult)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> PostUsageQueryAsyncWithHttpInfo (ApiUsageQuery body);
+        System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> PostUsageQueryAsyncWithHttpInfo (ApiUsageOrganizationQuery body);
+
+        /// <summary>
+        /// Search organization API Usage - 
+        /// </summary>
+        /// <remarks>
+        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SimpleSearch</param>
+        /// <returns>Task of UsageExecutionResult</returns>
+        
+        System.Threading.Tasks.Task<UsageExecutionResult> PostUsageSimplesearchAsync (ApiUsageSimpleSearch body);
+
+        /// <summary>
+        /// Search organization API Usage - 
+        /// </summary>
+        /// <remarks>
+        /// After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SimpleSearch</param>
+        /// <returns>Task of ApiResponse (UsageExecutionResult)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> PostUsageSimplesearchAsyncWithHttpInfo (ApiUsageSimpleSearch body);
 
         #endregion Asynchronous Operations
 
@@ -969,6 +1065,201 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get the results of a usage search 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="executionId">ID of the search execution</param>
+        /// <returns>ApiUsageQueryResult</returns>
+        
+        public ApiUsageQueryResult GetUsageSimplesearchExecutionIdResults (string executionId)
+        {
+             ApiResponse<ApiUsageQueryResult> localVarResponse = GetUsageSimplesearchExecutionIdResultsWithHttpInfo(executionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the results of a usage search 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="executionId">ID of the search execution</param>
+        /// <returns>ApiResponse of ApiUsageQueryResult</returns>
+        
+        public ApiResponse< ApiUsageQueryResult > GetUsageSimplesearchExecutionIdResultsWithHttpInfo (string executionId)
+        { 
+            // verify the required parameter 'executionId' is set
+            if (executionId == null)
+                throw new ApiException(400, "Missing required parameter 'executionId' when calling UsageApi->GetUsageSimplesearchExecutionIdResults");
+
+            var localVarPath = "/api/v2/usage/simplesearch/{executionId}/results";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (executionId != null) localVarPathParams.Add("executionId", this.Configuration.ApiClient.ParameterToString(executionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsageSimplesearchExecutionIdResults: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsageSimplesearchExecutionIdResults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ApiUsageQueryResult>(localVarStatusCode,
+                localVarHeaders,
+                (ApiUsageQueryResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiUsageQueryResult)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the results of a usage search 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="executionId">ID of the search execution</param>
+        /// <returns>Task of ApiUsageQueryResult</returns>
+        
+        public async System.Threading.Tasks.Task<ApiUsageQueryResult> GetUsageSimplesearchExecutionIdResultsAsync (string executionId)
+        {
+             ApiResponse<ApiUsageQueryResult> localVarResponse = await GetUsageSimplesearchExecutionIdResultsAsyncWithHttpInfo(executionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the results of a usage search 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="executionId">ID of the search execution</param>
+        /// <returns>Task of ApiResponse (ApiUsageQueryResult)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ApiUsageQueryResult>> GetUsageSimplesearchExecutionIdResultsAsyncWithHttpInfo (string executionId)
+        { 
+            // verify the required parameter 'executionId' is set
+            if (executionId == null)
+                throw new ApiException(400, "Missing required parameter 'executionId' when calling UsageApi->GetUsageSimplesearchExecutionIdResults");
+            
+
+            var localVarPath = "/api/v2/usage/simplesearch/{executionId}/results";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (executionId != null) localVarPathParams.Add("executionId", this.Configuration.ApiClient.ParameterToString(executionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsageSimplesearchExecutionIdResults: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsageSimplesearchExecutionIdResults: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ApiUsageQueryResult>(localVarStatusCode,
+                localVarHeaders,
+                (ApiUsageQueryResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiUsageQueryResult)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Query for OAuth client API usage After calling this method, you will then need to poll for the query results based on the returned execution Id
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -976,7 +1267,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>UsageExecutionResult</returns>
         
-        public UsageExecutionResult PostOauthClientUsageQuery (string clientId, ApiUsageQuery body)
+        public UsageExecutionResult PostOauthClientUsageQuery (string clientId, ApiUsageClientQuery body)
         {
              ApiResponse<UsageExecutionResult> localVarResponse = PostOauthClientUsageQueryWithHttpInfo(clientId, body);
              return localVarResponse.Data;
@@ -990,7 +1281,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>ApiResponse of UsageExecutionResult</returns>
         
-        public ApiResponse< UsageExecutionResult > PostOauthClientUsageQueryWithHttpInfo (string clientId, ApiUsageQuery body)
+        public ApiResponse< UsageExecutionResult > PostOauthClientUsageQueryWithHttpInfo (string clientId, ApiUsageClientQuery body)
         { 
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -1083,7 +1374,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>Task of UsageExecutionResult</returns>
         
-        public async System.Threading.Tasks.Task<UsageExecutionResult> PostOauthClientUsageQueryAsync (string clientId, ApiUsageQuery body)
+        public async System.Threading.Tasks.Task<UsageExecutionResult> PostOauthClientUsageQueryAsync (string clientId, ApiUsageClientQuery body)
         {
              ApiResponse<UsageExecutionResult> localVarResponse = await PostOauthClientUsageQueryAsyncWithHttpInfo(clientId, body);
              return localVarResponse.Data;
@@ -1098,7 +1389,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>Task of ApiResponse (UsageExecutionResult)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> PostOauthClientUsageQueryAsyncWithHttpInfo (string clientId, ApiUsageQuery body)
+        public async System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> PostOauthClientUsageQueryAsyncWithHttpInfo (string clientId, ApiUsageClientQuery body)
         { 
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -1193,7 +1484,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>UsageExecutionResult</returns>
         
-        public UsageExecutionResult PostUsageQuery (ApiUsageQuery body)
+        public UsageExecutionResult PostUsageQuery (ApiUsageOrganizationQuery body)
         {
              ApiResponse<UsageExecutionResult> localVarResponse = PostUsageQueryWithHttpInfo(body);
              return localVarResponse.Data;
@@ -1206,7 +1497,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>ApiResponse of UsageExecutionResult</returns>
         
-        public ApiResponse< UsageExecutionResult > PostUsageQueryWithHttpInfo (ApiUsageQuery body)
+        public ApiResponse< UsageExecutionResult > PostUsageQueryWithHttpInfo (ApiUsageOrganizationQuery body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1294,7 +1585,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>Task of UsageExecutionResult</returns>
         
-        public async System.Threading.Tasks.Task<UsageExecutionResult> PostUsageQueryAsync (ApiUsageQuery body)
+        public async System.Threading.Tasks.Task<UsageExecutionResult> PostUsageQueryAsync (ApiUsageOrganizationQuery body)
         {
              ApiResponse<UsageExecutionResult> localVarResponse = await PostUsageQueryAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -1308,7 +1599,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>Task of ApiResponse (UsageExecutionResult)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> PostUsageQueryAsyncWithHttpInfo (ApiUsageQuery body)
+        public async System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> PostUsageQueryAsyncWithHttpInfo (ApiUsageOrganizationQuery body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1381,6 +1672,211 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling PostUsageQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostUsageQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UsageExecutionResult>(localVarStatusCode,
+                localVarHeaders,
+                (UsageExecutionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsageExecutionResult)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Search organization API Usage -  After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SimpleSearch</param>
+        /// <returns>UsageExecutionResult</returns>
+        
+        public UsageExecutionResult PostUsageSimplesearch (ApiUsageSimpleSearch body)
+        {
+             ApiResponse<UsageExecutionResult> localVarResponse = PostUsageSimplesearchWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Search organization API Usage -  After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SimpleSearch</param>
+        /// <returns>ApiResponse of UsageExecutionResult</returns>
+        
+        public ApiResponse< UsageExecutionResult > PostUsageSimplesearchWithHttpInfo (ApiUsageSimpleSearch body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsageApi->PostUsageSimplesearch");
+
+            var localVarPath = "/api/v2/usage/simplesearch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsageSimplesearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsageSimplesearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UsageExecutionResult>(localVarStatusCode,
+                localVarHeaders,
+                (UsageExecutionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsageExecutionResult)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Search organization API Usage -  After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SimpleSearch</param>
+        /// <returns>Task of UsageExecutionResult</returns>
+        
+        public async System.Threading.Tasks.Task<UsageExecutionResult> PostUsageSimplesearchAsync (ApiUsageSimpleSearch body)
+        {
+             ApiResponse<UsageExecutionResult> localVarResponse = await PostUsageSimplesearchAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Search organization API Usage -  After calling this method, you will then need to poll for the query results based on the returned execution Id
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">SimpleSearch</param>
+        /// <returns>Task of ApiResponse (UsageExecutionResult)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> PostUsageSimplesearchAsyncWithHttpInfo (ApiUsageSimpleSearch body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsageApi->PostUsageSimplesearch");
+            
+
+            var localVarPath = "/api/v2/usage/simplesearch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsageSimplesearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsageSimplesearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<UsageExecutionResult>(localVarStatusCode,
                 localVarHeaders,

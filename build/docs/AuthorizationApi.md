@@ -1967,7 +1967,7 @@ Bulk-grant subjects and divisions with an organization role.
 
 
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * authorization:grant:add
 

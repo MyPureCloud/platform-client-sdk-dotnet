@@ -48,7 +48,25 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Underline for "Underline"
             /// </summary>
             [EnumMember(Value = "Underline")]
-            Underline
+            Underline,
+            
+            /// <summary>
+            /// Enum Strikethrough for "Strikethrough"
+            /// </summary>
+            [EnumMember(Value = "Strikethrough")]
+            Strikethrough,
+            
+            /// <summary>
+            /// Enum Subscript for "Subscript"
+            /// </summary>
+            [EnumMember(Value = "Subscript")]
+            Subscript,
+            
+            /// <summary>
+            /// Enum Superscript for "Superscript"
+            /// </summary>
+            [EnumMember(Value = "Superscript")]
+            Superscript
         }
 
         /// <summary>
@@ -62,11 +80,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Text">Text. (required).</param>
         /// <param name="Marks">The unique list of marks (whether it is bold and/or underlined etc.) for the text..</param>
         /// <param name="Hyperlink">The URL of the page that the hyperlink goes to..</param>
-        public DocumentText(string Text = null, List<MarksEnum> Marks = null, string Hyperlink = null)
+        /// <param name="Properties">The properties for the text..</param>
+        public DocumentText(string Text = null, List<MarksEnum> Marks = null, string Hyperlink = null, DocumentTextProperties Properties = null)
         {
             this.Text = Text;
             this.Marks = Marks;
             this.Hyperlink = Hyperlink;
+            this.Properties = Properties;
             
         }
         
@@ -98,6 +118,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Hyperlink { get; set; }
 
 
+
+        /// <summary>
+        /// The properties for the text.
+        /// </summary>
+        /// <value>The properties for the text.</value>
+        [DataMember(Name="properties", EmitDefaultValue=false)]
+        public DocumentTextProperties Properties { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -110,6 +139,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Marks: ").Append(Marks).Append("\n");
             sb.Append("  Hyperlink: ").Append(Hyperlink).Append("\n");
+            sb.Append("  Properties: ").Append(Properties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -164,6 +194,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Hyperlink == other.Hyperlink ||
                     this.Hyperlink != null &&
                     this.Hyperlink.Equals(other.Hyperlink)
+                ) &&
+                (
+                    this.Properties == other.Properties ||
+                    this.Properties != null &&
+                    this.Properties.Equals(other.Properties)
                 );
         }
 
@@ -186,6 +221,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Hyperlink != null)
                     hash = hash * 59 + this.Hyperlink.GetHashCode();
+
+                if (this.Properties != null)
+                    hash = hash * 59 + this.Properties.GetHashCode();
 
                 return hash;
             }

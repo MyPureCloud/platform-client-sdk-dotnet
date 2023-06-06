@@ -697,7 +697,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum WorkitemPerformanceSummaryView for "WORKITEM_PERFORMANCE_SUMMARY_VIEW"
             /// </summary>
             [EnumMember(Value = "WORKITEM_PERFORMANCE_SUMMARY_VIEW")]
-            WorkitemPerformanceSummaryView
+            WorkitemPerformanceSummaryView,
+            
+            /// <summary>
+            /// Enum AgentAssistPerformanceView for "AGENT_ASSIST_PERFORMANCE_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_ASSIST_PERFORMANCE_VIEW")]
+            AgentAssistPerformanceView,
+            
+            /// <summary>
+            /// Enum ContactCenterPerformanceView for "CONTACT_CENTER_PERFORMANCE_VIEW"
+            /// </summary>
+            [EnumMember(Value = "CONTACT_CENTER_PERFORMANCE_VIEW")]
+            ContactCenterPerformanceView
         }
         /// <summary>
         /// The error message in case the export request failed
@@ -858,6 +870,45 @@ namespace PureCloudPlatform.Client.V2.Model
             Failed
         }
         /// <summary>
+        /// Indicates the duration format for the exports
+        /// </summary>
+        /// <value>Indicates the duration format for the exports</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum DurationFormatEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Seconds for "Seconds"
+            /// </summary>
+            [EnumMember(Value = "Seconds")]
+            Seconds,
+            
+            /// <summary>
+            /// Enum Milliseconds for "Milliseconds"
+            /// </summary>
+            [EnumMember(Value = "Milliseconds")]
+            Milliseconds,
+            
+            /// <summary>
+            /// Enum Hhmmss for "Hhmmss"
+            /// </summary>
+            [EnumMember(Value = "Hhmmss")]
+            Hhmmss,
+            
+            /// <summary>
+            /// Enum Hms for "Hms"
+            /// </summary>
+            [EnumMember(Value = "Hms")]
+            Hms
+        }
+        /// <summary>
         /// The current status of the export request
         /// </summary>
         /// <value>The current status of the export request</value>
@@ -887,6 +938,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The user supplied csv delimiter string value either of type 'comma' or 'semicolon' permitted for the export request</value>
         [DataMember(Name="csvDelimiter", EmitDefaultValue=false)]
         public CsvDelimiterEnum? CsvDelimiter { get; set; }
+        /// <summary>
+        /// Indicates the duration format for the exports
+        /// </summary>
+        /// <value>Indicates the duration format for the exports</value>
+        [DataMember(Name="durationFormat", EmitDefaultValue=false)]
+        public DurationFormatEnum? DurationFormat { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportingExportJobResponse" /> class.
@@ -924,8 +981,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EmailStatuses">The status of individual email addresses as a map.</param>
         /// <param name="EmailErrorDescription">The optional error message in case the export fail to email.</param>
         /// <param name="IncludeDurationFormatInHeader">Indicates whether to include selected duration format to the column headers.</param>
+        /// <param name="DurationFormat">Indicates the duration format for the exports.</param>
         /// <param name="Enabled">Enabled.</param>
-        public ReportingExportJobResponse(string Name = null, string RunId = null, StatusEnum? Status = null, string TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, string Period = null, ViewFilter Filter = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, string Locale = null, double? PercentageComplete = null, bool? HasFormatDurations = null, bool? HasSplitFilters = null, bool? ExcludeEmptyRows = null, bool? HasSplitByMedia = null, bool? HasSummaryRow = null, CsvDelimiterEnum? CsvDelimiter = null, List<SelectedColumns> SelectedColumns = null, bool? HasCustomParticipantAttributes = null, List<string> RecipientEmails = null, Dictionary<string, string> EmailStatuses = null, string EmailErrorDescription = null, bool? IncludeDurationFormatInHeader = null, bool? Enabled = null)
+        public ReportingExportJobResponse(string Name = null, string RunId = null, StatusEnum? Status = null, string TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, string Period = null, ViewFilter Filter = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, string Locale = null, double? PercentageComplete = null, bool? HasFormatDurations = null, bool? HasSplitFilters = null, bool? ExcludeEmptyRows = null, bool? HasSplitByMedia = null, bool? HasSummaryRow = null, CsvDelimiterEnum? CsvDelimiter = null, List<SelectedColumns> SelectedColumns = null, bool? HasCustomParticipantAttributes = null, List<string> RecipientEmails = null, Dictionary<string, string> EmailStatuses = null, string EmailErrorDescription = null, bool? IncludeDurationFormatInHeader = null, DurationFormatEnum? DurationFormat = null, bool? Enabled = null)
         {
             this.Name = Name;
             this.RunId = RunId;
@@ -955,6 +1013,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.EmailStatuses = EmailStatuses;
             this.EmailErrorDescription = EmailErrorDescription;
             this.IncludeDurationFormatInHeader = IncludeDurationFormatInHeader;
+            this.DurationFormat = DurationFormat;
             this.Enabled = Enabled;
             
         }
@@ -1186,6 +1245,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
         /// <summary>
         /// Gets or Sets Enabled
         /// </summary>
@@ -1240,6 +1301,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EmailStatuses: ").Append(EmailStatuses).Append("\n");
             sb.Append("  EmailErrorDescription: ").Append(EmailErrorDescription).Append("\n");
             sb.Append("  IncludeDurationFormatInHeader: ").Append(IncludeDurationFormatInHeader).Append("\n");
+            sb.Append("  DurationFormat: ").Append(DurationFormat).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -1428,6 +1490,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.IncludeDurationFormatInHeader.Equals(other.IncludeDurationFormatInHeader)
                 ) &&
                 (
+                    this.DurationFormat == other.DurationFormat ||
+                    this.DurationFormat != null &&
+                    this.DurationFormat.Equals(other.DurationFormat)
+                ) &&
+                (
                     this.Enabled == other.Enabled ||
                     this.Enabled != null &&
                     this.Enabled.Equals(other.Enabled)
@@ -1536,6 +1603,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.IncludeDurationFormatInHeader != null)
                     hash = hash * 59 + this.IncludeDurationFormatInHeader.GetHashCode();
+
+                if (this.DurationFormat != null)
+                    hash = hash * 59 + this.DurationFormat.GetHashCode();
 
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();

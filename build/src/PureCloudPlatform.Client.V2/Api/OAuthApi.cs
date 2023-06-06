@@ -273,7 +273,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>UsageExecutionResult</returns>
         
-        UsageExecutionResult PostOauthClientUsageQuery (string clientId, ApiUsageQuery body);
+        UsageExecutionResult PostOauthClientUsageQuery (string clientId, ApiUsageClientQuery body);
 
         /// <summary>
         /// Query for OAuth client API usage
@@ -286,7 +286,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>ApiResponse of UsageExecutionResult</returns>
         
-        ApiResponse<UsageExecutionResult> PostOauthClientUsageQueryWithHttpInfo (string clientId, ApiUsageQuery body);
+        ApiResponse<UsageExecutionResult> PostOauthClientUsageQueryWithHttpInfo (string clientId, ApiUsageClientQuery body);
 
         /// <summary>
         /// Create OAuth client
@@ -599,7 +599,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>Task of UsageExecutionResult</returns>
         
-        System.Threading.Tasks.Task<UsageExecutionResult> PostOauthClientUsageQueryAsync (string clientId, ApiUsageQuery body);
+        System.Threading.Tasks.Task<UsageExecutionResult> PostOauthClientUsageQueryAsync (string clientId, ApiUsageClientQuery body);
 
         /// <summary>
         /// Query for OAuth client API usage
@@ -612,7 +612,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>Task of ApiResponse (UsageExecutionResult)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> PostOauthClientUsageQueryAsyncWithHttpInfo (string clientId, ApiUsageQuery body);
+        System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> PostOauthClientUsageQueryAsyncWithHttpInfo (string clientId, ApiUsageClientQuery body);
 
         /// <summary>
         /// Create OAuth client
@@ -2716,7 +2716,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>UsageExecutionResult</returns>
         
-        public UsageExecutionResult PostOauthClientUsageQuery (string clientId, ApiUsageQuery body)
+        public UsageExecutionResult PostOauthClientUsageQuery (string clientId, ApiUsageClientQuery body)
         {
              ApiResponse<UsageExecutionResult> localVarResponse = PostOauthClientUsageQueryWithHttpInfo(clientId, body);
              return localVarResponse.Data;
@@ -2730,7 +2730,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>ApiResponse of UsageExecutionResult</returns>
         
-        public ApiResponse< UsageExecutionResult > PostOauthClientUsageQueryWithHttpInfo (string clientId, ApiUsageQuery body)
+        public ApiResponse< UsageExecutionResult > PostOauthClientUsageQueryWithHttpInfo (string clientId, ApiUsageClientQuery body)
         { 
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -2823,7 +2823,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>Task of UsageExecutionResult</returns>
         
-        public async System.Threading.Tasks.Task<UsageExecutionResult> PostOauthClientUsageQueryAsync (string clientId, ApiUsageQuery body)
+        public async System.Threading.Tasks.Task<UsageExecutionResult> PostOauthClientUsageQueryAsync (string clientId, ApiUsageClientQuery body)
         {
              ApiResponse<UsageExecutionResult> localVarResponse = await PostOauthClientUsageQueryAsyncWithHttpInfo(clientId, body);
              return localVarResponse.Data;
@@ -2838,7 +2838,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Query</param>
         /// <returns>Task of ApiResponse (UsageExecutionResult)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> PostOauthClientUsageQueryAsyncWithHttpInfo (string clientId, ApiUsageQuery body)
+        public async System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> PostOauthClientUsageQueryAsyncWithHttpInfo (string clientId, ApiUsageClientQuery body)
         { 
             // verify the required parameter 'clientId' is set
             if (clientId == null)
